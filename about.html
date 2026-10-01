@@ -7,14 +7,14 @@
     <title>About Us | Sukhda Healthcare - Multispeciality & Super Speciality Hospitals in Hisar</title>
     <meta name="description"
         content="Learn about Sukhda Healthcare in Hisar. Founded in 2002 by Dr. Amit Mehta (MD Medicine, AIIMS New Delhi) and Dr. Manisha Mehta (NABH Assessor). Discover our history, vision, mission, leadership, and infrastructure.">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet"><script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <style>
         :root {
-            --blue: #03205A;
+            --blue: #052159;
             --blue-dark: #02163d;
-            --green: #2A8238;
+            --green: #278132;
             --green-light: #eaf5ec;
             --pale: #f2f7fb;
             --muted: #53677f;
@@ -32,10 +32,25 @@
         body {
             margin: 0;
             color: var(--blue);
-            font: 16px/1.55 'Nunito Sans', sans-serif;
+            font: 16px/1.55 'Lato', sans-serif;
             background: #fff;
             overflow-x: hidden
         }
+
+        h1, h2, h3, h4, h5, h6,
+        .btn, .kicker, .eyebrow,
+        .nav-group > a, .nav-drop a,
+        .mega-col-title, .about-stat-card b,
+        .stat-card b, .stat-value, .metric-value,
+        .highlight-box b, .badge, .counter,
+        .sec-title, .header-cta, .phone-pill,
+        .doc-card-name, .dept-title, .facility-body h3,
+        .t-card-name, .review-author, .meta-label,
+        .brand, .logo-text, .h-info h3, .card-title,
+        .footer-col h4, .footer-col h5, .stat-num {
+            font-family: 'Montserrat', sans-serif;
+        }
+
 
         a {
             text-decoration: none;
@@ -83,7 +98,7 @@
         }
 
         .links a:hover {
-            color: #2A8238
+            color: #278132
         }
         .links a.top-wa i,
         .links a.top-wa svg,
@@ -118,7 +133,7 @@
         /* NAVIGATION */
         .nav {
             height: 80px;
-            box-shadow: 0 2px 9px #03205a19;
+            box-shadow: 0 2px 9px #05215919;
             position: relative;
             z-index: 100;
             background: #fff
@@ -213,7 +228,7 @@
             .nav-drop a {
                 display: block;
                 padding: 11px 20px !important;
-                font-size: 14.5px;
+                font-size: 15px;
                 font-weight: 600;
                 color: var(--blue);
                 border: 0 !important
@@ -243,7 +258,7 @@
                 top: 100%;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 820px;
+                width: 900px;
                 max-width: calc(100vw - 32px);
                 background: #ffffff;
                 border: 1px solid #d8e5f2;
@@ -321,7 +336,7 @@
             }
 
             .mega-col-title {
-                font-size: 13.5px;
+                font-size: 15.5px;
                 font-weight: 800;
                 color: var(--blue);
                 line-height: 1.25;
@@ -329,7 +344,7 @@
             }
 
             .mega-col-sub {
-                font-size: 11px;
+                font-size: 12px;
                 font-weight: 600;
                 color: var(--muted);
                 margin-top: 1px;
@@ -351,8 +366,8 @@
                 display: flex !important;
                 align-items: center !important;
                 gap: 7px !important;
-                padding: 6.5px 8px !important;
-                font-size: 12.5px !important;
+                padding: 7px 9px !important;
+                font-size: 14px !important;
                 font-weight: 600 !important;
                 color: #355070 !important;
                 border-radius: 6px !important;
@@ -363,8 +378,8 @@
             }
 
             .mega-links-grid a i, .mega-links-grid a svg {
-                width: 14px !important;
-                height: 14px !important;
+                width: 16px !important;
+                height: 16px !important;
                 color: var(--green) !important;
                 flex-shrink: 0 !important;
                 stroke-width: 2.2 !important;
@@ -399,20 +414,20 @@
             .mega-links-grid a.featured-service i,
             .mega-links-grid a.featured-service svg {
                 color: var(--green) !important;
-                width: 18px !important;
-                height: 18px !important;
+                width: 20px !important;
+                height: 20px !important;
             }
 
             .mega-links-grid a.featured-service b {
                 display: block;
-                font-size: 12.5px;
+                font-size: 14.5px;
                 color: var(--blue);
                 font-weight: 800;
             }
 
             .mega-links-grid a.featured-service small {
                 display: block;
-                font-size: 10px;
+                font-size: 12px;
                 color: var(--muted);
                 font-weight: 600;
                 margin-top: 1px;
@@ -435,7 +450,7 @@
                 padding: 9px 20px;
                 background: #f1f6fa;
                 border-top: 1px solid #e1ecf6;
-                font-size: 12px;
+                font-size: 13.5px;
             }
 
             .mega-view-all {
@@ -444,7 +459,7 @@
                 gap: 6px !important;
                 color: var(--green) !important;
                 font-weight: 800 !important;
-                font-size: 12px !important;
+                font-size: 13.5px !important;
                 padding: 0 !important;
                 border: 0 !important;
                 background: transparent !important;
@@ -480,7 +495,7 @@
             z-index: 998;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #03205A 0%, #02163d 100%);
+            background: linear-gradient(135deg, #052159 0%, #02163d 100%);
             border: 1.5px solid rgba(255, 255, 255, 0.22);
             border-radius: 9999px;
             padding: 6px 14px;
@@ -625,7 +640,7 @@
         .hero {
             background: radial-gradient(circle at 85% 25%, rgba(42, 130, 56, 0.22) 0%, transparent 55%),
                         radial-gradient(circle at 15% 85%, rgba(3, 32, 90, 0.35) 0%, transparent 60%),
-                        linear-gradient(135deg, #02163d 0%, #03205A 100%);
+                        linear-gradient(135deg, #02163d 0%, #052159 100%);
             color: #fff;
             padding: 56px 0 52px;
             position: relative;
@@ -664,7 +679,7 @@
         }
 
         .crumb a {
-            color: #2A8238;
+            color: #278132;
         }
 
         .crumb a:hover {
@@ -672,7 +687,7 @@
         }
 
         .eyebrow {
-            color: #2A8238;
+            color: #278132;
             font-weight: 900;
             font-size: 12.5px;
             letter-spacing: 0.9px;
@@ -698,7 +713,7 @@
         }
 
         .hero h1 span {
-            color: #2A8238;
+            color: #278132;
         }
 
         .hero p {
@@ -738,7 +753,7 @@
             gap: 6px;
             font-size: 11px;
             font-weight: 800;
-            color: #2A8238;
+            color: #278132;
             letter-spacing: 0.8px;
             text-transform: uppercase;
             margin-bottom: 6px;
@@ -789,7 +804,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #2A8238;
+            color: #278132;
             flex-shrink: 0;
         }
 
@@ -826,7 +841,7 @@
             gap: 6px;
             background: rgba(42, 130, 56, 0.12);
             border: 1px solid rgba(42, 130, 56, 0.3);
-            color: #2A8238;
+            color: #278132;
             padding: 5px 11px;
             border-radius: 20px;
             font-size: 11.5px;
@@ -1160,7 +1175,7 @@
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 18px #03205a12;
+            box-shadow: 0 4px 18px #05215912;
             border: 1px solid var(--line);
             transition: transform 0.25s ease, box-shadow 0.25s ease
         }
@@ -1261,7 +1276,7 @@
             border-radius: 10px;
             overflow: hidden;
             background: #fff;
-            box-shadow: 0 4px 14px #03205a12;
+            box-shadow: 0 4px 14px #05215912;
             border: 1px solid var(--line);
             transition: transform 0.2s ease, box-shadow 0.2s ease
         }
@@ -1397,7 +1412,7 @@
 
         /* PREMIUM FOOTER REDESIGN */
         .footer {
-            background: linear-gradient(180deg, #03205A 0%, #011338 100%);
+            background: linear-gradient(180deg, #052159 0%, #011338 100%);
             color: #cbd5e1;
             padding: 56px 0 0;
             border-top: 4px solid var(--green);
@@ -2059,12 +2074,12 @@
             }
 
             .services-mega .mega-col-title {
-                font-size: 13px !important;
+                font-size: 15px !important;
                 font-weight: 800 !important;
             }
 
             .services-mega .mega-col-sub {
-                font-size: 10.5px !important;
+                font-size: 12px !important;
             }
 
             .services-mega .mega-links-grid {
@@ -2075,7 +2090,7 @@
 
             .services-mega .mega-links-grid a {
                 padding: 8px 10px !important;
-                font-size: 13px !important;
+                font-size: 14px !important;
                 border-bottom: 1px solid #edf3f8 !important;
                 border-radius: 0 !important;
             }
@@ -2196,6 +2211,565 @@
                 letter-spacing: 0.5px;
             }
         }
+
+        /* =========================================================
+           DATA-DRIVEN SECTIONS (TIMELINE, NABH, BEDS, CATH LAB, ONCOLOGY, OT)
+           ========================================================= */
+
+        /* TIMELINE */
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 40px auto 0;
+            padding-left: 30px;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 8px;
+            width: 3px;
+            background: linear-gradient(180deg, var(--green) 0%, #17528e 100%);
+            border-radius: 4px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -30px;
+            top: 4px;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 4px solid var(--green);
+            box-shadow: 0 0 0 3px rgba(42, 130, 56, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .timeline-item:hover .timeline-marker {
+            transform: scale(1.25);
+            background: var(--green);
+        }
+
+        .timeline-content {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 22px 26px;
+            box-shadow: 0 4px 18px rgba(3, 32, 90, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .timeline-content:hover {
+            border-color: #b0cde6;
+            box-shadow: 0 10px 28px rgba(3, 32, 90, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .timeline-year-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--green-light);
+            color: var(--green);
+            font-weight: 800;
+            font-size: 13px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--blue);
+            margin: 0 0 8px;
+        }
+
+        .timeline-text {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0 0 12px;
+        }
+
+        .timeline-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .timeline-tag {
+            background: #f1f7fc;
+            color: #214b77;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 1px solid #dce8f3;
+        }
+
+        /* NABH OFFICIAL CARD */
+        .nabh-official-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f7fbfe 100%);
+            border: 2px solid #278132;
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 16px 40px rgba(3, 32, 90, 0.08);
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 36px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .nabh-left-badge {
+            text-align: center;
+            padding: 24px;
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #d9e8f5;
+            box-shadow: 0 6px 16px rgba(3, 32, 90, 0.04);
+        }
+
+        .nabh-logo-display {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            margin: 0 auto 16px;
+        }
+
+        .nabh-left-badge h3 {
+            margin: 0 0 6px;
+            font-size: 20px;
+            color: var(--blue);
+            font-weight: 800;
+        }
+
+        .nabh-left-badge p {
+            margin: 0 0 14px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .nabh-valid-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #eaf5ec;
+            color: #278132;
+            font-weight: 800;
+            font-size: 12.5px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid #bde2c2;
+        }
+
+        .nabh-details-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .nabh-details-table tr {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nabh-details-table tr:last-child {
+            border-bottom: 0;
+        }
+
+        .nabh-details-table td {
+            padding: 12px 16px;
+            font-size: 14.5px;
+            line-height: 1.45;
+        }
+
+        .nabh-details-table td:first-child {
+            font-weight: 700;
+            color: var(--blue);
+            width: 42%;
+            background: #f6faff;
+            border-right: 1px solid var(--line);
+        }
+
+        .nabh-details-table td:last-child {
+            color: #2c4460;
+            font-weight: 600;
+        }
+
+        /* BED MATRIX TABLE & STATS */
+        .bed-layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 32px;
+            margin-top: 30px;
+            align-items: start;
+        }
+
+        .bed-summary-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .bed-stat-box {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 20px 18px;
+            box-shadow: 0 4px 14px rgba(3, 32, 90, 0.05);
+            border-top: 4px solid var(--green);
+        }
+
+        .bed-stat-box.icu {
+            border-top-color: #e53935;
+        }
+
+        .bed-stat-box.medpark {
+            border-top-color: #0d6efd;
+        }
+
+        .bed-stat-box b {
+            display: block;
+            font-size: 32px;
+            color: var(--blue);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .bed-stat-box span {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--blue);
+            display: block;
+        }
+
+        .bed-stat-box small {
+            font-size: 12px;
+            color: var(--muted);
+            display: block;
+            margin-top: 4px;
+        }
+
+        .bed-table-card {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(3, 32, 90, 0.06);
+        }
+
+        .bed-table-head {
+            background: var(--blue);
+            color: #ffffff;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .bed-table-head h4 {
+            margin: 0;
+            font-size: 16.5px;
+            font-weight: 800;
+        }
+
+        .bed-table-head span {
+            font-size: 12.5px;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        .bed-matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .bed-matrix-table th {
+            text-align: left;
+            padding: 12px 18px;
+            background: #f0f6fa;
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--blue);
+            border-bottom: 2px solid var(--line);
+        }
+
+        .bed-matrix-table td {
+            padding: 11px 18px;
+            font-size: 14.5px;
+            color: #314b68;
+            border-bottom: 1px solid #ebf2f8;
+            font-weight: 600;
+        }
+
+        .bed-matrix-table tr:hover td {
+            background: #f8fbfe;
+        }
+
+        .bed-matrix-table tr.total-row td {
+            background: #eef6fc;
+            font-weight: 800;
+            color: var(--blue);
+            border-top: 2px solid #d3e4f3;
+            border-bottom: 2px solid #d3e4f3;
+        }
+
+        .bed-matrix-table tr.grand-total td {
+            background: #eaf5ec;
+            font-weight: 900;
+            color: var(--green);
+            font-size: 16px;
+            border-top: 2px solid #a3d9ad;
+        }
+
+        /* CARDIAC & CATH LAB TECH */
+        .tech-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .tech-card {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.05);
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 26px rgba(3, 32, 90, 0.1);
+            border-color: #b5d2ec;
+        }
+
+        .tech-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #edf4fa;
+        }
+
+        .tech-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--green-light);
+            color: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .tech-card-icon.blue {
+            background: #e8f0fe;
+            color: #0d6efd;
+        }
+
+        .tech-card-icon.red {
+            background: #fde8e8;
+            color: #e53935;
+        }
+
+        .tech-card-icon i, .tech-card-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .tech-card-title {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--blue);
+            margin: 0;
+            line-height: 1.25;
+        }
+
+        .tech-card-sub {
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .tech-card-desc {
+            font-size: 14px;
+            line-height: 1.55;
+            color: var(--muted);
+            margin: 0 0 14px;
+        }
+
+        .tech-bullet-list {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 13.5px;
+            color: #375373;
+            line-height: 1.6;
+        }
+
+        .tech-bullet-list li {
+            margin-bottom: 6px;
+        }
+
+        /* BIOSAFETY & ONCOLOGY SPECS */
+        .biosafety-spec-box {
+            background: linear-gradient(135deg, #02163d 0%, #052159 100%);
+            color: #fff;
+            border-radius: 14px;
+            padding: 30px;
+            margin-top: 28px;
+            box-shadow: 0 14px 34px rgba(3, 32, 90, 0.25);
+        }
+
+        .biosafety-spec-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            flex-wrap: wrap;
+        }
+
+        .biosafety-spec-header h3 {
+            margin: 0;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .biosafety-badge {
+            background: rgba(42, 130, 56, 0.25);
+            border: 1px solid var(--green);
+            color: #55df8e;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .biosafety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 16px;
+        }
+
+        .biosafety-item {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 14px 16px;
+        }
+
+        .biosafety-item small {
+            display: block;
+            color: #9ebdd8;
+            font-size: 11.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .biosafety-item b {
+            display: block;
+            color: #ffffff;
+            font-size: 14.5px;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        /* OPERATION THEATRES 4-GRID */
+        .ot-suites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .ot-suite-card {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: 0 4px 16px rgba(3, 32, 90, 0.05);
+            border-top: 4px solid var(--blue);
+            transition: all 0.2s ease;
+        }
+
+        .ot-suite-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(3, 32, 90, 0.09);
+        }
+
+        .ot-suite-card h4 {
+            margin: 0 0 6px;
+            font-size: 18px;
+            color: var(--blue);
+            font-weight: 800;
+        }
+
+        .ot-suite-card .ot-tag {
+            display: inline-block;
+            background: #eaf2f8;
+            color: #1a4d7d;
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .ot-suite-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.55;
+            margin: 0 0 12px;
+        }
+
+        @media(max-width: 900px) {
+            .nabh-official-card {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 24px 20px;
+            }
+
+            .bed-layout-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-container {
+                padding-left: 24px;
+            }
+        }
     </style>
 </head>
 
@@ -2232,11 +2806,16 @@
                     <span class="nav-group">
                         <a class="on" href="index.html">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <span class="nav-drop">
-                            <a href="index.html">About Sukhda</a>
+                            <a href="index.html#about">About Sukhda</a>
+                            <a href="#timeline">Growth Timeline (2002–2025)</a>
                             <a href="#leadership">Medical Leadership</a>
-                            <a href="#vision">Vision &amp; Mission</a>
-                            <a href="#hospitals">Our Hospitals</a>
-                            <a href="#infrastructure">Infrastructure &amp; Facilities</a>
+                            <a href="#vision">Vision, Mission &amp; Values</a>
+                            <a href="#medpark-cancer">Med Park Cancer Center</a>
+                            <a href="#cathlab">Cath Lab &amp; Cardiac Tech</a>
+                            <a href="#dialysis">Dialysis Department</a>
+                            <a href="#bed-matrix">ICU &amp; Bed Capacity (125)</a>
+                            <a href="#operation-theatres">Operation Theatres (4 OTs)</a>
+                            <a href="#nabh-accreditation">NABH Certificate Details</a>
                         </span>
                     </span>
                     <span class="nav-group">
@@ -2325,7 +2904,6 @@
             <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
             <button class="hamb" aria-label="Open menu">☰</button>
         </div>
-        <div class="nav-overlay"></div>
     </header>
 
     <!-- HERO -->
@@ -2336,60 +2914,59 @@
                     <a href="index.html">Home</a> <span>›</span> <span>About Us</span>
                 </div>
                 <div class="eyebrow">
-                    <span class="eyebrow-badge">NABH ACCREDITED HEALTHCARE NETWORK</span>
+                    <span class="eyebrow-badge">125-BEDDED NABH ACCREDITED MULTISPECIALTY HOSPITAL</span>
                     <span>ESTABLISHED NOVEMBER 2002</span>
                 </div>
                 <h1>Two Decades of Clinical Excellence,<br><span>Compassion &amp; Quality Care</span></h1>
-                <p>From a focused 20-bed hospital in 2002 to a 100-bedded NABH accredited multispeciality and cancer
-                    care network, Sukhda Healthcare is built on the founding promise of <i>"Care and Cure for Whole
-                        Family Under One Roof"</i>.</p>
+                <p>Founded in November 2002 by <b>Dr. Amit Mehta, MD (Medicine), AIIMS New Delhi</b>, Sukhda Multispeciality Hospital has grown from a 20-bed clinic to a 125-bedded NABH Accredited Multispecialty Hospital and DNB Medical Research Centre, guided by the mission of <i>"Care &amp; Cure for the Whole Family under One Roof"</i>.</p>
 
                 <div class="hero-actions">
-                    <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book
-                        Consultation</a>
-                    <a class="btn white" href="#leadership"><i data-lucide="award"></i>Meet Leadership</a>
+                    <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Consultation</a>
+                    <a class="btn white" href="#timeline"><i data-lucide="clock"></i>View Growth Timeline</a>
+                    <a class="btn white" href="#nabh-accreditation"><i data-lucide="shield-check"></i>NABH Certificate</a>
                 </div>
             </div>
 
             <div class="hero-highlights-card">
                 <div class="hh-header">
                     <div class="hh-badge"><i data-lucide="shield-check"></i> INSTITUTIONAL SNAPSHOT</div>
-                    <h3>Healthcare Legacy at a Glance</h3>
+                    <h3>Healthcare Heritage at a Glance</h3>
                 </div>
                 <div class="hh-grid">
                     <div class="hh-item">
                         <div class="hh-icon"><i data-lucide="calendar"></i></div>
                         <div>
                             <b>Nov 2002</b>
-                            <small>Founded in Hisar (22+ Yrs)</small>
+                            <small>Founded in Hisar (23+ Yrs)</small>
                         </div>
                     </div>
                     <div class="hh-item">
                         <div class="hh-icon"><i data-lucide="building-2"></i></div>
                         <div>
-                            <b>100+ Beds</b>
-                            <small>Across 2 Modern Hospitals</small>
+                            <b>125 Beds</b>
+                            <small>NABH Accredited Capacity</small>
                         </div>
                     </div>
                     <div class="hh-item">
-                        <div class="hh-icon"><i data-lucide="users"></i></div>
+                        <div class="hh-icon"><i data-lucide="activity"></i></div>
                         <div>
-                            <b>50,000+</b>
-                            <small>Patients Treated Regionally</small>
+                            <b>35 ICU Beds</b>
+                            <small>ICU, MICU &amp; Step Down</small>
                         </div>
                     </div>
                     <div class="hh-item">
                         <div class="hh-icon"><i data-lucide="award"></i></div>
                         <div>
-                            <b>NABH</b>
-                            <small>Accredited Quality Care</small>
+                            <b>NABH &amp; DNB</b>
+                            <small>NBEMS General Medicine</small>
                         </div>
                     </div>
                 </div>
                 <div class="hh-footer">
-                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> AIIMS Clinical Heritage</span>
-                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> 24/7 ICU &amp; Trauma</span>
+                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> AIIMS &amp; PGIMER Heritage</span>
+                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> AB PM-JAY Gold Certified</span>
                     <span class="hh-tag"><i data-lucide="check-circle-2"></i> MedPark Cancer Wing</span>
+                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> 4 Modern OT Tables</span>
                 </div>
             </div>
         </div>
@@ -2399,30 +2976,17 @@
     <section class="section">
         <div class="wrap story-grid">
             <div class="story-copy">
-                <div class="kicker">ABOUT SUKHDA HEALTHCARE</div>
-                <h2 class="title">Care and Cure for Whole Family Under One Roof</h2>
-                <p>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD Medicine (AIIMS, New
-                        Delhi)</b>. After studying and gaining rich clinical experience from premier institutes of India
-                    like <b>AIIMS, New Delhi</b> and <b>PGIMER, Chandigarh</b>, Dr. Mehta decided to return to his
-                    native place Hisar to serve his community.</p>
-                <p>He joined Jindal Institute of Medical Sciences (JIMS) in February 1994 and worked tirelessly for nine
-                    years as <b>Head of the Department of Internal Medicine &amp; Critical Care</b>. For his exemplary
-                    healthcare contributions, he was bestowed with the prestigious <b>"Vikas Ratan Gold Award"</b> in
-                    the year 2002.</p>
-                <p>In November 2002, under the visionary leadership of Dr. Amit Mehta and <b>Dr. Manisha Mehta (NABH
-                        Certified Assessor)</b>, Sukhda made a humble beginning as a 20-bedded hospital with the sole
-                    mission of providing <i>"Care and Cure for Whole Family Under One Roof"</i> without compromising
-                    quality.</p>
-                <p>Today, this vision has metamorphosed into a premier 100-bedded network comprising <b>Sukhda
-                        Multispeciality Hospital</b> and <b>Sukhda MedPark (Cancer &amp; Super Speciality Hospital)</b>,
-                    catering to patients from across Haryana (Sirsa, Fatehabad, Hansi, Jind, Barwala, Uklana, Narwana,
-                    Tohana), Rajasthan (Bhadra, Rajgarh, Churu), and Punjab (Bhatinda, Mansa).</p>
+                <div class="kicker">ABOUT SUKHDA MULTISPECIALTY HOSPITAL</div>
+                <h2 class="title">Care &amp; Cure for the Whole Family under One Roof</h2>
+                <p>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD (Medicine), AIIMS, New Delhi</b>. After completing his education and gaining valuable clinical experience at premier institutions such as <b>AIIMS, New Delhi</b>, and <b>PGIMER, Chandigarh</b>, Dr. Mehta returned to Hisar with the vision of providing quality healthcare to the community.</p>
+                <p>In November 2002, Sukhda Hospital was established with the mission of <b>"Care &amp; Cure for the Whole Family under One Roof."</b> Over the years, the hospital has grown into a <b>125-bedded NABH Accredited Multispecialty Hospital</b>, offering comprehensive medical, surgical, diagnostic, and emergency healthcare services.</p>
+                <p>Equipped with advanced medical technology, experienced specialists, and modern infrastructure, the hospital continues to provide quality healthcare at an affordable cost. In 2022, the hospital was accredited by the <b>National Board of Examinations in Medical Sciences (NBEMS)</b> to conduct the prestigious <b>DNB General Medicine Programme</b>.</p>
+                <p>Today, Sukhda Healthcare operates as a unified healthcare ecosystem comprising <b>Sukhda Multispeciality Hospital</b> and <b>Sukhda Med Park (Cancer &amp; Super Speciality Hospital)</b>, delivering ethical and evidence-based patient care to families across Haryana, Punjab, and Rajasthan.</p>
                 <div class="story-badge-strip">
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> AIIMS &amp; PGIMER Clinical
-                        Heritage</span>
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> NABH Accredited Standards</span>
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> 24/7 ICU &amp; Emergency
-                        Helpline</span>
+                    <span class="story-badge"><i data-lucide="check-circle-2"></i> AIIMS &amp; PGIMER Clinical Heritage</span>
+                    <span class="story-badge"><i data-lucide="check-circle-2"></i> NABH Certificate H-2020-0707</span>
+                    <span class="story-badge"><i data-lucide="check-circle-2"></i> NBEMS DNB General Medicine</span>
+                    <span class="story-badge"><i data-lucide="check-circle-2"></i> AB PM-JAY Gold Quality Award</span>
                 </div>
             </div>
             <div class="story-media">
@@ -2431,36 +2995,192 @@
                         alt="Doctor and Patient Consultation at Sukhda Hospital">
                 </div>
                 <div class="quote-box">
-                    "Since inception, our goal has been to facilitate cost-effective medical services at par with top
-                    national institutions — with uncompromised clinical quality and genuine human empathy."
+                    "Our founding mission remains unchanged: to provide ethical, world-class medical care at an affordable cost, treating every patient like our own family."
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: VISION, MISSION & VALUES -->
-    <section class="section soft" id="vision">
+    <!-- SECTION: OUR GROWTH TIMELINE (2002 - 2025) -->
+    <section class="section soft" id="timeline">
         <div class="wrap">
-            <div class="kicker">GUIDING PHILOSOPHY</div>
+            <div class="kicker">HISTORICAL MILESTONES</div>
+            <h2 class="title">Our Growth Timeline (2002 – 2025)</h2>
+            <p class="sub">From a 20-bed hospital in 2002 to a 125-bed NABH Accredited multispeciality and comprehensive cancer care institution.</p>
+
+            <div class="timeline-container">
+                <!-- 2002 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year-badge"><i data-lucide="calendar"></i> 2002</span>
+                        <h3 class="timeline-title">The Beginning</h3>
+                        <p class="timeline-text">Sukhda Hospital was established as a <b>20-bedded hospital</b> with two in-house specialists in the Departments of <b>General Medicine</b> and <b>Radiology</b>, with a vision to develop a comprehensive multispecialty healthcare facility.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">20 Beds</span>
+                            <span class="timeline-tag">General Medicine</span>
+                            <span class="timeline-tag">Radiology</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2006 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year-badge"><i data-lucide="calendar"></i> 2006</span>
+                        <h3 class="timeline-title">Expansion of Clinical Services</h3>
+                        <p class="timeline-text">The Departments of <b>General &amp; Laparoscopic Surgery</b> and <b>Obstetrics &amp; Gynaecology</b> were introduced with full-time specialists, increasing the hospital capacity to <b>45 beds</b>.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">45 Beds</span>
+                            <span class="timeline-tag">Laparoscopic Surgery</span>
+                            <span class="timeline-tag">Obstetrics &amp; Gynaecology</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2007 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year-badge"><i data-lucide="calendar"></i> 2007</span>
+                        <h3 class="timeline-title">Critical Care Services</h3>
+                        <p class="timeline-text">The <b>Critical Care Department</b> was established with a 6-bedded <b>Intensive Care Unit (ICU)</b>, and the hospital's total bed capacity was expanded to <b>60 beds</b>.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">60 Beds</span>
+                            <span class="timeline-tag">6-Bed Dedicated ICU</span>
+                            <span class="timeline-tag">Critical Care Protocols</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2012 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year-badge"><i data-lucide="calendar"></i> 2012</span>
+                        <h3 class="timeline-title">Infrastructure Expansion</h3>
+                        <p class="timeline-text">Hospital infrastructure was significantly enhanced, increasing the total bed capacity to <b>100 beds</b> to meet the rapidly growing healthcare needs of Western Haryana and neighbouring regions.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">100 Beds</span>
+                            <span class="timeline-tag">Advanced Diagnostics</span>
+                            <span class="timeline-tag">Regional Healthcare Hub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2015 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year-badge"><i data-lucide="calendar"></i> 2015</span>
+                        <h3 class="timeline-title">New Specialties &amp; ECHS Empanelment</h3>
+                        <p class="timeline-text">Sukhda Hospital received <b>ECHS Empanelment</b>, enabling healthcare services for Ex-Servicemen and their dependents. The Departments of <b>Urology</b>, <b>Neurosurgery</b>, and <b>Orthopaedics</b> were also introduced.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">ECHS Empanelled</span>
+                            <span class="timeline-tag">Neurosurgery</span>
+                            <span class="timeline-tag">Urology</span>
+                            <span class="timeline-tag">Orthopaedics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2016 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year-badge"><i data-lucide="calendar"></i> 2016</span>
+                        <h3 class="timeline-title">Comprehensive Multispecialty Growth</h3>
+                        <p class="timeline-text">The hospital expanded its sanctioned capacity to <b>125 beds</b> and added new specialties, including <b>Dermatology</b>, <b>ENT</b>, and <b>Psychiatry</b>, further strengthening its multidisciplinary healthcare services.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">125 Sanctioned Beds</span>
+                            <span class="timeline-tag">ENT</span>
+                            <span class="timeline-tag">Dermatology</span>
+                            <span class="timeline-tag">Psychiatry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2020 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year-badge"><i data-lucide="calendar"></i> 2020</span>
+                        <h3 class="timeline-title">National Recognition for Quality</h3>
+                        <p class="timeline-text">Sukhda Hospital achieved <b>Full NABH Accreditation</b> and was awarded the <b>AB PM-JAY Gold Quality Certification</b>, reflecting its commitment to quality healthcare, patient safety, and clinical excellence.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Full NABH Accreditation</span>
+                            <span class="timeline-tag">AB PM-JAY Gold Quality</span>
+                            <span class="timeline-tag">Patient Safety Benchmarks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year-badge"><i data-lucide="calendar"></i> 2022</span>
+                        <h3 class="timeline-title">Clinical Excellence &amp; Academic Milestones</h3>
+                        <p class="timeline-text">The hospital continued its rapid growth through landmark clinical and academic milestones:
+                            <br>&bull; Launching the <b>Gastroenterology Department</b> with advanced Endoscopy, ERCP, and related diagnostic services.
+                            <br>&bull; Got Accredited with <b>National Board of Examinations – Medical Sciences (NBEMS) New Delhi</b> for <b>DNB – General Medicine</b> with two seats.
+                            <br>&bull; Partnering with the <b>USAID Samridh &amp; Pahel Initiative</b> to extend primary and secondary healthcare services to eight rural areas, benefiting approximately <b>65,000 people</b>.
+                            <br>&bull; Introducing a <b>Hormone Analyser</b> in the Pathology Laboratory.
+                            <br>&bull; Launching <b>3D Technology Knee Resurfacing</b> in the Department of Orthopaedics.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">DNB General Medicine (2 Seats)</span>
+                            <span class="timeline-tag">Gastroenterology &amp; ERCP</span>
+                            <span class="timeline-tag">USAID Samridh (65,000 Rural Lives)</span>
+                            <span class="timeline-tag">3D Knee Resurfacing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year-badge" style="background:#e8f0fe;color:#0d6efd"><i data-lucide="calendar"></i> 2025</span>
+                        <h3 class="timeline-title">Comprehensive Cancer Care</h3>
+                        <p class="timeline-text">The hospital established its <b>Medical &amp; Surgical Oncology Department</b> and launched a fully equipped <b>Chemotherapy Ward</b> featuring a <b>Bio-Safety Cabinet (Thermo Scientific™ 1500 Series Class II Type A2)</b> and advanced life-support equipment, expanding its comprehensive cancer care services across the region.</p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Medical &amp; Surgical Oncology</span>
+                            <span class="timeline-tag">Chemotherapy Ward</span>
+                            <span class="timeline-tag">Class II Type A2 Biosafety Cabinet</span>
+                            <span class="timeline-tag">Sukhda Med Park</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: VISION, MISSION & VALUES (DUAL INSTITUTIONS) -->
+    <section class="section" id="vision">
+        <div class="wrap">
+            <div class="kicker">VISION &amp; POSITIONING</div>
             <h2 class="title">Vision, Mission &amp; Core Values</h2>
-            <p class="sub">The enduring principles that define every patient interaction, clinical decision, and
-                operational standard at Sukhda.</p>
+            <p class="sub">Guiding principles across Sukhda Multispecialty Hospital and Sukhda Med Park Cancer &amp; Super Speciality Hospital.</p>
 
             <div class="vm-grid">
+                <!-- SUKHDA MULTISPECIALTY HOSPITAL -->
                 <div class="vm-card vision-card">
-                    <div class="vm-icon"><i data-lucide="eye"></i></div>
-                    <h3>Our Vision</h3>
-                    <p>To be a recognised centre of excellence for providing <b>"Quality Healthcare at Affordable
-                            Cost"</b>, setting benchmark standards in patient safety, advanced technology, and
-                        compassionate healing for the northern region.</p>
+                    <div class="vm-icon"><i data-lucide="building-2"></i></div>
+                    <span class="eyebrow-badge" style="display:inline-block;margin-bottom:12px;font-size:11px">SUKHDA MULTISPECIALTY HOSPITAL</span>
+                    <h3>Vision &amp; Mission</h3>
+                    <p><b>Vision:</b> To be a centre of excellence in providing <b>Quality Healthcare at an Affordable Cost</b>.</p>
+                    <p style="margin-top:10px;"><b>Mission:</b> To provide <b>"Care &amp; Cure for the Whole Family under One Roof"</b> through a team of qualified and experienced doctors, dedicated nursing professionals, paramedical staff, and advanced medical and diagnostic services.</p>
                 </div>
+
+                <!-- SUKHDA MED PARK -->
                 <div class="vm-card mission-card">
-                    <div class="vm-icon"><i data-lucide="target"></i></div>
-                    <h3>Our Mission</h3>
-                    <p>Sukhda Multispeciality Hospital is committed to provide <b>"Care and Cure for Whole Family Under
-                            One Roof"</b> through a team of qualified, experienced doctors and dedicated nursing,
-                        paramedical, and support staff supported by state-of-the-art medical and diagnostic services.
-                    </p>
+                    <div class="vm-icon"><i data-lucide="ribbon"></i></div>
+                    <span class="eyebrow-badge" style="display:inline-block;margin-bottom:12px;font-size:11px;background:#e8f0fe;border-color:#b8d2f2;color:#0d6efd">SUKHDA MED PARK (CANCER &amp; SUPER SPECIALITY)</span>
+                    <h3>Vision &amp; Mission</h3>
+                    <p><b>Vision:</b> To become the most trusted and leading comprehensive cancer care centre by delivering world-class oncology services through clinical excellence, advanced technology, compassionate care, and continuous innovation.</p>
+                    <p style="margin-top:10px;"><b>Mission:</b> Provide comprehensive cancer care under one roof through Medical, Surgical, and Radiation Oncology; ensure early detection &amp; accurate diagnosis; deliver evidence-based therapy and palliative support.</p>
                 </div>
             </div>
 
@@ -2468,48 +3188,43 @@
                 <div class="val-card">
                     <i data-lucide="heart-handshake"></i>
                     <h4>Dignity &amp; Equity</h4>
-                    <p>We practice dignity and equity in all relationships, providing opportunities for patients and
-                        healthcare staff to realise their full potential.</p>
+                    <p>Practice dignity and equity in all relationships, treating every patient and healthcare professional with profound respect.</p>
                 </div>
                 <div class="val-card">
                     <i data-lucide="shield-check"></i>
-                    <h4>Patient Rights &amp; Centricity</h4>
-                    <p>We manage all operations with deep concern for patient rights, safety, transparency, and clinical
-                        ethics in a comfortable environment.</p>
+                    <h4>Patient Rights &amp; Ethics</h4>
+                    <p>Respect patients' rights and maintain the highest ethical healthcare practices, clinical transparency, and patient safety.</p>
                 </div>
                 <div class="val-card">
                     <i data-lucide="sparkles"></i>
-                    <h4>Technological Innovation</h4>
-                    <p>We continuously stay updated with latest technological advancements (Clear Stent Live Cath Lab,
-                        LINAC, CT) and managerial expertise.</p>
+                    <h4>Continuous Technological Adoption</h4>
+                    <p>Continuously adopt the latest medical technology and advancements (Clear Stent Live Cath Lab, Biosafety Chemotherapy, 3D Knee Resurfacing, LINAC).</p>
                 </div>
                 <div class="val-card">
                     <i data-lucide="wallet"></i>
-                    <h4>Affordable &amp; Effective</h4>
-                    <p>We inculcate cost-consciousness and effective, efficient service delivery keeping patient
-                        affordability and transparency at the core.</p>
+                    <h4>Affordability for Every Patient</h4>
+                    <p>Deliver world-class quality healthcare while ensuring genuine affordability, accessible health schemes, and cashless TPA partnerships.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION 3: DIRECTORS / LEADERSHIP -->
-    <section class="section" id="leadership">
+    <section class="section soft" id="leadership">
         <div class="wrap">
             <div class="kicker">EXECUTIVE &amp; CLINICAL LEADERSHIP</div>
             <h2 class="title">Messages from the Directors' Desk</h2>
-            <p class="sub">Guided by medical expertise, administrative foresight, and an unwavering commitment to
-                patient well-being.</p>
+            <p class="sub">Guided by medical expertise, administrative foresight, and an unwavering commitment to patient well-being.</p>
 
             <div class="directors-grid">
                 <!-- DR. AMIT MEHTA -->
                 <article class="director-card">
                     <div class="dir-top">
                         <img class="dir-photo" src="assets/images/doctors/dr-amit-mehta.jpg"
-                            alt="Dr. Amit Mehta - Director Sukhda Hospital">
+                            alt="Dr. Amit Mehta - Founder &amp; Director Sukhda Hospital">
                         <div class="dir-meta">
                             <h3>Dr. Amit Mehta</h3>
-                            <div class="dir-title">Director &amp; Head of Internal Medicine &amp; Critical Care</div>
+                            <div class="dir-title">Founder &amp; Director — Head of Internal Medicine &amp; Critical Care</div>
                             <div class="dir-badges">
                                 <span class="dir-badge">MD Medicine (AIIMS, New Delhi)</span>
                                 <span class="dir-badge">Ex-PGIMER Chandigarh</span>
@@ -2519,15 +3234,9 @@
                     </div>
                     <div class="dir-body">
                         <h4>Professional Profile</h4>
-                        <p>After graduating from premier institutes AIIMS New Delhi and PGIMER Chandigarh, Dr. Mehta
-                            headed Internal Medicine &amp; Critical Care at Jindal Hospital for 9 years before founding
-                            Sukhda in 2002. He has spearheaded critical care protocols, intensive care management, and
-                            ethical clinical governance across Haryana.</p>
+                        <p>After graduating from premier institutes AIIMS New Delhi and PGIMER Chandigarh, Dr. Mehta headed Internal Medicine &amp; Critical Care at Jindal Hospital for 9 years before founding Sukhda in November 2002. Over two decades, he has spearheaded intensive care management, clinical protocols, and DNB medical training across Western Haryana.</p>
                         <div class="dir-msg">
-                            "At Sukhda Multispeciality Hospital, we foster, promote, and practice high-quality, ethical,
-                            and evidence-based medicine. Our team is committed to deliver best healthcare services with
-                            a human touch — acknowledging and respecting cultural diversity, dignity, and every
-                            patient's unique needs."
+                            "At Sukhda Multispecialty Hospital, we foster, promote, and practice high-quality, ethical, and evidence-based medicine. Our mission has always been Care &amp; Cure for the Whole Family under One Roof — treating every individual with dignity and compassion."
                         </div>
                         <div style="margin-top: 18px;">
                             <a href="dr-amit-mehta.html" class="btn small primary" style="display:inline-flex;align-items:center;gap:6px">View Clinical Profile &amp; OPD Timings →</a>
@@ -2552,15 +3261,9 @@
                     </div>
                     <div class="dir-body">
                         <h4>Professional Profile</h4>
-                        <p>With over 23 years of healthcare administration and facility oversight, Dr. Manisha Mehta
-                            leads Sukhda's quality compliance, NABH regulatory protocols, patient safety initiatives,
-                            and operational excellence. Her leadership ensures clinical transparency and continuous
-                            infrastructure modernisation.</p>
+                        <p>With over 23 years of healthcare administration and facility oversight, Dr. Manisha Mehta leads Sukhda's quality compliance, NABH regulatory protocols, patient safety initiatives, and operational excellence. Her leadership ensured Sukhda achieved full NABH Accreditation and the AB PM-JAY Gold Quality Certification.</p>
                         <div class="dir-msg">
-                            "Everything we do revolves around our patients and their families. We continuously challenge
-                            ourselves to bring greater accessibility, affordability, and reliability in healthcare
-                            delivery with an unrelenting focus on quality, patient-centricity, and delightful healing
-                            experiences."
+                            "Everything we do revolves around our patients and their families. We continuously challenge ourselves to bring greater accessibility, affordability, and reliability in healthcare delivery with an unrelenting focus on quality, patient safety, and delightful healing experiences."
                         </div>
                         <div style="margin-top: 18px;">
                             <a href="dr-manisha-mehta.html" class="btn small primary" style="display:inline-flex;align-items:center;gap:6px">View Clinical Profile &amp; OPD Timings →</a>
@@ -2571,13 +3274,513 @@
         </div>
     </section>
 
+    <!-- SECTION: SUKHDA MED PARK (CANCER & SUPER SPECIALITY) -->
+    <section class="section" id="medpark-cancer">
+        <div class="wrap">
+            <div class="kicker">ONCOLOGY &amp; SUPER SPECIALITY BRANCH</div>
+            <h2 class="title">Sukhda Med Park (Cancer &amp; Super Speciality Hospital)</h2>
+            <p class="sub">A dedicated 50-bedded oncology and super speciality institution established to provide comprehensive cancer care under one roof.</p>
+
+            <div class="hospital-grid" style="margin-bottom:36px">
+                <article class="hospital" style="grid-template-columns: 1fr;">
+                    <div class="h-info" style="padding: 30px;">
+                        <h3>Comprehensive Oncology Under One Roof</h3>
+                        <p>Sukhda Med Park brings together experienced <b>Medical Oncologists, Surgical Oncologists, Radiation Oncologists, Onco-Pathologists, Radiologists, Oncology Nurses, Nutritionists, and Pain &amp; Palliative Care Specialists</b> to provide personalised and evidence-based cancer treatment. Equipped with advanced diagnostic technology, specialised chemotherapy suites, radiation therapy facilities, modular ICUs, modern operation theatres, advanced pathology laboratories, and comprehensive imaging services, Sukhda Med Park is committed to delivering compassionate, ethical, and patient-centred cancer care.</p>
+                        
+                        <div class="checks" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top:20px">
+                            <span><i data-lucide="check-circle-2"></i> Linear Accelerator (LINAC)</span>
+                            <span><i data-lucide="check-circle-2"></i> CT Simulator &amp; CT Scan</span>
+                            <span><i data-lucide="check-circle-2"></i> MRI &amp; Digital Mammography</span>
+                            <span><i data-lucide="check-circle-2"></i> Ultrasound with Color Doppler</span>
+                            <span><i data-lucide="check-circle-2"></i> Digital X-Ray</span>
+                            <span><i data-lucide="check-circle-2"></i> Day Care Chemotherapy Unit</span>
+                            <span><i data-lucide="check-circle-2"></i> Chemotherapy Infusion Chairs</span>
+                            <span><i data-lucide="check-circle-2"></i> Modular Operation Theatre</span>
+                            <span><i data-lucide="check-circle-2"></i> Intensive Care Unit (ICU)</span>
+                            <span><i data-lucide="check-circle-2"></i> Advanced Pathology &amp; Molecular</span>
+                            <span><i data-lucide="check-circle-2"></i> Dedicated Oncology Pharmacy</span>
+                            <span><i data-lucide="check-circle-2"></i> Pain &amp; Palliative Care Unit</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- BIOSAFETY CABINET SPECIFICATIONS -->
+            <div class="biosafety-spec-box">
+                <div class="biosafety-spec-header">
+                    <div>
+                        <span class="biosafety-badge">ADVANCED CHEMOTHERAPY SAFETY</span>
+                        <h3 style="margin-top:6px">Thermo Scientific™ 1500 Series Biosafety Cabinet</h3>
+                    </div>
+                    <span style="color:#dce7f0;font-size:13.5px">Class II, Type A2 &bull; Superior Contamination Control</span>
+                </div>
+                <p style="color:#c5d8ea;font-size:14.5px;line-height:1.6;margin:0 0 20px">
+                    The Thermo Scientific™ 1500 Series Class II, Type A2 Biosafety Cabinet delivers advanced protection for oncology personnel, chemotherapy products, and the environment. Designed for precision pharmaceutical compounding and clinical oncology diagnostics, it combines energy efficiency, ergonomic operation, and superior contamination control.
+                </p>
+                <div class="biosafety-grid">
+                    <div class="biosafety-item">
+                        <small>Model &amp; Cabinet Type</small>
+                        <b>Thermo Scientific™ 1500 Series (Class II, Type A2)</b>
+                    </div>
+                    <div class="biosafety-item">
+                        <small>HEPA Filtration</small>
+                        <b>99.995% efficient at MPPS</b>
+                    </div>
+                    <div class="biosafety-item">
+                        <small>Airflow Architecture</small>
+                        <b>Vertical laminar airflow with balanced inflow &amp; downflow</b>
+                    </div>
+                    <div class="biosafety-item">
+                        <small>Work Surface &amp; Construction</small>
+                        <b>Stainless steel work surface, powder-coated steel exterior</b>
+                    </div>
+                    <div class="biosafety-item">
+                        <small>Front Sash &amp; Lighting</small>
+                        <b>Motorized tempered safety glass &bull; Energy-efficient LED</b>
+                    </div>
+                    <div class="biosafety-item">
+                        <small>Control Panel &amp; Safety</small>
+                        <b>Digital display with real-time airflow monitoring &amp; alarm</b>
+                    </div>
+                    <div class="biosafety-item">
+                        <small>Noise Level &amp; Power</small>
+                        <b>Low-noise (&le; 65 dB) &bull; 220–240 V AC, 50/60 Hz</b>
+                    </div>
+                    <div class="biosafety-item">
+                        <small>Clinical Applications</small>
+                        <b>Chemotherapy compounding, cell culture, molecular diagnostics</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CATH LAB & CARDIAC TECHNOLOGY -->
+    <section class="section soft" id="cathlab">
+        <div class="wrap">
+            <div class="kicker">ADVANCED INTERVENTIONAL CARDIOLOGY</div>
+            <h2 class="title">Cath Lab Specifications &amp; Cardiac Equipment</h2>
+            <p class="sub">Fully digital <b>ARTS ZEE PURE Catheterization Lab</b> with Flat Panel detector and advanced software (CLEAR STENT LIVE &amp; ROADMAP). First and only Cath lab in Hisar with CLEAR STENT LIVE technology for real-time verification of stent positioning, minimizing restenosis with lowest radiation dosage.</p>
+
+            <div class="tech-showcase-grid">
+                <!-- IVUS -->
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <div class="tech-card-icon"><i data-lucide="scan"></i></div>
+                        <div>
+                            <h4 class="tech-card-title">IVUS Machine</h4>
+                            <div class="tech-card-sub">Intravascular Ultrasound</div>
+                        </div>
+                    </div>
+                    <p class="tech-card-desc">Medical imaging device using an ultrasound probe inside coronary arteries to deliver real-time, high-resolution cross-sectional arterial images.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Examines inside coronary arteries in microscopic detail.</li>
+                        <li>Measures exact diameter and size of the artery.</li>
+                        <li>Detects plaque severity and blockage composition.</li>
+                        <li>Ensures precise stent sizing and optimal wall apposition.</li>
+                        <li>Reduces PCI complications and boosts angioplasty success.</li>
+                    </ul>
+                </div>
+
+                <!-- FFR -->
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <div class="tech-card-icon blue"><i data-lucide="gauge"></i></div>
+                        <div>
+                            <h4 class="tech-card-title">FFR Machine</h4>
+                            <div class="tech-card-sub">Fractional Flow Reserve</div>
+                        </div>
+                    </div>
+                    <p class="tech-card-desc">Diagnostic system measuring blood pressure gradient across blockages using a precision pressure guidewire to assess hemodynamic significance.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Measures functional impact of stenosis on myocardial blood flow.</li>
+                        <li>Determines if narrowing requires stenting or medical therapy.</li>
+                        <li>Prevents unnecessary stent implantation for non-critical blocks.</li>
+                        <li>Used alongside IVUS during complex PCI procedures.</li>
+                        <li>Optimizes long-term coronary intervention outcomes.</li>
+                    </ul>
+                </div>
+
+                <!-- ACT -->
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <div class="tech-card-icon"><i data-lucide="droplet"></i></div>
+                        <div>
+                            <h4 class="tech-card-title">ACT Machine</h4>
+                            <div class="tech-card-sub">Activated Clotting Time</div>
+                        </div>
+                    </div>
+                    <p class="tech-card-desc">Real-time point-of-care coagulometer measuring blood clotting time within minutes after heparin administration during cardiac procedures.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Monitors heparin anticoagulation during angiography and PCI.</li>
+                        <li>Ensures exact blood thinning to prevent intra-catheter thrombus.</li>
+                        <li>Calculates precise supplemental heparin dosing.</li>
+                        <li>Prevents excessive bleeding risk from over-anticoagulation.</li>
+                        <li>Essential for patient safety during high-risk interventions.</li>
+                    </ul>
+                </div>
+
+                <!-- IABP -->
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <div class="tech-card-icon red"><i data-lucide="heart-pulse"></i></div>
+                        <div>
+                            <h4 class="tech-card-title">IABP Machine</h4>
+                            <div class="tech-card-sub">Intra-Aortic Balloon Pump</div>
+                        </div>
+                    </div>
+                    <p class="tech-card-desc">Mechanical circulatory support device inflating and deflating synchronously with heartbeat to assist failing ventricles and stabilize cardiogenic shock.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Provides vital hemodynamic support in severe heart failure.</li>
+                        <li>Reduces left ventricular afterload and myocardial oxygen demand.</li>
+                        <li>Increases coronary perfusion and systemic cardiac output.</li>
+                        <li>Critical support bridge during high-risk PCI and post-cardiac arrest.</li>
+                        <li>Stabilizes patients awaiting definitive advanced therapies.</li>
+                    </ul>
+                </div>
+
+                <!-- CARDIAC MONITOR & DEFIBRILLATOR -->
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <div class="tech-card-icon"><i data-lucide="monitor"></i></div>
+                        <div>
+                            <h4 class="tech-card-title">Cardiac Monitors &amp; Defibrillators</h4>
+                            <div class="tech-card-sub">Real-Time Vital Monitoring &amp; Pacing</div>
+                        </div>
+                    </div>
+                    <p class="tech-card-desc">Continuous multi-parameter monitoring and biphasic defibrillation units for instant arrhythmia recognition and resuscitation.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Real-time ECG, NIBP, SpO2, and respiratory rate tracking.</li>
+                        <li>Instant threshold alarms for bradycardia &amp; tachyarrhythmias.</li>
+                        <li>Synchronized cardioversion for conscious tachycardias.</li>
+                        <li>Biphasic defibrillation for VF/pulseless VT arrest.</li>
+                        <li>External transcutaneous pacing for severe heart block.</li>
+                    </ul>
+                </div>
+
+                <!-- ECHO & HOLTER -->
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <div class="tech-card-icon blue"><i data-lucide="activity"></i></div>
+                        <div>
+                            <h4 class="tech-card-title">ECHO &amp; Holter ECG Recorder</h4>
+                            <div class="tech-card-sub">2D/3D Color Doppler &amp; 24–48 Hr ECG</div>
+                        </div>
+                    </div>
+                    <p class="tech-card-desc">Non-invasive high-resolution Echocardiography and ambulatory continuous Holter recording for silent arrhythmias and cardiac function evaluation.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Measures chamber dimensions, ejection fraction (EF), and valves.</li>
+                        <li>Detects pericardial effusion and congenital cardiac defects.</li>
+                        <li>24 to 48-hour continuous ambulatory Holter recording.</li>
+                        <li>Diagnoses unexplained syncope, palpitations, and dizziness.</li>
+                        <li>Evaluates pacemaker function and antiarrhythmic efficacy.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DIALYSIS DEPARTMENT & SCOPE -->
+    <section class="section" id="dialysis">
+        <div class="wrap">
+            <div class="kicker">NEPHROLOGY &amp; RENAL CARE</div>
+            <h2 class="title">Dialysis Department &amp; Scope of Renal Services</h2>
+            <p class="sub">Our <b>8-bedded modern Dialysis Unit</b> operates under the direct supervision of a full-time experienced Nephrologist with 24&times;7 emergency dialysis support.</p>
+
+            <div class="bed-layout-grid">
+                <div>
+                    <h3 style="font-size:22px;color:var(--blue);margin:0 0 16px">Advanced Dialysis Facilities</h3>
+                    <ul class="tech-bullet-list" style="font-size:15px;line-height:1.75">
+                        <li><b>Advanced Haemodialysis</b> services with latest microprocessor-controlled dialysis machines.</li>
+                        <li>Direct supervision and clinical management by a <b>Full-Time Nephrologist</b>.</li>
+                        <li><b>Peritoneal Dialysis</b> for patients with acute and chronic kidney diseases.</li>
+                        <li><b>USG-Guided Kidney Biopsy</b> for native and transplanted kidneys.</li>
+                        <li><b>ICU Nephrology Support</b> for complex fluid, electrolyte, and acid-base disorders.</li>
+                        <li><b>SLED (Sustained Low-Efficiency Dialysis)</b> for hemodynamically unstable and low-blood-pressure patients.</li>
+                        <li><b>24&times;7 Emergency Dialysis</b> capabilities for critical renal admissions.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-content" style="background:#f7fbfe;border-color:#bcd6ed">
+                    <h4 style="margin:0 0 12px;color:var(--blue);font-size:18px">Comprehensive Scope of Dialysis Services</h4>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13.5px;color:#234468;font-weight:700">
+                        <span>&bull; Chronic Kidney Disease (CKD)</span>
+                        <span>&bull; Acute Kidney Injury (AKI)</span>
+                        <span>&bull; Severe Hyperkalaemia</span>
+                        <span>&bull; Severe Fluid Overload</span>
+                        <span>&bull; Acid–Base Disturbances</span>
+                        <span>&bull; Drug Toxicity &amp; Poisoning</span>
+                        <span>&bull; Extracorporeal Therapy</span>
+                        <span>&bull; Uremic Encephalopathy</span>
+                        <span>&bull; Plasmapheresis</span>
+                        <span>&bull; Hemoperfusion</span>
+                    </div>
+                    <div style="margin-top:18px;padding-top:14px;border-top:1px solid #dce8f3;font-size:13px;color:var(--muted)">
+                        Emergency Dialysis Helpline: <b>01662-249473</b> (Round-the-clock technician availability)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ICU CAPACITY & ROOM CATEGORIES (BED MATRIX) -->
+    <section class="section soft" id="bed-matrix">
+        <div class="wrap">
+            <div class="kicker">CAPACITY &amp; ACCOMMODATION</div>
+            <h2 class="title">ICU Capacity &amp; Room Categories (125 Beds Total)</h2>
+            <p class="sub">Our <b>35-bedded fully equipped Intensive Care Unit (ICU)</b> is supported by duty intensivists, physicians, medical officers, and advanced life-support equipment including NIV, BiPAP, multipara monitors, and ventilators.</p>
+
+            <div class="bed-layout-grid">
+                <div>
+                    <div class="bed-summary-cards">
+                        <div class="bed-stat-box icu">
+                            <b>35 Beds</b>
+                            <span>Intensive Critical Care</span>
+                            <small>ICU (14) + MICU (15) + SICU (5) + Step Down (1)</small>
+                        </div>
+                        <div class="bed-stat-box">
+                            <b>100 Beds</b>
+                            <span>In-Patient Operational</span>
+                            <small>Deluxe, Single, Sharing &amp; General Wards</small>
+                        </div>
+                        <div class="bed-stat-box">
+                            <b>25 Beds</b>
+                            <span>Day Care Units</span>
+                            <small>Dialysis (8), Chemo (7), Emergency (5), SICU (5)</small>
+                        </div>
+                        <div class="bed-stat-box medpark">
+                            <b>125 Beds</b>
+                            <span>Grand Total Sanctioned</span>
+                            <small>NABH Accredited Bed Strength</small>
+                        </div>
+                    </div>
+
+                    <div class="timeline-content">
+                        <h4 style="margin:0 0 10px;color:var(--blue);font-size:17px">Comprehensive In-Patient Amenities</h4>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;color:var(--muted)">
+                            <span>&bull; Air-Conditioned Rooms</span>
+                            <span>&bull; Comfortable Patient Beds</span>
+                            <span>&bull; Attached Washrooms</span>
+                            <span>&bull; Nurse Call System</span>
+                            <span>&bull; Visitor / Attendant Seating</span>
+                            <span>&bull; Wi-Fi Connectivity</span>
+                            <span>&bull; 24&times;7 Professional Nursing</span>
+                            <span>&bull; Central O2 &amp; Suction Lines</span>
+                            <span>&bull; Infection-Controlled Hygiene</span>
+                            <span>&bull; OPD Waiting Halls &amp; Cafeteria</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABLE CARD -->
+                <div class="bed-table-card">
+                    <div class="bed-table-head">
+                        <h4>Hospital Room &amp; Bed Breakdown</h4>
+                        <span>Sanctioned Capacity: 125</span>
+                    </div>
+                    <table class="bed-matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Department / Room Category</th>
+                                <th style="text-align:right">No. of Beds</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Intensive Care Unit (ICU)</td>
+                                <td style="text-align:right"><b>14</b></td>
+                            </tr>
+                            <tr>
+                                <td>Medical Intensive Care Unit (MICU)</td>
+                                <td style="text-align:right"><b>15</b></td>
+                            </tr>
+                            <tr>
+                                <td>Step Down ICU</td>
+                                <td style="text-align:right"><b>1</b></td>
+                            </tr>
+                            <tr>
+                                <td>Deluxe Room</td>
+                                <td style="text-align:right"><b>1</b></td>
+                            </tr>
+                            <tr>
+                                <td>Single Rooms</td>
+                                <td style="text-align:right"><b>29</b></td>
+                            </tr>
+                            <tr>
+                                <td>Sharing Rooms</td>
+                                <td style="text-align:right"><b>24</b></td>
+                            </tr>
+                            <tr>
+                                <td>General Ward</td>
+                                <td style="text-align:right"><b>16</b></td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Total Operational In-Patient Beds</td>
+                                <td style="text-align:right">100</td>
+                            </tr>
+                            <tr>
+                                <td>Emergency Department</td>
+                                <td style="text-align:right"><b>5</b></td>
+                            </tr>
+                            <tr>
+                                <td>Dialysis Unit</td>
+                                <td style="text-align:right"><b>8</b></td>
+                            </tr>
+                            <tr>
+                                <td>Chemotherapy Ward (Day Care)</td>
+                                <td style="text-align:right"><b>7</b></td>
+                            </tr>
+                            <tr>
+                                <td>Pre / Post-Operative Room (SICU)</td>
+                                <td style="text-align:right"><b>5</b></td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Total Day Care Beds</td>
+                                <td style="text-align:right">25</td>
+                            </tr>
+                            <tr class="grand-total">
+                                <td>GRAND TOTAL HOSPITAL CAPACITY</td>
+                                <td style="text-align:right">125 BEDS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: OPERATION THEATRES -->
+    <section class="section" id="operation-theatres">
+        <div class="wrap">
+            <div class="kicker">SURGICAL INFRASTRUCTURE</div>
+            <h2 class="title">Operation Theatres &amp; Surgical Suites (4 OT Tables)</h2>
+            <p class="sub">Designed to provide safe, precise, and infection-controlled surgical care across multiple specialties with strict sterilization and monitoring protocols.</p>
+
+            <div class="ot-suites-grid">
+                <!-- MAJOR OT -->
+                <div class="ot-suite-card">
+                    <span class="ot-tag">HIGH-RISK &amp; COMPLEX SURGERY</span>
+                    <h4>Major Operation Theatre</h4>
+                    <p>Fully equipped for high-risk neurosurgical, orthopaedic, oncological, and laparoscopic procedures.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Advanced anaesthesia workstations.</li>
+                        <li>Multi-parameter monitoring systems.</li>
+                        <li>High-intensity shadowless LED lights.</li>
+                        <li>Electrosurgical &amp; central medical gas pipelines.</li>
+                        <li>Immediate direct access to ICU.</li>
+                    </ul>
+                </div>
+
+                <!-- MODULAR OT -->
+                <div class="ot-suite-card">
+                    <span class="ot-tag">3-BED MODULAR COMPLEX</span>
+                    <h4>Modular Operation Theatre</h4>
+                    <p>State-of-the-art 3-bedded modular environment engineered for maximum sterility and minimum infection risk.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Laminar airflow system for ultra-clean air.</li>
+                        <li>HEPA filtration with positive pressure ventilation.</li>
+                        <li>Seamless anti-microbial wall paneling.</li>
+                        <li>Integrated surgical gas &amp; electrical pendants.</li>
+                        <li>Ideal for minimally invasive &amp; joint surgeries.</li>
+                    </ul>
+                </div>
+
+                <!-- MINOR OT -->
+                <div class="ot-suite-card">
+                    <span class="ot-tag">DAY-CARE PROCEDURES</span>
+                    <h4>Minor Operation Theatre</h4>
+                    <p>Dedicated suite for day-care surgical interventions under local anaesthesia with same-day discharge.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Wound suturing and complex dressings.</li>
+                        <li>Diagnostic biopsies &amp; minor excisions.</li>
+                        <li>Incision &amp; drainage (I&amp;D) procedures.</li>
+                        <li>Abscess drainage under local anaesthesia.</li>
+                        <li>Rapid recovery and same-day discharge.</li>
+                    </ul>
+                </div>
+
+                <!-- LABOUR ROOM & RECOVERY -->
+                <div class="ot-suite-card">
+                    <span class="ot-tag">OBSTETRICS &amp; RECOVERY</span>
+                    <h4>Labour Room &amp; 5-Bed Recovery</h4>
+                    <p>Dedicated maternal-fetal delivery suite and 5-bedded Post-Operative (Post-Op) continuous monitoring area.</p>
+                    <ul class="tech-bullet-list">
+                        <li>Safe normal deliveries &amp; emergency caesarean.</li>
+                        <li>Foetal cardiac monitoring &amp; resuscitation.</li>
+                        <li>5-bedded dedicated Post-Op recovery unit.</li>
+                        <li>Continuous vital signs &amp; pain management.</li>
+                        <li>Early mobilization and discharge counselling.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: OFFICIAL NABH ACCREDITATION -->
+    <section class="section soft" id="nabh-accreditation">
+        <div class="wrap">
+            <div class="kicker">OFFICIAL QUALITY CERTIFICATION</div>
+            <h2 class="title">NABH Accreditation &amp; Statutory Compliance</h2>
+            <p class="sub">National Accreditation Board for Hospitals &amp; Healthcare Providers (NABH), a constituent board of the Quality Council of India (QCI).</p>
+
+            <div class="nabh-official-card">
+                <div class="nabh-left-badge">
+                    <img src="assets/images/nabh.jpg" alt="NABH Accreditation Board Logo" class="nabh-logo-display">
+                    <h3>NABH Accredited Hospital</h3>
+                    <p>Reflecting commitment to patient safety, clinical excellence, ethical governance, and continuous quality improvement.</p>
+                    <div class="nabh-valid-pill">
+                        <i data-lucide="shield-check"></i> Certificate Valid: 2023 – 2027
+                    </div>
+                </div>
+
+                <div>
+                    <table class="nabh-details-table">
+                        <tbody>
+                            <tr>
+                                <td>Hospital Name</td>
+                                <td><b>Sukhda Multi Speciality Hospital</b><br><small style="color:var(--muted)">(A Unit of Vandam Healthcare Pvt. Ltd.)</small></td>
+                            </tr>
+                            <tr>
+                                <td>Registered Address</td>
+                                <td>Delhi Road, Opposite Green Belt, Hisar – 125001, Haryana</td>
+                            </tr>
+                            <tr>
+                                <td>Accreditation Body</td>
+                                <td>National Accreditation Board for Hospitals &amp; Healthcare Providers (NABH), QCI</td>
+                            </tr>
+                            <tr>
+                                <td>Certificate Number</td>
+                                <td><b style="color:var(--blue);font-size:16px">H-2020-0707</b></td>
+                            </tr>
+                            <tr>
+                                <td>First Accreditation Date</td>
+                                <td>28 May 2020</td>
+                            </tr>
+                            <tr>
+                                <td>Current Validity Period</td>
+                                <td><b>28 May 2023 to 27 May 2027</b></td>
+                            </tr>
+                            <tr>
+                                <td>Total Sanctioned NABH Beds</td>
+                                <td><b style="color:var(--green);font-size:16px">125 Beds</b></td>
+                            </tr>
+                            <tr>
+                                <td>Academic Accreditation</td>
+                                <td><b>NBEMS Accredited</b> for DNB General Medicine (2 Seats)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION 4: OUR HOSPITALS NETWORK -->
-    <section class="section soft" id="hospitals">
+    <section class="section" id="hospitals">
         <div class="wrap">
             <div class="kicker">TWO HOSPITALS • ONE COMMITMENT</div>
             <h2 class="title">Our Hospital Network in Hisar</h2>
-            <p class="sub">Two state-of-the-art facilities working as one unified healthcare ecosystem for complete
-                patient care.</p>
+            <p class="sub">Two state-of-the-art facilities working as one unified healthcare ecosystem for complete patient care.</p>
 
             <div class="hospital-grid">
                 <!-- HOSPITAL 1 -->
@@ -2585,25 +3788,22 @@
                     <div class="photo">
                         <img src="assets/images/sukhda-multispecialty-hospital.jpg"
                             alt="Sukhda Multispeciality Hospital">
-                        <div class="place">DELHI ROAD, HISAR<br>NABH ACCREDITED</div>
+                        <div class="place">DELHI ROAD, HISAR<br>125-BEDDED NABH ACCREDITED</div>
                     </div>
                     <div class="h-info">
                         <img class="h-logo" src="assets/images/sukhda-multispeciality-logo.png"
                             alt="Sukhda Multispeciality Hospital">
                         <h3>Sukhda Multispeciality Hospital</h3>
-                        <p>Complete multispeciality care with advanced 24/7 ICU, emergency trauma care, mother &amp;
-                            child care, laparoscopic surgery, nephrology, joint replacements, and comprehensive
-                            diagnostics.</p>
+                        <p>Complete multispeciality care with advanced 35-bed ICU, 24/7 emergency trauma care, mother &amp; child care, laparoscopic surgery, 8-bed dialysis, joint replacements, and comprehensive diagnostics.</p>
                         <div class="checks">
-                            <span><i data-lucide="check"></i> 24/7 ICU &amp; Emergency</span>
-                            <span><i data-lucide="check"></i> Internal Medicine</span>
-                            <span><i data-lucide="check"></i> Nephrology &amp; Dialysis</span>
-                            <span><i data-lucide="check"></i> Laparoscopy &amp; Urology</span>
-                            <span><i data-lucide="check"></i> Gynaecology &amp; NICU</span>
-                            <span><i data-lucide="check"></i> Joint Replacement</span>
+                            <span><i data-lucide="check"></i> 35-Bed ICU &amp; 24/7 Emergency</span>
+                            <span><i data-lucide="check"></i> Internal Medicine (DNB Center)</span>
+                            <span><i data-lucide="check"></i> 8-Bed Nephrology &amp; Dialysis</span>
+                            <span><i data-lucide="check"></i> Laparoscopy, Surgery &amp; Urology</span>
+                            <span><i data-lucide="check"></i> Gynaecology, Labour &amp; NICU</span>
+                            <span><i data-lucide="check"></i> 3D Knee Resurfacing &amp; Ortho</span>
                         </div>
-                        <a class="btn small primary" href="index.html#specialities">Explore Multispeciality Services
-                            →</a>
+                        <a class="btn small primary" href="index.html#specialities">Explore Multispeciality Services →</a>
                     </div>
                 </article>
 
@@ -2611,27 +3811,26 @@
                 <article class="hospital">
                     <div class="photo">
                         <img src="assets/images/sukhda-medpark-hospital.jpeg" alt="Sukhda MedPark Hospital">
-                        <div class="place">HISAR<br>SUPER SPECIALITY &amp; CANCER</div>
+                        <div class="place">HISAR<br>50-BEDDED CANCER &amp; SUPER SPECIALITY</div>
                     </div>
                     <div class="h-info">
                         <img class="h-logo" src="assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark">
                         <h3>Sukhda MedPark Hospital</h3>
-                        <p>Hisar's dedicated super speciality &amp; comprehensive cancer institute offering chemotherapy
-                            daycare, surgical oncology, radiation oncology (LINAC), cardiology with Cath Lab, and neuro
-                            spine surgery.</p>
+                        <p>Hisar's dedicated 50-bedded super speciality &amp; comprehensive cancer institute offering chemotherapy daycare with Class II Type A2 Biosafety Cabinet, surgical oncology, radiation oncology (LINAC), cardiology with Cath Lab, and neuro spine surgery.</p>
                         <div class="checks">
-                            <span><i data-lucide="check"></i> Internal Medicine</span>
-                            <span><i data-lucide="check"></i> Medical Oncology &amp; Chemo</span>
-                            <span><i data-lucide="check"></i> Surgical Oncology</span>
+                            <span><i data-lucide="check"></i> Medical Oncology &amp; Chemo Suites</span>
+                            <span><i data-lucide="check"></i> Surgical Oncology (Modular OTs)</span>
                             <span><i data-lucide="check"></i> Radiation Oncology (LINAC)</span>
-                            <span><i data-lucide="check"></i> Cardiology &amp; Cath Lab</span>
+                            <span><i data-lucide="check"></i> Cardiology &amp; Digital Cath Lab</span>
                             <span><i data-lucide="check"></i> Neuro &amp; Spine Surgery</span>
+                            <span><i data-lucide="check"></i> Molecular Diagnostics &amp; Pharmacy</span>
                         </div>
                         <a class="btn small primary" href="index.html#specialities">Explore MedPark Cancer Care →</a>
                     </div>
                 </article>
             </div>
         </div>
+    </section></div>
     </section>
 
 

@@ -7,14 +7,14 @@
     <title>Contact Us &amp; OPD Booking | Sukhda Healthcare Hisar</title>
     <meta name="description"
         content="Contact Sukhda Healthcare in Hisar. 24/7 Emergency Helpline: 01662-249473 / +91-99965-44005. Book specialist OPD appointments, emergency ambulance, and hospital inquiries online.">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet"><script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <style>
         :root {
-            --blue: #03205A;
+            --blue: #052159;
             --blue-dark: #02163d;
-            --green: #2A8238;
+            --green: #278132;
             --green-light: #eaf5ec;
             --pale: #f2f7fb;
             --muted: #53677f;
@@ -32,10 +32,25 @@
         body {
             margin: 0;
             color: var(--blue);
-            font: 16.5px/1.6 'Nunito Sans', sans-serif;
+            font: 16.5px/1.6 'Lato', sans-serif;
             background: #fff;
             overflow-x: hidden
         }
+
+        h1, h2, h3, h4, h5, h6,
+        .btn, .kicker, .eyebrow,
+        .nav-group > a, .nav-drop a,
+        .mega-col-title, .about-stat-card b,
+        .stat-card b, .stat-value, .metric-value,
+        .highlight-box b, .badge, .counter,
+        .sec-title, .header-cta, .phone-pill,
+        .doc-card-name, .dept-title, .facility-body h3,
+        .t-card-name, .review-author, .meta-label,
+        .brand, .logo-text, .h-info h3, .card-title,
+        .footer-col h4, .footer-col h5, .stat-num {
+            font-family: 'Montserrat', sans-serif;
+        }
+
 
         a {
             text-decoration: none;
@@ -83,7 +98,7 @@
         }
 
         .links a:hover {
-            color: #2A8238
+            color: #278132
         }
         .links a.top-wa i,
         .links a.top-wa svg,
@@ -118,7 +133,7 @@
         /* NAVIGATION */
         .nav {
             height: 80px;
-            box-shadow: 0 2px 9px #03205a19;
+            box-shadow: 0 2px 9px #05215919;
             position: relative;
             z-index: 100;
             background: #fff
@@ -213,7 +228,7 @@
             .nav-drop a {
                 display: block;
                 padding: 11px 20px !important;
-                font-size: 14.5px;
+                font-size: 15px;
                 font-weight: 600;
                 color: var(--blue);
                 border: 0 !important
@@ -243,7 +258,7 @@
                 top: 100%;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 820px;
+                width: 900px;
                 max-width: calc(100vw - 32px);
                 background: #ffffff;
                 border: 1px solid #d8e5f2;
@@ -321,7 +336,7 @@
             }
 
             .mega-col-title {
-                font-size: 13.5px;
+                font-size: 15.5px;
                 font-weight: 800;
                 color: var(--blue);
                 line-height: 1.25;
@@ -329,7 +344,7 @@
             }
 
             .mega-col-sub {
-                font-size: 11px;
+                font-size: 12px;
                 font-weight: 600;
                 color: var(--muted);
                 margin-top: 1px;
@@ -351,8 +366,8 @@
                 display: flex !important;
                 align-items: center !important;
                 gap: 7px !important;
-                padding: 6.5px 8px !important;
-                font-size: 12.5px !important;
+                padding: 7px 9px !important;
+                font-size: 14px !important;
                 font-weight: 600 !important;
                 color: #355070 !important;
                 border-radius: 6px !important;
@@ -363,8 +378,8 @@
             }
 
             .mega-links-grid a i, .mega-links-grid a svg {
-                width: 14px !important;
-                height: 14px !important;
+                width: 16px !important;
+                height: 16px !important;
                 color: var(--green) !important;
                 flex-shrink: 0 !important;
                 stroke-width: 2.2 !important;
@@ -399,20 +414,20 @@
             .mega-links-grid a.featured-service i,
             .mega-links-grid a.featured-service svg {
                 color: var(--green) !important;
-                width: 18px !important;
-                height: 18px !important;
+                width: 20px !important;
+                height: 20px !important;
             }
 
             .mega-links-grid a.featured-service b {
                 display: block;
-                font-size: 12.5px;
+                font-size: 14.5px;
                 color: var(--blue);
                 font-weight: 800;
             }
 
             .mega-links-grid a.featured-service small {
                 display: block;
-                font-size: 10px;
+                font-size: 12px;
                 color: var(--muted);
                 font-weight: 600;
                 margin-top: 1px;
@@ -435,7 +450,7 @@
                 padding: 9px 20px;
                 background: #f1f6fa;
                 border-top: 1px solid #e1ecf6;
-                font-size: 12px;
+                font-size: 13.5px;
             }
 
             .mega-view-all {
@@ -444,7 +459,7 @@
                 gap: 6px !important;
                 color: var(--green) !important;
                 font-weight: 800 !important;
-                font-size: 12px !important;
+                font-size: 13.5px !important;
                 padding: 0 !important;
                 border: 0 !important;
                 background: transparent !important;
@@ -480,7 +495,7 @@
             z-index: 998;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #03205A 0%, #02163d 100%);
+            background: linear-gradient(135deg, #052159 0%, #02163d 100%);
             border: 1.5px solid rgba(255, 255, 255, 0.22);
             border-radius: 9999px;
             padding: 6px 14px;
@@ -624,7 +639,7 @@
 
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, #02163d 0%, #03205A 100%);
+            background: linear-gradient(135deg, #02163d 0%, #052159 100%);
             color: #fff;
             padding: 56px 0 50px;
             position: relative;
@@ -693,7 +708,7 @@
         .hero-badge-float i, .hero-badge-float svg {
             width: 28px;
             height: 28px;
-            color: #2A8238;
+            color: #278132;
             flex-shrink: 0;
         }
 
@@ -721,7 +736,7 @@
         }
 
         .crumb a {
-            color: #2A8238;
+            color: #278132;
         }
 
         .crumb a:hover {
@@ -729,7 +744,7 @@
         }
 
         .eyebrow {
-            color: #2A8238;
+            color: #278132;
             font-weight: 900;
             font-size: 14px;
             letter-spacing: 1px;
@@ -756,7 +771,7 @@
         }
 
         .hero h1 span {
-            color: #2A8238;
+            color: #278132;
         }
 
         .hero p {
@@ -1213,7 +1228,7 @@
 
         /* PREMIUM FOOTER REDESIGN */
         .footer {
-            background: linear-gradient(180deg, #03205A 0%, #011338 100%);
+            background: linear-gradient(180deg, #052159 0%, #011338 100%);
             color: #cbd5e1;
             padding: 60px 0 0;
             border-top: 4px solid var(--green);
@@ -2037,13 +2052,13 @@
                 </div>
                 <div class="mobile-nav-links">
                     <span class="nav-group">
-                        <a href="about.html">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="index.html#about">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <span class="nav-drop">
-                            <a href="about.html">About Sukhda</a>
-                            <a href="about.html#leadership">Medical Leadership</a>
-                            <a href="about.html#vision">Vision &amp; Mission</a>
-                            <a href="about.html#hospitals">Our Hospitals</a>
-                            <a href="about.html#infrastructure">Infrastructure &amp; Facilities</a>
+                            <a href="index.html#about">About Sukhda</a>
+                            <a href="index.html#doctors">Medical Leadership</a>
+                            <a href="index.html#why">Vision &amp; Mission</a>
+                            <a href="index.html#hospitals">Our Hospitals</a>
+                            <a href="index.html#infrastructure">Infrastructure &amp; Facilities</a>
                         </span>
                     </span>
                     <span class="nav-group">
@@ -2527,9 +2542,9 @@
                 <h4>Quick Links</h4>
                 <ul class="footer-nav">
                     <li><a href="index.html"><span>›</span> Home</a></li>
-                    <li><a href="about.html"><span>›</span> About Sukhda</a></li>
-                    <li><a href="about.html#leadership"><span>›</span> Medical Leadership</a></li>
-                    <li><a href="about.html#vision"><span>›</span> Vision &amp; Mission</a></li>
+                    <li><a href="index.html#about"><span>›</span> About Sukhda</a></li>
+                    <li><a href="index.html#doctors"><span>›</span> Medical Leadership</a></li>
+                    <li><a href="index.html#why"><span>›</span> Vision &amp; Mission</a></li>
                     <li><a href="index.html#hospitals"><span>›</span> Our Hospitals</a></li>
                     <li><a href="index.html#specialities"><span>›</span> Centres of Excellence</a></li>
                     <li><a href="index.html#doctors"><span>›</span> Our Doctors</a></li>

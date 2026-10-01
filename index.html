@@ -7,14 +7,14 @@
     <title>Sukhda Healthcare | Multispeciality & Super Speciality Hospitals in Hisar</title>
     <meta name="description"
         content="Sukhda Healthcare in Hisar comprises Sukhda Multispeciality Hospital and Sukhda MedPark Cancer & Super Speciality Hospital. Founded in 2002 by Dr. Amit Mehta (AIIMS). NABH Accredited. 24/7 Emergency Helpline: 01662-249473 / +91-99965-44005.">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet"><script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <style>
         :root {
-            --blue: #03205A;
+            --blue: #052159;
             --blue-dark: #02163d;
-            --green: #2A8238;
+            --green: #278132;
             --green-light: #eaf5ec;
             --pale: #f2f7fb;
             --muted: #53677f;
@@ -32,10 +32,25 @@
         body {
             margin: 0;
             color: var(--blue);
-            font: 16px/1.55 'Nunito Sans', sans-serif;
+            font: 16px/1.55 'Lato', sans-serif;
             background: #fff;
             overflow-x: hidden
         }
+
+        h1, h2, h3, h4, h5, h6,
+        .btn, .kicker, .eyebrow,
+        .nav-group > a, .nav-drop a,
+        .mega-col-title, .about-stat-card b,
+        .stat-card b, .stat-value, .metric-value,
+        .highlight-box b, .badge, .counter,
+        .sec-title, .header-cta, .phone-pill,
+        .doc-card-name, .dept-title, .facility-body h3,
+        .t-card-name, .review-author, .meta-label,
+        .brand, .logo-text, .h-info h3, .card-title,
+        .footer-col h4, .footer-col h5, .stat-num {
+            font-family: 'Montserrat', sans-serif;
+        }
+
 
         a {
             text-decoration: none;
@@ -82,7 +97,7 @@
         }
 
         .links a:hover {
-            color: #2A8238
+            color: #278132
         }
         .links a.top-wa i,
         .links a.top-wa svg,
@@ -116,7 +131,7 @@
 
         .nav {
             height: 80px;
-            box-shadow: 0 2px 9px #03205a19;
+            box-shadow: 0 2px 9px #05215919;
             position: relative;
             z-index: 100;
             background: #fff
@@ -211,7 +226,7 @@
             .nav-drop a {
                 display: block;
                 padding: 11px 20px !important;
-                font-size: 14.5px;
+                font-size: 15px;
                 font-weight: 600;
                 color: var(--blue);
                 border: 0 !important;
@@ -241,7 +256,7 @@
                 top: 100%;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 820px;
+                width: 900px;
                 max-width: calc(100vw - 32px);
                 background: #ffffff;
                 border: 1px solid #d8e5f2;
@@ -319,7 +334,7 @@
             }
 
             .mega-col-title {
-                font-size: 13.5px;
+                font-size: 15.5px;
                 font-weight: 800;
                 color: var(--blue);
                 line-height: 1.25;
@@ -327,7 +342,7 @@
             }
 
             .mega-col-sub {
-                font-size: 11px;
+                font-size: 12px;
                 font-weight: 600;
                 color: var(--muted);
                 margin-top: 1px;
@@ -349,8 +364,8 @@
                 display: flex !important;
                 align-items: center !important;
                 gap: 7px !important;
-                padding: 6.5px 8px !important;
-                font-size: 12.5px !important;
+                padding: 7px 9px !important;
+                font-size: 14px !important;
                 font-weight: 600 !important;
                 color: #355070 !important;
                 border-radius: 6px !important;
@@ -361,8 +376,8 @@
             }
 
             .mega-links-grid a i, .mega-links-grid a svg {
-                width: 14px !important;
-                height: 14px !important;
+                width: 16px !important;
+                height: 16px !important;
                 color: var(--green) !important;
                 flex-shrink: 0 !important;
                 stroke-width: 2.2 !important;
@@ -397,20 +412,20 @@
             .mega-links-grid a.featured-service i,
             .mega-links-grid a.featured-service svg {
                 color: var(--green) !important;
-                width: 18px !important;
-                height: 18px !important;
+                width: 20px !important;
+                height: 20px !important;
             }
 
             .mega-links-grid a.featured-service b {
                 display: block;
-                font-size: 12.5px;
+                font-size: 14.5px;
                 color: var(--blue);
                 font-weight: 800;
             }
 
             .mega-links-grid a.featured-service small {
                 display: block;
-                font-size: 10px;
+                font-size: 12px;
                 color: var(--muted);
                 font-weight: 600;
                 margin-top: 1px;
@@ -433,7 +448,7 @@
                 padding: 9px 20px;
                 background: #f1f6fa;
                 border-top: 1px solid #e1ecf6;
-                font-size: 12px;
+                font-size: 13.5px;
             }
 
             .mega-view-all {
@@ -442,7 +457,7 @@
                 gap: 6px !important;
                 color: var(--green) !important;
                 font-weight: 800 !important;
-                font-size: 12px !important;
+                font-size: 13.5px !important;
                 padding: 0 !important;
                 border: 0 !important;
                 background: transparent !important;
@@ -478,7 +493,7 @@
             z-index: 998;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #03205A 0%, #02163d 100%);
+            background: linear-gradient(135deg, #052159 0%, #02163d 100%);
             border: 1.5px solid rgba(255, 255, 255, 0.22);
             border-radius: 9999px;
             padding: 6px 14px;
@@ -1026,7 +1041,7 @@
             padding: 20px 14px 18px;
             min-height: 168px;
             border-radius: 12px;
-            box-shadow: 0 3px 12px #03205a12;
+            box-shadow: 0 3px 12px #05215912;
             border: 1px solid rgba(220, 231, 240, 0.6);
             display: flex;
             flex-direction: column;
@@ -1642,7 +1657,7 @@
 
         /* PREMIUM FOOTER REDESIGN */
         .footer {
-            background: linear-gradient(180deg, #03205A 0%, #011338 100%);
+            background: linear-gradient(180deg, #052159 0%, #011338 100%);
             color: #cbd5e1;
             padding: 56px 0 0;
             border-top: 4px solid var(--green);
@@ -2298,12 +2313,12 @@
             }
 
             .services-mega .mega-col-title {
-                font-size: 13px !important;
+                font-size: 15px !important;
                 font-weight: 800 !important;
             }
 
             .services-mega .mega-col-sub {
-                font-size: 10.5px !important;
+                font-size: 12px !important;
             }
 
             .services-mega .mega-links-grid {
@@ -2314,7 +2329,7 @@
 
             .services-mega .mega-links-grid a {
                 padding: 8px 10px !important;
-                font-size: 13px !important;
+                font-size: 14px !important;
                 border-bottom: 1px solid #edf3f8 !important;
                 border-radius: 0 !important;
             }
@@ -2592,13 +2607,13 @@
                 </div>
                 <div class="mobile-nav-links">
                     <span class="nav-group">
-                        <a href="about.html">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="#about">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <span class="nav-drop">
-                            <a href="about.html">About Sukhda</a>
-                            <a href="about.html#leadership">Medical Leadership</a>
+                            <a href="#about">About Sukhda</a>
+                            <a href="#doctors">Medical Leadership</a>
                             <a href="#why">Why Choose Us</a>
-                            <a href="#infrastructure">Infrastructure & Facilities</a>
-                            <a href="about.html#vision">Vision & Mission</a>
+                            <a href="#infrastructure">Infrastructure &amp; Facilities</a>
+                            <a href="#why">Vision &amp; Values</a>
                         </span>
                     </span>
                     <span class="nav-group">
@@ -2700,9 +2715,7 @@
                     <span>TWO HOSPITALS • ONE COMMITMENT</span>
                 </div>
                 <h1>Advanced Care Across<br><span>Two Trusted Hospitals in Hisar</span></h1>
-                <p>Founded in 2002 by <b>Dr. Amit Mehta (MD Medicine, AIIMS New Delhi)</b> and <b>Dr. Manisha Mehta</b>,
-                    Sukhda Healthcare provides complete multi &amp; super speciality care under one trusted brand.
-                    Combining compassionate healing with modern technology for a healthier, stronger Hisar.</p>
+                <p>Founded in November 2002 by <b>Dr. Amit Mehta, MD (Medicine), AIIMS New Delhi</b> and <b>Dr. Manisha Mehta (NABH Assessor)</b>, Sukhda Healthcare provides complete multi &amp; super speciality care under one trusted brand. Combining compassionate healing with modern medical technology for a healthier, stronger community.</p>
                 <div class="actions">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book
                         Appointment</a>
@@ -2710,16 +2723,16 @@
                 </div>
                 <div class="stats">
                     <div class="stat"><i data-lucide="users"></i>
-                        <div><b>50,000+</b><small>Patients Treated</small></div>
+                        <div><b>65,000+</b><small>Lives Benefited</small></div>
                     </div>
-                    <div class="stat"><i data-lucide="stethoscope"></i>
-                        <div><b>250+</b><small>Medical Staff</small></div>
+                    <div class="stat"><i data-lucide="activity"></i>
+                        <div><b>35 ICU Beds</b><small>Intensive Care Unit</small></div>
                     </div>
                     <div class="stat"><i data-lucide="building-2"></i>
-                        <div><b>100+ Beds</b><small>Across 2 Hospitals</small></div>
+                        <div><b>125 Beds</b><small>NABH Accredited</small></div>
                     </div>
                     <div class="stat"><i data-lucide="award"></i>
-                        <div><b>20+ Years</b><small>Of Clinical Trust</small></div>
+                        <div><b>23+ Years</b><small>Est. Nov 2002</small></div>
                     </div>
                 </div>
             </div>
@@ -2730,8 +2743,8 @@
                     <div class="hero-badge-float">
                         <i data-lucide="shield-check"></i>
                         <div>
-                            <b>Compassionate Patient Care</b>
-                            <small>Senior Doctors &amp; 24/7 Specialist Support</small>
+                            <b>NABH Accredited Quality Care</b>
+                            <small>Certificate H-2020-0707 &bull; DNB Medicine</small>
                         </div>
                     </div>
                 </div>
@@ -2745,43 +2758,37 @@
             <div>
                 <div class="kicker">ABOUT SUKHDA HEALTHCARE</div>
                 <h2>Over Two Decades of Excellence,<br>Compassion &amp; Quality Care</h2>
-                <p>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD Medicine (AIIMS, New
-                        Delhi)</b>. After extensive clinical experience at AIIMS New Delhi, PGIMER Chandigarh, and
-                    heading Critical Care at Jindal Hospital for 9 years, Dr. Mehta established Sukhda in November 2002
-                    with the mission of <i>"Care and Cure for Whole Family Under One Roof"</i>.<br><br>
-                    Today, under the administrative and quality leadership of <b>Dr. Manisha Mehta (NABH Certified
-                        Assessor)</b>, Sukhda has expanded into a 100-bedded NABH-accredited network with <b>Sukhda
-                        Multispeciality Hospital</b> and <b>Sukhda MedPark (Cancer &amp; Super Speciality Hospital)</b>,
-                    delivering top-tier healthcare at affordable cost across Haryana, Punjab, and Rajasthan.</p>
-                <a class="btn small primary" href="about.html">Our Story &amp; Leadership →</a>
+                <p>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD (Medicine), AIIMS, New Delhi</b>. After gaining rich clinical experience at <b>AIIMS New Delhi</b> and <b>PGIMER Chandigarh</b>, Dr. Mehta established Sukhda in November 2002 with the mission of <i>"Care &amp; Cure for the Whole Family under One Roof"</i>.<br><br>
+                Over the years, Sukhda has expanded into a <b>125-bedded NABH Accredited Multispecialty Hospital</b> and <b>NBEMS DNB General Medicine Teaching Centre</b>. Under the administrative and quality leadership of <b>Dr. Manisha Mehta (NABH Certified Assessor)</b>, the network includes <b>Sukhda Multispeciality Hospital</b> and <b>Sukhda Med Park (Cancer &amp; Super Speciality Hospital)</b>, delivering top-tier healthcare at affordable cost across Haryana, Punjab, and Rajasthan.</p>
+                <a class="btn small primary" href="index.html#about">Our Story &amp; Growth Timeline →</a>
             </div>
             <div class="about-stats">
                 <div class="about-stat-card">
                     <i data-lucide="award"></i>
                     <div>
                         <b>Established 2002</b>
-                        <small>20+ Years Legacy in Hisar</small>
+                        <small>23+ Years Legacy in Hisar</small>
                     </div>
                 </div>
                 <div class="about-stat-card">
                     <i data-lucide="shield-check"></i>
                     <div>
                         <b>NABH Accredited</b>
-                        <small>Highest Standards of Patient Safety</small>
+                        <small>Cert. H-2020-0707 (125 Beds)</small>
                     </div>
                 </div>
                 <div class="about-stat-card">
                     <i data-lucide="graduation-cap"></i>
                     <div>
-                        <b>AIIMS &amp; PGIMER</b>
-                        <small>Trained Medical Leadership</small>
+                        <b>DNB General Medicine</b>
+                        <small>NBEMS Accredited 2 Seats</small>
                     </div>
                 </div>
                 <div class="about-stat-card">
                     <i data-lucide="heart-pulse"></i>
                     <div>
-                        <b>50,000+ Lives</b>
-                        <small>Touched with Compassion</small>
+                        <b>AB PM-JAY Gold</b>
+                        <small>Quality Certification</small>
                     </div>
                 </div>
             </div>
@@ -2819,7 +2826,7 @@
                     </span>
                     <div>
                         <b>Dual Hospital Network in Hisar</b>
-                        <small>Multispeciality Hospital + MedPark Cancer Hospital under one brand.</small>
+                        <small>125-bed Multispeciality Hospital + 50-bed MedPark Cancer Wing.</small>
                     </div>
                 </article>
                 <article>
@@ -2831,7 +2838,7 @@
                     </span>
                     <div>
                         <b>Advanced Diagnostic &amp; Surgical Tech</b>
-                        <small>Modern CT Scan, LINAC, Modular OTs, &amp; Dialysis Unit.</small>
+                        <small>Clear Stent Live Cath Lab, LINAC, Class II Biosafety &amp; 8-Bed Dialysis.</small>
                     </div>
                 </article>
                 <article>
@@ -2843,8 +2850,8 @@
                         </svg>
                     </span>
                     <div>
-                        <b>24/7 Emergency &amp; Critical Care</b>
-                        <small>Round-the-clock trauma response, ICU ventilators &amp; ambulances.</small>
+                        <b>35-Bed ICU &amp; 24/7 Critical Care</b>
+                        <small>Duty intensivists, NIV, BiPAP, multipara monitors &amp; ventilators.</small>
                     </div>
                 </article>
                 <article>
@@ -2870,7 +2877,7 @@
                     </span>
                     <div>
                         <b>NABH Quality &amp; Safety Standards</b>
-                        <small>Rigorous clinical governance ensuring world-class outcomes.</small>
+                        <small>Cert. H-2020-0707 &bull; AB PM-JAY Gold Quality Certification.</small>
                     </div>
                 </article>
             </div>
@@ -2896,14 +2903,13 @@
                         <img class="h-logo" src="assets/images/sukhda-multispeciality-logo.png"
                             alt="Sukhda Multispeciality Hospital">
                         <h3>Sukhda Multispeciality Hospital</h3>
-                        <p>Comprehensive family healthcare, 24/7 emergency medicine, multi-bed ICUs, joint replacement,
-                            cardiology, maternity, and dialysis.</p>
+                        <p>125-bedded NABH Accredited hospital with 35-bed ICU, 8-bed dialysis unit, 4 modern OT tables, interventional cardiology with CLEAR STENT LIVE Cath Lab, 3D knee resurfacing, and DNB teaching programme.</p>
                         <div class="checks">
-                            <span><i data-lucide="check-circle-2"></i>Internal Medicine</span>
-                            <span><i data-lucide="check-circle-2"></i>Interventional Cardiology</span>
-                            <span><i data-lucide="check-circle-2"></i>Orthopaedics &amp; Joint Replacement</span>
+                            <span><i data-lucide="check-circle-2"></i>Internal Medicine (DNB Center)</span>
+                            <span><i data-lucide="check-circle-2"></i>Interventional Cardiology (Cath Lab)</span>
+                            <span><i data-lucide="check-circle-2"></i>Orthopaedics &amp; 3D Knee Resurfacing</span>
                             <span><i data-lucide="check-circle-2"></i>Gynaecology &amp; Maternity</span>
-                            <span><i data-lucide="check-circle-2"></i>24/7 ICU &amp; Dialysis Unit</span>
+                            <span><i data-lucide="check-circle-2"></i>35-Bed ICU &amp; 8-Bed Dialysis Unit</span>
                             <span><i data-lucide="check-circle-2"></i>24/7 Emergency &amp; Trauma</span>
                         </div>
                         <a class="btn primary small" href="#contact">Book Consultation →</a>
@@ -2917,13 +2923,12 @@
                     <div class="h-info">
                         <img class="h-logo" src="assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark">
                         <h3>Sukhda MedPark (Cancer &amp; Super Speciality)</h3>
-                        <p>Dedicated cancer centre and advanced super-speciality hospital featuring Medical &amp;
-                            Surgical Oncology, LINAC radiation, and Neuro Surgery.</p>
+                        <p>50-bedded dedicated oncology centre and super-speciality hospital featuring Medical &amp; Surgical Oncology, Chemotherapy with Thermo Scientific™ Class II Type A2 Biosafety Cabinet, and LINAC radiation.</p>
                         <div class="checks">
-                            <span><i data-lucide="check-circle-2"></i>Internal Medicine</span>
-                            <span><i data-lucide="check-circle-2"></i>Medical Oncology &amp; Chemo</span>
-                            <span><i data-lucide="check-circle-2"></i>Surgical Oncology</span>
+                            <span><i data-lucide="check-circle-2"></i>Medical Oncology &amp; Chemo Suites</span>
+                            <span><i data-lucide="check-circle-2"></i>Surgical Oncology (Modular OTs)</span>
                             <span><i data-lucide="check-circle-2"></i>Linear Accelerator (LINAC)</span>
+                            <span><i data-lucide="check-circle-2"></i>Molecular Diagnostics &amp; Pharmacy</span>
                             <span><i data-lucide="check-circle-2"></i>Neuro Surgery &amp; Spine</span>
                             <span><i data-lucide="check-circle-2"></i>Gastroenterology &amp; Hepatology</span>
                         </div>
@@ -2943,7 +2948,7 @@
                     <h2>Our 21 Clinical Specialities &amp; Services</h2>
                 </div>
                 <div class="services-nav">
-                    <a class="more" href="about.html">View All Departments →</a>
+                    <a class="more" href="#specialities">View All Specialities →</a>
                     <div class="slider-arrows">
                         <button type="button" class="slide-btn" id="servicesPrev" aria-label="Previous service">
                             <i data-lucide="chevron-left"></i>
@@ -3257,7 +3262,7 @@
                     <div class="kicker">MODERN FACILITIES</div>
                     <h2>Infrastructure &amp; Medical Technology</h2>
                 </div>
-                <a class="more" href="about.html#infrastructure">View Technology Tour →</a>
+                <a class="more" href="#infrastructure">View Facilities →</a>
             </div>
             <div class="facilities">
                                     <article class="facility">
@@ -3517,7 +3522,7 @@
                 <h4>Quick Links</h4>
                 <ul class="footer-nav">
                     <li><a href="#"><span>›</span> Home</a></li>
-                    <li><a href="about.html"><span>›</span> About Sukhda</a></li>
+                    <li><a href="#about"><span>›</span> About Sukhda</a></li>
                     <li><a href="#hospitals"><span>›</span> Our Hospitals</a></li>
                     <li><a href="#specialities"><span>›</span> Specialities &amp; OPD</a></li>
                     <li><a href="#doctors"><span>›</span> Our Doctors</a></li>
