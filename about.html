@@ -1,0 +1,2877 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>About Us | Sukhda Healthcare - Multispeciality & Super Speciality Hospitals in Hisar</title>
+    <meta name="description"
+        content="Learn about Sukhda Healthcare in Hisar. Founded in 2002 by Dr. Amit Mehta (MD Medicine, AIIMS New Delhi) and Dr. Manisha Mehta (NABH Assessor). Discover our history, vision, mission, leadership, and infrastructure.">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <style>
+        :root {
+            --blue: #03205A;
+            --blue-dark: #02163d;
+            --green: #2A8238;
+            --green-light: #eaf5ec;
+            --pale: #f2f7fb;
+            --muted: #53677f;
+            --line: #dce7f0
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            color: var(--blue);
+            font: 16px/1.55 'Nunito Sans', sans-serif;
+            background: #fff;
+            overflow-x: hidden
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        img {
+            display: block;
+            width: 100%
+        }
+
+        .wrap {
+            width: min(1400px, calc(100% - 100px));
+            margin: auto
+        }
+
+        /* TOP BAR */
+        .top {
+            height: 40px;
+            background: var(--blue);
+            color: #fff;
+            font-size: 13px
+        }
+
+        .top .wrap,
+        .nav .wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            align-items: center
+        }
+
+        .links a {
+            color: #fff;
+            transition: color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .links a:hover {
+            color: #2A8238
+        }
+        .links a.top-wa i,
+        .links a.top-wa svg,
+        .links a[href*="wa.me"] i,
+        .links a[href*="wa.me"] svg {
+            color: #25D366 !important;
+        }
+
+        .links a.top-wa:hover,
+        .links a[href*="wa.me"]:hover {
+            color: #25D366 !important;
+        }
+
+        .links a.top-emergency,
+        .links a[href^="tel:"],
+        .top-links a[href^="tel:"] {
+            color: #ff4d4f !important;
+        }
+
+        .links a.top-emergency:hover,
+        .links a[href^="tel:"]:hover,
+        .top-links a[href^="tel:"]:hover {
+            color: #ff7875 !important;
+        }
+
+        .links span+span,
+        .links a+a {
+            border-left: 1px solid #ffffff55;
+            padding-left: 20px
+        }
+
+        /* NAVIGATION */
+        .nav {
+            height: 80px;
+            box-shadow: 0 2px 9px #03205a19;
+            position: relative;
+            z-index: 100;
+            background: #fff
+        }
+
+        .logo {
+            width: 230px;
+            height: 62px;
+            object-fit: contain;
+            object-position: left center
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            font-size: 15.5px;
+            font-weight: 700
+        }
+
+        .menu a {
+            padding: 28px 0;
+            position: relative;
+            transition: color 0.2s ease
+        }
+
+        .menu a:hover,
+        .menu .on {
+            color: var(--green)
+        }
+
+        .menu .on:after {
+            content: '';
+            height: 3px;
+            background: var(--green);
+            position: absolute;
+            bottom: 14px;
+            left: 0;
+            right: 0
+        }
+
+        .nav-group {
+            position: relative;
+            display: inline-flex;
+            align-items: center
+        }
+
+        .nav-group>a {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px
+        }
+
+        .nav-chevron {
+            width: 14px;
+            height: 14px;
+            stroke-width: 2.4;
+            transition: transform 0.2s ease
+        }
+
+        @media(min-width: 901px) {
+            .mobile-menu-head,
+            .mobile-menu-footer,
+            .nav-overlay {
+                display: none !important;
+            }
+
+            .mobile-nav-links {
+                display: flex !important;
+                align-items: center;
+                gap: 26px;
+            }
+
+            .nav-group:hover .nav-chevron {
+                transform: rotate(180deg)
+            }
+
+            .nav-drop {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                min-width: 250px;
+                background: #fff;
+                border: 1px solid var(--line);
+                border-radius: 8px;
+                box-shadow: 0 8px 24px rgba(3, 32, 90, 0.12);
+                padding: 8px 0;
+                z-index: 1000
+            }
+
+            .nav-drop a {
+                display: block;
+                padding: 11px 20px !important;
+                font-size: 14.5px;
+                font-weight: 600;
+                color: var(--blue);
+                border: 0 !important
+            }
+
+            .nav-drop a:hover {
+                background: var(--pale);
+                color: var(--green)
+            }
+
+            .nav-group:hover .nav-drop {
+                display: block
+            }
+
+            .services-drop {
+                min-width: 280px
+            }
+
+            /* MEGA MENU FOR OUR SERVICES */
+            .nav-group.mega-group {
+                position: relative;
+            }
+
+            .services-mega {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 820px;
+                max-width: calc(100vw - 32px);
+                background: #ffffff;
+                border: 1px solid #d8e5f2;
+                border-radius: 14px;
+                box-shadow: 0 20px 48px rgba(3, 32, 90, 0.18), 0 4px 14px rgba(3, 32, 90, 0.06);
+                padding: 0;
+                z-index: 1000;
+                overflow: hidden;
+                animation: megaFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+
+            @keyframes megaFadeIn {
+                from {
+                    opacity: 0;
+                    transform: translate(-50%, 8px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                }
+            }
+
+            .nav-group:hover .services-mega {
+                display: block;
+            }
+
+            .mega-body {
+                display: grid;
+                grid-template-columns: 1.16fr 0.94fr;
+                background: #fff;
+            }
+
+            .mega-col {
+                padding: 18px 20px 16px;
+            }
+
+            .mega-col.medpark-col {
+                background: #f7faff;
+                border-left: 1px solid #e3edf7;
+            }
+
+            .mega-col-header {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 12px;
+                padding-bottom: 10px;
+                border-bottom: 1.5px solid #edf3f8;
+            }
+
+            .mega-col.medpark-col .mega-col-header {
+                border-bottom-color: #dce7f3;
+            }
+
+            .mega-col-icon {
+                width: 34px;
+                height: 34px;
+                border-radius: 8px;
+                background: #eaf5ec;
+                color: var(--green);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+
+            .mega-col-icon i, .mega-col-icon svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .mega-col-icon.medpark {
+                background: #e8f0fe;
+                color: var(--blue);
+            }
+
+            .mega-col-title {
+                font-size: 13.5px;
+                font-weight: 800;
+                color: var(--blue);
+                line-height: 1.25;
+                letter-spacing: -0.2px;
+            }
+
+            .mega-col-sub {
+                font-size: 11px;
+                font-weight: 600;
+                color: var(--muted);
+                margin-top: 1px;
+            }
+
+            .mega-links-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3px 8px;
+            }
+
+            .mega-links-grid.single-col {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .mega-links-grid a {
+                display: flex !important;
+                align-items: center !important;
+                gap: 7px !important;
+                padding: 6.5px 8px !important;
+                font-size: 12.5px !important;
+                font-weight: 600 !important;
+                color: #355070 !important;
+                border-radius: 6px !important;
+                border: 0 !important;
+                transition: all 0.16s ease !important;
+                text-decoration: none !important;
+                line-height: 1.25 !important;
+            }
+
+            .mega-links-grid a i, .mega-links-grid a svg {
+                width: 14px !important;
+                height: 14px !important;
+                color: var(--green) !important;
+                flex-shrink: 0 !important;
+                stroke-width: 2.2 !important;
+            }
+
+            .mega-links-grid a:hover {
+                background: #eaf5ec !important;
+                color: var(--green) !important;
+                transform: translateX(2px);
+            }
+
+            .mega-col.medpark-col .mega-links-grid a i,
+            .mega-col.medpark-col .mega-links-grid a svg {
+                color: #0d6efd !important;
+            }
+
+            .mega-col.medpark-col .mega-links-grid a:hover {
+                background: #eef4ff !important;
+                color: var(--blue) !important;
+            }
+
+            .mega-links-grid a.featured-service {
+                background: #ffffff !important;
+                border: 1px solid #c9dcf0 !important;
+                border-left: 3.5px solid var(--green) !important;
+                padding: 8px 10px !important;
+                border-radius: 7px !important;
+                box-shadow: 0 2px 6px rgba(3, 32, 90, 0.05) !important;
+                margin-bottom: 3px;
+            }
+
+            .mega-links-grid a.featured-service i,
+            .mega-links-grid a.featured-service svg {
+                color: var(--green) !important;
+                width: 18px !important;
+                height: 18px !important;
+            }
+
+            .mega-links-grid a.featured-service b {
+                display: block;
+                font-size: 12.5px;
+                color: var(--blue);
+                font-weight: 800;
+            }
+
+            .mega-links-grid a.featured-service small {
+                display: block;
+                font-size: 10px;
+                color: var(--muted);
+                font-weight: 600;
+                margin-top: 1px;
+            }
+
+            .mega-links-grid a.featured-service:hover {
+                border-color: var(--green) !important;
+                border-left-color: var(--green) !important;
+                background: #f0faf2 !important;
+            }
+
+            .mega-links-grid a.featured-service:hover b {
+                color: var(--green) !important;
+            }
+
+            .mega-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 9px 20px;
+                background: #f1f6fa;
+                border-top: 1px solid #e1ecf6;
+                font-size: 12px;
+            }
+
+            .mega-view-all {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 6px !important;
+                color: var(--green) !important;
+                font-weight: 800 !important;
+                font-size: 12px !important;
+                padding: 0 !important;
+                border: 0 !important;
+                background: transparent !important;
+            }
+
+            .mega-view-all:hover {
+                background: transparent !important;
+                text-decoration: underline !important;
+            }
+
+            .mega-emergency-tag {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                color: var(--blue);
+                font-size: 11.5px;
+                font-weight: 600;
+            }
+
+            .mega-emergency-tag i, .mega-emergency-tag svg {
+                width: 13px;
+                height: 13px;
+                color: var(--green);
+            }
+        }
+
+        /* STICKY BOTTOM FLOATING PILL CTA */
+        .sticky-bottom-bar {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 998;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #03205A 0%, #02163d 100%);
+            border: 1.5px solid rgba(255, 255, 255, 0.22);
+            border-radius: 9999px;
+            padding: 6px 14px;
+            box-shadow: 0 10px 30px rgba(3, 32, 90, 0.45), 0 3px 12px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            gap: 2px;
+            max-width: calc(100vw - 28px);
+            width: max-content;
+            animation: stickySlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes stickySlideUp {
+            from {
+                transform: translate(-50%, 60px);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+        }
+
+        .sticky-bar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 14px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.1px;
+            line-height: 1.2;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .sticky-bar-item svg,
+        .sticky-bar-item i {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 3px;
+            stroke-width: 2.2;
+            color: #ffffff;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .sticky-bar-item:hover,
+        .sticky-bar-item:active {
+            color: #55df8e;
+        }
+
+        .sticky-bar-item:hover svg,
+        .sticky-bar-item:active svg {
+            color: #55df8e;
+            transform: scale(1.12);
+        }
+
+        .sticky-bar-item.whatsapp:hover,
+        .sticky-bar-item.whatsapp:active {
+            color: #25d366;
+        }
+
+        .sticky-bar-item.whatsapp:hover svg,
+        .sticky-bar-item.whatsapp:active svg {
+            color: #25d366;
+        }
+
+        .sticky-bar-divider {
+            width: 1px;
+            height: 22px;
+            background: rgba(255, 255, 255, 0.22);
+            margin: 0 1px;
+            flex-shrink: 0;
+        }
+
+        .nav.open ~ .sticky-bottom-bar {
+            display: none !important;
+        }
+
+        @media(min-width: 901px) {
+            .sticky-bottom-bar {
+                display: none !important;
+            }
+        }
+
+        @media(max-width: 900px) {
+            body {
+                padding-bottom: 74px !important;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #aebfd0;
+            padding: 13px 24px;
+            border-radius: 7px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.2s ease
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(3, 32, 90, 0.15)
+        }
+
+        .primary {
+            background: var(--green);
+            border-color: var(--green);
+            color: #fff
+        }
+
+        .primary:hover {
+            background: #216a2d;
+            border-color: #216a2d;
+            color: #fff
+        }
+
+        .white {
+            background: #fff;
+            color: var(--blue);
+            border-color: #fff
+        }
+
+        .white:hover {
+            background: #f0f6fa
+        }
+
+        .small {
+            padding: 10px 22px;
+            font-size: 13px
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: radial-gradient(circle at 85% 25%, rgba(42, 130, 56, 0.22) 0%, transparent 55%),
+                        radial-gradient(circle at 15% 85%, rgba(3, 32, 90, 0.35) 0%, transparent 60%),
+                        linear-gradient(135deg, #02163d 0%, #03205A 100%);
+            color: #fff;
+            padding: 56px 0 52px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .hero .wrap {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 46px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-copy {
+            width: 100%;
+        }
+
+        .crumb {
+            font-size: 13px;
+            color: #b9d3eb;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .crumb a {
+            color: #2A8238;
+        }
+
+        .crumb a:hover {
+            text-decoration: underline;
+        }
+
+        .eyebrow {
+            color: #2A8238;
+            font-weight: 900;
+            font-size: 12.5px;
+            letter-spacing: 0.9px;
+            margin-bottom: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-badge {
+            background: rgba(42, 130, 56, 0.16);
+            border: 1px solid rgba(42, 130, 56, 0.45);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.18;
+            margin: 10px 0 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: #2A8238;
+        }
+
+        .hero p {
+            font-size: 16.5px;
+            line-height: 1.68;
+            color: #dce7f0;
+            margin: 0 0 26px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 0;
+            flex-wrap: wrap;
+        }
+
+        /* HIGHLIGHTS CARD */
+        .hero-highlights-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-radius: 18px;
+            padding: 28px 26px;
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .hh-header {
+            margin-bottom: 20px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .hh-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            color: #2A8238;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .hh-badge i {
+            width: 14px;
+            height: 14px;
+        }
+
+        .hh-header h3 {
+            margin: 0;
+            font-size: 21px;
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .hh-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .hh-item {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 13px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .hh-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(42, 130, 56, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hh-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(42, 130, 56, 0.16);
+            border: 1px solid rgba(42, 130, 56, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2A8238;
+            flex-shrink: 0;
+        }
+
+        .hh-icon i {
+            width: 20px;
+            height: 20px;
+        }
+
+        .hh-item b {
+            display: block;
+            font-size: 17px;
+            color: #fff;
+            line-height: 1.15;
+        }
+
+        .hh-item small {
+            display: block;
+            font-size: 11.5px;
+            color: #b9d3eb;
+            margin-top: 3px;
+        }
+
+        .hh-footer {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hh-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(42, 130, 56, 0.12);
+            border: 1px solid rgba(42, 130, 56, 0.3);
+            color: #2A8238;
+            padding: 5px 11px;
+            border-radius: 20px;
+            font-size: 11.5px;
+            font-weight: 700;
+        }
+
+        .hh-tag i {
+            width: 13px;
+            height: 13px;
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 60px 0
+        }
+
+        .soft {
+            background: var(--pale)
+        }
+
+        .kicker {
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 6px
+        }
+
+        .title {
+            font-size: 30px;
+            margin: 0 0 10px;
+            color: var(--blue)
+        }
+
+        .sub {
+            color: var(--muted);
+            margin: 0 0 24px;
+            font-size: 15.5px;
+            line-height: 1.55
+        }
+
+        /* STORY 2-COL */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center
+        }
+
+        .story-copy p {
+            color: var(--muted);
+            line-height: 1.75;
+            font-size: 16px;
+            margin: 0 0 18px
+        }
+
+        .story-badge-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px
+        }
+
+        .story-badge {
+            background: var(--pale);
+            border: 1px solid var(--line);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .story-badge i {
+            width: 16px;
+            height: 16px;
+            color: var(--green)
+        }
+
+        .story-media {
+            position: relative
+        }
+
+        .story-img-wrap {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 36px rgba(3, 32, 90, 0.14);
+            border: 4px solid #fff
+        }
+
+        .story-img-wrap img {
+            height: 380px;
+            object-fit: cover
+        }
+
+        .quote-box {
+            border-left: 4px solid var(--green);
+            background: #fff;
+            padding: 18px 22px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 4px 14px rgba(3, 32, 90, 0.08);
+            margin-top: 22px;
+            font-size: 16.5px;
+            font-weight: 700;
+            color: var(--blue);
+            font-style: italic
+        }
+
+        /* VISION & MISSION */
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px;
+            margin-bottom: 36px
+        }
+
+        .vm-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 32px 28px;
+            border: 1px solid var(--line);
+            box-shadow: 0 4px 18px rgba(3, 32, 90, 0.08);
+            position: relative;
+            overflow: hidden
+        }
+
+        .vm-card.vision-card {
+            border-top: 5px solid var(--green)
+        }
+
+        .vm-card.mission-card {
+            border-top: 5px solid var(--blue)
+        }
+
+        .vm-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: var(--green-light);
+            color: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px
+        }
+
+        .vm-card.mission-card .vm-icon {
+            background: #eaf3fb;
+            color: var(--blue)
+        }
+
+        .vm-icon i {
+            width: 26px;
+            height: 26px
+        }
+
+        .vm-card h3 {
+            font-size: 22px;
+            margin: 0 0 10px;
+            color: var(--blue)
+        }
+
+        .vm-card p {
+            font-size: 15.5px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0
+        }
+
+        /* CORE VALUES */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px
+        }
+
+        .val-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 24px 20px;
+            box-shadow: 0 3px 12px rgba(3, 32, 90, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease
+        }
+
+        .val-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(3, 32, 90, 0.12);
+            border-color: #b7d1e8
+        }
+
+        .val-card i {
+            width: 32px;
+            height: 32px;
+            color: var(--green);
+            margin-bottom: 12px
+        }
+
+        .val-card h4 {
+            font-size: 17px;
+            margin: 0 0 8px;
+            color: var(--blue)
+        }
+
+        .val-card p {
+            font-size: 13.5px;
+            color: var(--muted);
+            line-height: 1.5;
+            margin: 0
+        }
+
+        /* DIRECTORS / LEADERSHIP */
+        .directors-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px
+        }
+
+        .director-card {
+            background: #fff;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            overflow: hidden;
+            box-shadow: 0 6px 22px rgba(3, 32, 90, 0.08);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease
+        }
+
+        .director-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(3, 32, 90, 0.14)
+        }
+
+        .dir-top {
+            display: flex;
+            gap: 20px;
+            padding: 24px;
+            background: linear-gradient(135deg, #f8fbfe 0%, #edf5fc 100%);
+            border-bottom: 1px solid var(--line);
+            align-items: center
+        }
+
+        .dir-photo {
+            width: 110px;
+            height: 130px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 12px rgba(3, 32, 90, 0.15);
+            flex-shrink: 0
+        }
+
+        .dir-meta h3 {
+            font-size: 21px;
+            margin: 0 0 4px;
+            color: var(--blue)
+        }
+
+        .dir-title {
+            font-size: 13.5px;
+            color: var(--green);
+            font-weight: 800;
+            margin-bottom: 6px
+        }
+
+        .dir-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px
+        }
+
+        .dir-badge {
+            background: #eaf7f0;
+            border: 1px solid #bfe8cf;
+            color: #06723e;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700
+        }
+
+        .dir-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            flex-grow: 1
+        }
+
+        .dir-body h4 {
+            font-size: 14.5px;
+            margin: 0;
+            color: var(--blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px
+        }
+
+        .dir-body p {
+            font-size: 14.5px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0
+        }
+
+        .dir-msg {
+            background: #f8fbfe;
+            border-left: 3px solid var(--green);
+            padding: 14px 16px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-size: 14px;
+            color: #274567;
+            line-height: 1.55
+        }
+
+        /* HOSPITALS NETWORK */
+        .hospital-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px
+        }
+
+        .hospital {
+            display: grid;
+            grid-template-columns: 46% 54%;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px #03205a12;
+            border: 1px solid var(--line);
+            transition: transform 0.25s ease, box-shadow 0.25s ease
+        }
+
+        .hospital:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 36px rgba(3, 32, 90, 0.18)
+        }
+
+        .photo {
+            position: relative;
+            min-height: 100%
+        }
+
+        .photo img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover
+        }
+
+        .place {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            background: rgba(3, 32, 90, 0.94);
+            backdrop-filter: blur(6px);
+            color: #fff;
+            font-size: 15.5px;
+            line-height: 1.45;
+            padding: 12px 18px;
+            border-radius: 9px;
+            font-weight: 700
+        }
+
+        .h-info {
+            padding: 34px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between
+        }
+
+        .h-logo {
+            width: 190px;
+            height: 52px;
+            object-fit: contain;
+            object-position: left center;
+            margin-bottom: 16px
+        }
+
+        .h-info h3 {
+            font-size: 26px;
+            font-weight: 800;
+            margin: 0 0 12px;
+            color: var(--blue);
+            line-height: 1.25
+        }
+
+        .h-info p {
+            font-size: 17.5px;
+            line-height: 1.65;
+            color: #334155;
+            margin: 0 0 22px
+        }
+
+        .checks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px 18px;
+            margin-bottom: 26px
+        }
+
+        .checks span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16.5px;
+            font-weight: 700;
+            line-height: 1.4;
+            color: var(--blue)
+        }
+
+        .checks i {
+            width: 22px;
+            height: 22px;
+            min-width: 22px;
+            color: var(--green);
+            flex-shrink: 0
+        }
+
+        /* INFRASTRUCTURE */
+        .facilities {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px
+        }
+
+        .facility {
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 14px #03205a12;
+            border: 1px solid var(--line);
+            transition: transform 0.2s ease, box-shadow 0.2s ease
+        }
+
+        .facility:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(3, 32, 90, 0.16)
+        }
+
+        .facility img {
+            height: 125px;
+            object-fit: cover
+        }
+
+        .facility div {
+            padding: 12px 14px
+        }
+
+        .facility b {
+            display: block;
+            font-size: 14px;
+            color: var(--blue);
+            margin-bottom: 4px
+        }
+
+        .facility small {
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.4;
+            display: block
+        }
+
+        /* EMPANELLED CASHLESS STRIP */
+        .empanelled-section {
+            background: #fff;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 28px 0
+        }
+
+        .emp-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px
+        }
+
+        .emp-head h4 {
+            margin: 0;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--blue)
+        }
+
+        .emp-head span {
+            font-size: 13px;
+            color: var(--green);
+            font-weight: 700
+        }
+
+        .emp-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .emp-pill {
+            background: #f4f8fc;
+            border: 1px solid #d4e3f0;
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 7px
+        }
+
+        .emp-pill i {
+            width: 15px;
+            height: 15px;
+            color: var(--green)
+        }
+
+        .emp-pill.gov {
+            background: #eaf7f0;
+            border-color: #bfe8cf;
+            color: #06723e
+        }
+
+        /* CTA SECTION */
+        .cta {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+            color: #fff;
+            padding: 42px 0
+        }
+
+        .cta .wrap {
+            display: grid;
+            grid-template-columns: 100px 1fr auto;
+            gap: 32px;
+            align-items: center
+        }
+
+        .cta-visual img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.3)
+        }
+
+        .cta h2 {
+            font-size: 30px;
+            margin: 0 0 8px;
+            line-height: 1.18
+        }
+
+        .cta p {
+            font-size: 15px;
+            color: #dbe7f2;
+            line-height: 1.5;
+            margin: 0
+        }
+
+        .cta .actions {
+            margin: 0;
+            display: flex;
+            gap: 12px
+        }
+
+        /* PREMIUM FOOTER REDESIGN */
+        .footer {
+            background: linear-gradient(180deg, #03205A 0%, #011338 100%);
+            color: #cbd5e1;
+            padding: 56px 0 0;
+            border-top: 4px solid var(--green);
+            position: relative;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.9fr 1.35fr 1.15fr;
+            gap: 36px;
+            padding-bottom: 44px;
+        }
+
+        .footer-brand-wrap {
+            background: #ffffff;
+            padding: 10px 18px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+            margin-bottom: 16px;
+            max-width: 230px;
+        }
+
+        .footer-brand-wrap .footer-logo {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin: 0;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            font-weight: 800;
+            color: #68d493;
+            letter-spacing: 0.3px;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+
+        .footer-desc {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #94a3b8;
+            margin: 0 0 16px;
+        }
+
+        .footer-nabh-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 8px 14px;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+        }
+
+        .footer-nabh-badge .nabh-icon-img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            border-radius: 4px;
+            background: #fff;
+            padding: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-nabh-badge b {
+            display: block;
+            font-size: 13px;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .footer-nabh-badge small {
+            display: block;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        .footer-col h4 {
+            font-size: 15px;
+            font-weight: 800;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin: 0 0 18px;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 3.5px;
+            background: var(--green);
+            border-radius: 2px;
+        }
+
+        .footer-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .footer-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13.5px;
+            color: #cbd5e1;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .footer-nav a span {
+            color: var(--green);
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #ffffff;
+            transform: translateX(4px);
+        }
+
+        .footer-nav a:hover span {
+            color: #68d493;
+        }
+
+        .footer-hospital-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 12px;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .footer-hospital-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(104, 212, 147, 0.35);
+        }
+
+        .f-hosp-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+        }
+
+        .f-hosp-header i,
+        .f-hosp-header svg {
+            width: 16px;
+            height: 16px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .f-hosp-header b {
+            font-size: 13.5px;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .f-hosp-sub {
+            font-size: 12px;
+            color: #68d493;
+            font-weight: 600;
+            margin: 0 0 4px !important;
+        }
+
+        .footer-hospital-card p {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.45;
+            margin: 0 0 6px;
+        }
+
+        .f-hosp-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #e2e8f0;
+            transition: color 0.2s ease;
+        }
+
+        .f-hosp-phone i,
+        .f-hosp-phone svg {
+            width: 13px;
+            height: 13px;
+            color: var(--green);
+        }
+
+        .f-hosp-phone:hover {
+            color: #68d493;
+        }
+
+        .footer-emergency-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, rgba(42, 130, 56, 0.22) 0%, rgba(3, 32, 90, 0.45) 100%);
+            border: 1px solid rgba(104, 212, 147, 0.35);
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+        }
+
+        .f-emg-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: var(--green);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .f-emg-icon i,
+        .f-emg-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-emergency-box small {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #68d493;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .f-emg-num {
+            display: block;
+            font-size: 16px;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.2;
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num:hover {
+            color: #68d493;
+        }
+
+        .f-emg-num-sub {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            color: #cbd5e1;
+            margin-top: 2px;
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num-sub:hover {
+            color: #68d493;
+        }
+
+        .footer-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            margin-bottom: 14px;
+        }
+
+        .f-cnt-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 13px;
+            color: #cbd5e1;
+            padding: 7px 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 7px;
+            transition: all 0.2s ease;
+            word-break: break-all;
+        }
+
+        .f-cnt-item i,
+        .f-cnt-item svg {
+            width: 15px;
+            height: 15px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .f-cnt-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border-color: rgba(104, 212, 147, 0.3);
+        }
+
+        .f-cnt-item.whatsapp:hover {
+            color: #25d366;
+            border-color: rgba(37, 211, 102, 0.4);
+        }
+
+        .f-cnt-item.whatsapp:hover i,
+        .f-cnt-item.whatsapp:hover svg {
+            color: #25d366;
+        }
+
+        .footer-motto {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 800;
+            color: #68d493;
+            padding-top: 4px;
+        }
+
+        .footer-motto i,
+        .footer-motto svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .bottom {
+            background: #010c22;
+            padding: 18px 0;
+            font-size: 13px;
+            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .bottom .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .bottom-badges {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            color: #cbd5e1;
+            font-size: 12.5px;
+        }
+
+        .bottom-badges span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bottom-badges span i,
+        .bottom-badges span svg {
+            width: 13px;
+            height: 13px;
+            color: var(--green);
+        }
+
+        .hamb {
+            border: 0;
+            background: transparent;
+            color: var(--blue);
+            font-size: 28px;
+            line-height: 1;
+            padding: 8px;
+            cursor: pointer;
+            display: none
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media(max-width:1100px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .facilities {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px
+            }
+        }
+
+        @media(max-width:900px) {
+            .wrap {
+                width: calc(100% - 40px)
+            }
+
+            .top,
+            .menu,
+            .nav .primary {
+                display: none
+            }
+
+            .hamb {
+                display: block
+            }
+
+            .hero .wrap,
+            .story-grid,
+            .vm-grid,
+            .directors-grid,
+            .hospital-grid {
+                grid-template-columns: 1fr;
+                gap: 28px
+            }
+
+            .facilities {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .cta .wrap {
+                grid-template-columns: 1fr;
+                text-align: center
+            }
+
+            .cta-visual {
+                margin: auto
+            }
+
+            .cta .actions {
+                justify-content: center
+            }
+
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(3, 32, 90, 0.45);
+                backdrop-filter: blur(2px);
+                z-index: 1004;
+            }
+
+            .nav.open .nav-overlay {
+                display: block;
+            }
+
+            .menu {
+                position: fixed !important;
+                top: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                left: auto !important;
+                width: min(340px, 86vw) !important;
+                background: #fff !important;
+                z-index: 1005 !important;
+                box-shadow: -10px 0 35px rgba(3, 32, 90, 0.22) !important;
+                transform: translateX(105%) !important;
+                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
+                padding: 0 !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav.open .menu {
+                transform: translateX(0) !important;
+            }
+
+            .mobile-menu-head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 16px 20px;
+                border-bottom: 1px solid var(--line);
+                background: #f8fafc;
+                position: sticky;
+                top: 0;
+                z-index: 2;
+            }
+
+            .mobile-menu-head img {
+                width: 140px;
+                height: 38px;
+                object-fit: contain;
+                object-position: left;
+            }
+
+            .mobile-close-btn {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid var(--line);
+                color: var(--blue);
+                font-size: 16px;
+                display: grid;
+                place-items: center;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+
+            .mobile-close-btn:hover {
+                background: #eaf5ec;
+                color: var(--green);
+                border-color: var(--green);
+            }
+
+            .mobile-nav-links {
+                display: flex;
+                flex-direction: column;
+                padding: 12px 18px;
+                gap: 2px;
+            }
+
+            .menu a {
+                padding: 12px 8px;
+                font-size: 15.5px;
+                font-weight: 700;
+                color: var(--blue);
+                border-bottom: 1px solid #f0f4f8;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .menu a:hover {
+                color: var(--green);
+            }
+
+            .menu .on:after {
+                display: none;
+            }
+
+            .nav-group {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                border-bottom: 1px solid #f0f4f8;
+            }
+
+            .nav-group > a {
+                padding: 12px 8px;
+                font-size: 15.5px;
+                font-weight: 700;
+                color: var(--blue);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 0;
+            }
+
+            .nav-group .nav-chevron {
+                transition: transform 0.25s ease;
+                color: #71879f;
+            }
+
+            .nav-group.open > a .nav-chevron {
+                transform: rotate(180deg);
+                color: var(--green);
+            }
+
+            .nav-drop {
+                display: none;
+                position: static !important;
+                min-width: 0 !important;
+                box-shadow: none !important;
+                border: 1px solid #e2edf6 !important;
+                border-radius: 8px !important;
+                background: #f7fafc !important;
+                margin: 0 0 10px !important;
+                padding: 4px 0 !important;
+            }
+
+            .nav-group.open .nav-drop {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .nav-drop a {
+                padding: 10px 14px !important;
+                font-size: 13.5px !important;
+                font-weight: 600 !important;
+                color: #355070 !important;
+                border-bottom: 1px solid #edf3f8 !important;
+            }
+
+            .nav-drop a:last-child {
+                border-bottom: 0 !important;
+            }
+
+            .nav-drop a:hover {
+                background: #eaf5ec !important;
+                color: var(--green) !important;
+            }
+
+            /* MOBILE SERVICES MEGA ACCORDION */
+            .nav-group.open .services-mega {
+                display: flex !important;
+                flex-direction: column !important;
+                position: static !important;
+                transform: none !important;
+                width: 100% !important;
+                box-shadow: none !important;
+                border: 1px solid #e2edf6 !important;
+                border-radius: 8px !important;
+                margin: 0 0 10px !important;
+                padding: 0 !important;
+                background: #f7fafc !important;
+                overflow: hidden !important;
+                animation: none !important;
+            }
+
+            .services-mega .mega-body {
+                display: flex !important;
+                flex-direction: column !important;
+                background: transparent !important;
+            }
+
+            .services-mega .mega-col {
+                padding: 12px 14px !important;
+            }
+
+            .services-mega .mega-col.medpark-col {
+                border-left: 0 !important;
+                border-top: 1px solid #e2edf6 !important;
+                background: #f1f7fc !important;
+            }
+
+            .services-mega .mega-col-header {
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+                margin-bottom: 8px !important;
+                padding-bottom: 8px !important;
+                border-bottom: 1px solid #e2edf6 !important;
+            }
+
+            .services-mega .mega-col-icon {
+                width: 28px !important;
+                height: 28px !important;
+                border-radius: 6px !important;
+            }
+
+            .services-mega .mega-col-icon i,
+            .services-mega .mega-col-icon svg {
+                width: 15px !important;
+                height: 15px !important;
+            }
+
+            .services-mega .mega-col-title {
+                font-size: 13px !important;
+                font-weight: 800 !important;
+            }
+
+            .services-mega .mega-col-sub {
+                font-size: 10.5px !important;
+            }
+
+            .services-mega .mega-links-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0 !important;
+            }
+
+            .services-mega .mega-links-grid a {
+                padding: 8px 10px !important;
+                font-size: 13px !important;
+                border-bottom: 1px solid #edf3f8 !important;
+                border-radius: 0 !important;
+            }
+
+            .services-mega .mega-links-grid a:last-child {
+                border-bottom: 0 !important;
+            }
+
+            .services-mega .mega-footer {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 8px !important;
+                padding: 10px 14px !important;
+                background: #edf4fa !important;
+                border-top: 1px solid #dce7f2 !important;
+            }
+
+            .mobile-menu-footer {
+                margin-top: auto;
+                padding: 18px 20px;
+                border-top: 1px solid var(--line);
+                background: #f8fafc;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .mobile-menu-footer .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+        }
+
+        @media(max-width:600px) {
+            .wrap {
+                width: calc(100% - 32px)
+            }
+
+            .hero h1 {
+                font-size: 28px;
+                line-height: 1.2;
+            }
+
+            .hh-grid {
+                grid-template-columns: 1fr;
+                gap: 10px
+            }
+
+            .title {
+                font-size: 22px;
+                line-height: 1.28;
+            }
+
+            .kicker {
+                font-size: 11.5px;
+                letter-spacing: 0.7px;
+                margin-bottom: 4px;
+            }
+
+            .sub {
+                font-size: 14.5px;
+                line-height: 1.55;
+                margin: 0 0 18px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr
+            }
+
+            .facilities {
+                grid-template-columns: 1fr
+            }
+
+            .dir-top {
+                flex-direction: column;
+                text-align: center
+            }
+
+            .dir-badges {
+                justify-content: center
+            }
+
+            .hospital {
+                grid-template-columns: 1fr
+            }
+
+            .photo {
+                height: 190px
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px
+            }
+
+            .bottom .wrap {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center
+            }
+        }
+
+        @media(max-width:420px) {
+            .hero h1 {
+                font-size: 25px;
+            }
+
+            .title {
+                font-size: 20px;
+                line-height: 1.3;
+            }
+
+            .kicker {
+                font-size: 11px;
+                letter-spacing: 0.5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <div class="top">
+        <div class="wrap">
+            <div class="links">
+                <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><i data-lucide="message-circle" style="color:#25D366"></i> WhatsApp Us
+                    (24/7)</a>
+                <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
+            </div>
+            <div class="links">
+                <a href="index.html#empanelled">Cashless / TPA</a>
+                <a href="index.html#specialities">OPD Schedule</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="nav">
+        <div class="wrap">
+            <a href="index.html" aria-label="Sukhda Healthcare home">
+                <img class="logo" src="assets/images/sukhda-logo.png"
+                    alt="Sukhda Multispeciality Hospital Hisar">
+            </a>
+            <nav class="menu">
+                <div class="mobile-menu-head">
+                    <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
+                    <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
+                </div>
+                <div class="mobile-nav-links">
+                    <span class="nav-group">
+                        <a class="on" href="index.html">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="index.html">About Sukhda</a>
+                            <a href="#leadership">Medical Leadership</a>
+                            <a href="#vision">Vision &amp; Mission</a>
+                            <a href="#hospitals">Our Hospitals</a>
+                            <a href="#infrastructure">Infrastructure &amp; Facilities</a>
+                        </span>
+                    </span>
+                    <span class="nav-group">
+                        <a href="index.html#hospitals">Our Hospitals <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="index.html#hospitals">Sukhda Multispeciality Hospital</a>
+                            <a href="index.html#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
+                        </span>
+                    </span>
+                    <span class="nav-group mega-group">
+                        <a href="index.html#specialities">Our Services <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <div class="nav-drop services-mega">
+                            <div class="mega-body">
+                                <div class="mega-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                            <div class="mega-col-sub">Comprehensive Multispeciality &amp; Emergency Hub</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid">
+                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="bone"></i><span>Arthroscopy &amp; Joint Replacement</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="baby"></i><span>Paediatrics &amp; Neonatology</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="shield-check"></i><span>Advanced Laparoscopy &amp; Bariatric</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="scan"></i><span>CT &amp; Radiology Imaging</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="zap"></i><span>Emergency &amp; Trauma Care (24×7)</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="stethoscope"></i><span>Internal Medicine &amp; Critical Care</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="heart"></i><span>Psychiatry &amp; Mental Health</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="smile"></i><span>Dentistry &amp; Maxillofacial</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehab</span></a>
+                                    </div>
+                                </div>
+                                <div class="mega-col medpark-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda MedPark</div>
+                                            <div class="mega-col-sub">Cancer &amp; Super Speciality Hospital</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid single-col">
+                                        <a href="index.html#specialities" class="featured-service">
+                                            <i data-lucide="ribbon"></i>
+                                            <div>
+                                                <b>Medical Oncology (Chemo &amp; Daycare)</b>
+                                                <small>Chemotherapy, Daycare Suite &amp; Immunotherapy</small>
+                                            </div>
+                                        </a>
+                                        <a href="index.html#specialities"><i data-lucide="shield-alert"></i><span>Surgical Oncology</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="brain"></i><span>Neuro Surgery &amp; Spine</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
+                                        <a href="index.html#specialities"><i data-lucide="stethoscope"></i><span>Critical Care &amp; Tumour Board</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services →</a>
+                                <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24×7 ER: <b>01662-249473</b> | MedPark: <b>+91-99965-44005</b></div>
+                            </div>
+                        </div>
+                    </span>
+                    <a href="index.html#doctors">Doctors</a>
+                    <a href="#infrastructure">Technology</a>
+                    <a href="index.html#cases">Case Stories</a>
+                    <a href="index.html#patients">Testimonials</a>
+                </div>
+                <div class="mobile-menu-footer">
+                    <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+                    <a class="btn" href="tel:01662249473" style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473</a>
+                </div>
+            </nav>
+            <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+            <button class="hamb" aria-label="Open menu">☰</button>
+        </div>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="wrap">
+            <div class="hero-copy">
+                <div class="crumb">
+                    <a href="index.html">Home</a> <span>›</span> <span>About Us</span>
+                </div>
+                <div class="eyebrow">
+                    <span class="eyebrow-badge">NABH ACCREDITED HEALTHCARE NETWORK</span>
+                    <span>ESTABLISHED NOVEMBER 2002</span>
+                </div>
+                <h1>Two Decades of Clinical Excellence,<br><span>Compassion &amp; Quality Care</span></h1>
+                <p>From a focused 20-bed hospital in 2002 to a 100-bedded NABH accredited multispeciality and cancer
+                    care network, Sukhda Healthcare is built on the founding promise of <i>"Care and Cure for Whole
+                        Family Under One Roof"</i>.</p>
+
+                <div class="hero-actions">
+                    <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book
+                        Consultation</a>
+                    <a class="btn white" href="#leadership"><i data-lucide="award"></i>Meet Leadership</a>
+                </div>
+            </div>
+
+            <div class="hero-highlights-card">
+                <div class="hh-header">
+                    <div class="hh-badge"><i data-lucide="shield-check"></i> INSTITUTIONAL SNAPSHOT</div>
+                    <h3>Healthcare Legacy at a Glance</h3>
+                </div>
+                <div class="hh-grid">
+                    <div class="hh-item">
+                        <div class="hh-icon"><i data-lucide="calendar"></i></div>
+                        <div>
+                            <b>Nov 2002</b>
+                            <small>Founded in Hisar (22+ Yrs)</small>
+                        </div>
+                    </div>
+                    <div class="hh-item">
+                        <div class="hh-icon"><i data-lucide="building-2"></i></div>
+                        <div>
+                            <b>100+ Beds</b>
+                            <small>Across 2 Modern Hospitals</small>
+                        </div>
+                    </div>
+                    <div class="hh-item">
+                        <div class="hh-icon"><i data-lucide="users"></i></div>
+                        <div>
+                            <b>50,000+</b>
+                            <small>Patients Treated Regionally</small>
+                        </div>
+                    </div>
+                    <div class="hh-item">
+                        <div class="hh-icon"><i data-lucide="award"></i></div>
+                        <div>
+                            <b>NABH</b>
+                            <small>Accredited Quality Care</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="hh-footer">
+                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> AIIMS Clinical Heritage</span>
+                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> 24/7 ICU &amp; Trauma</span>
+                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> MedPark Cancer Wing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: STORY & ORIGIN -->
+    <section class="section">
+        <div class="wrap story-grid">
+            <div class="story-copy">
+                <div class="kicker">ABOUT SUKHDA HEALTHCARE</div>
+                <h2 class="title">Care and Cure for Whole Family Under One Roof</h2>
+                <p>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD Medicine (AIIMS, New
+                        Delhi)</b>. After studying and gaining rich clinical experience from premier institutes of India
+                    like <b>AIIMS, New Delhi</b> and <b>PGIMER, Chandigarh</b>, Dr. Mehta decided to return to his
+                    native place Hisar to serve his community.</p>
+                <p>He joined Jindal Institute of Medical Sciences (JIMS) in February 1994 and worked tirelessly for nine
+                    years as <b>Head of the Department of Internal Medicine &amp; Critical Care</b>. For his exemplary
+                    healthcare contributions, he was bestowed with the prestigious <b>"Vikas Ratan Gold Award"</b> in
+                    the year 2002.</p>
+                <p>In November 2002, under the visionary leadership of Dr. Amit Mehta and <b>Dr. Manisha Mehta (NABH
+                        Certified Assessor)</b>, Sukhda made a humble beginning as a 20-bedded hospital with the sole
+                    mission of providing <i>"Care and Cure for Whole Family Under One Roof"</i> without compromising
+                    quality.</p>
+                <p>Today, this vision has metamorphosed into a premier 100-bedded network comprising <b>Sukhda
+                        Multispeciality Hospital</b> and <b>Sukhda MedPark (Cancer &amp; Super Speciality Hospital)</b>,
+                    catering to patients from across Haryana (Sirsa, Fatehabad, Hansi, Jind, Barwala, Uklana, Narwana,
+                    Tohana), Rajasthan (Bhadra, Rajgarh, Churu), and Punjab (Bhatinda, Mansa).</p>
+                <div class="story-badge-strip">
+                    <span class="story-badge"><i data-lucide="check-circle-2"></i> AIIMS &amp; PGIMER Clinical
+                        Heritage</span>
+                    <span class="story-badge"><i data-lucide="check-circle-2"></i> NABH Accredited Standards</span>
+                    <span class="story-badge"><i data-lucide="check-circle-2"></i> 24/7 ICU &amp; Emergency
+                        Helpline</span>
+                </div>
+            </div>
+            <div class="story-media">
+                <div class="story-img-wrap">
+                    <img src="assets/images/doctor-patient-hero.jpg"
+                        alt="Doctor and Patient Consultation at Sukhda Hospital">
+                </div>
+                <div class="quote-box">
+                    "Since inception, our goal has been to facilitate cost-effective medical services at par with top
+                    national institutions — with uncompromised clinical quality and genuine human empathy."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: VISION, MISSION & VALUES -->
+    <section class="section soft" id="vision">
+        <div class="wrap">
+            <div class="kicker">GUIDING PHILOSOPHY</div>
+            <h2 class="title">Vision, Mission &amp; Core Values</h2>
+            <p class="sub">The enduring principles that define every patient interaction, clinical decision, and
+                operational standard at Sukhda.</p>
+
+            <div class="vm-grid">
+                <div class="vm-card vision-card">
+                    <div class="vm-icon"><i data-lucide="eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To be a recognised centre of excellence for providing <b>"Quality Healthcare at Affordable
+                            Cost"</b>, setting benchmark standards in patient safety, advanced technology, and
+                        compassionate healing for the northern region.</p>
+                </div>
+                <div class="vm-card mission-card">
+                    <div class="vm-icon"><i data-lucide="target"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>Sukhda Multispeciality Hospital is committed to provide <b>"Care and Cure for Whole Family Under
+                            One Roof"</b> through a team of qualified, experienced doctors and dedicated nursing,
+                        paramedical, and support staff supported by state-of-the-art medical and diagnostic services.
+                    </p>
+                </div>
+            </div>
+
+            <div class="values-grid">
+                <div class="val-card">
+                    <i data-lucide="heart-handshake"></i>
+                    <h4>Dignity &amp; Equity</h4>
+                    <p>We practice dignity and equity in all relationships, providing opportunities for patients and
+                        healthcare staff to realise their full potential.</p>
+                </div>
+                <div class="val-card">
+                    <i data-lucide="shield-check"></i>
+                    <h4>Patient Rights &amp; Centricity</h4>
+                    <p>We manage all operations with deep concern for patient rights, safety, transparency, and clinical
+                        ethics in a comfortable environment.</p>
+                </div>
+                <div class="val-card">
+                    <i data-lucide="sparkles"></i>
+                    <h4>Technological Innovation</h4>
+                    <p>We continuously stay updated with latest technological advancements (Clear Stent Live Cath Lab,
+                        LINAC, CT) and managerial expertise.</p>
+                </div>
+                <div class="val-card">
+                    <i data-lucide="wallet"></i>
+                    <h4>Affordable &amp; Effective</h4>
+                    <p>We inculcate cost-consciousness and effective, efficient service delivery keeping patient
+                        affordability and transparency at the core.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: DIRECTORS / LEADERSHIP -->
+    <section class="section" id="leadership">
+        <div class="wrap">
+            <div class="kicker">EXECUTIVE &amp; CLINICAL LEADERSHIP</div>
+            <h2 class="title">Messages from the Directors' Desk</h2>
+            <p class="sub">Guided by medical expertise, administrative foresight, and an unwavering commitment to
+                patient well-being.</p>
+
+            <div class="directors-grid">
+                <!-- DR. AMIT MEHTA -->
+                <article class="director-card">
+                    <div class="dir-top">
+                        <img class="dir-photo" src="assets/images/doctors/dr-amit-mehta.jpg"
+                            alt="Dr. Amit Mehta - Director Sukhda Hospital">
+                        <div class="dir-meta">
+                            <h3>Dr. Amit Mehta</h3>
+                            <div class="dir-title">Director &amp; Head of Internal Medicine &amp; Critical Care</div>
+                            <div class="dir-badges">
+                                <span class="dir-badge">MD Medicine (AIIMS, New Delhi)</span>
+                                <span class="dir-badge">Ex-PGIMER Chandigarh</span>
+                                <span class="dir-badge">Vikas Ratan Gold Awardee</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dir-body">
+                        <h4>Professional Profile</h4>
+                        <p>After graduating from premier institutes AIIMS New Delhi and PGIMER Chandigarh, Dr. Mehta
+                            headed Internal Medicine &amp; Critical Care at Jindal Hospital for 9 years before founding
+                            Sukhda in 2002. He has spearheaded critical care protocols, intensive care management, and
+                            ethical clinical governance across Haryana.</p>
+                        <div class="dir-msg">
+                            "At Sukhda Multispeciality Hospital, we foster, promote, and practice high-quality, ethical,
+                            and evidence-based medicine. Our team is committed to deliver best healthcare services with
+                            a human touch — acknowledging and respecting cultural diversity, dignity, and every
+                            patient's unique needs."
+                        </div>
+                        <div style="margin-top: 18px;">
+                            <a href="dr-amit-mehta.html" class="btn small primary" style="display:inline-flex;align-items:center;gap:6px">View Clinical Profile &amp; OPD Timings →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- DR. MANISHA MEHTA -->
+                <article class="director-card">
+                    <div class="dir-top">
+                        <img class="dir-photo" src="assets/images/doctors/dr-manisha-mehta.jpg"
+                            alt="Dr. Manisha Mehta - Director Sukhda Hospital">
+                        <div class="dir-meta">
+                            <h3>Dr. Manisha Mehta</h3>
+                            <div class="dir-title">Director &amp; Healthcare Quality Administrator</div>
+                            <div class="dir-badges">
+                                <span class="dir-badge">NABH Certified Assessor (2019)</span>
+                                <span class="dir-badge">23+ Years Healthcare Management</span>
+                                <span class="dir-badge">Hospital Quality Head</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dir-body">
+                        <h4>Professional Profile</h4>
+                        <p>With over 23 years of healthcare administration and facility oversight, Dr. Manisha Mehta
+                            leads Sukhda's quality compliance, NABH regulatory protocols, patient safety initiatives,
+                            and operational excellence. Her leadership ensures clinical transparency and continuous
+                            infrastructure modernisation.</p>
+                        <div class="dir-msg">
+                            "Everything we do revolves around our patients and their families. We continuously challenge
+                            ourselves to bring greater accessibility, affordability, and reliability in healthcare
+                            delivery with an unrelenting focus on quality, patient-centricity, and delightful healing
+                            experiences."
+                        </div>
+                        <div style="margin-top: 18px;">
+                            <a href="dr-manisha-mehta.html" class="btn small primary" style="display:inline-flex;align-items:center;gap:6px">View Clinical Profile &amp; OPD Timings →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: OUR HOSPITALS NETWORK -->
+    <section class="section soft" id="hospitals">
+        <div class="wrap">
+            <div class="kicker">TWO HOSPITALS • ONE COMMITMENT</div>
+            <h2 class="title">Our Hospital Network in Hisar</h2>
+            <p class="sub">Two state-of-the-art facilities working as one unified healthcare ecosystem for complete
+                patient care.</p>
+
+            <div class="hospital-grid">
+                <!-- HOSPITAL 1 -->
+                <article class="hospital">
+                    <div class="photo">
+                        <img src="assets/images/sukhda-multispecialty-hospital.jpg"
+                            alt="Sukhda Multispeciality Hospital">
+                        <div class="place">DELHI ROAD, HISAR<br>NABH ACCREDITED</div>
+                    </div>
+                    <div class="h-info">
+                        <img class="h-logo" src="assets/images/sukhda-logo.png"
+                            alt="Sukhda Multispeciality Hospital">
+                        <h3>Sukhda Multispeciality Hospital</h3>
+                        <p>Complete multispeciality care with advanced 24/7 ICU, emergency trauma care, mother &amp;
+                            child care, laparoscopic surgery, nephrology, joint replacements, and comprehensive
+                            diagnostics.</p>
+                        <div class="checks">
+                            <span><i data-lucide="check"></i> 24/7 ICU &amp; Emergency</span>
+                            <span><i data-lucide="check"></i> Internal Medicine</span>
+                            <span><i data-lucide="check"></i> Nephrology &amp; Dialysis</span>
+                            <span><i data-lucide="check"></i> Laparoscopy &amp; Urology</span>
+                            <span><i data-lucide="check"></i> Gynaecology &amp; NICU</span>
+                            <span><i data-lucide="check"></i> Joint Replacement</span>
+                        </div>
+                        <a class="btn small primary" href="index.html#specialities">Explore Multispeciality Services
+                            →</a>
+                    </div>
+                </article>
+
+                <!-- HOSPITAL 2 -->
+                <article class="hospital">
+                    <div class="photo">
+                        <img src="assets/images/sukhda-medpark-hospital.jpeg" alt="Sukhda MedPark Hospital">
+                        <div class="place">HISAR<br>SUPER SPECIALITY &amp; CANCER</div>
+                    </div>
+                    <div class="h-info">
+                        <img class="h-logo" src="assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark">
+                        <h3>Sukhda MedPark Hospital</h3>
+                        <p>Hisar's dedicated super speciality &amp; comprehensive cancer institute offering chemotherapy
+                            daycare, surgical oncology, radiation oncology (LINAC), cardiology with Cath Lab, and neuro
+                            spine surgery.</p>
+                        <div class="checks">
+                            <span><i data-lucide="check"></i> Internal Medicine</span>
+                            <span><i data-lucide="check"></i> Medical Oncology &amp; Chemo</span>
+                            <span><i data-lucide="check"></i> Surgical Oncology</span>
+                            <span><i data-lucide="check"></i> Radiation Oncology (LINAC)</span>
+                            <span><i data-lucide="check"></i> Cardiology &amp; Cath Lab</span>
+                            <span><i data-lucide="check"></i> Neuro &amp; Spine Surgery</span>
+                        </div>
+                        <a class="btn small primary" href="index.html#specialities">Explore MedPark Cancer Care →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CASHLESS / EMPANELLED STRIP -->
+    <section class="empanelled-section" id="empanelled">
+        <div class="wrap">
+            <div class="emp-head">
+                <h4>Cashless Healthcare &amp; Empanelled Insurance Partners</h4>
+                <span>Seamless TPA &amp; Govt Health Schemes</span>
+            </div>
+            <div class="emp-pills">
+                                    <span class="emp-pill gov"><i data-lucide="shield-check"></i> Ayushman Bharat (PM-JAY)</span>
+                                    <span class="emp-pill gov"><i data-lucide="shield-check"></i> CGHS (Central Govt Health Scheme)</span>
+                                    <span class="emp-pill gov"><i data-lucide="shield-check"></i> ECHS (Ex-Servicemen Contributory Health Scheme)</span>
+                                    <span class="emp-pill gov"><i data-lucide="shield-check"></i> Haryana Govt Employees &amp; Pensioners</span>
+                                    <span class="emp-pill gov"><i data-lucide="shield-check"></i> Northern Railway</span>
+                                    <span class="emp-pill gov"><i data-lucide="shield-check"></i> BSNL</span>
+                                    <span class="emp-pill gov"><i data-lucide="shield-check"></i> Food Corporation of India (FCI)</span>
+                                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> Star Health Insurance</span>
+                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> HDFC ERGO General Insurance</span>
+                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> ICICI Lombard</span>
+                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> Bajaj Allianz</span>
+                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> Care Health Insurance (Religare)</span>
+                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> Niva Bupa Health Insurance</span>
+                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> Medi Assist TPA</span>
+                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> Paramount Health TPA</span>
+                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> MDIndia Healthcare TPA</span>
+                                    <span class="emp-pill"><i data-lucide="check-circle-2"></i> Vidal Health TPA</span>
+                            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta" id="contact">
+        <div class="wrap">
+            <div class="cta-visual">
+                <img src="assets/images/logo-mark.png" alt="Sukhda Healthcare Logo Mark">
+            </div>
+            <div>
+                <h2>Need Specialist Medical Consultation or Emergency Care?</h2>
+                <p>Speak with our 24/7 patient helpline or visit our Delhi Road hospital in Hisar for immediate
+                    assistance.</p>
+            </div>
+            <div class="actions">
+                <a class="btn primary" href="tel:01662249473"><i data-lucide="phone-call"></i>Call Helpline:
+                    01662-249473</a>
+                <a class="btn white" href="https://wa.me/919996544005" target="_blank"><i
+                        data-lucide="message-circle"></i>WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="wrap footer-grid">
+            <div>
+                <div class="footer-brand-wrap">
+                    <img class="footer-logo" src="assets/images/sukhda-logo.png"
+                        alt="Sukhda Multispeciality Hospital Hisar">
+                </div>
+                <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
+                <p class="footer-desc">Providing quality, compassionate, and advanced medical care across Hisar and surrounding regions since 2002 under experienced medical leadership.</p>
+                <div class="footer-nabh-badge">
+                    <img src="assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
+                    <div>
+                        <b>NABH Accredited</b>
+                        <small>Highest Healthcare Quality Standards</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav">
+                    <li><a href="index.html"><span>›</span> Home</a></li>
+                    <li><a href="index.html"><span>›</span> About Sukhda</a></li>
+                    <li><a href="#leadership"><span>›</span> Medical Leadership</a></li>
+                    <li><a href="#vision"><span>›</span> Vision &amp; Mission</a></li>
+                    <li><a href="#hospitals"><span>›</span> Our Hospitals</a></li>
+                    <li><a href="index.html#specialities"><span>›</span> Centres of Excellence</a></li>
+                    <li><a href="index.html#doctors"><span>›</span> Our Doctors</a></li>
+                    <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Hospitals</h4>
+                <div class="footer-hospital-card">
+                    <div class="f-hosp-header">
+                        <i data-lucide="building-2"></i>
+                        <b>Sukhda Multispeciality Hospital</b>
+                    </div>
+                    <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
+                    <a href="tel:01662249473" class="f-hosp-phone"><i data-lucide="phone"></i> 01662-249473 / 248473</a>
+                </div>
+                <div class="footer-hospital-card">
+                    <div class="f-hosp-header">
+                        <i data-lucide="activity"></i>
+                        <b>Sukhda MedPark</b>
+                    </div>
+                    <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
+                    <p>Delhi Road, Hisar, Haryana – 125005</p>
+                    <a href="tel:+919996544005" class="f-hosp-phone"><i data-lucide="phone"></i> +91-99965-44005</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>24×7 Emergency &amp; OPD</h4>
+                <div class="footer-emergency-box">
+                    <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
+                    <div>
+                        <small>24×7 Emergency Helpline</small>
+                        <a href="tel:01662249473" class="f-emg-num">01662-249473</a>
+                        <a href="tel:+919996544005" class="f-emg-num-sub">+91 99965-44005</a>
+                    </div>
+                </div>
+                <div class="footer-contact-list">
+                    <a href="mailto:info@sukhdahospitalhisar.com" class="f-cnt-item">
+                        <i data-lucide="mail"></i>
+                        <span>info@sukhdahospitalhisar.com</span>
+                    </a>
+                    <a href="https://wa.me/919996544005" target="_blank" class="f-cnt-item whatsapp">
+                        <i data-lucide="message-circle"></i>
+                        <span>WhatsApp: +91 99965-44005</span>
+                    </a>
+                </div>
+                <div class="footer-motto">
+                    <i data-lucide="heart-handshake"></i>
+                    <span>Care &amp; Cure for Whole Family</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="wrap">
+                <span>© 2026 Sukhda Healthcare. All rights reserved.</span>
+                <div class="bottom-badges">
+                    <span><i data-lucide="map-pin"></i> Delhi Road, Hisar</span>
+                    <span><i data-lucide="shield-check"></i> NABH Accredited</span>
+                    <span><i data-lucide="phone"></i> 24×7 ER: 01662-249473</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY BOTTOM FLOATING PILL CTA -->
+    <div class="sticky-bottom-bar" aria-label="Quick Actions">
+        <a href="contact.html" class="sticky-bar-item">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line>
+                <line x1="8" x2="8" y1="2" y2="6"></line>
+                <line x1="3" x2="21" y1="10" y2="10"></line>
+                <path d="m9 16 2 2 4-4"></path>
+            </svg>
+            <span>Book Now</span>
+        </a>
+        <div class="sticky-bar-divider"></div>
+        <a href="tel:01662249473" class="sticky-bar-item">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>Call Now</span>
+        </a>
+        <div class="sticky-bar-divider"></div>
+        <a href="https://wa.me/919996544005" target="_blank" rel="noopener" class="sticky-bar-item whatsapp">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6-.1.49-.3 1.47-1.2 1.68-1.72.2-.52.2-1 .14-1.12-.05-.13-.21-.21-.46-.33z"/>
+            </svg>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        const renderIcons = () => {
+            if (window.lucide) lucide.createIcons({ attrs: { 'stroke-width': 1.8 } });
+        };
+        renderIcons();
+        document.addEventListener('DOMContentLoaded', renderIcons);
+        window.addEventListener('load', renderIcons);
+
+        // Mobile Menu Drawer & Accordion Toggle
+        (function () {
+            const nav = document.querySelector('.nav');
+            const button = document.querySelector('.hamb');
+            const closeBtn = document.querySelector('.mobile-close-btn');
+            const overlay = document.querySelector('.nav-overlay');
+            const menu = document.querySelector('.menu');
+            if (!nav || !button || !menu) return;
+
+            menu.id = 'mobile-menu';
+            button.type = 'button';
+            button.setAttribute('aria-controls', menu.id);
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-label', 'Open menu');
+
+            const close = () => {
+                nav.classList.remove('open');
+                document.body.style.overflow = '';
+                button.setAttribute('aria-expanded', 'false');
+                button.setAttribute('aria-label', 'Open menu');
+                button.blur();
+            };
+            const openMenu = () => {
+                nav.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                button.setAttribute('aria-expanded', 'true');
+                button.setAttribute('aria-label', 'Close menu');
+            };
+
+            button.onclick = e => {
+                e.preventDefault();
+                e.stopPropagation();
+                nav.classList.contains('open') ? close() : openMenu();
+            };
+            if (closeBtn) closeBtn.onclick = e => { e.preventDefault(); close(); };
+            if (overlay) overlay.onclick = e => { e.preventDefault(); close(); };
+
+            const navGroups = menu.querySelectorAll('.nav-group');
+            navGroups.forEach(group => {
+                const parentLink = group.querySelector(':scope > a');
+                if (!parentLink) return;
+                parentLink.addEventListener('click', e => {
+                    if (window.innerWidth <= 900) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const isOpen = group.classList.contains('open');
+                        navGroups.forEach(g => { if (g !== group) g.classList.remove('open'); });
+                        group.classList.toggle('open', !isOpen);
+                    }
+                });
+            });
+
+            menu.addEventListener('click', e => {
+                const a = e.target.closest('a');
+                if (!a) return;
+                if (a.closest('.nav-drop') || !a.closest('.nav-group')) {
+                    close();
+                }
+            });
+
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+        })();
+    </script>
+</body>
+
+</html>
