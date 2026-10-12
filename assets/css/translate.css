@@ -1,0 +1,370 @@
+/* =========================================================
+   SUKHDA HEALTHCARE - HINDI TRANSLATION MODULE STYLES
+   ========================================================= */
+
+/* Hide Google Translate top banner, tooltips & injected frames */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.goog-te-balloon-frame {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    border: none !important;
+}
+
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+/* =========================================================
+   STICKY HEADER & NAV DROPDOWN ENHANCEMENTS
+   ========================================================= */
+header.nav,
+.nav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(5, 33, 89, 0.12) !important;
+    transition: box-shadow 0.25s ease !important;
+}
+
+/* TOP BAR & LINKS GLOBAL STYLING */
+.top {
+    height: 42px !important;
+    background: var(--blue, #052159) !important;
+    color: #fff !important;
+    font-size: 14px !important;
+}
+
+.top .wrap {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.top .links {
+    display: flex !important;
+    gap: 20px !important;
+    align-items: center !important;
+}
+
+.top .links a {
+    color: #fff !important;
+    transition: color 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 13.5px !important;
+    text-decoration: none !important;
+}
+
+.top .links a:hover {
+    color: #278132 !important;
+}
+
+.top .links a.top-wa i,
+.top .links a.top-wa svg,
+.top .links a[href*="wa.me"] i,
+.top .links a[href*="wa.me"] svg {
+    color: #25D366 !important;
+}
+
+.top .links a.top-wa:hover,
+.top .links a[href*="wa.me"]:hover {
+    color: #25D366 !important;
+}
+
+.top .links a.top-emergency,
+.top .links a[href^="tel:"],
+.top-links a[href^="tel:"] {
+    color: #ff4d4f !important;
+}
+
+.top .links a.top-emergency:hover,
+.top .links a[href^="tel:"]:hover,
+.top-links a[href^="tel:"]:hover {
+    color: #ff7875 !important;
+}
+
+.top .links span+span,
+.top .links a+a {
+    border-left: 1px solid rgba(255, 255, 255, 0.33) !important;
+    padding-left: 20px !important;
+}
+
+.top .links a + .top-lang-switch {
+    border-left: 1px solid rgba(255, 255, 255, 0.33) !important;
+    padding-left: 16px !important;
+    margin-left: 0 !important;
+}
+
+@media (min-width: 901px) {
+    .nav-group:hover > .nav-drop,
+    .nav-group.open > .nav-drop {
+        display: block !important;
+    }
+    .nav-group:hover > a .nav-chevron,
+    .nav-group.open > a .nav-chevron {
+        transform: rotate(180deg) !important;
+    }
+    .mobile-menu-head,
+    .mobile-menu-footer,
+    .nav-overlay {
+        display: none !important;
+    }
+    .mobile-nav-links {
+        display: flex !important;
+        align-items: center;
+        gap: 26px;
+    }
+    .hamb {
+        display: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .top {
+        display: none !important;
+    }
+    .hamb {
+        display: block !important;
+    }
+}
+
+/* Suppress doctor photo badge overlays */
+.doc-photo-badge {
+    display: none !important;
+}
+
+/* Suppress any active underline on dropdown header links (e.g. Our Services, About Us, Resources) */
+.nav-group > a::after,
+.nav-group > a:after,
+.nav-group.mega-group > a::after,
+.nav-group.mega-group > a:after {
+    display: none !important;
+    content: none !important;
+}
+
+#goog-gt-tt {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Off-screen hidden Google translate element */
+#google_translate_element {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+/* =========================================================
+   1. TOP BAR LANGUAGE SWITCHER (Desktop / Header)
+   ========================================================= */
+.top-lang-switch {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 9999px;
+    padding: 2px 4px;
+    margin-left: 12px;
+    gap: 2px;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.top-lang-switch .lang-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.88);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1.2;
+}
+
+.top-lang-switch .lang-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.top-lang-switch .lang-btn.active {
+    background: var(--green, #278132);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.top-lang-switch .lang-sep {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+}
+
+/* =========================================================
+   2. MOBILE MENU DRAWER LANGUAGE SWITCHER
+   ========================================================= */
+.mobile-lang-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #f4f8fc;
+    border-bottom: 1px solid #dce7f0;
+    margin-bottom: 8px;
+}
+
+.mobile-lang-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--blue, #052159);
+}
+
+.mobile-lang-pills {
+    display: inline-flex;
+    align-items: center;
+    background: #e2ecf5;
+    border-radius: 9999px;
+    padding: 3px;
+    gap: 3px;
+}
+
+.mobile-lang-btn {
+    border: none;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #53677f;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mobile-lang-btn.active {
+    background: var(--blue, #052159);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(5, 33, 89, 0.2);
+}
+
+@media (min-width: 901px) {
+    .mobile-lang-wrap {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   3. FLOATING QUICK-TOGGLE PILL (Bottom Corner)
+   ========================================================= */
+.floating-lang-pill {
+    position: fixed;
+    bottom: 22px;
+    left: 22px;
+    z-index: 997;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1.5px solid rgba(5, 33, 89, 0.16);
+    box-shadow: 0 8px 24px rgba(5, 33, 89, 0.16), 0 2px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 9999px;
+    padding: 4px 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    user-select: none;
+}
+
+.floating-lang-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(5, 33, 89, 0.22);
+}
+
+.floating-lang-pill .f-icon {
+    color: var(--blue, #052159);
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
+.floating-lang-pill .f-btn {
+    border: none;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #53677f;
+    padding: 5px 11px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.floating-lang-pill .f-btn.active {
+    background: var(--blue, #052159);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(5, 33, 89, 0.25);
+}
+
+.floating-lang-pill .f-btn:hover:not(.active) {
+    background: #edf3f9;
+    color: var(--blue, #052159);
+}
+
+.floating-lang-pill .f-sep {
+    color: #cbd5e1;
+    font-size: 11px;
+}
+
+/* Floating pill adjustment on mobile screens */
+@media (max-width: 900px) {
+    .floating-lang-pill {
+        bottom: 20px;
+        left: 16px;
+        padding: 3px 5px;
+    }
+    .floating-lang-pill .f-btn {
+        font-size: 12px;
+        padding: 4px 9px;
+    }
+}
+@media (max-width: 480px) {
+    .floating-lang-pill {
+        bottom: 74px; /* prevents collision with mobile sticky action bar */
+        left: 14px;
+    }
+}

@@ -2079,11 +2079,12 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="assets/css/translate.css">
 </head>
 
 <body>
 
-    <!-- TOP BAR -->
+            <!-- TOP BAR -->
     <div class="top">
         <div class="wrap">
             <div class="links">
@@ -2091,14 +2092,18 @@
                 <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
             </div>
             <div class="links">
-                <a href="index.html#empanelled">Cashless / TPA</a>
+                <a href="empanelled-corporate.html" style="color:#278132;font-weight:700">Cashless / TPA</a>
                 <a href="index.html#specialities">OPD Schedule</a>
-                <a href="contact.html">Contact Us</a>
+                <div class="top-lang-switch notranslate" aria-label="Language selection">
+                    <button type="button" class="lang-btn active" data-lang="en" onclick="switchLanguage('en')"><i data-lucide="globe" style="width:13px;height:13px"></i> English</button>
+                    <span class="lang-sep">|</span>
+                    <button type="button" class="lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+                </div>
             </div>
         </div>
     </div>
 
-        <!-- HEADER / NAVIGATION -->
+    <!-- HEADER / NAVIGATION -->
     <header class="nav">
         <div class="wrap">
             <a href="index.html" aria-label="Sukhda Healthcare home">
@@ -2109,12 +2114,19 @@
                     <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
                     <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
                 </div>
+                <div class="mobile-lang-wrap notranslate">
+                    <span class="mobile-lang-label"><i data-lucide="languages" style="width:14px;height:14px"></i> भाषा / Language</span>
+                    <div class="mobile-lang-pills">
+                        <button type="button" class="mobile-lang-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
+                        <button type="button" class="mobile-lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+                    </div>
+                </div>
                 <div class="mobile-nav-links">
                     <span class="nav-group">
                         <a href="index.html#about">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <span class="nav-drop">
                             <a href="index.html#about">About Sukhda</a>
-                            <a href="index.html#doctors">Medical Leadership</a>
+                            <a href="doctor.html">Medical Leadership</a>
                             <a href="index.html#why">Vision &amp; Mission</a>
                             <a href="index.html#hospitals">Our Hospitals</a>
                             <a href="index.html#infrastructure">Infrastructure &amp; Facilities</a>
@@ -2128,7 +2140,7 @@
                         </span>
                     </span>
                     <span class="nav-group mega-group">
-                        <a class="on" href="index.html#specialities">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="index.html#specialities">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <div class="nav-drop services-mega">
                             <div class="mega-body">
                                 <div class="mega-col">
@@ -2191,10 +2203,14 @@
                             </div>
                         </div>
                     </span>
-                    <a href="index.html#doctors">Doctors</a>
-                    <a href="index.html#infrastructure">Technology</a>
-                    <a href="patient-stories.html">Case Stories</a>
-                    <a href="index.html#patients">Testimonials</a>
+                    <a href="doctor.html">Doctors</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="media-centre.html#blogs">Blogs</a>
+                            <a href="csr.html">CSR</a>
+                        </span>
+                    </span>
                 </div>
                 <div class="mobile-menu-footer">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
@@ -2221,10 +2237,6 @@
             <div class="doc-hero-grid">
                 <div class="doc-photo-box">
                     <img src="assets/images/doctors/dr-shubham-mehta.jpg" alt="Dr. Shubham Mehta — Sukhda Hospital Hisar">
-                    <div class="doc-photo-badge">
-                        <span class="badge-left"><i data-lucide="award"></i> 8+ Years Exp.</span>
-                        <span><i data-lucide="check-circle-2"></i> Verified</span>
-                    </div>
                 </div>
 
                 <div class="doc-hero-info">
@@ -2602,10 +2614,11 @@
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                                <ul class="footer-nav">
+                                                <ul class="footer-nav">
                     <li><a href="index.html"><span>›</span> Home</a></li>
                     <li><a href="about.html"><span>›</span> About Sukhda</a></li>
                     <li><a href="doctor.html"><span>›</span> Find Doctors</a></li>
+                    <li><a href="empanelled-corporate.html"><span>›</span> Cashless / Empanelled</a></li>
                     <li><a href="patient-stories.html"><span>›</span> Patient Stories</a></li>
                     <li><a href="careers.html"><span>›</span> Careers</a></li>
                     <li><a href="csr.html"><span>›</span> CSR &amp; Community</a></li>
@@ -2762,5 +2775,17 @@
             document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
         })();
     </script>
+    <!-- FLOATING LANGUAGE TOGGLE (English / हिन्दी) -->
+    <div class="floating-lang-pill notranslate" aria-label="Select Language">
+        <span class="f-icon"><i data-lucide="languages" style="width:15px;height:15px"></i></span>
+        <button type="button" class="f-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
+        <span class="f-sep">|</span>
+        <button type="button" class="f-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+    </div>
+
+    <!-- Google Translate Script Container -->
+    <div id="google_translate_element"></div>
+    <script src="assets/js/translate.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

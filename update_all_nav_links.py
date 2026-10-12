@@ -24,7 +24,7 @@ for filepath in html_files:
     new_content = content
     # Update Case Stories nav link in header if it points to index.html#cases
     # except on index.html where both can work
-    new_content = re.sub(r'<a\s+href="index\.html#cases">Case Stories</a>', r'<a href="patient-stories.html">Case Stories</a>', new_content)
+    # Case Stories removed from navbar, resources dropdown used instead
     
     # Update footer nav
     if '<ul class="footer-nav">' in new_content:

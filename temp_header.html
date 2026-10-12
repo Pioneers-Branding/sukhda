@@ -8,6 +8,13 @@
                     <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
                     <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
                 </div>
+                <div class="mobile-lang-wrap notranslate">
+                    <span class="mobile-lang-label"><i data-lucide="languages" style="width:14px;height:14px"></i> भाषा / Language</span>
+                    <div class="mobile-lang-pills">
+                        <button type="button" class="mobile-lang-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
+                        <button type="button" class="mobile-lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+                    </div>
+                </div>
                 <div class="mobile-nav-links">
                     <span class="nav-group">
                         <a href="index.html#about">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
@@ -91,9 +98,14 @@
                         </div>
                     </span>
                     <a class="on" href="doctor.html">Doctors</a>
-                    <a href="index.html#infrastructure">Technology</a>
-                    <a href="patient-stories.html">Case Stories</a>
-                    <a href="index.html#patients">Testimonials</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="media-centre.html#blogs">Blogs</a>
+                            <a href="index.html#specialities">OPD Schedule</a>
+                            <a href="csr.html">CSR</a>
+                        </span>
+                    </span>
                 </div>
                 <div class="mobile-menu-footer">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>

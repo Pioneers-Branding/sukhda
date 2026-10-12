@@ -150,8 +150,9 @@ common_styles = """
         .nav {
             height: 80px;
             box-shadow: 0 2px 9px #05215919;
-            position: relative;
-            z-index: 100;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             background: #fff
         }
 
