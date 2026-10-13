@@ -128,26 +128,15 @@
         renderIcons();
     }
 
-    // Set "on" class on current page's navigation link
+    // Ensure no links are highlighted
     function highlightActiveLink(menu) {
-        var current = getCurrentPage();
-        var links = menu.querySelectorAll('.mobile-nav-links a');
+        if (!menu) return;
+        var links = menu.querySelectorAll('.mobile-nav-links a, .nav a, a.on');
         links.forEach(function (a) {
             a.classList.remove('on');
-            var href = a.getAttribute('href') || '';
-            var page = href.split('/').pop().split('#')[0].split('?')[0];
-
-            if (page === current && href !== 'javascript:void(0)') {
-                a.classList.add('on');
-                // Also highlight parent nav-group if inside one
-                var group = a.closest('.nav-group');
-                if (group) {
-                    var parentLink = group.querySelector(':scope > a');
-                    if (parentLink) parentLink.classList.add('on');
-                }
-            }
         });
     }
+
 
     // Load include snippet via fetch (or fallback to existing static content)
     function loadSnippet(selector, file, onDone) {

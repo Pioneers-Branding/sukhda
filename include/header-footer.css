@@ -276,27 +276,55 @@ header.nav,
 
     .nav-group:hover>a,
     .menu a:hover,
-    .mobile-nav-links a:hover,
-    .menu a.on,
-    .mobile-nav-links a.on,
-    .nav-group>a.on {
+    .mobile-nav-links a:hover {
         color: #278132 !important;
     }
 
-    .menu a.on::after,
     .menu a:hover::after,
-    .mobile-nav-links a.on::after,
     .mobile-nav-links a:hover::after,
-    .nav-group:hover>a::after,
-    .nav-group>a.on::after {
-        content: "";
+    .nav-group:hover>a::after {
+        content: "" !important;
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 3px;
         background: #278132;
+        display: block !important;
     }
+
+    /* Ensure no active links are highlighted */
+    .menu a.on,
+    .mobile-nav-links a.on,
+    .nav-group>a.on,
+    .nav-group.on>a,
+    .menu .on {
+        color: #052159 !important;
+    }
+
+    .menu a.on::after,
+    .mobile-nav-links a.on::after,
+    .nav-group>a.on::after,
+    .nav-group.on>a::after,
+    .menu .on::after,
+    .menu .on:after {
+        display: none !important;
+        content: none !important;
+    }
+
+    .menu a.on:hover,
+    .mobile-nav-links a.on:hover,
+    .nav-group:hover>a.on {
+        color: #278132 !important;
+    }
+
+    .menu a.on:hover::after,
+    .mobile-nav-links a.on:hover::after,
+    .nav-group:hover>a.on::after {
+        content: "" !important;
+        display: block !important;
+    }
+
 
     .nav-chevron {
         width: 13px !important;
@@ -384,7 +412,7 @@ header.nav,
         top: 100% !important;
         left: 50% !important;
         transform: translateX(-50%) translateY(10px) !important;
-        width: 920px !important;
+        width: auto !important;
         max-width: calc(100% - 24px) !important;
         background: #ffffff !important;
         border: 1px solid #d8e5f2 !important;

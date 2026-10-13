@@ -14,41 +14,10 @@ with open(FOOTER_FILE, "r", encoding="utf-8") as f:
     raw_footer = f.read().strip()
 
 def get_page_header(filename):
-    """Return header HTML with the active link set for this filename."""
+    """Return header HTML with no active link highlighting."""
     h = raw_header
     # Reset any existing 'on' class in header
     h = re.sub(r'\s+class="on"', '', h)
-    
-    # Active mapping based on page
-    if filename in ["about.html"]:
-        h = h.replace('href="about.html">About Sukhda</a>', 'href="about.html" class="on">About Sukhda</a>')
-        h = h.replace('href="about.html">About Us', 'href="about.html" class="on">About Us')
-    elif filename in ["doctor.html"] or filename.startswith("dr-"):
-        h = h.replace('href="doctor.html">Doctors</a>', 'href="doctor.html" class="on">Doctors</a>')
-    elif filename in ["csr.html"]:
-        h = h.replace('href="csr.html">CSR</a>', 'href="csr.html" class="on">CSR</a>')
-        h = h.replace('href="javascript:void(0)">Resources', 'href="javascript:void(0)" class="on">Resources')
-    elif filename in ["patient-stories.html"]:
-        h = h.replace('href="patient-stories.html">Patient Stories</a>', 'href="patient-stories.html" class="on">Patient Stories</a>')
-        h = h.replace('href="javascript:void(0)">Resources', 'href="javascript:void(0)" class="on">Resources')
-    elif filename in ["careers.html"]:
-        h = h.replace('href="careers.html">Careers</a>', 'href="careers.html" class="on">Careers</a>')
-        h = h.replace('href="javascript:void(0)">Resources', 'href="javascript:void(0)" class="on">Resources')
-    elif filename in ["media-centre.html", "media.html"]:
-        h = h.replace('href="media-centre.html#blogs">Blogs</a>', 'href="media-centre.html#blogs" class="on">Blogs</a>')
-        h = h.replace('href="javascript:void(0)">Resources', 'href="javascript:void(0)" class="on">Resources')
-    elif filename in ["opd-schedule.html"]:
-        h = h.replace('href="opd-schedule.html">OPD Schedule</a>', 'href="opd-schedule.html" class="on">OPD Schedule</a>')
-        h = h.replace('href="javascript:void(0)">Resources', 'href="javascript:void(0)" class="on">Resources')
-    elif filename in ["index.html"]:
-        # Index doesn't need a specific 'on' highlight unless desired
-        pass
-    else:
-        # Check if it's a speciality page
-        if f'href="{filename}"' in h:
-            h = h.replace(f'href="{filename}"', f'href="{filename}" class="on"')
-            h = h.replace('href="index.html#specialities">Our Services', 'href="index.html#specialities" class="on">Our Services')
-            
     return h
 
 def update_file(filepath, dry_run=False):
@@ -102,11 +71,7 @@ def update_file(filepath, dry_run=False):
 
     # 3. Replace Header Section
     page_header = get_page_header(filename)
-    header_block = f"""    <!-- INCLUDE: header -->
-    <div id="site-header" data-include="header">
-{page_header}
-    </div>
-    <!-- /INCLUDE: header -->"""
+    header_block = page_header
 
     # Detect header range
     # Check if already has INCLUDE: header comment
