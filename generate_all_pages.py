@@ -449,7 +449,7 @@ common_styles = """
         }
 
         .mega-view-all {
-            color: #8ce09e;
+            color: #278132;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
@@ -566,8 +566,8 @@ common_styles = """
             align-items: center;
             gap: 8px;
             background: rgba(39, 129, 50, 0.25);
-            border: 1px solid rgba(140, 224, 158, 0.4);
-            color: #8ce09e;
+            border: 1px solid rgba(39, 129, 50, 0.4);
+            color: #278132;
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 13.5px;
@@ -623,7 +623,7 @@ common_styles = """
         .hero-stat-num {
             font-size: 32px;
             font-weight: 800;
-            color: #8ce09e;
+            color: #278132;
             line-height: 1.1;
             font-family: 'Montserrat', sans-serif
         }
@@ -816,7 +816,7 @@ common_styles = """
         }
 
         .footer-tagline {
-            color: #8ce09e;
+            color: #278132;
             font-weight: 700;
             font-size: 14px;
             margin: 0 0 10px;
@@ -855,7 +855,7 @@ common_styles = """
         }
 
         .footer-nabh-badge small {
-            color: #8ce09e;
+            color: #278132;
             font-size: 11.5px
         }
 
@@ -896,7 +896,7 @@ common_styles = """
         }
 
         .footer-nav a:hover {
-            color: #8ce09e;
+            color: #278132;
             transform: translateX(4px)
         }
 
@@ -912,7 +912,7 @@ common_styles = """
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #8ce09e;
+            color: #278132;
             font-size: 14px;
             margin-bottom: 6px
         }
@@ -934,7 +934,7 @@ common_styles = """
         }
 
         .footer-hospital-card .f-hosp-phone:hover {
-            color: #8ce09e
+            color: #278132
         }
 
         .footer-emergency-box {
@@ -1002,7 +1002,7 @@ common_styles = """
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #8ce09e;
+            color: #278132;
             font-size: 13px;
             font-weight: 700
         }

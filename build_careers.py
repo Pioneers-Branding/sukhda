@@ -108,8 +108,8 @@ page_styles = """
             align-items: center;
             gap: 8px;
             background: rgba(39, 129, 50, 0.35);
-            border: 1px solid #8ce09e;
-            color: #8ce09e;
+            border: 1px solid #278132;
+            color: #278132;
             padding: 4px 14px;
             border-radius: 20px;
             font-size: 12.5px;
@@ -147,7 +147,7 @@ page_styles = """
         }
 
         .dnb-feat-item i {
-            color: #8ce09e;
+            color: #278132;
             width: 18px;
             height: 18px;
             flex-shrink: 0

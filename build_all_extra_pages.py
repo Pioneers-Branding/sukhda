@@ -433,7 +433,7 @@ common_css = """
         }
 
         .mega-view-all {
-            color: #8ce09e;
+            color: #278132;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
@@ -550,8 +550,8 @@ common_css = """
             align-items: center;
             gap: 8px;
             background: rgba(39, 129, 50, 0.25);
-            border: 1px solid rgba(140, 224, 158, 0.4);
-            color: #8ce09e;
+            border: 1px solid rgba(39, 129, 50, 0.4);
+            color: #278132;
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 13.5px;
@@ -607,7 +607,7 @@ common_css = """
         .hero-stat-num {
             font-size: 32px;
             font-weight: 800;
-            color: #8ce09e;
+            color: #278132;
             line-height: 1.1;
             font-family: 'Montserrat', sans-serif
         }

@@ -134,7 +134,7 @@ page_styles = """
             font-size: 20px;
             font-weight: 800;
             flex-shrink: 0;
-            border: 2px solid #8ce09e
+            border: 2px solid #278132
         }
 
         .patient-info b {

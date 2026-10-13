@@ -47,8 +47,8 @@ page_styles = """
             align-items: center;
             gap: 8px;
             background: rgba(39, 129, 50, 0.35);
-            border: 1px solid #8ce09e;
-            color: #8ce09e;
+            border: 1px solid #278132;
+            color: #278132;
             padding: 5px 14px;
             border-radius: 20px;
             font-size: 13px;
@@ -84,7 +84,7 @@ page_styles = """
         .usaid-stat-num {
             font-size: 28px;
             font-weight: 800;
-            color: #8ce09e;
+            color: #278132;
             font-family: 'Montserrat', sans-serif
         }
 

@@ -83,13 +83,13 @@ page_styles = """
             left: 14px;
             background: rgba(5, 33, 89, 0.85);
             backdrop-filter: blur(8px);
-            color: #8ce09e;
+            color: #278132;
             font-size: 11.5px;
             font-weight: 700;
             text-transform: uppercase;
             padding: 4px 10px;
             border-radius: 20px;
-            border: 1px solid rgba(140, 224, 158, 0.3)
+            border: 1px solid rgba(39, 129, 50, 0.3)
         }
 
         .news-body {
@@ -245,7 +245,7 @@ page_styles = """
             height: 50px;
             border-radius: 50%;
             background: rgba(39, 129, 50, 0.35);
-            color: #8ce09e;
+            color: #278132;
             display: flex;
             align-items: center;
             justify-content: center
@@ -279,7 +279,7 @@ page_styles = """
         }
 
         .kit-download-btn:hover {
-            background: #8ce09e;
+            background: #278132;
             color: #02163d
         }
 
@@ -561,7 +561,7 @@ html_content = f"""<!doctype html>
     <section class="sec-download-kit" id="press-kit">
         <div class="wrap">
             <div class="sec-header">
-                <span class="kicker" style="color:#8ce09e">Resources &amp; Downloads</span>
+                <span class="kicker" style="color:#278132">Resources &amp; Downloads</span>
                 <h2 class="sec-title" style="color:#fff">Media Press Kit &amp; Publications</h2>
                 <p class="sec-desc" style="color:#cbd5e1">Download official factsheets, annual reports, brand logos, and patient guide booklets for journalistic and reference use.</p>
             </div>

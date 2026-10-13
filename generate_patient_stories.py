@@ -429,7 +429,7 @@ content = f"""<!doctype html>
         }}
 
         .mega-view-all {{
-            color: #8ce09e;
+            color: #278132;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
@@ -546,8 +546,8 @@ content = f"""<!doctype html>
             align-items: center;
             gap: 8px;
             background: rgba(39, 129, 50, 0.25);
-            border: 1px solid rgba(140, 224, 158, 0.4);
-            color: #8ce09e;
+            border: 1px solid rgba(39, 129, 50, 0.4);
+            color: #278132;
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 13.5px;
@@ -604,7 +604,7 @@ content = f"""<!doctype html>
         .hero-stat-num {{
             font-size: 32px;
             font-weight: 800;
-            color: #8ce09e;
+            color: #278132;
             line-height: 1.1;
             font-family: 'Montserrat', sans-serif
         }}
@@ -798,7 +798,7 @@ content = f"""<!doctype html>
             font-size: 20px;
             font-weight: 800;
             flex-shrink: 0;
-            border: 2px solid #8ce09e
+            border: 2px solid #278132
         }}
 
         .patient-info b {{
@@ -1125,7 +1125,7 @@ content = f"""<!doctype html>
         }}
 
         .footer-tagline {{
-            color: #8ce09e;
+            color: #278132;
             font-weight: 700;
             font-size: 14px;
             margin: 0 0 10px;
@@ -1164,7 +1164,7 @@ content = f"""<!doctype html>
         }}
 
         .footer-nabh-badge small {{
-            color: #8ce09e;
+            color: #278132;
             font-size: 11.5px
         }}
 
@@ -1205,7 +1205,7 @@ content = f"""<!doctype html>
         }}
 
         .footer-nav a:hover {{
-            color: #8ce09e;
+            color: #278132;
             transform: translateX(4px)
         }}
 
@@ -1221,7 +1221,7 @@ content = f"""<!doctype html>
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #8ce09e;
+            color: #278132;
             font-size: 14px;
             margin-bottom: 6px
         }}
@@ -1243,7 +1243,7 @@ content = f"""<!doctype html>
         }}
 
         .footer-hospital-card .f-hosp-phone:hover {{
-            color: #8ce09e
+            color: #278132
         }}
 
         .footer-emergency-box {{
@@ -1311,7 +1311,7 @@ content = f"""<!doctype html>
             display: flex;
             align-items: center;
             gap: 8px;
-            color: #8ce09e;
+            color: #278132;
             font-size: 13px;
             font-weight: 700
         }}
