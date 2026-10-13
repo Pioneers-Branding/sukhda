@@ -1614,10 +1614,21 @@
             color: var(--blue)
         }
 
-        .emp-head span {
+        .emp-head span,
+        .emp-head a {
             font-size: 13px;
             color: var(--green);
-            font-weight: 700
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s ease;
+        }
+
+        .emp-head a:hover {
+            color: var(--blue);
+            text-decoration: underline;
         }
 
         .emp-pills {
@@ -2748,7 +2759,8 @@
                         <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg> WhatsApp: 99965-44005</a>
-                <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 (24/7 ER)</b></a>
+                <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 (24/7
+                        ER)</b></a>
             </div>
             <div class="links">
                 <a href="empanelled-corporate.html" style="color:#278132;font-weight:700">Cashless / TPA</a>
@@ -2893,14 +2905,16 @@
                                 <a href="index.html#specialities" class="mega-view-all"><i
                                         data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services
                                     &rarr;</a>
-                                <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
+                                <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24/7 ER:
+                                    <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" width="16" height="16"
                                         style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
                                         <path fill="#25D366"
                                             d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
                                         <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
                                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                                    </svg> WhatsApp: <b>+91 99965-44005</b></div>
+                                    </svg> WhatsApp: <b>+91 99965-44005</b>
+                                </div>
                             </div>
                         </div>
                     </span>
@@ -2987,7 +3001,7 @@
                         Multispeciality Hospital</b> and <b>Sukhda Med Park (Cancer &amp; Super Speciality
                         Hospital)</b>, delivering top-tier healthcare at affordable cost across Haryana, Punjab, and
                     Rajasthan.</p>
-                <a class="btn small primary" href="index.html#about">Our Story &amp; Growth Timeline →</a>
+                <a class="btn small primary" href="about.html">Our Story &amp; Growth Timeline →</a>
             </div>
             <div class="about-stats">
                 <div class="about-stat-card">
@@ -3599,7 +3613,7 @@
                 <h4><i data-lucide="shield-check"
                         style="width:16px;height:16px;display:inline-block;vertical-align:middle;color:var(--green)"></i>
                     Cashless Hospitalisation &amp; Empanelled Partners</h4>
-                <span>Cashless Facility Available 24/7</span>
+                <a href="empanelled-corporate.html">Cashless Facility Available 24/7 &rarr;</a>
             </div>
             <div class="emp-pills">
                 <span class="emp-pill gov"><i data-lucide="badge-check"></i>Ayushman Bharat (PM-JAY)</span>
@@ -3697,7 +3711,7 @@
     </section>
 
     <!-- 9. WHAT OUR PATIENTS SAY (TESTIMONIALS) -->
-    <section class="section soft" id="patients">
+    <section class="section soft" id="patients" style="display: none;">
         <div class="wrap">
             <div class="heading">
                 <div>
@@ -3806,28 +3820,29 @@
                     </ul>
                 </div>
 
-                            <div class="footer-col">
-                <h4>Our Hospitals</h4>
-                <a href="about.html#hospitals" class="footer-hospital-card">
-                <div class="f-hosp-logo-wrap">
-                        <img src="assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Multispeciality Hospital" class="f-hosp-logo">
-                    </div>
-                <div class="f-hosp-header">
-                        <b>Sukhda Multispeciality Hospital</b>
-                    </div>
-                <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
-            </a>
-            <a href="about.html#hospitals" class="footer-hospital-card">
-                <div class="f-hosp-logo-wrap">
-                        <img src="assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark" class="f-hosp-logo">
-                    </div>
-                <div class="f-hosp-header">
-                        <b>Sukhda MedPark</b>
-                    </div>
-                <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
-                <p>NH 1P-4P, Sector-5, Hisar</p>
-            </a>
-            </div>
+                <div class="footer-col">
+                    <h4>Our Hospitals</h4>
+                    <a href="about.html#hospitals" class="footer-hospital-card">
+                        <div class="f-hosp-logo-wrap">
+                            <img src="assets/images/sukhda-multispeciality-logo.png"
+                                alt="Sukhda Multispeciality Hospital" class="f-hosp-logo">
+                        </div>
+                        <div class="f-hosp-header">
+                            <b>Sukhda Multispeciality Hospital</b>
+                        </div>
+                        <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
+                    </a>
+                    <a href="about.html#hospitals" class="footer-hospital-card">
+                        <div class="f-hosp-logo-wrap">
+                            <img src="assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark" class="f-hosp-logo">
+                        </div>
+                        <div class="f-hosp-header">
+                            <b>Sukhda MedPark</b>
+                        </div>
+                        <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
+                        <p>NH 1P-4P, Sector-5, Hisar</p>
+                    </a>
+                </div>
 
                 <div class="footer-col">
                     <h4>24/7 Emergency &amp; OPD</h4>
