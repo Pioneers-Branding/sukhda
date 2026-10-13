@@ -1423,7 +1423,38 @@
             align-items: center;
             gap: 6px;
             font-weight: 700;
-            color: var(--green)
+            color: var(--green);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a.doctor-tag:hover {
+            color: var(--blue);
+            text-decoration: underline;
+        }
+
+        a.story-badge-top {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        a.story-badge-top:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-1px);
+        }
+
+        a.story-hosp-tag {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s ease;
+        }
+
+        a.story-hosp-tag:hover {
+            color: var(--green);
+            text-decoration: underline;
         }
 
         /* VIDEO TESTIMONIALS */
@@ -1885,7 +1916,7 @@
                 <!-- STORY 1: CARDIOLOGY -->
                 <div class="story-card" data-category="cardiology">
                     <div class="story-header cardio">
-                        <span class="story-badge-top"><i data-lucide="heart-pulse"></i> Cardiology &bull; PAMI</span>
+                        <a href="cardiology.html" class="story-badge-top"><i data-lucide="heart-pulse"></i> Cardiology &bull; PAMI</a>
                         <h3 class="story-title">Golden Hour Angioplasty Saves 68-Year-Old Heart Attack Patient</h3>
                     </div>
                     <div class="story-body">
@@ -1912,8 +1943,8 @@
                                     2, Discharged Day 3</span></div>
                         </div>
                         <div class="story-footer">
-                            <span class="doctor-tag"><i data-lucide="stethoscope"></i> Dr. Ankur Kamra</span>
-                            <span>Sukhda Multispeciality</span>
+                            <a href="dr-ankur-kamra.html" class="doctor-tag"><i data-lucide="stethoscope"></i> Dr. Ankur Kamra</a>
+                            <a href="about.html#hospitals" class="story-hosp-tag">Sukhda Multispeciality</a>
                         </div>
                     </div>
                 </div>
@@ -1921,7 +1952,7 @@
                 <!-- STORY 2: ONCOLOGY -->
                 <div class="story-card" data-category="oncology">
                     <div class="story-header oncology">
-                        <span class="story-badge-top"><i data-lucide="ribbon"></i> Oncology &bull; MedPark</span>
+                        <a href="medical-oncology.html" class="story-badge-top"><i data-lucide="ribbon"></i> Oncology &bull; MedPark</a>
                         <h3 class="story-title">Triumph Over Stage-III Breast Cancer Through Multidisciplinary Care</h3>
                     </div>
                     <div class="story-body">
@@ -1948,8 +1979,8 @@
                                     Disease-Free Remission</span></div>
                         </div>
                         <div class="story-footer">
-                            <span class="doctor-tag"><i data-lucide="stethoscope"></i> Dr. Amit Mehta &amp; Team</span>
-                            <span>Sukhda MedPark</span>
+                            <a href="dr-amit-mehta.html" class="doctor-tag"><i data-lucide="stethoscope"></i> Dr. Amit Mehta &amp; Team</a>
+                            <a href="about.html#hospitals" class="story-hosp-tag">Sukhda MedPark</a>
                         </div>
                     </div>
                 </div>
@@ -1957,7 +1988,7 @@
                 <!-- STORY 3: ORTHOPAEDICS -->
                 <div class="story-card" data-category="ortho">
                     <div class="story-header ortho">
-                        <span class="story-badge-top"><i data-lucide="bone"></i> Orthopaedics &bull; 3D Knee</span>
+                        <a href="orthopaedics.html" class="story-badge-top"><i data-lucide="bone"></i> Orthopaedics &bull; 3D Knee</a>
                         <h3 class="story-title">From Bedridden to Active Farming with 3D Knee Resurfacing</h3>
                     </div>
                     <div class="story-body">
@@ -1984,8 +2015,8 @@
                                     in 1 Week</span></div>
                         </div>
                         <div class="story-footer">
-                            <span class="doctor-tag"><i data-lucide="stethoscope"></i> Joint Replacement Unit</span>
-                            <span>Sukhda Hospital</span>
+                            <a href="orthopaedics.html" class="doctor-tag"><i data-lucide="stethoscope"></i> Joint Replacement Unit</a>
+                            <a href="about.html#hospitals" class="story-hosp-tag">Sukhda Hospital</a>
                         </div>
                     </div>
                 </div>
@@ -1993,7 +2024,7 @@
                 <!-- STORY 4: GYNAECOLOGY & NICU -->
                 <div class="story-card" data-category="gynae">
                     <div class="story-header gynae">
-                        <span class="story-badge-top"><i data-lucide="baby"></i> High-Risk Gynaecology</span>
+                        <a href="gynaecology.html" class="story-badge-top"><i data-lucide="baby"></i> High-Risk Gynaecology</a>
                         <h3 class="story-title">Miracle Preterm Twin Delivery at 31 Weeks with Level-3 NICU Care</h3>
                     </div>
                     <div class="story-body">
@@ -2020,8 +2051,8 @@
                                     healthy at 2.1 kg</span></div>
                         </div>
                         <div class="story-footer">
-                            <span class="doctor-tag"><i data-lucide="stethoscope"></i> Dr. Manisha Mehta</span>
-                            <span>Sukhda Hospital</span>
+                            <a href="dr-manisha-mehta.html" class="doctor-tag"><i data-lucide="stethoscope"></i> Dr. Manisha Mehta</a>
+                            <a href="about.html#hospitals" class="story-hosp-tag">Sukhda Hospital</a>
                         </div>
                     </div>
                 </div>
@@ -2029,7 +2060,7 @@
                 <!-- STORY 5: NEPHROLOGY -->
                 <div class="story-card" data-category="nephro">
                     <div class="story-header nephro">
-                        <span class="story-badge-top"><i data-lucide="droplets"></i> Nephrology &bull; Dialysis</span>
+                        <a href="nephrology.html" class="story-badge-top"><i data-lucide="droplets"></i> Nephrology &bull; Dialysis</a>
                         <h3 class="story-title">Renal Crisis Managed: Quality Life Restored with Cashless Dialysis</h3>
                     </div>
                     <div class="story-body">
@@ -2056,8 +2087,8 @@
                                     RO Dialysis Machines</span></div>
                         </div>
                         <div class="story-footer">
-                            <span class="doctor-tag"><i data-lucide="stethoscope"></i> Nephrology Unit</span>
-                            <span>Sukhda Hospital</span>
+                            <a href="nephrology.html" class="doctor-tag"><i data-lucide="stethoscope"></i> Nephrology Unit</a>
+                            <a href="about.html#hospitals" class="story-hosp-tag">Sukhda Hospital</a>
                         </div>
                     </div>
                 </div>
@@ -2065,7 +2096,7 @@
                 <!-- STORY 6: TRAUMA & CRITICAL CARE -->
                 <div class="story-card" data-category="critical">
                     <div class="story-header">
-                        <span class="story-badge-top"><i data-lucide="activity"></i> Polytrauma &bull; ICU</span>
+                        <a href="emergency-trauma.html" class="story-badge-top"><i data-lucide="activity"></i> Polytrauma &bull; ICU</a>
                         <h3 class="story-title">Road Accident Polytrauma Survivor Returns to Full Mobility</h3>
                     </div>
                     <div class="story-body">
@@ -2092,8 +2123,8 @@
                                     Function &amp; Independence</span></div>
                         </div>
                         <div class="story-footer">
-                            <span class="doctor-tag"><i data-lucide="stethoscope"></i> Trauma &amp; ICU Team</span>
-                            <span>Sukhda Hospital</span>
+                            <a href="emergency-trauma.html" class="doctor-tag"><i data-lucide="stethoscope"></i> Trauma &amp; ICU Team</a>
+                            <a href="about.html#hospitals" class="story-hosp-tag">Sukhda Hospital</a>
                         </div>
                     </div>
                 </div>
@@ -2120,8 +2151,7 @@
                     </div>
                     <div class="video-card-body">
                         <h4>"How Fast Action in Cath Lab Saved My Life"</h4>
-                        <p>Mr. Jagdish Chander shares his emergency heart attack recovery under Dr. Ankur Kamra at
-                            Sukhda Cath Lab.</p>
+                        <p>Mr. Jagdish Chander shares his emergency heart attack recovery under <a href="dr-ankur-kamra.html" style="color:var(--green);font-weight:700;text-decoration:none">Dr. Ankur Kamra</a> at <a href="cardiology.html" style="color:var(--blue);font-weight:600;text-decoration:none">Sukhda Cath Lab</a>.</p>
                     </div>
                 </div>
 
@@ -2133,8 +2163,7 @@
                     </div>
                     <div class="video-card-body">
                         <h4>"My Battle with Lymphoma at Sukhda MedPark"</h4>
-                        <p>Cancer warrior Anita shares her chemotherapy journey, comfortable daycare suite experience,
-                            and compassionate support.</p>
+                        <p>Cancer warrior Anita shares her chemotherapy journey at <a href="medical-oncology.html" style="color:var(--green);font-weight:700;text-decoration:none">Medical Oncology</a> and compassionate support at <a href="about.html#hospitals" style="color:var(--blue);font-weight:600;text-decoration:none">Sukhda MedPark</a>.</p>
                     </div>
                 </div>
 
@@ -2146,8 +2175,7 @@
                     </div>
                     <div class="video-card-body">
                         <h4>"Walking Without Pain After 10 Years"</h4>
-                        <p>Mrs. Prem Lata demonstrates her knee flexibility and fast recovery following minimally
-                            invasive joint surgery.</p>
+                        <p>Mrs. Prem Lata demonstrates her knee flexibility and fast recovery following minimally invasive <a href="orthopaedics.html" style="color:var(--green);font-weight:700;text-decoration:none">Joint Surgery</a>.</p>
                     </div>
                 </div>
             </div>
@@ -2343,25 +2371,25 @@
 
                             <div class="footer-col">
                 <h4>Our Hospitals</h4>
-                <div class="footer-hospital-card">
-                    <div class="f-hosp-logo-wrap">
+                <a href="about.html#hospitals" class="footer-hospital-card">
+                <div class="f-hosp-logo-wrap">
                         <img src="assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Multispeciality Hospital" class="f-hosp-logo">
                     </div>
-                    <div class="f-hosp-header">
+                <div class="f-hosp-header">
                         <b>Sukhda Multispeciality Hospital</b>
                     </div>
-                    <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
-                </div>
-                <div class="footer-hospital-card">
-                    <div class="f-hosp-logo-wrap">
+                <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
+            </a>
+            <a href="about.html#hospitals" class="footer-hospital-card">
+                <div class="f-hosp-logo-wrap">
                         <img src="assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark" class="f-hosp-logo">
                     </div>
-                    <div class="f-hosp-header">
+                <div class="f-hosp-header">
                         <b>Sukhda MedPark</b>
                     </div>
-                    <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
-                    <p>NH 1P-4P, Sector-5, Hisar</p>
-                </div>
+                <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
+                <p>NH 1P-4P, Sector-5, Hisar</p>
+            </a>
             </div>
 
                 <div class="footer-col">
