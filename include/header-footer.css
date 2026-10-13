@@ -1112,6 +1112,10 @@ header.nav,
     line-height: 1.4;
 }
 
+.footer-hospital-card p:last-child {
+    margin-bottom: 0 !important;
+}
+
 .footer-hospital-card .f-hosp-sub {
     color: #64b5f6;
     font-size: 11px;
