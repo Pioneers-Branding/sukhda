@@ -586,7 +586,7 @@ common_styles = """
         }
 
         .hero-banner h1 span {
-            color: #4ade80
+            color: #278132
         }
 
         .hero-banner p {
