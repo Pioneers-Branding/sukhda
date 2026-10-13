@@ -1089,6 +1089,24 @@ header.nav,
     margin-bottom: 12px;
 }
 
+.footer-hospital-card .f-hosp-logo-wrap {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.footer-hospital-card .f-hosp-logo {
+    height: 32px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
 .footer-hospital-card .f-hosp-header {
     display: flex;
     align-items: center;
