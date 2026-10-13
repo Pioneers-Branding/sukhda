@@ -1540,3 +1540,24 @@ a.footer-hospital-card:hover,
 .pill-hosp-link:hover {
     background: rgba(255, 255, 255, 0.22);
 }
+
+/* Empanelled section strip link */
+.emp-head a,
+.emp-head a.more {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #278132;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.emp-head a:hover,
+.emp-head a.more:hover {
+    color: #052159;
+    text-decoration: underline;
+    transform: translateX(3px);
+}
