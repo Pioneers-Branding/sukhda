@@ -1544,9 +1544,9 @@ a.footer-hospital-card:hover,
 /* Empanelled section strip link */
 .emp-head a,
 .emp-head a.more {
-    font-size: 13.5px;
+    font-size: 15px;
     font-weight: 700;
-    color: #278132;
+    color: #052159;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -1557,7 +1557,7 @@ a.footer-hospital-card:hover,
 
 .emp-head a:hover,
 .emp-head a.more:hover {
-    color: #052159;
+    color: #278132;
     text-decoration: underline;
     transform: translateX(3px);
 }
