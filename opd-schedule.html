@@ -1,0 +1,2818 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OPD Schedule | Doctor Clinic Timings | Sukhda Hospital Hisar</title>
+    <meta name="description" content="View the complete Outpatient Department (OPD) schedule of senior consultants and super-specialists at Sukhda Multispeciality Hospital and Sukhda MedPark, Hisar. Check clinic days, morning & evening timings, and book appointments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <link rel="stylesheet" href="assets/css/translate.css">
+    <style>
+        :root {
+            --blue: #052159;
+            --blue-dark: #02163d;
+            --green: #278132;
+            --green-light: #eaf5ec;
+            --pale: #f2f7fb;
+            --muted: #53677f;
+            --line: #dce7f0;
+            --gold: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            color: var(--blue);
+            font: 16px/1.6 'Lato', sans-serif;
+            background: #f8fafc;
+            overflow-x: hidden
+        }
+
+        h1, h2, h3, h4, h5, h6,
+        .btn, .kicker, .eyebrow,
+        .nav-group > a, .nav-drop a,
+        .mega-col-title, .stat-value,
+        .sec-title, .badge, .counter,
+        .tab-btn, .day-btn, .opd-doc-name {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        img {
+            display: block;
+            width: 100%
+        }
+
+        .wrap {
+            width: min(1400px, calc(100% - 80px));
+            margin: auto
+        }
+
+        /* TOP BAR */
+        .top {
+            height: 42px;
+            background: var(--blue);
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .top .wrap,
+        .nav .wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            align-items: center
+        }
+
+        .links a {
+            color: #fff;
+            transition: color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .links a:hover {
+            color: #278132
+        }
+
+        .links span+span,
+        .links a+a {
+            border-left: 1px solid #ffffff55;
+            padding-left: 20px
+        }
+
+        /* NAVIGATION */
+        .nav {
+            height: 80px;
+            box-shadow: 0 2px 9px #05215919;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #fff
+        }
+
+        .logo {
+            width: 230px;
+            height: 62px;
+            object-fit: contain;
+            object-position: left center
+        }
+
+        .menu {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            font-size: 15.5px;
+            font-weight: 700
+        }
+
+        .menu a {
+            padding: 28px 0;
+            position: relative;
+            transition: color 0.2s ease
+        }
+
+        .menu a:hover {
+            color: var(--green)
+        }
+
+        .nav-group {
+            position: relative;
+            display: inline-flex;
+            align-items: center
+        }
+
+        .nav-group > a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px
+        }
+
+        .nav-chevron {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.2s ease
+        }
+
+        .nav-drop {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 250px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(3, 32, 90, 0.12);
+            padding: 8px 0;
+            z-index: 1000
+        }
+
+        .nav-drop a {
+            display: block;
+            padding: 11px 20px !important;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--blue);
+            border: 0 !important
+        }
+
+        .nav-drop a:hover {
+            background: var(--pale);
+            color: var(--green)
+        }
+
+        @media(min-width: 901px) {
+            .nav-group:hover .nav-drop {
+                display: block
+            }
+            .nav-group:hover .nav-chevron {
+                transform: rotate(180deg)
+            }
+            .nav-group:hover .services-mega {
+                display: block
+            }
+            .mobile-menu-head,
+            .mobile-menu-footer,
+            .nav-overlay {
+                display: none !important;
+            }
+            .mobile-nav-links {
+                display: flex !important;
+                align-items: center;
+                gap: 26px;
+            }
+            .hamb {
+                display: none !important;
+            }
+        }
+
+        /* MEGA MENU */
+        .services-mega {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 900px;
+            max-width: calc(100vw - 32px);
+            background: #ffffff;
+            border: 1px solid #d8e5f2;
+            border-radius: 14px;
+            box-shadow: 0 20px 48px rgba(3, 32, 90, 0.18);
+            padding: 0;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .mega-body {
+            display: grid;
+            grid-template-columns: 1.16fr 0.94fr;
+            background: #fff;
+        }
+
+        .mega-col {
+            padding: 18px 20px 16px;
+        }
+
+        .mega-col.medpark-col {
+            background: #f7faff;
+            border-left: 1px solid #e3edf7;
+        }
+
+        .mega-col-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1.5px solid #edf3f8;
+        }
+
+        .mega-col-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: #eaf5ec;
+            color: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .mega-col-icon.medpark {
+            background: #e8f0fe;
+            color: var(--blue);
+        }
+
+        .mega-col-title {
+            font-size: 15.5px;
+            font-weight: 800;
+            color: var(--blue);
+        }
+
+        .mega-col-sub {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .mega-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px 8px;
+        }
+
+        .mega-links-grid.single-col {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .mega-links-grid a {
+            display: flex !important;
+            align-items: center !important;
+            gap: 7px !important;
+            padding: 7px 9px !important;
+            font-size: 13.5px !important;
+            font-weight: 600 !important;
+            color: #355070 !important;
+            border-radius: 6px !important;
+            border: 0 !important;
+            transition: all 0.16s ease !important;
+        }
+
+        .mega-links-grid a:hover {
+            background: #eaf5ec !important;
+            color: var(--green) !important;
+        }
+
+        .mega-col.medpark-col .mega-links-grid a:hover {
+            background: #eef4ff !important;
+            color: var(--blue) !important;
+        }
+
+        .mega-links-grid a.featured-service {
+            background: #ffffff !important;
+            border: 1px solid #c9dcf0 !important;
+            border-left: 3.5px solid var(--green) !important;
+            padding: 8px 10px !important;
+            border-radius: 7px !important;
+        }
+
+        .mega-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 9px 20px;
+            background: #f1f6fa;
+            border-top: 1px solid #e1ecf6;
+            font-size: 13.5px;
+        }
+
+        .mega-view-all {
+            color: var(--green) !important;
+            font-weight: 800 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            padding: 0 !important;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #aebfd0;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.2s ease
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(3, 32, 90, 0.15)
+        }
+
+        .primary {
+            background: var(--green);
+            border-color: var(--green);
+            color: #fff
+        }
+
+        .primary:hover {
+            background: #216a2d;
+            border-color: #216a2d;
+            color: #fff
+        }
+
+        .white {
+            background: #fff;
+            color: var(--blue);
+            border-color: #fff
+        }
+
+        .white:hover {
+            background: #f0f6fa
+        }
+
+        .outline {
+            background: transparent;
+            color: var(--blue);
+            border-color: var(--line);
+        }
+
+        .outline:hover {
+            border-color: var(--blue);
+            background: #f8fafc;
+        }
+
+        .hamb {
+            border: 0;
+            background: transparent;
+            color: var(--blue);
+            font-size: 28px;
+            line-height: 1;
+            padding: 8px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb-wrap {
+            background: #02163d;
+            padding: 12px 0;
+            font-size: 13px;
+            color: #94a3b8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .breadcrumb-wrap a {
+            color: #cbd5e1;
+            transition: color 0.2s ease;
+        }
+
+        .breadcrumb-wrap a:hover {
+            color: #55df8e;
+        }
+
+        .breadcrumb-wrap span {
+            margin: 0 8px;
+            color: #64748b;
+        }
+
+        .breadcrumb-wrap .current {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* HERO SECTION */
+        .opd-hero {
+            background: linear-gradient(135deg, #052159 0%, #02173e 60%, #032b70 100%);
+            color: #fff;
+            padding: 56px 0 64px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .opd-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 85% 20%, rgba(39, 129, 50, 0.22) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #55df8e;
+            background: rgba(85, 223, 142, 0.12);
+            border: 1px solid rgba(85, 223, 142, 0.3);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: 42px;
+            line-height: 1.18;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 0 0 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-title span {
+            color: #55df8e;
+        }
+
+        .hero-desc {
+            font-size: 16px;
+            line-height: 1.65;
+            color: #d1d9e6;
+            margin: 0 0 28px;
+            max-width: 620px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 28px 24px;
+            backdrop-filter: blur(10px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .hero-stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hero-stat-num {
+            font-size: 32px;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #9cb5cf;
+        }
+
+        /* FILTER & SEARCH BAR SECTION */
+        .sec-controls {
+            background: #ffffff;
+            border-bottom: 1px solid var(--line);
+            padding: 20px 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 16px rgba(5, 33, 89, 0.05);
+        }
+
+        .controls-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .controls-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-box-wrap {
+            position: relative;
+            flex: 1;
+            min-width: 300px;
+            max-width: 480px;
+        }
+
+        .search-box-wrap i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            color: var(--muted);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 18px 12px 46px;
+            border: 1.5px solid var(--line);
+            border-radius: 9999px;
+            font-size: 14.5px;
+            font-family: 'Lato', sans-serif;
+            color: var(--blue);
+            background: #f8fafc;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            background: #ffffff;
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(39, 129, 50, 0.12);
+        }
+
+        .results-meta {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .results-badge {
+            background: #eaf5ec;
+            color: var(--green);
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        /* CATEGORY TABS */
+        .category-tabs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            padding-bottom: 2px;
+        }
+
+        .category-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-btn {
+            background: #f1f5f9;
+            border: 1px solid transparent;
+            color: #475569;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 7px 16px;
+            border-radius: 9999px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tab-btn:hover {
+            background: #e2e8f0;
+            color: var(--blue);
+        }
+
+        .tab-btn.active {
+            background: var(--blue);
+            color: #ffffff;
+            border-color: var(--blue);
+            box-shadow: 0 2px 8px rgba(5, 33, 89, 0.2);
+        }
+
+        /* DAY FILTER ROW */
+        .day-filters {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .day-label {
+            font-size: 12.5px;
+            font-weight: 800;
+            color: var(--blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+        }
+
+        .day-btn {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.18s ease;
+        }
+
+        .day-btn:hover {
+            border-color: var(--green);
+            color: var(--green);
+        }
+
+        .day-btn.active {
+            background: var(--green);
+            color: #ffffff;
+            border-color: var(--green);
+            font-weight: 800;
+        }
+
+        /* MAIN SCHEDULE SECTION */
+        .sec-schedule {
+            padding: 40px 0 70px;
+        }
+
+        /* TABLE VIEW */
+        .opd-table-card {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            box-shadow: 0 6px 24px rgba(5, 33, 89, 0.06);
+            overflow: hidden;
+        }
+
+        .opd-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .opd-table thead th {
+            background: #052159;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13.5px;
+            font-weight: 800;
+            padding: 16px 20px;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+            border-bottom: 2px solid #02173e;
+        }
+
+        .opd-table tbody tr {
+            border-bottom: 1px solid #edf2f7;
+            transition: background 0.15s ease;
+        }
+
+        .opd-table tbody tr:hover {
+            background: #f8fbfe;
+        }
+
+        .opd-table tbody td {
+            padding: 18px 20px;
+            vertical-align: middle;
+            font-size: 14.5px;
+        }
+
+        .doc-cell {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .opd-doc-name {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .opd-doc-name:hover {
+            color: var(--green);
+        }
+
+        .opd-doc-qual {
+            font-size: 12.5px;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+
+        .dept-cell {
+            font-weight: 700;
+            color: #1e3a8a;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .hospital-tag {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: #64748b;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .days-badge {
+            background: #f0f7ff;
+            color: #034694;
+            border: 1px solid #cfe2ff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12.5px;
+            font-weight: 700;
+            display: inline-block;
+            line-height: 1.35;
+        }
+
+        .time-slots {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .time-pill {
+            font-size: 13px;
+            font-weight: 700;
+            color: #0f172a;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 4px 10px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        .time-pill.morning {
+            color: #15803d;
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+
+        .time-pill.evening {
+            color: #1d4ed8;
+            background: #eff6ff;
+            border-color: #bfdbfe;
+        }
+
+        .time-pill.oncall {
+            color: #b45309;
+            background: #fffbeb;
+            border-color: #fde68a;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-badge.available {
+            background: #eaf5ec;
+            color: var(--green);
+        }
+
+        .status-badge.oncall {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .action-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-book-opd {
+            background: var(--green);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-book-opd:hover {
+            background: #1e6726;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(39, 129, 50, 0.25);
+        }
+
+        /* NO RESULTS BOX */
+        .no-results-box {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            box-shadow: 0 4px 14px rgba(5, 33, 89, 0.04);
+            margin-top: 20px;
+        }
+
+        .no-results-box i {
+            width: 48px;
+            height: 48px;
+            color: var(--green);
+            margin-bottom: 14px;
+        }
+
+        /* PATIENT GUIDELINES SECTION */
+        .sec-guidelines {
+            padding: 60px 0;
+            background: #ffffff;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .guide-card {
+            background: #f8fafc;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(5, 33, 89, 0.08);
+            border-color: #b0cbe3;
+        }
+
+        .guide-icon-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: #eaf5ec;
+            color: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .guide-card h3 {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--blue);
+            margin: 0;
+        }
+
+        .guide-card p {
+            font-size: 14px;
+            color: var(--muted);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .guide-card ul {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 13.5px;
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        /* FAQ SECTION */
+        .sec-faqs {
+            padding: 64px 0 80px;
+            background: #f8fafc;
+        }
+
+        .faq-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .faq-item.active {
+            border-color: var(--green);
+            box-shadow: 0 4px 16px rgba(5, 33, 89, 0.06);
+        }
+
+        .faq-btn {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 18px 22px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--blue);
+            cursor: pointer;
+        }
+
+        .faq-btn i {
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            color: var(--green);
+        }
+
+        .faq-item.active .faq-btn i {
+            transform: rotate(180deg);
+        }
+
+        .faq-body {
+            display: none;
+            padding: 0 22px 20px;
+            font-size: 14.5px;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        .faq-item.active .faq-body {
+            display: block;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1100px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .wrap {
+                width: calc(100% - 40px);
+            }
+            .top,
+            .menu,
+            .nav .primary {
+                display: none !important;
+            }
+            .hamb {
+                display: block !important;
+            }
+            .sec-controls {
+                top: 80px;
+            }
+            .hero-title {
+                font-size: 32px;
+            }
+            .opd-table-card {
+                background: transparent;
+                border: none;
+                box-shadow: none;
+            }
+            .opd-table thead {
+                display: none;
+            }
+            .opd-table, .opd-table tbody, .opd-table tr, .opd-table td {
+                display: block;
+                width: 100%;
+            }
+            .opd-table tbody tr {
+                background: #ffffff;
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                padding: 16px;
+                margin-bottom: 16px;
+                box-shadow: 0 4px 12px rgba(5, 33, 89, 0.04);
+            }
+            .opd-table tbody td {
+                padding: 8px 0;
+                border: none;
+            }
+            .opd-table tbody td:first-child {
+                display: none;
+            }
+            .action-btns {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #edf2f7;
+            }
+        }
+    
+
+/* PREMIUM FOOTER REDESIGN */
+        .footer {
+            background: linear-gradient(180deg, #052159 0%, #011338 100%);
+            color: #cbd5e1;
+            padding: 56px 0 0;
+            border-top: 4px solid var(--green);
+            position: relative;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.9fr 1.35fr 1.15fr;
+            gap: 36px;
+            padding-bottom: 44px;
+        }
+
+        .footer-brand-wrap {
+            background: #ffffff;
+            padding: 10px 18px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+            margin-bottom: 16px;
+            max-width: 230px;
+        }
+
+        .footer-brand-wrap .footer-logo {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin: 0;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            font-weight: 800;
+            color: #68d493;
+            letter-spacing: 0.3px;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+
+        .footer-desc {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #94a3b8;
+            margin: 0 0 16px;
+        }
+
+        .footer-nabh-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 8px 14px;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+        }
+
+        .footer-nabh-badge .nabh-icon-img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            border-radius: 4px;
+            background: #fff;
+            padding: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-nabh-badge b {
+            display: block;
+            font-size: 13px;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .footer-nabh-badge small {
+            display: block;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        .footer-col h4 {
+            font-size: 15px;
+            font-weight: 800;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin: 0 0 18px;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 3.5px;
+            background: var(--green);
+            border-radius: 2px;
+        }
+
+        .footer-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .footer-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13.5px;
+            color: #cbd5e1;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .footer-nav a span {
+            color: var(--green);
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #ffffff;
+            transform: translateX(4px);
+        }
+
+        .footer-nav a:hover span {
+            color: #68d493;
+        }
+
+        .footer-hospital-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 12px;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .footer-hospital-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(104, 212, 147, 0.35);
+        }
+
+        .f-hosp-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+        }
+
+        .f-hosp-header i,
+        .f-hosp-header svg {
+            width: 16px;
+            height: 16px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .f-hosp-header b {
+            font-size: 13.5px;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .f-hosp-sub {
+            font-size: 12px;
+            color: #68d493;
+            font-weight: 600;
+            margin: 0 0 4px !important;
+        }
+
+        .footer-hospital-card p {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.45;
+            margin: 0 0 6px;
+        }
+
+        .f-hosp-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #e2e8f0;
+            transition: color 0.2s ease;
+        }
+
+        .f-hosp-phone i,
+        .f-hosp-phone svg {
+            width: 13px;
+            height: 13px;
+            color: var(--green);
+        }
+
+        .f-hosp-phone:hover {
+            color: #68d493;
+        }
+
+        .footer-emergency-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, rgba(42, 130, 56, 0.22) 0%, rgba(3, 32, 90, 0.45) 100%);
+            border: 1px solid rgba(104, 212, 147, 0.35);
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+        }
+
+        .f-emg-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: var(--green);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .f-emg-icon i,
+        .f-emg-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-emergency-box small {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #68d493;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .f-emg-num {
+            display: block;
+            font-size: 16px;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.2;
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num:hover {
+            color: #68d493;
+        }
+
+        .f-emg-num-sub {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            color: #cbd5e1;
+            margin-top: 2px;
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num-sub:hover {
+            color: #68d493;
+        }
+
+        .footer-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            margin-bottom: 14px;
+        }
+
+        .f-cnt-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 13px;
+            color: #cbd5e1;
+            padding: 7px 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 7px;
+            transition: all 0.2s ease;
+            word-break: break-all;
+        }
+
+        .f-cnt-item i,
+        .f-cnt-item svg {
+            width: 15px;
+            height: 15px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .f-cnt-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border-color: rgba(104, 212, 147, 0.3);
+        }
+
+        .f-cnt-item.whatsapp:hover {
+            color: #25d366;
+            border-color: rgba(37, 211, 102, 0.4);
+        }
+
+        .f-cnt-item.whatsapp:hover i,
+        .f-cnt-item.whatsapp:hover svg {
+            color: #25d366;
+        }
+
+        .footer-motto {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 800;
+            color: #68d493;
+            padding-top: 4px;
+        }
+
+        .footer-motto i,
+        .footer-motto svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .bottom {
+            background: #010c22;
+            padding: 18px 0;
+            font-size: 13px;
+            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .bottom .wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .bottom-badges {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            color: #cbd5e1;
+            font-size: 12.5px;
+        }
+
+        .bottom-badges span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bottom-badges span i,
+        .bottom-badges span svg {
+            width: 13px;
+            height: 13px;
+            color: var(--green);
+        }
+
+        .hamb {
+            border: 0;
+            background: transparent;
+            color: var(--blue);
+            font-size: 28px;
+            line-height: 1;
+            padding: 8px;
+            cursor: pointer;
+            display: none
+        }
+
+        
+        /* FOOTER RESPONSIVE */
+        @media (max-width: 1100px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 32px !important;
+            }
+        }
+        @media (max-width: 640px) {
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+                gap: 28px !important;
+            }
+            .bottom .wrap {
+                flex-direction: column !important;
+                gap: 10px !important;
+                text-align: center !important;
+            }
+            .bottom-badges {
+                justify-content: center !important;
+            }
+        }
+
+</style>
+    <link rel="stylesheet" href="include/header-footer.css">
+</head>
+
+<body>
+                    <!-- INCLUDE: header -->
+    <div id="site-header" data-include="header">
+<!-- TOP EMERGENCY & UTILITY BAR -->
+<div class="top">
+    <div class="wrap">
+        <div class="links">
+            <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: 99965-44005</a>
+            <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 <span class="top-er-extra">/ 248473</span> / 99966-48483 (24/7 ER)</b></a>
+        </div>
+        <div class="links">
+            <a href="empanelled-corporate.html" style="color:#278132;font-weight:700">Cashless / TPA</a>
+            <a href="opd-schedule.html" class="on">OPD Schedule</a>
+            <div class="top-lang-switch notranslate" aria-label="Language selection">
+                <button type="button" class="lang-btn active" data-lang="en" onclick="switchLanguage('en')"><i data-lucide="globe" style="width:13px;height:13px"></i> English</button>
+                <span class="lang-sep">|</span>
+                <button type="button" class="lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN HEADER & NAVIGATION -->
+<header class="nav">
+    <div class="wrap">
+        <a href="index.html" aria-label="Sukhda Healthcare home">
+            <img class="logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
+        </a>
+        <nav class="menu">
+            <div class="mobile-menu-head">
+                <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
+                <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
+            </div>
+            <div class="mobile-lang-wrap notranslate">
+                <span class="mobile-lang-label"><i data-lucide="languages" style="width:14px;height:14px"></i> भाषा / Language</span>
+                <div class="mobile-lang-pills">
+                    <button type="button" class="mobile-lang-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
+                    <button type="button" class="mobile-lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+                </div>
+            </div>
+            <div class="mobile-nav-links">
+                <span class="nav-group">
+                    <a href="about.html">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="about.html">About Sukhda</a>
+                        <a href="doctor.html">Medical Leadership</a>
+                        <a href="about.html#why">Vision &amp; Mission</a>
+                        <a href="about.html#hospitals">Our Hospitals</a>
+                        <a href="about.html#infrastructure">Infrastructure &amp; Facilities</a>
+                    </span>
+                </span>
+                <span class="nav-group">
+                    <a href="index.html#hospitals">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="index.html#hospitals">Sukhda Multispeciality Hospital</a>
+                        <a href="index.html#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
+                    </span>
+                </span>
+                <span class="nav-group mega-group">
+                    <a href="index.html#specialities">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <div class="nav-drop services-mega">
+                        <div class="mega-body">
+                            <div class="mega-col">
+                                <div class="mega-col-header">
+                                    <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
+                                    <div>
+                                        <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                        <div class="mega-col-sub">NABH Accredited Multi-Speciality &amp; DNB Centre</div>
+                                    </div>
+                                </div>
+                                <div class="mega-links-grid">
+                                    <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
+                                    <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
+                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedics &amp; 3D Knee Resurfacing</span></a>
+                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Internal Medicine (DNB Centre)</span></a>
+                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>General &amp; Laparoscopic Surgery</span></a>
+                                    <a href="bariatric-surgery.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Bariatric</span></a>
+                                    <a href="urology.html"><i data-lucide="activity"></i><span>Urology &amp; Endourology</span></a>
+                                    <a href="ent.html"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
+                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
+                                    <a href="radiology.html"><i data-lucide="scan"></i><span>CT Scan &amp; Radiology Imaging</span></a>
+                                    <a href="emergency-trauma.html"><i data-lucide="zap"></i><span>24/7 Emergency &amp; Trauma Care</span></a>
+                                    <a href="critical-care.html"><i data-lucide="activity"></i><span>Critical Care &amp; ICU</span></a>
+                                    <a href="psychiatry.html"><i data-lucide="heart"></i><span>Psychiatry &amp; Rehabilitation</span></a>
+                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesiology &amp; Pain Management</span></a>
+                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehabilitation</span></a>
+                                </div>
+                            </div>
+                            <div class="mega-col medpark-col">
+                                <div class="mega-col-header">
+                                    <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                    <div>
+                                        <div class="mega-col-title">Sukhda MedPark</div>
+                                        <div class="mega-col-sub">Cancer &amp; Super Speciality Hospital</div>
+                                    </div>
+                                </div>
+                                <div class="mega-links-grid single-col">
+                                    <a href="medical-oncology.html" class="featured-service">
+                                        <i data-lucide="ribbon"></i>
+                                        <div>
+                                            <b>Medical Oncology (Chemo &amp; Daycare)</b>
+                                            <small>Chemotherapy Suite, Biosafety &amp; Immunotherapy</small>
+                                        </div>
+                                    </a>
+                                    <a href="surgical-oncology.html"><i data-lucide="shield-alert"></i><span>Surgical Oncology (Modular OTs)</span></a>
+                                    <a href="radiation-oncology.html"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
+                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neuro Surgery &amp; Spine</span></a>
+                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
+                                    <a href="urology.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
+                                    <a href="critical-care.html"><i data-lucide="stethoscope"></i><span>Critical Care &amp; Tumour Board</span></a>
+                                    <a href="anaesthesiology.html"><i data-lucide="heart"></i><span>Pain &amp; Palliative Care Unit</span></a>
+                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Digital Mammography &amp; Diagnostics</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mega-footer">
+                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services &rarr;</a>
+                            <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24/7 ER: <b>01662-249473 / 248473 / 99966-48483</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
+                        </div>
+                    </div>
+                </span>
+                <a href="doctor.html">Doctors</a>
+                <span class="nav-group">
+                    <a href="javascript:void(0)" class="on">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="media-centre.html#blogs">Blogs</a>
+                        <a href="opd-schedule.html" class="on">OPD Schedule</a>
+                        <a href="csr.html">CSR</a>
+                        <a href="patient-stories.html">Patient Stories</a>
+                        <a href="careers.html">Careers</a>
+                    </span>
+                </span>
+            </div>
+            <div class="mobile-menu-footer">
+                <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+                <a class="btn" href="tel:01662249473" style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473 / 99966-48483</a>
+            </div>
+        </nav>
+        <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+        <button class="hamb" aria-label="Open menu">☰</button>
+    </div>
+    <div class="nav-overlay"></div>
+</header>
+    </div>
+    <!-- /INCLUDE: header -->
+
+    <!-- BREADCRUMBS -->
+    <div class="breadcrumb-wrap">
+        <div class="wrap">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <span class="current">OPD Schedule</span>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="opd-hero">
+        <div class="wrap">
+            <div class="hero-grid">
+                <div>
+                    <span class="hero-kicker"><i data-lucide="clock"></i> Regular &amp; Evening Clinics</span>
+                    <h1 class="hero-title">Outpatient Department <span>(OPD) Schedule</span></h1>
+                    <p class="hero-desc">Consult senior medical faculty, surgeons, and super-specialists across 19+ clinical departments at Sukhda Multispeciality Hospital and Sukhda MedPark, Hisar. Book your consultation in advance or call our 24/7 helpline.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="contact.html"><i data-lucide="calendar-check"></i> Book OPD Appointment</a>
+                        <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i> 01662-249473 (OPD Desk)</a>
+                        <a class="btn white" href="https://wa.me/919996544005" target="_blank" style="color:#128c7e"><i data-lucide="message-circle" style="color:#25D366"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="hero-stats-card">
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-num">19+</span>
+                        <span class="hero-stat-label">Clinical Specialities</span>
+                    </div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-num">21+</span>
+                        <span class="hero-stat-label">Senior Consultants</span>
+                    </div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-num">Mon – Sun</span>
+                        <span class="hero-stat-label">Morning &amp; Evening Clinics</span>
+                    </div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-num">24 / 7</span>
+                        <span class="hero-stat-label">Emergency &amp; Critical Care</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTROLS & FILTER SECTION -->
+    <section class="sec-controls">
+        <div class="wrap controls-wrap">
+            <div class="controls-top-row">
+                <div class="search-box-wrap">
+                    <i data-lucide="search"></i>
+                    <input type="text" class="search-input" id="opdSearchInput" placeholder="Search doctor, speciality, or day...">
+                </div>
+                <div class="results-meta">
+                    <span>Showing</span>
+                    <span class="results-badge" id="resultsCount">21 Doctors</span>
+                    <span>across Hisar campuses</span>
+                </div>
+            </div>
+
+            <!-- SPECIALITY TABS -->
+            <div class="category-tabs" id="categoryTabs">
+                <button type="button" class="tab-btn active" data-filter="all"><i data-lucide="layout-grid" style="width:14px;height:14px"></i> All Specialities (21)</button>
+                <button type="button" class="tab-btn" data-filter="medicine">Medicine &amp; Critical Care</button>
+                <button type="button" class="tab-btn" data-filter="oncology">Oncology (Cancer)</button>
+                <button type="button" class="tab-btn" data-filter="cardiology">Cardiology</button>
+                <button type="button" class="tab-btn" data-filter="ortho">Ortho &amp; Joints</button>
+                <button type="button" class="tab-btn" data-filter="neuro">Neuro Surgery</button>
+                <button type="button" class="tab-btn" data-filter="surgery">Surgery &amp; Laparoscopy</button>
+                <button type="button" class="tab-btn" data-filter="gynae">Gynaecology &amp; IVF</button>
+                <button type="button" class="tab-btn" data-filter="others">Diagnostics &amp; Others</button>
+            </div>
+
+            <!-- DAY QUICK FILTER -->
+            <div class="day-filters" id="dayFilters">
+                <span class="day-label"><i data-lucide="calendar" style="width:13px;height:13px"></i> Filter Day:</span>
+                <button type="button" class="day-btn active" data-day="all">All Days</button>
+                <button type="button" class="day-btn" data-day="Monday">Monday</button>
+                <button type="button" class="day-btn" data-day="Tuesday">Tuesday</button>
+                <button type="button" class="day-btn" data-day="Wednesday">Wednesday</button>
+                <button type="button" class="day-btn" data-day="Thursday">Thursday</button>
+                <button type="button" class="day-btn" data-day="Friday">Friday</button>
+                <button type="button" class="day-btn" data-day="Saturday">Saturday</button>
+                <button type="button" class="day-btn" data-day="Sunday">Sunday</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN OPD SCHEDULE TABLE -->
+    <section class="sec-schedule">
+        <div class="wrap">
+            <div class="opd-table-card">
+                <table class="opd-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">#</th>
+                            <th style="width: 280px;">Doctor &amp; Speciality</th>
+                            <th style="width: 220px;">Department</th>
+                            <th style="width: 220px;">Clinic Days</th>
+                            <th style="width: 260px;">OPD Timings</th>
+                            <th style="width: 140px;">Status</th>
+                            <th style="width: 150px; text-align: right;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="opdTableBody">
+                        <tr class="opd-row" data-category="medicine" data-days="Monday,Tuesday,Wednesday,Friday,Saturday" data-search="dr. amit mehta medicine & critical care m.d. (medicine), f.i.c.m., senior consultant & director mon, tue, wed, fri, sat monday tuesday wednesday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">1</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-amit-mehta.html" class="opd-doc-name">Dr. Amit Mehta <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D. (Medicine), F.I.C.M., Senior Consultant & Director</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Medicine & Critical Care</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Mon, Tue, Wed, Fri, Sat</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:00 AM – 03:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 06:30 PM – 07:30 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="medicine" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. hemant dahiya internal medicine m.d. (internal medicine), dnb consultant monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">2</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="doctor.html" class="opd-doc-name">Dr. Hemant Dahiya <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D. (Internal Medicine), DNB Consultant</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Internal Medicine</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 04:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 07:00 PM – 08:30 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="oncology" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. trivikrama rao medical oncology (cancer care) dm (medical oncology), senior medical oncologist monday to saturday monday tuesday wednesday thursday friday saturday sukhda medpark (cancer hospital)">
+                            <td style="color:var(--muted);font-weight:700;">3</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-trivikrama-rao.html" class="opd-doc-name">Dr. Trivikrama Rao <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">DM (Medical Oncology), Senior Medical Oncologist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Medical Oncology (Cancer Care)</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda MedPark (Cancer Hospital)</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 07:30 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> Full Day Clinic</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="oncology" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. amit kumar garg surgical oncology m.s. (surgery), m.ch. (surgical oncology), senior cancer surgeon monday to saturday monday tuesday wednesday thursday friday saturday sukhda medpark (cancer hospital)">
+                            <td style="color:var(--muted);font-weight:700;">4</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-amit-kumar-garg.html" class="opd-doc-name">Dr. Amit Kumar Garg <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.S. (Surgery), M.Ch. (Surgical Oncology), Senior Cancer Surgeon</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Surgical Oncology</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda MedPark (Cancer Hospital)</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 07:30 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> Full Day Clinic</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="cardiology" data-days="Monday,Tuesday,Wednesday,Friday,Saturday" data-search="dr. ankur kamra interventional cardiology d.m. (cardiology), m.d. (medicine), senior interventional cardiologist mon, wed, fri (10 am - 6 pm) | tue, sat (3 pm - 6 pm) monday tuesday wednesday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">5</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-ankur-kamra.html" class="opd-doc-name">Dr. Ankur Kamra <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">D.M. (Cardiology), M.D. (Medicine), Senior Interventional Cardiologist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Interventional Cardiology</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Mon, Wed, Fri (10 AM - 6 PM) | Tue, Sat (3 PM - 6 PM)</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> Mon, Wed, Fri: 10:00 AM – 06:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> Tue, Sat: 03:00 PM – 06:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="neuro" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. anil khyalia neuro surgery & spine m.ch. (neuro surgery), senior brain & spine surgeon monday to saturday monday tuesday wednesday thursday friday saturday sukhda medpark (super speciality)">
+                            <td style="color:var(--muted);font-weight:700;">6</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="neurosurgery.html" class="opd-doc-name">Dr. Anil Khyalia <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.Ch. (Neuro Surgery), Senior Brain & Spine Surgeon</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Neuro Surgery & Spine</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda MedPark (Super Speciality)</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 03:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 06:00 PM – 07:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="medicine" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. arun dua nephrology & dialysis m.d., d.m. (nephrology), senior consultant nephrologist & kidney specialist monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">7</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-arun-dua.html" class="opd-doc-name">Dr. Arun Dua <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D., D.M. (Nephrology), Senior Consultant Nephrologist & Kidney Specialist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Nephrology & Dialysis</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 03:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 05:00 PM – 07:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="medicine" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. bharath gastroenterology & hepatology m.d., d.m. (gastroenterology), consultant gastroenterologist & hepatologist monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">8</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-bharath.html" class="opd-doc-name">Dr. Bharath <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D., D.M. (Gastroenterology), Consultant Gastroenterologist & Hepatologist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Gastroenterology & Hepatology</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:00 AM – 03:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 05:00 PM – 06:30 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="ortho" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. pankaj sharma orthopaedics & joint replacement m.s. (ortho), fellowship in joint replacement, senior orthopaedic surgeon mon-wed, fri-sat (10:30 am - 3 pm & 5 pm - 7 pm) | thu (5 pm - 7 pm) monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">9</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-pankaj-sharma.html" class="opd-doc-name">Dr. Pankaj Sharma <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.S. (Ortho), Fellowship in Joint Replacement, Senior Orthopaedic Surgeon</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Orthopaedics & Joint Replacement</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Mon-Wed, Fri-Sat (10:30 AM - 3 PM & 5 PM - 7 PM) | Thu (5 PM - 7 PM)</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 03:00 PM (Thu Closed)</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 05:00 PM – 07:00 PM (All Days)</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="surgery" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. deepam s das laparoscopic & bariatric surgery m.s. (gen. surgery), fiages, advanced laparoscopic & bariatric surgeon monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">10</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-deepam-das.html" class="opd-doc-name">Dr. Deepam S Das <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.S. (Gen. Surgery), FIAGES, Advanced Laparoscopic & Bariatric Surgeon</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Laparoscopic & Bariatric Surgery</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 07:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> Full Day Clinic</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="others" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. shubham mehta psychiatry & behavioural health m.d. (psychiatry), consultant neuropsychiatrist & de-addiction specialist monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">11</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-shubham-mehta.html" class="opd-doc-name">Dr. Shubham Mehta <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D. (Psychiatry), Consultant Neuropsychiatrist & De-Addiction Specialist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Psychiatry & Behavioural Health</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> Afternoon Clinic</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 03:00 PM – 04:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="others" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. devi lal saharan anaesthesiology & pain management m.d. (anaesthesia), senior consultant anaesthesiology & pain specialist monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">12</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-devilal.html" class="opd-doc-name">Dr. Devi Lal Saharan <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D. (Anaesthesia), Senior Consultant Anaesthesiology & Pain Specialist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Anaesthesiology & Pain Management</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 09:00 AM – 07:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> Full Day Clinic</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="others" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. parveen anaesthesia & critical care d.n.b. (anaesthesiology), mbbs, consultant anaesthesiologist & critical care monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">13</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-parveen.html" class="opd-doc-name">Dr. Parveen <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">D.N.B. (Anaesthesiology), MBBS, Consultant Anaesthesiologist & Critical Care</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Anaesthesia & Critical Care</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 09:00 AM – 05:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> On Duty / ICU</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="surgery" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. deepti singh ent (ear, nose & throat) m.s. (ent), consultant ear, nose & throat specialist monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">14</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="ent.html" class="opd-doc-name">Dr. Deepti Singh <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.S. (ENT), Consultant Ear, Nose & Throat Specialist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>ENT (Ear, Nose & Throat)</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 11:00 AM – 03:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 06:00 PM – 07:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="gynae" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. nidhi mehta obstetrics & gynaecology mbbs, dgo, dnb (obs & gynae), senior consultant gynaecologist & obstetrician monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">15</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-nidhi-mehta.html" class="opd-doc-name">Dr. Nidhi Mehta <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">MBBS, DGO, DNB (Obs & Gynae), Senior Consultant Gynaecologist & Obstetrician</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Obstetrics & Gynaecology</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 02:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 05:00 PM – 07:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="gynae" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. manisha mehta gynaecology, ivf & infertility m.d. (obs & gynae), senior gynaecologist & infertility specialist, director monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">16</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-manisha-mehta.html" class="opd-doc-name">Dr. Manisha Mehta <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D. (Obs & Gynae), Senior Gynaecologist & Infertility Specialist, Director</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Gynaecology, IVF & Infertility</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 02:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 05:00 PM – 07:00 PM</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="others" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday" data-search="dr. anil bansal radio-diagnosis & imaging (ct scan & usg) m.d. (radiology), senior radiologist & imaging specialist mon to sat (10:30 am - 3 pm & 5 pm - 7 pm) | sun (11 am - 1 pm) monday tuesday wednesday thursday friday saturday sunday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">17</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-anil-bansal.html" class="opd-doc-name">Dr. Anil Bansal <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D. (Radiology), Senior Radiologist & Imaging Specialist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Radio-Diagnosis & Imaging (CT Scan & USG)</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Mon to Sat (10:30 AM - 3 PM & 5 PM - 7 PM) | Sun (11 AM - 1 PM)</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> Mon - Sat: 10:30 AM – 03:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 05:00 PM – 07:00 PM (Sun: 11 AM - 1 PM)</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="others" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. sanjeet sahu physiotherapy & rehabilitation mpt (orthopaedics), senior physiotherapist & rehab specialist monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">18</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-sanjeet-sahu.html" class="opd-doc-name">Dr. Sanjeet Sahu <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">MPT (Orthopaedics), Senior Physiotherapist & Rehab Specialist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Physiotherapy & Rehabilitation</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 10:30 AM – 07:30 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> Full Day Clinic</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="others" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" data-search="dr. megha gupta dermatology & cosmetology m.d. (dermatology, venereology & leprosy), cosmetologist monday to saturday monday tuesday wednesday thursday friday saturday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">19</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dermatology.html" class="opd-doc-name">Dr. Megha Gupta <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D. (Dermatology, Venereology & Leprosy), Cosmetologist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Dermatology & Cosmetology</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Monday to Saturday</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 01:00 PM – 02:00 PM</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> Afternoon Clinic</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Available</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="others" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday" data-search="dr. joginder silayach paediatrics & neonatology m.d. (paediatrics), consultant paediatrician & child specialist available on call / 24/7 nicu emergency monday tuesday wednesday thursday friday saturday sunday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">20</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="dr-joginder-silayach.html" class="opd-doc-name">Dr. Joginder Silayach <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D. (Paediatrics), Consultant Paediatrician & Child Specialist</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Paediatrics & Neonatology</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Available On Call / 24/7 NICU Emergency</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> On Call / By Appointment</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> Emergency Covered</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge oncall"><i data-lucide="phone-incoming" style="width:11px;height:11px"></i> On Call</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="opd-row" data-category="others" data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday" data-search="dr. nitika grover pathology & clinical biochemistry m.d. (pathology), consultant pathologist & lab director round the clock (24/7 nabl accredited lab) monday tuesday wednesday thursday friday saturday sunday sukhda multispeciality hospital">
+                            <td style="color:var(--muted);font-weight:700;">21</td>
+                            <td>
+                                <div class="doc-cell">
+                                    <a href="doctor.html" class="opd-doc-name">Dr. Nitika Grover <i data-lucide="external-link" style="width:13px;height:13px;opacity:0.6"></i></a>
+                                    <span class="opd-doc-qual">M.D. (Pathology), Consultant Pathologist & Lab Director</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="dept-cell">
+                                    <span>Pathology & Clinical Biochemistry</span>
+                                    <span class="hospital-tag"><i data-lucide="building" style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="days-badge">Round the Clock (24/7 NABL Accredited Lab)</span>
+                            </td>
+                            <td>
+                                <div class="time-slots">
+                                    <span class="time-pill morning"><i data-lucide="sun" style="width:12px;height:12px"></i> 08:00 AM – 08:00 PM Routine</span>
+                                    <span class="time-pill evening"><i data-lucide="moon" style="width:12px;height:12px"></i> 24/7 Emergency Lab</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status-badge oncall"><i data-lucide="phone-incoming" style="width:11px;height:11px"></i> On Call</span>
+                            </td>
+                            <td style="text-align: right;">
+                                <div class="action-btns" style="justify-content: flex-end;">
+                                    <a href="contact.html" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- NO RESULTS STATE -->
+            <div class="no-results-box" id="noResultsBox">
+                <i data-lucide="search-x"></i>
+                <h3 style="margin: 0 0 8px; color: var(--blue);">No doctors match your filter</h3>
+                <p style="margin: 0 0 18px; color: var(--muted); font-size: 14.5px;">Try clearing your keyword or switching to 'All Specialities' / 'All Days' to see full availability.</p>
+                <button type="button" class="btn outline" id="resetFiltersBtn"><i data-lucide="rotate-ccw"></i> Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PATIENT GUIDELINES SECTION -->
+    <section class="sec-guidelines">
+        <div class="wrap">
+            <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+                <span class="hero-kicker" style="background:#eaf5ec;color:var(--green);border-color:#bbf7d0;"><i data-lucide="info"></i> Patient Information</span>
+                <h2 style="font-size: 32px; font-weight: 800; color: var(--blue); margin: 6px 0 10px;">Guidelines for OPD Patients</h2>
+                <p style="font-size: 15px; color: var(--muted); margin: 0;">Everything you need to know before visiting our OPD consultation clinics.</p>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon-box"><i data-lucide="clipboard-check"></i></div>
+                    <h3>Registration &amp; Queue</h3>
+                    <p>OPD registration opens daily from 08:30 AM at the central reception desk. Appointments booked online receive priority slot tokens.</p>
+                    <ul>
+                        <li>Token numbers are called in sequential order</li>
+                        <li>Follow-up visits valid within 7 days</li>
+                        <li>Emergency patients fast-tracked to Casualty</li>
+                    </ul>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon-box"><i data-lucide="folder-open"></i></div>
+                    <h3>What to Bring Along</h3>
+                    <p>Carrying your complete medical history allows our specialists to provide accurate evaluation and avoid repeated diagnostics.</p>
+                    <ul>
+                        <li>Government Photo ID Proof (Aadhaar / Voter ID)</li>
+                        <li>Past prescriptions, discharge summaries &amp; X-rays/CT scans</li>
+                        <li>Ayushman Card / Mediclaim TPA Card &amp; Policy Details</li>
+                    </ul>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon-box"><i data-lucide="phone-forwarded"></i></div>
+                    <h3>24/7 Emergency &amp; Admission</h3>
+                    <p>Sukhda Healthcare provides round-the-clock emergency medical services, trauma surgery, CCU/ICU, and emergency dialysis.</p>
+                    <ul>
+                        <li>24/7 ER Helpline: <b>01662-249473 / 248473 / 99966-48483</b></li>
+                        <li>WhatsApp Coordinator: <b>+91 99965-44005</b></li>
+                        <li>Dedicated Cashless TPA counter open 24/7</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPD FAQS SECTION -->
+    <section class="sec-faqs">
+        <div class="wrap faq-wrap">
+            <div style="text-align: center; margin-bottom: 36px;">
+                <span class="hero-kicker" style="background:#e8f0fe;color:var(--blue);border-color:#bfdbfe;"><i data-lucide="help-circle"></i> Got Questions?</span>
+                <h2 style="font-size: 32px; font-weight: 800; color: var(--blue); margin: 6px 0 10px;">Frequently Asked Questions</h2>
+                <p style="font-size: 15px; color: var(--muted); margin: 0;">Quick answers about booking, OPD slots, consultation timings, and emergency access.</p>
+            </div>
+
+            <div class="faq-item active">
+                <button type="button" class="faq-btn">
+                    <span>How can I book an OPD appointment with a senior consultant?</span>
+                    <i data-lucide="chevron-down"></i>
+                </button>
+                <div class="faq-body">
+                    You can book online by clicking the "Book Appointment" button on this page, calling our dedicated OPD helpline at <b>01662-249473 / 248473 / 99966-48483</b>, or sending a message on WhatsApp at <b>+91 99965-44005</b>. Walk-in registrations are also available at the hospital reception.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-btn">
+                    <span>Are morning and evening clinics available for all doctors?</span>
+                    <i data-lucide="chevron-down"></i>
+                </button>
+                <div class="faq-body">
+                    Most senior consultants hold morning clinics from 10:30 AM to 03:00 PM and evening clinics from 05:00 PM to 07:30 PM. Specific timings and days for each doctor are listed in the schedule table above.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-btn">
+                    <span>Is cashless health insurance (TPA) applicable for OPD consultations?</span>
+                    <i data-lucide="chevron-down"></i>
+                </button>
+                <div class="faq-body">
+                    Routine OPD consultations are covered under select comprehensive health policies (OPD cover / Corporate tie-ups). For daycare procedures, chemotherapy, dialysis, and emergency admissions, 24/7 cashless hospitalization is available across 69+ empanelled TPAs and insurance companies.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-btn">
+                    <span>What happens if I need medical attention on Sunday or outside OPD hours?</span>
+                    <i data-lucide="chevron-down"></i>
+                </button>
+                <div class="faq-body">
+                    Sukhda Hospital operates a full-service 24/7 Emergency &amp; Trauma Centre with resident medical officers, emergency physicians, ICU intensivist coverage, emergency lab, CT scan, and on-call senior specialists 24 hours a day, 365 days a year.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-btn">
+                    <span>How do I reschedule or cancel my OPD appointment?</span>
+                    <i data-lucide="chevron-down"></i>
+                </button>
+                <div class="faq-body">
+                    Please call our reception desk at <b>01662-249473 / 248473 / 99966-48483</b> or message us on WhatsApp at <b>+91 99965-44005</b> at least 2 hours prior to your slot, and our team will gladly reschedule your visit.
+                </div>
+            </div>
+        </div>
+    </section>
+
+                    <!-- INCLUDE: footer -->
+    <div id="site-footer" data-include="footer">
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="wrap footer-grid">
+        <div>
+            <div class="footer-brand-wrap">
+                <img class="footer-logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
+            </div>
+            <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
+            <p class="footer-desc">Providing quality, compassionate, and comprehensive medical, surgical, cancer, and emergency healthcare services across Hisar since 2002.</p>
+            <div class="footer-nabh-badge">
+                <img src="assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
+                <div>
+                    <b>NABH Accredited</b>
+                    <small>Highest Healthcare Quality Standards</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-nav">
+                <li><a href="index.html"><span>›</span> Home</a></li>
+                <li><a href="about.html"><span>›</span> About Sukhda</a></li>
+                <li><a href="doctor.html"><span>›</span> Find Doctors</a></li>
+                <li><a href="empanelled-corporate.html"><span>›</span> Cashless / Empanelled</a></li>
+                <li><a href="patient-stories.html"><span>›</span> Patient Stories</a></li>
+                <li><a href="careers.html"><span>›</span> Careers</a></li>
+                <li><a href="csr.html"><span>›</span> CSR &amp; Community</a></li>
+                <li><a href="media-centre.html"><span>›</span> Media Centre</a></li>
+                <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Our Hospitals</h4>
+            <div class="footer-hospital-card">
+                <div class="f-hosp-header">
+                    <i data-lucide="building-2"></i>
+                    <b>Sukhda Multispeciality Hospital</b>
+                </div>
+                <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
+                <a href="tel:01662249473" class="f-hosp-phone"><i data-lucide="phone"></i> 01662-249473 / 248473 / 99966-48483</a>
+            </div>
+            <div class="footer-hospital-card">
+                <div class="f-hosp-header">
+                    <i data-lucide="activity"></i>
+                    <b>Sukhda MedPark</b>
+                </div>
+                <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
+                <p>NH 1P-4P, Sector-5, Hisar</p>
+                <a href="https://wa.me/919996544005" target="_blank" class="f-hosp-phone"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> <span style="color:#25D366;font-weight:600">WhatsApp: +91 99965-44005</span></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>24/7 Emergency &amp; OPD</h4>
+            <div class="footer-emergency-box">
+                <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
+                <div>
+                    <small>24/7 Emergency Helpline</small>
+                    <a href="tel:01662249473" class="f-emg-num">01662-249473, 248473</a>
+                    <a href="tel:9996648483" class="f-emg-num-sub">+91 99966-48483</a>
+                </div>
+            </div>
+            <div class="footer-contact-list">
+                <a href="mailto:sukhdahospital@gmail.com" class="f-cnt-item">
+                    <i data-lucide="mail"></i>
+                    <span>sukhdahospital@gmail.com</span>
+                </a>
+                <a href="https://wa.me/919996544005" target="_blank" class="f-cnt-item whatsapp">
+                    <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    <span>WhatsApp: +91 99965-44005</span>
+                </a>
+            </div>
+            <div class="footer-motto">
+                <i data-lucide="heart-handshake"></i>
+                <span>Care &amp; Cure for Whole Family</span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="wrap">
+            <span>© 2026 Sukhda Healthcare. All rights reserved.</span>
+            <div class="bottom-badges">
+                <span><i data-lucide="map-pin"></i> Hisar, Haryana</span>
+                <span><i data-lucide="shield-check"></i> NABH Accredited</span>
+                <span><i data-lucide="phone"></i> 24/7 ER: 01662-249473 / 99966-48483</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- STICKY BOTTOM FLOATING PILL CTA -->
+<div class="sticky-bottom-bar" aria-label="Quick Actions">
+    <a href="contact.html" class="sticky-bar-item">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+            <line x1="16" x2="16" y1="2" y2="6"></line>
+            <line x1="8" x2="8" y1="2" y2="6"></line>
+            <line x1="3" x2="21" y1="10" y2="10"></line>
+            <path d="m9 16 2 2 4-4"></path>
+        </svg>
+        <span>Book Now</span>
+    </a>
+    <div class="sticky-bar-divider"></div>
+    <a href="tel:01662249473" class="sticky-bar-item">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span>Call Now</span>
+    </a>
+    <div class="sticky-bar-divider"></div>
+    <a href="https://wa.me/919996544005" target="_blank" rel="noopener" class="sticky-bar-item whatsapp">
+        <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
+            <path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/>
+            <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+        <span>WhatsApp</span>
+    </a>
+</div>
+
+<!-- FLOATING LANGUAGE TOGGLE (English / हिन्दी) -->
+<div class="floating-lang-pill notranslate" aria-label="Select Language">
+    <span class="f-icon"><i data-lucide="languages" style="width:15px;height:15px"></i></span>
+    <button type="button" class="f-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
+    <span class="f-sep">|</span>
+    <button type="button" class="f-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+</div>
+
+<!-- Google Translate Script Container -->
+<div id="google_translate_element"></div>
+<script src="assets/js/translate.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+    <!-- /INCLUDE: footer -->
+    <!-- Page Specific Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+
+            const rows = document.querySelectorAll('.opd-row');
+            const searchInput = document.getElementById('opdSearchInput');
+            const resultsCount = document.getElementById('resultsCount');
+            const noResultsBox = document.getElementById('noResultsBox');
+            const tabBtns = document.querySelectorAll('.category-tabs .tab-btn');
+            const dayBtns = document.querySelectorAll('.day-filters .day-btn');
+            const resetBtn = document.getElementById('resetFiltersBtn');
+
+            let currentCategory = 'all';
+            let currentDay = 'all';
+            let currentQuery = '';
+
+            function filterRows() {
+                let count = 0;
+                const q = currentQuery.trim().toLowerCase();
+
+                rows.forEach(row => {
+                    const category = row.getAttribute('data-category');
+                    const days = row.getAttribute('data-days').split(',');
+                    const searchData = row.getAttribute('data-search');
+
+                    const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+                    const matchesDay = (currentDay === 'all' || days.includes(currentDay));
+                    const matchesQuery = (!q || searchData.includes(q));
+
+                    if (matchesCategory && matchesDay && matchesQuery) {
+                        row.style.display = '';
+                        count++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                if (resultsCount) {
+                    resultsCount.textContent = `${count} Doctors`;
+                }
+
+                if (noResultsBox) {
+                    noResultsBox.style.display = (count === 0) ? 'block' : 'none';
+                }
+            }
+
+            // Category Tab Click
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentCategory = btn.getAttribute('data-filter');
+                    filterRows();
+                });
+            });
+
+            // Day Filter Click
+            dayBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    dayBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentDay = btn.getAttribute('data-day');
+                    filterRows();
+                });
+            });
+
+            // Search Input
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    currentQuery = e.target.value;
+                    filterRows();
+                });
+            }
+
+            // Reset Button
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                    currentCategory = 'all';
+                    currentDay = 'all';
+                    currentQuery = '';
+                    if (searchInput) searchInput.value = '';
+
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    if (tabBtns[0]) tabBtns[0].classList.add('active');
+
+                    dayBtns.forEach(b => b.classList.remove('active'));
+                    if (dayBtns[0]) dayBtns[0].classList.add('active');
+
+                    filterRows();
+                });
+            }
+
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const btn = item.querySelector('.faq-btn');
+                btn.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
+                });
+            });
+
+            // Mobile menu drawer
+            const hamb = document.querySelector('.hamb');
+            const nav = document.querySelector('.nav');
+            const closeBtn = document.querySelector('.mobile-close-btn');
+            const overlay = document.querySelector('.nav-overlay');
+
+            if (hamb && nav) {
+                hamb.addEventListener('click', () => nav.classList.add('open'));
+            }
+            if (closeBtn && nav) {
+                closeBtn.addEventListener('click', () => nav.classList.remove('open'));
+            }
+            if (overlay && nav) {
+                overlay.addEventListener('click', () => nav.classList.remove('open'));
+            }
+        });
+    </script>
+
+    <script src="include/include.js"></script>
+</body>
+
+</html>

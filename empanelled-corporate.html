@@ -893,57 +893,42 @@
 
         .partners-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
         }
 
         .partner-card {
             background: #fff;
             border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            box-shadow: 0 4px 14px rgba(5, 33, 89, 0.04);
-        }
-
-        .partner-card:hover {
-            transform: translateY(-5px);
-            border-color: #9cbdda;
-            box-shadow: 0 12px 28px rgba(5, 33, 89, 0.12);
-        }
-
-        .partner-logo-box {
-            height: 80px;
-            background: #f8fafc;
-            border: 1px solid #eef3f8;
-            border-radius: 10px;
-            padding: 10px 16px;
+            border-radius: 12px;
+            padding: 14px 18px;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            min-height: 92px;
+            height: 92px;
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            box-shadow: 0 2px 8px rgba(5, 33, 89, 0.04);
+            cursor: pointer;
         }
 
-        .partner-logo-box img {
-            max-height: 58px;
+        .partner-card:hover {
+            transform: translateY(-3px);
+            border-color: #9cbdda;
+            box-shadow: 0 10px 24px rgba(5, 33, 89, 0.12);
+        }
+
+        .partner-card img {
+            max-height: 56px;
             max-width: 100%;
             width: auto;
             object-fit: contain;
-            transition: transform 0.3s ease;
+            transition: transform 0.22s ease;
         }
 
-        .partner-card:hover .partner-logo-box img {
-            transform: scale(1.05);
-        }
-
-        .partner-info {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
+        .partner-card:hover img {
+            transform: scale(1.06);
         }
 
         .partner-tag {
@@ -1262,7 +1247,7 @@
         /* RESPONSIVE */
         @media (max-width: 1100px) {
             .partners-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
             }
             .process-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1286,7 +1271,7 @@
                 gap: 36px;
             }
             .partners-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
             .info-two-col {
                 grid-template-columns: 1fr;
@@ -1305,7 +1290,16 @@
 
         @media (max-width: 580px) {
             .partners-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .partner-card {
+                height: 75px;
+                min-height: 75px;
+                padding: 10px 12px;
+            }
+            .partner-card img {
+                max-height: 44px;
             }
             .process-grid {
                 grid-template-columns: 1fr;
@@ -1317,148 +1311,507 @@
                 grid-template-columns: 1fr;
             }
         }
+    
+
+        /* FOOTER STYLES */
+        .footer {
+            background: linear-gradient(180deg, #052159 0%, #011338 100%);
+            color: #cbd5e1;
+            padding: 56px 0 0;
+            border-top: 4px solid var(--green);
+            position: relative;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.9fr 1.35fr 1.15fr;
+            gap: 36px;
+            padding-bottom: 44px;
+        }
+
+        .footer-brand-wrap {
+            background: #ffffff;
+            padding: 10px 18px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+            margin-bottom: 16px;
+            max-width: 230px;
+        }
+
+        .footer-brand-wrap .footer-logo {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin: 0;
+        }
+
+        .footer-tagline {
+            font-size: 14px;
+            font-weight: 800;
+            color: #68d493;
+            letter-spacing: 0.3px;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+
+        .footer-desc {
+            font-size: 14.5px;
+            line-height: 1.65;
+            color: #94a3b8;
+            margin: 0 0 16px;
+        }
+
+        .footer-nabh-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 8px 14px;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+        }
+
+        .footer-nabh-badge .nabh-icon-img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            border-radius: 4px;
+            background: #fff;
+            padding: 2px;
+            flex-shrink: 0;
+        }
+
+        .footer-nabh-badge b {
+            display: block;
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .footer-nabh-badge small {
+            display: block;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .footer-col h4 {
+            font-size: 17px;
+            font-weight: 800;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin: 0 0 18px;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            bottom: 2px;
+            width: 3.5px;
+            background: var(--green);
+            border-radius: 2px;
+        }
+
+        .footer-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .footer-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14.5px;
+            color: #cbd5e1;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .footer-nav a span {
+            color: var(--green);
+            font-size: 15px;
+            font-weight: 800;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #ffffff;
+            transform: translateX(4px);
+        }
+
+        .footer-nav a:hover span {
+            color: #68d493;
+        }
+
+        .footer-hospital-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 12px;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .footer-hospital-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(104, 212, 147, 0.35);
+        }
+
+        .f-hosp-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+        }
+
+        .f-hosp-header i,
+        .f-hosp-header svg {
+            width: 16px;
+            height: 16px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .f-hosp-header b {
+            font-size: 14.5px;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .f-hosp-sub {
+            font-size: 13px;
+            color: #68d493;
+            font-weight: 600;
+            margin: 0 0 4px !important;
+        }
+
+        .footer-hospital-card p {
+            font-size: 13.5px;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin: 0 0 6px;
+        }
+
+        .f-hosp-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #e2e8f0;
+            transition: color 0.2s ease;
+        }
+
+        .f-hosp-phone i,
+        .f-hosp-phone svg {
+            width: 13px;
+            height: 13px;
+            color: var(--green);
+        }
+
+        .f-hosp-phone:hover {
+            color: #68d493;
+        }
+
+        .footer-emergency-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, rgba(42, 130, 56, 0.22) 0%, rgba(3, 32, 90, 0.45) 100%);
+            border: 1px solid rgba(104, 212, 147, 0.35);
+            padding: 12px 14px;
+            border-radius: 10px;
+            margin-bottom: 14px;
+        }
+
+        .f-emg-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: var(--green);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .f-emg-icon i,
+        .f-emg-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-emergency-box small {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #68d493;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .f-emg-num {
+            display: block;
+            font-size: 18px;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.2;
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num:hover {
+            color: #68d493;
+        }
+
+        .f-emg-num-sub {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #cbd5e1;
+            margin-top: 2px;
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num-sub:hover {
+            color: #68d493;
+        }
+
+        .footer-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            margin-bottom: 14px;
+        }
+
+        .f-cnt-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 14px;
+            color: #cbd5e1;
+            padding: 7px 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 7px;
+            transition: all 0.2s ease;
+            word-break: break-all;
+        }
+
+        .f-cnt-item i,
+        .f-cnt-item svg {
+            width: 15px;
+            height: 15px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .f-cnt-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border-color: rgba(104, 212, 147, 0.3);
+        }
+
+        .f-cnt-item.whatsapp:hover {
+            color: #25d366;
+            border-color: rgba(37, 211, 102, 0.4);
+        }
+
+        .f-cnt-item.whatsapp:hover i,
+        .f-cnt-item.whatsapp:hover svg {
+            color: #25d366;
+        }
+
+        .footer-motto {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 800;
+            color: #68d493;
+            padding-top: 4px;
+        }
+
+        .footer-motto i,
+        .footer-motto svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* FOOTER RESPONSIVE */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 32px !important;
+            }
+        }
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+        }
+
     </style>
+    <link rel="stylesheet" href="include/header-footer.css">
 </head>
 
 <body>
-            <!-- TOP BAR -->
-    <div class="top">
-        <div class="wrap">
-            <div class="links">
-                <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><i data-lucide="message-circle" style="color:#25D366"></i> WhatsApp Us (24/7)</a>
-                <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
-            </div>
-            <div class="links">
-                <a href="empanelled-corporate.html" style="color:#278132;font-weight:700">Cashless / TPA</a>
-                <a href="index.html#specialities">OPD Schedule</a>
-                <div class="top-lang-switch notranslate" aria-label="Language selection">
-                    <button type="button" class="lang-btn active" data-lang="en" onclick="switchLanguage('en')"><i data-lucide="globe" style="width:13px;height:13px"></i> English</button>
-                    <span class="lang-sep">|</span>
-                    <button type="button" class="lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
-                </div>
+                            <!-- INCLUDE: header -->
+    <div id="site-header" data-include="header">
+<!-- TOP EMERGENCY & UTILITY BAR -->
+<div class="top">
+    <div class="wrap">
+        <div class="links">
+            <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: 99965-44005</a>
+            <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 <span class="top-er-extra">/ 248473</span> / 99966-48483 (24/7 ER)</b></a>
+        </div>
+        <div class="links">
+            <a href="empanelled-corporate.html" class="on" style="color:#278132;font-weight:700">Cashless / TPA</a>
+            <a href="opd-schedule.html">OPD Schedule</a>
+            <div class="top-lang-switch notranslate" aria-label="Language selection">
+                <button type="button" class="lang-btn active" data-lang="en" onclick="switchLanguage('en')"><i data-lucide="globe" style="width:13px;height:13px"></i> English</button>
+                <span class="lang-sep">|</span>
+                <button type="button" class="lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="nav">
-        <div class="wrap">
-            <a href="index.html" aria-label="Sukhda Healthcare home">
-                <img class="logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
-            </a>
-            <nav class="menu">
-                <div class="mobile-menu-head">
-                    <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
-                    <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
+<!-- MAIN HEADER & NAVIGATION -->
+<header class="nav">
+    <div class="wrap">
+        <a href="index.html" aria-label="Sukhda Healthcare home">
+            <img class="logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
+        </a>
+        <nav class="menu">
+            <div class="mobile-menu-head">
+                <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
+                <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
+            </div>
+            <div class="mobile-lang-wrap notranslate">
+                <span class="mobile-lang-label"><i data-lucide="languages" style="width:14px;height:14px"></i> भाषा / Language</span>
+                <div class="mobile-lang-pills">
+                    <button type="button" class="mobile-lang-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
+                    <button type="button" class="mobile-lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
                 </div>
-                <div class="mobile-lang-wrap notranslate">
-                    <span class="mobile-lang-label"><i data-lucide="languages" style="width:14px;height:14px"></i> भाषा / Language</span>
-                    <div class="mobile-lang-pills">
-                        <button type="button" class="mobile-lang-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
-                        <button type="button" class="mobile-lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
-                    </div>
-                </div>
-                <div class="mobile-nav-links">
-                    <span class="nav-group">
-                        <a href="index.html#about">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                        <span class="nav-drop">
-                            <a href="index.html#about">About Sukhda</a>
-                            <a href="doctor.html">Medical Leadership</a>
-                            <a href="index.html#why">Vision &amp; Mission</a>
-                            <a href="index.html#hospitals">Our Hospitals</a>
-                            <a href="index.html#infrastructure">Infrastructure &amp; Facilities</a>
-                        </span>
+            </div>
+            <div class="mobile-nav-links">
+                <span class="nav-group">
+                    <a href="about.html">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="about.html">About Sukhda</a>
+                        <a href="doctor.html">Medical Leadership</a>
+                        <a href="about.html#why">Vision &amp; Mission</a>
+                        <a href="about.html#hospitals">Our Hospitals</a>
+                        <a href="about.html#infrastructure">Infrastructure &amp; Facilities</a>
                     </span>
-                    <span class="nav-group">
-                        <a href="index.html#hospitals">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                        <span class="nav-drop">
-                            <a href="index.html#hospitals">Sukhda Multispeciality Hospital</a>
-                            <a href="index.html#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
-                        </span>
+                </span>
+                <span class="nav-group">
+                    <a href="index.html#hospitals">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="index.html#hospitals">Sukhda Multispeciality Hospital</a>
+                        <a href="index.html#hospitals">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
                     </span>
-                    <span class="nav-group mega-group">
-                        <a href="index.html#specialities">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                        <div class="nav-drop services-mega">
-                            <div class="mega-body">
-                                <div class="mega-col">
-                                    <div class="mega-col-header">
-                                        <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
-                                        <div>
-                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
-                                            <div class="mega-col-sub">NABH Accredited Multi-Speciality &amp; DNB Centre</div>
-                                        </div>
-                                    </div>
-                                    <div class="mega-links-grid">
-                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                        <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
-                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedics &amp; 3D Knee Resurfacing</span></a>
-                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Internal Medicine (DNB Centre)</span></a>
-                                        <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>General &amp; Laparoscopic Surgery</span></a>
-                                        <a href="bariatric-surgery.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Bariatric</span></a>
-                                        <a href="urology.html"><i data-lucide="activity"></i><span>Urology &amp; Endourology</span></a>
-                                        <a href="ent.html"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
-                                        <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
-                                        <a href="radiology.html"><i data-lucide="scan"></i><span>CT Scan &amp; Radiology Imaging</span></a>
-                                        <a href="emergency-trauma.html"><i data-lucide="zap"></i><span>24/7 Emergency &amp; Trauma Care</span></a>
-                                        <a href="critical-care.html"><i data-lucide="activity"></i><span>Critical Care &amp; ICU</span></a>
-                                        <a href="psychiatry.html"><i data-lucide="heart"></i><span>Psychiatry &amp; Rehabilitation</span></a>
-                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesiology &amp; Pain Management</span></a>
-                                        <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehabilitation</span></a>
+                </span>
+                <span class="nav-group mega-group">
+                    <a href="index.html#specialities" class="on">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <div class="nav-drop services-mega">
+                        <div class="mega-body">
+                            <div class="mega-col">
+                                <div class="mega-col-header">
+                                    <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
+                                    <div>
+                                        <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                        <div class="mega-col-sub">NABH Accredited Multi-Speciality &amp; DNB Centre</div>
                                     </div>
                                 </div>
-                                <div class="mega-col medpark-col">
-                                    <div class="mega-col-header">
-                                        <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
-                                        <div>
-                                            <div class="mega-col-title">Sukhda MedPark</div>
-                                            <div class="mega-col-sub">Cancer &amp; Super Speciality Hospital</div>
-                                        </div>
-                                    </div>
-                                    <div class="mega-links-grid single-col">
-                                        <a href="medical-oncology.html" class="featured-service">
-                                            <i data-lucide="ribbon"></i>
-                                            <div>
-                                                <b>Medical Oncology (Chemo &amp; Daycare)</b>
-                                                <small>Chemotherapy Suite, Biosafety &amp; Immunotherapy</small>
-                                            </div>
-                                        </a>
-                                        <a href="surgical-oncology.html"><i data-lucide="shield-alert"></i><span>Surgical Oncology (Modular OTs)</span></a>
-                                        <a href="radiation-oncology.html"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
-                                        <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neuro Surgery &amp; Spine</span></a>
-                                        <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
-                                        <a href="urology.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
-                                        <a href="critical-care.html"><i data-lucide="stethoscope"></i><span>Critical Care &amp; Tumour Board</span></a>
-                                        <a href="anaesthesiology.html"><i data-lucide="heart"></i><span>Pain &amp; Palliative Care Unit</span></a>
-                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Digital Mammography &amp; Diagnostics</span></a>
-                                    </div>
+                                <div class="mega-links-grid">
+                                    <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
+                                    <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
+                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedics &amp; 3D Knee Resurfacing</span></a>
+                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Internal Medicine (DNB Centre)</span></a>
+                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>General &amp; Laparoscopic Surgery</span></a>
+                                    <a href="bariatric-surgery.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Bariatric</span></a>
+                                    <a href="urology.html"><i data-lucide="activity"></i><span>Urology &amp; Endourology</span></a>
+                                    <a href="ent.html"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
+                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
+                                    <a href="radiology.html"><i data-lucide="scan"></i><span>CT Scan &amp; Radiology Imaging</span></a>
+                                    <a href="emergency-trauma.html"><i data-lucide="zap"></i><span>24/7 Emergency &amp; Trauma Care</span></a>
+                                    <a href="critical-care.html"><i data-lucide="activity"></i><span>Critical Care &amp; ICU</span></a>
+                                    <a href="psychiatry.html"><i data-lucide="heart"></i><span>Psychiatry &amp; Rehabilitation</span></a>
+                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesiology &amp; Pain Management</span></a>
+                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehabilitation</span></a>
                                 </div>
                             </div>
-                            <div class="mega-footer">
-                                <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services &rarr;</a>
-                                <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24/7 ER: <b>01662-249473</b> | MedPark: <b>+91-99965-44005</b></div>
+                            <div class="mega-col medpark-col">
+                                <div class="mega-col-header">
+                                    <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                    <div>
+                                        <div class="mega-col-title">Sukhda MedPark</div>
+                                        <div class="mega-col-sub">Cancer &amp; Super Speciality Hospital</div>
+                                    </div>
+                                </div>
+                                <div class="mega-links-grid single-col">
+                                    <a href="medical-oncology.html" class="featured-service">
+                                        <i data-lucide="ribbon"></i>
+                                        <div>
+                                            <b>Medical Oncology (Chemo &amp; Daycare)</b>
+                                            <small>Chemotherapy Suite, Biosafety &amp; Immunotherapy</small>
+                                        </div>
+                                    </a>
+                                    <a href="surgical-oncology.html"><i data-lucide="shield-alert"></i><span>Surgical Oncology (Modular OTs)</span></a>
+                                    <a href="radiation-oncology.html"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
+                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neuro Surgery &amp; Spine</span></a>
+                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
+                                    <a href="urology.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
+                                    <a href="critical-care.html"><i data-lucide="stethoscope"></i><span>Critical Care &amp; Tumour Board</span></a>
+                                    <a href="anaesthesiology.html"><i data-lucide="heart"></i><span>Pain &amp; Palliative Care Unit</span></a>
+                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Digital Mammography &amp; Diagnostics</span></a>
+                                </div>
                             </div>
                         </div>
+                        <div class="mega-footer">
+                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services &rarr;</a>
+                            <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24/7 ER: <b>01662-249473 / 248473 / 99966-48483</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
+                        </div>
+                    </div>
+                </span>
+                <a href="doctor.html">Doctors</a>
+                <span class="nav-group">
+                    <a href="javascript:void(0)">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="media-centre.html#blogs">Blogs</a>
+                        <a href="opd-schedule.html">OPD Schedule</a>
+                        <a href="csr.html">CSR</a>
+                        <a href="patient-stories.html">Patient Stories</a>
+                        <a href="careers.html">Careers</a>
                     </span>
-                    <a href="doctor.html">Doctors</a>
-                    <span class="nav-group">
-                        <a href="javascript:void(0)">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                        <span class="nav-drop">
-                            <a href="media-centre.html#blogs">Blogs</a>
-                            <a href="csr.html">CSR</a>
-                        </span>
-                    </span>
-                </div>
-                <div class="mobile-menu-footer">
-                    <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
-                    <a class="btn" href="tel:01662249473" style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473</a>
-                </div>
-            </nav>
-            <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
-            <button class="hamb" aria-label="Open menu">☰</button>
-        </div>
-        <div class="nav-overlay"></div>
-    </header>
+                </span>
+            </div>
+            <div class="mobile-menu-footer">
+                <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+                <a class="btn" href="tel:01662249473" style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473 / 99966-48483</a>
+            </div>
+        </nav>
+        <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+        <button class="hamb" aria-label="Open menu">☰</button>
+    </div>
+    <div class="nav-overlay"></div>
+</header>
+    </div>
+    <!-- /INCLUDE: header -->
 
     <!-- HERO SECTION -->
     <section class="empanelled-hero">
@@ -1542,695 +1895,212 @@
 
             <!-- Partners Grid -->
             <div class="partners-grid" id="partnersGrid">
-                <div class="partner-card" data-category="gov" data-name="government of haryana">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov1.jpg" alt="Government of Haryana" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">Government of Haryana</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Haryana Govt Employees & Pensioners</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="echs (ex-servicemen contributory health scheme)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov2.jpg" alt="ECHS (Ex-Servicemen Contributory Health Scheme)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">ECHS (Ex-Servicemen Contributory Health Scheme)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Defence Veterans & Dependents</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="northern railway">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov3.jpg" alt="Northern Railway" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">Northern Railway</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Indian Railways Empanelled</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="bsnl (bharat sanchar nigam limited)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov4.jpg" alt="BSNL (Bharat Sanchar Nigam Limited)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">BSNL (Bharat Sanchar Nigam Limited)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Telecom PSU</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="food corporation of india (fci)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov5.jpg" alt="Food Corporation of India (FCI)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">Food Corporation of India (FCI)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Central Govt PSU</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="ntpc limited">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov6.jpg" alt="NTPC Limited" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">NTPC Limited</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> National Thermal Power Corp</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="bhel (bharat heavy electricals ltd)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov7.jpg" alt="BHEL (Bharat Heavy Electricals Ltd)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">BHEL (Bharat Heavy Electricals Ltd)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Maharatna PSU</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="central government health scheme (cghs)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov8.jpg" alt="Central Government Health Scheme (CGHS)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">Central Government Health Scheme (CGHS)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Pensioners & Beneficiaries</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="dhbvn / uhbvn (haryana power utilities)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov9.jpg" alt="DHBVN / UHBVN (Haryana Power Utilities)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">DHBVN / UHBVN (Haryana Power Utilities)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Haryana Vidyut Prasaran</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="ccs haryana agricultural university (hau)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov10.jpg" alt="CCS Haryana Agricultural University (HAU)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">CCS Haryana Agricultural University (HAU)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> University Employees</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="guru jambheshwar university of science & tech">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov11.jpg" alt="Guru Jambheshwar University of Science & Tech" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">Guru Jambheshwar University of Science & Tech</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> GJU Hisar Employees</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="lala lajpat rai university of veterinary sciences">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov12.jpg" alt="Lala Lajpat Rai University of Veterinary Sciences" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">Lala Lajpat Rai University of Veterinary Sciences</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> LUVAS Hisar</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="state bank of india (sbi)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov13.jpg" alt="State Bank of India (SBI)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">State Bank of India (SBI)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Bank Officers & Pensioners</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="punjab national bank (pnb)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov14.jpg" alt="Punjab National Bank (PNB)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">Punjab National Bank (PNB)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Banking PSU Medical Aid</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="gov" data-name="ayushman bharat (pm-jay)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/gov15.jpg" alt="Ayushman Bharat (PM-JAY)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-gov">Government & PSU</span>
-                        <h4 class="partner-name">Ayushman Bharat (PM-JAY)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> National Health Authority</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="medi assist tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa1.jpg" alt="Medi Assist TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Medi Assist TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Nationwide TPA</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="vidal health tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa2.jpg" alt="Vidal Health TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Vidal Health TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="heritage health insurance tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa3.jpg" alt="Heritage Health Insurance TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Heritage Health Insurance TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="paramount health services tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa4.jpg" alt="Paramount Health Services TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Paramount Health Services TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="raksha health insurance tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa5.jpg" alt="Raksha Health Insurance TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Raksha Health Insurance TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="family health plan insurance tpa (fhpl)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa6.jpg" alt="Family Health Plan Insurance TPA (FHPL)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Family Health Plan Insurance TPA (FHPL)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="mdindia health insurance tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa7.jpg" alt="MDIndia Health Insurance TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">MDIndia Health Insurance TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="health insurance tpa of india (hitpa)">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa8.jpg" alt="Health Insurance TPA of India (HITPA)" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Health Insurance TPA of India (HITPA)</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Public Sector TPA</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="park mediclaim tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa9.jpg" alt="Park Mediclaim TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Park Mediclaim TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="safeway insurance tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa10.jpg" alt="Safeway Insurance TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Safeway Insurance TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="vipul medcorp tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa11.jpg" alt="Vipul MedCorp TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Vipul MedCorp TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="genins india tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa12.jpg" alt="Genins India TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Genins India TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="alankit insurance tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa13.jpg" alt="Alankit Insurance TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Alankit Insurance TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="ericson insurance tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa14.jpg" alt="Ericson Insurance TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Ericson Insurance TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="good health tpa services">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa15.jpg" alt="Good Health TPA Services" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Good Health TPA Services</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="healthspire tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa16.jpg" alt="Healthspire TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Healthspire TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="grand insurance tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa17.jpg" alt="Grand Insurance TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Grand Insurance TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="focus health tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa18.jpg" alt="Focus Health TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Focus Health TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="east west assist tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa19.jpg" alt="East West Assist TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">East West Assist TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="dedicated healthcare services tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa20.jpg" alt="Dedicated Healthcare Services TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Dedicated Healthcare Services TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="rothshield healthcare tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa21.jpg" alt="Rothshield Healthcare TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Rothshield Healthcare TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="medsave health insurance tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa22.jpg" alt="Medsave Health Insurance TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Medsave Health Insurance TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="anyuta health network tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa23.jpg" alt="Anyuta Health Network TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Anyuta Health Network TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="united health care parekh tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa24.jpg" alt="United Health Care Parekh TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">United Health Care Parekh TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="spurthi meditech tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa25.jpg" alt="Spurthi Meditech TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Spurthi Meditech TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="religare health tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa26.jpg" alt="Religare Health TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Religare Health TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="universal mediclaim tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa27.jpg" alt="Universal Mediclaim TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Universal Mediclaim TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="galaxy health tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa28.jpg" alt="Galaxy Health TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Galaxy Health TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="medi claim direct tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa29.jpg" alt="Medi Claim Direct TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Medi Claim Direct TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="care & health tpa services">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa30.jpg" alt="Care & Health TPA Services" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Care & Health TPA Services</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="medicare tpa services">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa31.jpg" alt="Medicare TPA Services" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Medicare TPA Services</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="swift health tpa">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/tpa32.jpg" alt="Swift Health TPA" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-tpa">TPA Network</span>
-                        <h4 class="partner-name">Swift Health TPA</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Third Party Administrator</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="star health and allied insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins1.jpg" alt="Star Health and Allied Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Star Health and Allied Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Health Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="care health insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/care.jpg" alt="Care Health Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Care Health Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Standalone Health Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="niva bupa health insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/niva.jpg" alt="Niva Bupa Health Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Niva Bupa Health Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Health Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="hdfc ergo general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins2.jpg" alt="HDFC ERGO General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">HDFC ERGO General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="icici lombard general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins3.jpg" alt="ICICI Lombard General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">ICICI Lombard General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="bajaj allianz general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins4.jpg" alt="Bajaj Allianz General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Bajaj Allianz General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="tata aig general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins5.jpg" alt="Tata AIG General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Tata AIG General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="sbi general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins6.jpg" alt="SBI General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">SBI General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="national insurance company">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins7.jpg" alt="National Insurance Company" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">National Insurance Company</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Public Sector Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="new india assurance co. ltd.">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins8.jpg" alt="New India Assurance Co. Ltd." loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">New India Assurance Co. Ltd.</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Public Sector Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="united india insurance company">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins9.jpg" alt="United India Insurance Company" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">United India Insurance Company</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Public Sector Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="oriental insurance company">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins10.jpg" alt="Oriental Insurance Company" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Oriental Insurance Company</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Public Sector Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="reliance general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins11.jpg" alt="Reliance General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Reliance General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="aditya birla health insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins12.jpg" alt="Aditya Birla Health Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Aditya Birla Health Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Standalone Health Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="max bupa health insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins13.jpg" alt="Max Bupa Health Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Max Bupa Health Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Health Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="future generali india insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins14.jpg" alt="Future Generali India Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Future Generali India Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="iffco tokio general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins15.jpg" alt="Iffco Tokio General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Iffco Tokio General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="universal sompo general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins16.jpg" alt="Universal Sompo General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Universal Sompo General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="royal sundaram general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins17.jpg" alt="Royal Sundaram General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Royal Sundaram General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="chola ms general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins19.jpg" alt="Chola MS General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Chola MS General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="manipalcigna health insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins21.jpg" alt="ManipalCigna Health Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">ManipalCigna Health Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> Standalone Health Insurer</div>
-                    </div>
-                </div>
-                <div class="partner-card" data-category="ins" data-name="kotak mahindra general insurance">
-                    <div class="partner-logo-box">
-                        <img src="assets/images/empanelled/ins22.jpg" alt="Kotak Mahindra General Insurance" loading="lazy" onerror="this.src='assets/images/empanelled/gov1.jpg'">
-                    </div>
-                    <div class="partner-info">
-                        <span class="partner-tag tag-ins">Cashless Insurance</span>
-                        <h4 class="partner-name">Kotak Mahindra General Insurance</h4>
-                        <div class="partner-sub"><i data-lucide="shield-check"></i> General Insurer</div>
-                    </div>
+                <div class="partner-card" data-category="gov" data-name="government of haryana" title="Government of Haryana">
+                    <img src="assets/images/empanelled/gov1.jpg" alt="Government of Haryana" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="echs (ex-servicemen contributory health scheme)" title="ECHS (Ex-Servicemen Contributory Health Scheme)">
+                    <img src="assets/images/empanelled/gov2.jpg" alt="ECHS (Ex-Servicemen Contributory Health Scheme)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="northern railway" title="Northern Railway">
+                    <img src="assets/images/empanelled/gov3.jpg" alt="Northern Railway" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="bsnl (bharat sanchar nigam limited)" title="BSNL (Bharat Sanchar Nigam Limited)">
+                    <img src="assets/images/empanelled/gov4.jpg" alt="BSNL (Bharat Sanchar Nigam Limited)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="food corporation of india (fci)" title="Food Corporation of India (FCI)">
+                    <img src="assets/images/empanelled/gov5.jpg" alt="Food Corporation of India (FCI)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="ntpc limited" title="NTPC Limited">
+                    <img src="assets/images/empanelled/gov6.jpg" alt="NTPC Limited" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="bhel (bharat heavy electricals ltd)" title="BHEL (Bharat Heavy Electricals Ltd)">
+                    <img src="assets/images/empanelled/gov7.jpg" alt="BHEL (Bharat Heavy Electricals Ltd)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="central government health scheme (cghs)" title="Central Government Health Scheme (CGHS)">
+                    <img src="assets/images/empanelled/gov8.jpg" alt="Central Government Health Scheme (CGHS)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="dhbvn / uhbvn (haryana power utilities)" title="DHBVN / UHBVN (Haryana Power Utilities)">
+                    <img src="assets/images/empanelled/gov9.jpg" alt="DHBVN / UHBVN (Haryana Power Utilities)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="ccs haryana agricultural university (hau)" title="CCS Haryana Agricultural University (HAU)">
+                    <img src="assets/images/empanelled/gov10.jpg" alt="CCS Haryana Agricultural University (HAU)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="guru jambheshwar university of science & tech" title="Guru Jambheshwar University of Science & Tech">
+                    <img src="assets/images/empanelled/gov11.jpg" alt="Guru Jambheshwar University of Science & Tech" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="lala lajpat rai university of veterinary sciences" title="Lala Lajpat Rai University of Veterinary Sciences">
+                    <img src="assets/images/empanelled/gov12.jpg" alt="Lala Lajpat Rai University of Veterinary Sciences" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="state bank of india (sbi)" title="State Bank of India (SBI)">
+                    <img src="assets/images/empanelled/gov13.jpg" alt="State Bank of India (SBI)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="punjab national bank (pnb)" title="Punjab National Bank (PNB)">
+                    <img src="assets/images/empanelled/gov14.jpg" alt="Punjab National Bank (PNB)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="ayushman bharat (pm-jay)" title="Ayushman Bharat (PM-JAY)">
+                    <img src="assets/images/empanelled/gov15.jpg" alt="Ayushman Bharat (PM-JAY)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="medi assist tpa" title="Medi Assist TPA">
+                    <img src="assets/images/empanelled/tpa1.jpg" alt="Medi Assist TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="vidal health tpa" title="Vidal Health TPA">
+                    <img src="assets/images/empanelled/tpa2.jpg" alt="Vidal Health TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="heritage health insurance tpa" title="Heritage Health Insurance TPA">
+                    <img src="assets/images/empanelled/tpa3.jpg" alt="Heritage Health Insurance TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="paramount health services tpa" title="Paramount Health Services TPA">
+                    <img src="assets/images/empanelled/tpa4.jpg" alt="Paramount Health Services TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="raksha health insurance tpa" title="Raksha Health Insurance TPA">
+                    <img src="assets/images/empanelled/tpa5.jpg" alt="Raksha Health Insurance TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="family health plan insurance tpa (fhpl)" title="Family Health Plan Insurance TPA (FHPL)">
+                    <img src="assets/images/empanelled/tpa6.jpg" alt="Family Health Plan Insurance TPA (FHPL)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="mdindia health insurance tpa" title="MDIndia Health Insurance TPA">
+                    <img src="assets/images/empanelled/tpa7.jpg" alt="MDIndia Health Insurance TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="health insurance tpa of india (hitpa)" title="Health Insurance TPA of India (HITPA)">
+                    <img src="assets/images/empanelled/tpa8.jpg" alt="Health Insurance TPA of India (HITPA)" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="park mediclaim tpa" title="Park Mediclaim TPA">
+                    <img src="assets/images/empanelled/tpa9.jpg" alt="Park Mediclaim TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="safeway insurance tpa" title="Safeway Insurance TPA">
+                    <img src="assets/images/empanelled/tpa10.jpg" alt="Safeway Insurance TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="vipul medcorp tpa" title="Vipul MedCorp TPA">
+                    <img src="assets/images/empanelled/tpa11.jpg" alt="Vipul MedCorp TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="genins india tpa" title="Genins India TPA">
+                    <img src="assets/images/empanelled/tpa12.jpg" alt="Genins India TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="alankit insurance tpa" title="Alankit Insurance TPA">
+                    <img src="assets/images/empanelled/tpa13.jpg" alt="Alankit Insurance TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="ericson insurance tpa" title="Ericson Insurance TPA">
+                    <img src="assets/images/empanelled/tpa14.jpg" alt="Ericson Insurance TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="good health tpa services" title="Good Health TPA Services">
+                    <img src="assets/images/empanelled/tpa15.jpg" alt="Good Health TPA Services" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="healthspire tpa" title="Healthspire TPA">
+                    <img src="assets/images/empanelled/tpa16.jpg" alt="Healthspire TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="grand insurance tpa" title="Grand Insurance TPA">
+                    <img src="assets/images/empanelled/tpa17.jpg" alt="Grand Insurance TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="focus health tpa" title="Focus Health TPA">
+                    <img src="assets/images/empanelled/tpa18.jpg" alt="Focus Health TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="east west assist tpa" title="East West Assist TPA">
+                    <img src="assets/images/empanelled/tpa19.jpg" alt="East West Assist TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="dedicated healthcare services tpa" title="Dedicated Healthcare Services TPA">
+                    <img src="assets/images/empanelled/tpa20.jpg" alt="Dedicated Healthcare Services TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="rothshield healthcare tpa" title="Rothshield Healthcare TPA">
+                    <img src="assets/images/empanelled/tpa21.jpg" alt="Rothshield Healthcare TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="medsave health insurance tpa" title="Medsave Health Insurance TPA">
+                    <img src="assets/images/empanelled/tpa22.jpg" alt="Medsave Health Insurance TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="anyuta health network tpa" title="Anyuta Health Network TPA">
+                    <img src="assets/images/empanelled/tpa23.jpg" alt="Anyuta Health Network TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="united health care parekh tpa" title="United Health Care Parekh TPA">
+                    <img src="assets/images/empanelled/tpa24.jpg" alt="United Health Care Parekh TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="spurthi meditech tpa" title="Spurthi Meditech TPA">
+                    <img src="assets/images/empanelled/tpa25.jpg" alt="Spurthi Meditech TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="religare health tpa" title="Religare Health TPA">
+                    <img src="assets/images/empanelled/tpa26.jpg" alt="Religare Health TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="universal mediclaim tpa" title="Universal Mediclaim TPA">
+                    <img src="assets/images/empanelled/tpa27.jpg" alt="Universal Mediclaim TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="galaxy health tpa" title="Galaxy Health TPA">
+                    <img src="assets/images/empanelled/tpa28.jpg" alt="Galaxy Health TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="medi claim direct tpa" title="Medi Claim Direct TPA">
+                    <img src="assets/images/empanelled/tpa29.jpg" alt="Medi Claim Direct TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="care & health tpa services" title="Care & Health TPA Services">
+                    <img src="assets/images/empanelled/tpa30.jpg" alt="Care & Health TPA Services" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="medicare tpa services" title="Medicare TPA Services">
+                    <img src="assets/images/empanelled/tpa31.jpg" alt="Medicare TPA Services" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="tpa" data-name="swift health tpa" title="Swift Health TPA">
+                    <img src="assets/images/empanelled/tpa32.jpg" alt="Swift Health TPA" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="star health and allied insurance" title="Star Health and Allied Insurance">
+                    <img src="assets/images/empanelled/ins1.jpg" alt="Star Health and Allied Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="care health insurance" title="Care Health Insurance">
+                    <img src="assets/images/empanelled/care.jpg" alt="Care Health Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="niva bupa health insurance" title="Niva Bupa Health Insurance">
+                    <img src="assets/images/empanelled/niva.jpg" alt="Niva Bupa Health Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="hdfc ergo general insurance" title="HDFC ERGO General Insurance">
+                    <img src="assets/images/empanelled/ins2.jpg" alt="HDFC ERGO General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="icici lombard general insurance" title="ICICI Lombard General Insurance">
+                    <img src="assets/images/empanelled/ins3.jpg" alt="ICICI Lombard General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="bajaj allianz general insurance" title="Bajaj Allianz General Insurance">
+                    <img src="assets/images/empanelled/ins4.jpg" alt="Bajaj Allianz General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="tata aig general insurance" title="Tata AIG General Insurance">
+                    <img src="assets/images/empanelled/ins5.jpg" alt="Tata AIG General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="sbi general insurance" title="SBI General Insurance">
+                    <img src="assets/images/empanelled/ins6.jpg" alt="SBI General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="national insurance company" title="National Insurance Company">
+                    <img src="assets/images/empanelled/ins7.jpg" alt="National Insurance Company" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="new india assurance co. ltd." title="New India Assurance Co. Ltd.">
+                    <img src="assets/images/empanelled/ins8.jpg" alt="New India Assurance Co. Ltd." loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="united india insurance company" title="United India Insurance Company">
+                    <img src="assets/images/empanelled/ins9.jpg" alt="United India Insurance Company" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="oriental insurance company" title="Oriental Insurance Company">
+                    <img src="assets/images/empanelled/ins10.jpg" alt="Oriental Insurance Company" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="reliance general insurance" title="Reliance General Insurance">
+                    <img src="assets/images/empanelled/ins11.jpg" alt="Reliance General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="aditya birla health insurance" title="Aditya Birla Health Insurance">
+                    <img src="assets/images/empanelled/ins12.jpg" alt="Aditya Birla Health Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="max bupa health insurance" title="Max Bupa Health Insurance">
+                    <img src="assets/images/empanelled/ins13.jpg" alt="Max Bupa Health Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="future generali india insurance" title="Future Generali India Insurance">
+                    <img src="assets/images/empanelled/ins14.jpg" alt="Future Generali India Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="iffco tokio general insurance" title="Iffco Tokio General Insurance">
+                    <img src="assets/images/empanelled/ins15.jpg" alt="Iffco Tokio General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="universal sompo general insurance" title="Universal Sompo General Insurance">
+                    <img src="assets/images/empanelled/ins16.jpg" alt="Universal Sompo General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="royal sundaram general insurance" title="Royal Sundaram General Insurance">
+                    <img src="assets/images/empanelled/ins17.jpg" alt="Royal Sundaram General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="chola ms general insurance" title="Chola MS General Insurance">
+                    <img src="assets/images/empanelled/ins19.jpg" alt="Chola MS General Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="manipalcigna health insurance" title="ManipalCigna Health Insurance">
+                    <img src="assets/images/empanelled/ins21.jpg" alt="ManipalCigna Health Insurance" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="ins" data-name="kotak mahindra general insurance" title="Kotak Mahindra General Insurance">
+                    <img src="assets/images/empanelled/ins22.jpg" alt="Kotak Mahindra General Insurance" loading="lazy">
                 </div>
             </div>
 
@@ -2335,21 +2205,21 @@
                         <a href="tel:01662249473" class="desk-contact-item">
                             <i data-lucide="phone-call"></i>
                             <div>
-                                <b>01662-249473 / 248473</b>
+                                <b>01662-249473 / 248473 / 99966-48483</b>
                                 <small>Hospital Landline &bull; Extension: TPA Desk</small>
                             </div>
                         </a>
                         <a href="https://wa.me/919996544005" target="_blank" class="desk-contact-item">
-                            <i data-lucide="message-circle" style="color:#25D366"></i>
+                            <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
                             <div>
-                                <b>+91 99965-44005</b>
+                                <b style="color:#25D366">+91 99965-44005</b>
                                 <small>WhatsApp Cashless Desk &bull; 24/7 Document Sharing</small>
                             </div>
                         </a>
-                        <a href="mailto:info@sukhdahospitalhisar.com" class="desk-contact-item">
+                        <a href="mailto:sukhdahospital@gmail.com" class="desk-contact-item">
                             <i data-lucide="mail"></i>
                             <div>
-                                <b>info@sukhdahospitalhisar.com</b>
+                                <b>sukhdahospital@gmail.com</b>
                                 <small>Email Pre-Authorization Query &amp; Documents</small>
                             </div>
                         </a>
@@ -2427,452 +2297,143 @@
         </div>
     </section>
 
+                <!-- INCLUDE: footer -->
+    <div id="site-footer" data-include="footer">
+<!-- FOOTER -->
 <footer class="footer">
-        <div class="wrap footer-grid">
-            <div>
-                <div class="footer-brand-wrap">
-                    <img class="footer-logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
-                </div>
-                <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
-                <p class="footer-desc">Providing quality, compassionate, and comprehensive medical, surgical, cancer, and emergency healthcare services across Hisar since 2002.</p>
-                <div class="footer-nabh-badge">
-                    <img src="assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
-                    <div>
-                        <b>NABH Accredited</b>
-                        <small>Highest Healthcare Quality Standards</small>
-                    </div>
-                </div>
+    <div class="wrap footer-grid">
+        <div>
+            <div class="footer-brand-wrap">
+                <img class="footer-logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
             </div>
-
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                                                                <ul class="footer-nav">
-                    <li><a href="index.html"><span>›</span> Home</a></li>
-                    <li><a href="about.html"><span>›</span> About Sukhda</a></li>
-                    <li><a href="doctor.html"><span>›</span> Find Doctors</a></li>
-                    <li><a href="empanelled-corporate.html"><span>›</span> Cashless / Empanelled</a></li>
-                    <li><a href="patient-stories.html"><span>›</span> Patient Stories</a></li>
-                    <li><a href="careers.html"><span>›</span> Careers</a></li>
-                    <li><a href="csr.html"><span>›</span> CSR &amp; Community</a></li>
-                    <li><a href="media-centre.html"><span>›</span> Media Centre</a></li>
-                    <li><a href="contact.html"><span>›</span> Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Our Hospitals</h4>
-                <div class="footer-hospital-card">
-                    <div class="f-hosp-header">
-                        <i data-lucide="building-2"></i>
-                        <b>Sukhda Multispeciality Hospital</b>
-                    </div>
-                    <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
-                    <a href="tel:01662249473" class="f-hosp-phone"><i data-lucide="phone"></i> 01662-249473 / 248473</a>
-                </div>
-                <div class="footer-hospital-card">
-                    <div class="f-hosp-header">
-                        <i data-lucide="activity"></i>
-                        <b>Sukhda MedPark</b>
-                    </div>
-                    <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
-                    <p>Delhi Road, Hisar, Haryana – 125005</p>
-                    <a href="tel:+919996544005" class="f-hosp-phone"><i data-lucide="phone"></i> +91-99965-44005</a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h4>24/7 Emergency &amp; OPD</h4>
-                <div class="footer-emergency-box">
-                    <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
-                    <div>
-                        <small>24/7 Emergency Helpline</small>
-                        <a href="tel:01662249473" class="f-emg-num">01662-249473</a>
-                        <a href="tel:+919996544005" class="f-emg-num-sub">+91 99965-44005</a>
-                    </div>
-                </div>
-                <div class="footer-contact-list">
-                    <a href="mailto:info@sukhdahospitalhisar.com" class="f-cnt-item">
-                        <i data-lucide="mail"></i>
-                        <span>info@sukhdahospitalhisar.com</span>
-                    </a>
-                    <a href="https://wa.me/919996544005" target="_blank" class="f-cnt-item whatsapp">
-                        <i data-lucide="message-circle"></i>
-                        <span>WhatsApp: +91 99965-44005</span>
-                    </a>
-                </div>
-                <div class="footer-motto">
-                    <i data-lucide="heart-handshake"></i>
-                    <span>Care &amp; Cure for Whole Family</span>
+            <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
+            <p class="footer-desc">Providing quality, compassionate, and comprehensive medical, surgical, cancer, and emergency healthcare services across Hisar since 2002.</p>
+            <div class="footer-nabh-badge">
+                <img src="assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
+                <div>
+                    <b>NABH Accredited</b>
+                    <small>Highest Healthcare Quality Standards</small>
                 </div>
             </div>
         </div>
-        <div class="bottom">
-            <div class="wrap">
-                <span>© 2026 Sukhda Healthcare. All rights reserved.</span>
-                <div class="bottom-badges">
-                    <span><i data-lucide="map-pin"></i> Delhi Road, Hisar</span>
-                    <span><i data-lucide="shield-check"></i> NABH Accredited</span>
-                    <span><i data-lucide="phone"></i> 24/7 ER: 01662-249473</span>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-nav">
+                <li><a href="index.html"><span>›</span> Home</a></li>
+                <li><a href="about.html"><span>›</span> About Sukhda</a></li>
+                <li><a href="doctor.html"><span>›</span> Find Doctors</a></li>
+                <li><a href="empanelled-corporate.html"><span>›</span> Cashless / Empanelled</a></li>
+                <li><a href="patient-stories.html"><span>›</span> Patient Stories</a></li>
+                <li><a href="careers.html"><span>›</span> Careers</a></li>
+                <li><a href="csr.html"><span>›</span> CSR &amp; Community</a></li>
+                <li><a href="media-centre.html"><span>›</span> Media Centre</a></li>
+                <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Our Hospitals</h4>
+            <div class="footer-hospital-card">
+                <div class="f-hosp-header">
+                    <i data-lucide="building-2"></i>
+                    <b>Sukhda Multispeciality Hospital</b>
                 </div>
+                <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
+                <a href="tel:01662249473" class="f-hosp-phone"><i data-lucide="phone"></i> 01662-249473 / 248473 / 99966-48483</a>
+            </div>
+            <div class="footer-hospital-card">
+                <div class="f-hosp-header">
+                    <i data-lucide="activity"></i>
+                    <b>Sukhda MedPark</b>
+                </div>
+                <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
+                <p>NH 1P-4P, Sector-5, Hisar</p>
+                <a href="https://wa.me/919996544005" target="_blank" class="f-hosp-phone"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> <span style="color:#25D366;font-weight:600">WhatsApp: +91 99965-44005</span></a>
             </div>
         </div>
-    </footer>
 
-    <!-- STICKY BOTTOM FLOATING PILL CTA -->
-    <div class="sticky-bottom-bar" aria-label="Quick Actions">
-        <a href="contact.html" class="sticky-bar-item">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect width="18" height="18" x="3" y="4" rx="3"></rect>
-                <line x1="16" x2="16" y1="2" y2="6"></line>
-                <line x1="8" x2="8" y1="2" y2="6"></line>
-                <line x1="3" x2="21" y1="10" y2="10"></line>
-                <path d="m9 16 2 2 4-4"></path>
-            </svg>
-            <span>Book Now</span>
-        </a>
-        <div class="sticky-bar-divider"></div>
-        <a href="tel:01662249473" class="sticky-bar-item">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <span>Call Now</span>
-        </a>
-        <div class="sticky-bar-divider"></div>
-        <a href="https://wa.me/919996544005" target="_blank" rel="noopener" class="sticky-bar-item whatsapp">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
-                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6-.1.49-.3 1.47-1.2 1.68-1.72.2-.52.2-1 .14-1.12-.05-.13-.21-.21-.46-.33z"/>
-            </svg>
-            <span>WhatsApp</span>
-        </a>
+        <div class="footer-col">
+            <h4>24/7 Emergency &amp; OPD</h4>
+            <div class="footer-emergency-box">
+                <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
+                <div>
+                    <small>24/7 Emergency Helpline</small>
+                    <a href="tel:01662249473" class="f-emg-num">01662-249473, 248473</a>
+                    <a href="tel:9996648483" class="f-emg-num-sub">+91 99966-48483</a>
+                </div>
+            </div>
+            <div class="footer-contact-list">
+                <a href="mailto:sukhdahospital@gmail.com" class="f-cnt-item">
+                    <i data-lucide="mail"></i>
+                    <span>sukhdahospital@gmail.com</span>
+                </a>
+                <a href="https://wa.me/919996544005" target="_blank" class="f-cnt-item whatsapp">
+                    <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    <span>WhatsApp: +91 99965-44005</span>
+                </a>
+            </div>
+            <div class="footer-motto">
+                <i data-lucide="heart-handshake"></i>
+                <span>Care &amp; Cure for Whole Family</span>
+            </div>
+        </div>
     </div>
-
-    <!-- SCRIPTS FOR SEARCH & FILTER -->
-    <script>
-        const renderIcons = () => {
-            if (window.lucide) lucide.createIcons({ attrs: { 'stroke-width': 1.8 } });
-        };
-        renderIcons();
-        document.addEventListener('DOMContentLoaded', renderIcons);
-        window.addEventListener('load', renderIcons);
-
-        // Mobile Menu Drawer & Accordion Toggle
-        (function () {
-            const nav = document.querySelector('.nav');
-            const button = document.querySelector('.hamb');
-            const closeBtn = document.querySelector('.mobile-close-btn');
-            const overlay = document.querySelector('.nav-overlay');
-            const menu = document.querySelector('.menu');
-            if (!nav || !button || !menu) return;
-
-            menu.id = 'mobile-menu';
-            button.type = 'button';
-            button.setAttribute('aria-controls', menu.id);
-            button.setAttribute('aria-expanded', 'false');
-            button.setAttribute('aria-label', 'Open menu');
-
-            const close = () => {
-                nav.classList.remove('open');
-                document.body.style.overflow = '';
-                button.setAttribute('aria-expanded', 'false');
-                button.setAttribute('aria-label', 'Open menu');
-                button.blur();
-            };
-            const openMenu = () => {
-                nav.classList.add('open');
-                document.body.style.overflow = 'hidden';
-                button.setAttribute('aria-expanded', 'true');
-                button.setAttribute('aria-label', 'Close menu');
-            };
-
-            button.onclick = e => {
-                e.preventDefault();
-                e.stopPropagation();
-                nav.classList.contains('open') ? close() : openMenu();
-            };
-            if (closeBtn) closeBtn.onclick = e => { e.preventDefault(); close(); };
-            if (overlay) overlay.onclick = e => { e.preventDefault(); close(); };
-
-            const navGroups = menu.querySelectorAll('.nav-group');
-            navGroups.forEach(group => {
-                const parentLink = group.querySelector(':scope > a');
-                if (!parentLink) return;
-                parentLink.addEventListener('click', e => {
-                    if (window.innerWidth <= 900) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        const isOpen = group.classList.contains('open');
-                        navGroups.forEach(g => { if (g !== group) g.classList.remove('open'); });
-                        group.classList.toggle('open', !isOpen);
-                    }
-                });
-            });
-
-            menu.addEventListener('click', e => {
-                const a = e.target.closest('a');
-                if (!a) return;
-                if (a.closest('.nav-drop') || !a.closest('.nav-group')) {
-                    close();
-                }
-            });
-
-            document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-        })();
-
-        // REAL-TIME SEARCH & FILTER LOGIC
-        (function () {
-            const searchInput = document.getElementById('doctorSearchInput');
-            const specialitySelect = document.getElementById('specialitySelect');
-            const hospitalSelect = document.getElementById('hospitalSelect');
-            const resetBtn = document.getElementById('resetFiltersBtn');
-            const resetEmptyBtn = document.getElementById('resetFromEmptyBtn');
-            const quickPills = document.querySelectorAll('.quick-pill');
-            const cards = document.querySelectorAll('.doc-card');
-            const countElem = document.getElementById('visibleCount');
-            const noResultsBox = document.getElementById('noResultsBox');
-
-            let currentQuery = '';
-            let currentSpeciality = 'all';
-            let currentHospital = 'all';
-
-            // Check URL query params for initial filter e.g. ?speciality=Cardiology or ?q=amit
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('q')) {
-                currentQuery = urlParams.get('q').toLowerCase();
-                searchInput.value = urlParams.get('q');
-            }
-            if (urlParams.has('speciality')) {
-                const specVal = urlParams.get('speciality');
-                currentSpeciality = specVal;
-                if (specialitySelect) specialitySelect.value = specVal;
-                quickPills.forEach(p => {
-                    if (p.getAttribute('data-spec').toLowerCase() === specVal.toLowerCase()) {
-                        quickPills.forEach(x => x.classList.remove('active'));
-                        p.classList.add('active');
-                    }
-                });
-            }
-            if (urlParams.has('hospital')) {
-                currentHospital = urlParams.get('hospital');
-                if (hospitalSelect) hospitalSelect.value = currentHospital;
-            }
-
-            function filterDoctors() {
-                let visibleCount = 0;
-                const queryWords = currentQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
-
-                cards.forEach(card => {
-                    const name = card.getAttribute('data-name') || '';
-                    const speciality = card.getAttribute('data-speciality') || '';
-                    const hospital = card.getAttribute('data-hospital') || '';
-                    const tags = card.getAttribute('data-tags') || '';
-                    const cardText = (name + ' ' + speciality + ' ' + tags).toLowerCase();
-
-                    // Query match
-                    let queryMatch = true;
-                    if (queryWords.length > 0) {
-                        queryMatch = queryWords.every(word => cardText.includes(word));
-                    }
-
-                    // Speciality match
-                    let specMatch = true;
-                    if (currentSpeciality !== 'all') {
-                        specMatch = (speciality.toLowerCase() === currentSpeciality.toLowerCase());
-                    }
-
-                    // Hospital match
-                    let hospMatch = true;
-                    if (currentHospital !== 'all') {
-                        if (currentHospital === 'multispeciality') {
-                            hospMatch = (hospital === 'multispeciality' || hospital === 'both');
-                        } else if (currentHospital === 'medpark') {
-                            hospMatch = (hospital === 'medpark' || hospital === 'both');
-                        } else if (currentHospital === 'both') {
-                            hospMatch = (hospital === 'both');
-                        }
-                    }
-
-                    if (queryMatch && specMatch && hospMatch) {
-                        card.style.display = 'flex';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-
-                countElem.textContent = visibleCount;
-                if (visibleCount === 0) {
-                    noResultsBox.style.display = 'block';
-                } else {
-                    noResultsBox.style.display = 'none';
-                }
-            }
-
-            // Event Listeners
-            searchInput.addEventListener('input', e => {
-                currentQuery = e.target.value.toLowerCase();
-                filterDoctors();
-            });
-
-            specialitySelect.addEventListener('change', e => {
-                currentSpeciality = e.target.value;
-                // Sync quick pill
-                quickPills.forEach(p => {
-                    if (p.getAttribute('data-spec') === currentSpeciality) {
-                        p.classList.add('active');
-                    } else {
-                        p.classList.remove('active');
-                    }
-                });
-                filterDoctors();
-            });
-
-            hospitalSelect.addEventListener('change', e => {
-                currentHospital = e.target.value;
-                filterDoctors();
-            });
-
-            quickPills.forEach(pill => {
-                pill.addEventListener('click', () => {
-                    quickPills.forEach(p => p.classList.remove('active'));
-                    pill.classList.add('active');
-                    const spec = pill.getAttribute('data-spec');
-                    currentSpeciality = spec;
-                    if (specialitySelect) specialitySelect.value = spec;
-                    filterDoctors();
-                });
-            });
-
-            function resetAll() {
-                currentQuery = '';
-                currentSpeciality = 'all';
-                currentHospital = 'all';
-                searchInput.value = '';
-                if (specialitySelect) specialitySelect.value = 'all';
-                if (hospitalSelect) hospitalSelect.value = 'all';
-                quickPills.forEach(p => {
-                    if (p.getAttribute('data-spec') === 'all') p.classList.add('active');
-                    else p.classList.remove('active');
-                });
-                filterDoctors();
-            }
-
-            if (resetBtn) resetBtn.addEventListener('click', resetAll);
-            if (resetEmptyBtn) resetEmptyBtn.addEventListener('click', resetAll);
-
-            // Initial Filter Run
-            filterDoctors();
-        })();
-    </script>
-    <!-- FLOATING LANGUAGE TOGGLE (English / हिन्दी) -->
-    <div class="floating-lang-pill notranslate" aria-label="Select Language">
-        <span class="f-icon"><i data-lucide="languages" style="width:15px;height:15px"></i></span>
-        <button type="button" class="f-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
-        <span class="f-sep">|</span>
-        <button type="button" class="f-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+    <div class="bottom">
+        <div class="wrap">
+            <span>© 2026 Sukhda Healthcare. All rights reserved.</span>
+            <div class="bottom-badges">
+                <span><i data-lucide="map-pin"></i> Hisar, Haryana</span>
+                <span><i data-lucide="shield-check"></i> NABH Accredited</span>
+                <span><i data-lucide="phone"></i> 24/7 ER: 01662-249473 / 99966-48483</span>
+            </div>
+        </div>
     </div>
+</footer>
 
-    <!-- Google Translate Script Container -->
-    <div id="google_translate_element"></div>
-    <script src="assets/js/translate.js"></script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
+<!-- STICKY BOTTOM FLOATING PILL CTA -->
+<div class="sticky-bottom-bar" aria-label="Quick Actions">
+    <a href="contact.html" class="sticky-bar-item">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+            <line x1="16" x2="16" y1="2" y2="6"></line>
+            <line x1="8" x2="8" y1="2" y2="6"></line>
+            <line x1="3" x2="21" y1="10" y2="10"></line>
+            <path d="m9 16 2 2 4-4"></path>
+        </svg>
+        <span>Book Now</span>
+    </a>
+    <div class="sticky-bar-divider"></div>
+    <a href="tel:01662249473" class="sticky-bar-item">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span>Call Now</span>
+    </a>
+    <div class="sticky-bar-divider"></div>
+    <a href="https://wa.me/919996544005" target="_blank" rel="noopener" class="sticky-bar-item whatsapp">
+        <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
+            <path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/>
+            <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+        <span>WhatsApp</span>
+    </a>
+</div>
 
-</html>
+<!-- FLOATING LANGUAGE TOGGLE (English / हिन्दी) -->
+<div class="floating-lang-pill notranslate" aria-label="Select Language">
+    <span class="f-icon"><i data-lucide="languages" style="width:15px;height:15px"></i></span>
+    <button type="button" class="f-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
+    <span class="f-sep">|</span>
+    <button type="button" class="f-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+</div>
 
-
-    <script>
-        // Interactive Filter & Search Script
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const searchInput = document.getElementById('partnerSearch');
-            const cards = document.querySelectorAll('.partner-card');
-            const noResultsBox = document.getElementById('noResultsBox');
-            const resetSearchBtn = document.getElementById('resetSearchBtn');
-            const countAll = document.getElementById('countAll');
-
-            let currentCategory = 'all';
-            let currentQuery = '';
-
-            function applyFilter() {
-                let visibleCount = 0;
-                const q = currentQuery.trim().toLowerCase();
-
-                cards.forEach(card => {
-                    const cat = card.getAttribute('data-category');
-                    const name = card.getAttribute('data-name') || '';
-
-                    const matchesCategory = (currentCategory === 'all' || cat === currentCategory);
-                    const matchesSearch = (!q || name.includes(q));
-
-                    if (matchesCategory && matchesSearch) {
-                        card.style.display = 'flex';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-
-                if (noResultsBox) {
-                    noResultsBox.style.display = (visibleCount === 0) ? 'block' : 'none';
-                }
-            }
-
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    currentCategory = this.getAttribute('data-filter');
-                    applyFilter();
-                });
-            });
-
-            if (searchInput) {
-                searchInput.addEventListener('input', function (e) {
-                    currentQuery = e.target.value;
-                    applyFilter();
-                });
-            }
-
-            if (resetSearchBtn) {
-                resetSearchBtn.addEventListener('click', function () {
-                    currentCategory = 'all';
-                    currentQuery = '';
-                    if (searchInput) searchInput.value = '';
-                    tabBtns.forEach(b => {
-                        if (b.getAttribute('data-filter') === 'all') b.classList.add('active');
-                        else b.classList.remove('active');
-                    });
-                    applyFilter();
-                });
-            }
-
-            // FAQ Accordion Interaction
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const btn = item.querySelector('.faq-btn');
-                btn.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-                    faqItems.forEach(i => i.classList.remove('active'));
-                    if (!isActive) item.classList.add('active');
-                });
-            });
-
-            // Mobile menu toggle logic
-            const hamb = document.querySelector('.hamb');
-            const nav = document.querySelector('.nav');
-            const closeBtn = document.querySelector('.mobile-close-btn');
-            const overlay = document.querySelector('.nav-overlay');
-
-            if (hamb) {
-                hamb.addEventListener('click', () => nav.classList.add('open'));
-            }
-            if (closeBtn) {
-                closeBtn.addEventListener('click', () => nav.classList.remove('open'));
-            }
-            if (overlay) {
-                overlay.addEventListener('click', () => nav.classList.remove('open'));
-            }
-        });
-    </script>
+<!-- Google Translate Script Container -->
+<div id="google_translate_element"></div>
+<script src="assets/js/translate.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+    <!-- /INCLUDE: footer -->
+    <script src="include/include.js"></script>
 </body>
 </html>
