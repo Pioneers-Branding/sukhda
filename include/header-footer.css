@@ -772,42 +772,49 @@ header.nav,
     }
 
     .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 320px;
-        max-width: 85vw;
-        height: 100vh;
-        background: #ffffff;
-        box-shadow: 4px 0 24px rgba(5, 33, 89, 0.2);
-        z-index: 2000;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 0;
-        transform: translateX(-100%);
-        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        overflow-y: auto;
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: auto !important;
+        width: min(340px, 86vw) !important;
+        height: 100vh !important;
+        background: #ffffff !important;
+        box-shadow: -10px 0 35px rgba(3, 32, 90, 0.22) !important;
+        z-index: 2005 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        padding: 0 !important;
+        transform: translateX(105%) !important;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
     }
 
     .nav.open .menu {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
 
     .nav-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(5, 33, 89, 0.5);
-        backdrop-filter: blur(2px);
-        z-index: 1999;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.25s ease;
+        position: fixed !important;
+        inset: 0 !important;
+        background: rgba(5, 33, 89, 0.5) !important;
+        backdrop-filter: blur(2px) !important;
+        -webkit-backdrop-filter: blur(2px) !important;
+        z-index: 2004 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition: all 0.25s ease !important;
     }
 
     .nav.open .nav-overlay {
-        opacity: 1;
-        visibility: visible;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        display: block !important;
     }
 
     .mobile-menu-head {
@@ -909,7 +916,7 @@ header.nav,
         transform: none !important;
         box-shadow: none !important;
         width: 100% !important;
-        display: none;
+        display: none !important;
         background: #f8fafc !important;
         padding: 0 !important;
         border-radius: 0 !important;
@@ -920,20 +927,54 @@ header.nav,
 
     .nav-group.open .nav-drop {
         display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .nav-group.open>a .nav-chevron {
-        transform: rotate(180deg);
-        color: #278132;
+        transform: rotate(180deg) !important;
+        color: #278132 !important;
+    }
+
+    .mobile-nav-links .nav-drop a {
+        padding: 10px 20px 10px 28px !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        color: #052159 !important;
+        border-bottom: 1px solid #edf3f8 !important;
+        display: flex !important;
+        align-items: center !important;
+        white-space: normal !important;
+        background: #f8fafc !important;
+        text-decoration: none !important;
+        line-height: 1.4 !important;
+    }
+
+    .mobile-nav-links .nav-drop a:last-child {
+        border-bottom: none !important;
+    }
+
+    .mobile-nav-links .nav-drop a:hover,
+    .mobile-nav-links .nav-drop a:active {
+        background: #eaf5ec !important;
+        color: #278132 !important;
     }
 
     /* MOBILE SERVICES MEGA ACCORDION */
+    .services-mega {
+        display: none !important;
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
     .nav-group.open .services-mega {
         display: flex !important;
         flex-direction: column !important;
         position: static !important;
         transform: none !important;
         width: 100% !important;
+        max-width: 100% !important;
         box-shadow: none !important;
         border: 1px solid #e2edf6 !important;
         border-radius: 8px !important;
@@ -942,6 +983,9 @@ header.nav,
         background: #f7fafc !important;
         overflow: hidden !important;
         animation: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
     }
 
     .services-mega .mega-body {
@@ -1488,7 +1532,7 @@ a.footer-hospital-card:hover,
     position: fixed;
     bottom: 24px;
     left: 20px;
-    z-index: 999;
+    z-index: 997;
     display: inline-flex;
     align-items: center;
     background: #052159;
@@ -1499,6 +1543,7 @@ a.footer-hospital-card:hover,
     font-size: 12px;
     color: #fff;
     gap: 6px;
+    transition: all 0.25s ease;
 }
 
 .floating-lang-pill .f-btn {
@@ -1520,6 +1565,31 @@ a.footer-hospital-card:hover,
 
 .floating-lang-pill .f-sep {
     color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 767px) {
+    .floating-lang-pill {
+        bottom: 80px !important;
+        left: 14px !important;
+        padding: 3px 8px !important;
+        font-size: 11.5px !important;
+    }
+
+    .floating-lang-pill .f-btn {
+        padding: 2px 6px !important;
+        font-size: 11.5px !important;
+    }
+
+    .nav.open ~ .floating-lang-pill {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .floating-lang-pill {
+        bottom: 24px;
+        left: 20px;
+    }
 }
 
 /* ---------- RELATED CLINICAL SPECIALITIES SECTION ---------- */

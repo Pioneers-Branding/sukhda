@@ -75,21 +75,19 @@
         // Mobile dropdown accordion toggles
         var navGroups = menu.querySelectorAll('.nav-group');
         navGroups.forEach(function (group) {
-            var parentLink = group.querySelector(':scope > a');
-            if (!parentLink) return;
+            var parentLink = group.querySelector(':scope > a') || group.querySelector('a');
+            var dropdown = group.querySelector('.nav-drop, .services-mega');
+            if (!parentLink || !dropdown) return;
 
             parentLink.onclick = function (e) {
                 if (window.innerWidth <= 900) {
-                    var href = parentLink.getAttribute('href') || '';
-                    if (href === 'javascript:void(0)' || href.startsWith('#') || href.includes('#')) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        var isOpen = group.classList.contains('open');
-                        navGroups.forEach(function (g) {
-                            if (g !== group) g.classList.remove('open');
-                        });
-                        group.classList.toggle('open', !isOpen);
-                    }
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var isOpen = group.classList.contains('open');
+                    navGroups.forEach(function (g) {
+                        if (g !== group) g.classList.remove('open');
+                    });
+                    group.classList.toggle('open', !isOpen);
                 }
             };
         });
@@ -98,8 +96,15 @@
         menu.onclick = function (e) {
             var link = e.target.closest('a');
             if (!link) return;
+
+            // Never close drawer if clicking an accordion parent toggle
+            if (link.matches('.nav-group > a') || (link.parentElement && link.parentElement.classList.contains('nav-group') && link.parentElement.querySelector('.nav-drop, .services-mega'))) {
+                return;
+            }
+
+            // Normal destination links close the menu
             var href = link.getAttribute('href') || '';
-            if (href !== 'javascript:void(0)' && !href.startsWith('#')) {
+            if (href && href !== 'javascript:void(0)' && !href.startsWith('#')) {
                 closeMenu();
             }
         };

@@ -2300,70 +2300,7 @@
         document.addEventListener('DOMContentLoaded', renderIcons);
         window.addEventListener('load', renderIcons);
 
-        // Mobile Menu Drawer & Accordion Toggle
-        (function () {
-            const nav = document.querySelector('.nav');
-            const button = document.querySelector('.hamb');
-            const closeBtn = document.querySelector('.mobile-close-btn');
-            const overlay = document.querySelector('.nav-overlay');
-            const menu = document.querySelector('.menu');
-            if (!nav || !button || !menu) return;
-
-            menu.id = 'mobile-menu';
-            button.type = 'button';
-            button.setAttribute('aria-controls', menu.id);
-            button.setAttribute('aria-expanded', 'false');
-            button.setAttribute('aria-label', 'Open menu');
-
-            const close = () => {
-                nav.classList.remove('open');
-                document.body.style.overflow = '';
-                button.setAttribute('aria-expanded', 'false');
-                button.setAttribute('aria-label', 'Open menu');
-                button.blur();
-            };
-            const openMenu = () => {
-                nav.classList.add('open');
-                document.body.style.overflow = 'hidden';
-                button.setAttribute('aria-expanded', 'true');
-                button.setAttribute('aria-label', 'Close menu');
-            };
-
-            button.onclick = e => {
-                e.preventDefault();
-                e.stopPropagation();
-                nav.classList.contains('open') ? close() : openMenu();
-            };
-            if (closeBtn) closeBtn.onclick = e => { e.preventDefault(); close(); };
-            if (overlay) overlay.onclick = e => { e.preventDefault(); close(); };
-
-            const navGroups = menu.querySelectorAll('.nav-group');
-            navGroups.forEach(group => {
-                const parentLink = group.querySelector(':scope > a');
-                if (!parentLink) return;
-                parentLink.addEventListener('click', e => {
-                    if (window.innerWidth <= 900) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        const isOpen = group.classList.contains('open');
-                        navGroups.forEach(g => { if (g !== group) g.classList.remove('open'); });
-                        group.classList.toggle('open', !isOpen);
-                    }
-                });
-            });
-
-            menu.addEventListener('click', e => {
-                const a = e.target.closest('a');
-                if (!a) return;
-                if (a.closest('.nav-drop') || !a.closest('.nav-group')) {
-                    close();
-                }
-            });
-
-            document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-        })();
-
-        // REAL-TIME SEARCH & FILTER LOGIC
+                // REAL-TIME SEARCH & FILTER LOGIC
         (function () {
             const searchInput = document.getElementById('doctorSearchInput');
             const specialitySelect = document.getElementById('specialitySelect');

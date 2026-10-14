@@ -368,7 +368,7 @@ header.nav,
 /* Floating pill adjustment on mobile screens */
 @media (max-width: 900px) {
     .floating-lang-pill {
-        bottom: 20px;
+        bottom: 22px;
         left: 16px;
         padding: 3px 5px;
     }
@@ -377,10 +377,10 @@ header.nav,
         padding: 4px 9px;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .floating-lang-pill {
-        bottom: 74px; /* prevents collision with mobile sticky action bar */
-        left: 14px;
+        bottom: 80px !important; /* prevents collision with mobile sticky action bar */
+        left: 14px !important;
     }
 }
 
