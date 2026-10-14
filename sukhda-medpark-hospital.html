@@ -18,14 +18,16 @@
             --blue: #052159;
             --blue-dark: #02163d;
             --blue-light: #0d6efd;
-            --cyan: #0aa5b8;
-            --cyan-light: #e5f8fa;
             --green: #278132;
             --green-light: #eaf5ec;
-            --pale: #f4f8fc;
+            --cyan: #278132;
+            --cyan-light: #eaf5ec;
+            --pale: #f2f7fb;
             --muted: #53677f;
             --line: #dce7f0;
             --card-shadow: 0 10px 30px rgba(5, 33, 89, 0.08);
+            --radius-lg: 16px;
+            --radius-md: 10px;
         }
 
         * {
@@ -108,7 +110,7 @@
         }
 
         .links a:hover {
-            color: #0aa5b8;
+            color: var(--green);
         }
 
         .links a.top-wa,
@@ -163,13 +165,13 @@
 
         .menu a:hover,
         .menu .on {
-            color: var(--cyan);
+            color: var(--green);
         }
 
         .menu .on:after {
             content: '';
             height: 3px;
-            background: var(--cyan);
+            background: var(--green);
             position: absolute;
             bottom: 12px;
             left: 0;
@@ -200,7 +202,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--cyan);
+            background: var(--green);
             color: #fff !important;
             padding: 10px 18px !important;
             border-radius: 8px;
@@ -210,9 +212,9 @@
         }
 
         .nav-cta:hover {
-            background: #088b9b !important;
+            background: #1e6627 !important;
             transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(10, 165, 184, 0.28);
+            box-shadow: 0 6px 16px rgba(39, 129, 50, 0.28);
         }
 
         @media(min-width: 901px) {
@@ -258,7 +260,7 @@
 
             .nav-drop a:hover {
                 background: var(--pale);
-                color: var(--cyan);
+                color: var(--green);
             }
 
             .nav-group:hover .nav-drop {
@@ -334,8 +336,8 @@
             }
 
             .mega-col-icon.medpark {
-                background: var(--cyan-light);
-                color: var(--cyan);
+                background: #e8f0fe;
+                color: var(--blue);
             }
 
             .mega-col-title {
@@ -379,8 +381,8 @@
             }
 
             .mega-col.medpark-col .mega-links-grid a:hover {
-                background: var(--cyan-light) !important;
-                color: var(--cyan) !important;
+                background: #eef4ff !important;
+                color: var(--blue) !important;
             }
         }
 
@@ -476,26 +478,15 @@
             text-align: center;
         }
 
+        .btn.primary,
         .btn.cyan {
-            background: var(--cyan);
-            color: #fff;
-            border-color: var(--cyan);
-        }
-
-        .btn.cyan:hover {
-            background: #088b9b;
-            border-color: #088b9b;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(10, 165, 184, 0.3);
-        }
-
-        .btn.primary {
             background: var(--green);
             color: #fff;
             border-color: var(--green);
         }
 
-        .btn.primary:hover {
+        .btn.primary:hover,
+        .btn.cyan:hover {
             background: #1f6b29;
             border-color: #1f6b29;
             transform: translateY(-2px);
@@ -521,9 +512,9 @@
         }
 
         .btn.outline:hover {
-            border-color: var(--cyan);
-            color: var(--cyan);
-            background: var(--cyan-light);
+            border-color: var(--green);
+            color: var(--green);
+            background: var(--pale);
         }
 
         .btn.white {
@@ -546,7 +537,7 @@
         }
 
         .kicker {
-            color: var(--cyan);
+            color: var(--green);
             font-weight: 800;
             letter-spacing: 1.2px;
             font-size: 13px;
@@ -578,13 +569,13 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: var(--cyan-light);
-            color: var(--cyan);
+            background: #eaf5ec;
+            color: var(--green);
             font-size: 12.5px;
             font-weight: 700;
             padding: 5px 12px;
             border-radius: 999px;
-            border: 1px solid rgba(10, 165, 184, 0.25);
+            border: 1px solid rgba(39, 129, 50, 0.2);
         }
 
         .badge-pill.blue {
@@ -607,7 +598,7 @@
 
         /* HERO SECTION */
         .medpark-hero {
-            background: linear-gradient(135deg, #02163d 0%, #052159 45%, #05436d 100%);
+            background: linear-gradient(135deg, #02163d 0%, #052159 60%, #0b3485 100%);
             color: #fff;
             padding: 60px 0 70px;
             position: relative;
@@ -618,7 +609,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 85% 15%, rgba(10, 165, 184, 0.25) 0%, transparent 60%);
+            background: radial-gradient(circle at 80% 20%, rgba(39, 129, 50, 0.18) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -648,7 +639,7 @@
         }
 
         .hero-title span {
-            color: #38e1f5;
+            color: #58db7a;
         }
 
         .hero-desc {
@@ -780,21 +771,21 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--cyan), var(--blue));
+            background: linear-gradient(90deg, var(--green), var(--blue));
         }
 
         .modality-card:hover {
             transform: translateY(-4px);
-            border-color: var(--cyan);
-            box-shadow: 0 16px 36px rgba(10, 165, 184, 0.15);
+            border-color: var(--green);
+            box-shadow: 0 16px 36px rgba(39, 129, 50, 0.15);
         }
 
         .mod-icon {
             width: 48px;
             height: 48px;
             border-radius: 12px;
-            background: var(--cyan-light);
-            color: var(--cyan);
+            background: var(--green-light);
+            color: var(--green);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -845,11 +836,11 @@
         .vision-medpark-box p.lead-vision {
             font-size: 16.5px;
             font-weight: 700;
-            color: #0b4975;
+            color: var(--blue);
             line-height: 1.6;
             margin-bottom: 24px;
             padding-left: 16px;
-            border-left: 3.5px solid var(--cyan);
+            border-left: 3.5px solid var(--green);
         }
 
         .mission-points-grid {
@@ -868,7 +859,7 @@
         }
 
         .m-point i {
-            color: var(--cyan);
+            color: var(--green);
             width: 18px;
             height: 18px;
             flex-shrink: 0;
@@ -892,7 +883,7 @@
         }
 
         .bio-head {
-            background: linear-gradient(135deg, #02163d 0%, #063968 100%);
+            background: linear-gradient(135deg, #02163d 0%, #052159 100%);
             color: #fff;
             padding: 24px 30px;
             display: flex;
@@ -910,7 +901,7 @@
 
         .bio-head p {
             font-size: 13.5px;
-            color: #bce3f7;
+            color: #b0c9e6;
             margin: 0;
         }
 
@@ -964,13 +955,13 @@
         }
 
         .equip-item:hover {
-            border-color: var(--cyan);
+            border-color: var(--green);
             transform: translateX(3px);
-            background: var(--cyan-light);
+            background: var(--green-light);
         }
 
         .equip-item i {
-            color: var(--cyan);
+            color: var(--green);
             width: 22px;
             height: 22px;
             flex-shrink: 0;
@@ -1032,7 +1023,7 @@
 
         /* CTA SECTION */
         .cta-banner {
-            background: linear-gradient(135deg, #02163d 0%, #05335e 100%);
+            background: linear-gradient(135deg, #02163d 0%, #052159 100%);
             color: #fff;
             padding: 50px 0;
             border-radius: 20px;
@@ -1106,7 +1097,7 @@
             left: 0;
             width: 32px;
             height: 2.5px;
-            background: var(--cyan);
+            background: var(--green);
         }
 
         .footer-nav {
@@ -1123,7 +1114,7 @@
         }
 
         .footer-nav a:hover {
-            color: #38e1f5;
+            color: #58db7a;
         }
 
         .footer-hospital-card {
@@ -1148,7 +1139,7 @@
         }
 
         .footer-hospital-card a {
-            color: #38e1f5;
+            color: #58db7a;
             font-weight: 700;
             font-size: 12.5px;
             display: inline-flex;
@@ -1220,9 +1211,18 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-        @media (min-width: 901px) {
+        @media (min-width: 768px) {
             .sticky-bottom-bar {
                 display: none !important;
+            }
+            body {
+                padding-bottom: 0 !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-bottom: 74px !important;
             }
         }
     </style>
@@ -1460,7 +1460,7 @@
                 </div>
 
                 <div class="hero-actions">
-                    <a href="tel:01662249473" class="btn cyan"><i data-lucide="phone-call"></i> Cancer Helpline: 01662-249473</a>
+                    <a href="tel:01662249473" class="btn primary"><i data-lucide="phone-call"></i> Cancer Helpline: 01662-249473</a>
                     <a href="#modalities" class="btn outline"><i data-lucide="crosshair"></i> Oncology Modalities</a>
                     <a href="#equipment" class="btn outline"><i data-lucide="cpu"></i> Advanced Equipment</a>
                 </div>
@@ -1473,7 +1473,7 @@
                         <h4>Delhi Road, Hisar, Haryana – 125005</h4>
                         <p>A Branch of Sukhda Healthcare • 50-Bed Super Speciality</p>
                     </div>
-                    <span class="badge-pill" style="background:#0aa5b8;color:#fff;border:none;">Cancer Institute</span>
+                    <span class="badge-pill" style="background:var(--green);color:#fff;border:none;">Cancer Institute</span>
                 </div>
             </div>
         </div>
@@ -1865,7 +1865,7 @@
             <h2>Have a Cancer Consultation or Second Opinion Query?</h2>
             <p>Speak with our dedicated Oncology Patient Care Coordinators to schedule a comprehensive review with our Surgical, Medical, or Radiation Oncologists.</p>
             <div class="cta-actions">
-                <a href="tel:01662249473" class="btn cyan"><i data-lucide="phone-call"></i> Call Oncology Desk: 01662-249473</a>
+                <a href="tel:01662249473" class="btn primary"><i data-lucide="phone-call"></i> Call Oncology Desk: 01662-249473</a>
                 <a href="https://wa.me/919996544005" target="_blank" class="btn white"><i data-lucide="message-circle"></i> WhatsApp Reports: +91 99965-44005</a>
                 <a href="sukhda-multispecialty-hospital.html" class="btn outline" style="background:transparent;color:#fff;border-color:rgba(255,255,255,0.4)"><i data-lucide="building-2"></i> View Sukhda Multispecialty Hospital</a>
             </div>

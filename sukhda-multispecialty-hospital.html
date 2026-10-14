@@ -1599,9 +1599,18 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-        @media (min-width: 901px) {
+        @media (min-width: 768px) {
             .sticky-bottom-bar {
                 display: none !important;
+            }
+            body {
+                padding-bottom: 0 !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-bottom: 74px !important;
             }
         }
     </style>
