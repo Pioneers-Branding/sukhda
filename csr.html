@@ -299,188 +299,247 @@
             display: none !important
         }
 
-        /* MEGA MENU */
+        /* MEGA MENU FOR OUR SERVICES */
         .nav-group.mega-group {
-            position: static
+            position: relative;
         }
 
-        .nav-drop.services-mega {
+        .services-mega {
+            display: none;
+            position: absolute;
+            top: 100%;
             left: 50%;
-            transform: translateX(-50%) translateY(10px);
-            width: min(1380px, calc(100% - 60px));
+            transform: translateX(-50%);
+            width: auto;
+            max-width: calc(100vw - 32px);
+            background: #ffffff;
+            border: 1px solid #d8e5f2;
+            border-radius: 14px;
+            box-shadow: 0 20px 48px rgba(3, 32, 90, 0.18), 0 4px 14px rgba(3, 32, 90, 0.06);
             padding: 0;
-            border-radius: 12px;
+            z-index: 1000;
             overflow: hidden;
-            border-top: 3px solid var(--green);
-            box-shadow: 0 18px 45px #05215930
+            animation: megaFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .nav-group.mega-group:hover .nav-drop.services-mega {
-            transform: translateX(-50%) translateY(0)
+        @keyframes megaFadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        .nav-group:hover .services-mega,
+        .nav-group.mega-group:hover .services-mega {
+            display: block;
         }
 
         .mega-body {
             display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            background: #fff
+            grid-template-columns: 1.16fr 0.94fr;
+            background: #fff;
         }
 
         .mega-col {
-            padding: 24px 28px
+            padding: 18px 20px 16px;
         }
 
         .mega-col.medpark-col {
-            background: #f8fbfa;
-            border-left: 1px solid var(--line)
+            background: #f7faff;
+            border-left: 1px solid #e3edf7;
         }
 
         .mega-col-header {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding-bottom: 14px;
-            margin-bottom: 16px;
-            border-bottom: 2px solid #eef3f7
+            gap: 10px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1.5px solid #edf3f8;
+        }
+
+        .mega-col.medpark-col .mega-col-header {
+            border-bottom-color: #dce7f3;
         }
 
         .mega-col-icon {
-            width: 38px;
-            height: 38px;
+            width: 34px;
+            height: 34px;
             border-radius: 8px;
             background: #eaf5ec;
             color: var(--green);
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0
+            flex-shrink: 0;
+        }
+
+        .mega-col-icon i,
+        .mega-col-icon svg {
+            width: 18px;
+            height: 18px;
         }
 
         .mega-col-icon.medpark {
             background: #e8f0fe;
-            color: #1a73e8
+            color: var(--blue);
         }
 
         .mega-col-title {
-            font-size: 16px;
+            font-size: 15.5px;
             font-weight: 800;
             color: var(--blue);
-            line-height: 1.2
+            line-height: 1.25;
+            letter-spacing: -0.2px;
         }
 
         .mega-col-sub {
             font-size: 12px;
+            font-weight: 600;
             color: var(--muted);
-            font-weight: 500;
-            margin-top: 2px
+            margin-top: 1px;
         }
 
         .mega-links-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 4px 14px
+            grid-template-columns: 1fr 1fr;
+            gap: 3px 8px;
         }
 
         .mega-links-grid.single-col {
-            grid-template-columns: 1fr;
-            gap: 4px
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
 
         .mega-links-grid a {
-            padding: 7px 10px;
-            font-size: 13.5px;
-            font-weight: 600;
-            color: #1a3353;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            transition: all 0.15s ease;
-            border-bottom: none
+            display: flex !important;
+            align-items: center !important;
+            gap: 7px !important;
+            padding: 7px 9px !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            color: #355070 !important;
+            border-radius: 6px !important;
+            border: 0 !important;
+            transition: all 0.16s ease !important;
+            text-decoration: none !important;
+            line-height: 1.25 !important;
         }
 
-        .mega-links-grid a i {
-            width: 15px;
-            height: 15px;
-            color: var(--green);
-            flex-shrink: 0;
-            transition: transform 0.15s ease
+        .mega-links-grid a i,
+        .mega-links-grid a svg {
+            width: 16px !important;
+            height: 16px !important;
+            color: var(--green) !important;
+            flex-shrink: 0 !important;
+            stroke-width: 2.2 !important;
         }
 
         .mega-links-grid a:hover {
-            background: #eaf5ec;
-            color: var(--green);
-            padding-left: 12px
+            background: #eaf5ec !important;
+            color: var(--green) !important;
+            transform: translateX(2px);
         }
 
-        .mega-links-grid a:hover i {
-            transform: scale(1.15)
+        .mega-col.medpark-col .mega-links-grid a i,
+        .mega-col.medpark-col .mega-links-grid a svg {
+            color: #0d6efd !important;
+        }
+
+        .mega-col.medpark-col .mega-links-grid a:hover {
+            background: #eef4ff !important;
+            color: var(--blue) !important;
         }
 
         .mega-links-grid a.featured-service {
-            background: #edf4fe;
-            border: 1px solid #d2e3fc;
-            padding: 10px 12px;
-            margin-bottom: 6px;
-            align-items: flex-start
+            background: #ffffff !important;
+            border: 1px solid #c9dcf0 !important;
+            border-left: 3.5px solid var(--green) !important;
+            padding: 8px 10px !important;
+            border-radius: 7px !important;
+            box-shadow: 0 2px 6px rgba(3, 32, 90, 0.05) !important;
+            margin-bottom: 3px;
         }
 
-        .mega-links-grid a.featured-service i {
-            color: #1a73e8;
-            margin-top: 3px;
-            width: 18px;
-            height: 18px
+        .mega-links-grid a.featured-service i,
+        .mega-links-grid a.featured-service svg {
+            color: var(--green) !important;
+            width: 20px !important;
+            height: 20px !important;
         }
 
         .mega-links-grid a.featured-service b {
             display: block;
-            font-size: 13.5px;
+            font-size: 14.5px;
             color: var(--blue);
-            line-height: 1.2
+            font-weight: 800;
         }
 
         .mega-links-grid a.featured-service small {
             display: block;
-            font-size: 11.5px;
-            color: #5f6368;
-            font-weight: 400;
-            margin-top: 2px
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 600;
+            margin-top: 1px;
+        }
+
+        .mega-links-grid a.featured-service:hover {
+            border-color: var(--green) !important;
+            border-left-color: var(--green) !important;
+            background: #f0faf2 !important;
+        }
+
+        .mega-links-grid a.featured-service:hover b {
+            color: var(--green) !important;
         }
 
         .mega-footer {
-            background: #052159;
-            color: #fff;
-            padding: 12px 28px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 13px
+            padding: 9px 20px;
+            background: #f1f6fa;
+            border-top: 1px solid #e1ecf6;
+            font-size: 13.5px;
         }
 
         .mega-view-all {
-            color: #278132;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            color: var(--green) !important;
+            font-weight: 800 !important;
+            font-size: 13.5px !important;
             padding: 0 !important;
-            transition: color 0.2s ease
+            border: 0 !important;
+            background: transparent !important;
         }
 
         .mega-view-all:hover {
-            color: #fff;
-            background: none !important
+            background: transparent !important;
+            text-decoration: underline !important;
         }
 
         .mega-emergency-tag {
-            color: #dce7f0;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 12.5px
+            color: var(--blue);
+            font-size: 11.5px;
+            font-weight: 600;
         }
 
-        .mega-emergency-tag b {
-            color: #ffb4b4
+        .mega-emergency-tag i,
+        .mega-emergency-tag svg {
+            width: 13px;
+            height: 13px;
+            color: var(--green);
         }
 
         .mobile-menu-head,
@@ -1157,8 +1216,7 @@
                 justify-content: space-between
             }
 
-            .nav-drop,
-            .nav-drop.services-mega {
+            .nav-drop {
                 position: static !important;
                 opacity: 1 !important;
                 visibility: visible !important;
@@ -1169,27 +1227,101 @@
                 background: #f8fafc !important;
                 padding: 0 !important;
                 border-radius: 0 !important;
-                border-top: none !important
+                border-top: none !important;
             }
 
             .nav-group.open .nav-drop {
-                display: block
+                display: block;
             }
 
-            .mega-body {
-                grid-template-columns: 1fr !important
+            /* MOBILE SERVICES MEGA ACCORDION */
+            .nav-group.open .services-mega {
+                display: flex !important;
+                flex-direction: column !important;
+                position: static !important;
+                transform: none !important;
+                width: 100% !important;
+                box-shadow: none !important;
+                border: 1px solid #e2edf6 !important;
+                border-radius: 8px !important;
+                margin: 0 0 10px !important;
+                padding: 0 !important;
+                background: #f7fafc !important;
+                overflow: hidden !important;
+                animation: none !important;
             }
 
-            .mega-links-grid {
-                grid-template-columns: 1fr !important
+            .services-mega .mega-body {
+                display: flex !important;
+                flex-direction: column !important;
+                background: transparent !important;
             }
 
-            .mega-col {
-                padding: 14px 20px !important
+            .services-mega .mega-col {
+                padding: 12px 14px !important;
             }
 
-            .mega-footer {
-                display: none
+            .services-mega .mega-col.medpark-col {
+                border-left: 0 !important;
+                border-top: 1px solid #e2edf6 !important;
+                background: #f1f7fc !important;
+            }
+
+            .services-mega .mega-col-header {
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+                margin-bottom: 8px !important;
+                padding-bottom: 8px !important;
+                border-bottom: 1px solid #e2edf6 !important;
+            }
+
+            .services-mega .mega-col-icon {
+                width: 28px !important;
+                height: 28px !important;
+                border-radius: 6px !important;
+            }
+
+            .services-mega .mega-col-icon i,
+            .services-mega .mega-col-icon svg {
+                width: 15px !important;
+                height: 15px !important;
+            }
+
+            .services-mega .mega-col-title {
+                font-size: 15px !important;
+                font-weight: 800 !important;
+            }
+
+            .services-mega .mega-col-sub {
+                font-size: 12px !important;
+            }
+
+            .services-mega .mega-links-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 0 !important;
+            }
+
+            .services-mega .mega-links-grid a {
+                padding: 8px 10px !important;
+                font-size: 14px !important;
+                border-bottom: 1px solid #edf3f8 !important;
+                border-radius: 0 !important;
+            }
+
+            .services-mega .mega-links-grid a:last-child {
+                border-bottom: 0 !important;
+            }
+
+            .services-mega .mega-footer {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 8px !important;
+                padding: 10px 14px !important;
+                background: #edf4fa !important;
+                border-top: 1px solid #dce7f2 !important;
             }
 
             .mobile-menu-footer {
@@ -1763,7 +1895,8 @@
                     <div class="csr-icon-wrap"><i data-lucide="map-pin"></i></div>
                     <h3 class="csr-card-title">Free Rural Multi-Speciality Camps</h3>
                     <p>Regular on-ground medical camps in remote villages across Hisar, Hansi, Narnaund, and Barwala.
-                        Senior physicians, gynaecologists, and paediatricians provide community health screening checkups, ECGs, blood
+                        Senior physicians, gynaecologists, and paediatricians provide community health screening
+                        checkups, ECGs, blood
                         glucose tests, and free prescription medicines.</p>
                     <div class="csr-stat-tag"><i data-lucide="check-circle"></i> 120+ Village Camps Completed Annually
                     </div>
@@ -1936,16 +2069,23 @@
                                 placeholder="Mention venue details (Panchayat Bhawan / School campus), specific health concerns in the village, or special requirements..."></textarea>
                         </div>
                         <div class="form-group form-full form-consent-wrap">
-                            <label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--muted)">
-                                <input type="checkbox" required checked style="margin-top:3px;accent-color:var(--green)">
-                                <span>I consent to Sukhda Healthcare contacting me regarding community health camps and volunteer programs in accordance with the <a href="privacy-policy.html" target="_blank" style="color:var(--green);text-decoration:underline">Privacy Policy</a>.</span>
+                            <label
+                                style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--muted)">
+                                <input type="checkbox" required checked
+                                    style="margin-top:3px;accent-color:var(--green)">
+                                <span>I consent to Sukhda Healthcare contacting me regarding community health camps and
+                                    volunteer programs in accordance with the <a href="privacy-policy.html"
+                                        target="_blank" style="color:var(--green);text-decoration:underline">Privacy
+                                        Policy</a>.</span>
                             </label>
                         </div>
                     </div>
                     <div style="text-align:center;margin-top:24px">
                         <button type="submit" class="btn primary" style="padding:14px 40px;font-size:16px"><i
                                 data-lucide="send"></i> Submit Camp Request</button>
-                        <p class="form-privacy-note"><i data-lucide="lock" style="width:12px;height:12px;vertical-align:middle"></i> Your details are confidential and protected under DPDP Act standards.</p>
+                        <p class="form-privacy-note"><i data-lucide="lock"
+                                style="width:12px;height:12px;vertical-align:middle"></i> Your details are confidential
+                            and protected under DPDP Act standards.</p>
                     </div>
                     <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:14px">For urgent CSR
                         coordinator inquiries, email <a href="mailto:csr@sukhdahospitalhisar.com"
@@ -1983,7 +2123,7 @@
                     <li><a href="doctor.html"><span>›</span> Find Doctors</a></li>
                     <li><a href="empanelled-corporate.html"><span>›</span> Cashless / Empanelled</a></li>
                     <li><a href="patient-stories.html"><span>›</span> Patient Stories</a></li>
-                <li><a href="privacy-policy.html"><span>›</span> Privacy Policy</a></li>
+                    <li><a href="privacy-policy.html"><span>›</span> Privacy Policy</a></li>
                     <li><a href="careers.html"><span>›</span> Careers</a></li>
                     <li><a href="csr.html"><span>›</span> CSR &amp; Community</a></li>
                     <li><a href="media-centre.html"><span>›</span> Media Centre</a></li>
@@ -2047,17 +2187,25 @@
                 </div>
             </div>
         </div>
-            <!-- COMPLIANCE & LEGAL DISCLAIMERS -->
-    <div class="footer-disclaimers">
-        <div class="wrap">
-            <p><strong>AI-Generated Content Disclaimer:</strong> Certain images, illustrations, or textual content on this website may be generated or assisted by artificial intelligence (AI). Such content is intended for informational and illustrative purposes only. AI-generated content is not intended to misrepresent actual patients, medical professionals, clinical outcomes, or healthcare services.</p>
-            <p><strong>Medical &amp; Regulatory Notice:</strong> This website is published for informational and health educational purposes only in accordance with National Medical Commission (NMC) professional regulations and the Digital Personal Data Protection (DPDP) Act, 2023. It does not constitute medical advice or a guarantee of treatment outcome. Always consult a qualified medical specialist for clinical diagnosis and treatment. | <a href="privacy-policy.html">Privacy Policy</a></p>
-        </div>
-    </div>
-
-    <div class="bottom">
+        <!-- COMPLIANCE & LEGAL DISCLAIMERS -->
+        <div class="footer-disclaimers">
             <div class="wrap">
-                <span>© 2026 Sukhda Healthcare. All rights reserved. &bull; <a href="privacy-policy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a></span>
+                <p><strong>AI-Generated Content Disclaimer:</strong> Certain images, illustrations, or textual content
+                    on this website may be generated or assisted by artificial intelligence (AI). Such content is
+                    intended for informational and illustrative purposes only. AI-generated content is not intended to
+                    misrepresent actual patients, medical professionals, clinical outcomes, or healthcare services.</p>
+                <p><strong>Medical &amp; Regulatory Notice:</strong> This website is published for informational and
+                    health educational purposes only in accordance with National Medical Commission (NMC) professional
+                    regulations and the Digital Personal Data Protection (DPDP) Act, 2023. It does not constitute
+                    medical advice or a guarantee of treatment outcome. Always consult a qualified medical specialist
+                    for clinical diagnosis and treatment. | <a href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="wrap">
+                <span>© 2026 Sukhda Healthcare. All rights reserved. &bull; <a href="privacy-policy.html"
+                        style="color:inherit;text-decoration:underline">Privacy Policy</a></span>
                 <div class="bottom-badges">
                     <span><i data-lucide="map-pin"></i> Hisar, Haryana</span>
                     <span><i data-lucide="shield-check"></i> NABH Accredited</span>

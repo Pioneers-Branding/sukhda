@@ -1605,69 +1605,126 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="assets/css/translate.css">
+    <link rel="stylesheet" href="include/header-footer.css">
 </head>
 
 <body>
 
-    <!-- TOP BAR -->
-    <div class="top">
+        <div class="top">
         <div class="wrap">
             <div class="links">
-                <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><i data-lucide="message-circle"></i> WhatsApp Us (24/7)</a>
-                <a href="tel:01662249473" class="top-emergency"><b>☎ 01662-249473 (24/7 Emergency Helpline)</b></a>
+                <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><svg class="wa-icon-svg"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                        style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
+                        <path fill="#25D366"
+                            d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                        <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    </svg> WhatsApp: 99965-44005</a>
+                <a href="tel:01662249473" class="top-emergency" style="color:#ff4d4f"><b>☎ 01662-249473 (24/7
+                        ER)</b></a>
             </div>
             <div class="links">
-                <a href="index.html#empanelled">Cashless / TPA</a>
-                <a href="index.html#specialities">OPD Schedule</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="empanelled-corporate.html" style="color:#278132;font-weight:700">Cashless / TPA</a>
+                <a href="opd-schedule.html">OPD Schedule</a>
+                <div class="top-lang-switch notranslate" aria-label="Language selection">
+                    <button type="button" class="lang-btn active" data-lang="en" onclick="switchLanguage('en')"><i
+                            data-lucide="globe" style="width:13px;height:13px"></i> English</button>
+                    <span class="lang-sep">|</span>
+                    <button type="button" class="lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- MAIN NAVIGATION -->
+    <!-- MAIN HEADER & NAVIGATION -->
     <header class="nav">
         <div class="wrap">
             <a href="index.html" aria-label="Sukhda Healthcare home">
                 <img class="logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
             </a>
-            <button class="hamb" aria-label="Open mobile menu"><i data-lucide="menu"></i></button>
-            <div class="nav-overlay"></div>
             <nav class="menu">
                 <div class="mobile-menu-head">
-                    <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital" style="width:160px">
+                    <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
                     <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
                 </div>
+                <div class="mobile-lang-wrap notranslate">
+                    <span class="mobile-lang-label"><i data-lucide="languages" style="width:14px;height:14px"></i> भाषा
+                        / Language</span>
+                    <div class="mobile-lang-pills">
+                        <button type="button" class="mobile-lang-btn active" data-lang="en"
+                            onclick="switchLanguage('en')">English</button>
+                        <button type="button" class="mobile-lang-btn" data-lang="hi"
+                            onclick="switchLanguage('hi')">हिन्दी</button>
+                    </div>
+                </div>
                 <div class="mobile-nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
                     <span class="nav-group">
-                        <a class="on" href="index.html#hospitals">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="about.html">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
                         <span class="nav-drop">
-                            <a href="sukhda-multispecialty-hospital.html" style="color:var(--green);font-weight:700;">• Sukhda Multispecialty Hospital</a>
-                            <a href="sukhda-medpark-hospital.html">• Sukhda MedPark (Cancer &amp; Super Speciality)</a>
+                            <a href="about.html#about">About Sukhda</a>
+                            <a href="about.html#leadership">Medical Leadership</a>
+                            <a href="about.html#vision">Vision &amp; Mission</a>
+                            <a href="about.html#hospitals">Our Hospitals</a>
+                            <a href="about.html#infrastructure">Infrastructure &amp; Facilities</a>
+                        </span>
+                    </span>
+                    <span class="nav-group">
+                        <a href="index.html#hospitals">Our Hospitals <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
+                            <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super Speciality)</a>
                         </span>
                     </span>
                     <span class="nav-group mega-group">
-                        <a href="index.html#specialities">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="index.html#specialities">Our Services <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
                         <div class="nav-drop services-mega">
                             <div class="mega-body">
                                 <div class="mega-col">
                                     <div class="mega-col-header">
                                         <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
                                         <div>
-                                            <div class="mega-col-title">Sukhda Multispecialty Hospital</div>
-                                            <div class="mega-col-sub">125-Bed NABH Accredited &amp; DNB Teaching Centre</div>
+                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                            <div class="mega-col-sub">NABH Accredited Multi-Speciality &amp; DNB Centre
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="mega-links-grid">
-                                        <a href="#cathlab"><i data-lucide="heart-pulse"></i><span>Cardiology &amp; Cath Lab</span></a>
-                                        <a href="#dialysis"><i data-lucide="droplets"></i><span>8-Bed Dialysis Unit</span></a>
-                                        <a href="#icu"><i data-lucide="activity"></i><span>35-Bed ICU / MICU</span></a>
-                                        <a href="#operation-theatres"><i data-lucide="shield-check"></i><span>4 Modular OT Suites</span></a>
-                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obs</span></a>
-                                        <a href="#departments"><i data-lucide="bone"></i><span>3D Knee &amp; Orthopaedics</span></a>
-                                        <a href="#departments"><i data-lucide="stethoscope"></i><span>Internal Medicine (DNB)</span></a>
-                                        <a href="#departments"><i data-lucide="scan"></i><span>CT Scan &amp; Radiology</span></a>
+                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
+                                                Obstetrics</span></a>
+                                        <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Interventional
+                                                Cardiology</span></a>
+                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
+                                                Dialysis</span></a>
+                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedics &amp;
+                                                3D Knee Resurfacing</span></a>
+                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Internal
+                                                Medicine (DNB Centre)</span></a>
+                                        <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>General
+                                                &amp; Laparoscopic Surgery</span></a>
+                                        <a href="bariatric-surgery.html"><i data-lucide="activity"></i><span>Advanced
+                                                Laparoscopy &amp; Bariatric</span></a>
+                                        <a href="urology.html"><i data-lucide="activity"></i><span>Urology &amp;
+                                                Endourology</span></a>
+                                        <a href="ent.html"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp;
+                                                Throat)</span></a>
+                                        <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology &amp;
+                                                Cosmetology</span></a>
+                                        <a href="radiology.html"><i data-lucide="scan"></i><span>CT Scan &amp; Radiology
+                                                Imaging</span></a>
+                                        <a href="emergency-trauma.html"><i data-lucide="zap"></i><span>24/7 Emergency
+                                                &amp; Trauma Care</span></a>
+                                        <a href="critical-care.html"><i data-lucide="activity"></i><span>Critical Care
+                                                &amp; ICU</span></a>
+                                        <a href="psychiatry.html"><i data-lucide="heart"></i><span>Psychiatry &amp;
+                                                Rehabilitation</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesiology
+                                                &amp; Pain Management</span></a>
+                                        <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy
+                                                &amp; Rehabilitation</span></a>
                                     </div>
                                 </div>
                                 <div class="mega-col medpark-col">
@@ -1678,22 +1735,74 @@
                                             <div class="mega-col-sub">Cancer &amp; Super Speciality Hospital</div>
                                         </div>
                                     </div>
-                                    <div class="mega-links-grid">
-                                        <a href="sukhda-medpark-hospital.html#oncology"><i data-lucide="crosshair"></i><span>Medical &amp; Surgical Oncology</span></a>
-                                        <a href="sukhda-medpark-hospital.html#linac"><i data-lucide="zap"></i><span>Radiation Oncology (LINAC)</span></a>
-                                        <a href="sukhda-medpark-hospital.html#biosafety"><i data-lucide="shield"></i><span>Class II Biosafety Cabinet</span></a>
-                                        <a href="sukhda-medpark-hospital.html#chemo"><i data-lucide="syringe"></i><span>Day Care Chemo Suites</span></a>
+                                    <div class="mega-links-grid single-col">
+                                        <a href="medical-oncology.html" class="featured-service">
+                                            <i data-lucide="ribbon"></i>
+                                            <div>
+                                                <b>Medical Oncology (Chemo &amp; Daycare)</b>
+                                                <small>Chemotherapy Suite, Biosafety &amp; Immunotherapy</small>
+                                            </div>
+                                        </a>
+                                        <a href="surgical-oncology.html"><i
+                                                data-lucide="shield-alert"></i><span>Surgical Oncology (Modular
+                                                OTs)</span></a>
+                                        <a href="radiation-oncology.html"><i data-lucide="scan"></i><span>Radiation
+                                                Oncology (LINAC)</span></a>
+                                        <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neuro Surgery &amp;
+                                                Spine</span></a>
+                                        <a href="gastroenterology.html"><i
+                                                data-lucide="activity"></i><span>Gastroenterology &amp;
+                                                Hepatology</span></a>
+                                        <a href="urology.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy
+                                                &amp; Urology</span></a>
+                                        <a href="critical-care.html"><i data-lucide="stethoscope"></i><span>Critical
+                                                Care &amp; Tumour Board</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="heart"></i><span>Pain &amp;
+                                                Palliative Care Unit</span></a>
+                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Digital Mammography
+                                                &amp; Diagnostics</span></a>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="index.html#specialities" class="mega-view-all"><i
+                                        data-lucide="layout-grid"></i> View All 21 Clinical Specialities &amp; Services
+                                    &rarr;</a>
+                                <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24/7 ER:
+                                    <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" width="16" height="16"
+                                        style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
+                                        <path fill="#25D366"
+                                            d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                        <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                                    </svg> WhatsApp: <b>+91 99965-44005</b>
                                 </div>
                             </div>
                         </div>
                     </span>
                     <a href="doctor.html">Doctors</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="tel:01662249473" class="nav-cta"><i data-lucide="phone-call"></i> 01662-249473</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">Resources <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="media-centre.html#blogs">Blogs</a>
+                            <a href="csr.html">CSR</a>
+                            <a href="careers.html">Careers</a>
+                        </span>
+                    </span>
+                </div>
+                <div class="mobile-menu-footer">
+                    <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+                    <a class="btn" href="tel:01662249473"
+                        style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i
+                            data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473</a>
                 </div>
             </nav>
+            <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+            <button class="hamb" aria-label="Open menu">☰</button>
         </div>
+        <div class="nav-overlay"></div>
     </header>
 
     <!-- HERO SECTION -->
@@ -2468,17 +2577,22 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
+        <!-- FOOTER -->
     <footer class="footer">
         <div class="wrap footer-grid">
             <div>
-                <img class="footer-logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispecialty Hospital Hisar">
-                <p class="footer-desc">Providing compassionate, advanced, and affordable multispeciality healthcare across Hisar and Haryana since 2002 under Dr. Amit Mehta's leadership.</p>
-                <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);padding:10px 14px;border-radius:8px">
-                    <img src="assets/images/nabh.jpg" alt="NABH Accredited" style="width:40px;height:auto">
+                <div class="footer-brand-wrap">
+                    <img class="footer-logo" src="assets/images/sukhda-logo.png"
+                        alt="Sukhda Multispeciality Hospital Hisar">
+                </div>
+                <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
+                <p class="footer-desc">Providing quality, compassionate, and comprehensive medical, surgical,
+                    cancer, and emergency healthcare services across Hisar since 2002.</p>
+                <div class="footer-nabh-badge">
+                    <img src="assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
                     <div>
-                        <b style="color:#fff;font-size:13px">NABH Accredited Hospital</b>
-                        <small style="display:block;color:#a0bcd9;font-size:11.5px">Cert: H-2020-0707</small>
+                        <b>NABH Accredited</b>
+                        <small>Highest Healthcare Quality Standards</small>
                     </div>
                 </div>
             </div>
@@ -2486,101 +2600,145 @@
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul class="footer-nav">
-                    <li><a href="index.html">› Home</a></li>
-                    <li><a href="about.html">› About Sukhda</a></li>
-                    <li><a href="#timeline">› Growth Timeline</a></li>
-                    <li><a href="#cathlab">› Cath Lab &amp; Cardiology</a></li>
-                    <li><a href="#dialysis">› Dialysis Department</a></li>
-                    <li><a href="#bed-matrix">› Bed &amp; Room Matrix</a></li>
-                    <li><a href="doctor.html">› Our Specialist Doctors</a></li>
-                    <li><a href="contact.html">› Contact &amp; Location</a></li>
+                    <li><a href="index.html"><span>›</span> Home</a></li>
+                    <li><a href="about.html"><span>›</span> About Sukhda</a></li>
+                    <li><a href="doctor.html"><span>›</span> Find Doctors</a></li>
+                    <li><a href="empanelled-corporate.html"><span>›</span> Cashless / Empanelled</a></li>
+                    <li><a href="patient-stories.html"><span>›</span> Patient Stories</a></li>
+                <li><a href="privacy-policy.html"><span>›</span> Privacy Policy</a></li>
+                    <li><a href="careers.html"><span>›</span> Careers</a></li>
+                    <li><a href="csr.html"><span>›</span> CSR &amp; Community</a></li>
+                    <li><a href="media-centre.html"><span>›</span> Media Centre</a></li>
+                    <li><a href="contact.html"><span>›</span> Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Our Hospital Network</h4>
-                <div class="footer-hospital-card">
-                    <b>Sukhda Multispecialty Hospital</b>
-                    <p>Delhi Road, Opposite Green Belt, Hisar – 125001</p>
-                    <a href="tel:01662249473"><i data-lucide="phone"></i> 01662-249473 / 248473</a>
-                </div>
-                <div class="footer-hospital-card">
-                    <b>Sukhda MedPark (Cancer Institute)</b>
-                    <p>Delhi Road, Hisar – 125005</p>
-                    <a href="tel:+919996544005"><i data-lucide="phone"></i> +91 99965-44005</a>
-                </div>
+                <h4>Our Hospitals</h4>
+                <a href="sukhda-multispecialty-hospital.html" class="footer-hospital-card">
+                    <div class="f-hosp-logo-wrap">
+                        <img src="assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Multispeciality Hospital"
+                            class="f-hosp-logo">
+                    </div>
+                    <div class="f-hosp-header">
+                        <b>Sukhda Multispeciality Hospital</b>
+                    </div>
+                    <p>Delhi Road, Model Town, Hisar, Haryana 125005</p>
+                </a>
+                <a href="sukhda-medpark-hospital.html" class="footer-hospital-card">
+                    <div class="f-hosp-logo-wrap">
+                        <img src="assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark" class="f-hosp-logo">
+                    </div>
+                    <div class="f-hosp-header">
+                        <b>Sukhda MedPark</b>
+                    </div>
+                    <p class="f-hosp-sub">Cancer &amp; Super Speciality Hospital</p>
+                    <p>NH 1P-4P, Sector-5, Hisar</p>
+                </a>
             </div>
 
             <div class="footer-col">
-                <h4>24/7 Emergency &amp; Support</h4>
-                <div style="background:rgba(39,129,50,0.15);border:1px solid rgba(39,129,50,0.3);padding:14px;border-radius:10px;margin-bottom:14px">
-                    <small style="color:#81d491;font-weight:700">24/7 EMERGENCY HELPLINE</small>
-                    <a href="tel:01662249473" style="display:block;color:#fff;font-size:18px;font-weight:900;margin-top:2px">01662-249473</a>
+                <h4>24/7 Emergency &amp; OPD</h4>
+                <div class="footer-emergency-box">
+                    <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
+                    <div>
+                        <small>24/7 Emergency Helpline</small>
+                        <a href="tel:01662249473" class="f-emg-num">01662-249473, 248473</a>
+                        <a href="tel:9996648483" class="f-emg-num-sub">+91 99966-48483</a>
+                    </div>
                 </div>
-                <p style="font-size:12.5px;color:#a0bcd9;line-height:1.5">
-                    <strong>Email:</strong> info@sukhdahospitalhisar.com<br>
-                    <strong>WhatsApp:</strong> +91 99965-44005
-                </p>
+                <div class="footer-contact-list">
+                    <a href="mailto:sukhdahospital@gmail.com" class="f-cnt-item">
+                        <i data-lucide="mail"></i>
+                        <span>sukhdahospital@gmail.com</span>
+                    </a>
+                    <a href="https://wa.me/919996544005" target="_blank" class="f-cnt-item whatsapp">
+                        <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
+                            height="18" style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
+                            <path fill="#25D366"
+                                d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                            <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        </svg>
+                        <span>WhatsApp: +91 99965-44005</span>
+                    </a>
+                </div>
+                <div class="footer-motto">
+                    <i data-lucide="heart-handshake"></i>
+                    <span>Compassionate Care for Whole Family</span>
+                </div>
             </div>
         </div>
+            <!-- COMPLIANCE & LEGAL DISCLAIMERS -->
+    <div class="footer-disclaimers">
+        <div class="wrap">
+            <p><strong>AI-Generated Content Disclaimer:</strong> Certain images, illustrations, or textual content on this website may be generated or assisted by artificial intelligence (AI). Such content is intended for informational and illustrative purposes only. AI-generated content is not intended to misrepresent actual patients, medical professionals, clinical outcomes, or healthcare services.</p>
+            <p><strong>Medical &amp; Regulatory Notice:</strong> This website is published for informational and health educational purposes only in accordance with National Medical Commission (NMC) professional regulations and the Digital Personal Data Protection (DPDP) Act, 2023. It does not constitute medical advice or a guarantee of treatment outcome. Always consult a qualified medical specialist for clinical diagnosis and treatment. | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </div>
 
-        <div class="bottom">
+    <div class="bottom">
             <div class="wrap">
-                <span>© 2026 Sukhda Healthcare (A Unit of Vandam Healthcare Pvt. Ltd.). All rights reserved.</span>
-                <div style="display:flex;gap:18px">
-                    <span>Delhi Road, Hisar</span>
-                    <span>NABH Accredited (125 Beds)</span>
-                    <span>DNB Teaching Centre</span>
+                <span>© 2026 Sukhda Healthcare. All rights reserved. &bull; <a href="privacy-policy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a></span>
+                <div class="bottom-badges">
+                    <span><i data-lucide="map-pin"></i> Hisar, Haryana</span>
+                    <span><i data-lucide="shield-check"></i> NABH Accredited</span>
+                    <span><i data-lucide="phone"></i> 24/7 ER: 01662-249473</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- STICKY MOBILE CTA -->
+    <!-- STICKY BOTTOM FLOATING PILL CTA -->
     <div class="sticky-bottom-bar" aria-label="Quick Actions">
         <a href="contact.html" class="sticky-bar-item">
-            <i data-lucide="calendar"></i>
-            <span>Book OPD</span>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="4" rx="3"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line>
+                <line x1="8" x2="8" y1="2" y2="6"></line>
+                <line x1="3" x2="21" y1="10" y2="10"></line>
+                <path d="m9 16 2 2 4-4"></path>
+            </svg>
+            <span>Book Now</span>
         </a>
         <div class="sticky-bar-divider"></div>
         <a href="tel:01662249473" class="sticky-bar-item">
-            <i data-lucide="phone-call"></i>
-            <span>Call 24/7</span>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+            </svg>
+            <span>Call Now</span>
         </a>
         <div class="sticky-bar-divider"></div>
-        <a href="https://wa.me/919996544005" target="_blank" class="sticky-bar-item" style="color:#25D366">
-            <i data-lucide="message-circle"></i>
+        <a href="https://wa.me/919996544005" target="_blank" rel="noopener" class="sticky-bar-item whatsapp">
+            <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
+                <path fill="#25D366"
+                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            </svg>
             <span>WhatsApp</span>
         </a>
     </div>
 
-    <!-- SCRIPTS -->
-    <script>
-        const renderIcons = () => {
-            if (window.lucide) lucide.createIcons({ attrs: { 'stroke-width': 1.8 } });
-        };
-        renderIcons();
-        document.addEventListener('DOMContentLoaded', renderIcons);
-        window.addEventListener('load', renderIcons);
+    <!-- FLOATING LANGUAGE TOGGLE (English / हिन्दी) -->
+    <div class="floating-lang-pill notranslate" aria-label="Select Language">
+        <span class="f-icon"><i data-lucide="languages" style="width:15px;height:15px"></i></span>
+        <button type="button" class="f-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
+        <span class="f-sep">|</span>
+        <button type="button" class="f-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+    </div>
 
-        // Mobile drawer toggle
-        (function () {
-            const nav = document.querySelector('.nav');
-            const hamb = document.querySelector('.hamb');
-            const closeBtn = document.querySelector('.mobile-close-btn');
-            const overlay = document.querySelector('.nav-overlay');
-            if (!nav || !hamb) return;
+    <!-- Google Translate Script Container -->
+    <div id="google_translate_element"></div>
+    <script src="assets/js/translate.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-            const toggle = (open) => {
-                nav.classList.toggle('open', open);
-                document.body.style.overflow = open ? 'hidden' : '';
-            };
-
-            hamb.addEventListener('click', () => toggle(true));
-            if (closeBtn) closeBtn.addEventListener('click', () => toggle(false));
-            if (overlay) overlay.addEventListener('click', () => toggle(false));
-        })();
-    </script>
+    <script src="include/include.js"></script>
 </body>
 
 </html>
