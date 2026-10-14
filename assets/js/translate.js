@@ -5,31 +5,53 @@
  */
 
 (function () {
-    // Cookie management for Google Translate
+    // Robust Cookie management for Google Translate across all domains and paths
+    function getDomainList() {
+        var host = window.location.hostname;
+        var domains = [''];
+        if (host && host !== 'localhost' && !/^[0-9.]+$/.test(host)) {
+            domains.push(host);
+            var parts = host.split('.');
+            if (parts.length >= 2) {
+                var rootDomain = parts.slice(-2).join('.');
+                domains.push('.' + rootDomain);
+                domains.push('.' + host);
+            }
+        }
+        return domains;
+    }
+
     function setGoogleTransCookie(lang) {
         var cookieVal = '/en/' + lang;
-        var hostname = window.location.hostname;
-        var domains = [
-            hostname,
-            '.' + hostname,
-            ''
-        ];
+        var domains = getDomainList();
         domains.forEach(function (d) {
             var domainStr = d ? '; domain=' + d : '';
-            document.cookie = 'googtrans=' + cookieVal + '; path=/' + domainStr;
-            document.cookie = 'googtrans=' + cookieVal + '; path=' + window.location.pathname + domainStr;
+            document.cookie = 'googtrans=' + cookieVal + '; path=/; max-age=31536000; SameSite=Lax' + domainStr;
+            document.cookie = 'googtrans=' + cookieVal + '; path=/; expires=Fri, 31 Dec 2030 23:59:59 GMT' + domainStr;
         });
     }
 
     function clearGoogleTransCookie() {
-        var hostname = window.location.hostname;
-        var domains = [hostname, '.' + hostname, ''];
+        var domains = getDomainList();
+        var paths = ['/', window.location.pathname];
         domains.forEach(function (d) {
             var domainStr = d ? '; domain=' + d : '';
-            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/' + domainStr;
-            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=' + window.location.pathname + domainStr;
+            paths.forEach(function (p) {
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=' + p + domainStr;
+            });
         });
     }
+
+    // Immediately synchronize cookies based on localStorage upon script load
+    (function syncInitialCookie() {
+        var current = localStorage.getItem('sukhda_site_lang') || 'en';
+        if (current === 'hi') {
+            setGoogleTransCookie('hi');
+        } else {
+            clearGoogleTransCookie();
+            setGoogleTransCookie('en');
+        }
+    })();
 
     // UI button state synchronization
     function updateLanguageUI(lang) {
@@ -42,62 +64,93 @@
             }
         });
     }
+    window.syncLanguageUI = function () {
+        var lang = localStorage.getItem('sukhda_site_lang') || 'en';
+        updateLanguageUI(lang);
+    };
 
     // Trigger Google Translate dropdown
     function triggerGoogleTranslateCombo(lang) {
         var teCombo = document.querySelector('.goog-te-combo');
-        if (teCombo) {
-            teCombo.value = lang;
-            teCombo.dispatchEvent(new Event('change'));
-            return true;
+        if (!teCombo) return false;
+
+        // Ensure options have been populated by Google Translate
+        var targetOption = teCombo.querySelector('option[value="' + lang + '"]');
+        if (!targetOption && teCombo.options.length <= 1) {
+            return false;
         }
-        return false;
+
+        if (teCombo.value !== lang) {
+            teCombo.value = lang;
+            teCombo.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
+            teCombo.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
+            if (typeof teCombo.onchange === 'function') {
+                teCombo.onchange();
+            }
+        }
+        return teCombo.value === lang;
     }
 
     // Global switcher called by UI buttons
     window.switchLanguage = function (lang) {
         var prevLang = localStorage.getItem('sukhda_site_lang') || 'en';
-        if (lang === prevLang && !document.querySelector('.goog-te-combo')) {
-            return;
-        }
-
         localStorage.setItem('sukhda_site_lang', lang);
         updateLanguageUI(lang);
 
         if (lang === 'en') {
             clearGoogleTransCookie();
             setGoogleTransCookie('en');
-            // If returning to English from Hindi, retrigger combo or reload for crisp reset
-            if (prevLang === 'hi') {
-                var teCombo = document.querySelector('.goog-te-combo');
-                if (teCombo) {
-                    teCombo.value = 'en';
-                    teCombo.dispatchEvent(new Event('change'));
-                    setTimeout(function () {
-                        window.location.reload();
-                    }, 250);
-                } else {
-                    window.location.reload();
-                }
-                return;
+            var teComboEn = document.querySelector('.goog-te-combo');
+            if (teComboEn) {
+                teComboEn.value = 'en';
+                teComboEn.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
             }
-        } else {
-            setGoogleTransCookie(lang);
+            if (prevLang === 'hi') {
+                setTimeout(function () {
+                    window.location.reload();
+                }, 200);
+            }
+            return;
         }
 
-        if (!triggerGoogleTranslateCombo(lang)) {
+        // Switching to Hindi
+        setGoogleTransCookie('hi');
+        if (!triggerGoogleTranslateCombo('hi')) {
             var pollCount = 0;
             var pollInterval = setInterval(function () {
                 pollCount++;
-                if (triggerGoogleTranslateCombo(lang) || pollCount > 25) {
+                var comboReady = triggerGoogleTranslateCombo('hi');
+                var isTranslated = document.documentElement.classList.contains('translated-ltr') ||
+                                   document.documentElement.classList.contains('translated-rtl');
+                if ((comboReady && isTranslated) || pollCount > 30) {
                     clearInterval(pollInterval);
-                    if (pollCount > 25) {
+                    if (!isTranslated && pollCount > 30) {
                         window.location.reload();
                     }
                 }
-            }, 120);
+            }, 100);
         }
     };
+
+    // Auto-translation observer / checker
+    function ensureAutoTranslate(targetLang) {
+        if (targetLang !== 'hi') return;
+
+        var attempts = 0;
+        var maxAttempts = 80; // 8 seconds of verification
+        var autoTimer = setInterval(function () {
+            attempts++;
+            var isTranslated = document.documentElement.classList.contains('translated-ltr') ||
+                               document.documentElement.classList.contains('translated-rtl') ||
+                               !!document.querySelector('font');
+
+            var comboSuccess = triggerGoogleTranslateCombo('hi');
+
+            if (isTranslated || attempts >= maxAttempts) {
+                clearInterval(autoTimer);
+            }
+        }, 100);
+    }
 
     // Google Translate Element callback
     window.googleTranslateElementInit = function () {
@@ -113,23 +166,15 @@
             autoDisplay: false
         }, 'google_translate_element');
 
-        var savedLang = localStorage.getItem('sukhda_site_lang');
-        if (!savedLang) {
-            var m = document.cookie.match(/googtrans=\/en\/([a-z]{2})/i);
-            if (m) savedLang = m[1];
-        }
-        if (!savedLang) savedLang = 'en';
-
+        var savedLang = localStorage.getItem('sukhda_site_lang') || 'en';
         updateLanguageUI(savedLang);
 
         if (savedLang === 'hi') {
-            var attempts = 0;
-            var timer = setInterval(function () {
-                attempts++;
-                if (triggerGoogleTranslateCombo('hi') || attempts > 35) {
-                    clearInterval(timer);
-                }
-            }, 100);
+            setGoogleTransCookie('hi');
+            ensureAutoTranslate('hi');
+        } else {
+            clearGoogleTransCookie();
+            setGoogleTransCookie('en');
         }
     };
 
