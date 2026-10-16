@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Dr. Bharath — Senior Consultant — Gastroenterology &amp; Hepatology | Sukhda Hospital Hisar</title>
+    <title>Dr. Bharath — Consultant &amp; H.O.D — Gastroenterology, Hepatology &amp; Endoscopy | Sukhda Hospital Hisar</title>
     <meta name="description"
-        content="Consult Dr. Bharath, Senior Consultant — Gastroenterology &amp; Hepatology at Sukhda Healthcare Hisar. DM (Gastroenterology), MD (Medicine), MBBS. Experience: 13+ Years. Book OPD appointment online or call 01662-249473.">
+        content="Dr. Bharath, Consultant &amp; H.O.D — Gastroenterology, Hepatology &amp; Endoscopy at Sukhda Multispeciality Hospital, Hisar. DM (Gastroenterology), MD (General Medicine), M.B.B.S. View qualifications, experience and OPD timings. Book OPD or call 01662-249473.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -43,7 +43,7 @@
             color: var(--blue);
             font: 15.5px/1.6 'Lato', sans-serif;
             background: #fff;
-            overflow-x: hidden;
+            overflow-x: clip;
         }
 
         h1,
@@ -1082,63 +1082,96 @@
             line-height: 1.5;
         }
 
+        /* RESEARCH & PUBLICATIONS LIST */
+        .pub-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .pub-list li {
+            position: relative;
+            padding: 12px 16px 12px 40px;
+            background: #f7fafc;
+            border: 1px solid #e2edf6;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.55;
+            color: #3b5168;
+        }
+
+        .pub-list li::before {
+            content: '';
+            position: absolute;
+            left: 17px;
+            top: 19px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+        }
+
         /* SIDEBAR / APPOINTMENT CARD */
         .doc-sidebar {
             position: sticky;
             top: 100px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 20px;
+            align-self: start;
         }
 
         .booking-card {
             background: #fff;
             border-radius: 16px;
             border: 1.5px solid #c9dfef;
-            padding: 30px;
+            padding: 22px 24px;
             box-shadow: var(--shadow-md);
         }
 
         .booking-header {
-            margin-bottom: 22px;
+            margin-bottom: 14px;
             text-align: center;
-            padding-bottom: 18px;
+            padding-bottom: 12px;
             border-bottom: 1px solid var(--line);
         }
 
         .booking-header h3 {
-            font-size: 20px;
-            margin: 0 0 6px;
+            font-size: 19px;
+            margin: 0 0 4px;
             color: var(--blue);
             font-weight: 900;
         }
 
         .booking-header p {
             margin: 0;
-            font-size: 13.5px;
+            font-size: 12.5px;
             color: var(--muted);
         }
 
         .form-group {
-            margin-bottom: 16px;
+            margin-bottom: 11px;
         }
 
         .form-group label {
             display: block;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 800;
             color: var(--blue);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .form-control {
             width: 100%;
-            height: 44px;
+            height: 38px;
             border: 1px solid #c4d7e8;
             border-radius: 8px;
-            padding: 0 14px;
+            padding: 0 12px;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13.5px;
             color: var(--blue);
             background: #fff;
             transition: border-color 0.2s;
@@ -1156,20 +1189,20 @@
 
         .booking-help-box {
             background: var(--pale);
-            border-radius: 10px;
-            padding: 14px;
-            margin: 18px 0;
+            border-radius: 8px;
+            padding: 9px 12px;
+            margin: 12px 0;
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 12.5px;
+            gap: 10px;
+            font-size: 12px;
             color: var(--muted);
         }
 
         .booking-help-box i {
             color: var(--green);
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             flex-shrink: 0;
         }
 
@@ -2121,7 +2154,6 @@
 
 <body>
 
-
     <div class="top">
         <div class="wrap">
             <div class="links">
@@ -2314,7 +2346,6 @@
         <div class="nav-overlay"></div>
     </header>
 
-
     <!-- 3. DOCTOR PROFILE HERO SECTION -->
     <section class="doctor-hero">
         <div class="wrap">
@@ -2334,34 +2365,33 @@
                 <div class="doc-hero-info">
                     <div class="doc-top-tags">
                         <span class="pill-verified"><i data-lucide="shield-check" style="width:14px;height:14px"></i>
-                            Senior Faculty</span>
+                            Head of Department</span>
                         <a href="gastroenterology.html" class="pill-dept-link"><i data-lucide="stethoscope"
-                                style="width:14px;height:14px"></i> Gastroenterology & Hepatology</a>
+                                style="width:14px;height:14px"></i> Gastroenterology</a>
                         <a href="about.html#hospitals" class="pill-hosp-link"><i data-lucide="building-2"
-                                style="width:14px;height:14px;color:#68d493"></i> Sukhda MedPark (Super Speciality)</a>
+                                style="width:14px;height:14px;color:#68d493"></i> Sukhda Multispeciality Hospital</a>
                     </div>
 
                     <h1>Dr. Bharath</h1>
-                    <div class="doc-degrees">DM (Gastroenterology), MD (Medicine), MBBS</div>
-                    <div class="doc-role">Senior Consultant — Gastroenterology &amp; Hepatology</div>
-                    <p class="doc-summary">Experienced Gastroenterologist specializing in diagnostic and therapeutic GI
-                        endoscopy, colonoscopy, ERCP, liver cirrhosis, pancreatitis, and IBD.</p>
+                    <div class="doc-degrees">DM (Gastroenterology), MD (General Medicine), M.B.B.S</div>
+                    <div class="doc-role">Consultant &amp; H.O.D — Gastroenterology, Hepatology &amp; Endoscopy</div>
+                    <p class="doc-summary">Full-time Consultant and Head of the Department of Gastroenterology, Hepatology and Endoscopy. DM in Gastroenterology from Dr. S.N. Medical College, Jodhpur.</p>
 
                     <div class="doc-hero-stats">
                         <div class="stat-item">
-                            <b>13+ Years</b>
-                            <small>Clinical Experience</small>
+                            <b>D.M — Gastroenterology</b>
+                            <small>Qualification</small>
                         </div>
                         <div class="stat-item">
-                            <b>MedPark</b>
-                            <small>Hospital Presence</small>
+                            <b>Mon – Sat</b>
+                            <small>OPD Days</small>
                         </div>
                     </div>
 
                     <div class="doc-hero-actions">
                         <a href="#appointment" class="btn green"><i data-lucide="calendar-check"></i> Book OPD
                             Consultation</a>
-                        <a href="https://wa.me/919996544005?text=Hello%20Dr.%20Dr.+Bharath,%20I%20would%20like%20to%20inquire%20about%20OPD%20consultation"
+                        <a href="https://wa.me/919996544005?text=Hello%20Dr.+Bharath,%20I%20would%20like%20to%20inquire%20about%20OPD%20consultation"
                             target="_blank" rel="noopener" class="btn whatsapp"><svg class="wa-icon-svg"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
                                 style="vertical-align:middle;flex-shrink:0;margin-right:6px" aria-hidden="true">
@@ -2389,31 +2419,26 @@
 
                     <!-- A. ABOUT THE DOCTOR -->
                     <article class="content-card">
-                        <h3><i data-lucide="user-check"></i> Professional Profile &amp; Clinical Background</h3>
+                        <h3><i data-lucide="user-check"></i> Professional Profile</h3>
                         <div class="bio-text">
-                            <p>Dr. Bharath is a senior gastroenterologist and hepatologist at Sukhda MedPark. He
-                                specializes in advanced therapeutic endoscopic procedures, GI bleeding management, liver
-                                care, and digestive tract disorders.<br><br>He operates modern HD endoscopy suites with
-                                advanced fluoroscopy for bile duct stone extraction, ERCP stenting, and polypectomies.
-                            </p>
+                            <p>Dr. Bharath H R is working as full-time Consultant and HOD in the Department of Gastroenterology, Hepatology and Endoscopy.<br><br>After completing his MBBS from Mysore Medical College, Mysore, Dr. Bharath joined Assam Medical College, Dibrugarh to pursue his MD in General Medicine. During his senior residency he developed a special interest in Gastroenterology and joined Dr. S.N. Medical College, Jodhpur to pursue his Doctorate (DM) in Gastroenterology.</p>
                         </div>
                     </article>
 
-                    <!-- B. OPD TIMINGS & CONSULTATION LOCATIONS -->
+                    <!-- B. OPD TIMINGS & CONSULTATION LOCATION -->
                     <article class="content-card">
-                        <h3><i data-lucide="clock"></i> OPD Schedule &amp; Hospital Locations</h3>
+                        <h3><i data-lucide="clock"></i> OPD Schedule &amp; Hospital Location</h3>
                         <div class="opd-grid">
                             <div class="opd-item">
                                 <div class="opd-loc">
-                                    <b>Sukhda MedPark (Super Speciality)</b>
+                                    <b>Sukhda Multispeciality Hospital</b>
                                     <small><i data-lucide="map-pin"
-                                            style="width:14px;height:14px;color:var(--green)"></i> NH 1P-4P, Sector-5,
-                                        Hisar</small>
+                                            style="width:14px;height:14px;color:var(--green)"></i> Opposite Green Belt, Delhi Road, Hisar - 125001</small>
                                 </div>
                                 <div class="opd-time">
-                                    <span class="days">Monday to Saturday</span>
-                                    <span class="hours">11:00 AM – 03:00 PM</span>
-                                    <span class="room">Endoscopy Suite 02</span>
+                                    <span class="days">Mon – Sat</span>
+                                    <span class="hours">10:00 AM – 03:00 PM &amp; 05:00 PM – 06:30 PM</span>
+                                    <span class="room">Gastroenterology</span>
                                 </div>
                                 <div>
                                     <a href="#appointment" class="btn primary"
@@ -2426,34 +2451,60 @@
 
                     <!-- C. AREAS OF CLINICAL EXPERTISE -->
                     <article class="content-card">
-                        <h3><i data-lucide="stethoscope"></i> Areas of Clinical Specialization</h3>
+                        <h3><i data-lucide="stethoscope"></i> Areas of Expertise</h3>
                         <div class="speciality-chips">
                             <div class="spec-chip">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Upper GI Endoscopy &amp; Colonoscopy</span>
+                                <span>Gastroenterology</span>
                             </div>
                             <div class="spec-chip">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>ERCP &amp; Biliary Stenting</span>
+                                <span>Hepatology</span>
                             </div>
                             <div class="spec-chip">
                                 <i data-lucide="check-circle-2"></i>
-                                <span>Liver Cirrhosis, Hepatitis &amp; Fatty Liver</span>
-                            </div>
-                            <div class="spec-chip">
-                                <i data-lucide="check-circle-2"></i>
-                                <span>Pancreatitis &amp; Gallbladder Stone Complications</span>
-                            </div>
-                            <div class="spec-chip">
-                                <i data-lucide="check-circle-2"></i>
-                                <span>Inflammatory Bowel Disease (Ulcerative Colitis &amp; Crohn’s)</span>
-                            </div>
-                            <div class="spec-chip">
-                                <i data-lucide="check-circle-2"></i>
-                                <span>GERD, Acid Peptic Disease &amp; Dyspepsia</span>
+                                <span>Endoscopy</span>
                             </div>
                         </div>
                     </article>
+
+                    <!-- D. EDUCATION & QUALIFICATIONS -->
+                    <article class="content-card">
+                        <h3><i data-lucide="graduation-cap"></i> Education &amp; Qualifications</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>D.M — Gastroenterology (2025)</h4>
+                                <span class="inst">Dr. S.N. Medical College, Jodhpur</span>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>M.D — General Medicine (2021)</h4>
+                                <span class="inst">Assam Medical College, Dibrugarh</span>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>M.B.B.S (2017)</h4>
+                                <span class="inst">Mysore Medical College, Mysore</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- I. IMMEDIATE ASSISTANCE -->
+                    <div class="sidebar-direct-card" style="margin-top: 8px;">
+                        <h4><i data-lucide="headphones" style="width:18px;height:18px;vertical-align:middle;margin-right:6px"></i> Need Immediate Assistance?</h4>
+                        <p>Our hospital reception and emergency care coordinators are available 24 hours a day to assist you.</p>
+                        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+                            <a href="tel:01662249473" class="direct-phone-btn" style="flex:1;min-width:200px">
+                                <span><i data-lucide="phone-call" style="vertical-align:middle;margin-right:6px"></i> 01662-249473</span>
+                                <small>24/7 Emergency</small>
+                            </a>
+                            <a href="https://wa.me/919996544005" target="_blank" rel="noopener" class="direct-phone-btn" style="flex:1;min-width:200px;background:#25D366;border-color:#25D366">
+                                <span><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;flex-shrink:0;margin-right:6px" aria-hidden="true"><path fill="#ffffff" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#25D366" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>WhatsApp Desk</span>
+                                <small>+91 99965-44005</small>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- RIGHT SIDEBAR (STICKY APPOINTMENT BOOKING WIDGET) -->
@@ -2469,7 +2520,7 @@
                             <div class="form-group">
                                 <label for="docSelect">Consulting Specialist</label>
                                 <input type="text" id="docSelect" class="form-control"
-                                    value="Dr. Bharath (Gastroenterology &amp; Hepatology)" readonly
+                                    value="Dr. Bharath (Gastroenterology)" readonly
                                     style="background:#f8fafc;font-weight:700">
                             </div>
 
@@ -2527,30 +2578,6 @@
                             <p class="form-privacy-note"><i data-lucide="lock" style="width:12px;height:12px;vertical-align:middle"></i> Confidential &amp; DPDP Act compliant medical data protection.</p>
                         </form>
                     </div>
-
-                    <div class="sidebar-direct-card">
-                        <h4>Need Immediate Assistance?</h4>
-                        <p>Our hospital reception and emergency care coordinators are available 24 hours a day to assist
-                            you.</p>
-                        <a href="tel:01662249473" class="direct-phone-btn">
-                            <span><i data-lucide="phone-call" style="vertical-align:middle;margin-right:6px"></i>
-                                01662-249473</span>
-                            <small>24/7 Emergency</small>
-                        </a>
-                        <div style="height:10px"></div>
-                        <a href="https://wa.me/919996544005" target="_blank" rel="noopener" class="direct-phone-btn"
-                            style="background:#25D366;border-color:#25D366">
-                            <span><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                    width="18" height="18" style="vertical-align:middle;flex-shrink:0;margin-right:6px"
-                                    aria-hidden="true">
-                                    <path fill="#ffffff"
-                                        d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
-                                    <path fill="#25D366" fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                                </svg>WhatsApp Desk</span>
-                            <small>+91 99965-44005</small>
-                        </a>
-                    </div>
                 </aside>
 
             </div>
@@ -2570,39 +2597,36 @@
                     <img class="colleague-img" src="assets/images/doctors/dr-amit-mehta.jpg" alt="Dr. Amit Mehta">
                     <div class="colleague-body">
                         <h4>Dr. Amit Mehta</h4>
-                        <div class="col-deg">MD (Internal Medicine, AIIMS New Delhi) · MBBS</div>
-                        <div class="col-spec">Founder &amp; Director — Head of Internal Medicine &amp; Critical Care
-                        </div>
+                        <div class="col-deg">M.D. (General Medicine) AIIMS, New Delhi · M.B.B.S</div>
+                        <div class="col-spec">Director &amp; Head — Internal Medicine &amp; Critical Care</div>
                         <a href="dr-amit-mehta.html" class="btn-profile">View Profile →</a>
-                    </div>
-                </article>
-                <article class="colleague-card">
-                    <img class="colleague-img" src="assets/images/doctors/dr-nidhi-mehta.jpg" alt="Dr. Nidhi Mehta">
-                    <div class="colleague-body">
-                        <h4>Dr. Nidhi Mehta</h4>
-                        <div class="col-deg">M.B.B.S, D.G.O, D.N.B (Obstetrics &amp; Gynaecology)</div>
-                        <div class="col-spec">Senior Consultant — Obstetrics, Gynaecology &amp; Laparoscopic Surgery
-                        </div>
-                        <a href="dr-nidhi-mehta.html" class="btn-profile">View Profile →</a>
                     </div>
                 </article>
                 <article class="colleague-card">
                     <img class="colleague-img" src="assets/images/doctors/dr-ankur-kamra.jpg" alt="Dr. Ankur Kamra">
                     <div class="colleague-body">
                         <h4>Dr. Ankur Kamra</h4>
-                        <div class="col-deg">DM (Cardiology), MD (Medicine), MBBS</div>
-                        <div class="col-spec">Senior Consultant — Interventional Cardiology</div>
+                        <div class="col-deg">DM (Cardiology) · MD (Medicine) · M.B.B.S</div>
+                        <div class="col-spec">H.O.D &amp; Senior Consultant — Interventional Cardiology</div>
                         <a href="dr-ankur-kamra.html" class="btn-profile">View Profile →</a>
                     </div>
                 </article>
                 <article class="colleague-card">
-                    <img class="colleague-img" src="assets/images/doctors/dr-trivikrama-rao.jpg"
-                        alt="Dr. Trivikrama Rao">
+                    <img class="colleague-img" src="assets/images/doctors/dr-trivikrama-rao.jpg" alt="Dr. Trivikrama Rao">
                     <div class="colleague-body">
                         <h4>Dr. Trivikrama Rao</h4>
-                        <div class="col-deg">DrNB (Medical Oncology), MD (Medicine), MBBS</div>
-                        <div class="col-spec">Lead Consultant &amp; Head — Medical Oncology</div>
+                        <div class="col-deg">DrNB (Medical Oncology)</div>
+                        <div class="col-spec">Consultant — Medical Oncology</div>
                         <a href="dr-trivikrama-rao.html" class="btn-profile">View Profile →</a>
+                    </div>
+                </article>
+                <article class="colleague-card">
+                    <img class="colleague-img" src="assets/images/doctors/dr-anil-khyalia.jpg" alt="Dr. Anil Khyalia">
+                    <div class="colleague-body">
+                        <h4>Dr. Anil Khyalia</h4>
+                        <div class="col-deg">M.B.B.S · M.S · M.Ch (Neurosurgery)</div>
+                        <div class="col-spec">Consultant — Neurosurgery (Brain &amp; Spine Surgeon)</div>
+                        <a href="dr-anil-khyalia.html" class="btn-profile">View Profile →</a>
                     </div>
                 </article>
             </div>
