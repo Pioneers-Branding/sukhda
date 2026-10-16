@@ -1552,7 +1552,7 @@ content = f"""<!doctype html>
     <div class="top">
         <div class="wrap">
             <div class="links">
-                <span><i data-lucide="map-pin"></i> Delhi Road, Model Town, Hisar</span>
+                <span><i data-lucide="map-pin"></i> Opposite Green Belt, Delhi Road, Hisar - 125001</span>
                 <span><i data-lucide="award"></i> NABH Accredited Multi-Speciality</span>
             </div>
             <div class="links">
