@@ -1103,6 +1103,7 @@ header.nav,
     object-fit: contain;
     margin: 0;
     display: block;
+    filter: none !important;
 }
 
 .footer-tagline {
