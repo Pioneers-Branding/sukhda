@@ -88,6 +88,8 @@
                         if (g !== group) g.classList.remove('open');
                     });
                     group.classList.toggle('open', !isOpen);
+                } else {
+                    e.preventDefault();
                 }
             };
         });
