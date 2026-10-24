@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Dr. Joginder Silayach — Consultant — Paediatrics &amp; Neonatology | Sukhda Healthcare Hisar</title>
+    <title>Paediatrics &amp; Neonatology | Sukhda Healthcare Hisar</title>
     <meta name="description"
-        content="Dr. Joginder Silayach, Consultant — Paediatrics &amp; Neonatology at Sukhda Multispeciality Hospital, Hisar. MD (Paediatrics), MBBS. View qualifications, experience and OPD timings. Book OPD or call 01662-249473.">
+        content="Paediatrics &amp; Neonatology at Sukhda Multispeciality Hospital, Hisar. Newborn care, NICU support, childhood illnesses and 24/7 paediatric emergency backup. Call 01662-249473 to confirm consultation availability.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,33 +17,27 @@
         :root {
             --blue: #052159;
             --blue-dark: #02163d;
-            --blue-light: #eaf1f8;
             --green: #278132;
-            --green-dark: #1b6326;
             --green-light: #eaf5ec;
-            --pale: #f4f8fb;
+            --pale: #f2f7fb;
             --muted: #53677f;
-            --line: #dce7f0;
-            --shadow-sm: 0 4px 12px rgba(3, 32, 90, 0.06);
-            --shadow-md: 0 10px 30px rgba(3, 32, 90, 0.09);
-            --shadow-lg: 0 18px 45px rgba(3, 32, 90, 0.14);
-            --gold: #f59e0b;
+            --line: #dce7f0
         }
 
         * {
-            box-sizing: border-box;
+            box-sizing: border-box
         }
 
         html {
-            scroll-behavior: smooth;
+            scroll-behavior: smooth
         }
 
         body {
             margin: 0;
             color: var(--blue);
-            font: 15.5px/1.6 'Lato', sans-serif;
+            font: 16.5px/1.6 'Lato', sans-serif;
             background: #fff;
-            overflow-x: clip;
+            overflow-x: hidden
         }
 
         h1,
@@ -87,25 +81,25 @@
 
         a {
             text-decoration: none;
-            color: inherit;
+            color: inherit
         }
 
         img {
             display: block;
-            width: 100%;
+            width: 100%
         }
 
         .wrap {
-            width: min(1380px, calc(100% - 64px));
-            margin: auto;
+            width: min(1400px, calc(100% - 100px));
+            margin: auto
         }
 
-        /* TOP NOTIFICATION BAR */
+        /* TOP BAR */
         .top {
-            height: 40px;
+            height: 42px;
             background: var(--blue);
             color: #fff;
-            font-size: 13px;
+            font-size: 14px
         }
 
         .top .wrap,
@@ -113,13 +107,13 @@
             height: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-between
         }
 
         .links {
             display: flex;
             gap: 20px;
-            align-items: center;
+            align-items: center
         }
 
         .links a {
@@ -127,56 +121,77 @@
             transition: color 0.2s ease;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 6px
         }
 
         .links a:hover {
-            color: #278132;
+            color: #278132
         }
 
-        .links a+a,
-        .links span+span {
-            border-left: 1px solid #ffffff44;
-            padding-left: 20px;
+        .links a.top-wa i,
+        .links a.top-wa svg,
+        .links a[href*="wa.me"] i,
+        .links a[href*="wa.me"] svg {
+            color: #25D366 !important;
         }
 
-        /* NAVIGATION HEADER */
+        .links a.top-wa:hover,
+        .links a[href*="wa.me"]:hover {
+            color: #25D366 !important;
+        }
+
+        .links a.top-emergency,
+        .links a[href^="tel:"],
+        .top-links a[href^="tel:"] {
+            color: #ff4d4f !important;
+        }
+
+        .links a.top-emergency:hover,
+        .links a[href^="tel:"]:hover,
+        .top-links a[href^="tel:"]:hover {
+            color: #ff7875 !important;
+        }
+
+        .links span+span,
+        .links a+a {
+            border-left: 1px solid #ffffff55;
+            padding-left: 20px
+        }
+
+        /* NAVIGATION */
         .nav {
             height: 80px;
-            box-shadow: 0 2px 10px rgba(3, 32, 90, 0.08);
+            box-shadow: 0 2px 9px #05215919;
             position: sticky;
             top: 0;
-            z-index: 100;
-            background: #fff;
+            z-index: 1000;
+            background: #fff
         }
 
         .logo {
             width: 230px;
             height: 62px;
             object-fit: contain;
-            object-position: left center;
+            object-position: left center
         }
 
         .menu {
             display: flex;
             gap: 30px;
             align-items: center;
-            font-size: 15.5px;
-            font-weight: 700;
+            font-size: 16px;
+            font-weight: 700
         }
 
         .menu a {
             padding: 28px 0;
             position: relative;
-            transition: color 0.2s ease;
-            color: var(--blue);
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
+            transition: color 0.2s ease
         }
 
-        .menu a:hover {
-            color: var(--green);
+        .menu a:hover,
+        .menu .on {
+            color: var(--green)
         }
 
         .menu .on:after {
@@ -186,26 +201,26 @@
             position: absolute;
             bottom: 14px;
             left: 0;
-            right: 0;
+            right: 0
         }
 
         .nav-group {
             position: relative;
             display: inline-flex;
-            align-items: center;
+            align-items: center
         }
 
         .nav-group>a {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
+            gap: 4px
         }
 
         .nav-chevron {
             width: 14px;
             height: 14px;
             stroke-width: 2.4;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease
         }
 
         @media(min-width: 901px) {
@@ -223,7 +238,7 @@
             }
 
             .nav-group:hover .nav-chevron {
-                transform: rotate(180deg);
+                transform: rotate(180deg)
             }
 
             .nav-drop {
@@ -237,7 +252,7 @@
                 border-radius: 8px;
                 box-shadow: 0 8px 24px rgba(3, 32, 90, 0.12);
                 padding: 8px 0;
-                z-index: 1000;
+                z-index: 1000
             }
 
             .nav-drop a {
@@ -246,20 +261,20 @@
                 font-size: 15px;
                 font-weight: 600;
                 color: var(--blue);
-                border: 0 !important;
+                border: 0 !important
             }
 
             .nav-drop a:hover {
                 background: var(--pale);
-                color: var(--green);
+                color: var(--green)
             }
 
             .nav-group:hover .nav-drop {
-                display: block;
+                display: block
             }
 
             .services-drop {
-                min-width: 280px;
+                min-width: 280px
             }
 
             /* MEGA MENU FOR OUR SERVICES */
@@ -505,966 +520,863 @@
             }
         }
 
-        .btn {
-            display: inline-flex;
+        /* STICKY BOTTOM FLOATING PILL CTA */
+        .sticky-bottom-bar {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 998;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #052159 0%, #02163d 100%);
+            border: 1.5px solid rgba(255, 255, 255, 0.22);
+            border-radius: 9999px;
+            padding: 6px 14px;
+            box-shadow: 0 10px 30px rgba(3, 32, 90, 0.45), 0 3px 12px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            gap: 2px;
+            max-width: calc(100vw - 28px);
+            width: max-content;
+            animation: stickySlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes stickySlideUp {
+            from {
+                transform: translate(-50%, 60px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+        }
+
+        .sticky-bar-item {
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            border-radius: 8px;
-            padding: 11px 22px;
-            font-weight: 800;
-            font-size: 14px;
+            padding: 5px 14px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.1px;
+            line-height: 1.2;
             transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .sticky-bar-item svg,
+        .sticky-bar-item i {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 3px;
+            stroke-width: 2.2;
+            color: #ffffff;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .sticky-bar-item:hover,
+        .sticky-bar-item:active {
+            color: #278132;
+        }
+
+        .sticky-bar-item:hover svg,
+        .sticky-bar-item:active svg {
+            color: #278132;
+            transform: scale(1.12);
+        }
+
+        .sticky-bar-item.whatsapp:hover,
+        .sticky-bar-item.whatsapp:active {
+            color: #25d366;
+        }
+
+        .sticky-bar-item.whatsapp:hover svg,
+        .sticky-bar-item.whatsapp:active svg {
+            color: #25d366;
+        }
+
+        .sticky-bar-divider {
+            width: 1px;
+            height: 22px;
+            background: rgba(255, 255, 255, 0.22);
+            margin: 0 1px;
+            flex-shrink: 0;
+        }
+
+        .nav.open~.sticky-bottom-bar {
+            display: none !important;
+        }
+
+        @media (min-width: 768px) {
+            .sticky-bottom-bar {
+                display: none !important;
+            }
+            body {
+                padding-bottom: 0 !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-bottom: 74px !important;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #aebfd0;
+            padding: 13px 26px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 800;
             cursor: pointer;
-            border: 1px solid transparent;
+            transition: all 0.2s ease
         }
 
-        .btn.primary {
-            background: var(--blue);
-            color: #fff;
-            border-color: var(--blue);
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(3, 32, 90, 0.15)
         }
 
-        .btn.primary:hover {
-            background: var(--blue-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(3, 32, 90, 0.2);
-        }
-
-        .btn.green {
+        .primary {
             background: var(--green);
-            color: #fff;
             border-color: var(--green);
+            color: #fff
         }
 
-        .btn.green:hover {
-            background: var(--green-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(42, 130, 56, 0.25);
+        .primary:hover {
+            background: #216a2d;
+            border-color: #216a2d;
+            color: #fff
         }
 
-        .btn.outline {
+        .white {
             background: #fff;
-            border-color: var(--line);
             color: var(--blue);
+            border-color: #fff
         }
 
-        .btn.outline:hover {
-            border-color: var(--green);
-            color: var(--green);
-            background: var(--green-light);
+        .white:hover {
+            background: #f0f6fa
         }
 
-        .btn.whatsapp {
-            background: #25D366;
+        .small {
+            padding: 11px 22px;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #02163d 0%, #052159 100%);
             color: #fff;
-            border-color: #25D366;
-        }
-
-        .btn.whatsapp:hover {
-            background: #1eb956;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
-        }
-
-        .hamb {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 26px;
-            color: var(--blue);
-            cursor: pointer;
-        }
-
-        /* HERO PROFILE SECTION */
-        .doctor-hero {
-            background: linear-gradient(135deg, #052159 0%, #062f7a 50%, #0a3d99 100%);
-            color: #fff;
-            padding: 40px 0 55px;
+            padding: 50px 0 44px;
             position: relative;
             overflow: hidden;
         }
 
-        .doctor-hero::after {
-            content: '';
+        .hero .wrap {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-copy {
+            width: 100%;
+        }
+
+        .hero-media {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-img-card {
+            position: relative;
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 44px rgba(0, 0, 0, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.25);
+            background: #02163d;
+        }
+
+        .hero-img-card img {
+            width: 100%;
+            height: auto;
+            max-height: 460px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-img-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .hero-badge-float {
             position: absolute;
-            right: -120px;
-            bottom: -120px;
-            width: 480px;
-            height: 480px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(104, 212, 147, 0.15) 0%, rgba(3, 32, 90, 0) 70%);
-            pointer-events: none;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            background: rgba(2, 22, 61, 0.94);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(42, 130, 56, 0.4);
+            padding: 12px 16px;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 2;
+        }
+
+        .hero-badge-float svg,
+        .hero-badge-float i {
+            width: 26px;
+            height: 26px;
+            color: #278132;
+            flex-shrink: 0;
+        }
+
+        .hero-badge-float b {
+            display: block;
+            font-size: 15.5px;
+            color: #fff;
+            line-height: 1.25;
+        }
+
+        .hero-badge-float small {
+            display: block;
+            font-size: 13.5px;
+            color: #b9d3eb;
         }
 
         .crumb {
+            font-size: 14.5px;
+            color: #b9d3eb;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            color: #bcd4e9;
-            margin-bottom: 28px;
+            gap: 6px;
         }
 
         .crumb a {
-            color: #bcd4e9;
-            transition: color 0.2s;
+            color: #278132;
         }
 
         .crumb a:hover {
+            text-decoration: underline;
+        }
+
+        .eyebrow {
             color: #278132;
-        }
-
-        .crumb span {
-            color: #278132;
-        }
-
-        .doc-hero-grid {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 48px;
-            align-items: center;
-        }
-
-        .doc-photo-box {
-            position: relative;
-            border-radius: 18px;
-            overflow: hidden;
-            background: #fff;
-            box-shadow: var(--shadow-lg);
-            border: 4px solid rgba(255, 255, 255, 0.18);
-        }
-
-        .doc-photo-box img {
-            height: 380px;
-            object-fit: cover;
-            object-position: top center;
-            transition: transform 0.4s ease;
-        }
-
-        .doc-photo-box:hover img {
-            transform: scale(1.03);
-        }
-
-        .doc-photo-badge {
-            position: absolute;
-            bottom: 14px;
-            left: 14px;
-            right: 14px;
-            background: rgba(3, 32, 90, 0.92);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 9px 14px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #fff;
-            font-size: 12.5px;
-            font-weight: 700;
-        }
-
-        .doc-photo-badge .badge-left {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .doc-photo-badge i {
-            color: #278132;
-            width: 16px;
-            height: 16px;
-        }
-
-        .doc-hero-info {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .doc-top-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .pill-verified {
+            font-weight: 900;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 5px 12px;
-            background: rgba(42, 130, 56, 0.35);
-            border: 1px solid rgba(104, 212, 147, 0.5);
-            border-radius: 99px;
-            color: #8ae6ae;
-            font-size: 11.5px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
+            gap: 8px;
             text-transform: uppercase;
         }
 
-        .pill-hosp-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 5px 12px;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            border-radius: 99px;
-            color: #d8e8f8;
-            font-size: 12px;
-            font-weight: 700;
+        .eyebrow-badge {
+            background: rgba(42, 130, 56, 0.15);
+            border: 1px solid rgba(42, 130, 56, 0.4);
+            padding: 4px 12px;
+            border-radius: 20px;
         }
 
-        .doc-hero-info h1 {
-            font-size: 38px;
-            line-height: 1.15;
-            margin: 0;
+        .hero h1 {
+            font-size: 42px;
             font-weight: 900;
+            line-height: 1.2;
+            margin: 8px 0 16px;
             letter-spacing: -0.5px;
         }
 
-        .doc-degrees {
-            font-size: 15.5px;
+        .hero h1 span {
             color: #278132;
-            font-weight: 800;
-            margin-top: -4px;
         }
 
-        .doc-role {
-            font-size: 17px;
-            color: #e2eef9;
-            font-weight: 700;
-            line-height: 1.4;
+        .hero p {
+            font-size: 18px;
+            line-height: 1.68;
+            color: #dce7f0;
+            max-width: 100%;
+            margin: 0 0 24px;
         }
 
-        .doc-summary {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #cfe1f2;
-            max-width: 900px;
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
         }
 
-        .doc-hero-stats {
+        .hero-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            max-width: 440px;
-            gap: 16px;
-            margin: 10px 0 16px;
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 12px;
-            padding: 16px 20px;
-            backdrop-filter: blur(6px);
-        }
-
-        .stat-item b {
-            display: block;
-            font-size: 22px;
-            font-weight: 900;
-            color: #fff;
-            line-height: 1.2;
-        }
-
-        .stat-item small {
-            display: block;
-            font-size: 12px;
-            color: #b9d3eb;
-            font-weight: 600;
-            margin-top: 3px;
-        }
-
-        .stat-item.rating b {
-            color: #fbbf24;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .doc-hero-actions {
-            display: flex;
-            flex-wrap: wrap;
             gap: 14px;
-            align-items: center;
+            max-width: 100%;
         }
 
-        /* SECTION STYLING */
+        .hero-stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            padding: 14px 16px;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-stat-card b {
+            font-size: 26px;
+            font-weight: 900;
+            display: block;
+            color: #278132;
+            line-height: 1.1;
+        }
+
+        .hero-stat-card small {
+            font-size: 14.5px;
+            color: #dce7f0;
+        }
+
+        /* SECTIONS */
         .section {
-            padding: 68px 0;
+            padding: 60px 0
         }
 
-        .section.soft {
-            background: var(--pale);
+        .soft {
+            background: var(--pale)
         }
 
         .kicker {
             color: var(--green);
-            font-size: 12.5px;
+            font-size: 14px;
             font-weight: 900;
-            letter-spacing: 1.2px;
+            letter-spacing: 1.1px;
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 6px
         }
 
-        .section-title {
+        .title {
             font-size: 32px;
-            line-height: 1.2;
-            margin: 0 0 14px;
-            color: var(--blue);
-            font-weight: 900;
+            font-weight: 800;
+            line-height: 1.25;
+            margin: 0 0 10px;
+            color: var(--blue)
         }
 
-        .section-sub {
+        .sub {
             color: var(--muted);
-            font-size: 15.5px;
-            line-height: 1.6;
-            margin: 0 0 34px;
-            max-width: 760px;
+            margin: 0 0 28px;
+            font-size: 17.5px;
+            line-height: 1.6
         }
 
-        /* MAIN CONTENT LAYOUT */
-        .doc-page-layout {
+        /* 2-COL INTRO */
+        .intro-grid {
             display: grid;
-            grid-template-columns: 1fr 390px;
-            gap: 44px;
-            align-items: start;
-        }
-
-        .doc-main-col {
-            display: flex;
-            flex-direction: column;
+            grid-template-columns: 1.15fr 0.85fr;
             gap: 48px;
+            align-items: center
         }
 
-        /* CONTENT BLOCK CARD */
-        .content-card {
-            background: #fff;
-            border-radius: 14px;
-            border: 1px solid var(--line);
-            padding: 34px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .content-card h3 {
-            font-size: 22px;
-            margin: 0 0 18px;
-            color: var(--blue);
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding-bottom: 12px;
-            border-bottom: 1.5px solid var(--blue-light);
-        }
-
-        .content-card h3 i {
-            color: var(--green);
-            width: 22px;
-            height: 22px;
-        }
-
-        .bio-text p {
-            margin: 0 0 16px;
-            color: #3b5168;
-            font-size: 15.5px;
+        .intro-copy p {
+            color: var(--muted);
             line-height: 1.7;
+            font-size: 17px;
+            margin: 0 0 18px
         }
 
-        .bio-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* OPD SCHEDULE CARDS */
-        .opd-grid {
+        .check-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 24px 0
         }
 
-        .opd-item {
-            background: var(--pale);
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            padding: 20px 24px;
-            display: grid;
-            grid-template-columns: 1.3fr 1fr auto;
-            gap: 18px;
+        .check-item {
+            display: flex;
             align-items: center;
-            transition: all 0.2s ease;
-        }
-
-        .opd-item:hover {
-            border-color: #92d0ab;
-            background: #f1f8f3;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .opd-loc b {
+            gap: 8px;
             font-size: 16px;
-            color: var(--blue);
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .opd-loc small {
-            color: var(--muted);
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .opd-time {
-            border-left: 2px solid #d0e1ed;
-            padding-left: 18px;
-        }
-
-        .opd-time .days {
-            font-size: 14px;
-            font-weight: 800;
-            color: var(--green);
-            display: block;
-        }
-
-        .opd-time .hours {
-            font-size: 13px;
-            color: var(--blue);
             font-weight: 700;
-            margin-top: 2px;
-            display: block;
+            color: var(--blue)
         }
 
-        .opd-time .room {
-            font-size: 11.5px;
-            color: var(--muted);
-            margin-top: 2px;
-            display: block;
-        }
-
-        /* SPECIALTIES CHIP GRID */
-        .speciality-chips {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .spec-chip {
-            background: #f7fafc;
-            border: 1px solid #e2edf6;
-            border-radius: 10px;
-            padding: 13px 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--blue);
-            transition: all 0.2s;
-        }
-
-        .spec-chip:hover {
-            background: var(--green-light);
-            border-color: #95d3ad;
-            color: var(--green-dark);
-            transform: translateX(4px);
-        }
-
-        .spec-chip i {
-            color: var(--green);
+        .check-item svg,
+        .check-item i {
             width: 18px;
             height: 18px;
-            flex-shrink: 0;
-        }
-
-        /* TIMELINE */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 22px;
-            position: relative;
-            padding-left: 28px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 6px;
-            bottom: 6px;
-            width: 2px;
-            background: #cfe0ee;
-        }
-
-        .timeline-item {
-            position: relative;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: -28px;
-            top: 4px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #fff;
-            border: 3.5px solid var(--green);
-            box-shadow: 0 0 0 2px rgba(42, 130, 56, 0.2);
-        }
-
-        .timeline-item h4 {
-            font-size: 16px;
-            margin: 0 0 3px;
-            color: var(--blue);
-            font-weight: 800;
-        }
-
-        .timeline-item .inst {
-            font-size: 13.5px;
             color: var(--green);
-            font-weight: 700;
-            margin-bottom: 4px;
-            display: block;
+            flex-shrink: 0
         }
 
-        .timeline-item p {
-            margin: 0;
-            font-size: 13.5px;
-            color: var(--muted);
-            line-height: 1.55;
+        .intro-media {
+            position: relative
         }
 
-        /* AWARDS LIST */
-        .awards-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 14px;
-        }
-
-        .award-card {
-            background: linear-gradient(135deg, #fdfbf7 0%, #fff 100%);
-            border: 1px solid #f1e2c3;
-            border-radius: 12px;
-            padding: 16px 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-        }
-
-        .award-icon {
-            width: 42px;
-            height: 42px;
-            background: #fef3c7;
-            color: #d97706;
-            border-radius: 10px;
-            display: grid;
-            place-items: center;
-            flex-shrink: 0;
-        }
-
-        .award-icon i {
-            width: 22px;
-            height: 22px;
-        }
-
-        .award-card h4 {
-            margin: 0 0 4px;
-            font-size: 15.5px;
-            color: #78350f;
-            font-weight: 800;
-        }
-
-        .award-card p {
-            margin: 0;
-            font-size: 13.5px;
-            color: #6b7280;
-            line-height: 1.5;
-        }
-
-        /* RESEARCH & PUBLICATIONS LIST */
-        .pub-list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .pub-list li {
-            position: relative;
-            padding: 12px 16px 12px 40px;
-            background: #f7fafc;
-            border: 1px solid #e2edf6;
-            border-radius: 10px;
-            font-size: 14px;
-            line-height: 1.55;
-            color: #3b5168;
-        }
-
-        .pub-list li::before {
-            content: '';
-            position: absolute;
-            left: 17px;
-            top: 19px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--green);
-        }
-
-        /* SIDEBAR / APPOINTMENT CARD */
-        .doc-sidebar {
-            position: sticky;
-            top: 100px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-self: start;
-        }
-
-        .booking-card {
-            background: #fff;
+        .intro-img-card {
             border-radius: 16px;
-            border: 1.5px solid #c9dfef;
-            padding: 22px 24px;
-            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            box-shadow: 0 16px 36px rgba(3, 32, 90, 0.14);
+            border: 4px solid #fff
         }
 
-        .booking-header {
-            margin-bottom: 14px;
-            text-align: center;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--line);
+        .intro-img-card img {
+            height: 390px;
+            object-fit: cover
         }
 
-        .booking-header h3 {
-            font-size: 19px;
-            margin: 0 0 4px;
-            color: var(--blue);
-            font-weight: 900;
-        }
-
-        .booking-header p {
-            margin: 0;
-            font-size: 12.5px;
-            color: var(--muted);
-        }
-
-        .form-group {
-            margin-bottom: 11px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            font-weight: 800;
-            color: var(--blue);
-            margin-bottom: 4px;
-        }
-
-        .form-control {
-            width: 100%;
-            height: 38px;
-            border: 1px solid #c4d7e8;
-            border-radius: 8px;
-            padding: 0 12px;
-            font-family: inherit;
-            font-size: 13.5px;
-            color: var(--blue);
-            background: #fff;
-            transition: border-color 0.2s;
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--green);
-            box-shadow: 0 0 0 3px rgba(42, 130, 56, 0.15);
-        }
-
-        .form-group select.form-control {
-            cursor: pointer;
-        }
-
-        .booking-help-box {
-            background: var(--pale);
-            border-radius: 8px;
-            padding: 9px 12px;
-            margin: 12px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 12px;
-            color: var(--muted);
-        }
-
-        .booking-help-box i {
-            color: var(--green);
-            width: 18px;
-            height: 18px;
-            flex-shrink: 0;
-        }
-
-        .sidebar-direct-card {
-            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
-            color: #fff;
-            border-radius: 14px;
-            padding: 24px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .sidebar-direct-card h4 {
-            margin: 0 0 8px;
-            font-size: 16px;
-            font-weight: 800;
-            color: #fff;
-        }
-
-        .sidebar-direct-card p {
-            margin: 0 0 16px;
-            font-size: 13px;
-            color: #bed7ee;
-            line-height: 1.5;
-        }
-
-        .direct-phone-btn {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 11px 16px;
-            border-radius: 8px;
-            color: #fff;
-            font-weight: 800;
-            font-size: 14px;
-            transition: all 0.2s;
-        }
-
-        .direct-phone-btn:hover {
-            background: rgba(255, 255, 255, 0.22);
-            color: #278132;
-        }
-
-        /* TESTIMONIALS SECTION */
-        .reviews-grid {
+        /* SERVICES GRID */
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            gap: 22px
         }
 
-        .review-card {
+        .service-card {
             background: #fff;
-            border-radius: 14px;
+            border-radius: 12px;
+            padding: 26px 22px;
             border: 1px solid var(--line);
-            padding: 26px;
-            box-shadow: var(--shadow-sm);
+            box-shadow: 0 3px 14px rgba(3, 32, 90, 0.05);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease
         }
 
-        .review-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: #92d0ab;
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(3, 32, 90, 0.12);
+            border-color: #b7d1e8
         }
 
-        .rev-stars {
-            display: flex;
-            gap: 4px;
-            color: #f59e0b;
-            margin-bottom: 14px;
-        }
-
-        .rev-quote {
-            font-size: 14px;
-            line-height: 1.65;
-            color: #3f556d;
-            margin: 0 0 18px;
-            font-style: italic;
-        }
-
-        .rev-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-top: 1px solid var(--line);
-            padding-top: 14px;
-        }
-
-        .rev-avatar {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: #e2eef7;
-            color: var(--blue);
-            font-weight: 900;
-            font-size: 14px;
-            display: grid;
-            place-items: center;
-        }
-
-        .rev-author b {
-            display: block;
-            font-size: 14px;
-            color: var(--blue);
-        }
-
-        .rev-author small {
-            display: block;
-            font-size: 12px;
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: var(--green-light);
             color: var(--green);
-            font-weight: 700;
-        }
-
-        /* OTHER DOCTORS CAROUSEL / STRIP */
-        .other-docs-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .colleague-card {
-            background: #fff;
-            border-radius: 14px;
-            border: 1px solid var(--line);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.25s ease;
             display: flex;
-            flex-direction: column;
-        }
-
-        .colleague-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-            border-color: #9cd6b4;
-        }
-
-        .colleague-img {
-            height: 220px;
-            object-fit: cover;
-            object-position: top center;
-            background: #f1f5f9;
-        }
-
-        .colleague-body {
-            padding: 18px 20px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .colleague-body h4 {
-            font-size: 17px;
-            margin: 0 0 4px;
-            color: var(--blue);
-            font-weight: 800;
-        }
-
-        .colleague-body .col-deg {
-            font-size: 12px;
-            color: var(--green);
-            font-weight: 800;
-            margin-bottom: 6px;
-        }
-
-        .colleague-body .col-spec {
-            font-size: 13px;
-            color: var(--muted);
-            margin-bottom: 14px;
-            line-height: 1.4;
-            flex-grow: 1;
-        }
-
-        .colleague-body .btn-profile {
-            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
-            font-size: 13px;
-            font-weight: 800;
-            color: var(--blue);
-            background: var(--blue-light);
-            padding: 8px 14px;
-            border-radius: 6px;
-            transition: all 0.2s;
+            margin-bottom: 16px
         }
 
-        .colleague-body .btn-profile:hover {
-            background: var(--blue);
+        .service-icon svg,
+        .service-icon i {
+            width: 24px;
+            height: 24px;
+            color: var(--green);
+            stroke-width: 2;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin: 0 0 8px;
+            color: var(--blue)
+        }
+
+        .service-card p {
+            font-size: 15.5px;
+            color: var(--muted);
+            line-height: 1.6;
+            margin: 0
+        }
+
+        /* CONDITIONS PANEL */
+        .conditions-panel {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
             color: #fff;
+            border-radius: 14px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 48px;
+            align-items: center
+        }
+
+        .conditions-panel h2 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin: 6px 0 14px
+        }
+
+        .conditions-panel p {
+            color: #dce7f0;
+            line-height: 1.65;
+            margin: 0 0 20px;
+            font-size: 17px
+        }
+
+        .cond-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .cond-item {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            padding: 11px 16px;
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .cond-item svg,
+        .cond-item i {
+            color: #278132;
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0
+        }
+
+        /* JOURNEY STEPS */
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            counter-reset: journey-counter
+        }
+
+        .journey-step {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 22px 18px;
+            box-shadow: 0 3px 12px rgba(3, 32, 90, 0.05);
+            position: relative;
+            counter-increment: journey-counter;
+            display: flex;
+            flex-direction: column
+        }
+
+        .journey-step:before {
+            content: '0' counter(journey-counter);
+            font-size: 15px;
+            font-weight: 900;
+            color: var(--green);
+            margin-bottom: 12px
+        }
+
+        .journey-step h4 {
+            font-size: 18px;
+            font-weight: 800;
+            margin: 0 0 8px;
+            color: var(--blue)
+        }
+
+        .journey-step p {
+            font-size: 14.5px;
+            color: var(--muted);
+            line-height: 1.55;
+            margin: 0
+        }
+
+        /* COMPACT DOCTOR CARD */
+        .doc-card-wrap {
+            margin-top: 24px;
+            display: flex;
+        }
+
+        .doc-profile-card {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            box-shadow: 0 4px 20px rgba(3, 32, 90, 0.06);
+            padding: 20px 22px;
+            gap: 20px;
+            max-width: 580px;
+            width: 100%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .doc-profile-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(3, 32, 90, 0.1);
+            border-color: #a8cae6;
+        }
+
+        .doc-photo-box {
+            width: 130px;
+            height: 145px;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: #f0f5fa;
+            border: 1px solid var(--line);
+        }
+
+        .doc-photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .doc-info-box {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex-grow: 1;
+        }
+
+        .doc-pill {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--green);
+            background: #e9f5ee;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .doc-info-box h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--blue);
+            margin: 2px 0 0;
+            line-height: 1.2;
+        }
+
+        .doc-qual {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--muted);
+        }
+
+        .doc-spec-text {
+            font-size: 13.5px;
+            color: #4a637d;
+            margin: 4px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .doc-spec-text span {
+            background: #f3f7fa;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--line);
+        }
+
+        .doc-info-box .btn {
+            align-self: flex-start;
+            padding: 9px 18px;
+            font-size: 13.5px;
+            border-radius: 7px;
+        }
+
+        /* FAQS */
+        .faq-layout {
+            display: grid;
+            grid-template-columns: 0.75fr 1.25fr;
+            gap: 48px
+        }
+
+        .faq-item {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(3, 32, 90, 0.04)
+        }
+
+        .faq-item summary {
+            padding: 19px 22px;
+            font-size: 17.5px;
+            font-weight: 800;
+            color: var(--blue);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: color 0.2s ease
+        }
+
+        .faq-item summary:hover {
+            color: var(--green)
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none
+        }
+
+        .faq-item summary:after {
+            content: '+';
+            font-size: 24px;
+            color: var(--green);
+            font-weight: 700;
+            line-height: 1
+        }
+
+        .faq-item[open] summary:after {
+            content: '−'
+        }
+
+        .faq-content {
+            padding: 0 22px 22px;
+            font-size: 16px;
+            color: var(--muted);
+            line-height: 1.65
+        }
+
+        /* CTA SECTION */
+        .cta {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+            color: #fff;
+            padding: 42px 0
+        }
+
+        .cta .wrap {
+            display: grid;
+            grid-template-columns: 100px 1fr auto;
+            gap: 32px;
+            align-items: center
+        }
+
+        .cta-visual img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.3)
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0 0 8px;
+            line-height: 1.25
+        }
+
+        .cta p {
+            font-size: 16.5px;
+            color: #dbe7f2;
+            line-height: 1.6;
+            margin: 0
+        }
+
+        .cta .actions {
+            margin: 0;
+            display: flex;
+            gap: 12px
         }
 
         /* EMPANELLED CASHLESS STRIP */
         .empanelled-section {
-            background: #f8fafc;
+            background: #fff;
             border-top: 1px solid var(--line);
             border-bottom: 1px solid var(--line);
-            padding: 38px 0;
+            padding: 28px 0
         }
 
-        .empanelled-grid {
-            display: grid;
-            grid-template-columns: 240px 1fr;
-            gap: 36px;
+        .emp-head {
+            display: flex;
             align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px
         }
 
-        .empanelled-text h4 {
-            font-size: 16px;
-            color: var(--blue);
-            margin: 0 0 4px;
-            font-weight: 800;
-        }
-
-        .empanelled-text p {
+        .emp-head h4 {
             margin: 0;
-            font-size: 13px;
-            color: var(--muted);
+            font-size: 17px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--blue)
         }
 
-        .empanelled-tags {
+        .emp-head span {
+            font-size: 14.5px;
+            color: var(--green);
+            font-weight: 700
+        }
+
+        .emp-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px
         }
 
-        .empanelled-tag {
-            background: #fff;
-            border: 1px solid #dbe6f0;
-            padding: 6px 14px;
+        .emp-pill {
+            background: #f4f8fc;
+            border: 1px solid #d4e3f0;
             border-radius: 6px;
-            font-size: 12.5px;
+            padding: 9px 16px;
+            font-size: 14.5px;
             font-weight: 700;
             color: var(--blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 7px
         }
 
-        /* FOOTER */
+        .emp-pill svg,
+        .emp-pill i {
+            width: 15px;
+            height: 15px;
+            color: var(--green)
+        }
+
+        .emp-pill.gov {
+            background: #eaf7f0;
+            border-color: #bfe8cf;
+            color: #06723e
+        }
+
+        /* PREMIUM FOOTER REDESIGN */
         .footer {
-            padding: 56px 0 0;
             background: linear-gradient(180deg, #052159 0%, #011338 100%);
             color: #cbd5e1;
+            padding: 56px 0 0;
             border-top: 4px solid var(--green);
             position: relative;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1.35fr .9fr 1.35fr 1.15fr;
+            grid-template-columns: 1.35fr 0.9fr 1.35fr 1.15fr;
             gap: 36px;
             padding-bottom: 44px;
         }
 
         .footer-brand-wrap {
-            background: #fff;
+            background: #ffffff;
             padding: 10px 18px;
             border-radius: 10px;
             display: inline-block;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, .18);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
             margin-bottom: 16px;
             max-width: 230px;
         }
@@ -1477,17 +1389,17 @@
         }
 
         .footer-tagline {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 800;
             color: #278132;
-            letter-spacing: .3px;
+            letter-spacing: 0.3px;
             margin: 0 0 10px;
             text-transform: uppercase;
         }
 
         .footer-desc {
-            font-size: 13.5px;
-            line-height: 1.6;
+            font-size: 14.5px;
+            line-height: 1.65;
             color: #94a3b8;
             margin: 0 0 16px;
         }
@@ -1521,8 +1433,8 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            background: rgba(255, 255, 255, .06);
-            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             padding: 8px 14px;
             border-radius: 8px;
             backdrop-filter: blur(4px);
@@ -1540,23 +1452,23 @@
 
         .footer-nabh-badge b {
             display: block;
-            font-size: 13px;
-            color: #fff;
+            font-size: 14px;
+            color: #ffffff;
             line-height: 1.2;
         }
 
         .footer-nabh-badge small {
             display: block;
-            font-size: 11px;
+            font-size: 12px;
             color: #94a3b8;
         }
 
         .footer-col h4 {
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 800;
-            color: #fff;
+            color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: .6px;
+            letter-spacing: 0.6px;
             margin: 0 0 18px;
             position: relative;
             padding-left: 12px;
@@ -1586,34 +1498,40 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 13.5px;
+            font-size: 14.5px;
             color: #cbd5e1;
-            transition: all .2s ease;
+            transition: all 0.2s ease;
+            text-decoration: none;
         }
 
         .footer-nav a span {
             color: var(--green);
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 800;
+            transition: transform 0.2s ease;
         }
 
         .footer-nav a:hover {
-            color: #fff;
+            color: #ffffff;
             transform: translateX(4px);
         }
 
+        .footer-nav a:hover span {
+            color: #278132;
+        }
+
         .footer-hospital-card {
-            background: rgba(255, 255, 255, .04);
-            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 10px;
             padding: 12px 14px;
             margin-bottom: 12px;
-            transition: border-color .2s ease, background .2s ease;
+            transition: border-color 0.2s ease, background 0.2s ease;
         }
 
         .footer-hospital-card:hover {
-            background: rgba(255, 255, 255, .07);
-            border-color: rgba(104, 212, 147, .35);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(104, 212, 147, 0.35);
         }
 
         .f-hosp-header {
@@ -1623,7 +1541,8 @@
             margin-bottom: 5px;
         }
 
-        .f-hosp-header i {
+        .f-hosp-header i,
+        .f-hosp-header svg {
             width: 16px;
             height: 16px;
             color: var(--green);
@@ -1631,15 +1550,22 @@
         }
 
         .f-hosp-header b {
-            font-size: 13.5px;
-            color: #fff;
+            font-size: 14.5px;
+            color: #ffffff;
             line-height: 1.3;
         }
 
+        .f-hosp-sub {
+            font-size: 13px;
+            color: #278132;
+            font-weight: 600;
+            margin: 0 0 4px !important;
+        }
+
         .footer-hospital-card p {
-            font-size: 12.5px;
+            font-size: 13.5px;
             color: #94a3b8;
-            line-height: 1.45;
+            line-height: 1.5;
             margin: 0 0 6px;
         }
 
@@ -1647,10 +1573,17 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 12.5px;
+            font-size: 13.5px;
             font-weight: 700;
             color: #e2e8f0;
-            transition: color .2s ease;
+            transition: color 0.2s ease;
+        }
+
+        .f-hosp-phone i,
+        .f-hosp-phone svg {
+            width: 13px;
+            height: 13px;
+            color: var(--green);
         }
 
         .f-hosp-phone:hover {
@@ -1661,8 +1594,8 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            background: linear-gradient(135deg, rgba(42, 130, 56, .22) 0%, rgba(3, 32, 90, .45) 100%);
-            border: 1px solid rgba(104, 212, 147, .35);
+            background: linear-gradient(135deg, rgba(42, 130, 56, 0.22) 0%, rgba(3, 32, 90, 0.45) 100%);
+            border: 1px solid rgba(104, 212, 147, 0.35);
             padding: 12px 14px;
             border-radius: 10px;
             margin-bottom: 14px;
@@ -1679,16 +1612,17 @@
             flex-shrink: 0;
         }
 
-        .f-emg-icon i {
+        .f-emg-icon i,
+        .f-emg-icon svg {
             width: 20px;
             height: 20px;
         }
 
         .footer-emergency-box small {
             display: block;
-            font-size: 11px;
+            font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: .6px;
+            letter-spacing: 0.6px;
             color: #278132;
             font-weight: 700;
             margin-bottom: 2px;
@@ -1696,10 +1630,28 @@
 
         .f-emg-num {
             display: block;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 900;
-            color: #fff;
+            color: #ffffff;
             line-height: 1.2;
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num:hover {
+            color: #278132;
+        }
+
+        .f-emg-num-sub {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #cbd5e1;
+            margin-top: 2px;
+            transition: color 0.2s ease;
+        }
+
+        .f-emg-num-sub:hover {
+            color: #278132;
         }
 
         .footer-contact-list {
@@ -1713,42 +1665,62 @@
             display: flex;
             align-items: center;
             gap: 9px;
-            font-size: 13px;
+            font-size: 14px;
             color: #cbd5e1;
             padding: 7px 10px;
-            background: rgba(255, 255, 255, .03);
-            border: 1px solid rgba(255, 255, 255, .07);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
             border-radius: 7px;
-            transition: all .2s ease;
+            transition: all 0.2s ease;
+            word-break: break-all;
+        }
+
+        .f-cnt-item i,
+        .f-cnt-item svg {
+            width: 15px;
+            height: 15px;
+            color: var(--green);
+            flex-shrink: 0;
         }
 
         .f-cnt-item:hover {
-            background: rgba(255, 255, 255, .08);
-            color: #fff;
-            border-color: rgba(104, 212, 147, .3);
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border-color: rgba(104, 212, 147, 0.3);
         }
 
         .f-cnt-item.whatsapp:hover {
             color: #25d366;
-            border-color: rgba(37, 211, 102, .4);
+            border-color: rgba(37, 211, 102, 0.4);
+        }
+
+        .f-cnt-item.whatsapp:hover i,
+        .f-cnt-item.whatsapp:hover svg {
+            color: #25d366;
         }
 
         .footer-motto {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 800;
             color: #278132;
             padding-top: 4px;
         }
 
+        .footer-motto i,
+        .footer-motto svg {
+            width: 16px;
+            height: 16px;
+        }
+
         .bottom {
             background: #010c22;
             padding: 18px 0;
-            font-size: 13px;
+            font-size: 14px;
             color: #94a3b8;
-            border-top: 1px solid rgba(255, 255, 255, .08);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .bottom .wrap {
@@ -1765,7 +1737,7 @@
             gap: 14px;
             flex-wrap: wrap;
             color: #cbd5e1;
-            font-size: 12.5px;
+            font-size: 13.5px;
         }
 
         .bottom-badges span {
@@ -1774,262 +1746,202 @@
             gap: 5px;
         }
 
-        .bottom-badges span i {
+        .bottom-badges span i,
+        .bottom-badges span svg {
             width: 13px;
             height: 13px;
             color: var(--green);
         }
 
-        /* STICKY BOTTOM BAR FOR MOBILE */
-        .sticky-bottom-bar {
-            display: none;
-            position: fixed;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 999;
-            background: rgba(3, 32, 90, 0.96);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 99px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-            padding: 6px 10px;
-            width: calc(100% - 32px);
-            max-width: 440px;
-            align-items: center;
-            justify-content: space-around;
+        .hamb {
+            border: 0;
+            background: transparent;
+            color: var(--blue);
+            font-size: 28px;
+            line-height: 1;
+            padding: 8px;
+            cursor: pointer;
+            display: none
         }
 
-        .sticky-bar-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 3px;
-            color: #fff;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 6px 12px;
-            border-radius: 99px;
-            text-decoration: none;
-            transition: all 0.2s;
-            flex: 1;
-            text-align: center;
-        }
-
-        .sticky-bar-item i {
-            width: 18px;
-            height: 18px;
-            color: #278132;
-        }
-
-        .sticky-bar-item.whatsapp i {
-            color: #25d366;
-        }
-
-        .sticky-bar-divider {
-            width: 1px;
-            height: 24px;
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* MOBILE MENU & RESPONSIVENESS */
-        .mobile-menu-head,
-        .mobile-menu-footer,
-        .nav-overlay {
-            display: none;
-        }
-
-        @media (max-width: 1024px) {
-            .doc-hero-grid {
-                grid-template-columns: 260px 1fr;
-                gap: 32px;
+        /* RESPONSIVE MEDIA QUERIES */
+        @media(max-width:1100px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr)
             }
 
-            .doc-page-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .doc-sidebar {
-                position: static;
-            }
-
-            .other-docs-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .reviews-grid {
-                grid-template-columns: 1fr;
+            .journey-grid {
+                grid-template-columns: repeat(3, 1fr)
             }
 
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
+                gap: 32px
             }
         }
 
-        @media (max-width: 768px) {
-            .top {
-                display: none;
+        @media(max-width:900px) {
+            .wrap {
+                width: calc(100% - 40px)
+            }
+
+            .top,
+            .menu,
+            .nav .primary {
+                display: none
             }
 
             .hamb {
-                display: block;
+                display: block
             }
 
-            .nav>.wrap>.primary {
-                display: none;
+            .hero .wrap,
+            .intro-grid,
+            .conditions-panel,
+            .faq-layout {
+                grid-template-columns: 1fr;
+                gap: 28px
             }
 
-            .menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 82%;
-                max-width: 320px;
-                height: 100vh;
-                background: #fff;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0;
-                padding: 0;
-                box-shadow: -6px 0 25px rgba(0, 0, 0, 0.25);
-                z-index: 1000;
-                transition: right 0.3s ease;
-                overflow-y: auto;
+            .doc-feature-card {
+                grid-template-columns: 220px 1fr
             }
 
-            .nav.open .menu {
-                right: 0;
+            .cta .wrap {
+                grid-template-columns: 1fr;
+                text-align: center
+            }
+
+            .cta-visual {
+                margin: auto
+            }
+
+            .cta .actions {
+                justify-content: center
             }
 
             .nav-overlay {
-                display: block;
+                display: none;
                 position: fixed;
-                inset: 0;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 999;
-                opacity: 0;
-                pointer-events: none;
-                transition: opacity 0.3s ease;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(3, 32, 90, 0.45);
+                backdrop-filter: blur(2px);
+                z-index: 2004;
             }
 
             .nav.open .nav-overlay {
-                opacity: 1;
-                pointer-events: auto;
+                display: block;
+            }
+
+            .menu {
+                position: fixed !important;
+                top: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                left: auto !important;
+                width: min(340px, 86vw) !important;
+                background: #fff !important;
+                z-index: 2005 !important;
+                box-shadow: -10px 0 35px rgba(3, 32, 90, 0.22) !important;
+                transform: translateX(105%) !important;
+                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
+                padding: 0 !important;
+                overflow-y: auto !important;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav.open .menu {
+                transform: translateX(0) !important;
             }
 
             .mobile-menu-head {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                width: 100%;
-                padding: 18px 20px;
-                background: var(--blue);
+                padding: 16px 20px;
+                border-bottom: 1px solid var(--line);
+                background: #f8fafc;
+                position: sticky;
+                top: 0;
+                z-index: 2;
             }
 
             .mobile-menu-head img {
                 width: 140px;
+                height: 38px;
+                object-fit: contain;
+                object-position: left;
             }
 
             .mobile-close-btn {
-                background: none;
-                border: none;
-                color: #fff;
-                font-size: 22px;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid var(--line);
+                color: var(--blue);
+                font-size: 16px;
+                display: grid;
+                place-items: center;
                 cursor: pointer;
+                transition: all 0.2s ease;
+            }
+
+            .mobile-close-btn:hover {
+                background: #eaf5ec;
+                color: var(--green);
+                border-color: var(--green);
             }
 
             .mobile-nav-links {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
-                padding: 16px 0;
+                padding: 12px 18px;
+                gap: 2px;
             }
 
-            .mobile-nav-links a {
-                padding: 14px 24px;
-                font-size: 15px;
+            .menu a {
+                padding: 12px 8px;
+                font-size: 15.5px;
                 font-weight: 700;
-                border-bottom: 1px solid #edf2f7;
-                width: 100%;
-            }
-
-            .mobile-menu-footer {
+                color: var(--blue);
+                border-bottom: 1px solid #f0f4f8;
                 display: flex;
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-                padding: 20px;
-                margin-top: auto;
+                align-items: center;
+                justify-content: space-between;
             }
 
-            .doc-hero-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
+            .menu a:hover {
+                color: var(--green);
             }
 
-            .doc-photo-box {
-                max-width: 280px;
-                margin: 0 auto;
+            .menu .on:after {
+                display: none;
             }
 
-            .doc-top-tags {
-                justify-content: center;
-            }
-
-            .doc-hero-info h1 {
-                font-size: 30px;
-            }
-
-            .doc-hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-                text-align: left;
-            }
-
-            .doc-hero-actions {
-                justify-content: center;
-            }
-
-            .speciality-chips {
-                grid-template-columns: 1fr;
-            }
-
-            .opd-item {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-
-            .opd-time {
-                border-left: none;
-                border-top: 1px solid #d0e1ed;
-                padding-left: 0;
-                padding-top: 10px;
-            }
-
-            .other-docs-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .empanelled-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            /* MOBILE ACCORDION STYLES */
             .nav-group {
                 display: flex;
                 flex-direction: column;
                 align-items: stretch;
                 width: 100%;
+                border-bottom: 1px solid #f0f4f8;
             }
 
             .nav-group>a {
+                padding: 12px 8px;
+                font-size: 15.5px;
+                font-weight: 700;
+                color: var(--blue);
+                display: flex;
+                align-items: center;
                 justify-content: space-between;
+                border-bottom: 0;
             }
 
             .nav-group .nav-chevron {
@@ -2175,10 +2087,116 @@
                 border-top: 1px solid #dce7f2 !important;
             }
 
-            @media (max-width: 767px) {
-                .sticky-bottom-bar {
-                    display: flex !important;
-                }
+            .mobile-menu-footer {
+                margin-top: auto;
+                padding: 18px 20px;
+                border-top: 1px solid var(--line);
+                background: #f8fafc;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .mobile-menu-footer .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+        }
+
+        @media(max-width:600px) {
+            .wrap {
+                width: calc(100% - 32px)
+            }
+
+            .hero h1 {
+                font-size: 30px;
+                line-height: 1.2;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px
+            }
+
+            .hero-actions {
+                flex-direction: column
+            }
+
+            .hero-actions .btn {
+                width: 100%
+            }
+
+            .title,
+            .conditions-panel h2 {
+                font-size: 24px;
+                line-height: 1.28;
+            }
+
+            .kicker,
+            .eyebrow {
+                font-size: 12.5px;
+                letter-spacing: 0.7px;
+                margin-bottom: 4px;
+            }
+
+            .sub {
+                font-size: 15.5px;
+                line-height: 1.55;
+                margin: 0 0 18px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr
+            }
+
+            .cond-grid {
+                grid-template-columns: 1fr
+            }
+
+            .journey-grid {
+                grid-template-columns: 1fr
+            }
+
+            .doc-profile-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+            }
+
+            .doc-photo-box {
+                width: 100%;
+                height: 200px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px
+            }
+
+            .bottom .wrap {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center
+            }
+        }
+
+        @media(max-width:420px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .title,
+            .conditions-panel h2 {
+                font-size: 22px;
+                line-height: 1.3;
+            }
+
+            .kicker,
+            .eyebrow {
+                font-size: 12px;
+                letter-spacing: 0.5px;
             }
         }
     </style>
@@ -2268,6 +2286,7 @@
                                 </div>
                                 <div class="mega-links-grid">
                                     <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                    <a href="paediatrics.html"><i data-lucide="smile"></i><span>Paediatrics &amp; Neonatology</span></a>
                                     <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
                                     <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
                                     <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
@@ -2344,353 +2363,446 @@
         <div class="nav-overlay"></div>
     </header>
 
-    <!-- 3. DOCTOR PROFILE HERO SECTION -->
-    <section class="doctor-hero">
+    <!-- HERO SECTION -->
+    <section class="hero">
         <div class="wrap">
-            <div class="crumb">
-                <a href="index.html">Home</a>
-                <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
-                <a href="doctor.html">Doctors</a>
-                <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
-                <span>Dr. Joginder Silayach</span>
-            </div>
+            <div class="hero-copy">
+                <div class="crumb">
+                    <a href="index.html">Home</a> <span>›</span> <a href="index.html#specialities">Specialities</a>
+                    <span>›</span> <span>Paediatrics &amp; Neonatology</span>
+                </div>
+                <div class="eyebrow">
+                    <span class="eyebrow-badge">CENTRE OF EXCELLENCE • NEWBORN &amp; CHILD HEALTH</span>
+                    <span>SUKHDA MULTISPECIALITY HOSPITAL</span>
+                </div>
+                <h1>Caring for Newborns &amp;<br><span>Children in Hisar</span></h1>
+                <p>Newborn care from the moment of birth, neonatal intensive care (NICU) support, treatment of common
+                    childhood illnesses, and paediatric emergency care — delivered in close coordination with our
+                    obstetrics, emergency and critical care teams.</p>
 
-            <div class="doc-hero-grid">
-                <div class="doc-photo-box">
-                    <img src="assets/images/doctors/dr-joginder-silayach.jpg" alt="Dr. Joginder Silayach — Sukhda Hospital Hisar">
+                <div class="hero-actions">
+                    <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book a Paediatric Consultation</a>
+                    <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24/7 Helpline:
+                        01662-249473</a>
                 </div>
 
-                <div class="doc-hero-info">
-                    <div class="doc-top-tags">
-                        <span class="pill-verified"><i data-lucide="shield-check" style="width:14px;height:14px"></i>
-                            Consultant</span>
-                        <span class="pill-dept-link"><i data-lucide="stethoscope"
-                                style="width:14px;height:14px"></i> Paediatrics &amp; Neonatology</span>
-                        <a href="about.html#hospitals" class="pill-hosp-link"><i data-lucide="building-2"
-                                style="width:14px;height:14px;color:#278132"></i> Sukhda Multispeciality Hospital</a>
+                <div class="hero-stats">
+                    <div class="hero-stat-card">
+                        <b>24/7</b>
+                        <small>Emergency &amp; Critical Care Backup</small>
                     </div>
-
-                    <h1>Dr. Joginder Silayach</h1>
-                    <div class="doc-degrees">MD (Paediatrics), MBBS</div>
-                    <div class="doc-role">Consultant — Paediatrics &amp; Neonatology</div>
-                    <p class="doc-summary">Paediatrician with a special interest in neonatology and paediatric critical care. NRP- and PALS-certified; life member of IAP and NNF.</p>
-
-                    <div class="doc-hero-stats">
-                        <div class="stat-item">
-                            <b>MD — Paediatrics</b>
-                            <small>Qualification</small>
-                        </div>
-                        <div class="stat-item">
-                            <b>On Call</b>
-                            <small>OPD Days</small>
-                        </div>
+                    <div class="hero-stat-card">
+                        <b>NICU</b>
+                        <small>Neonatal Intensive Care Support</small>
                     </div>
+                    <div class="hero-stat-card">
+                        <b>Mother &amp; Child</b>
+                        <small>Care with Our Obstetrics Team</small>
+                    </div>
+                    <div class="hero-stat-card">
+                        <b>Cashless</b>
+                        <small>Ayushman Bharat, CGHS &amp; TPAs</small>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="doc-hero-actions">
-                        <a href="#appointment" class="btn green"><i data-lucide="calendar-check"></i> Book OPD
-                            Consultation</a>
-                        <a href="https://wa.me/919996544005?text=Hello%20Dr.+Joginder+Silayach,%20I%20would%20like%20to%20inquire%20about%20OPD%20consultation"
-                            target="_blank" rel="noopener" class="btn whatsapp"><svg class="wa-icon-svg"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
-                                style="vertical-align:middle;flex-shrink:0;margin-right:6px" aria-hidden="true">
-                                <path fill="#ffffff"
-                                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
-                                <path fill="#25D366" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                            </svg> WhatsApp Query</a>
-                        <a href="tel:01662249473" class="btn outline"
-                            style="color:#fff;border-color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.08)"><i
-                                data-lucide="phone"></i> 01662-249473</a>
+            <div class="hero-media">
+                <div class="hero-img-card">
+                    <img src="assets/images/gynae-maternity-hero.jpg"
+                        alt="Newborn and Child Care at Sukhda Hospital">
+                    <div class="hero-badge-float">
+                        <i data-lucide="shield-check"></i>
+                        <div>
+                            <b>Newborn &amp; Child Care</b>
+                            <small>NICU Support • 24/7 Emergency Backup</small>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. DOCTOR PROFILE MAIN BODY (TWO COLUMNS) -->
+    <!-- SECTION 1: OVERVIEW -->
+    <section class="section">
+        <div class="wrap intro-grid">
+            <div class="intro-copy">
+                <div class="kicker">DEPARTMENT OF PAEDIATRICS &amp; NEONATOLOGY</div>
+                <h2 class="title">Gentle, Evidence-Based Care for Newborns and Children</h2>
+                <p>At Sukhda Multispeciality Hospital, we understand that a child's illness is stressful for the whole
+                    family. Our paediatric and neonatal care focuses on safe, child-friendly treatment, clear
+                    communication with parents, and careful monitoring at every stage of recovery.</p>
+                <p>Working closely with our obstetrics, emergency and critical care teams, we support babies from the
+                    moment of birth — including newborn resuscitation and neonatal intensive care — and treat common
+                    childhood illnesses, infections and paediatric emergencies.</p>
+
+                <div class="check-grid">
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Newborn Care &amp; Resuscitation at Birth</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> NICU Support for Premature &amp; Sick Newborns</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Neonatal Jaundice &amp; Low-Birth-Weight Care</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Childhood Fevers &amp; Infections</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> 24/7 Paediatric Emergency Backup</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Growth &amp; Nutrition Guidance</div>
+                </div>
+
+                <a class="btn primary small" href="contact.html">Schedule a Consultation →</a>
+            </div>
+
+            <div class="intro-media">
+                <div class="intro-img-card">
+                    <img src="assets/images/doctor-patient-hero.jpg"
+                        alt="Paediatric Consultation at Sukhda Hospital">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: SERVICES & TREATMENTS -->
+    <section class="section soft" id="services">
+        <div class="wrap">
+            <div class="kicker">OUR CLINICAL SERVICES</div>
+            <h2 class="title">Paediatric &amp; Neonatal Care Services</h2>
+            <p class="sub">Comprehensive care for newborns, infants and children, from birth through adolescence.</p>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="baby"></i>
+                    </div>
+                    <h3>Newborn Care at Delivery</h3>
+                    <p>Assessment and resuscitation of newborns at birth, early breastfeeding support, and routine
+                        newborn examination in coordination with our labour room team.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="heart-pulse"></i>
+                    </div>
+                    <h3>Neonatal Intensive Care (NICU) Support</h3>
+                    <p>Monitoring and treatment for premature and low-birth-weight babies, breathing difficulties,
+                        neonatal infections and other conditions that need close observation.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="sun"></i>
+                    </div>
+                    <h3>Neonatal Jaundice Care</h3>
+                    <p>Evaluation of jaundice in newborns, regular bilirubin monitoring, and phototherapy when it is
+                        clinically indicated.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="thermometer"></i>
+                    </div>
+                    <h3>Childhood Illnesses &amp; Infections</h3>
+                    <p>Diagnosis and treatment of fevers, respiratory infections, diarrhoea and dehydration, and
+                        seasonal illnesses such as dengue, malaria and typhoid in children.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="siren"></i>
+                    </div>
+                    <h3>Paediatric Emergency Care</h3>
+                    <p>Prompt assessment and stabilisation of sick children in our 24/7 Emergency Department, with
+                        critical care backup when it is needed.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="sprout"></i>
+                    </div>
+                    <h3>Growth, Nutrition &amp; Development</h3>
+                    <p>Monitoring of growth and developmental milestones, nutritional advice for infants and children,
+                        and guidance for parents at every stage.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: CONDITIONS WE TREAT -->
     <section class="section">
         <div class="wrap">
-            <div class="doc-page-layout">
-
-                <!-- MAIN LEFT CONTENT -->
-                <div class="doc-main-col">
-
-                    <!-- A. ABOUT THE DOCTOR -->
-                    <article class="content-card">
-                        <h3><i data-lucide="user-check"></i> Professional Profile</h3>
-                        <div class="bio-text">
-                            <p>Dr. Joginder Silayach has a special interest in neonatology and paediatric critical care. He worked in the NICU and PICU during his postgraduate training and senior residency.<br><br>He actively participated in the WHO Polio Eradication Programme as a monitoring and surveillance officer in 2010. During his postgraduate training, he participated in activities of IAP and NNF, and he has attended several CMEs and teaching programmes. During his senior residency, he participated in many academic activities and completed NRP and PALS certification courses.</p>
-                        </div>
-                    </article>
-
-                    <!-- B. OPD TIMINGS & CONSULTATION LOCATION -->
-                    <article class="content-card">
-                        <h3><i data-lucide="clock"></i> OPD Schedule &amp; Hospital Location</h3>
-                        <div class="opd-grid">
-                            <div class="opd-item">
-                                <div class="opd-loc">
-                                    <b>Sukhda Multispeciality Hospital</b>
-                                    <small><i data-lucide="map-pin"
-                                            style="width:14px;height:14px;color:var(--green)"></i> Opposite Green Belt, Delhi Road, Hisar - 125001</small>
-                                </div>
-                                <div class="opd-time">
-                                    <span class="days">On Call</span>
-                                    <span class="hours">Please call 01662-249473 to confirm availability</span>
-                                    <span class="room">Paediatrics &amp; Neonatology</span>
-                                </div>
-                                <div>
-                                    <a href="#appointment" class="btn primary"
-                                        style="padding:8px 16px;font-size:13px"><i data-lucide="calendar"></i> Book
-                                        Slot</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- C. AREAS OF CLINICAL EXPERTISE -->
-                    <article class="content-card">
-                        <h3><i data-lucide="stethoscope"></i> Areas of Expertise</h3>
-                        <div class="speciality-chips">
-                            <div class="spec-chip">
-                                <i data-lucide="check-circle-2"></i>
-                                <span>Neonatology (NICU)</span>
-                            </div>
-                            <div class="spec-chip">
-                                <i data-lucide="check-circle-2"></i>
-                                <span>Paediatric Critical Care (PICU)</span>
-                            </div>
-                            <div class="spec-chip">
-                                <i data-lucide="check-circle-2"></i>
-                                <span>General Paediatrics</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- D. EDUCATION & QUALIFICATIONS -->
-                    <article class="content-card">
-                        <h3><i data-lucide="graduation-cap"></i> Education &amp; Qualifications</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <h4>MD — Paediatrics (2014)</h4>
-                                <span class="inst">Pandit Bhagwat Dayal Sharma University of Health Sciences, Rohtak</span>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <h4>MBBS (2009)</h4>
-                                <span class="inst">Maharaja Agrasen Medical College, Agroha</span>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <h4>NRP &amp; PALS Certification</h4>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- E. PROFESSIONAL EXPERIENCE -->
-                    <article class="content-card">
-                        <h3><i data-lucide="briefcase"></i> Professional Experience</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <h4>Monitoring &amp; Surveillance Officer (2010)</h4>
-                                <span class="inst">WHO Polio Eradication Programme</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- H. PROFESSIONAL MEMBERSHIPS -->
-                    <article class="content-card">
-                        <h3><i data-lucide="bookmark-check"></i> Professional Memberships</h3>
-                        <div class="speciality-chips">
-                            <div class="spec-chip" style="background:#fff">
-                                <i data-lucide="badge-check"></i>
-                                <span>Life Member — Indian Academy of Pediatrics (IAP)</span>
-                            </div>
-                            <div class="spec-chip" style="background:#fff">
-                                <i data-lucide="badge-check"></i>
-                                <span>Life Member — National Neonatology Forum (NNF)</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- I. IMMEDIATE ASSISTANCE -->
-                    <div class="sidebar-direct-card" style="margin-top: 8px;">
-                        <h4><i data-lucide="headphones" style="width:18px;height:18px;vertical-align:middle;margin-right:6px"></i> Need Immediate Assistance?</h4>
-                        <p>Our hospital reception and emergency care coordinators are available 24 hours a day to assist you.</p>
-                        <div style="display:flex;gap:14px;flex-wrap:wrap;">
-                            <a href="tel:01662249473" class="direct-phone-btn" style="flex:1;min-width:200px">
-                                <span><i data-lucide="phone-call" style="vertical-align:middle;margin-right:6px"></i> 01662-249473</span>
-                                <small>24/7 Emergency</small>
-                            </a>
-                            <a href="https://wa.me/919996544005" target="_blank" rel="noopener" class="direct-phone-btn" style="flex:1;min-width:200px;background:#25D366;border-color:#25D366">
-                                <span><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;flex-shrink:0;margin-right:6px" aria-hidden="true"><path fill="#ffffff" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#25D366" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>WhatsApp Desk</span>
-                                <small>+91 99965-44005</small>
-                            </a>
-                        </div>
-                    </div>
+            <div class="conditions-panel">
+                <div>
+                    <div class="eyebrow" style="color:#278132">CONDITIONS WE TREAT</div>
+                    <h2>Care Across Common Newborn &amp; Childhood Conditions</h2>
+                    <p>Careful assessment, appropriate investigations and child-friendly treatment for newborns,
+                        infants and children.</p>
+                    <a class="btn white small" href="contact.html"><i data-lucide="calendar-days"></i>Book
+                        Appointment</a>
                 </div>
 
-                <!-- RIGHT SIDEBAR (STICKY APPOINTMENT BOOKING WIDGET) -->
-                <aside class="doc-sidebar" id="appointment">
-                    <div class="booking-card">
-                        <div class="booking-header">
-                            <h3>Book OPD Appointment</h3>
-                            <p>Direct consultation with Dr. Joginder Silayach</p>
-                        </div>
-                        <form action="contact.html" method="GET">
-                            <input type="hidden" name="doctor" value="dr-joginder-silayach">
-
-                            <div class="form-group">
-                                <label for="docSelect">Consulting Specialist</label>
-                                <input type="text" id="docSelect" class="form-control"
-                                    value="Dr. Joginder Silayach (Paediatrics &amp; Neonatology)" readonly
-                                    style="background:#f8fafc;font-weight:700">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="hospLoc">Select Hospital Location *</label>
-                                <select id="hospLoc" name="hospital" class="form-control" required>
-                                    <option value="Sukhda Multispeciality Hospital">Sukhda Multispeciality Hospital
-                                        (Delhi Road)</option>
-                                    <option value="Sukhda MedPark">Sukhda MedPark Super-Speciality Hospital</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="appDate">Preferred Date *</label>
-                                <input type="date" id="appDate" name="date" class="form-control"
-                                    required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="appTime">Preferred Time Slot *</label>
-                                <select id="appTime" name="slot" class="form-control" required>
-                                    <option value="Morning (10:00 AM – 12:00 PM)">Morning (10:00 AM – 12:00 PM)</option>
-                                    <option value="Afternoon (12:00 PM – 02:00 PM)">Afternoon (12:00 PM – 02:00 PM)
-                                    </option>
-                                    <option value="Evening (03:00 PM – 05:00 PM)">Late Afternoon (03:00 PM – 05:00 PM)</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="patientName">Patient Full Name *</label>
-                                <input type="text" id="patientName" name="name" class="form-control"
-                                    placeholder="Enter patient name" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="patientPhone">Mobile Number *</label>
-                                <input type="tel" id="patientPhone" name="phone" class="form-control"
-                                    placeholder="10-digit mobile number" required>
-                            </div>
-
-                            <div class="booking-help-box">
-                                <i data-lucide="shield-check"></i>
-                                <span>No upfront payment required. Instant confirmation via SMS &amp; WhatsApp.</span>
-                            </div>
-                            <div class="form-consent-wrap">
-                                <label>
-                                    <input type="checkbox" required checked>
-                                    <span>I consent to Sukhda Healthcare collecting my details to schedule an OPD consultation in accordance with the <a href="privacy-policy.html" target="_blank" style="color:var(--green);text-decoration:underline;font-weight:600">Privacy Policy</a>.</span>
-                                </label>
-                            </div>
-
-                            <button type="submit" class="btn green" style="width:100%;padding:14px;font-size:15px">
-                                <i data-lucide="calendar-plus"></i> Confirm OPD Appointment
-                            </button>
-                            <p class="form-privacy-note"><i data-lucide="lock" style="width:12px;height:12px;vertical-align:middle"></i> Confidential &amp; DPDP Act–compliant medical data protection.</p>
-                        </form>
+                <div class="cond-grid">
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Prematurity &amp; Low Birth Weight</span>
                     </div>
-                </aside>
-
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Neonatal Jaundice</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Breathing Difficulty in Newborns</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Neonatal Infections &amp; Sepsis</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Feeding Difficulties in Newborns</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Fever &amp; Febrile Seizures</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Pneumonia &amp; Respiratory Infections</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Asthma &amp; Wheezing</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Diarrhoea &amp; Dehydration</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Dengue, Malaria &amp; Typhoid</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Anaemia &amp; Nutritional Deficiencies</span>
+                    </div>
+                    <div class="cond-item">
+                        <i data-lucide="check-circle"></i>
+                        <span>Growth &amp; Developmental Concerns</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. OTHER DOCTORS & COLLEAGUES -->
-    <section class="section">
+    <!-- SECTION 4: CARE JOURNEY -->
+    <section class="section soft" id="journey">
         <div class="wrap">
-            <div class="kicker">CLINICAL FACULTY</div>
-            <h2 class="section-title">Meet Other Senior Consultants at Sukhda</h2>
-            <p class="section-sub">Consult specialised doctors across oncology, cardiology, obstetrics, nephrology, and
-                surgery.</p>
+            <div class="kicker">PATIENT JOURNEY</div>
+            <h2 class="title">Your Child's Care Journey at Sukhda Hospital</h2>
+            <p class="sub">Clear steps from the first assessment to recovery and follow-up.</p>
 
-            <div class="other-docs-grid">
-                <article class="colleague-card">
-                    <img class="colleague-img" src="assets/images/doctors/dr-amit-mehta.jpg" alt="Dr. Amit Mehta">
-                    <div class="colleague-body">
-                        <h4>Dr. Amit Mehta</h4>
-                        <div class="col-deg">MD (General Medicine), AIIMS, New Delhi · MBBS</div>
-                        <div class="col-spec">Director &amp; Head — Internal Medicine &amp; Critical Care</div>
-                        <a href="dr-amit-mehta.html" class="btn-profile">View Profile →</a>
-                    </div>
+            <div class="journey-grid">
+                <article class="journey-step">
+                    <h4>Assessment &amp; Triage</h4>
+                    <p>Prompt evaluation of the child's condition, vital signs, hydration and feeding, with urgent
+                        cases seen immediately in our Emergency Department.</p>
                 </article>
-                <article class="colleague-card">
-                    <img class="colleague-img" src="assets/images/doctors/dr-ankur-kamra.jpg" alt="Dr. Ankur Kamra">
-                    <div class="colleague-body">
-                        <h4>Dr. Ankur Kamra</h4>
-                        <div class="col-deg">DM (Cardiology) · MD (Medicine) · MBBS</div>
-                        <div class="col-spec">HOD &amp; Senior Consultant — Interventional Cardiology</div>
-                        <a href="dr-ankur-kamra.html" class="btn-profile">View Profile →</a>
-                    </div>
+                <article class="journey-step">
+                    <h4>Investigations</h4>
+                    <p>Blood tests in our in-house pathology lab and imaging such as X-ray and ultrasound, only when
+                        clinically needed.</p>
                 </article>
-                <article class="colleague-card">
-                    <img class="colleague-img" src="assets/images/doctors/dr-trivikrama-rao.jpg" alt="Dr. Trivikrama Rao">
-                    <div class="colleague-body">
-                        <h4>Dr. Trivikrama Rao</h4>
-                        <div class="col-deg">DrNB (Medical Oncology)</div>
-                        <div class="col-spec">Consultant — Medical Oncology</div>
-                        <a href="dr-trivikrama-rao.html" class="btn-profile">View Profile →</a>
-                    </div>
+                <article class="journey-step">
+                    <h4>Treatment Plan</h4>
+                    <p>A clear, child-friendly treatment plan explained to parents, with medicines and supportive care
+                        suited to the child's age and weight.</p>
                 </article>
-                <article class="colleague-card">
-                    <img class="colleague-img" src="assets/images/doctors/dr-anil-khyalia.jpg" alt="Dr. Anil Khyalia">
-                    <div class="colleague-body">
-                        <h4>Dr. Anil Khyalia</h4>
-                        <div class="col-deg">MCh (Neurosurgery) · MS · MBBS</div>
-                        <div class="col-spec">Consultant Neurosurgeon (Brain &amp; Spine)</div>
-                        <a href="dr-anil-khyalia.html" class="btn-profile">View Profile →</a>
+                <article class="journey-step">
+                    <h4>Admission &amp; Monitoring (if Needed)</h4>
+                    <p>Close monitoring in the ward, or NICU and critical care support for newborns and children who
+                        need intensive care.</p>
+                </article>
+                <article class="journey-step">
+                    <h4>Discharge &amp; Follow-Up</h4>
+                    <p>Home-care advice for parents, warning signs to watch for, and scheduled follow-up visits.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CARE TEAM -->
+    <section class="section" id="specialist">
+        <div class="wrap">
+            <div class="kicker">PAEDIATRIC CARE TEAM</div>
+            <h2 class="title">Paediatrics &amp; Neonatology Team</h2>
+            <p class="sub">Newborn and child care delivered in coordination with our obstetrics, emergency and critical
+                care teams.</p>
+
+            <div class="doc-card-wrap">
+                <article class="doc-profile-card">
+                    <div class="doc-photo-box">
+                        <img src="assets/images/infra/icu-general.jpg"
+                            alt="Paediatric and Neonatal Care at Sukhda Hospital">
+                    </div>
+                    <div class="doc-info-box">
+                        <span class="doc-pill">Paediatric &amp; Neonatal Care</span>
+                        <h3>Paediatrics &amp; Neonatology Team</h3>
+                        <div class="doc-qual">Please call 01662-249473 to confirm paediatric consultation availability</div>
+                        <div class="doc-spec-text">
+                            <span>Newborn Care &amp; NICU Support</span>
+                            <span>Childhood Illnesses &amp; Infections</span>
+                            <span>Paediatric Emergency Care</span>
+                        </div>
+                        <a class="btn primary small" href="tel:01662249473"><i data-lucide="phone-call"></i>Call
+                            01662-249473</a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- 7. CASHLESS INSURANCE TRUST STRIP -->
-    <div class="empanelled-section">
-        <div class="wrap empanelled-grid">
-            <div class="empanelled-text">
-                <h4>Cashless &amp; Govt. Empanelments</h4>
-                <p>Accepted for eligible surgical &amp; ICU admissions.</p>
-            </div>
-            <div class="empanelled-tags">
-                <span class="empanelled-tag">Ayushman Bharat (PM-JAY)</span>
-                <span class="empanelled-tag">CGHS (Central Government Health Scheme)</span>
-                <span class="empanelled-tag">ECHS (Ex-Servicemen Contributory Health Scheme)</span>
-                <span class="empanelled-tag">Haryana Govt. Employees &amp; Pensioners</span>
-                <span class="empanelled-tag">Northern Railway</span>
-                <span class="empanelled-tag">BSNL</span>
-                <span class="empanelled-tag">Food Corporation of India (FCI)</span>
-                <span class="empanelled-tag">Star Health Insurance</span>
-                <span class="empanelled-tag">HDFC ERGO General Insurance</span>
-                <span class="empanelled-tag">ICICI Lombard</span>
-                <span class="empanelled-tag">Bajaj Allianz</span>
-                <span class="empanelled-tag">Care Health Insurance (Religare)</span>
-                <span class="empanelled-tag">Niva Bupa Health Insurance</span>
-                <span class="empanelled-tag">Medi Assist TPA</span>
-                <span class="empanelled-tag">Paramount Health TPA</span>
-                <span class="empanelled-tag">MDIndia Healthcare TPA</span>
-                <span class="empanelled-tag">Vidal Health TPA</span>
-                <span class="empanelled-tag">Heritage Health TPA</span>
-                <span class="empanelled-tag">Raksha TPA</span>
-                <span class="empanelled-tag">FHPL (Family Health Plan Insurance TPA)</span>
-                <span class="empanelled-tag">Vipul Medcorp TPA</span>
+    <!-- RELATED CLINICAL SPECIALITIES & INTERDISCIPLINARY CARE -->
+    <section class="section soft related-specs-section" id="related-specialities">
+        <div class="wrap">
+            <div class="kicker">INTERDISCIPLINARY CARE</div>
+            <h2 class="title">Related Clinical Specialities &amp; Departments</h2>
+            <p class="sub">Comprehensive multispeciality collaboration ensuring integrated medical and surgical care
+                under one roof.</p>
+            <div class="related-specs-grid">
+                <a href="gynaecology.html" class="related-spec-card">
+                    <div class="related-spec-card-head">
+                        <div class="related-spec-card-icon"><i data-lucide="baby"></i></div>
+                        <h4>Gynaecology &amp; Obstetrics</h4>
+                    </div>
+                    <p>Safe deliveries, high-risk pregnancy care and newborn support from birth.</p>
+                    <span class="related-spec-card-link">Explore Speciality <i data-lucide="chevron-right"
+                            style="width:14px;height:14px"></i></span>
+                </a>
+                <a href="emergency-trauma.html" class="related-spec-card">
+                    <div class="related-spec-card-head">
+                        <div class="related-spec-card-icon"><i data-lucide="zap"></i></div>
+                        <h4>24/7 Emergency &amp; Trauma</h4>
+                    </div>
+                    <p>Round-the-clock emergency assessment and stabilisation for sick children.</p>
+                    <span class="related-spec-card-link">Explore Speciality <i data-lucide="chevron-right"
+                            style="width:14px;height:14px"></i></span>
+                </a>
+                <a href="critical-care.html" class="related-spec-card">
+                    <div class="related-spec-card-head">
+                        <div class="related-spec-card-icon"><i data-lucide="activity"></i></div>
+                        <h4>Critical Care &amp; ICU</h4>
+                    </div>
+                    <p>Intensive monitoring and life support when a child needs critical care.</p>
+                    <span class="related-spec-card-link">Explore Speciality <i data-lucide="chevron-right"
+                            style="width:14px;height:14px"></i></span>
+                </a>
+                <a href="radiology.html" class="related-spec-card">
+                    <div class="related-spec-card-head">
+                        <div class="related-spec-card-icon"><i data-lucide="scan"></i></div>
+                        <h4>CT Scan &amp; Radiology</h4>
+                    </div>
+                    <p>Child-safe X-ray and ultrasound imaging with low-dose protocols.</p>
+                    <span class="related-spec-card-link">Explore Speciality <i data-lucide="chevron-right"
+                            style="width:14px;height:14px"></i></span>
+                </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- 8. FOOTER -->
+    <section class="section soft" id="faqs">
+        <div class="wrap faq-layout">
+            <div>
+                <div class="kicker">FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="title">Common Questions About Paediatrics &amp; Neonatology</h2>
+                <p class="sub">Clear answers to help parents make informed decisions about their child's health.</p>
+                <a class="btn primary small" href="contact.html"><i data-lucide="message-circle"></i>Ask a Doctor</a>
+            </div>
+
+            <div>
+                <details class="faq-item" open>
+                    <summary>When should I bring my child to the emergency department?</summary>
+                    <div class="faq-content">
+                        Bring your child to the emergency department straight away if they have difficulty breathing, a
+                        seizure (fit), unusual drowsiness or are hard to wake, a high fever that does not come down,
+                        signs of dehydration (very little urine, a dry mouth, no tears), repeated vomiting, or if a
+                        newborn is not feeding well. Our Emergency Department is open 24/7. </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Is jaundice in newborns serious?</summary>
+                    <div class="faq-content">
+                        Mild jaundice is common in the first week of life and often settles on its own. However, jaundice
+                        that appears in the first 24 hours, spreads to the arms and legs, or lasts longer than two weeks
+                        should be checked by a doctor. Bilirubin levels can be monitored, and phototherapy is given when
+                        it is needed. </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Does Sukhda Hospital have NICU support for newborns?</summary>
+                    <div class="faq-content">
+                        Yes. Babies born early, with low birth weight, or with breathing or feeding difficulties can be
+                        monitored and treated with neonatal intensive care (NICU) support, working closely with our
+                        obstetrics and critical care teams. </div>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I book a paediatric consultation?</summary>
+                    <div class="faq-content">
+                        Please call our helpline on 01662-249473 or message us on WhatsApp at +91 99965-44005 to
+                        confirm paediatric consultation availability and book a convenient time. In an emergency, come
+                        directly to our 24/7 Emergency Department. </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Is paediatric treatment covered under cashless insurance?</summary>
+                    <div class="faq-content">
+                        Eligible admissions are covered under cashless health insurance through TPAs and private
+                        insurers, Ayushman Bharat (PM-JAY), CGHS, ECHS, and Haryana Government health schemes, subject
+                        to policy terms. </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASHLESS / EMPANELLED STRIP -->
+    <section class="empanelled-section" id="empanelled">
+        <div class="wrap">
+            <div class="emp-head">
+                <h4>Cashless Hospitalisation &amp; Empanelled Insurance Partners</h4>
+                <a class="more" href="empanelled-corporate.html">Cashless Facility Available 24/7 &rarr;</a>
+            </div>
+            <div class="emp-pills">
+                <span class="emp-pill gov"><i data-lucide="shield-check"></i> Ayushman Bharat (PM-JAY)</span>
+                <span class="emp-pill gov"><i data-lucide="shield-check"></i> CGHS (Central Government Health Scheme)</span>
+                <span class="emp-pill gov"><i data-lucide="shield-check"></i> ECHS (Ex-Servicemen Contributory Health
+                    Scheme)</span>
+                <span class="emp-pill gov"><i data-lucide="shield-check"></i> Haryana Govt. Employees &amp;
+                    Pensioners</span>
+                <span class="emp-pill gov"><i data-lucide="shield-check"></i> Northern Railway</span>
+                <span class="emp-pill gov"><i data-lucide="shield-check"></i> BSNL</span>
+                <span class="emp-pill gov"><i data-lucide="shield-check"></i> Food Corporation of India (FCI)</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Star Health Insurance</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> HDFC ERGO General Insurance</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> ICICI Lombard</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Bajaj Allianz</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Care Health Insurance (Religare)</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Niva Bupa Health Insurance</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Medi Assist TPA</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Paramount Health TPA</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> MDIndia Healthcare TPA</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Vidal Health TPA</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Heritage Health TPA</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Raksha TPA</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> FHPL (Family Health Plan Insurance TPA)</span>
+                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Vipul Medcorp TPA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta" id="contact">
+        <div class="wrap">
+            <div class="cta-visual">
+                <img src="assets/images/logo-mark.png" alt="Sukhda Healthcare Logo Mark">
+            </div>
+            <div>
+                <h2>Concerned About Your Child's Health?</h2>
+                <p>Call our 24/7 helpline to confirm paediatric consultation availability, or come directly to our
+                    Emergency Department in an emergency.</p>
+            </div>
+            <div class="actions">
+                <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Consultation</a>
+                <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24/7 Helpline:
+                    01662-249473</a>
+            </div>
+        </div>
+    </section>
+
 
     <!-- FOOTER -->
     <footer class="footer">
