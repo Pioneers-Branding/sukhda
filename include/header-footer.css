@@ -1582,6 +1582,13 @@ a.footer-hospital-card:hover,
     transition: all 0.25s ease;
 }
 
+.floating-lang-pill .f-icon {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+}
+
 .floating-lang-pill .f-btn {
     background: transparent;
     border: none;
