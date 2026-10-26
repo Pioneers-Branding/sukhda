@@ -788,7 +788,7 @@
             border-bottom: 1px solid var(--line);
             padding: 24px 0;
             position: sticky;
-            top: 80px;
+            top: 122px; /* top bar 42px + header 80px stay pinned on desktop */
             z-index: 95;
             backdrop-filter: blur(10px);
             background: rgba(247, 250, 252, 0.95);
@@ -852,7 +852,8 @@
             min-width: 320px;
         }
 
-        .search-box-wrap i {
+        .search-box-wrap i,
+        .search-box-wrap svg {
             position: absolute;
             left: 14px;
             top: 50%;
@@ -922,6 +923,14 @@
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 16px;
+        }
+
+        .partner-card-text .partner-name {
+            font-size: 13.5px;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--blue);
+            text-align: center;
         }
 
         .partner-card {
@@ -1312,6 +1321,28 @@
 
             .sec-filter {
                 top: 70px;
+                padding: 12px 0;
+            }
+
+            .filter-wrap {
+                gap: 10px;
+            }
+
+            .category-tabs {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                min-width: 0;
+                max-width: 100%;
+                scrollbar-width: none;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .category-tabs::-webkit-scrollbar {
+                display: none;
+            }
+
+            .tab-btn {
+                flex-shrink: 0;
             }
 
             .filter-wrap {
@@ -1927,15 +1958,15 @@
             <div>
                 <div class="hero-stats-card">
                     <div class="hero-stat-item">
-                        <div class="hero-stat-num">15+</div>
+                        <div class="hero-stat-num">14</div>
                         <div class="hero-stat-label">Govt. &amp; PSU Tie-Ups</div>
                     </div>
                     <div class="hero-stat-item">
-                        <div class="hero-stat-num">32+</div>
+                        <div class="hero-stat-num">27</div>
                         <div class="hero-stat-label">Empanelled TPAs</div>
                     </div>
                     <div class="hero-stat-item">
-                        <div class="hero-stat-num">22+</div>
+                        <div class="hero-stat-num">21</div>
                         <div class="hero-stat-label">Cashless Insurers</div>
                     </div>
                     <div class="hero-stat-item">
@@ -1953,22 +1984,22 @@
             <div class="category-tabs">
                 <button type="button" class="tab-btn active" data-filter="all">
                     <span>All Partners</span>
-                    <span class="tab-count" id="countAll">69</span>
+                    <span class="tab-count" id="countAll">62</span>
                 </button>
                 <button type="button" class="tab-btn" data-filter="gov">
                     <i data-lucide="building-2" style="width:14px;height:14px"></i>
                     <span>Govt &amp; PSUs</span>
-                    <span class="tab-count">15</span>
+                    <span class="tab-count">14</span>
                 </button>
                 <button type="button" class="tab-btn" data-filter="tpa">
                     <i data-lucide="shield" style="width:14px;height:14px"></i>
                     <span>TPAs</span>
-                    <span class="tab-count">32</span>
+                    <span class="tab-count">27</span>
                 </button>
                 <button type="button" class="tab-btn" data-filter="ins">
                     <i data-lucide="heart-pulse" style="width:14px;height:14px"></i>
                     <span>Insurance Companies</span>
-                    <span class="tab-count">22</span>
+                    <span class="tab-count">21</span>
                 </button>
             </div>
             <div class="search-box-wrap">
@@ -1992,284 +2023,253 @@
 
             <!-- Partners Grid -->
             <div class="partners-grid" id="partnersGrid">
-                <div class="partner-card" data-category="gov" data-name="government of haryana"
-                    title="Government of Haryana">
-                    <img src="assets/images/empanelled/gov1.jpg" alt="Government of Haryana" loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="ayushman bharat"
+                    title="Ayushman Bharat">
+                    <img src="assets/images/empanelled/gov1.jpg" alt="Ayushman Bharat" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov"
-                    data-name="echs (ex-servicemen contributory health scheme)"
+                <div class="partner-card" data-category="gov" data-name="haryana government"
+                    title="Haryana Government">
+                    <img src="assets/images/empanelled/gov9.jpg" alt="Haryana Government" loading="lazy">
+                </div>
+                <div class="partner-card" data-category="gov" data-name="echs (ex-servicemen contributory health scheme)"
                     title="ECHS (Ex-Servicemen Contributory Health Scheme)">
-                    <img src="assets/images/empanelled/gov2.jpg" alt="ECHS (Ex-Servicemen Contributory Health Scheme)"
-                        loading="lazy">
+                    <img src="assets/images/empanelled/gov7.jpg" alt="ECHS (Ex-Servicemen Contributory Health Scheme)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="northern railway" title="Northern Railway">
-                    <img src="assets/images/empanelled/gov3.jpg" alt="Northern Railway" loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="dhbvnl (dakshin haryana bijli vitran nigam)"
+                    title="DHBVNL (Dakshin Haryana Bijli Vitran Nigam)">
+                    <img src="assets/images/empanelled/gov2.jpg" alt="DHBVNL (Dakshin Haryana Bijli Vitran Nigam)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="bsnl (bharat sanchar nigam limited)"
-                    title="BSNL (Bharat Sanchar Nigam Limited)">
-                    <img src="assets/images/empanelled/gov4.jpg" alt="BSNL (Bharat Sanchar Nigam Limited)"
-                        loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="haryana agricultural university (hau)"
+                    title="Haryana Agricultural University (HAU)">
+                    <img src="assets/images/empanelled/gov5.jpg" alt="Haryana Agricultural University (HAU)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="food corporation of india (fci)"
-                    title="Food Corporation of India (FCI)">
-                    <img src="assets/images/empanelled/gov5.jpg" alt="Food Corporation of India (FCI)" loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="npcil (nuclear power corporation of india ltd.)"
+                    title="NPCIL (Nuclear Power Corporation of India Ltd.)">
+                    <img src="assets/images/empanelled/gov15.jpg" alt="NPCIL (Nuclear Power Corporation of India Ltd.)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="ntpc limited" title="NTPC Limited">
-                    <img src="assets/images/empanelled/gov6.jpg" alt="NTPC Limited" loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="hvpnl (haryana vidyut prasaran nigam ltd.)"
+                    title="HVPNL (Haryana Vidyut Prasaran Nigam Ltd.)">
+                    <img src="assets/images/empanelled/gov10.jpg" alt="HVPNL (Haryana Vidyut Prasaran Nigam Ltd.)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="bhel (bharat heavy electricals ltd)"
-                    title="BHEL (Bharat Heavy Electricals Limited)">
-                    <img src="assets/images/empanelled/gov7.jpg" alt="BHEL (Bharat Heavy Electricals Limited)"
-                        loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="hpgcl (haryana power generation corporation ltd.)"
+                    title="HPGCL (Haryana Power Generation Corporation Ltd.)">
+                    <img src="assets/images/empanelled/gov3.jpg" alt="HPGCL (Haryana Power Generation Corporation Ltd.)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="central government health scheme (cghs)"
-                    title="Central Government Health Scheme (CGHS)">
-                    <img src="assets/images/empanelled/gov8.jpg" alt="Central Government Health Scheme (CGHS)"
-                        loading="lazy">
+                <div class="partner-card partner-card-text" data-category="gov" data-name="rgktpp (rajiv gandhi khedar thermal power plant)"
+                    title="RGKTPP (Rajiv Gandhi Khedar Thermal Power Plant)">
+                    <span class="partner-name">RGKTPP (Rajiv Gandhi Khedar Thermal Power Plant)</span>
                 </div>
-                <div class="partner-card" data-category="gov" data-name="dhbvn / uhbvn (haryana power utilities)"
-                    title="DHBVN / UHBVN (Haryana Power Utilities)">
-                    <img src="assets/images/empanelled/gov9.jpg" alt="DHBVN / UHBVN (Haryana Power Utilities)"
-                        loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="pgcil (power grid corporation of india ltd.)"
+                    title="PGCIL (Power Grid Corporation of India Ltd.)">
+                    <img src="assets/images/empanelled/gov4.jpg" alt="PGCIL (Power Grid Corporation of India Ltd.)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="ccs haryana agricultural university (hau)"
-                    title="CCS Haryana Agricultural University (HAU)">
-                    <img src="assets/images/empanelled/gov10.jpg" alt="CCS Haryana Agricultural University (HAU)"
-                        loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="national seeds corporation ltd."
+                    title="National Seeds Corporation Ltd.">
+                    <img src="assets/images/empanelled/gov11.jpg" alt="National Seeds Corporation Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="guru jambheshwar university of science & tech"
-                    title="Guru Jambheshwar University of Science & Technology">
-                    <img src="assets/images/empanelled/gov11.jpg" alt="Guru Jambheshwar University of Science & Technology"
-                        loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="national research centre on equines (nrce)"
+                    title="National Research Centre on Equines (NRCE)">
+                    <img src="assets/images/empanelled/gov14.jpg" alt="National Research Centre on Equines (NRCE)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov"
-                    data-name="lala lajpat rai university of veterinary sciences"
-                    title="Lala Lajpat Rai University of Veterinary and Animal Sciences">
-                    <img src="assets/images/empanelled/gov12.jpg"
-                        alt="Lala Lajpat Rai University of Veterinary and Animal Sciences" loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="northern region farm machinery training &amp; testing institute (ttc)"
+                    title="Northern Region Farm Machinery Training &amp; Testing Institute (TTC)">
+                    <img src="assets/images/empanelled/gov12.jpg" alt="Northern Region Farm Machinery Training &amp; Testing Institute (TTC)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="state bank of india (sbi)"
-                    title="State Bank of India (SBI)">
-                    <img src="assets/images/empanelled/gov13.jpg" alt="State Bank of India (SBI)" loading="lazy">
+                <div class="partner-card" data-category="gov" data-name="sfcil (state farms corporation of india ltd.)"
+                    title="SFCIL (State Farms Corporation of India Ltd.)">
+                    <img src="assets/images/empanelled/gov13.jpg" alt="SFCIL (State Farms Corporation of India Ltd.)" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="punjab national bank (pnb)"
-                    title="Punjab National Bank (PNB)">
-                    <img src="assets/images/empanelled/gov14.jpg" alt="Punjab National Bank (PNB)" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="alankit insurance tpa ltd."
+                    title="Alankit Insurance TPA Ltd.">
+                    <img src="assets/images/empanelled/tpa17.jpg" alt="Alankit Insurance TPA Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="ayushman bharat (pm-jay)"
-                    title="Ayushman Bharat (PM-JAY)">
-                    <img src="assets/images/empanelled/gov15.jpg" alt="Ayushman Bharat (PM-JAY)" loading="lazy">
+                <div class="partner-card partner-card-text" data-category="tpa" data-name="akna health insurance tpa pvt. ltd."
+                    title="Akna Health Insurance TPA Pvt. Ltd.">
+                    <span class="partner-name">Akna Health Insurance TPA Pvt. Ltd.</span>
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="medi assist tpa" title="Medi Assist TPA">
-                    <img src="assets/images/empanelled/tpa1.jpg" alt="Medi Assist TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="anyuta wholly charitable trust"
+                    title="Anyuta Wholly Charitable Trust">
+                    <img src="assets/images/empanelled/tpa16.jpg" alt="Anyuta Wholly Charitable Trust" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="vidal health tpa" title="Vidal Health TPA">
-                    <img src="assets/images/empanelled/tpa2.jpg" alt="Vidal Health TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="east west assist (volo health) tpa pvt. ltd."
+                    title="East West Assist (Volo Health) TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa7.jpg" alt="East West Assist (Volo Health) TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="heritage health insurance tpa"
-                    title="Heritage Health Insurance TPA">
-                    <img src="assets/images/empanelled/tpa3.jpg" alt="Heritage Health Insurance TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="ericson insurance tpa pvt. ltd."
+                    title="Ericson Insurance TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa19.jpg" alt="Ericson Insurance TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="paramount health services tpa"
-                    title="Paramount Health Services TPA">
-                    <img src="assets/images/empanelled/tpa4.jpg" alt="Paramount Health Services TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="family health plan (fhpl) tpa ltd."
+                    title="Family Health Plan (FHPL) TPA Ltd.">
+                    <img src="assets/images/empanelled/tpa1.jpg" alt="Family Health Plan (FHPL) TPA Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="raksha health insurance tpa"
-                    title="Raksha Health Insurance TPA">
-                    <img src="assets/images/empanelled/tpa5.jpg" alt="Raksha Health Insurance TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="focus tpa"
+                    title="Focus TPA">
+                    <img src="assets/images/empanelled/tpa25.jpg" alt="Focus TPA" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="family health plan insurance tpa (fhpl)"
-                    title="Family Health Plan Insurance TPA (FHPL)">
-                    <img src="assets/images/empanelled/tpa6.jpg" alt="Family Health Plan Insurance TPA (FHPL)"
-                        loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="genins tpa ltd."
+                    title="Genins TPA Ltd.">
+                    <img src="assets/images/empanelled/tpa4.jpg" alt="Genins TPA Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="mdindia health insurance tpa"
-                    title="MDIndia Health Insurance TPA">
-                    <img src="assets/images/empanelled/tpa7.jpg" alt="MDIndia Health Insurance TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="good health plan tpa ltd."
+                    title="Good Health Plan TPA Ltd.">
+                    <img src="assets/images/empanelled/tpa8.jpg" alt="Good Health Plan TPA Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="health insurance tpa of india (hitpa)"
-                    title="Health Insurance TPA of India (HITPA)">
-                    <img src="assets/images/empanelled/tpa8.jpg" alt="Health Insurance TPA of India (HITPA)"
-                        loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="grand healthcare tpa services pvt. ltd."
+                    title="Grand Healthcare TPA Services Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa20.jpg" alt="Grand Healthcare TPA Services Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="park mediclaim tpa" title="Park Mediclaim TPA">
-                    <img src="assets/images/empanelled/tpa9.jpg" alt="Park Mediclaim TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="heritage health tpa pvt. ltd."
+                    title="Heritage Health TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa21.jpg" alt="Heritage Health TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="safeway insurance tpa"
-                    title="Safeway Insurance TPA">
-                    <img src="assets/images/empanelled/tpa10.jpg" alt="Safeway Insurance TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="health india tpa ltd."
+                    title="Health India TPA Ltd.">
+                    <img src="assets/images/empanelled/tpa9.jpg" alt="Health India TPA Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="vipul medcorp tpa" title="Vipul MedCorp TPA">
-                    <img src="assets/images/empanelled/tpa11.jpg" alt="Vipul MedCorp TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="health insurance tpa of india ltd."
+                    title="Health Insurance TPA of India Ltd.">
+                    <img src="assets/images/empanelled/tpa11.jpg" alt="Health Insurance TPA of India Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="genins india tpa" title="Genins India TPA">
-                    <img src="assets/images/empanelled/tpa12.jpg" alt="Genins India TPA" loading="lazy">
+                <div class="partner-card partner-card-text" data-category="tpa" data-name="link tpa"
+                    title="Link TPA">
+                    <span class="partner-name">Link TPA</span>
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="alankit insurance tpa"
-                    title="Alankit Insurance TPA">
-                    <img src="assets/images/empanelled/tpa13.jpg" alt="Alankit Insurance TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="md india healthcare services pvt. ltd."
+                    title="MD India Healthcare Services Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa26.jpg" alt="MD India Healthcare Services Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="ericson insurance tpa"
-                    title="Ericson Insurance TPA">
-                    <img src="assets/images/empanelled/tpa14.jpg" alt="Ericson Insurance TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="medi assist india pvt. ltd."
+                    title="Medi Assist India Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa10.jpg" alt="Medi Assist India Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="good health tpa services"
-                    title="Good Health TPA Services">
-                    <img src="assets/images/empanelled/tpa15.jpg" alt="Good Health TPA Services" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="medsave healthcare (tpa) ltd."
+                    title="Medsave Healthcare (TPA) Ltd.">
+                    <img src="assets/images/empanelled/tpa13.jpg" alt="Medsave Healthcare (TPA) Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="healthspire tpa" title="Healthspire TPA">
-                    <img src="assets/images/empanelled/tpa16.jpg" alt="Healthspire TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="paramount healthcare tpa services"
+                    title="Paramount Healthcare TPA Services">
+                    <img src="assets/images/empanelled/tpa14.jpg" alt="Paramount Healthcare TPA Services" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="grand insurance tpa"
-                    title="Grand Insurance TPA">
-                    <img src="assets/images/empanelled/tpa17.jpg" alt="Grand Insurance TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="parekh / united health management pvt. ltd."
+                    title="Parekh / United Health Management Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa12.jpg" alt="Parekh / United Health Management Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="focus health tpa" title="Focus Health TPA">
-                    <img src="assets/images/empanelled/tpa18.jpg" alt="Focus Health TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="park mediclaim tpa pvt. ltd."
+                    title="Park Mediclaim TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa28.jpg" alt="Park Mediclaim TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="east west assist tpa"
-                    title="East West Assist TPA">
-                    <img src="assets/images/empanelled/tpa19.jpg" alt="East West Assist TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="raksha tpa pvt. ltd."
+                    title="Raksha TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa23.jpg" alt="Raksha TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="dedicated healthcare services tpa"
-                    title="Dedicated Healthcare Services TPA">
-                    <img src="assets/images/empanelled/tpa20.jpg" alt="Dedicated Healthcare Services TPA"
-                        loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="rothshield healthcare tpa ltd."
+                    title="Rothshield Healthcare TPA Ltd.">
+                    <img src="assets/images/empanelled/tpa2.jpg" alt="Rothshield Healthcare TPA Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="rothshield healthcare tpa"
-                    title="Rothshield Healthcare TPA">
-                    <img src="assets/images/empanelled/tpa21.jpg" alt="Rothshield Healthcare TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="safeway (health assist) tpa services pvt. ltd."
+                    title="Safeway (Health Assist) TPA Services Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa29.jpg" alt="Safeway (Health Assist) TPA Services Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="medsave health insurance tpa"
-                    title="Medsave Health Insurance TPA">
-                    <img src="assets/images/empanelled/tpa22.jpg" alt="Medsave Health Insurance TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="spurthi meditech solution tpa pvt. ltd."
+                    title="Spurthi Meditech Solution TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa30.jpg" alt="Spurthi Meditech Solution TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="anyuta health network tpa"
-                    title="Anyuta Health Network TPA">
-                    <img src="assets/images/empanelled/tpa23.jpg" alt="Anyuta Health Network TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="vidal health tpa pvt. ltd."
+                    title="Vidal Health TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa22.jpg" alt="Vidal Health TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="united health care parekh tpa"
-                    title="United Health Care Parekh TPA">
-                    <img src="assets/images/empanelled/tpa24.jpg" alt="United Health Care Parekh TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="vipul medcorp tpa pvt. ltd."
+                    title="Vipul MedCorp TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/corporate-logo18.jpg" alt="Vipul MedCorp TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="spurthi meditech tpa"
-                    title="Spurthi Meditech TPA">
-                    <img src="assets/images/empanelled/tpa25.jpg" alt="Spurthi Meditech TPA" loading="lazy">
+                <div class="partner-card" data-category="tpa" data-name="vision e-medi solutions insurance tpa pvt. ltd."
+                    title="Vision E-Medi Solutions Insurance TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/tpa15.jpg" alt="Vision E-Medi Solutions Insurance TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="religare health tpa"
-                    title="Religare Health TPA">
-                    <img src="assets/images/empanelled/tpa26.jpg" alt="Religare Health TPA" loading="lazy">
+                <div class="partner-card partner-card-text" data-category="ins" data-name="acko general insurance ltd."
+                    title="Acko General Insurance Ltd.">
+                    <span class="partner-name">Acko General Insurance Ltd.</span>
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="universal mediclaim tpa"
-                    title="Universal Mediclaim TPA">
-                    <img src="assets/images/empanelled/tpa27.jpg" alt="Universal Mediclaim TPA" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="aditya birla health insurance co. ltd."
+                    title="Aditya Birla Health Insurance Co. Ltd.">
+                    <img src="assets/images/empanelled/ins14.jpg" alt="Aditya Birla Health Insurance Co. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="galaxy health tpa" title="Galaxy Health TPA">
-                    <img src="assets/images/empanelled/tpa28.jpg" alt="Galaxy Health TPA" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="bajaj allianz general insurance co."
+                    title="Bajaj Allianz General Insurance Co.">
+                    <img src="assets/images/empanelled/ins8.jpg" alt="Bajaj Allianz General Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="medi claim direct tpa"
-                    title="Medi Claim Direct TPA">
-                    <img src="assets/images/empanelled/tpa29.jpg" alt="Medi Claim Direct TPA" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="cholamandalam ms general insurance co."
+                    title="Cholamandalam MS General Insurance Co.">
+                    <img src="assets/images/empanelled/ins9.jpg" alt="Cholamandalam MS General Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="care & health tpa services"
-                    title="Care & Health TPA Services">
-                    <img src="assets/images/empanelled/tpa30.jpg" alt="Care & Health TPA Services" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="cigna ttk health insurance co."
+                    title="Cigna TTK Health Insurance Co.">
+                    <img src="assets/images/empanelled/ins4.jpg" alt="Cigna TTK Health Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="medicare tpa services"
-                    title="Medicare TPA Services">
-                    <img src="assets/images/empanelled/tpa31.jpg" alt="Medicare TPA Services" loading="lazy">
-                </div>
-                <div class="partner-card" data-category="tpa" data-name="swift health tpa" title="Swift Health TPA">
-                    <img src="assets/images/empanelled/tpa32.jpg" alt="Swift Health TPA" loading="lazy">
-                </div>
-                <div class="partner-card" data-category="ins" data-name="star health and allied insurance"
-                    title="Star Health and Allied Insurance">
-                    <img src="assets/images/empanelled/ins1.jpg" alt="Star Health and Allied Insurance" loading="lazy">
-                </div>
-                <div class="partner-card" data-category="ins" data-name="care health insurance"
-                    title="Care Health Insurance">
-                    <img src="assets/images/empanelled/care.jpg" alt="Care Health Insurance" loading="lazy">
-                </div>
-                <div class="partner-card" data-category="ins" data-name="niva bupa health insurance"
-                    title="Niva Bupa Health Insurance">
-                    <img src="assets/images/empanelled/niva.jpg" alt="Niva Bupa Health Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="go digit general insurance ltd."
+                    title="Go Digit General Insurance Ltd.">
+                    <img src="assets/images/empanelled/ins10.jpg" alt="Go Digit General Insurance Ltd." loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="hdfc ergo general insurance"
                     title="HDFC ERGO General Insurance">
-                    <img src="assets/images/empanelled/ins2.jpg" alt="HDFC ERGO General Insurance" loading="lazy">
+                    <img src="assets/images/empanelled/ins12.jpg" alt="HDFC ERGO General Insurance" loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="icici lombard general insurance"
                     title="ICICI Lombard General Insurance">
-                    <img src="assets/images/empanelled/ins3.jpg" alt="ICICI Lombard General Insurance" loading="lazy">
+                    <img src="assets/images/empanelled/ins2.jpg" alt="ICICI Lombard General Insurance" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="bajaj allianz general insurance"
-                    title="Bajaj Allianz General Insurance">
-                    <img src="assets/images/empanelled/ins4.jpg" alt="Bajaj Allianz General Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="icici prudential insurance tpa pvt. ltd."
+                    title="ICICI Prudential Insurance TPA Pvt. Ltd.">
+                    <img src="assets/images/empanelled/ins15.jpg" alt="ICICI Prudential Insurance TPA Pvt. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="tata aig general insurance"
-                    title="Tata AIG General Insurance">
-                    <img src="assets/images/empanelled/ins5.jpg" alt="Tata AIG General Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="iffco tokio general insurance co."
+                    title="IFFCO TOKIO General Insurance Co.">
+                    <img src="assets/images/empanelled/ins16.jpg" alt="IFFCO TOKIO General Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="sbi general insurance"
-                    title="SBI General Insurance">
-                    <img src="assets/images/empanelled/ins6.jpg" alt="SBI General Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="l&amp;t general insurance co."
+                    title="L&amp;T General Insurance Co.">
+                    <img src="assets/images/empanelled/ins19.jpg" alt="L&amp;T General Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="national insurance company"
-                    title="National Insurance Company">
-                    <img src="assets/images/empanelled/ins7.jpg" alt="National Insurance Company" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="liberty videocon general insurance co."
+                    title="Liberty Videocon General Insurance Co.">
+                    <img src="assets/images/empanelled/ins3.jpg" alt="Liberty Videocon General Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="new india assurance co. ltd."
-                    title="New India Assurance Company">
-                    <img src="assets/images/empanelled/ins8.jpg" alt="New India Assurance Company" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="magma hdi general insurance co. ltd."
+                    title="Magma HDI General Insurance Co. Ltd.">
+                    <img src="assets/images/empanelled/ins11.jpg" alt="Magma HDI General Insurance Co. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="united india insurance company"
-                    title="United India Insurance Company">
-                    <img src="assets/images/empanelled/ins9.jpg" alt="United India Insurance Company" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="niva bupa health insurance co. ltd."
+                    title="Niva Bupa Health Insurance Co. Ltd.">
+                    <img src="assets/images/empanelled/niva.jpg" alt="Niva Bupa Health Insurance Co. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="oriental insurance company"
-                    title="Oriental Insurance Company">
-                    <img src="assets/images/empanelled/ins10.jpg" alt="Oriental Insurance Company" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="reliance (indusind) general insurance co."
+                    title="Reliance (IndusInd) General Insurance Co.">
+                    <img src="assets/images/empanelled/ins1.jpg" alt="Reliance (IndusInd) General Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="reliance general insurance"
-                    title="Reliance General Insurance">
-                    <img src="assets/images/empanelled/ins11.jpg" alt="Reliance General Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="care health insurance co. ltd."
+                    title="Care Health Insurance Co. Ltd.">
+                    <img src="assets/images/empanelled/care.jpg" alt="Care Health Insurance Co. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="aditya birla health insurance"
-                    title="Aditya Birla Health Insurance">
-                    <img src="assets/images/empanelled/ins12.jpg" alt="Aditya Birla Health Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="royal sundaram general insurance co."
+                    title="Royal Sundaram General Insurance Co.">
+                    <img src="assets/images/empanelled/ins7.jpg" alt="Royal Sundaram General Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="max bupa health insurance"
-                    title="Max Bupa Health Insurance">
-                    <img src="assets/images/empanelled/ins13.jpg" alt="Max Bupa Health Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="sbi general insurance co."
+                    title="SBI General Insurance Co.">
+                    <img src="assets/images/empanelled/ins5.jpg" alt="SBI General Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="future generali india insurance"
-                    title="Future Generali India Insurance">
-                    <img src="assets/images/empanelled/ins14.jpg" alt="Future Generali India Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="star health and allied insurance co. ltd."
+                    title="Star Health and Allied Insurance Co. Ltd.">
+                    <img src="assets/images/empanelled/ins21.jpg" alt="Star Health and Allied Insurance Co. Ltd." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="iffco tokio general insurance"
-                    title="IFFCO-Tokio General Insurance">
-                    <img src="assets/images/empanelled/ins15.jpg" alt="IFFCO-Tokio General Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="tata aig general insurance co."
+                    title="TATA AIG General Insurance Co.">
+                    <img src="assets/images/empanelled/ins17.jpg" alt="TATA AIG General Insurance Co." loading="lazy">
                 </div>
-                <div class="partner-card" data-category="ins" data-name="universal sompo general insurance"
-                    title="Universal Sompo General Insurance">
-                    <img src="assets/images/empanelled/ins16.jpg" alt="Universal Sompo General Insurance"
-                        loading="lazy">
-                </div>
-                <div class="partner-card" data-category="ins" data-name="royal sundaram general insurance"
-                    title="Royal Sundaram General Insurance">
-                    <img src="assets/images/empanelled/ins17.jpg" alt="Royal Sundaram General Insurance" loading="lazy">
-                </div>
-                <div class="partner-card" data-category="ins" data-name="chola ms general insurance"
-                    title="Chola MS General Insurance">
-                    <img src="assets/images/empanelled/ins19.jpg" alt="Chola MS General Insurance" loading="lazy">
-                </div>
-                <div class="partner-card" data-category="ins" data-name="manipalcigna health insurance"
-                    title="ManipalCigna Health Insurance">
-                    <img src="assets/images/empanelled/ins21.jpg" alt="ManipalCigna Health Insurance" loading="lazy">
-                </div>
-                <div class="partner-card" data-category="ins" data-name="kotak mahindra general insurance"
-                    title="Kotak Mahindra General Insurance">
-                    <img src="assets/images/empanelled/ins22.jpg" alt="Kotak Mahindra General Insurance" loading="lazy">
+                <div class="partner-card" data-category="ins" data-name="universal sompo general insurance co."
+                    title="Universal Sompo General Insurance Co.">
+                    <img src="assets/images/empanelled/ins22.jpg" alt="Universal Sompo General Insurance Co." loading="lazy">
                 </div>
             </div>
 
@@ -2656,6 +2656,51 @@
         <span class="f-sep">|</span>
         <button type="button" class="f-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
     </div>
+
+    <!-- Partner directory: category tabs + search -->
+    <script>
+        (function () {
+            const tabs = document.querySelectorAll('.category-tabs .tab-btn');
+            const cards = document.querySelectorAll('#partnersGrid .partner-card');
+            const search = document.getElementById('partnerSearch');
+            const noResults = document.getElementById('noResultsBox');
+            const grid = document.getElementById('partnersGrid');
+            const resetBtn = document.getElementById('resetSearchBtn');
+            let activeFilter = 'all';
+
+            function applyFilters() {
+                const q = (search.value || '').trim().toLowerCase();
+                let visible = 0;
+                cards.forEach(card => {
+                    const catMatch = activeFilter === 'all' || card.dataset.category === activeFilter;
+                    const text = (card.dataset.name || '') + ' ' + (card.getAttribute('title') || '').toLowerCase();
+                    const show = catMatch && (!q || text.includes(q));
+                    card.style.display = show ? '' : 'none';
+                    if (show) visible++;
+                });
+                noResults.style.display = visible ? 'none' : 'block';
+                grid.style.display = visible ? '' : 'none';
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    activeFilter = tab.dataset.filter || 'all';
+                    applyFilters();
+                });
+            });
+
+            search.addEventListener('input', applyFilters);
+
+            resetBtn.addEventListener('click', () => {
+                search.value = '';
+                activeFilter = 'all';
+                tabs.forEach(t => t.classList.toggle('active', t.dataset.filter === 'all'));
+                applyFilters();
+            });
+        })();
+    </script>
 
     <!-- Google Translate Script Container -->
     <div id="google_translate_element"></div>
