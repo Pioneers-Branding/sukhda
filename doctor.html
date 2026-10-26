@@ -2410,11 +2410,13 @@
 
         .doc-card-top {
             position: relative;
-            background: #052159;
+            /* matches the studio backdrop of every doctor photo (blue left half, white right half),
+               so a taller card extends the backdrop instead of zooming the photo */
+            background: linear-gradient(90deg, #2857a5 50%, #ffffff 50%);
             padding: 0;
             margin: 0;
             display: flex;
-            align-items: stretch;
+            align-items: flex-end;
             justify-content: center;
             border-right: 1px solid #e2edf6;
             border-bottom: none;
@@ -2425,8 +2427,8 @@
 
         .doc-card-top img {
             width: 100%;
-            height: 100%;
-            min-height: 280px;
+            height: auto;
+            aspect-ratio: 350 / 469;
             object-fit: cover;
             object-position: top center;
             border-radius: 0;
@@ -3080,17 +3082,17 @@
                         </div>
                     </div>
                 </article><article class="doc-card" data-name="dr. amit kumar garg" data-speciality="Oncology"
-                    data-hospital="medpark"
+                    data-hospital="both"
                     data-tags="breast cancer surgery head &amp; neck cancer surgery genitourinary cancer surgery gynecological cancer surgery breast cancer surgery head &amp; neck cancer surgery genitourinary cancer surgery gynaecological onco-surgeries surgical oncology cancer surgery breast cancer gi cancer head neck tumour onco surgery">
                     <div class="doc-card-top">
                         <img src="assets/images/doctors/dr-amit-kumar-garg.jpg"
                             alt="Dr. Amit Kumar Garg - Consultant Surgical Oncologist, Sukhda Hospital">
                     </div>
                     <div class="doc-card-body">
-                        <span class="doc-location-pill pill-medpark"><i data-lucide="map-pin"></i> Sukhda MedPark</span>
+                        <span class="doc-location-pill pill-both"><i data-lucide="map-pin"></i> Both Locations</span>
                         <h3 class="doc-card-name"><a href="dr-amit-kumar-garg.html">Dr. Amit Kumar Garg</a></h3>
                         <div class="doc-card-desig">Consultant Surgical Oncologist</div>
-                        <div class="doc-card-qual">MCh (Surgical Oncology) &bull; DNB &bull; MS (General Surgery) &bull; MBBS</div>
+                        <div class="doc-card-qual">MCH (Surgical Oncology), DNB, MS (General Surgery)</div>
                         <div class="doc-card-tags">
                             <span class="doc-tag">Breast Cancer Surgery</span><span class="doc-tag">Head &amp; Neck Cancer Surgery</span><span class="doc-tag">Genitourinary Cancer Surgery</span><span class="doc-tag">Gynecological Cancer Surgery</span>
                         </div>
@@ -3107,7 +3109,7 @@
                         </div>
                     </div>
                 </article><article class="doc-card" data-name="dr. trivikrama rao" data-speciality="Oncology"
-                    data-hospital="medpark"
+                    data-hospital="both"
                     data-tags="chemotherapy immunotherapy targeted therapy hormonal therapy solid cancers — sarcomas solid cancers — carcinomas oncology cancer medical oncology chemotherapy sarcoma carcinoma solid cancers">
                     <div class="doc-card-top">
                         <span class="doc-exp-badge">10+ Years</span>
@@ -3115,7 +3117,7 @@
                             alt="Dr. Trivikrama Rao - Consultant — Medical Oncology, Sukhda Hospital">
                     </div>
                     <div class="doc-card-body">
-                        <span class="doc-location-pill pill-medpark"><i data-lucide="map-pin"></i> Sukhda MedPark</span>
+                        <span class="doc-location-pill pill-both"><i data-lucide="map-pin"></i> Both Locations</span>
                         <h3 class="doc-card-name"><a href="dr-trivikrama-rao.html">Dr. Trivikrama Rao</a></h3>
                         <div class="doc-card-desig">Sr. Consultant Medical Oncologist</div>
                         <div class="doc-card-qual">MBBS (Gold Medalist), DNB (General Medicine), DrNB (Medical Oncology), SCE (UK), ECMO</div>
@@ -3146,8 +3148,8 @@
                         <span class="doc-location-pill pill-multi"><i data-lucide="map-pin"></i> Sukhda
                             Multispeciality</span>
                         <h3 class="doc-card-name"><a href="dr-pankaj-sharma.html">Dr. Pankaj Sharma</a></h3>
-                        <div class="doc-card-desig">Joint Replacement, Arthroscopy &amp; Sports Injury Surgeon</div>
-                        <div class="doc-card-qual">MBBS, MS (Ortho), FIRS, FIAS, FISM, FIOAI, IOC- Diploma in Sports Medicine</div>
+                        <div class="doc-card-desig">Robotic Joint Replacement &amp; Sports Injury Expert</div>
+                        <div class="doc-card-qual">MBBS, MS (Ortho), FIRS, FIAS, FISM, FIOAI, IOC- Diploma in Sports Medicine (International Olympic Committee)</div>
                         <div class="doc-card-tags">
                             <span class="doc-tag">Robotic Knee Specialist</span><span class="doc-tag">Total Knee Replacement (TKR)</span><span class="doc-tag">Total Hip Replacement (THR)</span><span class="doc-tag">Arthroscopic (Keyhole) Surgery</span>
                         </div>
@@ -3175,8 +3177,8 @@
                         <span class="doc-location-pill pill-multi"><i data-lucide="map-pin"></i> Sukhda
                             Multispeciality</span>
                         <h3 class="doc-card-name"><a href="dr-nidhi-mehta.html">Dr. Nidhi Mehta</a></h3>
-                        <div class="doc-card-desig">Laparoscopic Surgeon &amp; Obstetrician</div>
-                        <div class="doc-card-qual">MBBS, D.G.O, D.N.B (OBG)</div>
+                        <div class="doc-card-desig">Advanced Laparoscopic Surgeon &amp; Obstetrician</div>
+                        <div class="doc-card-qual">Obstetrics &amp; Gynecology, MBBS, D.G.O, D.N.B (OBG)</div>
                         <div class="doc-card-tags">
                             <span class="doc-tag">Hysteroscopic Surgery</span><span class="doc-tag">Infertility Evaluation &amp; Treatment</span><span class="doc-tag">Menopause Evaluation &amp; Treatment</span>
                         </div>
@@ -3205,7 +3207,7 @@
                             Multispeciality</span>
                         <h3 class="doc-card-name"><a href="dr-sanjeet-sahu.html">Dr. Sanjeet Sahu</a></h3>
                         <div class="doc-card-desig">Consultant Neuro-Physiotherapist</div>
-                        <div class="doc-card-qual">B.P.T., M.P.T., CMT – Physiotherapy</div>
+                        <div class="doc-card-qual">B.P.T., M.P.T (Neurology), CMT - (Physiotherapy)</div>
                         <div class="doc-card-tags">
                             <span class="doc-tag">Neuro Rehabilitation</span><span class="doc-tag">Stroke Rehabilitation</span><span class="doc-tag">Spinal Cord Injury Rehabilitation</span><span class="doc-tag">Parkinson's Disease Rehabilitation</span>
                         </div>
@@ -3233,8 +3235,8 @@
                         <span class="doc-location-pill pill-multi"><i data-lucide="map-pin"></i> Sukhda
                             Multispeciality</span>
                         <h3 class="doc-card-name"><a href="dr-anil-bansal.html">Dr. Anil Bansal</a></h3>
-                        <div class="doc-card-desig">HOD &amp; Consultant — Radiology</div>
-                        <div class="doc-card-qual">M.B.B.S , DMRD</div>
+                        <div class="doc-card-desig">Radio Diagnosis &amp; Imaging</div>
+                        <div class="doc-card-qual">MBBS, DMRD</div>
                         <div class="doc-card-tags">
                             <span class="doc-tag">Digital X-Ray Reporting</span><span class="doc-tag">Ultrasound &amp; Color Doppler</span><span class="doc-tag">CT Scan Interpretation</span><span class="doc-tag">MRI Reporting</span>
                         </div>
@@ -3290,7 +3292,7 @@
                             Multispeciality</span>
                         <h3 class="doc-card-name"><a href="dr-hemant-dahiya.html">Dr. Hemant Dahiya</a></h3>
                         <div class="doc-card-desig">Consultant Physician — Internal Medicine</div>
-                        <div class="doc-card-qual">M.D. (General Medicine)</div>
+                        <div class="doc-card-qual">MBBS, M.D. (Internal Medicine)</div>
                         <div class="doc-card-tags">
                             <span class="doc-tag">Diabetes Management</span><span class="doc-tag">Hypertension Management</span><span class="doc-tag">Thyroid Disorders</span><span class="doc-tag">Fever &amp; Infectious Diseases</span>
                         </div>
@@ -3317,8 +3319,8 @@
                         <span class="doc-location-pill pill-multi"><i data-lucide="map-pin"></i> Sukhda
                             Multispeciality</span>
                         <h3 class="doc-card-name"><a href="dr-deepti-singh.html">Dr. Deepti Singh</a></h3>
-                        <div class="doc-card-desig">ENT Surgeon | Vertigo &amp; Balance Specialist</div>
-                        <div class="doc-card-qual">MS (ENT) &bull; DNB &bull; MBBS</div>
+                        <div class="doc-card-desig">ENT Surgeon</div>
+                        <div class="doc-card-qual">MBBS, MS-ENT, D.N.B (ENT), MNAMS, Gold Medalist</div>
                         <div class="doc-card-tags">
                             <span class="doc-tag">Endoscopic ENT Procedures</span><span class="doc-tag">Sinus &amp; Allergy Treatment</span><span class="doc-tag">Hearing Loss &amp; Tinnitus Management</span><span class="doc-tag">Pediatric ENT Care</span>
                         </div>
@@ -3391,15 +3393,14 @@
                         </div>
                     </div>
                 </article><article class="doc-card" data-name="dr. anil khyalia" data-speciality="Neurosurgery"
-                    data-hospital="multispeciality"
+                    data-hospital="both"
                     data-tags="neurotrauma neuro-oncology surgery spine surgery endoscopic brain and spine surgery peripheral nerve disorders neurosurgery brain spine surgery head injury brain tumour sciatica back pain neck pain endoscopic">
                     <div class="doc-card-top">
                         <img src="assets/images/doctors/dr-anil-khyalia.jpg"
                             alt="Dr. Anil Khyalia - Consultant Neurosurgeon (Brain &amp; Spine), Sukhda Hospital">
                     </div>
                     <div class="doc-card-body">
-                        <span class="doc-location-pill pill-multi"><i data-lucide="map-pin"></i> Sukhda
-                            Multispeciality</span>
+                        <span class="doc-location-pill pill-both"><i data-lucide="map-pin"></i> Both Locations</span>
                         <h3 class="doc-card-name"><a href="dr-anil-khyalia.html">Dr. Anil Khyalia</a></h3>
                         <div class="doc-card-desig">Brain and Spine Surgeon</div>
                         <div class="doc-card-qual">MBBS, MS, MCh (Neurosurgery)</div>
