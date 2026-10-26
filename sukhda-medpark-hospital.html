@@ -47,13 +47,28 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6,
-        .btn, .kicker, .eyebrow,
-        .nav-group > a, .nav-drop a,
-        .mega-col-title, .stat-value, .metric-value,
-        .badge, .counter, .sec-title,
-        .dept-title, .footer-col h4, .footer-col h5,
-        .spec-label, .table-title {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .btn,
+        .kicker,
+        .eyebrow,
+        .nav-group>a,
+        .nav-drop a,
+        .mega-col-title,
+        .stat-value,
+        .metric-value,
+        .badge,
+        .counter,
+        .sec-title,
+        .dept-title,
+        .footer-col h4,
+        .footer-col h5,
+        .spec-label,
+        .table-title {
             font-family: 'Montserrat', sans-serif;
         }
 
@@ -218,6 +233,7 @@
         }
 
         @media(min-width: 901px) {
+
             .mobile-menu-head,
             .mobile-menu-footer,
             .nav-overlay,
@@ -295,8 +311,15 @@
             }
 
             @keyframes megaFade {
-                from { opacity: 0; transform: translate(-50%, 6px); }
-                to { opacity: 1; transform: translate(-50%, 0); }
+                from {
+                    opacity: 0;
+                    transform: translate(-50%, 6px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                }
             }
 
             .mega-body {
@@ -1215,6 +1238,7 @@
             .sticky-bottom-bar {
                 display: none !important;
             }
+
             body {
                 padding-bottom: 0 !important;
             }
@@ -1225,17 +1249,156 @@
                 padding-bottom: 74px !important;
             }
         }
+
+        /* HOSPITAL DOCTORS GRID */
+        .hd-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .hd-card {
+            background: #fff;
+            border: 1px solid #dce8f4;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 6px 20px rgba(3, 32, 90, 0.06);
+            transition: transform 0.24s ease, box-shadow 0.24s ease;
+        }
+
+        .hd-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(3, 32, 90, 0.12);
+        }
+
+        .hd-photo {
+            position: relative;
+            display: block;
+            aspect-ratio: 350 / 400;
+            overflow: hidden;
+            background: linear-gradient(90deg, #2857a5 50%, #ffffff 50%);
+        }
+
+        .hd-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        .hd-exp {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(5, 33, 89, 0.9);
+            color: #fff;
+            font-size: 11.5px;
+            font-weight: 800;
+            padding: 4px 11px;
+            border-radius: 999px;
+        }
+
+        .hd-body {
+            padding: 16px 16px 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .hd-body h3 {
+            font-size: 17px;
+            margin: 0 0 4px;
+            color: var(--blue);
+            font-weight: 800;
+        }
+
+        .hd-body h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .hd-desig {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--green);
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+
+        .hd-qual {
+            font-size: 12.5px;
+            color: #53677f;
+            line-height: 1.45;
+            margin-bottom: 14px;
+        }
+
+        .hd-actions {
+            margin-top: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .hd-actions a {
+            text-align: center;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 9px 6px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .hd-btn-profile {
+            border: 1.5px solid var(--blue);
+            color: var(--blue);
+        }
+
+        .hd-btn-book {
+            background: var(--green);
+            border: 1.5px solid var(--green);
+            color: #fff;
+        }
+
+        .hd-all {
+            text-align: center;
+            margin-top: 28px;
+        }
+
+        @media (max-width: 1100px) {
+            .hd-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .hd-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hd-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="stylesheet" href="include/header-footer.css">
     <style>
         /* mobile-left-align: dropdown & services links start from the left */
         @media (max-width: 900px) {
+
             .nav-drop a,
             .services-mega .mega-links-grid a,
             .services-mega .mega-footer a {
                 justify-content: flex-start !important;
-                gap: 10px !important; /* icon spacing */
+                gap: 10px !important;
+                /* icon spacing */
                 text-align: left !important;
             }
         }
@@ -1244,7 +1407,7 @@
 
 <body>
 
-        <div class="top">
+    <div class="top">
         <div class="wrap">
             <div class="links">
                 <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><svg class="wa-icon-svg"
@@ -1304,79 +1467,123 @@
                         </span>
                     </span>
                     <span class="nav-group">
-                        <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
                         <span class="nav-drop">
                             <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
                             <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super-Speciality)</a>
                         </span>
                     </span>
                     <span class="nav-group mega-group">
-                        <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
                         <div class="nav-drop services-mega">
-                        <div class="mega-body">
-                            <div class="mega-col">
-                                <div class="mega-col-header">
-                                    <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
-                                    <div>
-                                        <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
-                                        <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB Centre</div>
-                                    </div>
-                                </div>
-                                <div class="mega-links-grid">
-                                    <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                    <a href="paediatrics.html"><i data-lucide="smile"></i><span>Paediatrics &amp; Neonatology</span></a>
-                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
-                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
-                                    <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedics &amp; 3D Knee Resurfacing</span></a>
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Internal Medicine (DNB Centre)</span></a>
-                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>General &amp; Laparoscopic Surgery</span></a>
-                                    <a href="bariatric-surgery.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Bariatric Surgery</span></a>
-                                    <a href="urology.html"><i data-lucide="activity"></i><span>Urology &amp; Endourology</span></a>
-                                    <a href="ent.html"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
-                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
-                                    <a href="radiology.html"><i data-lucide="scan"></i><span>CT Scan &amp; Radiology</span></a>
-                                    <a href="emergency-trauma.html"><i data-lucide="zap"></i><span>24/7 Emergency &amp; Trauma Care</span></a>
-                                    <a href="critical-care.html"><i data-lucide="activity"></i><span>Critical Care &amp; ICU</span></a>
-                                    <a href="psychiatry.html"><i data-lucide="heart"></i><span>Psychiatry &amp; Rehabilitation</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesiology &amp; Pain Management</span></a>
-                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehabilitation</span></a>
-                                    <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology &amp; Microbiology Lab</span></a>
-                                </div>
-                            </div>
-                            <div class="mega-col medpark-col">
-                                <div class="mega-col-header">
-                                    <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
-                                    <div>
-                                        <div class="mega-col-title">Sukhda MedPark</div>
-                                        <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
-                                    </div>
-                                </div>
-                                <div class="mega-links-grid single-col">
-                                    <a href="medical-oncology.html" class="featured-service">
-                                        <i data-lucide="ribbon"></i>
+                            <div class="mega-body">
+                                <div class="mega-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
                                         <div>
-                                            <b>Medical Oncology (Chemo &amp; Daycare)</b>
-                                            <small>Chemotherapy Suite (Biosafety Cabinet) &amp; Immunotherapy</small>
+                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                            <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB
+                                                Centre</div>
                                         </div>
-                                    </a>
-                                    <a href="surgical-oncology.html"><i data-lucide="shield-alert"></i><span>Surgical Oncology (Modular OTs)</span></a>
-                                    <a href="radiation-oncology.html"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
-                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp; Spine</span></a>
-                                    <a href="sukhda-medpark-hospital.html#tumor-board"><i data-lucide="users"></i><span>Multidisciplinary Tumour Board</span></a>
-                                    <a href="urology.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
-                                    <a href="critical-care.html"><i data-lucide="stethoscope"></i><span>Critical Care &amp; ICU</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="heart"></i><span>Pain &amp; Palliative Care Unit</span></a>
-                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Digital Mammography &amp; Diagnostics</span></a>
+                                    </div>
+                                    <div class="mega-links-grid">
+                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
+                                                Obstetrics</span></a>
+                                        <a href="paediatrics.html"><i data-lucide="smile"></i><span>Paediatrics &amp;
+                                                Neonatology</span></a>
+                                        <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Interventional
+                                                Cardiology</span></a>
+                                        <a href="gastroenterology.html"><i
+                                                data-lucide="activity"></i><span>Gastroenterology &amp;
+                                                Hepatology</span></a>
+                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
+                                                Dialysis</span></a>
+                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedics &amp;
+                                                3D Knee Resurfacing</span></a>
+                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Internal
+                                                Medicine (DNB Centre)</span></a>
+                                        <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>General
+                                                &amp; Laparoscopic Surgery</span></a>
+                                        <a href="bariatric-surgery.html"><i data-lucide="activity"></i><span>Advanced
+                                                Laparoscopy &amp; Bariatric Surgery</span></a>
+                                        <a href="urology.html"><i data-lucide="activity"></i><span>Urology &amp;
+                                                Endourology</span></a>
+                                        <a href="ent.html"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp;
+                                                Throat)</span></a>
+                                        <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology &amp;
+                                                Cosmetology</span></a>
+                                        <a href="radiology.html"><i data-lucide="scan"></i><span>CT Scan &amp;
+                                                Radiology</span></a>
+                                        <a href="emergency-trauma.html"><i data-lucide="zap"></i><span>24/7 Emergency
+                                                &amp; Trauma Care</span></a>
+                                        <a href="critical-care.html"><i data-lucide="activity"></i><span>Critical Care
+                                                &amp; ICU</span></a>
+                                        <a href="psychiatry.html"><i data-lucide="heart"></i><span>Psychiatry &amp;
+                                                Rehabilitation</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesiology
+                                                &amp; Pain Management</span></a>
+                                        <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy
+                                                &amp; Rehabilitation</span></a>
+                                        <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology &amp;
+                                                Microbiology Lab</span></a>
+                                    </div>
+                                </div>
+                                <div class="mega-col medpark-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda MedPark</div>
+                                            <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid single-col">
+                                        <a href="medical-oncology.html" class="featured-service">
+                                            <i data-lucide="ribbon"></i>
+                                            <div>
+                                                <b>Medical Oncology (Chemo &amp; Daycare)</b>
+                                                <small>Chemotherapy Suite (Biosafety Cabinet) &amp;
+                                                    Immunotherapy</small>
+                                            </div>
+                                        </a>
+                                        <a href="surgical-oncology.html"><i
+                                                data-lucide="shield-alert"></i><span>Surgical Oncology (Modular
+                                                OTs)</span></a>
+                                        <a href="radiation-oncology.html"><i data-lucide="scan"></i><span>Radiation
+                                                Oncology (LINAC)</span></a>
+                                        <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp;
+                                                Spine</span></a>
+                                        <a href="sukhda-medpark-hospital.html#tumor-board"><i
+                                                data-lucide="users"></i><span>Multidisciplinary Tumour Board</span></a>
+                                        <a href="urology.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy
+                                                &amp; Urology</span></a>
+                                        <a href="critical-care.html"><i data-lucide="stethoscope"></i><span>Critical
+                                                Care &amp; ICU</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="heart"></i><span>Pain &amp;
+                                                Palliative Care Unit</span></a>
+                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Digital Mammography
+                                                &amp; Diagnostics</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="index.html#specialities" class="mega-view-all"><i
+                                        data-lucide="layout-grid"></i> View All 22 Clinical Specialities &amp; Services
+                                    &rarr;</a>
+                                <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24/7 ER:
+                                    <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" width="16" height="16"
+                                        style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
+                                        <path fill="#25D366"
+                                            d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                        <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                                    </svg> WhatsApp: <b>+91 99965-44005</b>
                                 </div>
                             </div>
                         </div>
-                        <div class="mega-footer">
-                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 22 Clinical Specialities &amp; Services &rarr;</a>
-                            <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
-                        </div>
-                    </div>
-                </span>
+                    </span>
                     <a href="doctor.html">Doctors</a>
                     <span class="nav-group">
                         <a href="javascript:void(0)">Resources <i data-lucide="chevron-down"
@@ -1406,13 +1613,19 @@
         <div class="wrap hero-grid">
             <div>
                 <div class="hero-badge-strip">
-                    <span class="badge-pill gold"><i data-lucide="award"></i> 49-Bed Dedicated Cancer &amp; Super-Speciality Hospital</span>
-                    <span class="badge-pill"><i data-lucide="crosshair"></i> Medical, Surgical &amp; Radiation Oncology</span>
-                    <span class="badge-pill green"><i data-lucide="shield-check"></i> Complete Cancer Care Under One Roof</span>
+                    <span class="badge-pill gold"><i data-lucide="award"></i> 49-Bed Dedicated Cancer &amp;
+                        Super-Speciality Hospital</span>
+                    <span class="badge-pill"><i data-lucide="crosshair"></i> Medical, Surgical &amp; Radiation
+                        Oncology</span>
+                    <span class="badge-pill green"><i data-lucide="shield-check"></i> Complete Cancer Care Under One
+                        Roof</span>
                 </div>
                 <h1 class="hero-title">Sukhda MedPark <span>Cancer &amp; Super-Speciality Hospital</span></h1>
                 <p class="hero-desc">
-                    A dedicated oncology and super-speciality branch of Sukhda Healthcare in Hisar. It brings together experienced oncologists, high-precision radiation therapy (LINAC), specialised chemotherapy suites with Class II, Type A2 biosafety cabinets, modular ICUs, and comprehensive diagnostics for compassionate, ethical, and evidence-based cancer care.
+                    A dedicated oncology and super-speciality branch of Sukhda Healthcare in Hisar. It brings together
+                    experienced oncologists, high-precision radiation therapy (LINAC), specialised chemotherapy suites
+                    with Class II, Type A2 biosafety cabinets, modular ICUs, and comprehensive diagnostics for
+                    compassionate, ethical, and evidence-based cancer care.
                 </p>
 
                 <div class="hero-stats-row">
@@ -1435,20 +1648,23 @@
                 </div>
 
                 <div class="hero-actions">
-                    <a href="tel:01662249473" class="btn primary"><i data-lucide="phone-call"></i> Cancer Helpline: 01662-249473</a>
+                    <a href="tel:01662249473" class="btn primary"><i data-lucide="phone-call"></i> Cancer Helpline:
+                        01662-249473</a>
                     <a href="#modalities" class="btn outline"><i data-lucide="crosshair"></i> Oncology Modalities</a>
                     <a href="#equipment" class="btn outline"><i data-lucide="cpu"></i> Advanced Equipment</a>
                 </div>
             </div>
 
             <div class="hero-visual-card">
-                <img src="assets/images/sukhda-medpark-hospital.jpeg" alt="Sukhda MedPark Cancer and Super-Speciality Hospital, Hisar">
+                <img src="assets/images/sukhda-medpark-hospital.jpeg"
+                    alt="Sukhda MedPark Cancer and Super-Speciality Hospital, Hisar">
                 <div class="hero-float-tag">
                     <div>
                         <h4>NH 1P-4P, Sector-5, Hisar – 125005</h4>
                         <p>A Branch of Sukhda Healthcare • 49-Bed Super-Speciality</p>
                     </div>
-                    <span class="badge-pill" style="background:var(--green);color:#fff;border:none;">Cancer Institute</span>
+                    <span class="badge-pill" style="background:var(--green);color:#fff;border:none;">Cancer
+                        Institute</span>
                 </div>
             </div>
         </div>
@@ -1461,34 +1677,46 @@
                 <div class="kicker"><i data-lucide="target"></i> VISION &amp; CLINICAL MISSION</div>
                 <h3><strong>Sukhda MedPark</strong> Strategic Positioning</h3>
                 <p class="lead-vision">
-                    "To become the most trusted comprehensive cancer care centre by delivering world-class oncology services through clinical excellence, advanced technology, compassionate care, and continuous innovation."
+                    "To become the most trusted comprehensive cancer care centre by delivering world-class oncology
+                    services through clinical excellence, advanced technology, compassionate care, and continuous
+                    innovation."
                 </p>
 
-                <h4 style="font-size:16px;color:var(--blue);margin-bottom:14px;font-weight:800">Our Comprehensive Cancer Mission:</h4>
+                <h4 style="font-size:16px;color:var(--blue);margin-bottom:14px;font-weight:800">Our Comprehensive Cancer
+                    Mission:</h4>
                 <div class="mission-points-grid">
                     <div class="m-point">
                         <i data-lucide="check-circle-2"></i>
-                        <span><strong>Unified Oncology Under One Roof:</strong> Providing integrated Medical Oncology, Surgical Oncology, and Radiation Oncology within one seamless campus.</span>
+                        <span><strong>Unified Oncology Under One Roof:</strong> Providing integrated Medical Oncology,
+                            Surgical Oncology, and Radiation Oncology within one seamless campus.</span>
                     </div>
                     <div class="m-point">
                         <i data-lucide="check-circle-2"></i>
-                        <span><strong>Evidence-Based &amp; Personalised Therapy:</strong> Delivering tailor-made treatments backed by molecular genetics, a multidisciplinary tumour board, and international NCCN protocols.</span>
+                        <span><strong>Evidence-Based &amp; Personalised Therapy:</strong> Delivering tailor-made
+                            treatments backed by molecular genetics, a multidisciplinary tumour board, and international
+                            NCCN protocols.</span>
                     </div>
                     <div class="m-point">
                         <i data-lucide="check-circle-2"></i>
-                        <span><strong>Early Detection &amp; Timely Intervention:</strong> Promoting community cancer screenings, high-risk genetic evaluation, and immediate diagnostic turnaround.</span>
+                        <span><strong>Early Detection &amp; Timely Intervention:</strong> Promoting community cancer
+                            screenings, high-risk genetic evaluation, and immediate diagnostic turnaround.</span>
                     </div>
                     <div class="m-point">
                         <i data-lucide="check-circle-2"></i>
-                        <span><strong>Next-Gen Advanced Therapies:</strong> Administering chemotherapy, immunotherapy, brachytherapy, targeted biological therapy, and precision day-care oncology.</span>
+                        <span><strong>Next-Gen Advanced Therapies:</strong> Administering chemotherapy, immunotherapy,
+                            brachytherapy, targeted biological therapy, and precision day-care oncology.</span>
                     </div>
                     <div class="m-point">
                         <i data-lucide="check-circle-2"></i>
-                        <span><strong>Palliative, Psychological &amp; Nutritional Care:</strong> Supporting patients throughout the journey with pain alleviation, rehabilitation, psychological counselling, and dietary oncology plans.</span>
+                        <span><strong>Palliative, Psychological &amp; Nutritional Care:</strong> Supporting patients
+                            throughout the journey with pain alleviation, rehabilitation, psychological counselling, and
+                            dietary oncology plans.</span>
                     </div>
                     <div class="m-point">
                         <i data-lucide="check-circle-2"></i>
-                        <span><strong>Ethical Transparency &amp; Patient Safety:</strong> Upholding the highest benchmarks of quality, patient dignity, clinical safety, and affordable, transparent care.</span>
+                        <span><strong>Ethical Transparency &amp; Patient Safety:</strong> Upholding the highest
+                            benchmarks of quality, patient dignity, clinical safety, and affordable, transparent
+                            care.</span>
                     </div>
                 </div>
             </div>
@@ -1497,7 +1725,8 @@
             <div id="tumor-board">
                 <div class="kicker"><i data-lucide="users"></i> INTEGRATED CANCER CARE TEAM</div>
                 <h2 class="title">Multidisciplinary Oncology Board</h2>
-                <p class="sub">Cancer treatment requires a unified team approach. Sukhda MedPark brings together seasoned oncologists and paramedical specialists.</p>
+                <p class="sub">Cancer treatment requires a unified team approach. Sukhda MedPark brings together
+                    seasoned oncologists and paramedical specialists.</p>
 
                 <div class="team-pills-grid">
                     <div class="team-pill">
@@ -1561,12 +1790,90 @@
         </div>
     </section>
 
+    <!-- SECTION: OUR DOCTORS AT THIS HOSPITAL -->
+    <section class="section" id="our-doctors" style="background: linear-gradient(135deg, #f7faff 0%, #eaf3fc 100%);">
+        <div class="wrap">
+            <div class="kicker"><i data-lucide="users"></i> OUR SPECIALISTS</div>
+            <h2 class="title">Our Doctors at Sukhda MedPark</h2>
+            <p class="sub">Meet the 4 consultants who see patients at Sukhda MedPark, NH 1P-4P, Sector-5, Hisar.</p>
+            <div class="hd-grid">
+                <article class="hd-card">
+                    <a href="dr-amit-mehta.html" class="hd-photo">
+                        <span class="hd-exp">25+ Years</span>
+                        <img src="assets/images/doctors/dr-amit-mehta.jpg"
+                            alt="Dr. Amit Mehta - Director & Head — Internal Medicine & Critical Care" loading="lazy">
+                    </a>
+                    <div class="hd-body">
+                        <h3><a href="dr-amit-mehta.html">Dr. Amit Mehta</a></h3>
+                        <div class="hd-desig">Director &amp; Head — Internal Medicine &amp; Critical Care</div>
+                        <div class="hd-qual">MBBS, MD (Medicine) · AIIMS, New Delhi</div>
+                        <div class="hd-actions">
+                            <a href="dr-amit-mehta.html" class="hd-btn-profile">View Profile</a>
+                            <a href="contact.html?doctor=dr-amit-mehta" class="hd-btn-book">Book OPD</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="hd-card">
+                    <a href="dr-amit-kumar-garg.html" class="hd-photo">
+                        <img src="assets/images/doctors/dr-amit-kumar-garg.jpg"
+                            alt="Dr. Amit Kumar Garg - Consultant Surgical Oncologist" loading="lazy">
+                    </a>
+                    <div class="hd-body">
+                        <h3><a href="dr-amit-kumar-garg.html">Dr. Amit Kumar Garg</a></h3>
+                        <div class="hd-desig">Consultant Surgical Oncologist</div>
+                        <div class="hd-qual">MCH (Surgical Oncology), DNB, MS (General Surgery)</div>
+                        <div class="hd-actions">
+                            <a href="dr-amit-kumar-garg.html" class="hd-btn-profile">View Profile</a>
+                            <a href="contact.html?doctor=dr-amit-kumar-garg" class="hd-btn-book">Book OPD</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="hd-card">
+                    <a href="dr-trivikrama-rao.html" class="hd-photo">
+                        <span class="hd-exp">10+ Years</span>
+                        <img src="assets/images/doctors/dr-trivikrama-rao.jpg"
+                            alt="Dr. Trivikrama Rao - Sr. Consultant Medical Oncologist" loading="lazy">
+                    </a>
+                    <div class="hd-body">
+                        <h3><a href="dr-trivikrama-rao.html">Dr. Trivikrama Rao</a></h3>
+                        <div class="hd-desig">Sr. Consultant Medical Oncologist</div>
+                        <div class="hd-qual">MBBS (Gold Medalist), DNB (General Medicine), DrNB (Medical Oncology), SCE
+                            (UK), ECMO</div>
+                        <div class="hd-actions">
+                            <a href="dr-trivikrama-rao.html" class="hd-btn-profile">View Profile</a>
+                            <a href="contact.html?doctor=dr-trivikrama-rao" class="hd-btn-book">Book OPD</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="hd-card">
+                    <a href="dr-anil-khyalia.html" class="hd-photo">
+                        <img src="assets/images/doctors/dr-anil-khyalia.jpg"
+                            alt="Dr. Anil Khyalia - Brain and Spine Surgeon" loading="lazy">
+                    </a>
+                    <div class="hd-body">
+                        <h3><a href="dr-anil-khyalia.html">Dr. Anil Khyalia</a></h3>
+                        <div class="hd-desig">Brain and Spine Surgeon</div>
+                        <div class="hd-qual">MBBS, MS, MCh (Neurosurgery)</div>
+                        <div class="hd-actions">
+                            <a href="dr-anil-khyalia.html" class="hd-btn-profile">View Profile</a>
+                            <a href="contact.html?doctor=dr-anil-khyalia" class="hd-btn-book">Book OPD</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="hd-all">
+                <a class="btn primary" href="doctor.html"><i data-lucide="users"></i> View All Doctors</a>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION: ONCOLOGY MODALITIES -->
-    <section class="section pale" id="modalities">
+    <section class="section pale" id="modalities" style="background: #f8fafc;">
         <div class="wrap">
             <div class="kicker"><i data-lucide="layers"></i> 360-DEGREE ONCOLOGY SPECTRUM</div>
             <h2 class="title">Comprehensive Cancer Care Modalities</h2>
-            <p class="sub">State-of-the-art medical, surgical, and radiation modalities engineered to maximise treatment success and quality of life.</p>
+            <p class="sub">State-of-the-art medical, surgical, and radiation modalities engineered to maximise treatment
+                success and quality of life.</p>
 
             <div class="modalities-grid">
                 <!-- MEDICAL ONCOLOGY -->
@@ -1574,13 +1881,18 @@
                     <div class="mod-icon"><i data-lucide="syringe"></i></div>
                     <h3>Medical Oncology &amp; Day Care Suites</h3>
                     <p>
-                        Equipped with ergonomic chemotherapy recliners and infusion pumps, with certified oncology pharmacists preparing therapies in sterile biosafety cabinets.
+                        Equipped with ergonomic chemotherapy recliners and infusion pumps, with certified oncology
+                        pharmacists preparing therapies in sterile biosafety cabinets.
                     </p>
                     <ul>
-                        <li><strong>Systemic Chemotherapy:</strong> Adjuvant, neoadjuvant &amp; palliative regimens.</li>
-                        <li><strong>Immunotherapy &amp; Checkpoint Inhibitors:</strong> Enhancing the body's immune system to destroy malignant cells.</li>
-                        <li><strong>Targeted Therapy &amp; Precision Oncology:</strong> Monoclonal antibodies and tyrosine kinase inhibitors tailored to genetic mutations.</li>
-                        <li><strong>Hormonal Therapy:</strong> For breast, prostate, and neuroendocrine malignancies.</li>
+                        <li><strong>Systemic Chemotherapy:</strong> Adjuvant, neoadjuvant &amp; palliative regimens.
+                        </li>
+                        <li><strong>Immunotherapy &amp; Checkpoint Inhibitors:</strong> Enhancing the body's immune
+                            system to destroy malignant cells.</li>
+                        <li><strong>Targeted Therapy &amp; Precision Oncology:</strong> Monoclonal antibodies and
+                            tyrosine kinase inhibitors tailored to genetic mutations.</li>
+                        <li><strong>Hormonal Therapy:</strong> For breast, prostate, and neuroendocrine malignancies.
+                        </li>
                     </ul>
                 </div>
 
@@ -1589,14 +1901,20 @@
                     <div class="mod-icon"><i data-lucide="shield-check"></i></div>
                     <h3>Surgical Oncology &amp; Modular OTs</h3>
                     <p>
-                        High-precision surgical oncology performed in HEPA-filtered, laminar-airflow modular operating suites with direct ICU backup.
+                        High-precision surgical oncology performed in HEPA-filtered, laminar-airflow modular operating
+                        suites with direct ICU backup.
                     </p>
                     <ul>
-                        <li><strong>Head &amp; Neck Onco-Surgery:</strong> Oral cavity, thyroid, parotid, and reconstructive microvascular surgeries.</li>
-                        <li><strong>Breast Onco-Surgery:</strong> Breast-conserving surgery (BCS), sentinel lymph node biopsy, and modified radical mastectomy.</li>
-                        <li><strong>Gastrointestinal &amp; Hepatobiliary Oncology:</strong> Oesophageal, stomach, colorectal, liver, and pancreatic resections.</li>
-                        <li><strong>Gynaecological Onco-Surgery:</strong> Ovarian, uterine, and cervical oncological procedures.</li>
-                        <li><strong>Uro-Oncology &amp; Thoracic Surgery:</strong> Kidney, bladder, prostate, and lung cancer surgeries.</li>
+                        <li><strong>Head &amp; Neck Onco-Surgery:</strong> Oral cavity, thyroid, parotid, and
+                            reconstructive microvascular surgeries.</li>
+                        <li><strong>Breast Onco-Surgery:</strong> Breast-conserving surgery (BCS), sentinel lymph node
+                            biopsy, and modified radical mastectomy.</li>
+                        <li><strong>Gastrointestinal &amp; Hepatobiliary Oncology:</strong> Oesophageal, stomach,
+                            colorectal, liver, and pancreatic resections.</li>
+                        <li><strong>Gynaecological Onco-Surgery:</strong> Ovarian, uterine, and cervical oncological
+                            procedures.</li>
+                        <li><strong>Uro-Oncology &amp; Thoracic Surgery:</strong> Kidney, bladder, prostate, and lung
+                            cancer surgeries.</li>
                     </ul>
                 </div>
 
@@ -1605,13 +1923,17 @@
                     <div class="mod-icon"><i data-lucide="zap"></i></div>
                     <h3>Radiation Oncology &amp; LINAC</h3>
                     <p>
-                        High-energy Linear Accelerator (LINAC) facility delivering pinpoint ionising radiation to destroy tumour cells while sparing adjacent healthy tissue.
+                        High-energy Linear Accelerator (LINAC) facility delivering pinpoint ionising radiation to
+                        destroy tumour cells while sparing adjacent healthy tissue.
                     </p>
                     <ul>
-                        <li><strong>3D-CRT (3D Conformal Radiation Therapy):</strong> Shaped precisely to the three-dimensional tumour volume.</li>
+                        <li><strong>3D-CRT (3D Conformal Radiation Therapy):</strong> Shaped precisely to the
+                            three-dimensional tumour volume.</li>
                         <li><strong>IMRT / IGRT:</strong> Intensity-Modulated and Image-Guided Radiation Therapy.</li>
-                        <li><strong>CT Simulator:</strong> High-precision simulation and dosimetry planning for exact beam alignment.</li>
-                        <li><strong>Brachytherapy:</strong> High-Dose-Rate (HDR) internal radiation for localised targets.</li>
+                        <li><strong>CT Simulator:</strong> High-precision simulation and dosimetry planning for exact
+                            beam alignment.</li>
+                        <li><strong>Brachytherapy:</strong> High-Dose-Rate (HDR) internal radiation for localised
+                            targets.</li>
                     </ul>
                 </div>
             </div>
@@ -1623,7 +1945,9 @@
         <div class="wrap">
             <div class="kicker"><i data-lucide="shield-alert"></i> SAFETY BENCHMARKS</div>
             <h2 class="title">Thermo Scientific™ 1500 Series Biosafety Cabinet</h2>
-            <p class="sub">Advanced Class II, Type A2 Biosafety containment delivering multi-level protection for patients, healthcare personnel, chemotherapy drugs, and the environment during cytotoxic compounding.</p>
+            <p class="sub">Advanced Class II, Type A2 Biosafety containment delivering multi-level protection for
+                patients, healthcare personnel, chemotherapy drugs, and the environment during cytotoxic compounding.
+            </p>
 
             <div class="biosafety-card">
                 <div class="bio-head">
@@ -1645,7 +1969,8 @@
                         </tr>
                         <tr>
                             <td class="spec-name">HEPA Filtration Efficacy</td>
-                            <td class="spec-val"><strong>99.995% efficient</strong> at Most Penetrating Particle Size (MPPS)</td>
+                            <td class="spec-val"><strong>99.995% efficient</strong> at Most Penetrating Particle Size
+                                (MPPS)</td>
                         </tr>
                         <tr>
                             <td class="spec-name">Airflow Pattern</td>
@@ -1665,7 +1990,8 @@
                         </tr>
                         <tr>
                             <td class="spec-name">Control Panel &amp; Alarms</td>
-                            <td class="spec-val">Digital display with real-time airflow monitoring and safety alarm system</td>
+                            <td class="spec-val">Digital display with real-time airflow monitoring and safety alarm
+                                system</td>
                         </tr>
                         <tr>
                             <td class="spec-name">Illumination</td>
@@ -1681,7 +2007,8 @@
                         </tr>
                         <tr>
                             <td class="spec-name">Clinical Applications</td>
-                            <td class="spec-val">Safe chemotherapy compounding, microbiology, molecular biology, clinical oncology diagnostics</td>
+                            <td class="spec-val">Safe chemotherapy compounding, microbiology, molecular biology,
+                                clinical oncology diagnostics</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1694,7 +2021,8 @@
         <div class="wrap">
             <div class="kicker"><i data-lucide="cpu"></i> CUTTING-EDGE INFRASTRUCTURE</div>
             <h2 class="title">Advanced Oncology &amp; Diagnostic Equipment</h2>
-            <p class="sub">Complete diagnostic and therapeutic arsenal supporting accurate staging, real-time monitoring, and safe therapeutic interventions.</p>
+            <p class="sub">Complete diagnostic and therapeutic arsenal supporting accurate staging, real-time
+                monitoring, and safe therapeutic interventions.</p>
 
             <div class="equip-grid">
                 <div class="equip-item">
@@ -1814,14 +2142,17 @@
     </section>
 
     <!-- CASHLESS & EMPANELLED -->
-    <section class="section" id="empanelled">
+    <section class="section" id="empanelled" style="background: #f8fafc;">
         <div class="wrap">
-            <h4 style="font-size:18px;color:var(--blue);font-weight:800;margin-bottom:6px">Empanelled Insurance &amp; Cashless Cancer Treatment</h4>
-            <p style="font-size:14px;color:var(--muted)">Sukhda MedPark facilitates full cashless coverage for chemotherapy, onco-surgeries, and radiation therapy under recognised government and private schemes:</p>
+            <h4 style="font-size:18px;color:var(--blue);font-weight:800;margin-bottom:6px">Empanelled Insurance &amp;
+                Cashless Cancer Treatment</h4>
+            <p style="font-size:14px;color:var(--muted)">Sukhda MedPark facilitates full cashless coverage for
+                chemotherapy, onco-surgeries, and radiation therapy under recognised government and private schemes:</p>
             <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
                 <span class="badge-pill green"><i data-lucide="shield-check"></i> Ayushman Bharat (AB PM-JAY)</span>
                 <span class="badge-pill green"><i data-lucide="shield-check"></i> Haryana Government</span>
-                <span class="badge-pill green"><i data-lucide="shield-check"></i> ECHS (Ex-Servicemen Contributory Health Scheme)</span>
+                <span class="badge-pill green"><i data-lucide="shield-check"></i> ECHS (Ex-Servicemen Contributory
+                    Health Scheme)</span>
                 <span class="badge-pill green"><i data-lucide="shield-check"></i> DHBVNL, HVPNL &amp; HPGCL</span>
                 <span class="badge-pill blue"><i data-lucide="shield"></i> Star Health</span>
                 <span class="badge-pill blue"><i data-lucide="shield"></i> HDFC ERGO</span>
@@ -1838,16 +2169,21 @@
     <div class="wrap">
         <div class="cta-banner">
             <h2>Need a Cancer Consultation or a Second Opinion?</h2>
-            <p>Speak with our dedicated oncology patient care coordinators to schedule a comprehensive review with our Surgical, Medical, or Radiation Oncologists.</p>
+            <p>Speak with our dedicated oncology patient care coordinators to schedule a comprehensive review with our
+                Surgical, Medical, or Radiation Oncologists.</p>
             <div class="cta-actions">
-                <a href="tel:01662249473" class="btn primary"><i data-lucide="phone-call"></i> Call Oncology Desk: 01662-249473</a>
-                <a href="https://wa.me/919996544005" target="_blank" class="btn white"><i data-lucide="message-circle"></i> WhatsApp Reports: +91 99965-44005</a>
-                <a href="sukhda-multispecialty-hospital.html" class="btn outline" style="background:transparent;color:#fff;border-color:rgba(255,255,255,0.4)"><i data-lucide="building-2"></i> View Sukhda Multispeciality Hospital</a>
+                <a href="tel:01662249473" class="btn primary"><i data-lucide="phone-call"></i> Call Oncology Desk:
+                    01662-249473</a>
+                <a href="https://wa.me/919996544005" target="_blank" class="btn white"><i
+                        data-lucide="message-circle"></i> WhatsApp Reports: +91 99965-44005</a>
+                <a href="sukhda-multispecialty-hospital.html" class="btn outline"
+                    style="background:transparent;color:#fff;border-color:rgba(255,255,255,0.4)"><i
+                        data-lucide="building-2"></i> View Sukhda Multispeciality Hospital</a>
             </div>
         </div>
     </div>
 
-        <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="wrap footer-grid">
             <div>
@@ -1866,9 +2202,26 @@
                     </div>
                 </div>
                 <div class="footer-social" aria-label="Follow Sukhda Healthcare on social media">
-                    <a href="https://www.facebook.com/sukhdahospital" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
-                    <a href="https://www.linkedin.com/company/sukhda-multispeciality-hospital/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452z"/></svg></a>
-                    <a href="https://www.instagram.com/sukhdahospitals/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="https://www.facebook.com/sukhdahospital" target="_blank" rel="noopener"
+                        aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18"
+                            fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/company/sukhda-multispeciality-hospital/" target="_blank"
+                        rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="17"
+                            height="17" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/sukhdahospitals/" target="_blank" rel="noopener"
+                        aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
                 </div>
             </div>
 
@@ -1943,17 +2296,26 @@
                 </div>
             </div>
         </div>
-            <!-- COMPLIANCE & LEGAL DISCLAIMERS -->
-    <div class="footer-disclaimers">
-        <div class="wrap">
-            <p><strong>AI-Generated Content Disclaimer:</strong> Certain images, illustrations, or textual content on this website may be generated by, or created with the assistance of, artificial intelligence (AI). Such content is intended for informational and illustrative purposes only. AI-generated content is not intended to misrepresent actual patients, medical professionals, clinical outcomes, or healthcare services.</p>
-            <p><strong>Medical &amp; Regulatory Notice:</strong> This website is published for informational and health-education purposes only, in accordance with the National Medical Commission (NMC) professional regulations and the Digital Personal Data Protection (DPDP) Act, 2023. It does not constitute medical advice or a guarantee of treatment outcomes. Always consult a qualified medical specialist for clinical diagnosis and treatment. </p>
-        </div>
-    </div>
-
-    <div class="bottom">
+        <!-- COMPLIANCE & LEGAL DISCLAIMERS -->
+        <div class="footer-disclaimers">
             <div class="wrap">
-                <span>© 2026 Sukhda Healthcare. All rights reserved. &bull; <a href="privacy-policy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a></span>
+                <p><strong>AI-Generated Content Disclaimer:</strong> Certain images, illustrations, or textual content
+                    on this website may be generated by, or created with the assistance of, artificial intelligence
+                    (AI). Such content is intended for informational and illustrative purposes only. AI-generated
+                    content is not intended to misrepresent actual patients, medical professionals, clinical outcomes,
+                    or healthcare services.</p>
+                <p><strong>Medical &amp; Regulatory Notice:</strong> This website is published for informational and
+                    health-education purposes only, in accordance with the National Medical Commission (NMC)
+                    professional regulations and the Digital Personal Data Protection (DPDP) Act, 2023. It does not
+                    constitute medical advice or a guarantee of treatment outcomes. Always consult a qualified medical
+                    specialist for clinical diagnosis and treatment. </p>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="wrap">
+                <span>© 2026 Sukhda Healthcare. All rights reserved. &bull; <a href="privacy-policy.html"
+                        style="color:inherit;text-decoration:underline">Privacy Policy</a></span>
                 <div class="bottom-badges">
                     <span><i data-lucide="map-pin"></i> Hisar, Haryana</span>
                     <span><i data-lucide="shield-check"></i> NABH Accredited</span>
