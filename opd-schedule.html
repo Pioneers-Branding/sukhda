@@ -891,6 +891,7 @@
             border-radius: 9999px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .status-badge.available {
@@ -901,6 +902,113 @@
         .status-badge.oncall {
             background: #fef3c7;
             color: #b45309;
+        }
+
+        .status-badge.unavailable {
+            background: #fdecec;
+            color: #c62828;
+        }
+
+        .status-note {
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .opd-row.is-unavailable .time-pill {
+            opacity: 0.5;
+        }
+
+        .opd-row.is-unavailable .btn-book-opd {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .opd-status-legend {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 16px;
+            padding: 12px 16px;
+            background: #fff;
+            border: 1px solid var(--line, #dce7f0);
+            border-radius: 12px;
+        }
+
+        .opd-status-legend .legend-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--blue);
+        }
+
+        .legend-updated {
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .opd-edit-toggle {
+            margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--blue);
+            background: #fff;
+            border: 1.5px solid #c9d8e8;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .opd-edit-toggle[hidden] {
+            display: none;
+        }
+
+        .opd-edit-toggle:hover {
+            border-color: var(--blue);
+        }
+
+        .opd-edit-bar {
+            margin: 0 0 16px;
+            padding: 14px 16px;
+            background: #fff8e6;
+            border: 1.5px solid #f4d48a;
+            border-radius: 12px;
+            font-size: 13.5px;
+            color: #5b4a1a;
+            line-height: 1.5;
+        }
+
+        .opd-edit-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .opd-edit-cancel {
+            padding: 7px 14px;
+            font-weight: 700;
+            background: #fff;
+            border: 1.5px solid #c9d8e8;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .status-editor select, .status-editor input {
+            width: 100%;
+            margin-top: 6px;
+            padding: 6px 8px;
+            font-size: 12.5px;
+            border: 1.5px solid #c9d8e8;
+            border-radius: 7px;
+            font-family: inherit;
         }
 
         .action-btns {
@@ -1861,6 +1969,23 @@
     <!-- MAIN OPD SCHEDULE TABLE -->
     <section class="sec-schedule">
         <div class="wrap">
+            <div class="opd-status-legend" id="opdStatusLegend">
+                <span class="legend-title">Availability:</span>
+                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Doctor Available</span>
+                <span class="status-badge unavailable"><i data-lucide="x-circle" style="width:11px;height:11px"></i> Doctor Not Available</span>
+                <span class="status-badge oncall"><i data-lucide="phone-incoming" style="width:11px;height:11px"></i> On Call</span>
+                <span class="legend-updated" id="opdStatusUpdated" hidden></span>
+                <button type="button" class="opd-edit-toggle" id="opdEditToggle"><i data-lucide="pencil" style="width:13px;height:13px"></i> Edit Availability</button>
+            </div>
+            <div class="opd-edit-bar" id="opdEditBar" hidden>
+                <p><b>Edit mode:</b> change each doctor&rsquo;s status below, then click <b>Download Updated File</b> and upload
+                    <code>opd-status.json</code> to the <code>assets/data/</code> folder on the website server. The change
+                    goes live for all visitors once the file is uploaded.</p>
+                <div class="opd-edit-actions">
+                    <button type="button" class="btn-book-opd" id="opdEditDownload"><i data-lucide="download"></i> Download Updated File</button>
+                    <button type="button" class="opd-edit-cancel" id="opdEditCancel">Close Edit Mode</button>
+                </div>
+            </div>
             <div class="opd-table-card">
                 <table class="opd-table">
                     <thead>
@@ -1869,13 +1994,13 @@
                             <th style="width: 280px;">Doctor &amp; Speciality</th>
                             <th style="width: 220px;">Department</th>
                             <th style="width: 220px;">Clinic Days</th>
-                            <th style="width: 260px;">OPD Timings</th>
-                            <th style="width: 140px;">Status</th>
+                            <th style="width: 230px;">OPD Timings</th>
+                            <th style="width: 190px;">Status</th>
                             <th style="width: 150px; text-align: right;">Action</th>
                         </tr>
                     </thead>
                     <tbody id="opdTableBody">
-                        <tr class="opd-row" data-category="medicine"
+                        <tr class="opd-row" data-doctor="dr-amit-mehta" data-category="medicine"
                             data-days="Monday,Tuesday,Wednesday,Friday,Saturday"
                             data-search="dr. amit mehta m.d. (general medicine) medicine &amp; critical care monday tuesday wednesday friday saturday 10:00 am – 03:00 pm 06:30 pm – 07:30 pm">
                             <td style="color:var(--muted);font-weight:700;">1</td>
@@ -1908,8 +2033,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -1917,7 +2042,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="medicine"
+                        <tr class="opd-row" data-doctor="dr-hemant-dahiya" data-category="medicine"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. hemant dahiya m.d. (general medicine) internal medicine monday tuesday wednesday thursday friday saturday 10:30 am – 04:00 pm 07:00 pm – 08:30 pm">
                             <td style="color:var(--muted);font-weight:700;">2</td>
@@ -1948,8 +2073,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -1957,7 +2082,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="oncology"
+                        <tr class="opd-row" data-doctor="dr-trivikrama-rao" data-category="oncology"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. trivikram rao drnb (medical oncology) medical oncology monday tuesday wednesday thursday friday saturday 10:30 am – 07:30 pm">
                             <td style="color:var(--muted);font-weight:700;">3</td>
@@ -1988,8 +2113,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -1997,7 +2122,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="oncology"
+                        <tr class="opd-row" data-doctor="dr-amit-kumar-garg" data-category="oncology"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. amit kumar garg consultant surgical oncologist surgical oncology monday tuesday wednesday thursday friday saturday 10:30 am – 07:30 pm">
                             <td style="color:var(--muted);font-weight:700;">4</td>
@@ -2028,8 +2153,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2037,7 +2162,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="cardiology"
+                        <tr class="opd-row" data-doctor="dr-ankur-kamra" data-category="cardiology"
                             data-days="Monday,Tuesday,Wednesday,Friday,Saturday"
                             data-search="dr. ankur kamra dm (cardiology) interventional cardiology monday tuesday wednesday friday saturday 10:00 am – 06:00 pm 03:00 pm – 06:00 pm">
                             <td style="color:var(--muted);font-weight:700;">5</td>
@@ -2068,8 +2193,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2077,7 +2202,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="neuro"
+                        <tr class="opd-row" data-doctor="dr-anil-khyalia" data-category="neuro"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. anil khyalia mbbs, ms, mch (neurosurgery) neuro surgery monday tuesday wednesday thursday friday saturday 10:30 am – 03:00 pm 06:00 pm – 07:00 pm">
                             <td style="color:var(--muted);font-weight:700;">6</td>
@@ -2110,8 +2235,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2119,7 +2244,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="medicine"
+                        <tr class="opd-row" data-doctor="dr-bharath" data-category="medicine"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. bharath dm gastroenterology gastroenterology monday tuesday wednesday thursday friday saturday 10:00 am – 03:00 pm 05:00 pm – 06:30 pm">
                             <td style="color:var(--muted);font-weight:700;">7</td>
@@ -2150,8 +2275,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2159,7 +2284,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="ortho"
+                        <tr class="opd-row" data-doctor="dr-pankaj-sharma" data-category="ortho"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. pankaj sharma m.s (orthopaedics) orthopaedics &amp; joint replacement monday tuesday wednesday thursday friday saturday 10:30 am – 03:00 pm 05:00 pm – 07:00 pm 05:00 pm – 07:00 pm">
                             <td style="color:var(--muted);font-weight:700;">8</td>
@@ -2192,8 +2317,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2201,7 +2326,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="surgery"
+                        <tr class="opd-row" data-doctor="dr-deepam-das" data-category="surgery"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. deepam s das m.s (laparoscopic &amp; bariatric surgery) laparoscopic &amp; bariatric surgery monday tuesday wednesday thursday friday saturday 10:30 am – 07:00 pm">
                             <td style="color:var(--muted);font-weight:700;">9</td>
@@ -2230,8 +2355,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2239,7 +2364,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="others"
+                        <tr class="opd-row" data-doctor="dr-shubham-mehta" data-category="others"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. shubham mehta m.d – psychiatry psychiatry monday tuesday wednesday thursday friday saturday 03:00 pm – 04:00 pm">
                             <td style="color:var(--muted);font-weight:700;">10</td>
@@ -2268,8 +2393,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2277,7 +2402,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="others"
+                        <tr class="opd-row" data-doctor="dr-devilal" data-category="others"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. devi lal saharan d.a. (anaesthesiology) anaesthesia &amp; pain management monday tuesday wednesday thursday friday saturday 09:00 am – 07:00 pm">
                             <td style="color:var(--muted);font-weight:700;">11</td>
@@ -2306,8 +2431,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2315,7 +2440,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="surgery"
+                        <tr class="opd-row" data-doctor="dr-deepti-singh" data-category="surgery"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. deepti singh m.s, d.n.b (ent) ent monday tuesday wednesday thursday friday saturday 11:00 am – 03:00 pm 06:00 pm – 07:00 pm">
                             <td style="color:var(--muted);font-weight:700;">12</td>
@@ -2346,8 +2471,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2355,7 +2480,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="gynae"
+                        <tr class="opd-row" data-doctor="dr-nidhi-mehta" data-category="gynae"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. nidhi mehta m.b.b.s, d.g.o, d.n.b (obg) obstetrics &amp; gynaecology monday tuesday wednesday thursday friday saturday 10:30 am – 02:00 pm 05:00 pm – 07:00 pm">
                             <td style="color:var(--muted);font-weight:700;">13</td>
@@ -2386,8 +2511,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2395,7 +2520,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="others"
+                        <tr class="opd-row" data-doctor="dr-anil-bansal" data-category="others"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday"
                             data-search="dr. anil bansal m.b.b.s, dmrd radio diagnosis &amp; imaging monday tuesday wednesday thursday friday saturday sunday 10:30 am – 03:00 pm 05:00 pm – 07:00 pm 11:00 am – 01:00 pm">
                             <td style="color:var(--muted);font-weight:700;">14</td>
@@ -2428,8 +2553,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2437,7 +2562,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="others"
+                        <tr class="opd-row" data-doctor="dr-sanjeet-sahu" data-category="others"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. sanjeet sahu b.p.t, m.p.t – physiotherapy physiotherapy monday tuesday wednesday thursday friday saturday 10:30 am – 07:30 pm">
                             <td style="color:var(--muted);font-weight:700;">15</td>
@@ -2466,8 +2591,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2475,7 +2600,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="others"
+                        <tr class="opd-row" data-doctor="dr-megha-gupta" data-category="others"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
                             data-search="dr. megha gupta m.d – (dermatology) dermatology monday tuesday wednesday thursday friday saturday 01:00 pm – 02:00 pm">
                             <td style="color:var(--muted);font-weight:700;">16</td>
@@ -2504,8 +2629,8 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge available"><i data-lucide="check-circle"
-                                        style="width:11px;height:11px"></i> Available</span>
+                                <span class="status-badge available" data-status-badge><i data-lucide="check-circle"
+                                        style="width:11px;height:11px"></i> Doctor Available</span>
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
@@ -2513,7 +2638,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="opd-row" data-category="others"
+                        <tr class="opd-row" data-doctor="dr-nitika-grover" data-category="others"
                             data-days="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday"
                             data-search="dr. nitika grover pathology on call ">
                             <td style="color:var(--muted);font-weight:700;">17</td>
@@ -2539,7 +2664,7 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="status-badge oncall"><i data-lucide="phone-incoming"
+                                <span class="status-badge oncall" data-status-badge><i data-lucide="phone-incoming"
                                         style="width:11px;height:11px"></i> On Call</span>
                             </td>
                             <td style="text-align: right;">
@@ -2972,6 +3097,7 @@
     </script>
 
     <script src="include/include.js"></script>
+    <script src="assets/js/opd-status.js"></script>
 </body>
 
 </html>

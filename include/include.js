@@ -165,6 +165,42 @@
             });
     }
 
+    // "Read More / Read Less" for long paragraphs in page content
+    function initReadMore() {
+        var MIN_CHARS = 400;
+        var SKIP = 'header, footer, nav, .nav, .top, .footer-disclaimers, .faq-item, table, .cta-banner, .no-read-more, [data-no-read-more]';
+        var paras = document.querySelectorAll('main p, section p, article p');
+
+        Array.prototype.forEach.call(paras, function (p) {
+            if (p.closest(SKIP) || p.classList.contains('rm-text')) return;
+            if (p.textContent.replace(/\s+/g, ' ').trim().length < MIN_CHARS) return;
+
+            p.classList.add('rm-text', 'rm-collapsed');
+            // Visible and already fits in the clamped height: nothing to hide
+            if (p.offsetParent !== null && p.scrollHeight <= p.clientHeight + 2) {
+                p.classList.remove('rm-text', 'rm-collapsed');
+                return;
+            }
+
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'rm-toggle';
+            btn.setAttribute('aria-expanded', 'false');
+            btn.innerHTML = '<span>Read More</span><i data-lucide="chevron-down"></i>';
+            btn.addEventListener('click', function () {
+                var open = p.classList.toggle('rm-collapsed') === false;
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.querySelector('span').textContent = open ? 'Read Less' : 'Read More';
+                btn.classList.toggle('rm-open', open);
+                if (!open) {
+                    var top = p.getBoundingClientRect().top;
+                    if (top < 80) window.scrollBy({ top: top - 120, behavior: 'smooth' });
+                }
+            });
+            p.parentNode.insertBefore(btn, p.nextSibling);
+        });
+    }
+
     // Initialize when DOM is ready
     function init() {
         var hasHeaderContainer = document.querySelector('#site-header, [data-include="header"]');
@@ -177,6 +213,8 @@
         } else {
             initHeaderInteractions();
         }
+
+        initReadMore();
 
         if (hasFooterContainer) {
             loadSnippet('#site-footer, [data-include="footer"]', 'include/footer.html', function () {

@@ -1,0 +1,90 @@
+{
+  "updated": "2026-10-30",
+  "doctors": {
+    "dr-amit-mehta": {
+      "name": "Dr. Amit Mehta",
+      "status": "available",
+      "note": ""
+    },
+    "dr-hemant-dahiya": {
+      "name": "Dr. Hemant Dahiya",
+      "status": "available",
+      "note": ""
+    },
+    "dr-trivikrama-rao": {
+      "name": "Dr. Trivikrama Rao",
+      "status": "available",
+      "note": ""
+    },
+    "dr-amit-kumar-garg": {
+      "name": "Dr. Amit Kumar Garg",
+      "status": "available",
+      "note": ""
+    },
+    "dr-ankur-kamra": {
+      "name": "Dr. Ankur Kamra",
+      "status": "available",
+      "note": ""
+    },
+    "dr-anil-khyalia": {
+      "name": "Dr. Anil Khyalia",
+      "status": "available",
+      "note": ""
+    },
+    "dr-bharath": {
+      "name": "Dr. Bharath",
+      "status": "available",
+      "note": ""
+    },
+    "dr-pankaj-sharma": {
+      "name": "Dr. Pankaj Sharma",
+      "status": "available",
+      "note": ""
+    },
+    "dr-deepam-das": {
+      "name": "Dr. Deepam S Das",
+      "status": "available",
+      "note": ""
+    },
+    "dr-shubham-mehta": {
+      "name": "Dr. Shubham Mehta",
+      "status": "available",
+      "note": ""
+    },
+    "dr-devilal": {
+      "name": "Dr. Devi Lal Saharan",
+      "status": "available",
+      "note": ""
+    },
+    "dr-deepti-singh": {
+      "name": "Dr. Deepti Singh",
+      "status": "available",
+      "note": ""
+    },
+    "dr-nidhi-mehta": {
+      "name": "Dr. Nidhi Mehta",
+      "status": "available",
+      "note": ""
+    },
+    "dr-anil-bansal": {
+      "name": "Dr. Anil Bansal",
+      "status": "available",
+      "note": ""
+    },
+    "dr-sanjeet-sahu": {
+      "name": "Dr. Sanjeet Sahu",
+      "status": "available",
+      "note": ""
+    },
+    "dr-megha-gupta": {
+      "name": "Dr. Megha Gupta",
+      "status": "available",
+      "note": ""
+    },
+    "dr-nitika-grover": {
+      "name": "Dr. Nitika Grover",
+      "status": "oncall",
+      "note": ""
+    }
+  }
+}
