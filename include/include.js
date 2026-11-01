@@ -168,7 +168,7 @@
     // "Read More / Read Less" for long paragraphs in page content
     function initReadMore() {
         var MIN_CHARS = 400;
-        var SKIP = 'header, footer, nav, .nav, .top, .footer-disclaimers, .faq-item, table, .cta-banner, .no-read-more, [data-no-read-more]';
+        var SKIP = 'header, footer, nav, .nav, .top, .footer-disclaimers, .faq-item, table, .cta-banner, .rm-more, .no-read-more, [data-no-read-more]';
         var paras = document.querySelectorAll('main p, section p, article p');
 
         Array.prototype.forEach.call(paras, function (p) {
@@ -198,6 +198,28 @@
                 }
             });
             p.parentNode.insertBefore(btn, p.nextSibling);
+        });
+
+        // Whole blocks hidden after the visible paragraphs: <div class="rm-more">...</div>
+        Array.prototype.forEach.call(document.querySelectorAll('.rm-more'), function (block) {
+            block.hidden = true;
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'rm-toggle';
+            btn.setAttribute('aria-expanded', 'false');
+            btn.innerHTML = '<span>Read More</span><i data-lucide="chevron-down"></i>';
+            btn.addEventListener('click', function () {
+                var open = block.hidden;
+                block.hidden = !open;
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.querySelector('span').textContent = open ? 'Read Less' : 'Read More';
+                btn.classList.toggle('rm-open', open);
+                if (!open) {
+                    var top = btn.getBoundingClientRect().top;
+                    if (top < 80) window.scrollBy({ top: top - 160, behavior: 'smooth' });
+                }
+            });
+            block.parentNode.insertBefore(btn, block.nextSibling);
         });
     }
 
