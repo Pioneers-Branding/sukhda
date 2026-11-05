@@ -91,12 +91,25 @@
 
 .top .links a.top-emergency,
 .top .links a[href^="tel:"] {
-    color: #ff4d4f !important;
+    color: #fff !important;
+    background: #d93636;
+    font-weight: 700 !important;
+    padding: 4px 12px !important;
+    border-radius: 999px;
+    border-left: 0 !important;
+    margin-left: 6px;
+}
+
+.top .links a.top-emergency i,
+.top .links a.top-emergency svg {
+    width: 14px;
+    height: 14px;
 }
 
 .top .links a.top-emergency:hover,
 .top .links a[href^="tel:"]:hover {
-    color: #ff7875 !important;
+    color: #fff !important;
+    background: #b82424;
 }
 
 .top .links span+span,
