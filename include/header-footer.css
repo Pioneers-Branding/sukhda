@@ -1898,3 +1898,106 @@ a.footer-hospital-card:hover,
 .rm-toggle.rm-open svg {
     transform: rotate(180deg);
 }
+
+/* ===== MOBILE: cashless strip heading must not overflow ===== */
+@media (max-width: 768px) {
+    .emp-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .emp-head a,
+    .emp-head a.more {
+        white-space: normal;
+    }
+}
+
+/* ===== MOBILE: bottom CTA buttons wrap instead of overflowing ===== */
+@media (max-width: 480px) {
+    .cta .actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cta .actions .btn {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .cta .wrap > * {
+        min-width: 0;
+    }
+}
+
+/* ===== MOBILE: tighter box padding on phones ===== */
+@media (max-width: 600px) {
+    .conditions-panel {
+        padding: 26px 18px !important;
+        gap: 24px !important;
+    }
+
+    .content-card {
+        padding: 22px 18px !important;
+    }
+
+    .hero-stats-card,
+    .vm-card,
+    .biosafety-spec-box,
+    .dnb-box,
+    .job-card,
+    .info-card,
+    .branch-header,
+    .usaid-stats-box,
+    .checklist-card,
+    .tpa-desk-box,
+    .vision-medpark-box,
+    .modality-card,
+    .bio-head,
+    .founder-box,
+    .cathlab-highlight,
+    .cert-card,
+    .dialysis-split > div {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+}
+
+/* ===== MOBILE: hero eyebrow labels stack neatly ===== */
+@media (max-width: 600px) {
+    .eyebrow {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px !important;
+        font-size: 11px !important;
+        letter-spacing: 0.6px !important;
+        line-height: 1.4;
+        margin-bottom: 12px !important;
+    }
+
+    .eyebrow-badge {
+        display: inline-block;
+        max-width: 100%;
+        padding: 5px 12px !important;
+        line-height: 1.4;
+    }
+
+    .eyebrow > span:not(.eyebrow-badge) {
+        font-weight: 800;
+        opacity: 0.9;
+    }
+}
+
+/* ===== RESPONSIVE: page side margins on tablets and phones ===== */
+@media (max-width: 900px) {
+    .wrap {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .wrap {
+        width: calc(100% - 32px);
+    }
+}

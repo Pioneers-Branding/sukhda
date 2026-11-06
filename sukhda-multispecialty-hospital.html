@@ -1826,6 +1826,16 @@
                 grid-template-columns: 1fr;
             }
         }
+        @media (max-width: 768px) {
+            .dialysis-split {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important
+            }
+
+            .renal-list {
+                grid-template-columns: 1fr !important
+            }
+        }
     </style>
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="stylesheet" href="include/header-footer.css">
@@ -2580,7 +2590,7 @@
             <p class="sub">Round-the-clock specialised renal replacement therapy supervised by experienced nephrologists
                 and certified dialysis technicians.</p>
 
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
+            <div class="dialysis-split" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
                 <div
                     style="background:#fff;padding:28px;border-radius:14px;border:1px solid var(--line);box-shadow:var(--card-shadow)">
                     <h3
@@ -2609,7 +2619,7 @@
                         <i data-lucide="activity" style="color:var(--green)"></i> Renal Conditions Treated
                     </h3>
                     <div
-                        style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13.5px;color:#355070;font-weight:600">
+                        class="renal-list" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13.5px;color:#355070;font-weight:600">
                         <span style="display:flex;align-items:center;gap:6px;"><i data-lucide="check"
                                 style="color:var(--green);width:15px"></i> Chronic Kidney Disease (CKD)</span>
                         <span style="display:flex;align-items:center;gap:6px;"><i data-lucide="check"
