@@ -2001,3 +2001,75 @@ a.footer-hospital-card:hover,
         width: calc(100% - 32px);
     }
 }
+
+/* ===== FOOTER: social icons in brand colours ===== */
+.footer-social a[aria-label="Facebook"],
+.footer-social a[aria-label="Facebook"]:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+}
+
+.footer-social a[aria-label="LinkedIn"],
+.footer-social a[aria-label="LinkedIn"]:hover {
+    background: #0a66c2;
+    border-color: #0a66c2;
+}
+
+.footer-social a[aria-label="Instagram"],
+.footer-social a[aria-label="Instagram"]:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    border-color: transparent;
+}
+
+.footer-social a:hover {
+    filter: brightness(1.1);
+}
+
+/* ===== FOOTER: Google rating badge ===== */
+.footer-google-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.footer-google-badge:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.footer-google-badge .fg-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #fff;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.footer-google-badge b {
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-google-badge .fg-stars {
+    color: #fbbc05;
+    letter-spacing: 1px;
+    margin-left: 4px;
+}
+
+.footer-google-badge small {
+    display: block;
+    font-size: 11px;
+    color: #9cb3ce;
+}

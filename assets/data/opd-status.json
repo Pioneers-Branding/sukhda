@@ -21,13 +21,13 @@
       "status": "available",
       "note": ""
     },
-    "dr-ankur-kamra": {
-      "name": "Dr. Ankur Kamra",
+    "dr-mohan-lal": {
+      "name": "Dr. Mohan Lal",
       "status": "available",
       "note": ""
     },
-    "dr-anil-khyalia": {
-      "name": "Dr. Anil Khyalia",
+    "dr-ankur-kamra": {
+      "name": "Dr. Ankur Kamra",
       "status": "available",
       "note": ""
     },
@@ -36,28 +36,8 @@
       "status": "available",
       "note": ""
     },
-    "dr-pankaj-sharma": {
-      "name": "Dr. Pankaj Sharma",
-      "status": "available",
-      "note": ""
-    },
-    "dr-deepam-das": {
-      "name": "Dr. Deepam S Das",
-      "status": "available",
-      "note": ""
-    },
-    "dr-shubham-mehta": {
-      "name": "Dr. Shubham Mehta",
-      "status": "available",
-      "note": ""
-    },
-    "dr-devilal": {
-      "name": "Dr. Devi Lal Saharan",
-      "status": "available",
-      "note": ""
-    },
-    "dr-deepti-singh": {
-      "name": "Dr. Deepti Singh",
+    "dr-anil-khyalia": {
+      "name": "Dr. Anil Khyalia",
       "status": "available",
       "note": ""
     },
@@ -66,8 +46,38 @@
       "status": "available",
       "note": ""
     },
+    "dr-pankaj-sharma": {
+      "name": "Dr. Pankaj Sharma",
+      "status": "available",
+      "note": ""
+    },
+    "dr-ankit-gawri": {
+      "name": "Dr. Ankit Gawri",
+      "status": "available",
+      "note": ""
+    },
+    "dr-manaswi-gupta": {
+      "name": "Dr. Manaswi Gupta",
+      "status": "available",
+      "note": ""
+    },
+    "dr-deepti-singh": {
+      "name": "Dr. Deepti Singh",
+      "status": "available",
+      "note": ""
+    },
     "dr-anil-bansal": {
       "name": "Dr. Anil Bansal",
+      "status": "available",
+      "note": ""
+    },
+    "dr-deepam-das": {
+      "name": "Dr. Deepam S Das",
+      "status": "available",
+      "note": ""
+    },
+    "dr-devilal": {
+      "name": "Dr. Devi Lal Saharan",
       "status": "available",
       "note": ""
     },
@@ -78,6 +88,11 @@
     },
     "dr-megha-gupta": {
       "name": "Dr. Megha Gupta",
+      "status": "available",
+      "note": ""
+    },
+    "dr-shubham-mehta": {
+      "name": "Dr. Shubham Mehta",
       "status": "available",
       "note": ""
     },

@@ -1,10 +1,16 @@
 /**
- * Sukhda Healthcare - Hindi / English Translation Engine
- * Seamlessly integrates Google Translate Element with high-fidelity Hindi translation.
+ * Sukhda Healthcare - English / Hindi / Punjabi Translation Engine
+ * Seamlessly integrates Google Translate Element for Hindi and Punjabi translation.
  * Preserves user language preference across all 46 website pages via localStorage and cookies.
  */
 
 (function () {
+    // Languages offered besides the English original
+    var LANGS = ['hi', 'pa'];
+    function isTranslatedLang(lang) {
+        return LANGS.indexOf(lang) !== -1;
+    }
+
     // Robust Cookie management for Google Translate across all domains and paths
     function getDomainList() {
         var host = window.location.hostname;
@@ -45,8 +51,8 @@
     // Immediately synchronize cookies based on localStorage upon script load
     (function syncInitialCookie() {
         var current = localStorage.getItem('sukhda_site_lang') || 'en';
-        if (current === 'hi') {
-            setGoogleTransCookie('hi');
+        if (isTranslatedLang(current)) {
+            setGoogleTransCookie(current);
         } else {
             clearGoogleTransCookie();
             setGoogleTransCookie('en');
@@ -105,7 +111,7 @@
                 teComboEn.value = 'en';
                 teComboEn.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
             }
-            if (prevLang === 'hi') {
+            if (isTranslatedLang(prevLang)) {
                 setTimeout(function () {
                     window.location.reload();
                 }, 200);
@@ -113,13 +119,20 @@
             return;
         }
 
-        // Switching to Hindi
-        setGoogleTransCookie('hi');
-        if (!triggerGoogleTranslateCombo('hi')) {
+        // Switching to Hindi / Punjabi
+        setGoogleTransCookie(lang);
+        // Hindi <-> Punjabi: reload so the page is translated cleanly from the English original
+        if (isTranslatedLang(prevLang) && prevLang !== lang) {
+            setTimeout(function () {
+                window.location.reload();
+            }, 200);
+            return;
+        }
+        if (!triggerGoogleTranslateCombo(lang)) {
             var pollCount = 0;
             var pollInterval = setInterval(function () {
                 pollCount++;
-                var comboReady = triggerGoogleTranslateCombo('hi');
+                var comboReady = triggerGoogleTranslateCombo(lang);
                 var isTranslated = document.documentElement.classList.contains('translated-ltr') ||
                                    document.documentElement.classList.contains('translated-rtl');
                 if ((comboReady && isTranslated) || pollCount > 30) {
@@ -134,7 +147,7 @@
 
     // Auto-translation observer / checker
     function ensureAutoTranslate(targetLang) {
-        if (targetLang !== 'hi') return;
+        if (!isTranslatedLang(targetLang)) return;
 
         var attempts = 0;
         var maxAttempts = 80; // 8 seconds of verification
@@ -144,7 +157,7 @@
                                document.documentElement.classList.contains('translated-rtl') ||
                                !!document.querySelector('font');
 
-            var comboSuccess = triggerGoogleTranslateCombo('hi');
+            var comboSuccess = triggerGoogleTranslateCombo(targetLang);
 
             if (isTranslated || attempts >= maxAttempts) {
                 clearInterval(autoTimer);
@@ -162,16 +175,16 @@
 
         new google.translate.TranslateElement({
             pageLanguage: 'en',
-            includedLanguages: 'en,hi',
+            includedLanguages: 'en,hi,pa',
             autoDisplay: false
         }, 'google_translate_element');
 
         var savedLang = localStorage.getItem('sukhda_site_lang') || 'en';
         updateLanguageUI(savedLang);
 
-        if (savedLang === 'hi') {
-            setGoogleTransCookie('hi');
-            ensureAutoTranslate('hi');
+        if (isTranslatedLang(savedLang)) {
+            setGoogleTransCookie(savedLang);
+            ensureAutoTranslate(savedLang);
         } else {
             clearGoogleTransCookie();
             setGoogleTransCookie('en');
