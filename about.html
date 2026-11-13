@@ -676,22 +676,20 @@
 
         /* HERO SECTION */
         .hero {
-            background: radial-gradient(circle at 85% 25%, rgba(42, 130, 56, 0.22) 0%, transparent 55%),
-                radial-gradient(circle at 15% 85%, rgba(3, 32, 90, 0.35) 0%, transparent 60%),
-                linear-gradient(135deg, #02163d 0%, #052159 100%);
+            background: #fff;
             color: #fff;
-            padding: 56px 0 52px;
+            padding: 28px 0 8px;
             position: relative;
-            overflow: hidden;
         }
 
-        .hero::before {
+        .hero .wrap::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
+            z-index: -1;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
             opacity: 0.8;
             pointer-events: none;
@@ -699,15 +697,68 @@
 
         .hero .wrap {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 46px;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 56px;
             align-items: center;
             position: relative;
-            z-index: 2;
+            z-index: 0;
+            isolation: isolate;
+            overflow: hidden;
+            border-radius: 22px;
+            padding: 56px 64px;
+            background: radial-gradient(circle at 85% 25%, rgba(42, 130, 56, 0.22) 0%, transparent 55%),
+                radial-gradient(circle at 15% 85%, rgba(3, 32, 90, 0.35) 0%, transparent 60%),
+                linear-gradient(135deg, #02163d 0%, #052159 100%);
+            box-shadow: 0 14px 40px rgba(2, 22, 61, 0.18);
         }
 
         .hero-copy {
             width: 100%;
+            min-width: 0;
+        }
+
+        .hero-copy p {
+            border-left: 4px solid #5fd16f;
+            padding-left: 22px;
+        }
+
+        .hero-media {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.16);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+            aspect-ratio: 4 / 3;
+            background: #02163d;
+        }
+
+        .hero-media video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-media-tag {
+            position: absolute;
+            left: 14px;
+            bottom: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(2, 22, 61, 0.82);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 7px 12px;
+            border-radius: 8px;
+        }
+
+        .hero-media-tag .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #5fd16f;
         }
 
         .crumb {
@@ -720,7 +771,7 @@
         }
 
         .crumb a {
-            color: #278132;
+            color: #5fd16f;
         }
 
         .crumb a:hover {
@@ -728,7 +779,7 @@
         }
 
         .eyebrow {
-            color: #278132;
+            color: #5fd16f;
             font-weight: 900;
             font-size: 15px;
             letter-spacing: 0.9px;
@@ -754,7 +805,7 @@
         }
 
         .hero h1 span {
-            color: #278132;
+            color: #5fd16f;
         }
 
         .hero p {
@@ -2216,6 +2267,15 @@
                 width: calc(100% - 32px)
             }
 
+            .hero .wrap {
+                padding: 30px 20px;
+                border-radius: 16px;
+            }
+
+            .hero-copy p {
+                padding-left: 14px;
+            }
+
             .hero h1 {
                 font-size: 28px;
                 line-height: 1.2;
@@ -3046,160 +3106,19 @@
                 </div>
             </div>
 
-            <div class="hero-highlights-card">
-                <div class="hh-header">
-                    <div class="hh-badge"><i data-lucide="shield-check"></i> INSTITUTIONAL SNAPSHOT</div>
-                    <h3>Healthcare Heritage at a Glance</h3>
-                </div>
-                <div class="hh-grid">
-                    <div class="hh-item">
-                        <div class="hh-icon"><i data-lucide="calendar"></i></div>
-                        <div>
-                            <b>Nov 2002</b>
-                            <small>Founded in Hisar (24+ Yrs)</small>
-                        </div>
-                    </div>
-                    <div class="hh-item">
-                        <div class="hh-icon"><i data-lucide="building-2"></i></div>
-                        <div>
-                            <b>125 Beds</b>
-                            <small>100 Functional &amp; 125 Sanctioned Beds</small>
-                        </div>
-                    </div>
-                    <div class="hh-item">
-                        <div class="hh-icon"><i data-lucide="activity"></i></div>
-                        <div>
-                            <b>35 Beds</b>
-                            <small>Critical Care</small>
-                        </div>
-                    </div>
-                    <div class="hh-item">
-                        <div class="hh-icon"><i data-lucide="award"></i></div>
-                        <div>
-                            <b>NBEMS Accredited</b>
-                            <small>National Board of Examinations in Medical Sciences, New Delhi</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="hh-footer">
-                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> AIIMS &amp; PGIMER Heritage</span>
-                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> AB PM-JAY Gold Certified</span>
-                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> MedPark Cancer Hospital</span>
-                    <span class="hh-tag"><i data-lucide="check-circle-2"></i> Modular, Major &amp; Minor OTs</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 1: STORY & ORIGIN -->
-    <section class="section" id="about">
-        <div class="wrap story-grid">
-            <div class="story-copy">
-                <div class="kicker">FACILITY SNAPSHOT</div>
-                <h2 class="title">Care &amp; Cure for the Whole Family under One Roof</h2>
-                <p data-no-read-more>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD (Medicine), AIIMS, New
-                        Delhi</b>. After completing his education and gaining valuable clinical experience at premier
-                    institutions such as <b>AIIMS, New Delhi</b>, and <b>PGIMER, Chandigarh</b>, Dr. Mehta returned to
-                    Hisar with the vision of providing quality healthcare to the community.</p>
-                <p data-no-read-more>In November 2002, Sukhda Hospital was established with the mission of <b>"Care &amp; Cure for the Whole Family under One Roof"</b>. Over the years, the hospital has grown into a <b>125-bed
-                        NABH-Accredited Multispeciality Hospital</b>, offering comprehensive medical, surgical,
-                    diagnostic, and emergency healthcare services.</p>
-                <div class="rm-more">
-                    <p>Equipped with advanced medical technology, experienced specialists, and modern infrastructure, the
-                        hospital continues to provide quality healthcare at an affordable cost. In 2022, the hospital was
-                        accredited by the <b>National Board of Examinations in Medical Sciences (NBEMS)</b> to conduct the
-                        prestigious <b>DNB Programme in the field of General Medicine</b>, with a 100% success rate.</p>
-                    <p>Today, Sukhda Healthcare operates as a unified healthcare ecosystem comprising <b>Sukhda
-                            Multispeciality Hospital</b> and <b>Sukhda MedPark (Cancer &amp; Super-Speciality
-                            Hospital)</b>, delivering ethical and evidence-based patient care to families across Haryana,
-                        Punjab, and Rajasthan.</p>
-                </div>
-                <div class="story-badge-strip">
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> AIIMS &amp; PGIMER Clinical
-                        Heritage</span>
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> NABH Certificate H-2020-0707</span>
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> NBEMS DNB General Medicine</span>
-                    <span class="story-badge"><i data-lucide="check-circle-2"></i> AB PM-JAY Gold Quality Certification</span>
-                </div>
-            </div>
-            <div class="story-media">
-                <div class="story-img-wrap">
-                    <img src="assets/images/doctor-patient-hero.jpg"
-                        alt="Doctor and Patient Consultation at Sukhda Hospital">
-                </div>
-                <div class="quote-box">
-                    "Our founding mission remains unchanged: to provide ethical, world-class medical care at an
-                    affordable cost, with an empathetic approach to every patient."
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2: VISION, MISSION & VALUES (DUAL INSTITUTIONS) -->
-    <section class="section" id="vision">
-        <div class="wrap">
-            <div class="kicker">VISION &amp; POSITIONING</div>
-            <h2 class="title">Vision, Mission &amp; Core Values</h2>
-            <p class="sub">Guiding principles across <b>Sukhda Multispeciality Hospital</b> and <b>Sukhda MedPark Cancer &amp;
-                Super-Speciality Hospital</b>.</p>
-
-            <div class="vm-grid">
-                <!-- SUKHDA MULTISPECIALITY HOSPITAL -->
-                <div class="vm-card vision-card">
-                    <div class="vm-icon"><i data-lucide="building-2"></i></div>
-                    <span class="eyebrow-badge" style="display:inline-block;margin-bottom:12px;font-size:12px;font-weight:800;color:var(--green);background:var(--green-light);border:1px solid #c2e2c8;padding:4px 10px;border-radius:6px;"><strong>SUKHDA MULTISPECIALITY HOSPITAL</strong></span>
-                    <h3 style="font-size:22px;font-weight:800;color:var(--blue);margin:0 0 4px;"><strong>Sukhda Multispeciality Hospital</strong></h3>
-                    <div style="font-size:14px;font-weight:700;color:var(--green);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;">Vision &amp; Mission</div>
-                    <p><b>Vision:</b> To be a centre of excellence in providing <b>quality healthcare at an affordable cost</b>.</p>
-                    <p style="margin-top:10px;"><b>Mission:</b> To provide <b>"Care &amp; Cure for the Whole Family
-                            under One Roof"</b> through a team of qualified and experienced doctors, dedicated nursing
-                        professionals, paramedical staff, and advanced medical and diagnostic services.</p>
-                </div>
-
-                <!-- SUKHDA MED PARK -->
-                <div class="vm-card mission-card">
-                    <div class="vm-icon"><i data-lucide="ribbon"></i></div>
-                    <span class="eyebrow-badge"
-                        style="display:inline-block;margin-bottom:12px;font-size:12px;font-weight:800;background:#e8f0fe;border-color:#b8d2f2;color:#0d6efd;padding:4px 10px;border-radius:6px;"><strong>SUKHDA MEDPARK (CANCER &amp; SUPER-SPECIALITY)</strong></span>
-                    <h3 style="font-size:22px;font-weight:800;color:var(--blue);margin:0 0 4px;"><strong>Sukhda MedPark Cancer &amp; Super-Speciality Hospital</strong></h3>
-                    <div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;">Vision &amp; Mission</div>
-                    <p><b>Vision:</b> To become the most trusted comprehensive cancer care centre by
-                        delivering world-class oncology services through clinical excellence, advanced technology,
-                        compassionate care, and continuous innovation.</p>
-                    <p style="margin-top:10px;"><b>Mission:</b> To provide comprehensive cancer care under one roof through medical, surgical, and radiation oncology; to ensure early detection and accurate diagnosis; and to deliver evidence-based therapy and palliative support.</p>
-                </div>
-            </div>
-
-            <div class="values-grid">
-                <div class="val-card">
-                    <i data-lucide="heart-handshake"></i>
-                    <h4>Dignity &amp; Equity</h4>
-                    <p>Practise dignity and equity in all relationships, treating every patient and healthcare
-                        professional with profound respect.</p>
-                </div>
-                <div class="val-card">
-                    <i data-lucide="shield-check"></i>
-                    <h4>Patient Rights &amp; Ethics</h4>
-                    <p>Respect patients' rights and maintain the highest ethical healthcare practices, clinical
-                        transparency, and patient safety.</p>
-                </div>
-                <div class="val-card">
-                    <i data-lucide="sparkles"></i>
-                    <h4>Continuous Technological Adoption</h4>
-                    <p>Continuously adopt the latest medical technology and advancements (CLEARstent Live Cath Lab, Biosafety-Cabinet Chemotherapy, 3D Knee Resurfacing, LINAC).</p>
-                </div>
-                <div class="val-card">
-                    <i data-lucide="wallet"></i>
-                    <h4>Affordability for Every Patient</h4>
-                    <p>Deliver world-class quality healthcare while ensuring genuine affordability, accessible health
-                        schemes, and cashless TPA partnerships.</p>
-                </div>
+            <div class="hero-media">
+                <video autoplay loop muted playsinline preload="metadata"
+                    poster="assets/images/doctor-patient-hero.jpg" aria-label="Sukhda Hospital video tour">
+                    <source src="assets/video/hospital-hero.mp4" type="video/mp4">
+                    <source src="assets/video/hospital-hero.webm" type="video/webm">
+                </video>
+                <span class="hero-media-tag"><span class="dot"></span> Sukhda Hospital, Hisar</span>
             </div>
         </div>
     </section>
 
     <!-- SECTION 3: DIRECTORS / LEADERSHIP -->
-    <section class="section soft" id="leadership">
+    <section class="section" id="leadership">
         <div class="wrap">
             <div class="kicker">EXECUTIVE &amp; CLINICAL LEADERSHIP</div>
             <h2 class="title">Messages from the Directors' Desk</h2>
@@ -3235,8 +3154,7 @@
                         </div>
                         <div style="margin-top: 18px;">
                             <a href="dr-amit-mehta.html" class="btn small primary"
-                                style="display:inline-flex;align-items:center;gap:6px">View Clinical Profile &amp; OPD
-                                Timings →</a>
+                                style="display:inline-flex;align-items:center;gap:6px">View Profile →</a>
                         </div>
                     </div>
                 </article>
@@ -3272,6 +3190,69 @@
                         </div>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: VISION, MISSION & VALUES (DUAL INSTITUTIONS) -->
+    <section class="section soft" id="vision">
+        <div class="wrap">
+            <div class="kicker">VISION &amp; POSITIONING</div>
+            <h2 class="title">Vision, Mission &amp; Core Values</h2>
+            <p class="sub">Guiding principles across <b>Sukhda Multispeciality Hospital</b> and <b>Sukhda MedPark Cancer &amp;
+                Super-Speciality Hospital</b>.</p>
+
+            <div class="vm-grid">
+                <!-- SUKHDA MULTISPECIALITY HOSPITAL -->
+                <div class="vm-card vision-card">
+                    <div class="vm-icon"><i data-lucide="building-2"></i></div>
+                    <span class="eyebrow-badge" style="display:inline-block;margin-bottom:12px;font-size:12px;font-weight:800;color:var(--blue);background:#eef3fb;border:1px solid #c9d6ea;padding:4px 10px;border-radius:6px;"><strong>SUKHDA MULTISPECIALITY HOSPITAL</strong></span>
+                    <h3 style="font-size:22px;font-weight:800;color:var(--blue);margin:0 0 4px;"><strong>Sukhda Multispeciality Hospital</strong></h3>
+                    <div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;">Vision &amp; Mission</div>
+                    <p><b>Vision:</b> To be a centre of excellence in providing <b>quality healthcare at an affordable cost</b>.</p>
+                    <p style="margin-top:10px;"><b>Mission:</b> To provide <b>"Care &amp; Cure for the Whole Family
+                            under One Roof"</b> through a team of qualified and experienced doctors, dedicated nursing
+                        professionals, paramedical staff, and advanced medical and diagnostic services.</p>
+                </div>
+
+                <!-- SUKHDA MED PARK -->
+                <div class="vm-card mission-card">
+                    <div class="vm-icon"><i data-lucide="ribbon"></i></div>
+                    <span class="eyebrow-badge"
+                        style="display:inline-block;margin-bottom:12px;font-size:12px;font-weight:800;color:var(--blue);background:#eef3fb;border:1px solid #c9d6ea;padding:4px 10px;border-radius:6px;"><strong>SUKHDA MEDPARK (CANCER &amp; SUPER-SPECIALITY)</strong></span>
+                    <h3 style="font-size:22px;font-weight:800;color:var(--blue);margin:0 0 4px;"><strong>Sukhda MedPark Cancer &amp; Super-Speciality Hospital</strong></h3>
+                    <div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.5px;">Vision &amp; Mission</div>
+                    <p><b>Vision:</b> To become the most trusted comprehensive cancer care centre by
+                        delivering world-class oncology services through clinical excellence, advanced technology,
+                        compassionate care, and continuous innovation.</p>
+                    <p style="margin-top:10px;"><b>Mission:</b> To provide comprehensive cancer care under one roof through medical, surgical, and radiation oncology; to ensure early detection and accurate diagnosis; and to deliver evidence-based therapy and palliative support.</p>
+                </div>
+            </div>
+
+            <div class="values-grid">
+                <div class="val-card">
+                    <i data-lucide="heart-handshake"></i>
+                    <h4>Dignity &amp; Equity</h4>
+                    <p>Practise dignity and equity in all relationships, treating every patient and healthcare
+                        professional with profound respect.</p>
+                </div>
+                <div class="val-card">
+                    <i data-lucide="shield-check"></i>
+                    <h4>Patient Rights &amp; Ethics</h4>
+                    <p>Respect patients' rights and maintain the highest ethical healthcare practices, clinical
+                        transparency, and patient safety.</p>
+                </div>
+                <div class="val-card">
+                    <i data-lucide="sparkles"></i>
+                    <h4>Continuous Technological Adoption</h4>
+                    <p>Continuously adopt the latest medical technology and advancements (CLEARstent Live Cath Lab, Biosafety-Cabinet Chemotherapy, 3D Knee Resurfacing, LINAC).</p>
+                </div>
+                <div class="val-card">
+                    <i data-lucide="wallet"></i>
+                    <h4>Affordability for Every Patient</h4>
+                    <p>Deliver world-class quality healthcare while ensuring genuine affordability, accessible health
+                        schemes, and cashless TPA partnerships.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -3647,21 +3628,20 @@
                     <div class="photo">
                         <img src="assets/images/sukhda-multispecialty-hospital.jpg"
                             alt="Sukhda Multispeciality Hospital">
-                        <div class="place">OPPOSITE GREEN BELT, DELHI ROAD, HISAR - 125001<br>125-BED NABH-ACCREDITED</div>
+                        <div class="place">OPPOSITE GREEN BELT, DELHI ROAD, HISAR - 125001<br>NABH-ACCREDITED</div>
                     </div>
                     <div class="h-info">
                         <img class="h-logo" src="assets/images/sukhda-multispeciality-logo.png"
                             alt="Sukhda Multispeciality Hospital">
                         <h3>Sukhda Multispeciality Hospital</h3>
-                        <p>Hisar's premier 125-bed NABH-accredited hospital providing comprehensive multispeciality care, an advanced 35-bed ICU, 24/7 emergency and trauma care, mother &amp; child care, laparoscopic surgery, an 8-bed dialysis unit, joint replacements, and complete diagnostics.</p>
+                        <p>Hisar's premier NABH-accredited hospital providing comprehensive multispeciality care, an advanced ICU, 24/7 emergency and trauma care, mother &amp; child care, laparoscopic surgery, a dialysis unit, joint replacements, and complete diagnostics.</p>
                         <div class="checks">
-                            <span><i data-lucide="check"></i> 125 Sanctioned Beds</span>
-                            <span><i data-lucide="check"></i> 35-Bed ICU &amp; 24/7 Emergency</span>
-                            <span><i data-lucide="check"></i> Internal Medicine (DNB Centre)</span>
-                            <span><i data-lucide="check"></i> 8-Bed Nephrology &amp; Dialysis</span>
-                            <span><i data-lucide="check"></i> Laparoscopy, Surgery &amp; Urology</span>
-                            <span><i data-lucide="check"></i> Gynaecology, Labour &amp; NICU</span>
-                            <span><i data-lucide="check"></i> 3D Knee Resurfacing &amp; Orthopaedics</span>
+                            <span><i data-lucide="check-circle-2"></i>Advanced ICU &amp; 24/7 Emergency</span>
+                            <span><i data-lucide="check-circle-2"></i>Internal Medicine (DNB Centre)</span>
+                            <span><i data-lucide="check-circle-2"></i>Nephrology &amp; Dialysis</span>
+                            <span><i data-lucide="check-circle-2"></i>Laparoscopy, Surgery &amp; Urology</span>
+                            <span><i data-lucide="check-circle-2"></i>Gynaecology, Labour &amp; NICU</span>
+                            <span><i data-lucide="check-circle-2"></i>3D Knee Resurfacing &amp; Orthopaedics</span>
                         </div>
                         <a class="btn small primary" href="sukhda-multispecialty-hospital.html">Explore Multispeciality Services →</a>
                     </div>
@@ -3678,12 +3658,12 @@
                         <h3>Sukhda MedPark Hospital</h3>
                         <p>Hisar's dedicated 49-bed super-speciality &amp; comprehensive cancer institute offering day-care chemotherapy with a Class II, Type A2 Biosafety Cabinet, surgical oncology, radiation oncology (LINAC), cardiology with a cath lab, and neuro and spine surgery.</p>
                         <div class="checks">
-                            <span><i data-lucide="check"></i> Medical Oncology &amp; Chemo Suites</span>
-                            <span><i data-lucide="check"></i> Surgical Oncology (Modular OTs)</span>
-                            <span><i data-lucide="check"></i> Radiation Oncology (LINAC)</span>
-                            <span><i data-lucide="check"></i> Cardiology &amp; Digital Cath Lab</span>
-                            <span><i data-lucide="check"></i> Neurosurgery &amp; Spine</span>
-                            <span><i data-lucide="check"></i> Molecular Diagnostics &amp; Pharmacy</span>
+                            <span><i data-lucide="check-circle-2"></i>Medical Oncology &amp; Chemo Suites</span>
+                            <span><i data-lucide="check-circle-2"></i>Surgical Oncology (Modular OTs)</span>
+                            <span><i data-lucide="check-circle-2"></i>Radiation Oncology (LINAC)</span>
+                            <span><i data-lucide="check-circle-2"></i>Cardiology &amp; Digital Cath Lab</span>
+                            <span><i data-lucide="check-circle-2"></i>Neurosurgery &amp; Spine</span>
+                            <span><i data-lucide="check-circle-2"></i>Molecular Diagnostics &amp; Pharmacy</span>
                         </div>
                         <a class="btn small primary" href="sukhda-medpark-hospital.html">Explore MedPark Cancer Care →</a>
                     </div>
