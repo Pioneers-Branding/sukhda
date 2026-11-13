@@ -223,8 +223,19 @@
         });
     }
 
+    // Site-wide search (header icon + search panel)
+    function loadSearch() {
+        if (document.querySelector('script[data-site-search]')) return;
+        var s = document.createElement('script');
+        s.src = 'assets/js/site-search.js';
+        s.defer = true;
+        s.setAttribute('data-site-search', '');
+        document.body.appendChild(s);
+    }
+
     // Initialize when DOM is ready
     function init() {
+        loadSearch();
         var hasHeaderContainer = document.querySelector('#site-header, [data-include="header"]');
         var hasFooterContainer = document.querySelector('#site-footer, [data-include="footer"]');
 
