@@ -1590,6 +1590,19 @@
                 text-align: left !important;
             }
         }
+    
+        /* Readable green text on dark banners (matches service pages) */
+        :is(.hero-banner, .doc-directory-hero, .opd-hero, .empanelled-hero, .doctor-hero, section.hero) :is(.badge, .kicker, .hero-kicker, .eyebrow, .hero-stat-num, .hero-stat-card b, .crumb a, .breadcrumb-wrap a, h1 span, .hero-title span, .hero-badge-float i, .hero-badge-float svg) {
+            color: #5fd16f;
+        }
+
+        :is(.doctor-hero, .empanelled-hero) .crumb span {
+            color: #5fd16f;
+        }
+
+        :is(.hero-banner, .doc-directory-hero, .opd-hero, .empanelled-hero, .doctor-hero) :is(.badge, .hero-kicker) {
+            border-color: rgba(95, 209, 111, 0.45);
+        }
     </style>
 </head>
 
@@ -1651,7 +1664,7 @@
                             <a href="about.html">About Sukhda</a>
                             <a href="about.html#leadership">Medical Leadership</a>
                             <a href="about.html#vision">Vision &amp; Mission</a>
-                            <a href="about.html#hospitals">Our Hospitals</a>
+                            <a href="index.html#hospitals">Our Hospitals</a>
                             <a href="about.html#infrastructure">Infrastructure &amp; Facilities</a>
                         </span>
                     </span>
