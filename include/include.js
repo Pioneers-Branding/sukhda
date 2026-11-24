@@ -118,6 +118,45 @@
         // Highlight Active Page in Navigation
         highlightActiveLink(menu);
 
+        // Top Bar Directions Dropdown toggles
+        var topDirDropdowns = document.querySelectorAll('.top-directions-dropdown');
+        topDirDropdowns.forEach(function (dd) {
+            var btn = dd.querySelector('.top-directions-trigger');
+            if (!btn) return;
+            btn.onclick = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var isOpen = dd.classList.contains('is-open');
+                topDirDropdowns.forEach(function (other) { other.classList.remove('is-open'); });
+                if (!isOpen) {
+                    dd.classList.add('is-open');
+                    btn.setAttribute('aria-expanded', 'true');
+                } else {
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            };
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.top-directions-dropdown')) {
+                topDirDropdowns.forEach(function (dd) {
+                    dd.classList.remove('is-open');
+                    var b = dd.querySelector('.top-directions-trigger');
+                    if (b) b.setAttribute('aria-expanded', 'false');
+                });
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                topDirDropdowns.forEach(function (dd) {
+                    dd.classList.remove('is-open');
+                    var b = dd.querySelector('.top-directions-trigger');
+                    if (b) b.setAttribute('aria-expanded', 'false');
+                });
+            }
+        });
+
         // Sync Language UI state
         if (typeof window.syncLanguageUI === 'function') {
             window.syncLanguageUI();

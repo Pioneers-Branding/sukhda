@@ -2847,7 +2847,7 @@
         :is(.hero-banner, .doc-directory-hero, .opd-hero, .empanelled-hero, .doctor-hero) :is(.badge, .hero-kicker) {
             border-color: rgba(95, 209, 111, 0.45);
         }
-    
+
         /* HIGHLIGHTS SLIDER (duotone photo, frosted caption card, pill pagination) */
         .sk-slider-section {
             padding: 28px 0 8px;
@@ -3000,6 +3000,7 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
+
             .sk-slide,
             .sk-slide img,
             .sk-dot {
@@ -3008,6 +3009,307 @@
 
             .sk-slide.is-active img {
                 transform: scale(1.05);
+            }
+        }
+
+        /* QUICK FINDER / DISCOVERY SECTION BELOW SLIDER */
+        .quick-finder-section {
+            padding: 12px 0 24px;
+        }
+
+        .quick-finder-card {
+            width: min(1800px, calc(100% - 48px));
+            margin: 0 auto;
+            background: #09243c;
+            background: radial-gradient(circle at 50% 25%, #0f395d 0%, #09243c 65%, #05192c 100%);
+            border-radius: 20px;
+            padding: 38px 24px 44px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 14px 40px rgba(3, 22, 61, 0.16);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .qf-nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+        }
+
+        .qf-nav-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 13px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            cursor: pointer;
+        }
+
+        .qf-nav-item:hover {
+            transform: translateY(-2px);
+            color: #e6f3ff;
+        }
+
+        .qf-icon-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.13);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #ffffff;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .qf-nav-item:hover .qf-icon-box {
+            background: rgba(255, 255, 255, 0.22);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .qf-nav-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15.5px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            color: inherit;
+        }
+
+        .qf-title {
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0 0 22px;
+            letter-spacing: -0.3px;
+        }
+
+        .qf-search-wrapper {
+            max-width: 640px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .qf-search-box {
+            background: #ffffff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 5px 6px 5px 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            position: relative;
+        }
+
+        .qf-search-box:focus-within {
+            box-shadow: 0 8px 28px rgba(6, 148, 211, 0.45);
+        }
+
+        .qf-search-icon {
+            width: 20px;
+            height: 20px;
+            color: #8fa0b0;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .qf-search-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            font-family: 'Lato', sans-serif;
+            color: #172b4d;
+            background: transparent;
+            padding: 9px 0;
+            min-width: 0;
+        }
+
+        .qf-search-input::placeholder {
+            color: #8fa0b0;
+            font-weight: 400;
+        }
+
+        .qf-search-btn {
+            background: #0694d3;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            width: 44px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: background 0.2s ease, transform 0.15s ease;
+        }
+
+        .qf-search-btn:hover {
+            background: #0280b9;
+            transform: scale(1.03);
+        }
+
+        .qf-search-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* AUTO-SUGGESTIONS DROPDOWN */
+        .qf-suggestions {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 16px 40px rgba(2, 22, 61, 0.24);
+            max-height: 380px;
+            overflow-y: auto;
+            z-index: 1000;
+            text-align: left;
+            border: 1px solid #dce7f0;
+            padding: 8px 0;
+        }
+
+        .qf-sug-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 18px;
+            color: #1a2936;
+            text-decoration: none;
+            transition: background 0.15s ease;
+            gap: 12px;
+        }
+
+        .qf-sug-item:hover,
+        .qf-sug-item.is-selected {
+            background: #f0f7fc;
+        }
+
+        .qf-sug-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 0;
+        }
+
+        .qf-sug-title {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--blue, #052159);
+            font-family: 'Montserrat', sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .qf-sug-sub {
+            font-size: 12.5px;
+            color: #62788d;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .qf-sug-badge {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            flex-shrink: 0;
+        }
+
+        .qf-badge-doc {
+            background: #eaf5ec;
+            color: #1e7028;
+        }
+
+        .qf-badge-spec {
+            background: #e8f3fc;
+            color: #0280b9;
+        }
+
+        .qf-badge-hosp {
+            background: #fdf2e9;
+            color: #b95d02;
+        }
+
+        .qf-badge-ins {
+            background: #f3eafd;
+            color: #6929c4;
+        }
+
+        .qf-sug-empty {
+            padding: 16px 20px;
+            font-size: 13.5px;
+            color: #62788d;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .quick-finder-card {
+                width: calc(100% - 32px);
+                padding: 28px 18px 32px;
+                border-radius: 18px;
+            }
+
+            .qf-nav-row {
+                gap: 20px 28px;
+                margin-bottom: 20px;
+            }
+
+            .qf-title {
+                font-size: 20px;
+                margin-bottom: 18px;
+            }
+
+            .qf-nav-label {
+                font-size: 14.5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .qf-nav-row {
+                gap: 14px 18px;
+            }
+
+            .qf-icon-box {
+                width: 38px;
+                height: 38px;
+                border-radius: 10px;
+            }
+
+            .qf-icon-box svg {
+                width: 19px;
+                height: 19px;
+            }
+
+            .qf-nav-label {
+                font-size: 13.5px;
+            }
+
+            .qf-title {
+                font-size: 18px;
+                line-height: 1.35;
+                margin-bottom: 16px;
+            }
+
+            .qf-search-input {
+                font-size: 14px;
             }
         }
     </style>
@@ -3035,10 +3337,40 @@
                     01662-249473</a>
             </div>
             <div class="links">
-                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+Multispeciality+Hospital,+Delhi+Road,+Hisar"
-                    target="_blank" rel="noopener" class="top-directions" data-directions-lat="29.1293189"
-                    data-directions-lng="75.7867020" title="Open Sukhda Multispeciality Hospital in Google Maps"><i
-                        data-lucide="map-pin"></i> Get Directions <span class="dir-km" hidden></span></a>
+                <div class="top-directions-dropdown">
+                    <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false" title="Get Directions to Sukhda Hospitals">
+                        <i data-lucide="map-pin"></i>
+                        <span>Get Directions</span>
+                        <i data-lucide="chevron-down" class="top-dir-chevron"></i>
+                    </button>
+                    <div class="top-directions-menu" role="menu">
+                        <div class="top-dir-title">Select Hospital Location</div>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+Multispeciality+Hospital,+Delhi+Road,+Hisar"
+                            target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
+                            data-directions-lat="29.1293189" data-directions-lng="75.7867020"
+                            title="Open Sukhda Multispeciality Hospital in Google Maps">
+                            <span class="top-dir-icon"><i data-lucide="building-2"></i></span>
+                            <span class="top-dir-info">
+                                <b>Sukhda Multispeciality Hospital</b>
+                                <small>Opp. Green Belt, Delhi Road, Hisar</small>
+                                <span class="dir-km" hidden></span>
+                            </span>
+                            <i data-lucide="navigation" class="top-dir-arrow"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+MedPark,+Sector-5,+Hisar"
+                            target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
+                            data-directions-lat="29.1627" data-directions-lng="75.7516"
+                            title="Open Sukhda MedPark in Google Maps">
+                            <span class="top-dir-icon medpark"><i data-lucide="activity"></i></span>
+                            <span class="top-dir-info">
+                                <b>Sukhda MedPark Hospital</b>
+                                <small>Cancer &amp; Super-Speciality, Sector-5, Hisar</small>
+                                <span class="dir-km" hidden></span>
+                            </span>
+                            <i data-lucide="navigation" class="top-dir-arrow"></i>
+                        </a>
+                    </div>
+                </div>
                 <a href="empanelled-corporate.html" style="color:#278132;font-weight:700">Cashless / TPA</a>
                 <a href="opd-schedule.html">OPD Schedule</a>
                 <div class="top-lang-switch notranslate" aria-label="Language selection">
@@ -3100,24 +3432,39 @@
                                         <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
                                         <div>
                                             <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
-                                            <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB Centre</div>
+                                            <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB
+                                                Centre</div>
                                         </div>
                                     </div>
                                     <div class="mega-links-grid">
-                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical Care</span></a>
-                                        <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Cardiology</span></a>
-                                        <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology</span></a>
-                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                        <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery</span></a>
-                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp; Robotic Joint Replacement</span></a>
-                                        <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>Laparoscopic &amp; General Surgery</span></a>
+                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
+                                                &amp; Critical Care</span></a>
+                                        <a href="cardiology.html"><i
+                                                data-lucide="heart-pulse"></i><span>Cardiology</span></a>
+                                        <a href="gastroenterology.html"><i
+                                                data-lucide="activity"></i><span>Gastroenterology</span></a>
+                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
+                                                Dialysis</span></a>
+                                        <a href="neurosurgery.html"><i
+                                                data-lucide="brain"></i><span>Neurosurgery</span></a>
+                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
+                                                Obstetrics</span></a>
+                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp;
+                                                Robotic Joint Replacement</span></a>
+                                        <a href="general-surgery.html"><i
+                                                data-lucide="shield-check"></i><span>Laparoscopic &amp; General
+                                                Surgery</span></a>
                                         <a href="ent.html"><i data-lucide="headphones"></i><span>ENT</span></a>
-                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
-                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
-                                        <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
-                                        <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy</span></a>
-                                        <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology</span></a>
+                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp;
+                                                Imaging</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
+                                                &amp; Pain Management</span></a>
+                                        <a href="contact.html"><i
+                                                data-lucide="microscope"></i><span>Pathology</span></a>
+                                        <a href="physiotherapy.html"><i
+                                                data-lucide="activity"></i><span>Physiotherapy</span></a>
+                                        <a href="dermatology.html"><i
+                                                data-lucide="sparkles"></i><span>Dermatology</span></a>
                                     </div>
                                 </div>
                                 <div class="mega-col medpark-col">
@@ -3184,36 +3531,6 @@
         <div class="nav-overlay"></div>
     </header>
 
-    <!-- 1. HERO VIDEO SECTION (VIDEO ONLY) -->
-    <section class="hero" id="hero">
-        <video id="heroVideo" class="hero-video-full" autoplay loop muted playsinline
-            poster="assets/images/doctor-patient-hero.jpg" preload="auto">
-            <source src="assets/video/hospital-hero.mp4" type="video/mp4">
-            <source src="assets/video/hospital-hero.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-
-        <!-- Floating Video Controls (Bottom Right) -->
-        <div class="hero-floating-controls">
-            <span class="hero-floating-label"><span class="live-dot"></span> 24/7 Care</span>
-            <button type="button" class="video-ctrl-btn" id="heroPlayPauseBtn" aria-label="Play or Pause Video"
-                title="Play / Pause">
-                <i data-lucide="pause"></i>
-            </button>
-            <button type="button" class="video-ctrl-btn" id="heroMuteBtn" aria-label="Toggle Audio"
-                title="Mute / Unmute">
-                <i data-lucide="volume-x"></i>
-            </button>
-            <button type="button" class="video-ctrl-btn" id="heroExpandBtn" aria-label="Full-Screen Hospital Tour"
-                title="Full-Screen Video Tour">
-                <i data-lucide="maximize-2"></i>
-            </button>
-        </div>
-
-        <!-- Progress Line on Section Bottom -->
-        <div class="video-progress-line" id="heroVideoProgress"></div>
-    </section>
-
 
     <!-- HIGHLIGHTS SLIDER -->
     <section class="sk-slider-section" aria-label="Sukhda Healthcare highlights">
@@ -3223,7 +3540,8 @@
                     <img src="assets/images/infra/pathology-lab.jpg" alt="Laboratory at Sukhda Hospital">
                     <a class="sk-slide-card" href="about.html">
                         <h2>Caring for Hisar since 2002.</h2>
-                        <p>Sukhda Healthcare has served families across Haryana, Punjab and Rajasthan for over two decades.</p>
+                        <p>Sukhda Healthcare has served families across Haryana, Punjab and Rajasthan for over two
+                            decades.</p>
                     </a>
                 </div>
                 <div class="sk-slide" role="group" aria-roledescription="slide" aria-label="2 of 6" aria-hidden="true">
@@ -3234,7 +3552,8 @@
                     </a>
                 </div>
                 <div class="sk-slide" role="group" aria-roledescription="slide" aria-label="3 of 6" aria-hidden="true">
-                    <img src="assets/images/infra/cath-lab.jpg" alt="Cardiac catheterisation lab at Sukhda Hospital" loading="lazy">
+                    <img src="assets/images/infra/cath-lab.jpg" alt="Cardiac catheterisation lab at Sukhda Hospital"
+                        loading="lazy">
                     <a class="sk-slide-card" href="cardiology.html" tabindex="-1">
                         <h2>Dedicated cardiac care.</h2>
                         <p>A cath lab for angioplasty, pacemakers and 24/7 heart-attack response.</p>
@@ -3251,11 +3570,13 @@
                     <img src="assets/images/infra/dialysis.jpg" alt="Dialysis unit at Sukhda Hospital" loading="lazy">
                     <a class="sk-slide-card" href="nephrology.html" tabindex="-1">
                         <h2>Kidney care and dialysis.</h2>
-                        <p>A dedicated dialysis unit with cashless support under Ayushman Bharat and empanelled TPAs.</p>
+                        <p>A dedicated dialysis unit with cashless support under Ayushman Bharat and empanelled TPAs.
+                        </p>
                     </a>
                 </div>
                 <div class="sk-slide" role="group" aria-roledescription="slide" aria-label="6 of 6" aria-hidden="true">
-                    <img src="assets/images/infra/operation-theatre.jpg" alt="Operation theatre at Sukhda Hospital" loading="lazy">
+                    <img src="assets/images/infra/operation-theatre.jpg" alt="Operation theatre at Sukhda Hospital"
+                        loading="lazy">
                     <a class="sk-slide-card" href="medical-oncology.html" tabindex="-1">
                         <h2>Cancer care at Sukhda MedPark.</h2>
                         <p>Medical, surgical and radiation oncology, guided by a multidisciplinary tumour board.</p>
@@ -3269,6 +3590,75 @@
                 <button type="button" class="sk-dot" aria-label="Go to slide 4"></button>
                 <button type="button" class="sk-dot" aria-label="Go to slide 5"></button>
                 <button type="button" class="sk-dot" aria-label="Go to slide 6"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK DISCOVERY & SEARCH SECTION (Below Slider) -->
+    <section class="quick-finder-section" aria-label="Find Doctors, Specialities and Care">
+        <div class="quick-finder-card">
+            <!-- Top Nav Row (Doctors A - Z, Specialities, Insurance) -->
+            <div class="qf-nav-row" role="navigation" aria-label="Quick directory links">
+                <a href="doctor.html" class="qf-nav-item">
+                    <span class="qf-icon-box">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                            <path d="M16 11h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1"></path>
+                        </svg>
+                    </span>
+                    <span class="qf-nav-label">Doctors A - Z</span>
+                </a>
+
+                <a href="#specialities" class="qf-nav-item">
+                    <span class="qf-icon-box">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8v8M8 12h8"></path>
+                        </svg>
+                    </span>
+                    <span class="qf-nav-label">Specialities</span>
+                </a>
+
+                <a href="empanelled-corporate.html" class="qf-nav-item">
+                    <span class="qf-icon-box">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                    </span>
+                    <span class="qf-nav-label">Insurance</span>
+                </a>
+            </div>
+
+            <!-- Title -->
+            <h2 class="qf-title">Discover the best clinics, hospitals &amp; specialities in your city</h2>
+
+            <!-- Search Area (Without Location Filter) -->
+            <div class="qf-search-wrapper">
+                <form class="qf-search-box" id="qfSearchForm" action="doctor.html" method="GET" role="search">
+                    <svg class="qf-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" class="qf-search-input" id="qfSearchInput" name="q"
+                        placeholder="Search Clinic, Hospital, Speciality etc." autocomplete="off"
+                        aria-label="Search Clinic, Hospital, Speciality etc.">
+                    <button type="submit" class="qf-search-btn" aria-label="Search">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Live Auto-Suggestions Dropdown -->
+                <div class="qf-suggestions" id="qfSuggestions" hidden></div>
             </div>
         </div>
     </section>
@@ -3377,94 +3767,6 @@
         </div>
     </section>
 
-    <!-- 3. WHY CHOOSE SUKHDA -->
-    <section class="section soft" id="why">
-        <div class="wrap">
-            <div class="heading">
-                <div>
-                    <div class="kicker">WHY CHOOSE US</div>
-                    <h2>Why Families Across North India Trust Sukhda</h2>
-                </div>
-            </div>
-            <div class="why">
-                <article>
-                    <span class="why-icon">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="10" cy="7" r="4" />
-                            <path d="M3 21v-2a7 7 0 0 1 11-5.7M17 11v6m-3-3h6" />
-                        </svg>
-                    </span>
-                    <div>
-                        <b>Doctors from AIIMS &amp; Other Premier Institutes</b>
-                        <small>Expert consultants across 15 specialities and super-specialities.</small>
-                    </div>
-                </article>
-                <article>
-                    <span class="why-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M8 7h4M8 11h4M8 15h4M16 9h4v12H2m7 0v-3h2v3" />
-                        </svg>
-                    </span>
-                    <div>
-                        <b>Expansion for Comprehensive &amp; Dedicated Cancer Care</b>
-                        <small>125-bed Multispeciality Hospital + 49-bed MedPark for cancer care &amp; other
-                            super-specialities.</small>
-                    </div>
-                </article>
-                <article>
-                    <span class="why-icon">
-                        <svg viewBox="0 0 24 24">
-                            <rect x="2" y="3" width="20" height="14" rx="2" />
-                            <path d="m7 10 2-2 3 4 3-5 2 3h2M8 21h8m-4-4v4" />
-                        </svg>
-                    </span>
-                    <div>
-                        <b>State-of-the-Art Technology</b>
-                        <small>CLEARstent Live Cath Lab, LINAC, Class II Biosafety Cabinet &amp; 8-Bed Dialysis.</small>
-                    </div>
-                </article>
-                <article>
-                    <span class="why-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M20.8 5.7a5.5 5.5 0 0 0-7.8 0L12 6.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 22l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z" />
-                            <path d="M7 12h3l1.5-3 2 6 1.5-3h2" />
-                        </svg>
-                    </span>
-                    <div>
-                        <b>Cashless TPAs &amp; Govt. Empanelment</b>
-                        <small>Ayushman Bharat, ECHS, Haryana Govt., and all major TPAs.</small>
-                    </div>
-                </article>
-                <article>
-                    <span class="why-icon quality">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12 2 15 5l4-.3.3 4L22 12l-2.7 3.3-.3 4-4-.3-3 3-3-3-4 .3-.3-4L2 12l2.7-3.3.3-4 4 .3 3-3Z" />
-                            <path d="m8 12 2.5 2.5L16 9" />
-                        </svg>
-                    </span>
-                    <div>
-                        <b>NABH Quality &amp; Safety Standards</b>
-                        <small>Cert. H-2020-0707 &bull; AB PM-JAY Gold Quality Certification.</small>
-                    </div>
-                </article>
-                <article>
-                    <span class="why-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2" />
-                            <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2ZM12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
-                        </svg>
-                    </span>
-                    <div>
-                        <b>Complete Diagnostics Under One Roof</b>
-                        <small>Radiology, Pathology &amp; Microbiology services.</small>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
 
     <!-- 4. BRANCHES (OUR HOSPITALS) -->
     <section class="section" id="hospitals">
@@ -3877,180 +4179,95 @@
         </div>
     </section>
 
-    <!-- EMPANELLED CORPORATES & CASHLESS INSURANCE -->
-    <section class="empanelled-section" id="empanelled">
+    <!-- 3. WHY CHOOSE SUKHDA -->
+    <section class="section" id="why">
         <div class="wrap">
-            <div class="emp-head">
-                <h4><i data-lucide="shield-check"
-                        style="width:16px;height:16px;display:inline-block;vertical-align:middle;color:var(--green)"></i>
-                    Cashless Hospitalisation &amp; Empanelled Partners</h4>
-                <a class="more" href="empanelled-corporate.html">Cashless Facility Available 24/7 &rarr;</a>
-            </div>
-            <div class="emp-pills">
-                <span class="emp-pill gov"><i data-lucide="shield-check"></i> Ayushman Bharat</span>
-                <span class="emp-pill gov"><i data-lucide="shield-check"></i> Haryana Government</span>
-                <span class="emp-pill gov"><i data-lucide="shield-check"></i> ECHS (Ex-Servicemen Contributory Health
-                    Scheme)</span>
-                <span class="emp-pill gov"><i data-lucide="shield-check"></i> DHBVNL</span>
-                <span class="emp-pill gov"><i data-lucide="shield-check"></i> Haryana Agricultural University
-                    (HAU)</span>
-                <span class="emp-pill gov"><i data-lucide="shield-check"></i> HVPNL</span>
-                <span class="emp-pill gov"><i data-lucide="shield-check"></i> HPGCL</span>
-                <span class="emp-pill gov"><i data-lucide="shield-check"></i> Power Grid Corporation of India</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Star Health Insurance</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> HDFC ERGO General Insurance</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> ICICI Lombard</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Bajaj Allianz</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Care Health Insurance</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Niva Bupa Health Insurance</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> TATA AIG General Insurance</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Aditya Birla Health Insurance</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Medi Assist TPA</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Paramount Healthcare TPA</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> MD India Healthcare TPA</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Vidal Health TPA</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Heritage Health TPA</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Raksha TPA</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> FHPL (Family Health Plan TPA)</span>
-                <span class="emp-pill"><i data-lucide="check-circle-2"></i> Vipul MedCorp TPA</span>
-            </div>
-            <div class="emp-logos-slider">
-                <div class="emp-logos-track">
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/gov1.jpg" alt="Ayushman Bharat" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/gov9.jpg" alt="Haryana Government" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/gov7.jpg"
-                            alt="ECHS (Ex-Servicemen Contributory Health Scheme)" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo1.jpg"
-                            alt="DHBVN (Dakshin Haryana Bijli Vitran Nigam)" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo2.jpg"
-                            alt="HPGCL (Haryana Power Generation Corporation)" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo4.jpg" alt="Power Grid Corporation of India"
-                            loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/gov10.jpg" alt="HVPNL (Haryana Vidyut Prasaran Nigam)"
-                            loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo6.jpg" alt="Star Health and Allied Insurance"
-                            loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo7.jpg" alt="Reliance General Insurance"
-                            loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo8.jpg" alt="ICICI Prudential" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo11.jpg" alt="IFFCO-TOKIO General Insurance"
-                            loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo12.jpg" alt="HDFC ERGO General Insurance"
-                            loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo14.jpg"
-                            alt="Cholamandalam MS General Insurance" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo15.jpg" alt="Royal Sundaram General Insurance"
-                            loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/corporate-logo16.jpg" alt="L&amp;T General Insurance"
-                            loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/niva.jpg" alt="Niva Bupa Health Insurance" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/ins17.jpg" alt="TATA AIG General Insurance" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/ins8.jpg" alt="Bajaj Allianz General Insurance"
-                            loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/tpa10.jpg" alt="Medi Assist TPA" loading="lazy">
-                    </div>
-                    <div class="emp-logo-item">
-                        <img src="assets/images/empanelled/tpa22.jpg" alt="Vidal Health TPA" loading="lazy">
-                    </div>
+            <div class="heading">
+                <div>
+                    <div class="kicker">WHY CHOOSE US</div>
+                    <h2>Why Families Across North India Trust Sukhda</h2>
                 </div>
+            </div>
+            <div class="why">
+                <article>
+                    <span class="why-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="10" cy="7" r="4" />
+                            <path d="M3 21v-2a7 7 0 0 1 11-5.7M17 11v6m-3-3h6" />
+                        </svg>
+                    </span>
+                    <div>
+                        <b>Doctors from AIIMS &amp; Other Premier Institutes</b>
+                        <small>Expert consultants across 15 specialities and super-specialities.</small>
+                    </div>
+                </article>
+                <article>
+                    <span class="why-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M8 7h4M8 11h4M8 15h4M16 9h4v12H2m7 0v-3h2v3" />
+                        </svg>
+                    </span>
+                    <div>
+                        <b>Expansion for Comprehensive &amp; Dedicated Cancer Care</b>
+                        <small>125-bed Multispeciality Hospital + 49-bed MedPark for cancer care &amp; other
+                            super-specialities.</small>
+                    </div>
+                </article>
+                <article>
+                    <span class="why-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="m7 10 2-2 3 4 3-5 2 3h2M8 21h8m-4-4v4" />
+                        </svg>
+                    </span>
+                    <div>
+                        <b>State-of-the-Art Technology</b>
+                        <small>CLEARstent Live Cath Lab, LINAC, Class II Biosafety Cabinet &amp; 8-Bed Dialysis.</small>
+                    </div>
+                </article>
+                <article>
+                    <span class="why-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20.8 5.7a5.5 5.5 0 0 0-7.8 0L12 6.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 22l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z" />
+                            <path d="M7 12h3l1.5-3 2 6 1.5-3h2" />
+                        </svg>
+                    </span>
+                    <div>
+                        <b>Cashless TPAs &amp; Govt. Empanelment</b>
+                        <small>Ayushman Bharat, ECHS, Haryana Govt., and all major TPAs.</small>
+                    </div>
+                </article>
+                <article>
+                    <span class="why-icon quality">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2 15 5l4-.3.3 4L22 12l-2.7 3.3-.3 4-4-.3-3 3-3-3-4 .3-.3-4L2 12l2.7-3.3.3-4 4 .3 3-3Z" />
+                            <path d="m8 12 2.5 2.5L16 9" />
+                        </svg>
+                    </span>
+                    <div>
+                        <b>NABH Quality &amp; Safety Standards</b>
+                        <small>Cert. H-2020-0707 &bull; AB PM-JAY Gold Quality Certification.</small>
+                    </div>
+                </article>
+                <article>
+                    <span class="why-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2" />
+                            <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2ZM12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
+                        </svg>
+                    </span>
+                    <div>
+                        <b>Complete Diagnostics Under One Roof</b>
+                        <small>Radiology, Pathology &amp; Microbiology services.</small>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- 9. CLINICAL QUALITY & ETHICAL CARE FRAMEWORK -->
-    <section class="section soft" id="clinical-quality">
-        <div class="wrap">
-            <div class="heading">
-                <div>
-                    <div class="kicker">CLINICAL EXCELLENCE &amp; ETHICS</div>
-                    <h2>Clinical Quality &amp; Patient Safety Standards</h2>
-                </div>
-                <a class="more" href="about.html#infrastructure">View Quality Accreditations →</a>
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:28px">
-                <div
-                    style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;box-shadow:0 4px 15px rgba(5,33,89,0.04)">
-                    <div
-                        style="width:40px;height:40px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--green)">
-                        <i data-lucide="shield-check" style="width:22px;height:22px"></i>
-                    </div>
-                    <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin:0 0 8px">NABH Quality Standards
-                    </h3>
-                    <p style="font-size:14px;color:var(--muted);line-height:1.6;margin:0">Rigorous clinical governance,
-                        patient-safety protocols, and medication verification adhering to national healthcare
-                        accreditation standards.</p>
-                </div>
-                <div
-                    style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;box-shadow:0 4px 15px rgba(5,33,89,0.04)">
-                    <div
-                        style="width:40px;height:40px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--green)">
-                        <i data-lucide="users" style="width:22px;height:22px"></i>
-                    </div>
-                    <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin:0 0 8px">Multidisciplinary Tumour
-                        &amp; ICU Board</h3>
-                    <p style="font-size:14px;color:var(--muted);line-height:1.6;margin:0">Complex surgical-oncology and
-                        critical-care patients benefit from joint case reviews by specialists, intensivists, and
-                        clinical pharmacologists.</p>
-                </div>
-                <div
-                    style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;box-shadow:0 4px 15px rgba(5,33,89,0.04)">
-                    <div
-                        style="width:40px;height:40px;background:var(--green-light);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--green)">
-                        <i data-lucide="heart-handshake" style="width:22px;height:22px"></i>
-                    </div>
-                    <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin:0 0 8px">Ethical &amp;
-                        Transparent Care</h3>
-                    <p style="font-size:14px;color:var(--muted);line-height:1.6;margin:0">In strict adherence to the
-                        National Medical Commission (NMC) professional regulations, clinical consultations prioritise
-                        transparent counselling and evidence-based care.</p>
-                </div>
-            </div>
-            <div
-                style="margin-top:22px;padding:14px 20px;background:#f0f5fa;border-radius:8px;border-left:3px solid var(--blue);font-size:13px;color:var(--muted);display:flex;align-items:center;gap:10px">
-                <i data-lucide="info" style="color:var(--blue);flex-shrink:0;width:18px;height:18px"></i>
-                <span><strong>NMC Regulatory Notice:</strong> In compliance with NMC regulations, patient testimonials
-                    and promotional reviews are not published. Clinical consultations follow established medical
-                    guidelines and ethical healthcare standards.</span>
-            </div>
-        </div>
-    </section>
 
     <!-- CONTACT / APPOINTMENT CTA -->
     <section class="cta" id="contact">
@@ -4081,8 +4298,6 @@
                         alt="Sukhda Multispeciality Hospital Hisar">
                 </div>
                 <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
-                <p class="footer-desc">Providing quality, compassionate, and comprehensive medical, surgical,
-                    cancer, and emergency healthcare services in Hisar since 2002.</p>
                 <div class="footer-nabh-badge">
                     <img src="assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
                     <div>
@@ -4137,7 +4352,6 @@
                     <li><a href="about.html"><span>›</span> About Sukhda</a></li>
                     <li><a href="doctor.html"><span>›</span> Find Doctors</a></li>
                     <li><a href="empanelled-corporate.html"><span>›</span> Cashless / Empanelled</a></li>
-                    <li><a href="patient-stories.html"><span>›</span> Clinical Insights</a></li>
                     <li><a href="careers.html"><span>›</span> Careers</a></li>
                     <li><a href="csr.html"><span>›</span> CSR &amp; Community</a></li>
                     <li><a href="media-coverage.html"><span>›</span> Media Coverage</a></li>
@@ -4170,7 +4384,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>24/7 Emergency &amp; OPD Contacts</h4>
+                <h4>24/7 Emergency</h4>
                 <div class="footer-emergency-box">
                     <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
                     <div>
@@ -4180,21 +4394,9 @@
                     </div>
                 </div>
                 <div class="footer-contact-list">
-                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+Multispeciality+Hospital,+Delhi+Road,+Hisar"
-                        target="_blank" rel="noopener" class="f-cnt-item f-directions" data-directions-lat="29.1293189"
-                        data-directions-lng="75.7867020">
-                        <i data-lucide="navigation"></i>
-                        <span>Get Directions: Multispeciality Hospital, Delhi Road <span class="dir-km"
-                                hidden></span></span>
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+MedPark,+Sector-5,+Hisar"
-                        target="_blank" rel="noopener" class="f-cnt-item f-directions">
-                        <i data-lucide="navigation"></i>
-                        <span>Get Directions: Sukhda MedPark, Sector-5</span>
-                    </a>
-                    <a href="mailto:sukhdahospital@gmail.com" class="f-cnt-item">
+                    <a href="mailto:info@sukhdahospitals.com" class="f-cnt-item">
                         <i data-lucide="mail"></i>
-                        <span>sukhdahospital@gmail.com</span>
+                        <span>info@sukhdahospitals.com</span>
                     </a>
                     <a href="https://wa.me/919996544005" target="_blank" class="f-cnt-item whatsapp">
                         <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
@@ -4224,7 +4426,7 @@
                     health-education purposes only, in accordance with the National Medical Commission (NMC)
                     professional regulations and the Digital Personal Data Protection (DPDP) Act, 2023. It does not
                     constitute medical advice or a guarantee of treatment outcomes. Always consult a qualified medical
-                    specialist for clinical diagnosis and treatment.</p>
+                    specialist for clinical diagnosis and treatment. </p>
             </div>
         </div>
 
@@ -4442,6 +4644,159 @@
             });
 
             start();
+        })();
+    </script>
+
+    <!-- Quick Finder Search & Live Suggestions -->
+    <script>
+        (function () {
+            const input = document.getElementById('qfSearchInput');
+            const form = document.getElementById('qfSearchForm');
+            const suggestions = document.getElementById('qfSuggestions');
+            if (!input || !suggestions) return;
+
+            const searchableData = [
+                // Doctors
+                { name: 'Dr. Amit Mehta', sub: 'MD (Medicine) AIIMS • Founder & Senior Physician', cat: 'Doctor', badge: 'doc', url: 'dr-amit-mehta.html' },
+                { name: 'Dr. Manisha Mehta', sub: 'Director & NABH-Certified Quality Assessor', cat: 'Doctor', badge: 'doc', url: 'dr-manisha-mehta.html' },
+                { name: 'Dr. Amit Kumar Garg', sub: 'MD (Medicine) • Critical Care & Internal Medicine', cat: 'Doctor', badge: 'doc', url: 'dr-amit-kumar-garg.html' },
+                { name: 'Dr. Anil Bansal', sub: 'MS (Ortho) • Senior Orthopaedic & Joint Replacement Surgeon', cat: 'Doctor', badge: 'doc', url: 'dr-anil-bansal.html' },
+                { name: 'Dr. Anil Khyalia', sub: 'MS (Surgery) • General & Laparoscopic Surgeon', cat: 'Doctor', badge: 'doc', url: 'dr-anil-khyalia.html' },
+                { name: 'Dr. Ankur Kamra', sub: 'DM (Gastro) • Senior Consultant Gastroenterologist', cat: 'Doctor', badge: 'doc', url: 'dr-ankur-kamra.html' },
+                { name: 'Dr. Bharath', sub: 'DM (Medical Oncology) • Consultant Medical Oncologist', cat: 'Doctor', badge: 'doc', url: 'dr-bharath.html' },
+                { name: 'Dr. Deepam Das', sub: 'MCh (Surgical Oncology) • Cancer Surgeon', cat: 'Doctor', badge: 'doc', url: 'dr-deepam-das.html' },
+                { name: 'Dr. Deepti Singh', sub: 'MD, DNB (Obs & Gynae) • Gynaecologist & Obstetrician', cat: 'Doctor', badge: 'doc', url: 'dr-deepti-singh.html' },
+                { name: 'Dr. Devilal', sub: 'MD (Paediatrics) • Child Specialist & Neonatologist', cat: 'Doctor', badge: 'doc', url: 'dr-devilal.html' },
+                { name: 'Dr. Hemant Dahiya', sub: 'DM (Nephrology) • Consultant Nephrologist & Dialysis', cat: 'Doctor', badge: 'doc', url: 'dr-hemant-dahiya.html' },
+                { name: 'Dr. Megha Gupta', sub: 'MD, DNB (Radiation Oncology) • Cancer Radiation Specialist', cat: 'Doctor', badge: 'doc', url: 'dr-megha-gupta.html' },
+                { name: 'Dr. Nidhi Mehta', sub: 'MD (Pathology) • Senior Pathologist & Lab Director', cat: 'Doctor', badge: 'doc', url: 'dr-nidhi-mehta.html' },
+                { name: 'Dr. Pankaj Sharma', sub: 'MCh (Neurosurgery) • Brain & Spine Surgeon', cat: 'Doctor', badge: 'doc', url: 'dr-pankaj-sharma.html' },
+                { name: 'Dr. Parveen', sub: 'DM (Cardiology) • Interventional Cardiologist', cat: 'Doctor', badge: 'doc', url: 'dr-parveen.html' },
+                { name: 'Dr. Sanjeet Sahu', sub: 'MCh (Urology) • Urologist & Andrologist', cat: 'Doctor', badge: 'doc', url: 'dr-sanjeet-sahu.html' },
+                { name: 'Dr. Shubham Mehta', sub: 'MD, DNB (Radiodiagnosis) • Radiologist (1.5T MRI, 64-CT)', cat: 'Doctor', badge: 'doc', url: 'dr-shubham-mehta.html' },
+                { name: 'Dr. Trivikrama Rao', sub: 'MCh (Surgical Oncology) • Senior Surgical Oncologist', cat: 'Doctor', badge: 'doc', url: 'dr-trivikrama-rao.html' },
+
+                // Specialities
+                { name: 'Cardiology & Cath Lab', sub: 'Heart Care, Angioplasty, Pacemakers, 24/7 Heart Attack Response', cat: 'Speciality', badge: 'spec', url: 'cardiology.html' },
+                { name: 'Medical Oncology', sub: 'Cancer Care, Chemotherapy, Targeted Therapy, Tumour Board', cat: 'Speciality', badge: 'spec', url: 'medical-oncology.html' },
+                { name: 'Surgical Oncology', sub: 'Cancer Surgeries, Head & Neck, Breast, GI & Gynae Cancers', cat: 'Speciality', badge: 'spec', url: 'surgical-oncology.html' },
+                { name: 'Radiation Oncology', sub: 'High-Precision Linear Accelerator, Cancer Radiotherapy', cat: 'Speciality', badge: 'spec', url: 'radiation-oncology.html' },
+                { name: 'Nephrology & Dialysis', sub: 'Kidney Care, 24/7 Dialysis Unit, Kidney Disease Management', cat: 'Speciality', badge: 'spec', url: 'nephrology.html' },
+                { name: 'Neurology & Neurosurgery', sub: 'Brain & Spine Surgeries, Stroke Management, Trauma', cat: 'Speciality', badge: 'spec', url: 'neurosurgery.html' },
+                { name: 'Orthopaedics & Joint Replacement', sub: 'Knee & Hip Replacement, Fracture Care, Arthroscopy', cat: 'Speciality', badge: 'spec', url: 'orthopaedics.html' },
+                { name: 'Gynaecology & Obstetrics', sub: 'Maternity, High-Risk Pregnancy, Laparoscopic Gynae Surgery', cat: 'Speciality', badge: 'spec', url: 'gynaecology.html' },
+                { name: 'Paediatrics & Neonatology', sub: 'Child Care, Newborn ICU (NICU), Vaccination', cat: 'Speciality', badge: 'spec', url: 'paediatrics.html' },
+                { name: 'Gastroenterology & Endoscopy', sub: 'Liver Disease, Endoscopy, Colonoscopy, GI Care', cat: 'Speciality', badge: 'spec', url: 'gastroenterology.html' },
+                { name: 'Urology & Kidney Stones', sub: 'Laser Stone Removal, Prostate, Kidney Health', cat: 'Speciality', badge: 'spec', url: 'urology.html' },
+                { name: 'Internal Medicine & Critical Care', sub: 'Diabetes, Hypertension, Infectious Diseases, 24/7 ICU', cat: 'Speciality', badge: 'spec', url: 'internal-medicine.html' },
+                { name: 'Emergency & Trauma (24/7)', sub: 'Round-the-clock Trauma, Cardiac & Medical Emergencies', cat: 'Speciality', badge: 'spec', url: 'emergency-trauma.html' },
+                { name: 'General & Laparoscopic Surgery', sub: 'Minimally Invasive Surgeries, Hernia, Gallbladder', cat: 'Speciality', badge: 'spec', url: 'general-surgery.html' },
+                { name: 'ENT (Ear, Nose & Throat)', sub: 'Microscopic Ear Surgery, Sinusitis, Tonsil Care', cat: 'Speciality', badge: 'spec', url: 'ent.html' },
+                { name: 'Radiodiagnosis & Imaging', sub: '1.5T MRI, 64-Slice CT, Ultrasound, Digital X-Ray', cat: 'Speciality', badge: 'spec', url: 'radiology.html' },
+                { name: 'Dermatology & Cosmetology', sub: 'Skin, Hair & Nail Care, Laser & Aesthetic Treatments', cat: 'Speciality', badge: 'spec', url: 'dermatology.html' },
+                { name: 'Physiotherapy & Rehab', sub: 'Post-Op Rehab, Sports Injury, Pain Relief', cat: 'Speciality', badge: 'spec', url: 'physiotherapy.html' },
+
+                // Hospitals & Insurance
+                { name: 'Sukhda Multispeciality Hospital', sub: '125-Bed NABH Multispeciality Hospital, Delhi Road, Hisar', cat: 'Hospital', badge: 'hosp', url: 'sukhda-multispecialty-hospital.html' },
+                { name: 'Sukhda MedPark Hospital', sub: 'Comprehensive Cancer & Super-Speciality Hospital, Sector-5', cat: 'Hospital', badge: 'hosp', url: 'sukhda-medpark-hospital.html' },
+                { name: 'Cashless Insurance & TPAs', sub: 'Ayushman Bharat, Star Health, HDFC ERGO, ICICI Lombard, ECHS', cat: 'Insurance', badge: 'ins', url: 'empanelled-corporate.html' }
+            ];
+
+            let selectedIndex = -1;
+
+            function renderSuggestions(query) {
+                const q = query.trim().toLowerCase();
+                if (!q) {
+                    suggestions.hidden = true;
+                    suggestions.innerHTML = '';
+                    selectedIndex = -1;
+                    return;
+                }
+
+                const words = q.split(/\s+/).filter(Boolean);
+                const matches = searchableData.filter(item => {
+                    const haystack = (item.name + ' ' + item.sub + ' ' + item.cat).toLowerCase();
+                    return words.every(w => haystack.includes(w));
+                }).slice(0, 7);
+
+                if (matches.length === 0) {
+                    suggestions.innerHTML = '<div class="qf-sug-empty">No direct matches found. Press Enter to search directory.</div>';
+                    suggestions.hidden = false;
+                    selectedIndex = -1;
+                    return;
+                }
+
+                suggestions.innerHTML = matches.map((item, idx) => `
+                    <a href="${item.url}" class="qf-sug-item" data-index="${idx}">
+                        <div class="qf-sug-main">
+                            <span class="qf-sug-title">${item.name}</span>
+                            <span class="qf-sug-sub">${item.sub}</span>
+                        </div>
+                        <span class="qf-sug-badge qf-badge-${item.badge}">${item.cat}</span>
+                    </a>
+                `).join('');
+                suggestions.hidden = false;
+                selectedIndex = -1;
+            }
+
+            input.addEventListener('input', () => {
+                renderSuggestions(input.value);
+            });
+
+            input.addEventListener('focus', () => {
+                if (input.value.trim().length > 0) {
+                    renderSuggestions(input.value);
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                const items = suggestions.querySelectorAll('.qf-sug-item');
+                if (suggestions.hidden || !items.length) return;
+
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    selectedIndex = (selectedIndex + 1) % items.length;
+                    updateSelection(items);
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+                    updateSelection(items);
+                } else if (e.key === 'Enter') {
+                    if (selectedIndex >= 0 && items[selectedIndex]) {
+                        e.preventDefault();
+                        items[selectedIndex].click();
+                    }
+                } else if (e.key === 'Escape') {
+                    suggestions.hidden = true;
+                }
+            });
+
+            function updateSelection(items) {
+                items.forEach((item, idx) => {
+                    if (idx === selectedIndex) {
+                        item.classList.add('is-selected');
+                        item.scrollIntoView({ block: 'nearest' });
+                    } else {
+                        item.classList.remove('is-selected');
+                    }
+                });
+            }
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.qf-search-wrapper')) {
+                    suggestions.hidden = true;
+                }
+            });
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    const q = input.value.trim();
+                    if (!q) {
+                        e.preventDefault();
+                        window.location.href = 'doctor.html';
+                    }
+                });
+            }
         })();
     </script>
 </body>

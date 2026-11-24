@@ -817,6 +817,40 @@
                 <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24/7 Emergency: 01662-249473</a>
             </div>
             <div class="links">
+                <div class="top-directions-dropdown">
+                    <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false" title="Get Directions to Sukhda Hospitals">
+                        <i data-lucide="map-pin"></i>
+                        <span>Get Directions</span>
+                        <i data-lucide="chevron-down" class="top-dir-chevron"></i>
+                    </button>
+                    <div class="top-directions-menu" role="menu">
+                        <div class="top-dir-title">Select Hospital Location</div>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+Multispeciality+Hospital,+Delhi+Road,+Hisar"
+                            target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
+                            data-directions-lat="29.1293189" data-directions-lng="75.7867020"
+                            title="Open Sukhda Multispeciality Hospital in Google Maps">
+                            <span class="top-dir-icon"><i data-lucide="building-2"></i></span>
+                            <span class="top-dir-info">
+                                <b>Sukhda Multispeciality Hospital</b>
+                                <small>Opp. Green Belt, Delhi Road, Hisar</small>
+                                <span class="dir-km" hidden></span>
+                            </span>
+                            <i data-lucide="navigation" class="top-dir-arrow"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+MedPark,+Sector-5,+Hisar"
+                            target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
+                            data-directions-lat="29.1627" data-directions-lng="75.7516"
+                            title="Open Sukhda MedPark in Google Maps">
+                            <span class="top-dir-icon medpark"><i data-lucide="activity"></i></span>
+                            <span class="top-dir-info">
+                                <b>Sukhda MedPark Hospital</b>
+                                <small>Cancer &amp; Super-Speciality, Sector-5, Hisar</small>
+                                <span class="dir-km" hidden></span>
+                            </span>
+                            <i data-lucide="navigation" class="top-dir-arrow"></i>
+                        </a>
+                    </div>
+                </div>
                 <a href="empanelled-corporate.html" style="color:#278132;font-weight:700">Cashless / TPA</a>
                 <a href="opd-schedule.html">OPD Schedule</a>
                 <div class="top-lang-switch notranslate" aria-label="Language selection">
@@ -1248,25 +1282,54 @@
         <div class="wrap footer-grid">
             <div>
                 <div class="footer-brand-wrap">
-                    <img class="footer-logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
+                    <img class="footer-logo" src="assets/images/sukhda-logo.png"
+                        alt="Sukhda Multispeciality Hospital Hisar">
                 </div>
                 <p class="footer-tagline">Compassion &bull; Expertise &bull; Care</p>
-                <p class="footer-desc">Providing quality, compassionate, and comprehensive medical, surgical, cancer, and emergency healthcare services in Hisar since 2002.</p>
-                <div class="footer-nabh-badge" style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);padding:10px 14px;border-radius:8px">
-                    <img src="assets/images/nabh.jpg" alt="NABH Accredited" style="width:42px;height:42px;border-radius:6px;object-fit:cover">
+                <div class="footer-nabh-badge">
+                    <img src="assets/images/nabh.jpg" alt="NABH Accredited" class="nabh-icon-img">
                     <div>
-                        <b style="color:#fff;display:block;font-size:13.5px">NABH Accredited</b>
-                        <small style="color:#8da2be">Highest Healthcare Quality Standards</small>
+                        <b>NABH Accredited</b>
+                        <small>Highest Healthcare Quality Standards</small>
                     </div>
                 </div>
-                <a class="footer-google-badge" href="https://www.google.com/search?q=Sukhda+Multispeciality+Hospital+Delhi+Road+Hisar+reviews" target="_blank" rel="noopener" aria-label="Rated 4.7 out of 5 on Google. Read our Google reviews">
-                    <span class="fg-logo"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
-                    <span class="fg-text"><b>4.7/5 <span class="fg-stars" aria-hidden="true">★★★★★</span></b><small>Google Rating</small></span>
+                <a class="footer-google-badge"
+                    href="https://www.google.com/search?q=Sukhda+Multispeciality+Hospital+Delhi+Road+Hisar+reviews"
+                    target="_blank" rel="noopener" aria-label="Rated 4.7 out of 5 on Google. Read our Google reviews">
+                    <span class="fg-logo"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true">
+                            <path fill="#EA4335"
+                                d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                            <path fill="#4285F4"
+                                d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                            <path fill="#FBBC05"
+                                d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                            <path fill="#34A853"
+                                d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                        </svg></span>
+                    <span class="fg-text"><b>4.7/5 <span class="fg-stars"
+                                aria-hidden="true">★★★★★</span></b><small>Google Rating</small></span>
                 </a>
                 <div class="footer-social" aria-label="Follow Sukhda Healthcare on social media">
-                    <a href="https://www.facebook.com/sukhdahospital" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
-                    <a href="https://www.linkedin.com/company/sukhda-multispeciality-hospital/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452z"/></svg></a>
-                    <a href="https://www.instagram.com/sukhdahospitals/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="https://www.facebook.com/sukhdahospital" target="_blank" rel="noopener"
+                        aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="18" height="18"
+                            fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/company/sukhda-multispeciality-hospital/" target="_blank"
+                        rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="17"
+                            height="17" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/sukhdahospitals/" target="_blank" rel="noopener"
+                        aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="18" height="18"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
                 </div>
             </div>
 
@@ -1287,54 +1350,78 @@
             <div class="footer-col">
                 <h4>Our Hospitals</h4>
                 <a href="sukhda-multispecialty-hospital.html" class="footer-hospital-card">
-                    <b>Sukhda Multispeciality Hospital</b>
+                    <div class="f-hosp-logo-wrap">
+                        <img src="assets/images/sukhda-multispeciality-logo.png" alt="Sukhda Multispeciality Hospital"
+                            class="f-hosp-logo">
+                    </div>
+                    <div class="f-hosp-header">
+                        <b>Sukhda Multispeciality Hospital</b>
+                    </div>
                     <p>Opposite Green Belt, Delhi Road, Hisar - 125001</p>
                 </a>
                 <a href="sukhda-medpark-hospital.html" class="footer-hospital-card">
-                    <b>Sukhda MedPark</b>
-                    <p style="color:#25D366;font-size:12px;font-weight:600">Cancer &amp; Super-Speciality Hospital</p>
+                    <div class="f-hosp-logo-wrap">
+                        <img src="assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark" class="f-hosp-logo">
+                    </div>
+                    <div class="f-hosp-header">
+                        <b>Sukhda MedPark</b>
+                    </div>
+                    <p class="f-hosp-sub">Cancer &amp; Super-Speciality Hospital</p>
                     <p>NH 1P-4P, Sector-5, Hisar - 125005</p>
                 </a>
             </div>
 
             <div class="footer-col">
-                <h4>24/7 Emergency &amp; OPD Contacts</h4>
+                <h4>24/7 Emergency</h4>
                 <div class="footer-emergency-box">
-                    <i data-lucide="phone-call" style="color:#e53935 !important;width:24px;height:24px"></i>
+                    <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
                     <div>
-                        <small style="color:#ff7875;display:block">24/7 Emergency Helpline</small>
+                        <small>24/7 Emergency Helpline</small>
                         <a href="tel:01662249473" class="f-emg-num">01662-249473, 01662-248473</a>
                         <a href="tel:9996648483" class="f-emg-num-sub">+91 99966-48483</a>
                     </div>
                 </div>
                 <div class="footer-contact-list">
-                    <a href="mailto:sukhdahospital@gmail.com" class="f-cnt-item">
-                        <i data-lucide="mail" style="width:15px;height:15px"></i>
-                        <span>sukhdahospital@gmail.com</span>
+                    <a href="mailto:info@sukhdahospitals.com" class="f-cnt-item">
+                        <i data-lucide="mail"></i>
+                        <span>info@sukhdahospitals.com</span>
                     </a>
                     <a href="https://wa.me/919996544005" target="_blank" class="f-cnt-item whatsapp">
-                        <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                        <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
+                            height="18" style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
+                            <path fill="#25D366"
+                                d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                            <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        </svg>
                         <span>WhatsApp: +91 99965-44005</span>
                     </a>
                 </div>
                 <div class="footer-motto">
-                    <i data-lucide="heart-handshake" style="width:15px;height:15px"></i>
+                    <i data-lucide="heart-handshake"></i>
                     <span>Compassionate Care for the Whole Family</span>
                 </div>
             </div>
         </div>
-
         <!-- COMPLIANCE & LEGAL DISCLAIMERS -->
         <div class="footer-disclaimers">
             <div class="wrap">
-                <p><strong>AI-Generated Content Disclaimer:</strong> Certain images, illustrations, or textual content on this website may be generated or assisted by artificial intelligence (AI). Such content is intended for informational and illustrative purposes only. AI-generated content is not intended to misrepresent actual patients, medical professionals, clinical outcomes, or healthcare services.</p>
-                <p><strong>Medical &amp; Regulatory Notice:</strong> This website is published for informational and health-education purposes only, in accordance with the National Medical Commission (NMC) professional regulations and the Digital Personal Data Protection (DPDP) Act, 2023. It does not constitute medical advice or a guarantee of treatment outcomes. Always consult a qualified medical specialist for clinical diagnosis and treatment. </p>
+                <p><strong>AI-Generated Content Disclaimer:</strong> Certain images, illustrations, or textual content
+                    on this website may be generated or assisted by artificial intelligence (AI). Such content is
+                    intended for informational and illustrative purposes only. AI-generated content is not intended to
+                    misrepresent actual patients, medical professionals, clinical outcomes, or healthcare services.</p>
+                <p><strong>Medical &amp; Regulatory Notice:</strong> This website is published for informational and
+                    health-education purposes only, in accordance with the National Medical Commission (NMC)
+                    professional regulations and the Digital Personal Data Protection (DPDP) Act, 2023. It does not
+                    constitute medical advice or a guarantee of treatment outcomes. Always consult a qualified medical
+                    specialist for clinical diagnosis and treatment. </p>
             </div>
         </div>
 
         <div class="bottom">
             <div class="wrap">
-                <span>© 2026 Sukhda Healthcare. All rights reserved. &bull; <a href="privacy-policy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a></span>
+                <span>© 2026 Sukhda Healthcare. All rights reserved. &bull; <a href="privacy-policy.html"
+                        style="color:inherit;text-decoration:underline">Privacy Policy</a></span>
                 <div class="bottom-badges">
                     <span><i data-lucide="map-pin"></i> Hisar, Haryana</span>
                     <span><i data-lucide="shield-check"></i> NABH Accredited</span>
