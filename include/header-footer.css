@@ -27,9 +27,9 @@
 .top .wrap,
 .nav .wrap {
     width: 100% !important;
-    max-width: 1400px !important;
-    padding-left: 28px !important;
-    padding-right: 28px !important;
+    max-width: 1680px !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     box-sizing: border-box !important;
@@ -39,6 +39,13 @@
     justify-content: space-between !important;
     gap: 16px !important;
     position: relative !important;
+}
+
+@media (min-width: 1921px) {
+    .top .wrap,
+    .nav .wrap {
+        max-width: 1760px !important;
+    }
 }
 
 .top .links {
@@ -457,7 +464,7 @@ header.nav,
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 22px !important;
+        gap: 20px !important;
         margin: 0 !important;
         padding: 0 !important;
         flex-direction: row !important;
@@ -472,7 +479,7 @@ header.nav,
         font-family: 'Montserrat', sans-serif !important;
         font-weight: 500 !important;
         /* Regular/Medium 500, NOT BOLD */
-        font-size: 15px !important;
+        font-size: 14px !important;
         color: #052159 !important;
         text-decoration: none !important;
         white-space: nowrap !important;
@@ -623,7 +630,7 @@ header.nav,
         top: 100% !important;
         left: 50% !important;
         transform: translateX(-50%) translateY(8px) !important;
-        width: auto !important;
+        width: 920px !important;
         max-width: calc(100vw - 32px) !important;
         background: #ffffff !important;
         border: 1px solid #d8e5f2 !important;
@@ -646,24 +653,24 @@ header.nav,
     }
 }
 
-/* Compact Desktop (901px to 1240px) */
-@media (min-width: 901px) and (max-width: 1240px) {
+/* Compact Desktop (901px to 1280px) */
+@media (min-width: 901px) and (max-width: 1280px) {
 
     .top .wrap,
     .nav .wrap {
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-        gap: 10px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        gap: 6px !important;
     }
 
     .mobile-nav-links {
-        gap: 12px !important;
+        gap: 8px !important;
     }
 
     .menu a,
     .mobile-nav-links a,
     .nav-group>a {
-        font-size: 13.5px !important;
+        font-size: 12.5px !important;
         gap: 3px !important;
         padding: 28px 0 !important;
     }
@@ -671,6 +678,59 @@ header.nav,
     .nav-chevron {
         width: 11px !important;
         height: 11px !important;
+    }
+
+    .nav .btn.primary,
+    .nav>.wrap>.btn.primary {
+        padding: 8px 14px !important;
+        font-size: 12.5px !important;
+    }
+}
+
+/* Header Search Trigger Button (Icon-Only) */
+.ss-trigger {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    padding: 0 !important;
+    margin-right: 12px !important;
+    border: 1px solid #c9d6ea !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
+    color: #052159 !important;
+    cursor: pointer !important;
+    transition: border-color 0.2s, box-shadow 0.2s, color 0.2s !important;
+    flex-shrink: 0 !important;
+}
+
+.ss-trigger:hover,
+.ss-trigger:focus-visible {
+    border-color: #278132 !important;
+    color: #278132 !important;
+    box-shadow: 0 0 0 3px rgba(39, 129, 50, 0.12) !important;
+    outline: none !important;
+}
+
+.ss-trigger svg {
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+}
+
+.ss-trigger .ss-trigger-label {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    .ss-trigger {
+        margin-right: 8px !important;
+        margin-left: auto !important;
+        height: 38px !important;
+        width: 38px !important;
+        min-width: 38px !important;
     }
 }
 
@@ -740,7 +800,7 @@ header.nav,
 @media (min-width: 901px) {
     .mega-body {
         display: grid;
-        grid-template-columns: 1.16fr 0.94fr;
+        grid-template-columns: 1.18fr 0.82fr;
         background: #fff;
     }
 
@@ -821,7 +881,7 @@ header.nav,
         align-items: center !important;
         gap: 7px !important;
         padding: 7px 9px !important;
-        font-size: 14px !important;
+        font-size: 13.5px !important;
         font-weight: 600 !important;
         color: #355070 !important;
         border-radius: 6px !important;
@@ -879,14 +939,14 @@ header.nav,
 
     .mega-links-grid a.featured-service b {
         display: block;
-        font-size: 14.5px;
+        font-size: 14px;
         color: #052159;
         font-weight: 800;
     }
 
     .mega-links-grid a.featured-service small {
         display: block;
-        font-size: 12px;
+        font-size: 11.5px;
         color: #53677f;
         font-weight: 600;
         margin-top: 1px;
@@ -1207,6 +1267,7 @@ header.nav,
 
     .services-mega .mega-col {
         padding: 12px 14px !important;
+        width: 100% !important;
     }
 
     .services-mega .mega-col.medpark-col {
@@ -1252,8 +1313,10 @@ header.nav,
     }
 
     .services-mega .mega-links-grid a {
+        display: flex !important;
+        align-items: center !important;
         padding: 8px 10px !important;
-        font-size: 14px !important;
+        font-size: 13.5px !important;
         border-bottom: 1px solid #edf3f8 !important;
         border-radius: 0 !important;
     }

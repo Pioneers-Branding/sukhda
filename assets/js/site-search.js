@@ -19,25 +19,23 @@
     // ---------- DATA ----------
     // k = extra keywords people may type (symptoms, procedures, Hindi-English terms)
     var SPECIALITIES = [
-        { n: 'Critical Care & ICU', u: 'critical-care.html', h: BOTH, k: 'icu intensive care ventilator' },
-        { n: 'Internal Medicine (DNB Centre)', u: 'internal-medicine.html', h: MULTI, k: 'physician fever diabetes bp general medicine' },
-        { n: 'Interventional Cardiology', u: 'cardiology.html', h: MULTI, k: 'heart cath lab angioplasty angiography stent chest pain' },
+        { n: 'Medicine & Critical care', u: 'internal-medicine.html', h: BOTH, k: 'physician fever diabetes bp general medicine internal critical care icu' },
+        { n: 'Medical Oncology', u: 'medical-oncology.html', h: BOTH, k: 'cancer chemotherapy immunotherapy oncology tumour daycare' },
+        { n: 'Surgical Oncology', u: 'surgical-oncology.html', h: BOTH, k: 'cancer surgery tumour tumor oncology breast head neck' },
+        { n: 'Radiation Oncology', u: 'radiation-oncology.html', h: BOTH, k: 'cancer radiation radiotherapy linac oncology linear accelerator' },
+        { n: 'Cardiology', u: 'cardiology.html', h: MULTI, k: 'heart cath lab angioplasty angiography stent chest pain heart attack' },
+        { n: 'Gastroenterology', u: 'gastroenterology.html', h: MULTI, k: 'stomach liver endoscopy colonoscopy digestive hepatology' },
         { n: 'Nephrology & Dialysis', u: 'nephrology.html', h: MULTI, k: 'kidney dialysis renal' },
-        { n: 'Gastroenterology & Hepatology', u: 'gastroenterology.html', h: MULTI, k: 'stomach liver endoscopy colonoscopy digestive' },
-        { n: '24/7 Emergency & Trauma Care', u: 'emergency-trauma.html', h: MULTI, k: 'emergency accident trauma casualty ambulance' },
-        { n: 'Robotic Joint Replacement & Orthopaedics', u: 'orthopaedics.html', h: MULTI, k: 'bone knee hip joint fracture ortho arthroscopy' },
-        { n: 'General & Laparoscopic Surgery', u: 'general-surgery.html', h: MULTI, k: 'surgery hernia gallbladder appendix laparoscopy' },
-        { n: 'Advanced Laparoscopy & Bariatric Surgery', u: 'bariatric-surgery.html', h: MULTI, k: 'weight loss obesity bariatric' },
+        { n: 'Neurosurgery & Spine', u: 'neurosurgery.html', h: MULTI, k: 'brain spine neuro surgery stroke' },
         { n: 'Gynaecology & Obstetrics', u: 'gynaecology.html', h: MULTI, k: 'pregnancy delivery women maternity ivf' },
-        { n: 'ENT (Ear, Nose & Throat)', u: 'ent.html', h: MULTI, k: 'ear nose throat sinus hearing tonsil' },
-        { n: 'Anaesthesiology & Pain Management', u: 'anaesthesiology.html', h: BOTH, k: 'anaesthesia anesthesia pain palliative' },
-        { n: 'CT Scan & Radiology', u: 'radiology.html', h: BOTH, k: 'ct scan mri x-ray xray ultrasound mammography imaging diagnostics' },
-        { n: 'Physiotherapy & Rehabilitation', u: 'physiotherapy.html', h: MULTI, k: 'physio rehab neuro physiotherapy' },
-        { n: 'Dermatology & Cosmetology', u: 'dermatology.html', h: MULTI, k: 'skin hair cosmetic' },
-        { n: 'Medical Oncology (Chemo & Daycare)', u: 'medical-oncology.html', h: MEDPARK, k: 'cancer chemotherapy immunotherapy oncology' },
-        { n: 'Surgical Oncology', u: 'surgical-oncology.html', h: MEDPARK, k: 'cancer surgery tumour tumor oncology' },
-        { n: 'Radiation Oncology (LINAC)', u: 'radiation-oncology.html', h: MEDPARK, k: 'cancer radiation radiotherapy linac oncology' },
-        { n: 'Neurosurgery & Spine', u: 'neurosurgery.html', h: BOTH, k: 'brain spine neuro surgery' }
+        { n: 'Orthopaedic & Robotic Joint Replacement', u: 'orthopaedics.html', h: MULTI, k: 'bone knee hip joint fracture ortho arthroscopy' },
+        { n: 'Laparoscopic & General Surgery', u: 'general-surgery.html', h: MULTI, k: 'surgery hernia gallbladder appendix laparoscopy' },
+        { n: 'Ent', u: 'ent.html', h: MULTI, k: 'ear nose throat sinus hearing tonsil' },
+        { n: 'Radiodiagnosis & Imaging', u: 'radiology.html', h: MULTI, k: 'ct scan mri x-ray xray ultrasound mammography imaging diagnostics 1.5t mri' },
+        { n: 'Anaesthesia & Pain Management', u: 'anaesthesiology.html', h: BOTH, k: 'anaesthesia anesthesia pain palliative intensive' },
+        { n: 'Pathology', u: 'contact.html', h: BOTH, k: 'pathology lab blood test biopsy histopathology diagnostics' },
+        { n: 'Physiotherapy', u: 'physiotherapy.html', h: MULTI, k: 'physio rehab neuro physiotherapy physical therapy' },
+        { n: 'Dermatology', u: 'dermatology.html', h: MULTI, k: 'skin hair cosmetic dermatology cosmetology aesthetic' }
     ];
 
     var DOCTORS = [
@@ -68,6 +66,8 @@
         { n: 'Book Appointment / Contact', s: 'Call, WhatsApp or visit us', u: 'contact.html', h: BOTH, k: 'appointment contact phone address directions' },
         { n: 'Cashless / TPA & Empanelment', s: 'Insurance, Ayushman Bharat, ECHS', u: 'empanelled-corporate.html', h: BOTH, k: 'cashless tpa insurance ayushman echs cghs panel' },
         { n: 'About Sukhda', s: 'Our story, leadership & vision', u: 'about.html', h: BOTH, k: 'about history founder' },
+        { n: 'Health Packages', s: 'Preventive health checkup packages', u: 'health-packages.html', h: BOTH, k: 'health package checkup full body cardiac diabetes screening' },
+        { n: 'Infrastructure & Facilities', s: 'Modular OTs, ICUs, Labs & Diagnostics', u: 'about.html#infrastructure', h: BOTH, k: 'infrastructure facilities modular ot icu equipment technology' },
         { n: 'Careers', s: 'Jobs at Sukhda Healthcare', u: 'careers.html', h: BOTH, k: 'job jobs career vacancy' },
         { n: 'Media Coverage', s: 'News & press', u: 'media-coverage.html', h: BOTH, k: 'media news press' },
         { n: 'CSR', s: 'Community initiatives', u: 'csr.html', h: BOTH, k: 'csr camp community' }
@@ -111,11 +111,11 @@
 
     // ---------- STYLES ----------
     var CSS = '' +
-        '.ss-trigger{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;min-width:44px;padding:0 14px;margin-right:12px;border:1px solid #c9d6ea;border-radius:10px;background:#fff;color:#052159;font:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:border-color .2s,box-shadow .2s,color .2s;flex-shrink:0}' +
+        '.ss-trigger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;min-width:42px;padding:0;margin-right:12px;border:1px solid #c9d6ea;border-radius:10px;background:#fff;color:#052159;cursor:pointer;transition:border-color .2s,box-shadow .2s,color .2s;flex-shrink:0}' +
         '.ss-trigger:hover,.ss-trigger:focus-visible{border-color:#278132;color:#278132;box-shadow:0 0 0 3px rgba(39,129,50,.12);outline:none}' +
-        '.ss-trigger .ss-trigger-label{white-space:nowrap}' +
-        '@media(max-width:1180px){.ss-trigger .ss-trigger-label{display:none}.ss-trigger{padding:0}}' +
-        '@media(max-width:900px){.ss-trigger{margin-right:8px;margin-left:auto;height:40px;min-width:40px}}' +
+        '.ss-trigger svg{width:20px;height:20px;display:block}' +
+        '.ss-trigger .ss-trigger-label{display:none}' +
+        '@media(max-width:900px){.ss-trigger{margin-right:8px;margin-left:auto;height:38px;width:38px;min-width:38px}}' +
         '.ss-overlay{position:fixed;inset:0;z-index:100000;background:rgba(2,22,61,.55);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;padding:70px 16px 16px}' +
         '.ss-overlay.open{display:flex}' +
         '.ss-panel{width:min(820px,100%);max-height:calc(100vh - 100px);display:flex;flex-direction:column;background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(2,22,61,.35);overflow:hidden;color:#1d2b45;font-size:15px}' +
@@ -287,7 +287,7 @@
         btn.className = 'ss-trigger';
         btn.setAttribute('aria-label', 'Search specialities, doctors and hospitals');
         btn.setAttribute('title', 'Search (Ctrl + K)');
-        btn.innerHTML = ICON_SEARCH + '<span class="ss-trigger-label">Search</span>';
+        btn.innerHTML = ICON_SEARCH;
         btn.addEventListener('click', open);
         // Place it just before the header "Book Appointment" button (or the menu toggle)
         var anchor = wrap.querySelector(':scope > a.btn') || wrap.querySelector(':scope > .hamb');

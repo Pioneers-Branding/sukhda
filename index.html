@@ -1248,6 +1248,12 @@
             color: #6b21a8
         }
 
+        .pill.pill-multi,
+        .pill-multi {
+            background: #dcedfa;
+            color: #17649b
+        }
+
         /* 2. ABOUT NO IMAGE */
         .google-rating-badge {
             display: inline-flex;
@@ -3312,6 +3318,229 @@
                 font-size: 14px;
             }
         }
+    
+        /* ==========================================================================
+           LEADING HEALTHCARE NETWORK SECTION (NMC.AE DESIGN)
+           ========================================================================== */
+        .leading-network-sec {
+            padding: 40px 0 60px;
+            background: #ffffff;
+        }
+
+        .ln-card-container {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 16px 48px rgba(5, 33, 89, 0.12);
+            background: #0d3b6c;
+        }
+
+        /* Left Blue Content Column */
+        .ln-content-col {
+            background: linear-gradient(145deg, #124275 0%, #092c53 100%);
+            padding: 52px 48px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ln-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .ln-icon-flower {
+            color: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .ln-icon-flower.dark {
+            color: #052159;
+        }
+
+        .ln-line {
+            width: 32px;
+            height: 1.5px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .ln-line.dark {
+            background: #052159;
+        }
+
+        .ln-eyebrow-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.92);
+            letter-spacing: 0.5px;
+        }
+
+        .ln-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(26px, 3.2vw, 36px);
+            font-weight: 800;
+            line-height: 1.25;
+            color: #ffffff;
+            margin: 0 0 24px;
+            letter-spacing: -0.3px;
+        }
+
+        .ln-desc-wrap {
+            border-left: 3px solid rgba(255, 255, 255, 0.9);
+            padding-left: 18px;
+            margin-bottom: 34px;
+        }
+
+        .ln-desc {
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.88);
+            margin: 0;
+        }
+
+        /* Stats 2x2 Grid */
+        .ln-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .ln-stat-box {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            padding: 18px 20px;
+            text-align: center;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .ln-stat-box:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .ln-stat-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 34px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .ln-stat-lbl {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* Right Image Column */
+        .ln-image-col {
+            position: relative;
+            min-height: 540px;
+            background: #052159;
+            overflow: hidden;
+        }
+
+        .ln-main-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.95);
+        }
+
+        /* Golden Mission Card */
+        .ln-mission-card {
+            position: absolute;
+            bottom: 30px;
+            left: 24px;
+            max-width: 440px;
+            background: #f3b73b;
+            border-radius: 16px;
+            padding: 22px 26px;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .ln-mission-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ln-mission-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #052159;
+            letter-spacing: 0.5px;
+        }
+
+        .ln-mission-text {
+            font-family: 'Lato', sans-serif;
+            font-size: 14.5px;
+            line-height: 1.55;
+            color: #0f2744;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .ln-card-container {
+                grid-template-columns: 1fr;
+            }
+            .ln-image-col {
+                min-height: 440px;
+            }
+            .ln-content-col {
+                padding: 40px 32px;
+            }
+            .ln-mission-card {
+                left: 20px;
+                right: 20px;
+                bottom: 24px;
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .ln-content-col {
+                padding: 32px 20px;
+            }
+            .ln-stats-grid {
+                gap: 10px;
+            }
+            .ln-stat-box {
+                padding: 14px 10px;
+            }
+            .ln-stat-num {
+                font-size: 28px;
+            }
+            .ln-stat-lbl {
+                font-size: 12px;
+            }
+            .ln-mission-card {
+                padding: 18px 20px;
+            }
+            .ln-mission-text {
+                font-size: 13.5px;
+            }
+            .ln-image-col {
+                min-height: 380px;
+            }
+        }
+
     </style>
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="stylesheet" href="include/header-footer.css">
@@ -3405,115 +3634,89 @@
                     </div>
                 </div>
                 <div class="mobile-nav-links">
-                    <span class="nav-group">
-                        <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                        <span class="nav-drop">
-                            <a href="about.html">About Sukhda</a>
-                            <a href="about.html#leadership">Medical Leadership</a>
-                            <a href="about.html#vision">Vision &amp; Mission</a>
-                            <a href="about.html#infrastructure">Infrastructure &amp; Facilities</a>
-                        </span>
+                <span class="nav-group">
+                    <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="about.html">About Sukhda</a>
+                        <a href="about.html#leadership">Leadership</a>
+                        <a href="about.html#vision">Vision &amp; Mission</a>
                     </span>
-                    <span class="nav-group">
-                        <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down"
-                                class="nav-chevron"></i></a>
-                        <span class="nav-drop">
-                            <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
-                            <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super-Speciality)</a>
-                        </span>
-                    </span>
-                    <span class="nav-group mega-group">
-                        <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down"
-                                class="nav-chevron"></i></a>
-                        <div class="nav-drop services-mega">
-                            <div class="mega-body">
-                                <div class="mega-col">
-                                    <div class="mega-col-header">
-                                        <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
-                                        <div>
-                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
-                                            <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB
-                                                Centre</div>
-                                        </div>
-                                    </div>
-                                    <div class="mega-links-grid">
-                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
-                                                &amp; Critical Care</span></a>
-                                        <a href="cardiology.html"><i
-                                                data-lucide="heart-pulse"></i><span>Cardiology</span></a>
-                                        <a href="gastroenterology.html"><i
-                                                data-lucide="activity"></i><span>Gastroenterology</span></a>
-                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
-                                                Dialysis</span></a>
-                                        <a href="neurosurgery.html"><i
-                                                data-lucide="brain"></i><span>Neurosurgery</span></a>
-                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
-                                                Obstetrics</span></a>
-                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp;
-                                                Robotic Joint Replacement</span></a>
-                                        <a href="general-surgery.html"><i
-                                                data-lucide="shield-check"></i><span>Laparoscopic &amp; General
-                                                Surgery</span></a>
-                                        <a href="ent.html"><i data-lucide="headphones"></i><span>ENT</span></a>
-                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp;
-                                                Imaging</span></a>
-                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
-                                                &amp; Pain Management</span></a>
-                                        <a href="contact.html"><i
-                                                data-lucide="microscope"></i><span>Pathology</span></a>
-                                        <a href="physiotherapy.html"><i
-                                                data-lucide="activity"></i><span>Physiotherapy</span></a>
-                                        <a href="dermatology.html"><i
-                                                data-lucide="sparkles"></i><span>Dermatology</span></a>
+                </span>
+                <span class="nav-group mega-group">
+                    <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <div class="nav-drop services-mega">
+                        <div class="mega-body">
+                            <div class="mega-col">
+                                <div class="mega-col-header">
+                                    <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
+                                    <div>
+                                        <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                        <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB Centre</div>
                                     </div>
                                 </div>
-                                <div class="mega-col medpark-col">
-                                    <div class="mega-col-header">
-                                        <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
-                                        <div>
-                                            <div class="mega-col-title">Sukhda MedPark</div>
-                                            <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
-                                        </div>
-                                    </div>
-                                    <div class="mega-links-grid single-col">
-                                        <a href="medical-oncology.html" class="featured-service">
-                                            <i data-lucide="ribbon"></i>
-                                            <div>
-                                                <b>Oncology</b>
-                                                <small>Medical, Surgical &amp; Radiation Oncology</small>
-                                            </div>
-                                        </a>
-                                    </div>
+                                <div class="mega-links-grid">
+                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
+                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
+                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
+                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
+                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Cardiology</span></a>
+                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology</span></a>
+                                    <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
+                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp; Spine</span></a>
+                                    <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp; Robotic Joint Replacement</span></a>
+                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>Laparoscopic &amp; General Surgery</span></a>
+                                    <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
+                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
+                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
+                                    <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
+                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy</span></a>
+                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology</span></a>
                                 </div>
                             </div>
-                            <div class="mega-footer">
-                                <a href="index.html#specialities" class="mega-view-all"><i
-                                        data-lucide="layout-grid"></i> View All Clinical Specialities &amp; Services
-                                    &rarr;</a>
-                                <div class="mega-emergency-tag"><i data-lucide="phone-call"
-                                        style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg
-                                        class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                        width="16" height="16" style="vertical-align:middle;flex-shrink:0"
-                                        aria-hidden="true">
-                                        <path fill="#25D366"
-                                            d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
-                                        <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                                    </svg> WhatsApp: <b>+91 99965-44005</b></div>
+                            <div class="mega-col medpark-col">
+                                <div class="mega-col-header">
+                                    <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                    <div>
+                                        <div class="mega-col-title">Sukhda MedPark</div>
+                                        <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
+                                    </div>
+                                </div>
+                                <div class="mega-links-grid single-col">
+                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
+                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
+                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
+                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
+                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
+                                    <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
+                                </div>
                             </div>
                         </div>
+                        <div class="mega-footer">
+                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services &rarr;</a>
+                            <div class="mega-emergency-tag"><i data-lucide="phone-call" style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
+                        </div>
+                    </div>
+                </span>
+                <a href="doctor.html">Doctors</a>
+                <span class="nav-group">
+                    <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
+                        <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super Specialty)</a>
                     </span>
-                    <a href="doctor.html">Doctors</a>
-                    <span class="nav-group">
-                        <a href="javascript:void(0)">Resources <i data-lucide="chevron-down"
-                                class="nav-chevron"></i></a>
-                        <span class="nav-drop">
-                            <a href="media-coverage.html">Media Coverage</a>
-                            <a href="csr.html">CSR</a>
-                            <a href="careers.html">Careers</a>
-                        </span>
+                </span>
+                <a href="health-packages.html">Health Packages</a>
+                <a href="about.html#infrastructure">Infrastructure &amp; Facilities</a>
+                <span class="nav-group">
+                    <a href="javascript:void(0)">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="media-coverage.html">Media Coverage</a>
+                        <a href="csr.html">CSR</a>
+                        <a href="careers.html">Careers</a>
                     </span>
-                </div>
+                </span>
+            </div>
                 <div class="mobile-menu-footer">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
                     <a class="btn" href="tel:01662249473"
@@ -3859,13 +4062,23 @@
                 <div class="services" id="servicesTrack">
                     <a href="internal-medicine.html" class="service">
                         <div class="service-icon"><i data-lucide="stethoscope"></i></div>
-                        <b>Medicine & Critical Care</b>
-                        <span class="pill pill-multi">Multispeciality</span>
+                        <b>Medicine & Critical care</b>
+                        <span class="pill pill-both">Both Location</span>
                     </a>
                     <a href="medical-oncology.html" class="service">
                         <div class="service-icon"><i data-lucide="ribbon"></i></div>
-                        <b>Oncology</b>
-                        <span class="pill pill-medpark">MedPark</span>
+                        <b>Medical Oncology</b>
+                        <span class="pill pill-both">Both Location</span>
+                    </a>
+                    <a href="surgical-oncology.html" class="service">
+                        <div class="service-icon"><i data-lucide="activity"></i></div>
+                        <b>Surgical Oncology</b>
+                        <span class="pill pill-both">Both Location</span>
+                    </a>
+                    <a href="radiation-oncology.html" class="service">
+                        <div class="service-icon"><i data-lucide="shield"></i></div>
+                        <b>Radiation Oncology</b>
+                        <span class="pill pill-both">Both Location</span>
                     </a>
                     <a href="cardiology.html" class="service">
                         <div class="service-icon"><i data-lucide="heart-pulse"></i></div>
@@ -3884,8 +4097,8 @@
                     </a>
                     <a href="neurosurgery.html" class="service">
                         <div class="service-icon"><i data-lucide="brain"></i></div>
-                        <b>Neurosurgery</b>
-                        <span class="pill pill-medpark">MedPark</span>
+                        <b>Neurosurgery & Spine</b>
+                        <span class="pill pill-multi">Multispeciality</span>
                     </a>
                     <a href="gynaecology.html" class="service">
                         <div class="service-icon"><i data-lucide="baby"></i></div>
@@ -3904,23 +4117,23 @@
                     </a>
                     <a href="ent.html" class="service">
                         <div class="service-icon"><i data-lucide="headphones"></i></div>
-                        <b>ENT</b>
+                        <b>Ent</b>
                         <span class="pill pill-multi">Multispeciality</span>
                     </a>
                     <a href="radiology.html" class="service">
                         <div class="service-icon"><i data-lucide="scan"></i></div>
                         <b>Radiodiagnosis & Imaging</b>
-                        <span class="pill pill-both">Both Locations</span>
+                        <span class="pill pill-multi">Multispeciality</span>
                     </a>
                     <a href="anaesthesiology.html" class="service">
                         <div class="service-icon"><i data-lucide="shield"></i></div>
                         <b>Anaesthesia & Pain Management</b>
-                        <span class="pill pill-multi">Multispeciality</span>
+                        <span class="pill pill-both">Both</span>
                     </a>
                     <a href="contact.html" class="service">
                         <div class="service-icon"><i data-lucide="microscope"></i></div>
                         <b>Pathology</b>
-                        <span class="pill pill-multi">Multispeciality</span>
+                        <span class="pill pill-both">Both</span>
                     </a>
                     <a href="physiotherapy.html" class="service">
                         <div class="service-icon"><i data-lucide="activity"></i></div>
@@ -4178,6 +4391,69 @@
             </div>
         </div>
     </section>
+
+    <!-- LEADING HEALTHCARE NETWORK SECTION (NMC.AE DESIGN) -->
+    <section class="leading-network-sec" id="network">
+        <div class="wrap">
+            <div class="ln-card-container">
+                <!-- LEFT BLUE COLUMN -->
+                <div class="ln-content-col">
+                    <div class="ln-eyebrow">
+                        <svg class="ln-icon-flower" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2a4 4 0 0 0-4 4c0 1.2.5 2.3 1.3 3.1A4 4 0 0 0 6 12a4 4 0 0 0 3.3 2.9A4 4 0 0 0 8 18a4 4 0 0 0 4 4 4 4 0 0 0 4-4c0-1.2-.5-2.3-1.3-3.1A4 4 0 0 0 18 12a4 4 0 0 0-3.3-2.9A4 4 0 0 0 16 6a4 4 0 0 0-4-4zm0 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+                        </svg>
+                        <span class="ln-line"></span>
+                        <span class="ln-eyebrow-text">Comprehensive Healthcare Providers</span>
+                    </div>
+
+                    <h2 class="ln-title">Leading Healthcare Network for<br><span class="ln-title-highlight">You and Your Family</span></h2>
+
+                    <div class="ln-desc-wrap">
+                        <p class="ln-desc">
+                            Sukhda delivers comprehensive healthcare for every stage of life, from children to adults and seniors, with dedicated services for women’s health, prenatal care, and maternity, alongside advanced tertiary oncology, cardiology, and critical care under one trusted roof.
+                        </p>
+                    </div>
+
+                    <div class="ln-stats-grid">
+                        <div class="ln-stat-box">
+                            <div class="ln-stat-num">2</div>
+                            <div class="ln-stat-lbl">Hospitals</div>
+                        </div>
+                        <div class="ln-stat-box">
+                            <div class="ln-stat-num">17</div>
+                            <div class="ln-stat-lbl">Departments</div>
+                        </div>
+                        <div class="ln-stat-box">
+                            <div class="ln-stat-num">150+</div>
+                            <div class="ln-stat-lbl">NABH Beds</div>
+                        </div>
+                        <div class="ln-stat-box">
+                            <div class="ln-stat-num">35+</div>
+                            <div class="ln-stat-lbl">Specialists</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT IMAGE COLUMN WITH MISSION CARD -->
+                <div class="ln-image-col">
+                    <img src="assets/images/infra/ct-scan.jpg" alt="Sukhda Healthcare Advanced Medical Technology" class="ln-main-img">
+                    <div class="ln-mission-card">
+                        <div class="ln-mission-header">
+                            <svg class="ln-icon-flower dark" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2a4 4 0 0 0-4 4c0 1.2.5 2.3 1.3 3.1A4 4 0 0 0 6 12a4 4 0 0 0 3.3 2.9A4 4 0 0 0 8 18a4 4 0 0 0 4 4 4 4 0 0 0 4-4c0-1.2-.5-2.3-1.3-3.1A4 4 0 0 0 18 12a4 4 0 0 0-3.3-2.9A4 4 0 0 0 16 6a4 4 0 0 0-4-4zm0 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+                            </svg>
+                            <span class="ln-line dark"></span>
+                            <span class="ln-mission-label">Our Mission</span>
+                        </div>
+                        <p class="ln-mission-text">
+                            To be the preferred healthcare system in our communities. Care &amp; Cure for the Whole Family under One Roof, delivering ethical, compassionate, and transparent medicine.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- 3. WHY CHOOSE SUKHDA -->
     <section class="section" id="why">
@@ -4677,29 +4953,30 @@
                 { name: 'Dr. Trivikrama Rao', sub: 'MCh (Surgical Oncology) • Senior Surgical Oncologist', cat: 'Doctor', badge: 'doc', url: 'dr-trivikrama-rao.html' },
 
                 // Specialities
-                { name: 'Cardiology & Cath Lab', sub: 'Heart Care, Angioplasty, Pacemakers, 24/7 Heart Attack Response', cat: 'Speciality', badge: 'spec', url: 'cardiology.html' },
+                { name: 'Medicine & Critical care', sub: 'Internal Medicine, 24/7 ICU, Infectious Diseases, Diabetes', cat: 'Speciality', badge: 'spec', url: 'internal-medicine.html' },
                 { name: 'Medical Oncology', sub: 'Cancer Care, Chemotherapy, Targeted Therapy, Tumour Board', cat: 'Speciality', badge: 'spec', url: 'medical-oncology.html' },
                 { name: 'Surgical Oncology', sub: 'Cancer Surgeries, Head & Neck, Breast, GI & Gynae Cancers', cat: 'Speciality', badge: 'spec', url: 'surgical-oncology.html' },
                 { name: 'Radiation Oncology', sub: 'High-Precision Linear Accelerator, Cancer Radiotherapy', cat: 'Speciality', badge: 'spec', url: 'radiation-oncology.html' },
+                { name: 'Cardiology', sub: 'Heart Care, Angioplasty, Pacemakers, 24/7 Heart Attack Response', cat: 'Speciality', badge: 'spec', url: 'cardiology.html' },
+                { name: 'Gastroenterology', sub: 'Liver Disease, Endoscopy, Colonoscopy, GI Care', cat: 'Speciality', badge: 'spec', url: 'gastroenterology.html' },
                 { name: 'Nephrology & Dialysis', sub: 'Kidney Care, 24/7 Dialysis Unit, Kidney Disease Management', cat: 'Speciality', badge: 'spec', url: 'nephrology.html' },
-                { name: 'Neurology & Neurosurgery', sub: 'Brain & Spine Surgeries, Stroke Management, Trauma', cat: 'Speciality', badge: 'spec', url: 'neurosurgery.html' },
-                { name: 'Orthopaedics & Joint Replacement', sub: 'Knee & Hip Replacement, Fracture Care, Arthroscopy', cat: 'Speciality', badge: 'spec', url: 'orthopaedics.html' },
+                { name: 'Neurosurgery & Spine', sub: 'Brain & Spine Surgeries, Stroke Management, Trauma', cat: 'Speciality', badge: 'spec', url: 'neurosurgery.html' },
                 { name: 'Gynaecology & Obstetrics', sub: 'Maternity, High-Risk Pregnancy, Laparoscopic Gynae Surgery', cat: 'Speciality', badge: 'spec', url: 'gynaecology.html' },
-                { name: 'Paediatrics & Neonatology', sub: 'Child Care, Newborn ICU (NICU), Vaccination', cat: 'Speciality', badge: 'spec', url: 'paediatrics.html' },
-                { name: 'Gastroenterology & Endoscopy', sub: 'Liver Disease, Endoscopy, Colonoscopy, GI Care', cat: 'Speciality', badge: 'spec', url: 'gastroenterology.html' },
-                { name: 'Urology & Kidney Stones', sub: 'Laser Stone Removal, Prostate, Kidney Health', cat: 'Speciality', badge: 'spec', url: 'urology.html' },
-                { name: 'Internal Medicine & Critical Care', sub: 'Diabetes, Hypertension, Infectious Diseases, 24/7 ICU', cat: 'Speciality', badge: 'spec', url: 'internal-medicine.html' },
-                { name: 'Emergency & Trauma (24/7)', sub: 'Round-the-clock Trauma, Cardiac & Medical Emergencies', cat: 'Speciality', badge: 'spec', url: 'emergency-trauma.html' },
-                { name: 'General & Laparoscopic Surgery', sub: 'Minimally Invasive Surgeries, Hernia, Gallbladder', cat: 'Speciality', badge: 'spec', url: 'general-surgery.html' },
-                { name: 'ENT (Ear, Nose & Throat)', sub: 'Microscopic Ear Surgery, Sinusitis, Tonsil Care', cat: 'Speciality', badge: 'spec', url: 'ent.html' },
+                { name: 'Orthopaedic & Robotic Joint Replacement', sub: 'Knee & Hip Replacement, Fracture Care, Arthroscopy', cat: 'Speciality', badge: 'spec', url: 'orthopaedics.html' },
+                { name: 'Laparoscopic & General Surgery', sub: 'Minimally Invasive Surgeries, Hernia, Gallbladder', cat: 'Speciality', badge: 'spec', url: 'general-surgery.html' },
+                { name: 'Ent', sub: 'Ear, Nose & Throat, Microscopic Ear Surgery, Sinusitis, Tonsil Care', cat: 'Speciality', badge: 'spec', url: 'ent.html' },
                 { name: 'Radiodiagnosis & Imaging', sub: '1.5T MRI, 64-Slice CT, Ultrasound, Digital X-Ray', cat: 'Speciality', badge: 'spec', url: 'radiology.html' },
-                { name: 'Dermatology & Cosmetology', sub: 'Skin, Hair & Nail Care, Laser & Aesthetic Treatments', cat: 'Speciality', badge: 'spec', url: 'dermatology.html' },
-                { name: 'Physiotherapy & Rehab', sub: 'Post-Op Rehab, Sports Injury, Pain Relief', cat: 'Speciality', badge: 'spec', url: 'physiotherapy.html' },
+                { name: 'Anaesthesia & Pain Management', sub: 'Advanced Pain Management, Critical Care, Surgical Anaesthesia', cat: 'Speciality', badge: 'spec', url: 'anaesthesiology.html' },
+                { name: 'Pathology', sub: 'Advanced Clinical Lab, Diagnostics & Histopathology', cat: 'Speciality', badge: 'spec', url: 'contact.html' },
+                { name: 'Physiotherapy', sub: 'Post-Op Rehab, Sports Injury, Pain Relief, Neuro Rehab', cat: 'Speciality', badge: 'spec', url: 'physiotherapy.html' },
+                { name: 'Dermatology', sub: 'Skin, Hair & Nail Care, Laser & Aesthetic Treatments', cat: 'Speciality', badge: 'spec', url: 'dermatology.html' },
 
                 // Hospitals & Insurance
                 { name: 'Sukhda Multispeciality Hospital', sub: '125-Bed NABH Multispeciality Hospital, Delhi Road, Hisar', cat: 'Hospital', badge: 'hosp', url: 'sukhda-multispecialty-hospital.html' },
                 { name: 'Sukhda MedPark Hospital', sub: 'Comprehensive Cancer & Super-Speciality Hospital, Sector-5', cat: 'Hospital', badge: 'hosp', url: 'sukhda-medpark-hospital.html' },
-                { name: 'Cashless Insurance & TPAs', sub: 'Ayushman Bharat, Star Health, HDFC ERGO, ICICI Lombard, ECHS', cat: 'Insurance', badge: 'ins', url: 'empanelled-corporate.html' }
+                { name: 'Cashless Insurance & TPAs', sub: 'Ayushman Bharat, Star Health, HDFC ERGO, ICICI Lombard, ECHS', cat: 'Insurance', badge: 'ins', url: 'empanelled-corporate.html' },
+                { name: 'Health Packages', sub: 'Comprehensive Preventive Health Checkups (Whole Body, Cardiac, Diabetes, Cancer)', cat: 'Service', badge: 'pkg', url: 'health-packages.html' },
+                { name: 'Infrastructure & Facilities', sub: 'Modular OTs, Advanced ICUs, Diagnostic Labs & Imaging', cat: 'Facility', badge: 'fac', url: 'about.html#infrastructure' }
             ];
 
             let selectedIndex = -1;

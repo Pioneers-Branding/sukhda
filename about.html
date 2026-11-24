@@ -2935,6 +2935,227 @@
         :is(.hero-banner, .doc-directory-hero, .opd-hero, .empanelled-hero, .doctor-hero) :is(.badge, .hero-kicker) {
             border-color: rgba(95, 209, 111, 0.45);
         }
+    
+        /* ==========================================================================
+           ACCREDITATIONS SECTION (NMC.AE DESIGN PATTERN)
+           ========================================================================== */
+        .accreditations-sec {
+            background: #f4f6fa;
+            padding: 64px 0 72px;
+            border-top: 1px solid #e3ebf4;
+            border-bottom: 1px solid #e3ebf4;
+            position: relative;
+        }
+
+        .accreditations-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(26px, 3.5vw, 36px);
+            font-weight: 800;
+            color: #052159;
+            margin: 0 0 38px;
+            letter-spacing: -0.2px;
+        }
+
+        .accred-carousel-outer {
+            position: relative;
+            max-width: 1360px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .accred-track {
+            display: flex;
+            gap: 22px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 10px 4px 18px;
+            width: 100%;
+        }
+
+        .accred-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .accred-card {
+            flex: 0 0 calc(25% - 16.5px);
+            min-width: 250px;
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #e2eaf2;
+            box-shadow: 0 4px 18px rgba(5, 33, 89, 0.05);
+            padding: 34px 20px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            scroll-snap-align: start;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            box-sizing: border-box;
+        }
+
+        .accred-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(5, 33, 89, 0.09);
+            border-color: #cbdcf0;
+        }
+
+        .accred-badge-wrap {
+            height: 96px;
+            width: 96px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            flex-shrink: 0;
+        }
+
+        .accred-svg-seal {
+            width: 92px;
+            height: 92px;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.06));
+            transition: transform 0.25s ease;
+        }
+
+        .accred-card:hover .accred-svg-seal {
+            transform: scale(1.05);
+        }
+
+        .accred-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16.5px;
+            font-weight: 700;
+            color: #052159;
+            margin: 0 0 10px;
+            line-height: 1.35;
+        }
+
+        .accred-accent {
+            width: 28px;
+            height: 2.5px;
+            background: #0284c7;
+            border-radius: 2px;
+            margin: 0 auto 12px;
+        }
+
+        .accred-location {
+            font-family: 'Lato', sans-serif;
+            font-size: 13px;
+            color: #53677f;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Arrows */
+        .accred-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1px solid #c9d8ea;
+            color: #052159;
+            box-shadow: 0 4px 12px rgba(5, 33, 89, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.2s ease;
+        }
+
+        .accred-arrow:hover {
+            background: #052159;
+            color: #ffffff;
+            border-color: #052159;
+        }
+
+        .accred-prev {
+            left: -18px;
+        }
+
+        .accred-next {
+            right: -18px;
+        }
+
+        /* NMC Style Pill Indicator */
+        .accred-dots-wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 26px;
+        }
+
+        .accred-pill-container {
+            background: #0e2746;
+            border-radius: 30px;
+            padding: 7px 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            box-shadow: 0 4px 14px rgba(14, 39, 70, 0.18);
+        }
+
+        .accred-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.35);
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .accred-dot.active {
+            width: 24px;
+            height: 7px;
+            border-radius: 10px;
+            background: #278132;
+        }
+
+        @media (max-width: 1080px) {
+            .accred-card {
+                flex: 0 0 calc(33.333% - 15px);
+            }
+            .accred-arrow {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .accreditations-sec {
+                padding: 48px 0 54px;
+            }
+            .accred-card {
+                flex: 0 0 calc(50% - 11px);
+                min-width: 220px;
+                padding: 26px 16px 22px;
+            }
+            .accred-name {
+                font-size: 15px;
+            }
+            .accred-svg-seal {
+                width: 80px;
+                height: 80px;
+            }
+            .accred-badge-wrap {
+                height: 84px;
+                margin-bottom: 16px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .accred-card {
+                flex: 0 0 calc(85% - 10px);
+            }
+        }
+
     </style>
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="stylesheet" href="include/header-footer.css">
@@ -3028,115 +3249,89 @@
                     </div>
                 </div>
                 <div class="mobile-nav-links">
-                    <span class="nav-group">
-                        <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                        <span class="nav-drop">
-                            <a href="about.html">About Sukhda</a>
-                            <a href="about.html#leadership">Medical Leadership</a>
-                            <a href="about.html#vision">Vision &amp; Mission</a>
-                            <a href="about.html#infrastructure">Infrastructure &amp; Facilities</a>
-                        </span>
+                <span class="nav-group">
+                    <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="about.html">About Sukhda</a>
+                        <a href="about.html#leadership">Leadership</a>
+                        <a href="about.html#vision">Vision &amp; Mission</a>
                     </span>
-                    <span class="nav-group">
-                        <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down"
-                                class="nav-chevron"></i></a>
-                        <span class="nav-drop">
-                            <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
-                            <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super-Speciality)</a>
-                        </span>
-                    </span>
-                    <span class="nav-group mega-group">
-                        <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down"
-                                class="nav-chevron"></i></a>
-                        <div class="nav-drop services-mega">
-                            <div class="mega-body">
-                                <div class="mega-col">
-                                    <div class="mega-col-header">
-                                        <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
-                                        <div>
-                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
-                                            <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB
-                                                Centre</div>
-                                        </div>
-                                    </div>
-                                    <div class="mega-links-grid">
-                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
-                                                &amp; Critical Care</span></a>
-                                        <a href="cardiology.html"><i
-                                                data-lucide="heart-pulse"></i><span>Cardiology</span></a>
-                                        <a href="gastroenterology.html"><i
-                                                data-lucide="activity"></i><span>Gastroenterology</span></a>
-                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
-                                                Dialysis</span></a>
-                                        <a href="neurosurgery.html"><i
-                                                data-lucide="brain"></i><span>Neurosurgery</span></a>
-                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
-                                                Obstetrics</span></a>
-                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp;
-                                                Robotic Joint Replacement</span></a>
-                                        <a href="general-surgery.html"><i
-                                                data-lucide="shield-check"></i><span>Laparoscopic &amp; General
-                                                Surgery</span></a>
-                                        <a href="ent.html"><i data-lucide="headphones"></i><span>ENT</span></a>
-                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp;
-                                                Imaging</span></a>
-                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
-                                                &amp; Pain Management</span></a>
-                                        <a href="contact.html"><i
-                                                data-lucide="microscope"></i><span>Pathology</span></a>
-                                        <a href="physiotherapy.html"><i
-                                                data-lucide="activity"></i><span>Physiotherapy</span></a>
-                                        <a href="dermatology.html"><i
-                                                data-lucide="sparkles"></i><span>Dermatology</span></a>
+                </span>
+                <span class="nav-group mega-group">
+                    <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <div class="nav-drop services-mega">
+                        <div class="mega-body">
+                            <div class="mega-col">
+                                <div class="mega-col-header">
+                                    <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
+                                    <div>
+                                        <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                        <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB Centre</div>
                                     </div>
                                 </div>
-                                <div class="mega-col medpark-col">
-                                    <div class="mega-col-header">
-                                        <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
-                                        <div>
-                                            <div class="mega-col-title">Sukhda MedPark</div>
-                                            <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
-                                        </div>
-                                    </div>
-                                    <div class="mega-links-grid single-col">
-                                        <a href="medical-oncology.html" class="featured-service">
-                                            <i data-lucide="ribbon"></i>
-                                            <div>
-                                                <b>Oncology</b>
-                                                <small>Medical, Surgical &amp; Radiation Oncology</small>
-                                            </div>
-                                        </a>
-                                    </div>
+                                <div class="mega-links-grid">
+                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
+                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
+                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
+                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
+                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Cardiology</span></a>
+                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology</span></a>
+                                    <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
+                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp; Spine</span></a>
+                                    <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp; Robotic Joint Replacement</span></a>
+                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>Laparoscopic &amp; General Surgery</span></a>
+                                    <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
+                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
+                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
+                                    <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
+                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy</span></a>
+                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology</span></a>
                                 </div>
                             </div>
-                            <div class="mega-footer">
-                                <a href="index.html#specialities" class="mega-view-all"><i
-                                        data-lucide="layout-grid"></i> View All Clinical Specialities &amp; Services
-                                    &rarr;</a>
-                                <div class="mega-emergency-tag"><i data-lucide="phone-call"
-                                        style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg
-                                        class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                        width="16" height="16" style="vertical-align:middle;flex-shrink:0"
-                                        aria-hidden="true">
-                                        <path fill="#25D366"
-                                            d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
-                                        <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                                    </svg> WhatsApp: <b>+91 99965-44005</b></div>
+                            <div class="mega-col medpark-col">
+                                <div class="mega-col-header">
+                                    <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                    <div>
+                                        <div class="mega-col-title">Sukhda MedPark</div>
+                                        <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
+                                    </div>
+                                </div>
+                                <div class="mega-links-grid single-col">
+                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
+                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
+                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
+                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
+                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
+                                    <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
+                                </div>
                             </div>
                         </div>
+                        <div class="mega-footer">
+                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services &rarr;</a>
+                            <div class="mega-emergency-tag"><i data-lucide="phone-call" style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
+                        </div>
+                    </div>
+                </span>
+                <a href="doctor.html">Doctors</a>
+                <span class="nav-group">
+                    <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
+                        <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super Specialty)</a>
                     </span>
-                    <a href="doctor.html">Doctors</a>
-                    <span class="nav-group">
-                        <a href="javascript:void(0)">Resources <i data-lucide="chevron-down"
-                                class="nav-chevron"></i></a>
-                        <span class="nav-drop">
-                            <a href="media-coverage.html">Media Coverage</a>
-                            <a href="csr.html">CSR</a>
-                            <a href="careers.html">Careers</a>
-                        </span>
+                </span>
+                <a href="health-packages.html">Health Packages</a>
+                <a href="about.html#infrastructure">Infrastructure &amp; Facilities</a>
+                <span class="nav-group">
+                    <a href="javascript:void(0)">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                    <span class="nav-drop">
+                        <a href="media-coverage.html">Media Coverage</a>
+                        <a href="csr.html">CSR</a>
+                        <a href="careers.html">Careers</a>
                     </span>
-                </div>
+                </span>
+            </div>
                 <div class="mobile-menu-footer">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book
                         Appointment</a>
@@ -3192,6 +3387,144 @@
             </div>
         </div>
     </section>
+
+    <!-- SECTION 2: ACCREDITATIONS (NMC.AE STYLE) -->
+    <section class="accreditations-sec" id="accreditations">
+        <div class="wrap">
+            <h2 class="accreditations-title">Accreditations</h2>
+
+            <div class="accred-carousel-outer">
+                <button type="button" class="accred-arrow accred-prev" id="accredPrevBtn" aria-label="Previous accreditations">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+
+                <div class="accred-track" id="accredTrack">
+                    <!-- 1. NABH ACCREDITATION -->
+                    <div class="accred-card">
+                        <div class="accred-badge-wrap">
+                            <svg viewBox="0 0 100 100" class="accred-svg-seal" aria-hidden="true">
+                                <circle cx="50" cy="50" r="46" fill="#fff" stroke="#d97706" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="41" fill="#fef3c7" stroke="#b45309" stroke-width="1.5" stroke-dasharray="3 2"/>
+                                <circle cx="50" cy="50" r="32" fill="#278132"/>
+                                <path d="M44 32h12v12h12v12H56v12H44V56H32V44h12V32z" fill="#ffffff"/>
+                                <path d="M50 14 A36 36 0 0 1 86 50" fill="none" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M50 86 A36 36 0 0 1 14 50" fill="none" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+                                <text x="50" y="81" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="6.5" font-weight="800" fill="#052159" letter-spacing="1.5">NABH</text>
+                            </svg>
+                        </div>
+                        <h3 class="accred-name">NABH Accreditation</h3>
+                        <div class="accred-accent"></div>
+                        <p class="accred-location">Sukhda Multispeciality Hospital (Cert: H-2020-0707)</p>
+                    </div>
+
+                    <!-- 2. DNB TEACHING CENTRE -->
+                    <div class="accred-card">
+                        <div class="accred-badge-wrap">
+                            <svg viewBox="0 0 100 100" class="accred-svg-seal" aria-hidden="true">
+                                <circle cx="50" cy="50" r="46" fill="#fff" stroke="#0284c7" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="41" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+                                <circle cx="50" cy="50" r="32" fill="#052159"/>
+                                <path d="M50 26 v34 M45 34 c4-4 6-4 10 0 M45 42 c4-4 6-4 10 0 M45 50 c4-4 6-4 10 0" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                                <circle cx="50" cy="24" r="3" fill="#f59e0b"/>
+                                <text x="50" y="70" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="800" fill="#ffffff" letter-spacing="1">NBEMS</text>
+                                <text x="50" y="82" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="6" font-weight="700" fill="#0369a1" letter-spacing="0.5">DNB CENTRE</text>
+                            </svg>
+                        </div>
+                        <h3 class="accred-name">NBEMS DNB Centre</h3>
+                        <div class="accred-accent"></div>
+                        <p class="accred-location">Postgraduate General Medicine Teaching Centre</p>
+                    </div>
+
+                    <!-- 3. NABL DIAGNOSTIC STANDARDS -->
+                    <div class="accred-card">
+                        <div class="accred-badge-wrap">
+                            <svg viewBox="0 0 100 100" class="accred-svg-seal" aria-hidden="true">
+                                <circle cx="50" cy="50" r="46" fill="#fff" stroke="#2563eb" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="41" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5" stroke-dasharray="4 2"/>
+                                <circle cx="50" cy="50" r="32" fill="#1e40af"/>
+                                <path d="M44 32 h12 v6 l8 18 a3 3 0 0 1 -3 4 H39 a3 3 0 0 1 -3 -4 l8 -18 v-6z" fill="#60a5fa" opacity="0.4"/>
+                                <path d="M46 32 h8 v6 l7 16 H39 l7 -16 v-6z" stroke="#ffffff" stroke-width="2" fill="none"/>
+                                <circle cx="48" cy="48" r="2" fill="#ffffff"/>
+                                <circle cx="53" cy="51" r="1.5" fill="#ffffff"/>
+                                <text x="50" y="69" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="800" fill="#ffffff" letter-spacing="1">NABL</text>
+                                <text x="50" y="82" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="6" font-weight="700" fill="#1d4ed8" letter-spacing="0.5">ISO 15189</text>
+                            </svg>
+                        </div>
+                        <h3 class="accred-name">NABL Quality Standards</h3>
+                        <div class="accred-accent"></div>
+                        <p class="accred-location">Automated Clinical Pathology &amp; Diagnostic Labs</p>
+                    </div>
+
+                    <!-- 4. AERB RADIATION SAFETY -->
+                    <div class="accred-card">
+                        <div class="accred-badge-wrap">
+                            <svg viewBox="0 0 100 100" class="accred-svg-seal" aria-hidden="true">
+                                <circle cx="50" cy="50" r="46" fill="#fff" stroke="#0d9488" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="41" fill="#f0fdfa" stroke="#0f766e" stroke-width="1.5"/>
+                                <circle cx="50" cy="50" r="32" fill="#0f766e"/>
+                                <circle cx="50" cy="48" r="6" fill="#fef08a"/>
+                                <path d="M50 36 L43 24 A22 22 0 0 1 57 24 Z" fill="#fef08a"/>
+                                <path d="M39 54 L27 60 A22 22 0 0 1 20 48 Z" fill="#fef08a"/>
+                                <path d="M61 54 L73 60 A22 22 0 0 0 80 48 Z" fill="#fef08a"/>
+                                <text x="50" y="70" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="800" fill="#ffffff" letter-spacing="1">AERB</text>
+                                <text x="50" y="82" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="6" font-weight="700" fill="#0f766e" letter-spacing="0.5">SAFETY APPROVED</text>
+                            </svg>
+                        </div>
+                        <h3 class="accred-name">AERB Radiation Safety</h3>
+                        <div class="accred-accent"></div>
+                        <p class="accred-location">LINAC, CT &amp; Digital Mammography (Sukhda MedPark)</p>
+                    </div>
+
+                    <!-- 5. CLINICAL QUALITY & SAFETY -->
+                    <div class="accred-card">
+                        <div class="accred-badge-wrap">
+                            <svg viewBox="0 0 100 100" class="accred-svg-seal" aria-hidden="true">
+                                <circle cx="50" cy="50" r="46" fill="#fff" stroke="#eab308" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="41" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+                                <circle cx="50" cy="50" r="32" fill="#ca8a04"/>
+                                <path d="M50 28 l4 8 9 1 -7 7 2 9 -8 -4 -8 4 2 -9 -7 -7 9 -1 z" fill="#ffffff"/>
+                                <text x="50" y="69" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="7" font-weight="800" fill="#ffffff" letter-spacing="0.8">QCI / NABH</text>
+                                <text x="50" y="82" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="6" font-weight="700" fill="#a16207" letter-spacing="0.5">ASSESSOR LED</text>
+                            </svg>
+                        </div>
+                        <h3 class="accred-name">Quality &amp; Patient Safety</h3>
+                        <div class="accred-accent"></div>
+                        <p class="accred-location">Certified Quality Assessor Clinical Governance</p>
+                    </div>
+
+                    <!-- 6. EMPANELLED PARTNER -->
+                    <div class="accred-card">
+                        <div class="accred-badge-wrap">
+                            <svg viewBox="0 0 100 100" class="accred-svg-seal" aria-hidden="true">
+                                <circle cx="50" cy="50" r="46" fill="#fff" stroke="#16a34a" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="41" fill="#f0fdf4" stroke="#15803d" stroke-width="1.5"/>
+                                <circle cx="50" cy="50" r="32" fill="#15803d"/>
+                                <path d="M50 26 L66 34 v14 c0 11 -7 19 -16 23 -9 -4 -16 -12 -16 -23 V34 Z" fill="#ffffff" opacity="0.2"/>
+                                <path d="M43 49 l5 5 11 -11" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                <text x="50" y="69" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="6.5" font-weight="800" fill="#ffffff" letter-spacing="0.5">EMPANELLED</text>
+                                <text x="50" y="82" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="5.5" font-weight="700" fill="#15803d" letter-spacing="0.5">GOVT &amp; TPAS</text>
+                            </svg>
+                        </div>
+                        <h3 class="accred-name">Empanelled Partner</h3>
+                        <div class="accred-accent"></div>
+                        <p class="accred-location">Ayushman Bharat, Haryana Govt, ECHS &amp; TPAs</p>
+                    </div>
+                </div>
+
+                <button type="button" class="accred-arrow accred-next" id="accredNextBtn" aria-label="Next accreditations">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+
+            <!-- NMC STYLE CAPSULE PILL PAGINATION -->
+            <div class="accred-dots-wrap">
+                <div class="accred-pill-container" id="accredPillDots">
+                    <!-- Dots will be initialized by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- SECTION 3: DIRECTORS / LEADERSHIP -->
     <section class="section" id="leadership">
@@ -3988,6 +4321,80 @@
 
     <!-- /INCLUDE: footer -->
     <script src="include/include.js"></script>
+
+    <script>
+        // Accreditations Carousel Interaction (NMC Style)
+        (function() {
+            const track = document.getElementById('accredTrack');
+            const prevBtn = document.getElementById('accredPrevBtn');
+            const nextBtn = document.getElementById('accredNextBtn');
+            const dotsContainer = document.getElementById('accredPillDots');
+            if (!track || !dotsContainer) return;
+
+            const cards = track.querySelectorAll('.accred-card');
+            const totalCards = cards.length;
+
+            function getVisibleCount() {
+                const w = window.innerWidth;
+                if (w > 1080) return 4;
+                if (w > 768) return 3;
+                if (w > 520) return 2;
+                return 1;
+            }
+
+            let numPages = Math.max(1, totalCards - getVisibleCount() + 1);
+
+            function buildDots() {
+                dotsContainer.innerHTML = '';
+                numPages = Math.max(1, totalCards - getVisibleCount() + 1);
+                for (let i = 0; i < numPages; i++) {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'accred-dot' + (i === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', 'Go to accreditation page ' + (i + 1));
+                    dot.addEventListener('click', () => {
+                        const cardWidth = cards[0].offsetWidth + 22;
+                        track.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function updateActiveDot() {
+                const cardWidth = cards[0].offsetWidth + 22;
+                const scrollLeft = track.scrollLeft;
+                const pageIndex = Math.min(numPages - 1, Math.round(scrollLeft / cardWidth));
+                const dots = dotsContainer.querySelectorAll('.accred-dot');
+                dots.forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === pageIndex);
+                });
+            }
+
+            track.addEventListener('scroll', updateActiveDot, { passive: true });
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    const cardWidth = cards[0].offsetWidth + 22;
+                    track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    const cardWidth = cards[0].offsetWidth + 22;
+                    track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                });
+            }
+
+            window.addEventListener('resize', () => {
+                buildDots();
+                updateActiveDot();
+            });
+
+            buildDots();
+        })();
+    </script>
+
 </body>
 
 </html>
