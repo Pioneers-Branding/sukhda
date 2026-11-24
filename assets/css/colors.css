@@ -1,0 +1,53 @@
+/* Green text on dark-blue backgrounds was hard to read; use white there instead.
+   Loaded last on every page. Red emergency icons keep their colour (inline !important wins). */
+
+/* Top bar */
+body .top .links a.top-wa,
+body .top .links a.top-directions,
+body .top .links a.top-directions svg {
+    color: #ffffff !important;
+}
+
+/* Footer */
+.footer .footer-tagline,
+.footer .footer-nav span,
+.footer svg.lucide,
+.footer .footer-hospital-card p {
+    color: #ffffff !important;
+}
+
+/* Dark panels and banners on service, doctor, careers, CSR, media and hospital pages */
+.conditions-panel .eyebrow,
+.conditions-panel .eyebrow svg,
+.conditions-panel .cond-item svg,
+.sec-dnb-banner .dnb-badge,
+.sec-dnb-banner .dnb-badge svg,
+.sec-usaid-spotlight .usaid-badge,
+.sec-usaid-spotlight .usaid-badge svg,
+.sec-usaid-spotlight .usaid-stat-num,
+.sec-download-kit .kicker,
+.sec-download-kit .kicker svg,
+.sec-download-kit .kit-icon svg,
+.news-tag-overlay,
+.news-tag-overlay svg,
+.doctor-hero .pill-verified,
+.doctor-hero .pill-verified svg,
+.doctor-hero svg.lucide,
+.cathlab-highlight .cath-pill,
+.cathlab-highlight .cath-pill svg,
+.cathlab-highlight b {
+    color: #ffffff !important;
+}
+
+/* "Read More" toggles inside dark sections (green by default, navy on hover) */
+:is(.conditions-panel, .sec-dnb-banner, .sec-usaid-spotlight, .sec-download-kit, .doctor-hero,
+    .cathlab-highlight, .footer, section.hero, .opd-hero, .empanelled-hero, .hero-banner,
+    .doc-directory-hero, .policy-hero) .rm-toggle,
+:is(.conditions-panel, .sec-dnb-banner, .sec-usaid-spotlight, .sec-download-kit, .doctor-hero,
+    .cathlab-highlight, .footer, section.hero, .opd-hero, .empanelled-hero, .hero-banner,
+    .doc-directory-hero, .policy-hero) .rm-toggle:hover,
+:is(.conditions-panel, .sec-dnb-banner, .sec-usaid-spotlight, .sec-download-kit, .doctor-hero,
+    .cathlab-highlight, .footer, section.hero, .opd-hero, .empanelled-hero, .hero-banner,
+    .doc-directory-hero, .policy-hero) .rm-toggle svg {
+    color: #ffffff !important;
+}

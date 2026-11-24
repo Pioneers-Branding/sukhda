@@ -1,0 +1,39 @@
+/* Site-wide typography: one font family and consistent text sizes on every page.
+   Loaded last in <head> so it overrides the per-page styles. Change --site-font to switch the font everywhere. */
+:root {
+    --site-font: 'Lato', sans-serif;
+}
+
+body,
+body * {
+    font-family: var(--site-font) !important;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Page title (hero heading) */
+main h1,
+section h1 {
+    font-size: clamp(32px, 4.6vw, 48px) !important;
+    line-height: 1.15 !important;
+}
+
+/* Section headings */
+section h2.title,
+section h2.sec-title,
+section .heading h2,
+section .sec-header h2,
+section .intro-copy h2,
+section > .wrap > h2 {
+    font-size: clamp(28px, 3.6vw, 40px) !important;
+    line-height: 1.2 !important;
+}
+
+/* Small label above section headings */
+section .kicker,
+section .eyebrow {
+    font-size: 15px !important;
+}

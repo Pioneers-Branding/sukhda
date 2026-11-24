@@ -1,12 +1,12 @@
 /**
- * Sukhda Healthcare - English / Hindi / Punjabi Translation Engine
- * Seamlessly integrates Google Translate Element for Hindi and Punjabi translation.
+ * Sukhda Healthcare - English / Hindi Translation Engine
+ * Seamlessly integrates Google Translate Element for Hindi translation.
  * Preserves user language preference across all 46 website pages via localStorage and cookies.
  */
 
 (function () {
     // Languages offered besides the English original
-    var LANGS = ['hi', 'pa'];
+    var LANGS = ['hi'];
     function isTranslatedLang(lang) {
         return LANGS.indexOf(lang) !== -1;
     }
@@ -51,6 +51,11 @@
     // Immediately synchronize cookies based on localStorage upon script load
     (function syncInitialCookie() {
         var current = localStorage.getItem('sukhda_site_lang') || 'en';
+        // A language no longer offered (e.g. Punjabi) falls back to English
+        if (current !== 'en' && !isTranslatedLang(current)) {
+            current = 'en';
+            localStorage.setItem('sukhda_site_lang', 'en');
+        }
         if (isTranslatedLang(current)) {
             setGoogleTransCookie(current);
         } else {
@@ -119,9 +124,9 @@
             return;
         }
 
-        // Switching to Hindi / Punjabi
+        // Switching to Hindi
         setGoogleTransCookie(lang);
-        // Hindi <-> Punjabi: reload so the page is translated cleanly from the English original
+        // Switching between translated languages: reload so the page is translated cleanly from the English original
         if (isTranslatedLang(prevLang) && prevLang !== lang) {
             setTimeout(function () {
                 window.location.reload();
@@ -175,7 +180,7 @@
 
         new google.translate.TranslateElement({
             pageLanguage: 'en',
-            includedLanguages: 'en,hi,pa',
+            includedLanguages: 'en,hi',
             autoDisplay: false
         }, 'google_translate_element');
 

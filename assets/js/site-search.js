@@ -24,7 +24,6 @@
         { n: 'Interventional Cardiology', u: 'cardiology.html', h: MULTI, k: 'heart cath lab angioplasty angiography stent chest pain' },
         { n: 'Nephrology & Dialysis', u: 'nephrology.html', h: MULTI, k: 'kidney dialysis renal' },
         { n: 'Gastroenterology & Hepatology', u: 'gastroenterology.html', h: MULTI, k: 'stomach liver endoscopy colonoscopy digestive' },
-        { n: 'Urology & Endourology', u: 'urology.html', h: BOTH, k: 'kidney stone prostate urine bladder' },
         { n: '24/7 Emergency & Trauma Care', u: 'emergency-trauma.html', h: MULTI, k: 'emergency accident trauma casualty ambulance' },
         { n: 'Robotic Joint Replacement & Orthopaedics', u: 'orthopaedics.html', h: MULTI, k: 'bone knee hip joint fracture ortho arthroscopy' },
         { n: 'General & Laparoscopic Surgery', u: 'general-surgery.html', h: MULTI, k: 'surgery hernia gallbladder appendix laparoscopy' },
@@ -34,9 +33,7 @@
         { n: 'Anaesthesiology & Pain Management', u: 'anaesthesiology.html', h: BOTH, k: 'anaesthesia anesthesia pain palliative' },
         { n: 'CT Scan & Radiology', u: 'radiology.html', h: BOTH, k: 'ct scan mri x-ray xray ultrasound mammography imaging diagnostics' },
         { n: 'Physiotherapy & Rehabilitation', u: 'physiotherapy.html', h: MULTI, k: 'physio rehab neuro physiotherapy' },
-        { n: 'Paediatrics & Neonatology', u: 'paediatrics.html', h: MULTI, k: 'child children baby nicu pediatrics' },
         { n: 'Dermatology & Cosmetology', u: 'dermatology.html', h: MULTI, k: 'skin hair cosmetic' },
-        { n: 'Psychiatry & Rehabilitation', u: 'psychiatry.html', h: MULTI, k: 'mental health depression anxiety de-addiction' },
         { n: 'Medical Oncology (Chemo & Daycare)', u: 'medical-oncology.html', h: MEDPARK, k: 'cancer chemotherapy immunotherapy oncology' },
         { n: 'Surgical Oncology', u: 'surgical-oncology.html', h: MEDPARK, k: 'cancer surgery tumour tumor oncology' },
         { n: 'Radiation Oncology (LINAC)', u: 'radiation-oncology.html', h: MEDPARK, k: 'cancer radiation radiotherapy linac oncology' },
@@ -57,11 +54,10 @@
         { n: 'Dr. Deepti Singh', s: 'HOD - ENT (Otorhinolaryngology)', u: 'dr-deepti-singh.html', h: MULTI },
         { n: 'Dr. Anil Bansal', s: 'HOD - Radiology', u: 'dr-anil-bansal.html', h: MULTI },
         { n: 'Dr. Deepam Das', s: 'HOD - Laparoscopic & Bariatric Surgery', u: 'dr-deepam-das.html', h: MULTI },
-        { n: 'Dr. Devilal', s: 'Anaesthesiology & Pain Management', u: 'dr-devilal.html', h: MULTI },
+        { n: 'Dr. Devilal Saharan', s: 'Anaesthesiology & Pain Management', u: 'dr-devilal.html', h: MULTI },
         { n: 'Dr. Parveen', s: 'Anaesthesiologist & Critical Care Intensivist', u: 'dr-parveen.html', h: MULTI },
         { n: 'Dr. Sanjeet Sahu', s: 'Consultant Neuro-Physiotherapist', u: 'dr-sanjeet-sahu.html', h: MULTI },
         { n: 'Dr. Megha Gupta', s: 'Consultant Dermatologist & Cosmetologist', u: 'dr-megha-gupta.html', h: MULTI },
-        { n: 'Dr. Shubham Mehta', s: 'Consultant Psychiatrist & De-addiction Specialist', u: 'dr-shubham-mehta.html', h: MULTI }
     ];
 
     var PAGES = [

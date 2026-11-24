@@ -1,0 +1,227 @@
+/* Shared mobile/tablet fixes. Loaded last in <head> on every page so it overrides per-page styles. */
+
+/* Doctor photos are 4:5 portraits. On small screens their boxes used to become short and wide,
+   cropping away most of the photo; keep the photo's own shape instead. */
+@media (max-width: 900px) {
+    body .colleague-img {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 5;
+        object-fit: cover !important;
+        object-position: top center !important;
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* service-page specialist card */
+    body .doc-photo-box {
+        height: auto !important;
+        aspect-ratio: 4 / 5;
+        max-width: 300px !important;
+        align-self: center;
+    }
+
+    body .doc-photo-box img {
+        height: 100% !important;
+    }
+
+    /* doctors directory card */
+    body .doc-card-top {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        background: #ffffff !important;
+    }
+
+    body .doc-card-top img {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: 4 / 5;
+    }
+}
+
+/* Home page hospital cards: grid content was wider than the card on phones and got clipped */
+body .hospital > * {
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    body .hospital .h-info {
+        padding: 24px 20px !important;
+    }
+
+    body .hospital .checks {
+        grid-template-columns: 1fr !important;
+    }
+
+    body .hospital .h-logo {
+        max-width: 100%;
+    }
+}
+
+/* Service-page banners: the long "Centre of Excellence" badge couldn't wrap and pushed the
+   banner text, heading and buttons past the right edge on small phones */
+section.hero .wrap > *,
+section.hero .hero-copy,
+section.hero .hero-stats > * {
+    min-width: 0;
+}
+
+section.hero .eyebrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.hero .eyebrow-badge {
+    white-space: normal !important;
+}
+
+section.hero .hero-stats small,
+section.hero .hero-stats b {
+    overflow-wrap: anywhere;
+}
+
+/* Doctors directory: two stacked cards per row on tablets instead of one very wide card */
+@media (min-width: 560px) and (max-width: 768px) {
+    body .doc-directory-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+/* Doctor designations on the home page were cut off with "…"; let them wrap instead */
+body .doc-spec {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+/* Small phones (320–400px): stop fixed minimum widths from pushing content off-screen */
+@media (max-width: 400px) {
+    body .tech-cards-grid,
+    body .modalities-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    body .search-box-wrap {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    body .cta-actions {
+        flex-wrap: wrap;
+        flex-shrink: 1;
+    }
+
+    body .cta-actions .btn {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    body .time-pill {
+        white-space: normal !important;
+    }
+
+    body .doctor-card {
+        min-width: min(350px, calc(100vw - 48px)) !important;
+    }
+
+    /* header: logo + search + directions + menu must fit on one row */
+    body .nav .wrap {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        gap: 8px !important;
+    }
+
+    header .logo {
+        width: 128px !important;
+        height: auto !important;
+    }
+
+    header .ss-trigger,
+    header .nav-directions,
+    header .hamb {
+        width: 36px !important;
+        height: 36px !important;
+    }
+}
+
+/* Doctor profile hero buttons on phones: one full-width "Book" button, then WhatsApp and Call
+   side by side, all the same height (they used to stack at three different widths) */
+@media (max-width: 768px) {
+    body .doc-hero-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px !important;
+        width: 100%;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body .doc-hero-actions .btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100% !important;
+        min-height: 48px;
+        margin: 0 !important;
+        padding: 12px 10px !important;
+        font-size: 15px !important;
+        white-space: nowrap;
+        border-radius: 10px;
+    }
+
+    body .doc-hero-actions .btn:first-child {
+        grid-column: 1 / -1;
+        font-size: 16px !important;
+    }
+
+    body .doc-hero-actions .btn svg {
+        margin-right: 0 !important;
+        flex-shrink: 0;
+    }
+
+    body .doc-hero-stats {
+        width: 100%;
+        max-width: 440px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+body .doc-hero-grid > * {
+    min-width: 0;
+}
+
+@media (max-width: 380px) {
+    body .doc-hero-actions .btn {
+        white-space: normal;
+        font-size: 13.5px !important;
+        padding: 10px 8px !important;
+        gap: 6px;
+    }
+}
+
+/* Service pages: intro checklist stayed in two cramped columns on phones */
+body .check-item {
+    align-items: flex-start !important;
+}
+
+body .check-item > svg,
+body .check-item > i {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+@media (max-width: 600px) {
+    body .check-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+}

@@ -1588,7 +1588,7 @@
 
         .f-hosp-sub {
             font-size: 13px;
-            color: #278132;
+            color: #e2e8f0;
             font-weight: 600;
             margin: 0 0 4px !important;
         }
@@ -1636,7 +1636,7 @@
             width: 38px;
             height: 38px;
             border-radius: 8px;
-            background: var(--green);
+            background: #e53935;
             color: #fff;
             display: grid;
             place-items: center;
@@ -1760,6 +1760,45 @@
                 gap: 24px !important;
             }
         }
+
+        .tpa-note {
+            margin-top: 32px;
+            background: #f4f8fc;
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--blue);
+            border-radius: 10px;
+            padding: 20px 24px;
+        }
+
+        .tpa-note p {
+            margin: 0 0 12px;
+            color: var(--blue);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .tpa-note-contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px;
+            font-size: 14px;
+        }
+
+        .tpa-note-contacts a,
+        .tpa-note-contacts span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--blue);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .tpa-note-contacts svg {
+            width: 15px;
+            height: 15px;
+            color: var(--green);
+        }
     </style>
     <link rel="stylesheet" href="include/header-footer.css">
     <style>
@@ -1787,6 +1826,9 @@
             border-color: rgba(95, 209, 111, 0.45);
         }
     </style>
+    <link rel="stylesheet" href="assets/css/typography.css?v=20261123c">
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20261123j">
+    <link rel="stylesheet" href="assets/css/colors.css?v=20261124b">
 </head>
 
 <body>
@@ -1811,7 +1853,7 @@
                     <button type="button" class="lang-btn active" data-lang="en" onclick="switchLanguage('en')"><i
                             data-lucide="globe" style="width:13px;height:13px"></i> English</button>
                     <span class="lang-sep">|</span>
-                    <button type="button" class="lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button><span class="lang-sep">|</span><button type="button" class="lang-btn" data-lang="pa" onclick="switchLanguage('pa')">ਪੰਜਾਬੀ</button>
+                    <button type="button" class="lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
                 </div>
             </div>
         </div>
@@ -1836,8 +1878,6 @@
                             onclick="switchLanguage('en')">English</button>
                         <button type="button" class="mobile-lang-btn" data-lang="hi"
                             onclick="switchLanguage('hi')">हिन्दी</button>
-                        <button type="button" class="mobile-lang-btn" data-lang="pa"
-                            onclick="switchLanguage('pa')">ਪੰਜਾਬੀ</button>
                     </div>
                 </div>
                 <div class="mobile-nav-links">
@@ -1870,25 +1910,20 @@
                                     </div>
                                 </div>
                                 <div class="mega-links-grid">
-                                    <a href="critical-care.html"><i data-lucide="activity"></i><span>Critical Care &amp; ICU</span></a>
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Internal Medicine (DNB Centre)</span></a>
-                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Interventional Cardiology</span></a>
+                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical Care</span></a>
+                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Cardiology</span></a>
+                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology</span></a>
                                     <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology &amp; Hepatology</span></a>
-                                    <a href="urology.html"><i data-lucide="activity"></i><span>Urology &amp; Endourology</span></a>
-                                    <a href="emergency-trauma.html"><i data-lucide="zap"></i><span>24/7 Emergency &amp; Trauma Care</span></a>
-                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Robotic Joint Replacement &amp; Orthopaedics</span></a>
-                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>General &amp; Laparoscopic Surgery</span></a>
-                                    <a href="bariatric-surgery.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Bariatric Surgery</span></a>
+                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery</span></a>
                                     <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                    <a href="ent.html"><i data-lucide="headphones"></i><span>ENT (Ear, Nose &amp; Throat)</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesiology &amp; Pain Management</span></a>
-                                    <a href="radiology.html"><i data-lucide="scan"></i><span>CT Scan &amp; Radiology</span></a>
-                                    <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology &amp; Microbiology Lab</span></a>
-                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy &amp; Rehabilitation</span></a>
-                                    <a href="paediatrics.html"><i data-lucide="smile"></i><span>Paediatrics &amp; Neonatology</span></a>
-                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology &amp; Cosmetology</span></a>
-                                    <a href="psychiatry.html"><i data-lucide="heart"></i><span>Psychiatry &amp; Rehabilitation</span></a>
+                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp; Robotic Joint Replacement</span></a>
+                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>Laparoscopic &amp; General Surgery</span></a>
+                                    <a href="ent.html"><i data-lucide="headphones"></i><span>ENT</span></a>
+                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
+                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
+                                    <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
+                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy</span></a>
+                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology</span></a>
                                 </div>
                             </div>
                             <div class="mega-col medpark-col">
@@ -1903,24 +1938,16 @@
                                     <a href="medical-oncology.html" class="featured-service">
                                         <i data-lucide="ribbon"></i>
                                         <div>
-                                            <b>Medical Oncology (Chemo &amp; Daycare)</b>
-                                            <small>Chemotherapy Suite (Biosafety Cabinet) &amp; Immunotherapy</small>
+                                            <b>Oncology</b>
+                                            <small>Medical, Surgical &amp; Radiation Oncology</small>
                                         </div>
                                     </a>
-                                    <a href="critical-care.html"><i data-lucide="stethoscope"></i><span>Critical Care &amp; ICU</span></a>
-                                    <a href="surgical-oncology.html"><i data-lucide="shield-alert"></i><span>Surgical Oncology (Modular OTs)</span></a>
-                                    <a href="radiation-oncology.html"><i data-lucide="scan"></i><span>Radiation Oncology (LINAC)</span></a>
-                                    <a href="urology.html"><i data-lucide="activity"></i><span>Advanced Laparoscopy &amp; Urology</span></a>
-                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp; Spine</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="heart"></i><span>Pain &amp; Palliative Care Unit</span></a>
-                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Digital Mammography &amp; Diagnostics</span></a>
-                                    <a href="sukhda-medpark-hospital.html#tumor-board"><i data-lucide="users"></i><span>Multidisciplinary Tumour Board</span></a>
                                 </div>
                             </div>
                         </div>
                         <div class="mega-footer">
-                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 22 Clinical Specialities &amp; Services &rarr;</a>
-                            <div class="mega-emergency-tag"><i data-lucide="phone-call"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
+                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All Clinical Specialities &amp; Services &rarr;</a>
+                            <div class="mega-emergency-tag"><i data-lucide="phone-call" style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
                         </div>
                     </div>
                 </span>
@@ -1939,7 +1966,7 @@
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
                     <a class="btn" href="tel:01662249473"
                         style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i
-                            data-lucide="phone-call" style="color:var(--green)"></i>ER: 01662-249473</a>
+                            data-lucide="phone-call" style="color:#e53935 !important"></i>ER: 01662-249473</a>
                 </div>
             </nav>
             <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
@@ -1951,42 +1978,21 @@
 
     <!-- HERO SECTION -->
     <section class="empanelled-hero">
-        <div class="wrap hero-grid">
+        <div class="wrap hero-grid" style="grid-template-columns:1fr">
             <div>
                 <div class="crumb">
                     <a href="index.html">Home</a>
                     <i data-lucide="chevron-right" style="width:14px;height:14px"></i>
                     <span>Cashless &amp; Empanelled Partners</span>
                 </div>
-                <div class="badge"><i data-lucide="shield-check"></i> 24/7 Cashless &amp; TPA Helpdesk</div>
                 <h1 class="hero-title">Empanelled Corporates, <span>TPAs &amp; Cashless Insurance</span></h1>
                 <p class="hero-desc">Sukhda Multispeciality Hospital provides round-the-clock cashless
                     hospitalisation, transparent claims processing, and dedicated TPA coordination with major central and state government departments, PSUs, and India's premier health insurers.</p>
                 <div class="hero-actions">
                     <a href="#partnerDirectory" class="btn primary"><i data-lucide="layers"></i> Explore All Empanelled
                         Partners</a>
-                    <a href="tel:01662249473" class="btn white"><i data-lucide="phone-call"></i> 24/7 TPA Desk:
+                    <a href="tel:01662249473" class="btn white"><i data-lucide="phone-call"></i> TPA Desk:
                         01662-249473</a>
-                </div>
-            </div>
-            <div>
-                <div class="hero-stats-card">
-                    <div class="hero-stat-item">
-                        <div class="hero-stat-num">14</div>
-                        <div class="hero-stat-label">Govt. &amp; PSU Tie-Ups</div>
-                    </div>
-                    <div class="hero-stat-item">
-                        <div class="hero-stat-num">27</div>
-                        <div class="hero-stat-label">Empanelled TPAs</div>
-                    </div>
-                    <div class="hero-stat-item">
-                        <div class="hero-stat-num">21</div>
-                        <div class="hero-stat-label">Cashless Insurers</div>
-                    </div>
-                    <div class="hero-stat-item">
-                        <div class="hero-stat-num">24/7</div>
-                        <div class="hero-stat-label">Emergency Cashless Desk</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -2315,7 +2321,7 @@
                     <span class="process-step-badge">01</span>
                     <div class="process-icon"><i data-lucide="credit-card"></i></div>
                     <h3>TPA Registration</h3>
-                    <p>Present your health insurance card / TPA e-card along with the patient's government ID at our 24/7 TPA
+                    <p>Present your health insurance card / TPA e-card along with the patient's government ID at our TPA
                         Desk in the main reception on admission.</p>
                 </div>
 
@@ -2342,174 +2348,20 @@
                     <p>When discharge is advised, the final hospital bill and clinical summary are uploaded for cashless settlement, enabling a hassle-free departure.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- CHECKLIST & 24/7 TPA DESK -->
-    <section class="sec-info-banner">
-        <div class="wrap info-two-col">
-            <!-- Checklist Card -->
-            <div class="checklist-card">
-                <div>
-                    <span class="kicker"><i data-lucide="file-check-2"></i> Patient Checklist</span>
-                    <h3 style="font-size: 24px; color: var(--blue); margin: 6px 0 10px;">Documents Required for Cashless
-                        Claims</h3>
-                    <p style="font-size: 14.5px; color: var(--muted); margin: 0;">Please keep the following original documents, with photocopies, ready at the time of admission (planned or emergency):</p>
-
-                    <div class="checklist-items">
-                        <div class="check-item">
-                            <i data-lucide="check-circle-2"></i>
-                            <span>Health Insurance Card / TPA E-Card with an active policy number</span>
-                        </div>
-                        <div class="check-item">
-                            <i data-lucide="check-circle-2"></i>
-                            <span>Government Photo ID of the Patient &amp; Primary Insured (Aadhaar / Voter ID /
-                                PAN)</span>
-                        </div>
-                        <div class="check-item">
-                            <i data-lucide="check-circle-2"></i>
-                            <span>Treating Doctor's Consultation Prescription &amp; Admission Advice</span>
-                        </div>
-                        <div class="check-item">
-                            <i data-lucide="check-circle-2"></i>
-                            <span>Recent Diagnostic Investigation Reports (Blood, X-Ray, CT Scan, Ultrasound)</span>
-                        </div>
-                        <div class="check-item">
-                            <i data-lucide="check-circle-2"></i>
-                            <span>Employee ID Card / Dependant Card (for Corporate &amp; PSU Beneficiaries)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--muted);">
-                    <i data-lucide="info" style="width:14px;height:14px;vertical-align:middle;color:var(--green)"></i>
-                    <i>For planned surgeries, obtaining pre-authorisation 48 hours in advance avoids waiting on the day of admission.</i>
-                </div>
-            </div>
-
-            <!-- TPA Desk Contact Card -->
-            <div class="tpa-desk-box">
-                <div>
-                    <span class="badge"
-                        style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color:#fff"><i
-                            data-lucide="headphones"></i> Dedicated Assistance</span>
-                    <h3 style="font-size: 26px; margin: 8px 0 10px; color:#fff">24/7 Cashless &amp; TPA Helpdesk</h3>
-                    <p style="color: #cbd5e1; font-size: 14.5px; margin: 0; line-height: 1.6;">Our dedicated corporate
-                        billing executives are on-site 24 hours a day to guide patients through policy terms, room rent
-                        caps, pre-approvals, and claim settlements.</p>
-
-                    <div class="desk-contact-list">
-                        <a href="tel:01662249473" class="desk-contact-item">
-                            <i data-lucide="phone-call"></i>
-                            <div>
-                                <b>01662-249473 / 01662-248473 / +91 99966-48483</b>
-                                <small>Hospital Landline &bull; Extension: TPA Desk</small>
-                            </div>
-                        </a>
-                        <a href="https://wa.me/919996544005" target="_blank" class="desk-contact-item">
-                            <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22"
-                                height="22" style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
-                                <path fill="#25D366"
-                                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
-                                <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                            </svg>
-                            <div>
-                                <b style="color:#25D366">+91 99965-44005</b>
-                                <small>WhatsApp Cashless Desk &bull; 24/7 Document Sharing</small>
-                            </div>
-                        </a>
-                        <a href="mailto:sukhdahospital@gmail.com" class="desk-contact-item">
-                            <i data-lucide="mail"></i>
-                            <div>
-                                <b>sukhdahospital@gmail.com</b>
-                                <small>Email Pre-Authorisation Queries &amp; Documents</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div style="font-size: 13.5px; color: #bcd4e9; display: flex; align-items: center; gap: 8px;">
-                    <i data-lucide="map-pin" style="width:15px;height:15px;color:#278132"></i>
-                    <span>TPA Reception Desk, Ground Floor, Sukhda Multispeciality Hospital, Opposite Green Belt, Delhi Road, Hisar - 125001</span>
+            <div class="tpa-note">
+                <p><b>Note:</b> If you have any queries about cashless services, claim approvals, or documents required
+                    for your insurance or TPA process, please contact our Billing Desk or Front Office &mdash; we are here
+                    to help you!</p>
+                <div class="tpa-note-contacts">
+                    <a href="tel:01662249473"><i data-lucide="phone-call"></i> 01662-249473 / 01662-248473 / +91 99966-48483</a>
+                    <a href="https://wa.me/919996544005" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp: +91 99965-44005</a>
+                    <a href="mailto:sukhdahospital@gmail.com"><i data-lucide="mail"></i> sukhdahospital@gmail.com</a>
+                    <span><i data-lucide="map-pin"></i> TPA Desk, Ground Floor, Sukhda Multispeciality Hospital, Delhi Road, Hisar</span>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- FREQUENTLY ASKED QUESTIONS -->
-    <section class="sec-faq">
-        <div class="wrap">
-            <div class="sec-header-block" style="text-align: center; max-width: 760px; margin: 0 auto;">
-                <span class="kicker" style="justify-content: center;"><i data-lucide="help-circle"></i> Clear
-                    Answers</span>
-                <h2 class="sec-title">Cashless &amp; Empanelment FAQs</h2>
-                <p class="sec-desc">Answers to common questions regarding cashless mediclaim approvals, empanelment
-                    status, and reimbursement assistance at Sukhda Healthcare.</p>
-            </div>
-
-            <div class="faq-accordion">
-                <div class="faq-item active">
-                    <button type="button" class="faq-btn">
-                        <span>Is cashless hospitalisation available 24/7 for emergency admissions?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        Yes. For emergency admissions at Sukhda Multispeciality Hospital, our emergency desk starts cashless pre-authorisation as soon as the patient is stabilised. The required medical documents are dispatched to your TPA/insurer within 2 to 4
-                        hours of admission.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button type="button" class="faq-btn">
-                        <span>What if my insurance company or employer is not listed above?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        If your specific insurance provider or employer does not have an active cashless tie-up, you can still claim reimbursement. Our dedicated billing desk will prepare all necessary signed
-                        and stamped paperwork — including detailed itemised bills, payment receipts, discharge
-                        summaries, and diagnostic investigation reports — to facilitate hassle-free reimbursement.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button type="button" class="faq-btn">
-                        <span>Are non-medical expenses covered under the cashless sanction?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        As per standard IRDAI guidelines, certain items (such as gloves, hygiene kits, registration charges, and extra food) are classified as non-medical expenses and are not
-                        payable by insurers. These small incidental charges are payable directly by the patient upon
-                        discharge.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button type="button" class="faq-btn">
-                        <span>Are Haryana Government employees and pensioners eligible for cashless treatment?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        Yes, Sukhda Multispeciality Hospital is accredited and empanelled for Haryana Government
-                        employees, pensioners, and their recognised dependants. Beneficiaries can use cashless services as per the Haryana Health Department circulars and guidelines.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button type="button" class="faq-btn">
-                        <span>How much time does it take for a cashless pre-authorisation to be approved?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        For planned admissions, pre-authorisation approval typically takes 2 to 4 hours after our team
-                        uploads the complete clinical dossier. For emergency cases, insurers usually give initial approval within 60 to 90 minutes.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -2625,7 +2477,7 @@
                 <div class="bottom-badges">
                     <span><i data-lucide="map-pin"></i> Hisar, Haryana</span>
                     <span><i data-lucide="shield-check"></i> NABH Accredited</span>
-                    <span><i data-lucide="phone"></i> 24/7 ER: 01662-249473</span>
+                    <span><i data-lucide="phone" style="color:#e53935 !important"></i> 24/7 ER: 01662-249473</span>
                 </div>
             </div>
         </div>
@@ -2672,7 +2524,7 @@
         <span class="f-icon"><i data-lucide="languages" style="width:15px;height:15px"></i></span>
         <button type="button" class="f-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
         <span class="f-sep">|</span>
-        <button type="button" class="f-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button><span class="f-sep">|</span><button type="button" class="f-btn" data-lang="pa" onclick="switchLanguage('pa')">ਪੰਜਾਬੀ</button>
+        <button type="button" class="f-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
     </div>
 
     <!-- Partner directory: category tabs + search -->
@@ -2722,7 +2574,7 @@
 
     <!-- Google Translate Script Container -->
     <div id="google_translate_element"></div>
-    <script src="assets/js/translate.js?v=20261111"></script>
+    <script src="assets/js/translate.js?v=20261123"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script src="include/include.js"></script>
