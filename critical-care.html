@@ -1099,6 +1099,8 @@
         .doc-card-wrap {
             margin-top: 24px;
             display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
         }
 
         .doc-profile-card {
@@ -2241,7 +2243,6 @@
             <div class="links">
                 <div class="top-directions-dropdown">
                     <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false" title="Get Directions to Sukhda Hospitals">
-                        <i data-lucide="map-pin"></i>
                         <span>Get Directions</span>
                         <i data-lucide="chevron-down" class="top-dir-chevron"></i>
                     </button>
@@ -2251,25 +2252,21 @@
                             target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
                             data-directions-lat="29.1293189" data-directions-lng="75.7867020"
                             title="Open Sukhda Multispeciality Hospital in Google Maps">
-                            <span class="top-dir-icon"><i data-lucide="building-2"></i></span>
                             <span class="top-dir-info">
                                 <b>Sukhda Multispeciality Hospital</b>
                                 <small>Opp. Green Belt, Delhi Road, Hisar</small>
                                 <span class="dir-km" hidden></span>
                             </span>
-                            <i data-lucide="navigation" class="top-dir-arrow"></i>
                         </a>
                         <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+MedPark,+Sector-5,+Hisar"
                             target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
                             data-directions-lat="29.1627" data-directions-lng="75.7516"
                             title="Open Sukhda MedPark in Google Maps">
-                            <span class="top-dir-icon medpark"><i data-lucide="activity"></i></span>
                             <span class="top-dir-info">
                                 <b>Sukhda MedPark Hospital</b>
                                 <small>Cancer &amp; Super-Speciality, Sector-5, Hisar</small>
                                 <span class="dir-km" hidden></span>
                             </span>
-                            <i data-lucide="navigation" class="top-dir-arrow"></i>
                         </a>
                     </div>
                 </div>
@@ -2663,9 +2660,9 @@
     <!-- SECTION 5: LEAD SPECIALIST -->
     <section class="section" id="specialist">
         <div class="wrap">
-            <div class="kicker">LEAD CLINICAL SPECIALIST</div>
-            <h2 class="title">Director &amp; Head – Internal Medicine &amp; Critical Care</h2>
-            <p class="sub">Director of Sukhda Multispeciality Hospital, heading the Department of Internal Medicine &amp; Critical Care.</p>
+            <div class="kicker">INTENSIVE CARE FACULTY</div>
+            <h2 class="title">Critical Care &amp; ICU Specialists</h2>
+            <p class="sub">Round-the-clock intensivist coverage, advanced mechanical ventilation, and multidisciplinary critical care monitoring.</p>
 
             <div class="doc-card-wrap">
                 <article class="doc-profile-card">
@@ -2677,12 +2674,45 @@
                         <h3><a href="dr-amit-mehta.html" style="color:inherit;text-decoration:none">Dr. Amit Mehta</a></h3>
                         <div class="doc-qual">MBBS, MD (Medicine) · AIIMS, New Delhi</div>
                         <div class="doc-spec-text">
-                            <span>Complex Medical Disorders Management</span>
-                            <span>Critical Care, Poisoning &amp; Snake Bite Cases</span>
-                            <span>Diabetes, Obesity, Cholesterol Disorders</span>
+                            <span>Critical Care &amp; ICU Management</span>
+                            <span>Poisoning, Shock &amp; Sepsis Resuscitation</span>
+                            <span>Complex Multisystem Organ Failure</span>
                         </div>
-                        <a class="btn primary small" href="dr-amit-mehta.html"><i data-lucide="calendar-days"></i>View Profile
-                            &amp; Book</a>
+                        <a class="btn primary small" href="dr-amit-mehta.html"><i data-lucide="calendar-days"></i>View Profile &amp; Book</a>
+                    </div>
+                </article>
+
+                <article class="doc-profile-card">
+                    <div class="doc-photo-box">
+                        <img src="assets/images/doctors/latest/dr-devilal1.webp" alt="Dr. Devilal Saharan — Consultant — Critical Care &amp; Anaesthesiology, Sukhda Hospital Hisar">
+                    </div>
+                    <div class="doc-info-box">
+                        <span class="doc-pill">Consultant — Critical Care &amp; Anaesthesiology</span>
+                        <h3><a href="dr-devilal.html" style="color:inherit;text-decoration:none">Dr. Devilal Saharan</a></h3>
+                        <div class="doc-qual">D.A. (Anaesthesiology)</div>
+                        <div class="doc-spec-text">
+                            <span>Critical Care Resuscitation</span>
+                            <span>Invasive Haemodynamic Monitoring</span>
+                            <span>Emergency Airway Management</span>
+                        </div>
+                        <a class="btn primary small" href="dr-devilal.html"><i data-lucide="calendar-days"></i>View Profile &amp; Book</a>
+                    </div>
+                </article>
+
+                <article class="doc-profile-card">
+                    <div class="doc-photo-box">
+                        <img src="assets/images/doctors/doctor-placeholder.svg" alt="Dr. Sumit Grover — Consultant — Critical Care &amp; Anaesthesia, Sukhda Hospital Hisar">
+                    </div>
+                    <div class="doc-info-box">
+                        <span class="doc-pill">Consultant — Critical Care &amp; Anaesthesia</span>
+                        <h3>Dr. Sumit Grover</h3>
+                        <div class="doc-qual">DA (Anaesthesiology)</div>
+                        <div class="doc-spec-text">
+                            <span>Intensive Care Management</span>
+                            <span>Post-Operative Critical Care</span>
+                            <span>Acute Life Support &amp; Sepsis Care</span>
+                        </div>
+                        <a class="btn primary small" href="contact.html"><i data-lucide="calendar-days"></i>Book Consultation</a>
                     </div>
                 </article>
             </div>
@@ -2830,7 +2860,7 @@
     <section class="cta" id="contact">
         <div class="wrap">
             <div class="cta-visual">
-                <img src="assets/images/logo-mark.png" alt="Sukhda Healthcare Logo Mark">
+                <img src="assets/images/doctor-consult.jpg" alt="Sukhda Specialist Doctor">
             </div>
             <div>
                 <h2>Need Information About Critical Care or ICU Admission?</h2>

@@ -1100,6 +1100,8 @@
         .doc-card-wrap {
             margin-top: 24px;
             display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
         }
 
         .doc-profile-card {
@@ -2240,7 +2242,6 @@
             <div class="links">
                 <div class="top-directions-dropdown">
                     <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false" title="Get Directions to Sukhda Hospitals">
-                        <i data-lucide="map-pin"></i>
                         <span>Get Directions</span>
                         <i data-lucide="chevron-down" class="top-dir-chevron"></i>
                     </button>
@@ -2250,25 +2251,21 @@
                             target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
                             data-directions-lat="29.1293189" data-directions-lng="75.7867020"
                             title="Open Sukhda Multispeciality Hospital in Google Maps">
-                            <span class="top-dir-icon"><i data-lucide="building-2"></i></span>
                             <span class="top-dir-info">
                                 <b>Sukhda Multispeciality Hospital</b>
                                 <small>Opp. Green Belt, Delhi Road, Hisar</small>
                                 <span class="dir-km" hidden></span>
                             </span>
-                            <i data-lucide="navigation" class="top-dir-arrow"></i>
                         </a>
                         <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+MedPark,+Sector-5,+Hisar"
                             target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
                             data-directions-lat="29.1627" data-directions-lng="75.7516"
                             title="Open Sukhda MedPark in Google Maps">
-                            <span class="top-dir-icon medpark"><i data-lucide="activity"></i></span>
                             <span class="top-dir-info">
                                 <b>Sukhda MedPark Hospital</b>
                                 <small>Cancer &amp; Super-Speciality, Sector-5, Hisar</small>
                                 <span class="dir-km" hidden></span>
                             </span>
-                            <i data-lucide="navigation" class="top-dir-arrow"></i>
                         </a>
                     </div>
                 </div>
@@ -2646,26 +2643,44 @@
     <!-- SECTION 5: LEAD SPECIALIST -->
     <section class="section" id="specialist">
         <div class="wrap">
-            <div class="kicker">LEAD CLINICAL SPECIALIST</div>
-            <h2 class="title">Head of Radiodiagnosis &amp; Imaging</h2>
-            <p class="sub">Head of Radiology and Radiation Safety Officer — X-Ray, CT Scan and Ultrasonography.</p>
+            <div class="kicker">RADIODIAGNOSIS TEAM</div>
+            <h2 class="title">Radiodiagnosis &amp; Imaging Specialists</h2>
+            <p class="sub">Senior radiologists delivering round-the-clock precision diagnostic imaging, CT scan, ultrasound and MRI reporting.</p>
 
             <div class="doc-card-wrap">
                 <article class="doc-profile-card">
                     <div class="doc-photo-box">
-                        <img src="assets/images/doctors/latest/dr-anil-bansal1.webp" alt="Dr. Anil Bansal — HOD and Consultant — Radiology, Sukhda Hospital Hisar">
+                        <img src="assets/images/doctors/latest/dr-anil-bansal1.webp"
+                            alt="Dr. Anil Bansal — Radio Diagnosis &amp; Imaging, Sukhda Hospital Hisar">
                     </div>
                     <div class="doc-info-box">
-                        <span class="doc-pill">Radio Diagnosis &amp; Imaging</span>
+                        <span class="doc-pill">Head of Radiodiagnosis &amp; Imaging</span>
                         <h3><a href="dr-anil-bansal.html" style="color:inherit;text-decoration:none">Dr. Anil Bansal</a></h3>
                         <div class="doc-qual">MBBS, DMRD</div>
                         <div class="doc-spec-text">
                             <span>Digital X-Ray Reporting</span>
                             <span>Ultrasound &amp; Color Doppler</span>
-                            <span>CT Scan Interpretation</span>
+                            <span>CT Scan Interpretation &amp; MRI Reporting</span>
                         </div>
-                        <a class="btn primary small" href="dr-anil-bansal.html"><i data-lucide="calendar-days"></i>View Profile
-                            &amp; Book</a>
+                        <a class="btn primary small" href="dr-anil-bansal.html"><i data-lucide="calendar-days"></i>View Profile &amp; Book</a>
+                    </div>
+                </article>
+
+                <article class="doc-profile-card">
+                    <div class="doc-photo-box">
+                        <img src="assets/images/doctors/doctor-placeholder.svg"
+                            alt="Dr. Priyanka Chhabra — Consultant — Radiodiagnosis &amp; Imaging, Sukhda Hospital Hisar">
+                    </div>
+                    <div class="doc-info-box">
+                        <span class="doc-pill">Consultant — Radiodiagnosis &amp; Imaging</span>
+                        <h3>Dr. Priyanka Chhabra</h3>
+                        <div class="doc-qual">DMRD (Radiology)</div>
+                        <div class="doc-spec-text">
+                            <span>Radiodiagnosis &amp; Imaging</span>
+                            <span>Ultrasound &amp; Doppler Imaging</span>
+                            <span>Diagnostic CT Reporting</span>
+                        </div>
+                        <a class="btn primary small" href="contact.html"><i data-lucide="calendar-days"></i>Book Consultation</a>
                     </div>
                 </article>
             </div>
@@ -2814,7 +2829,7 @@
     <section class="cta" id="contact">
         <div class="wrap">
             <div class="cta-visual">
-                <img src="assets/images/logo-mark.png" alt="Sukhda Healthcare Logo Mark">
+                <img src="assets/images/doctor-consult.jpg" alt="Sukhda Specialist Doctor">
             </div>
             <div>
                 <h2>Need an Emergency or Routine Diagnostic Scan?</h2>
