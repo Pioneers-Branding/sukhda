@@ -1,3 +1,14 @@
+
+/* ===== MOBILE ONLY NAV ITEMS ===== */
+/* Strictly hide on desktop & laptop (all screens > 900px) */
+.mobile-nav-links a.mobile-only-nav,
+.mobile-nav-links .mobile-only-nav,
+.menu a.mobile-only-nav,
+.menu .mobile-only-nav,
+a.mobile-only-nav,
+.mobile-only-nav {
+    display: none !important;
+}
 /* ==========================================================================
    SUKHDA HEALTHCARE - UNIFIED HEADER & FOOTER STYLESHEET
    Includes Navigation (with clean medium font weight 500), Dropdowns, Mega-Menu,
@@ -189,7 +200,7 @@
     padding: 4px 8px 8px;
     border-bottom: 1px solid #edf2f7;
     margin-bottom: 6px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .top .links .top-directions-menu a.top-dir-item,
@@ -248,7 +259,7 @@
     font-size: 13px !important;
     font-weight: 700 !important;
     color: #052159 !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.3;
     white-space: nowrap;
     overflow: hidden;
@@ -435,7 +446,12 @@ header.nav,
     .mobile-menu-head,
     .mobile-menu-footer,
     .mobile-lang-wrap,
-    .nav-overlay {
+    .nav-overlay,
+    .mobile-only-nav,
+    .mobile-nav-links a.mobile-only-nav,
+    .mobile-nav-links .mobile-only-nav,
+    .menu a.mobile-only-nav,
+    .menu .mobile-only-nav {
         display: none !important;
     }
 
@@ -455,7 +471,7 @@ header.nav,
         transform: none !important;
         height: 100% !important;
         flex: 1 1 auto !important;
-        font-family: 'Montserrat', sans-serif !important;
+        font-family: 'Inter', sans-serif !important;
         font-weight: 500 !important;
         gap: 0 !important;
     }
@@ -476,7 +492,7 @@ header.nav,
     .nav-group>a {
         padding: 28px 0 !important;
         position: relative !important;
-        font-family: 'Montserrat', sans-serif !important;
+        font-family: 'Inter', sans-serif !important;
         font-weight: 500 !important;
         /* Regular/Medium 500, NOT BOLD */
         font-size: 14px !important;
@@ -685,6 +701,15 @@ header.nav,
         padding: 8px 14px !important;
         font-size: 12.5px !important;
     }
+
+    .mobile-nav-links a.mobile-only-nav,
+    .mobile-nav-links .mobile-only-nav,
+    .menu a.mobile-only-nav,
+    .menu .mobile-only-nav,
+    a.mobile-only-nav,
+    .mobile-only-nav {
+        display: none !important;
+    }
 }
 
 /* Header Search Trigger Button (Icon-Only) */
@@ -745,7 +770,7 @@ header.nav,
     border-radius: 8px !important;
     background: #278132 !important;
     color: #ffffff !important;
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Inter', sans-serif !important;
     font-size: 14.5px !important;
     font-weight: 700 !important;
     text-decoration: none !important;
@@ -1166,6 +1191,11 @@ header.nav,
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
+    }
+
+    .mobile-nav-links a.mobile-only-nav,
+    .mobile-nav-links .mobile-only-nav {
+        display: flex !important;
     }
 
     .mobile-nav-links a::after,
@@ -2209,36 +2239,110 @@ header.nav,
     color: #052159;
 }
 
-.nav-directions {
-    display: none;
+/* ===== MOBILE GET DIRECTIONS DROPDOWN ===== */
+.nav-directions-dropdown {
+    display: none !important;
 }
 
 @media (max-width: 900px) {
-    .nav-directions {
-        display: inline-flex;
+    .nav-directions-dropdown {
+        display: inline-flex !important;
         align-items: center;
-        gap: 5px;
-        margin-left: auto;
-        margin-right: 6px;
-        padding: 7px 9px;
-        border-radius: 8px;
-        border: 1.5px solid #cfe3d3;
-        background: #eaf5ec;
-        color: #278132;
-        font-size: 12px;
-        font-weight: 700;
-        text-decoration: none;
+        position: relative;
+        margin-left: 0;
+        margin-right: 8px;
+        z-index: 1010;
+        flex-shrink: 0;
     }
 
-    .nav-directions i,
-    .nav-directions svg {
-        width: 18px;
-        height: 18px;
+    .nav-directions-dropdown .nav-directions {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        padding: 0 !important;
+        border-radius: 10px !important;
+        border: 1.5px solid #cfe3d3 !important;
+        background: #eaf5ec !important;
+        color: #278132 !important;
+        cursor: pointer;
+        line-height: 1;
+        outline: none;
+        appearance: none;
+        -webkit-appearance: none;
+        font-family: inherit;
+        transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+        box-sizing: border-box;
     }
 
-    .nav-directions .dir-km {
-        padding: 0;
-        background: none;
+    .nav-directions-dropdown .nav-directions:hover,
+    .nav-directions-dropdown.is-open .nav-directions {
+        background: #d8eedc !important;
+        border-color: #278132 !important;
+        box-shadow: 0 2px 8px rgba(39, 129, 50, 0.2);
+    }
+
+    .nav-directions-dropdown .nav-directions i,
+    .nav-directions-dropdown .nav-directions svg {
+        width: 20px !important;
+        height: 20px !important;
+        color: #278132 !important;
+        stroke: #278132 !important;
+        stroke-width: 2.2 !important;
+        display: block;
+    }
+
+    .nav-directions-dropdown .nav-directions .dir-km {
+        display: none !important;
+    }
+
+    .nav-directions-dropdown .top-directions-menu {
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        right: 0 !important;
+        left: auto !important;
+        transform: none !important;
+        width: min(320px, calc(100vw - 20px)) !important;
+        max-width: calc(100vw - 20px) !important;
+        background: #ffffff !important;
+        border: 1px solid #dce7f0 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 12px 36px rgba(5, 33, 89, 0.22) !important;
+        padding: 10px !important;
+        z-index: 2050 !important;
+        display: none !important;
+        text-align: left !important;
+        box-sizing: border-box;
+    }
+
+    .nav-directions-dropdown:hover .top-directions-menu {
+        display: none;
+    }
+
+    .nav-directions-dropdown.is-open .top-directions-menu {
+        display: block !important;
+        animation: mobileDirFade 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    }
+
+    .nav-directions-dropdown .top-dir-info b {
+        white-space: normal !important;
+    }
+
+    .nav-directions-dropdown .top-dir-info small {
+        white-space: normal !important;
+    }
+}
+
+@keyframes mobileDirFade {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

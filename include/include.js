@@ -44,6 +44,12 @@
             if (hambBtn) {
                 hambBtn.setAttribute('aria-expanded', 'true');
             }
+            // Close any open directions dropdown when opening drawer
+            document.querySelectorAll('.top-directions-dropdown').forEach(function (dd) {
+                dd.classList.remove('is-open');
+                var b = dd.querySelector('.top-directions-trigger');
+                if (b) b.setAttribute('aria-expanded', 'false');
+            });
         }
 
         if (hambBtn) {
@@ -118,7 +124,7 @@
         // Highlight Active Page in Navigation
         highlightActiveLink(menu);
 
-        // Top Bar Directions Dropdown toggles
+        // Top Bar & Mobile Directions Dropdown toggles
         var topDirDropdowns = document.querySelectorAll('.top-directions-dropdown');
         topDirDropdowns.forEach(function (dd) {
             var btn = dd.querySelector('.top-directions-trigger');
@@ -127,14 +133,26 @@
                 e.preventDefault();
                 e.stopPropagation();
                 var isOpen = dd.classList.contains('is-open');
-                topDirDropdowns.forEach(function (other) { other.classList.remove('is-open'); });
+                topDirDropdowns.forEach(function (other) {
+                    other.classList.remove('is-open');
+                    var b = other.querySelector('.top-directions-trigger');
+                    if (b) b.setAttribute('aria-expanded', 'false');
+                });
                 if (!isOpen) {
+                    closeMenu();
                     dd.classList.add('is-open');
                     btn.setAttribute('aria-expanded', 'true');
-                } else {
-                    btn.setAttribute('aria-expanded', 'false');
                 }
             };
+
+            // Close when any hospital location link inside is clicked
+            var items = dd.querySelectorAll('.top-dir-item');
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    dd.classList.remove('is-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                });
+            });
         });
 
         document.addEventListener('click', function (e) {

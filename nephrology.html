@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <style>
@@ -36,7 +36,7 @@
         body {
             margin: 0;
             color: var(--blue);
-            font: 16.5px/1.6 'Lato', sans-serif;
+            font: 16.5px/1.6 'Inter', sans-serif;
             background: #fff;
             overflow-x: hidden
         }
@@ -76,7 +76,7 @@
         .footer-col h4,
         .footer-col h5,
         .stat-num {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
 
@@ -2217,7 +2217,7 @@
         }
     </style>
     <link rel="stylesheet" href="assets/css/translate.css">
-    <link rel="stylesheet" href="include/header-footer.css">
+    <link rel="stylesheet" href="include/header-footer.css?v=20261125">
     <link rel="stylesheet" href="assets/css/typography.css?v=20261123c">
     <link rel="stylesheet" href="assets/css/responsive.css?v=20261123j">
     <link rel="stylesheet" href="assets/css/colors.css?v=20261124b">
@@ -2383,6 +2383,8 @@
                         <a href="careers.html">Careers</a>
                     </span>
                 </span>
+                <a href="empanelled-corporate.html" class="mobile-only-nav">Cashless / TPA</a>
+                <a href="opd-schedule.html" class="mobile-only-nav">OPD Schedule</a>
             </div>
                 <div class="mobile-menu-footer">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
@@ -2392,6 +2394,34 @@
                 </div>
             </nav>
             <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+            <div class="top-directions-dropdown nav-directions-dropdown">
+                <button type="button" class="top-directions-trigger nav-directions" aria-haspopup="true" aria-expanded="false" aria-label="Get directions to Sukhda Hospitals" title="Get Directions to Sukhda Hospitals">
+                    <i data-lucide="map-pin"></i><span class="dir-km" hidden></span>
+                </button>
+                <div class="top-directions-menu" role="menu">
+                    <div class="top-dir-title">Select Hospital Location</div>
+                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+Multispeciality+Hospital,+Delhi+Road,+Hisar"
+                        target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
+                        data-directions-lat="29.1293189" data-directions-lng="75.7867020"
+                        title="Open Sukhda Multispeciality Hospital in Google Maps">
+                        <span class="top-dir-info">
+                            <b>Sukhda Multispeciality Hospital</b>
+                            <small>Opp. Green Belt, Delhi Road, Hisar</small>
+                            <span class="dir-km" hidden></span>
+                        </span>
+                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sukhda+MedPark,+Sector-5,+Hisar"
+                        target="_blank" rel="noopener" class="top-dir-item" role="menuitem"
+                        data-directions-lat="29.1627" data-directions-lng="75.7516"
+                        title="Open Sukhda MedPark in Google Maps">
+                        <span class="top-dir-info">
+                            <b>Sukhda MedPark Hospital</b>
+                            <small>Cancer &amp; Super-Speciality, Sector-5, Hisar</small>
+                            <span class="dir-km" hidden></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
             <button class="hamb" aria-label="Open menu">☰</button>
         </div>
         <div class="nav-overlay"></div>

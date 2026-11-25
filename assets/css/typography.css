@@ -1,7 +1,9 @@
-/* Site-wide typography: one font family and consistent text sizes on every page.
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Site-wide typography: Inter font family and consistent text sizes on every page.
    Loaded last in <head> so it overrides the per-page styles. Change --site-font to switch the font everywhere. */
 :root {
-    --site-font: 'Lato', sans-serif;
+    --site-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body,
