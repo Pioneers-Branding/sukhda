@@ -3541,7 +3541,371 @@
             }
         }
 
-    </style>
+    
+        /* ========================================================
+           ABOUT SUKHDA HEALTHCARE (NMC HEALTHCARE STYLE REDESIGN)
+           ======================================================== */
+        .ab-sec {
+            padding: 72px 0 80px;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .ab-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.12fr;
+            gap: 56px;
+            align-items: center;
+        }
+
+        /* LEFT COLUMN: IMAGE COLLAGE */
+        .ab-media-col {
+            position: relative;
+            padding: 24px 20px 28px 24px;
+        }
+
+        .ab-media-wrap {
+            position: relative;
+            width: 100%;
+        }
+
+        /* Main OT Image */
+        .ab-main-img-box {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 48px rgba(5, 33, 89, 0.14);
+            background: #052159;
+        }
+
+        .ab-main-img {
+            width: 100%;
+            height: 440px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .ab-media-wrap:hover .ab-main-img {
+            transform: scale(1.02);
+        }
+
+        /* Top-Left Inset Image */
+        .ab-inset-img-box {
+            position: absolute;
+            top: -22px;
+            left: -22px;
+            width: 175px;
+            height: 220px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 5px solid #ffffff;
+            box-shadow: 0 16px 36px rgba(5, 33, 89, 0.22);
+            z-index: 2;
+            background: #ffffff;
+        }
+
+        .ab-inset-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Floating Bottom-Right Badge */
+        .ab-stat-badge {
+            position: absolute;
+            bottom: -24px;
+            right: -16px;
+            background: #052159;
+            color: #ffffff;
+            border-radius: 18px;
+            padding: 22px 26px;
+            box-shadow: 0 18px 42px rgba(5, 33, 89, 0.32);
+            z-index: 3;
+            min-width: 170px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .ab-stat-badge-icon {
+            width: 32px;
+            height: 32px;
+            color: #38bdf8;
+            margin-bottom: 6px;
+        }
+
+        .ab-stat-badge-icon i,
+        .ab-stat-badge-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke-width: 2.2;
+        }
+
+        .ab-stat-badge-num {
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+
+        .ab-stat-badge-lbl {
+            font-size: 13.5px;
+            font-weight: 600;
+            line-height: 1.35;
+            color: #cbd5e1;
+            max-width: 140px;
+        }
+
+        /* RIGHT COLUMN: CONTENT */
+        .ab-content-col {
+            padding-left: 8px;
+        }
+
+        .ab-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            color: #052159;
+        }
+
+        .ab-icon-flower {
+            color: #052159;
+            flex-shrink: 0;
+        }
+
+        .ab-line {
+            width: 36px;
+            height: 2px;
+            background: #052159;
+            display: inline-block;
+        }
+
+        .ab-kicker-text {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: #052159;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ab-heading {
+            font-size: 34px;
+            font-weight: 800;
+            line-height: 1.25;
+            color: #052159;
+            margin: 0 0 20px;
+            letter-spacing: -0.3px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ab-callout {
+            position: relative;
+            padding-left: 18px;
+            border-left: 3.5px solid #052159;
+            margin-bottom: 20px;
+        }
+
+        .ab-callout p {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.55;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        .ab-desc p {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: #475569;
+            margin: 0 0 14px;
+        }
+
+        .ab-desc p:last-child {
+            margin-bottom: 22px;
+        }
+
+        .ab-desc b {
+            color: #0f172a;
+        }
+
+        /* ACCREDITATION TAGS */
+        .ab-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .ab-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 6px 13px;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #052159;
+            transition: all 0.2s ease;
+        }
+
+        .ab-tag i,
+        .ab-tag svg {
+            width: 14px;
+            height: 14px;
+            color: #278132;
+            flex-shrink: 0;
+        }
+
+        .ab-tag:hover {
+            background: #eaf5ec;
+            border-color: #cfe3d3;
+            color: #278132;
+        }
+
+        /* ACTIONS ROW */
+        .ab-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            margin-top: 6px;
+        }
+
+        /* NMC Style Timeline Button */
+        .ab-btn-timeline {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 6px 24px 6px 7px;
+            background: #052159;
+            color: #ffffff !important;
+            border-radius: 999px;
+            font-size: 14.5px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(5, 33, 89, 0.22);
+            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .ab-btn-arrow {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #0284c7;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            flex-shrink: 0;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .ab-btn-arrow i,
+        .ab-btn-arrow svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2.5;
+        }
+
+        .ab-btn-timeline:hover {
+            background: #072a72;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(5, 33, 89, 0.32);
+        }
+
+        .ab-btn-timeline:hover .ab-btn-arrow {
+            background: #0369a1;
+            transform: translateX(2px);
+        }
+
+        .ab-actions .google-rating-badge {
+            margin: 0;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1080px) {
+            .ab-grid {
+                grid-template-columns: 1fr;
+                gap: 56px;
+            }
+
+            .ab-media-col {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px 10px;
+            }
+
+            .ab-content-col {
+                padding-left: 0;
+            }
+
+            .ab-heading {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .ab-sec {
+                padding: 50px 0;
+            }
+
+            .ab-main-img {
+                height: 320px;
+            }
+
+            .ab-inset-img-box {
+                width: 130px;
+                height: 165px;
+                top: -16px;
+                left: -10px;
+                border-width: 3.5px;
+            }
+
+            .ab-stat-badge {
+                bottom: -18px;
+                right: -8px;
+                padding: 14px 18px;
+                min-width: 140px;
+            }
+
+            .ab-stat-badge-num {
+                font-size: 32px;
+            }
+
+            .ab-stat-badge-lbl {
+                font-size: 11.5px;
+            }
+
+            .ab-heading {
+                font-size: 24px;
+                line-height: 1.3;
+            }
+
+            .ab-callout p {
+                font-size: 15px;
+            }
+
+            .ab-actions {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .ab-btn-timeline {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+</style>
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="stylesheet" href="include/header-footer.css?v=20261125">
     <link rel="stylesheet" href="assets/css/typography.css?v=20261123c">
@@ -3664,7 +4028,7 @@
                                     <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
                                     <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
                                     <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
-                                    <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
+                                    <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
                                     <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy</span></a>
                                     <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology</span></a>
                                 </div>
@@ -3683,7 +4047,7 @@
                                     <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
                                     <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
                                     <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
-                                    <a href="contact.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
+                                    <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
                                 </div>
                             </div>
                         </div>
@@ -3901,25 +4265,68 @@
     </div>
 
     <!-- 2. ABOUT (NO IMAGE) -->
-    <section class="section" id="about">
-        <div class="wrap about">
-            <div>
-                <div class="kicker">ABOUT SUKHDA HEALTHCARE</div>
-                <h2>Over Two Decades of Excellence,<br>Compassion &amp; Quality Care</h2>
-                <p>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD (Medicine), AIIMS, New
-                        Delhi</b>. After gaining rich clinical experience at <b>AIIMS, New Delhi</b> and <b>PGIMER,
-                        Chandigarh</b>, Dr. Mehta established Sukhda in November 2002 with the mission of <i>"Care &amp;
-                        Cure for the Whole Family under One Roof"</i>.<br><br>
-                    Over the years, Sukhda has expanded into a <b>125-bed NABH-Accredited Multispeciality Hospital</b>
-                    and an <b>NBEMS-accredited DNB General Medicine Teaching Centre</b>. Under the administrative and
-                    quality
-                    leadership of <b>Dr. Manisha Mehta (NABH-Certified Assessor)</b>, the network has grown to include
-                    <b>Sukhda
-                        Multispeciality Hospital</b> and <b>Sukhda MedPark (Cancer &amp; Super-Speciality
-                        Hospital)</b>, delivering top-tier healthcare at an affordable cost across Haryana, Punjab, and
-                    Rajasthan.
-                </p>
-                <div class="about-actions">
+        <!-- ABOUT SUKHDA HEALTHCARE (NMC-STYLE REDESIGN) -->
+    <section class="section ab-sec" id="about">
+        <div class="wrap ab-grid">
+            <!-- LEFT COLUMN: IMAGE COLLAGE -->
+            <div class="ab-media-col">
+                <div class="ab-media-wrap">
+                    <!-- Main Background Image -->
+                    <div class="ab-main-img-box">
+                        <img src="assets/images/infra/operation-theatre.jpg" alt="Advanced Modular Operation Theatre at Sukhda Hospital" class="ab-main-img">
+                    </div>
+
+                    <!-- Inset Overlapping Image (Top-Left) -->
+                    <div class="ab-inset-img-box">
+                        <img src="assets/images/doctor-consult.jpg" alt="Specialist Doctor Consultation at Sukhda Hospital" class="ab-inset-img">
+                    </div>
+
+                    <!-- Floating Badge Card (Bottom-Right) -->
+                    <div class="ab-stat-badge">
+                        <div class="ab-stat-badge-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <div class="ab-stat-badge-num">24+</div>
+                        <div class="ab-stat-badge-lbl">Years of Excellence in Healthcare</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: CONTENT -->
+            <div class="ab-content-col">
+                <div class="ab-eyebrow">
+                    <svg class="ab-icon-flower" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a4 4 0 0 0-4 4c0 1.2.5 2.3 1.3 3.1A4 4 0 0 0 6 12a4 4 0 0 0 3.3 2.9A4 4 0 0 0 8 18a4 4 0 0 0 4 4 4 4 0 0 0 4-4c0-1.2-.5-2.3-1.3-3.1A4 4 0 0 0 18 12a4 4 0 0 0-3.3-2.9A4 4 0 0 0 16 6a4 4 0 0 0-4-4zm0 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+                    </svg>
+                    <span class="ab-line"></span>
+                    <span class="ab-kicker-text">About Sukhda Healthcare</span>
+                </div>
+
+                <h2 class="ab-heading">Over Two Decades of Excellence,<br>Compassion &amp; Quality Care</h2>
+
+                <div class="ab-callout">
+                    <p>Our patients' health is our priority. We provide quality medical services with a team of experienced professionals.</p>
+                </div>
+
+                <div class="ab-desc">
+                    <p>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD (Medicine), AIIMS, New Delhi</b>. After gaining rich clinical experience at <b>AIIMS, New Delhi</b> and <b>PGIMER, Chandigarh</b>, Dr. Mehta established Sukhda in November 2002 with the mission of <i>"Care &amp; Cure for the Whole Family under One Roof"</i>.</p>
+                    <p>Over the years, Sukhda has expanded into a <b>125-bed NABH-Accredited Multispeciality Hospital</b> and an <b>NBEMS-accredited DNB General Medicine Teaching Centre</b>. Under the administrative and quality leadership of <b>Dr. Manisha Mehta (NABH-Certified Assessor)</b>, the network has grown to include <b>Sukhda Multispeciality Hospital</b> and <b>Sukhda MedPark (Cancer &amp; Super-Speciality Hospital)</b>, delivering top-tier healthcare at an affordable cost across Haryana, Punjab, and Rajasthan.</p>
+                </div>
+
+                <!-- Accreditation Tags -->
+                <div class="ab-tags">
+                    <span class="ab-tag"><i data-lucide="shield-check"></i> NABH Accredited (125 Beds)</span>
+                    <span class="ab-tag"><i data-lucide="graduation-cap"></i> DNB Teaching Centre</span>
+                    <span class="ab-tag"><i data-lucide="award"></i> Estd. 2002</span>
+                    <span class="ab-tag"><i data-lucide="heart-pulse"></i> AB PM-JAY Gold</span>
+                </div>
+
+                <!-- ACTIONS ROW: Read More / Timeline Button + Google Rating Badge -->
+                <div class="ab-actions">
+                    <a class="ab-btn-timeline" href="about.html">
+                        <span class="ab-btn-arrow"><i data-lucide="chevron-right"></i></span>
+                        <span>Our Story &amp; Growth Timeline</span>
+                    </a>
                     <a class="google-rating-badge"
                         href="https://www.google.com/search?q=Sukhda+Multispeciality+Hospital+Delhi+Road+Hisar+reviews"
                         target="_blank" rel="noopener"
@@ -3955,37 +4362,6 @@
                             <small>Google Rating &middot; Read reviews</small>
                         </span>
                     </a>
-                    <a class="btn small primary" href="about.html">Our Story &amp; Growth Timeline →</a>
-                </div>
-            </div>
-            <div class="about-stats">
-                <div class="about-stat-card">
-                    <i data-lucide="award"></i>
-                    <div>
-                        <b>Established 2002</b>
-                        <small>24+ Years of Legacy in the Region</small>
-                    </div>
-                </div>
-                <div class="about-stat-card">
-                    <i data-lucide="shield-check"></i>
-                    <div>
-                        <b>NABH Accredited</b>
-                        <small>Cert. H-2020-0707 (125 Beds)</small>
-                    </div>
-                </div>
-                <div class="about-stat-card">
-                    <i data-lucide="graduation-cap"></i>
-                    <div>
-                        <b>DNB General Medicine</b>
-                        <small>NBEMS-Accredited – 2 Seats</small>
-                    </div>
-                </div>
-                <div class="about-stat-card">
-                    <i data-lucide="heart-pulse"></i>
-                    <div>
-                        <b>AB PM-JAY Gold</b>
-                        <small>Quality Certification</small>
-                    </div>
                 </div>
             </div>
         </div>
@@ -4151,7 +4527,7 @@
                         <b>Anaesthesia & Pain Management</b>
                         <span class="pill pill-both">Both</span>
                     </a>
-                    <a href="contact.html" class="service">
+                    <a href="pathology.html" class="service">
                         <div class="service-icon"><i data-lucide="microscope"></i></div>
                         <b>Pathology</b>
                         <span class="pill pill-both">Both</span>
@@ -4988,7 +5364,7 @@
                 { name: 'Ent', sub: 'Ear, Nose & Throat, Microscopic Ear Surgery, Sinusitis, Tonsil Care', cat: 'Speciality', badge: 'spec', url: 'ent.html' },
                 { name: 'Radiodiagnosis & Imaging', sub: '1.5T MRI, 64-Slice CT, Ultrasound, Digital X-Ray', cat: 'Speciality', badge: 'spec', url: 'radiology.html' },
                 { name: 'Anaesthesia & Pain Management', sub: 'Advanced Pain Management, Critical Care, Surgical Anaesthesia', cat: 'Speciality', badge: 'spec', url: 'anaesthesiology.html' },
-                { name: 'Pathology', sub: 'Advanced Clinical Lab, Diagnostics & Histopathology', cat: 'Speciality', badge: 'spec', url: 'contact.html' },
+                { name: 'Pathology', sub: 'Advanced Clinical Lab, Diagnostics & Histopathology', cat: 'Speciality', badge: 'spec', url: 'pathology.html' },
                 { name: 'Physiotherapy', sub: 'Post-Op Rehab, Sports Injury, Pain Relief, Neuro Rehab', cat: 'Speciality', badge: 'spec', url: 'physiotherapy.html' },
                 { name: 'Dermatology', sub: 'Skin, Hair & Nail Care, Laser & Aesthetic Treatments', cat: 'Speciality', badge: 'spec', url: 'dermatology.html' },
 

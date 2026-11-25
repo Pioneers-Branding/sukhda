@@ -33,7 +33,7 @@
         { n: 'Ent', u: 'ent.html', h: MULTI, k: 'ear nose throat sinus hearing tonsil' },
         { n: 'Radiodiagnosis & Imaging', u: 'radiology.html', h: MULTI, k: 'ct scan mri x-ray xray ultrasound mammography imaging diagnostics 1.5t mri' },
         { n: 'Anaesthesia & Pain Management', u: 'anaesthesiology.html', h: BOTH, k: 'anaesthesia anesthesia pain palliative intensive' },
-        { n: 'Pathology', u: 'contact.html', h: BOTH, k: 'pathology lab blood test biopsy histopathology diagnostics' },
+        { n: 'Pathology & Laboratory Medicine', u: 'pathology.html', h: BOTH, k: 'pathology lab blood test biopsy histopathology diagnostics cbc lft kft biochemistry' },
         { n: 'Physiotherapy', u: 'physiotherapy.html', h: MULTI, k: 'physio rehab neuro physiotherapy physical therapy' },
         { n: 'Dermatology', u: 'dermatology.html', h: MULTI, k: 'skin hair cosmetic dermatology cosmetology aesthetic' }
     ];
@@ -56,6 +56,8 @@
         { n: 'Dr. Parveen', s: 'Anaesthesiologist & Critical Care Intensivist', u: 'dr-parveen.html', h: MULTI },
         { n: 'Dr. Sanjeet Sahu', s: 'Consultant Neuro-Physiotherapist', u: 'dr-sanjeet-sahu.html', h: MULTI },
         { n: 'Dr. Megha Gupta', s: 'Consultant Dermatologist & Cosmetologist', u: 'dr-megha-gupta.html', h: MULTI },
+        { n: 'Dr. Nitika Grover', s: 'Consultant - Pathology', u: 'pathology.html', h: MULTI },
+        { n: 'Dr. Navtej', s: 'Consultant - Pathology', u: 'pathology.html', h: MULTI },
     ];
 
     var PAGES = [
