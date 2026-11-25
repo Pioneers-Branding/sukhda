@@ -2115,7 +2115,20 @@
                 grid-template-columns: 1fr !important
             }
         }
-    </style>
+    
+        /* DISABLE READ MORE COLLAPSE */
+        .rm-toggle {
+            display: none !important;
+        }
+
+        .rm-text.rm-collapsed {
+            display: block !important;
+            -webkit-line-clamp: unset !important;
+            line-clamp: unset !important;
+            max-height: none !important;
+            overflow: visible !important;
+        }
+</style>
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="stylesheet" href="include/header-footer.css?v=20261125">
     <style>
@@ -2137,7 +2150,7 @@
     <link rel="stylesheet" href="assets/css/colors.css?v=20261124b">
 </head>
 
-<body>
+<body class="no-read-more" data-no-read-more>
 
     <div class="top">
         <div class="wrap">
@@ -2150,7 +2163,7 @@
                         <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg> WhatsApp: +91 99965-44005</a>
-                <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24/7 Emergency:
+                <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24*7 Emergency:
                     01662-249473</a>
             </div>
             <div class="links">
@@ -2306,7 +2319,7 @@
                                         data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services
                                     &rarr;</a>
                                 <div class="mega-emergency-tag"><i data-lucide="phone-call"
-                                        style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg
+                                        style="color:#e53935 !important"></i> 24*7 ER: <b>01662-249473</b> | <svg
                                         class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                         width="16" height="16" style="vertical-align:middle;flex-shrink:0"
                                         aria-hidden="true">
@@ -2456,7 +2469,7 @@
                     </span>
                 </a>
                 <div class="hero-actions">
-                    <a href="tel:01662249473" class="btn primary"><i data-lucide="phone-call"></i> 24/7 Emergency:
+                    <a href="tel:01662249473" class="btn primary"><i data-lucide="phone-call"></i> 24*7 Emergency:
                         01662-249473</a>
                     <a href="#cathlab" class="btn outline"><i data-lucide="activity"></i> Explore Cath Lab &amp;
                         Tech</a>
@@ -2484,7 +2497,7 @@
             <div>
                 <div class="kicker"><i data-lucide="sparkles"></i> FOUNDER'S VISION &amp; LEADERSHIP</div>
                 <h2 class="title">Quality Healthcare at an Affordable Cost</h2>
-                <p class="sub">
+                <p class="sub no-read-more" data-no-read-more>
                     <strong>Sukhda Multispeciality Hospital</strong> is the brainchild of <strong>Dr. Amit Mehta, MD
                         (Medicine), AIIMS, New Delhi</strong>. After completing his advanced medical training and
                     gaining invaluable experience at premier national institutes such as <strong>AIIMS, New
@@ -2823,7 +2836,7 @@
                     </div>
                 </div>
                 <div class="cathlab-stats-box">
-                    <b>24/7</b>
+                    <b>24*7</b>
                     <span>Emergency Primary Angioplasty (Golden-Hour STEMI Care)</span>
                     <hr style="border:0;border-top:1px solid rgba(255,255,255,0.15);margin:14px 0">
                     <small style="color:#b9d5f2">Led by Interventional Cardiologists &amp; Trained Cath Lab
@@ -2943,7 +2956,7 @@
                             imbalance disorders.</li>
                         <li><strong>SLED (Sustained Low-Efficiency Dialysis)</strong> tailored for haemodynamically
                             unstable and hypotensive patients.</li>
-                        <li><strong>24/7 Emergency Dialysis</strong> availability with rapid catheter access.</li>
+                        <li><strong>24*7 Emergency Dialysis</strong> availability with rapid catheter access.</li>
                     </ul>
                 </div>
 
@@ -3099,11 +3112,11 @@
             </div>
 
             <div class="footer-col">
-                <h4>24/7 Emergency</h4>
+                <h4>24*7 Emergency</h4>
                 <div class="footer-emergency-box">
                     <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
                     <div>
-                        <small>24/7 Emergency Helpline</small>
+                        <small>24*7 Emergency Helpline</small>
                         <a href="tel:01662249473" class="f-emg-num">01662-249473, 01662-248473</a>
                         <a href="tel:9996648483" class="f-emg-num-sub">+91 99966-48483</a>
                     </div>
@@ -3152,7 +3165,7 @@
                 <div class="bottom-badges">
                     <span><i data-lucide="map-pin"></i> Hisar, Haryana</span>
                     <span><i data-lucide="shield-check"></i> NABH Accredited</span>
-                    <span><i data-lucide="phone" style="color:#e53935 !important"></i> 24/7 ER: 01662-249473</span>
+                    <span><i data-lucide="phone" style="color:#e53935 !important"></i> 24*7 ER: 01662-249473</span>
                 </div>
             </div>
         </div>

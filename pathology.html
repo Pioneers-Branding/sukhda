@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/png" href="assets/images/sukhda-favicon.png">
-    <title>24/7 Advanced Pathology &amp; Diagnostic Laboratory Medicine in Hisar | Sukhda Hospital</title>
+    <title>24*7 Advanced Pathology &amp; Diagnostic Laboratory Medicine in Hisar | Sukhda Hospital</title>
     <meta name="description"
-        content="Department of Pathology &amp; Diagnostic Laboratory Medicine at Sukhda Multispeciality Hospital &amp; MedPark, Hisar. Led by Dr. Nitika Grover and Dr. Navtej. 24/7 automated clinical biochemistry, haematology, histopathology, cytopathology, and microbiology.">
+        content="Department of Pathology &amp; Diagnostic Laboratory Medicine at Sukhda Multispeciality Hospital &amp; MedPark, Hisar. Led by Dr. Nitika Grover and Dr. Navtej. 24*7 automated clinical biochemistry, haematology, histopathology, cytopathology, and microbiology.">
     <link rel="canonical" href="https://sukhdahospitals.com/pathology.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1098,106 +1098,142 @@
         }
 
         /* COMPACT DOCTOR CARD */
+        /* DOCTORS GRID */
+        #specialist {
+            padding-top: 0;
+        }
+
+        .hd-grid,
         .doc-card-wrap {
-            margin-top: 24px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 320px));
+            gap: 22px;
+            margin-top: 28px;
         }
 
-        .doc-profile-card {
-            display: flex;
-            align-items: center;
+        .hd-card {
             background: #fff;
-            border-radius: 14px;
-            border: 1px solid var(--line);
-            box-shadow: 0 4px 20px rgba(3, 32, 90, 0.06);
-            padding: 20px 22px;
-            gap: 20px;
-            max-width: 580px;
-            width: 100%;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-        }
-
-        .doc-profile-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 28px rgba(3, 32, 90, 0.1);
-            border-color: #a8cae6;
-        }
-
-        .doc-photo-box {
-            width: 130px;
-            height: 145px;
-            border-radius: 10px;
+            border: 1px solid #dce8f4;
+            border-radius: 16px;
             overflow: hidden;
-            flex-shrink: 0;
-            background: #f0f5fa;
-            border: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 6px 20px rgba(3, 32, 90, 0.06);
+            transition: transform 0.24s ease, box-shadow 0.24s ease;
         }
 
-        .doc-photo-box img {
+        .hd-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(3, 32, 90, 0.12);
+        }
+
+        .hd-photo {
+            position: relative;
+            display: block;
+            width: 100%;
+            aspect-ratio: 350 / 400;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .hd-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: top center;
+            display: block;
         }
 
-        .doc-info-box {
+        .hd-exp {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(5, 33, 89, 0.9);
+            color: #fff;
+            font-size: 11.5px;
+            font-weight: 800;
+            padding: 4px 11px;
+            border-radius: 999px;
+            z-index: 2;
+        }
+
+        .hd-body {
+            padding: 16px 16px 18px;
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            flex-grow: 1;
+            flex: 1;
         }
 
-        .doc-pill {
-            display: inline-block;
-            align-self: flex-start;
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--green);
-            background: #e9f5ee;
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
-
-        .doc-info-box h3 {
-            font-size: 22px;
-            font-weight: 800;
+        .hd-body h3 {
+            font-size: 17px;
+            margin: 0 0 4px;
             color: var(--blue);
-            margin: 2px 0 0;
-            line-height: 1.2;
+            font-weight: 800;
         }
 
-        .doc-qual {
-            font-size: 14.5px;
+        .hd-body h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .hd-desig {
+            font-size: 13px;
             font-weight: 700;
-            color: var(--muted);
+            color: var(--green);
+            line-height: 1.4;
+            margin-bottom: 6px;
         }
 
-        .doc-spec-text {
-            font-size: 13.5px;
-            color: #4a637d;
-            margin: 4px 0 10px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex-wrap: wrap;
+        .hd-qual {
+            font-size: 12.5px;
+            color: #53677f;
+            line-height: 1.45;
+            margin-bottom: 14px;
         }
 
-        .doc-spec-text span {
-            background: #f3f7fa;
-            padding: 2px 8px;
-            border-radius: 4px;
-            border: 1px solid var(--line);
+        .hd-actions {
+            margin-top: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
         }
 
-        .doc-info-box .btn {
-            align-self: flex-start;
-            padding: 9px 18px;
-            font-size: 13.5px;
-            border-radius: 7px;
+        .hd-actions a {
+            text-align: center;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 9px 6px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+        }
+
+        .hd-btn-profile {
+            border: 1.5px solid var(--blue);
+            color: var(--blue);
+            background: #fff;
+        }
+
+        .hd-btn-profile:hover {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .hd-btn-book {
+            background: var(--green);
+            border: 1.5px solid var(--green);
+            color: #fff;
+        }
+
+        .hd-btn-book:hover {
+            opacity: 0.92;
+        }
+
+        @media (max-width: 480px) {
+            .hd-grid,
+            .doc-card-wrap {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* FAQS */
@@ -2217,7 +2253,20 @@
         :is(.hero-banner, .doc-directory-hero, .opd-hero, .empanelled-hero, .doctor-hero) :is(.badge, .hero-kicker) {
             border-color: rgba(95, 209, 111, 0.45);
         }
-    </style>
+    
+        /* DISABLE READ MORE COLLAPSE */
+        .rm-toggle {
+            display: none !important;
+        }
+
+        .rm-text.rm-collapsed {
+            display: block !important;
+            -webkit-line-clamp: unset !important;
+            line-clamp: unset !important;
+            max-height: none !important;
+            overflow: visible !important;
+        }
+</style>
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="stylesheet" href="include/header-footer.css?v=20261125">
     <link rel="stylesheet" href="assets/css/typography.css?v=20261123c">
@@ -2225,7 +2274,7 @@
     <link rel="stylesheet" href="assets/css/colors.css?v=20261124b">
 </head>
 
-<body>
+<body class="no-read-more" data-no-read-more>
 
 <div class="top">
         <div class="wrap">
@@ -2238,7 +2287,7 @@
                         <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg> WhatsApp: +91 99965-44005</a>
-                <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24/7 Emergency: 01662-249473</a>
+                <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24*7 Emergency: 01662-249473</a>
             </div>
             <div class="links">
                 <div class="top-directions-dropdown">
@@ -2364,7 +2413,7 @@
                         </div>
                         <div class="mega-footer">
                             <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services &rarr;</a>
-                            <div class="mega-emergency-tag"><i data-lucide="phone-call" style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
+                            <div class="mega-emergency-tag"><i data-lucide="phone-call" style="color:#e53935 !important"></i> 24*7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
                         </div>
                     </div>
                 </span>
@@ -2438,17 +2487,17 @@
                     <a href="index.html">Home</a> <span>›</span> <a href="index.html#specialities">Specialities</a>
                     <span>›</span> <span>Pathology &amp; Laboratory Medicine</span>
                 </div>
-                <h1>24/7 Advanced Pathology &amp;<br><span>Diagnostic Laboratory Medicine in Hisar</span></h1>
-                <p>Delivering 24/7 high-precision diagnostic laboratory services with fully automated biochemistry, 5-part haematology, surgical histopathology, cytopathology, and clinical microbiology with zero sample mix-up barcoding and rapid digital reports.</p>
+                <h1>24*7 Advanced Pathology &amp;<br><span>Diagnostic Laboratory Medicine in Hisar</span></h1>
+                <p>Delivering 24*7 high-precision diagnostic laboratory services with fully automated biochemistry, 5-part haematology, surgical histopathology, cytopathology, and clinical microbiology with zero sample mix-up barcoding and rapid digital reports.</p>
 
                 <div class="hero-actions">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Lab Test / Home Collection</a>
-                    <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24/7 Lab Helpline: 01662-249473</a>
+                    <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24*7 Lab Helpline: 01662-249473</a>
                 </div>
 
                 <div class="hero-stats">
                     <div class="hero-stat-card">
-                        <b>24/7</b>
+                        <b>24*7</b>
                         <small>Emergency Lab &amp; Blood Bank Support</small>
                     </div>
                     <div class="hero-stat-card">
@@ -2481,7 +2530,7 @@
                 <div class="kicker">DEPARTMENT OF PATHOLOGY &amp; LABORATORY MEDICINE</div>
                 <h2 class="title">Accurate, Dependable Diagnostics Powering Every Clinical Decision</h2>
                 <p>Over 70% of clinical medical decisions and surgical interventions depend on precise, timely laboratory diagnostics. The Department of Pathology &amp; Laboratory Medicine at Sukhda Multispeciality Hospital and Sukhda MedPark delivers comprehensive diagnostic services round-the-clock, supporting outpatient care, inpatient hospitalisation, critical care ICUs, and oncology daycare.</p>
-                <p>Led by senior consultant pathologists <strong>Dr. Nitika Grover (MD, DNB Pathology)</strong> and <strong>Dr. Navtej (MD Pathology)</strong>, our department operates high-throughput automated analysers under stringent daily Internal Quality Control (IQC) protocols and External Quality Assurance Schemes (EQAS). From routine blood glucose and CBC panels to complex surgical tumour biopsies, fine needle aspirations (FNAC), and automated microbial cultures, we provide clinical clarity that doctors and patients trust.</p>
+                <p class="no-read-more" data-no-read-more>Led by senior consultant pathologists <strong>Dr. Nitika Grover (MD, DNB Pathology)</strong> and <strong>Dr. Navtej (MD Pathology)</strong>, our department operates high-throughput automated analysers under stringent daily Internal Quality Control (IQC) protocols and External Quality Assurance Schemes (EQAS). From routine blood glucose and CBC panels to complex surgical tumour biopsies, fine needle aspirations (FNAC), and automated microbial cultures, we provide clinical clarity that doctors and patients trust.</p>
                 <p>Fully interfaced with our Hospital Information System (HIS) via bi-directional Laboratory Information System (LIS) automation, every patient specimen is barcoded at phlebotomy, guaranteeing positive patient identification, eliminating manual pipetting errors, and enabling instant digital report delivery directly to your phone.</p>
 
                 <a class="btn primary small" href="contact.html">Schedule Lab Test or Consultation &rarr;</a>
@@ -2564,7 +2613,7 @@
                     <div class="service-icon">
                         <i data-lucide="timer"></i>
                     </div>
-                    <h3>24/7 STAT Emergency Critical Care Testing</h3>
+                    <h3>24*7 STAT Emergency Critical Care Testing</h3>
                     <p>Rapid emergency testing within 30-45 minutes: Arterial Blood Gas (ABG), Serum Electrolytes, Serum Lactate, Procalcitonin for sepsis, Cardiac Troponin I/T, and urgent blood group cross-matching.</p>
                 </article>
             </div>
@@ -2629,53 +2678,40 @@
     </section>
 
     <!-- SECTION 5: SPECIALISTS -->
-    <section class="section" id="specialist">
+    <section class="section" id="specialist" style="padding-top: 0;">
         <div class="wrap">
             <div class="kicker">LABORATORY MEDICINE TEAM</div>
             <h2 class="title">Senior Consultant Pathologists</h2>
             <p class="sub">Experienced specialists delivering round-the-clock diagnostic oversight, histopathology interpretation, and critical clinical reporting.</p>
 
-            <div class="doc-card-wrap">
-                <article class="doc-profile-card">
-                    <div class="doc-photo-box">
-                        <img src="assets/images/doctors/doctor-placeholder.svg"
-                            alt="Dr. Nitika Grover — Consultant — Pathology, Sukhda Hospital Hisar">
-                    </div>
-                    <div class="doc-info-box">
-                        <span class="doc-pill">Consultant — Pathology</span>
-                        <h3>Dr. Nitika Grover</h3>
-                        <div class="doc-qual">MD, DNB (Pathology)</div>
-                        <div class="doc-spec-text">
-                            <span>Histopathology &amp; Surgical Biopsies</span>
-                            <span>Cytopathology &amp; FNAC Interpretation</span>
-                            <span>Haematology &amp; Bone Marrow Reporting</span>
-                            <span>Automated Clinical Biochemistry Quality Assurance</span>
-                        </div>
-                        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
-                            <a class="btn primary small" href="contact.html"><i data-lucide="calendar-days"></i>Schedule Lab Consultation</a>
-                            <a class="btn white small" href="opd-schedule.html"><i data-lucide="clock"></i>View OPD Timings</a>
+            <div class="hd-grid">
+                <article class="hd-card">
+                    <a href="opd-schedule.html" class="hd-photo">
+                        <img src="assets/images/unknown-doctor.webp"
+                            alt="Dr. Nitika Grover - Consultant — Pathology" loading="lazy">
+                    </a>
+                    <div class="hd-body">
+                        <h3><a href="opd-schedule.html">Dr. Nitika Grover</a></h3>
+                        <div class="hd-desig">Consultant — Pathology</div>
+                        <div class="hd-qual">MD, DNB (Pathology)</div>
+                        <div class="hd-actions">
+                            <a href="opd-schedule.html" class="hd-btn-profile">View OPD</a>
+                            <a href="contact.html" class="hd-btn-book">Book OPD</a>
                         </div>
                     </div>
                 </article>
-
-                <article class="doc-profile-card">
-                    <div class="doc-photo-box">
-                        <img src="assets/images/doctors/doctor-placeholder.svg"
-                            alt="Dr. Navtej — Consultant — Pathology, Sukhda Hospital Hisar">
-                    </div>
-                    <div class="doc-info-box">
-                        <span class="doc-pill">Consultant — Pathology</span>
-                        <h3>Dr. Navtej</h3>
-                        <div class="doc-qual">MD (Pathology)</div>
-                        <div class="doc-spec-text">
-                            <span>General &amp; Surgical Pathology</span>
-                            <span>Clinical Pathology &amp; Body Fluid Analysis</span>
-                            <span>Microbiology &amp; Serology Diagnostics</span>
-                            <span>Diagnostic Immunoassays &amp; Quality Control</span>
-                        </div>
-                        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
-                            <a class="btn primary small" href="contact.html"><i data-lucide="calendar-days"></i>Schedule Lab Consultation</a>
-                            <a class="btn white small" href="opd-schedule.html"><i data-lucide="clock"></i>View OPD Timings</a>
+                <article class="hd-card">
+                    <a href="opd-schedule.html" class="hd-photo">
+                        <img src="assets/images/unknown-doctor.webp"
+                            alt="Dr. Navtej - Consultant — Pathology" loading="lazy">
+                    </a>
+                    <div class="hd-body">
+                        <h3><a href="opd-schedule.html">Dr. Navtej</a></h3>
+                        <div class="hd-desig">Consultant — Pathology</div>
+                        <div class="hd-qual">MD (Pathology)</div>
+                        <div class="hd-actions">
+                            <a href="opd-schedule.html" class="hd-btn-profile">View OPD</a>
+                            <a href="contact.html" class="hd-btn-book">Book OPD</a>
                         </div>
                     </div>
                 </article>
@@ -2735,11 +2771,11 @@
             </div>
             <div>
                 <h2>Need an Emergency Lab Test or Routine Health Screening?</h2>
-                <p>Walk in 24/7 for emergency blood investigations, or book certified home blood sample collection across Hisar.</p>
+                <p>Walk in 24*7 for emergency blood investigations, or book certified home blood sample collection across Hisar.</p>
             </div>
             <div class="actions">
                 <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Lab Test / Home Collection</a>
-                <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24/7 Lab Helpline: 01662-249473</a>
+                <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24*7 Lab Helpline: 01662-249473</a>
             </div>
         </div>
     </section>
@@ -2839,11 +2875,11 @@
             </div>
 
             <div class="footer-col">
-                <h4>24/7 Emergency</h4>
+                <h4>24*7 Emergency</h4>
                 <div class="footer-emergency-box">
                     <div class="f-emg-icon"><i data-lucide="phone-call"></i></div>
                     <div>
-                        <small>24/7 Emergency Helpline</small>
+                        <small>24*7 Emergency Helpline</small>
                         <a href="tel:01662249473" class="f-emg-num">01662-249473, 01662-248473</a>
                         <a href="tel:9996648483" class="f-emg-num-sub">+91 99966-48483</a>
                     </div>
@@ -2892,7 +2928,7 @@
                 <div class="bottom-badges">
                     <span><i data-lucide="map-pin"></i> Hisar, Haryana</span>
                     <span><i data-lucide="shield-check"></i> NABH Accredited</span>
-                    <span><i data-lucide="phone" style="color:#e53935 !important"></i> 24/7 ER: 01662-249473</span>
+                    <span><i data-lucide="phone" style="color:#e53935 !important"></i> 24*7 ER: 01662-249473</span>
                 </div>
             </div>
         </div>

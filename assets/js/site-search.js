@@ -244,7 +244,7 @@
             '<button type="button" class="ss-tab" data-h="' + MEDPARK + '">Sukhda MedPark (Cancer)</button>' +
             '</div></div>' +
             '<div class="ss-body"></div>' +
-            '<div class="ss-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> to navigate &nbsp; <kbd>Enter</kbd> to open &nbsp; <kbd>Esc</kbd> to close</span><span>24/7 Emergency: <b>01662-249473</b></span></div>' +
+            '<div class="ss-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> to navigate &nbsp; <kbd>Enter</kbd> to open &nbsp; <kbd>Esc</kbd> to close</span><span>24*7 Emergency: <b>01662-249473</b></span></div>' +
             '</div>';
         document.body.appendChild(overlay);
 
