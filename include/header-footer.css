@@ -1920,7 +1920,7 @@ header.nav,
         z-index: 998 !important;
         display: flex !important;
         align-items: center !important;
-        background: linear-gradient(135deg, #052159 0%, #02163d 100%) !important;
+        background: radial-gradient(circle at 50% 25%, #0f395d 0%, #09243c 65%, #05192c 100%) !important;
         border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
         border-radius: 9999px !important;
         padding: 6px 14px !important;
