@@ -19,20 +19,20 @@
     // ---------- DATA ----------
     // k = extra keywords people may type (symptoms, procedures, Hindi-English terms)
     var SPECIALITIES = [
-        { n: 'Medicine & Critical care', u: 'internal-medicine.html', h: BOTH, k: 'physician fever diabetes bp general medicine internal critical care icu' },
+        { n: 'Medicine & Critical care', u: 'medicine-and-critical-care.html', h: BOTH, k: 'physician fever diabetes bp general medicine internal critical care icu' },
         { n: 'Medical Oncology', u: 'medical-oncology.html', h: BOTH, k: 'cancer chemotherapy immunotherapy oncology tumour daycare' },
         { n: 'Surgical Oncology', u: 'surgical-oncology.html', h: BOTH, k: 'cancer surgery tumour tumor oncology breast head neck' },
         { n: 'Radiation Oncology', u: 'radiation-oncology.html', h: BOTH, k: 'cancer radiation radiotherapy linac oncology linear accelerator' },
         { n: 'Cardiology', u: 'cardiology.html', h: MULTI, k: 'heart cath lab angioplasty angiography stent chest pain heart attack' },
         { n: 'Gastroenterology', u: 'gastroenterology.html', h: MULTI, k: 'stomach liver endoscopy colonoscopy digestive hepatology' },
-        { n: 'Nephrology & Dialysis', u: 'nephrology.html', h: MULTI, k: 'kidney dialysis renal' },
-        { n: 'Neurosurgery & Spine', u: 'neurosurgery.html', h: MULTI, k: 'brain spine neuro surgery stroke' },
-        { n: 'Gynaecology & Obstetrics', u: 'gynaecology.html', h: MULTI, k: 'pregnancy delivery women maternity ivf' },
-        { n: 'Orthopaedic & Robotic Joint Replacement', u: 'orthopaedics.html', h: MULTI, k: 'bone knee hip joint fracture ortho arthroscopy' },
-        { n: 'Laparoscopic & General Surgery', u: 'general-surgery.html', h: MULTI, k: 'surgery hernia gallbladder appendix laparoscopy' },
+        { n: 'Nephrology & Dialysis', u: 'nephrology-and-dialysis.html', h: MULTI, k: 'kidney dialysis renal' },
+        { n: 'Neurosurgery & Spine', u: 'neurosurgery-and-spine.html', h: MULTI, k: 'brain spine neuro surgery stroke' },
+        { n: 'Gynaecology & Obstetrics', u: 'gynaecology-and-obstetrics.html', h: MULTI, k: 'pregnancy delivery women maternity ivf' },
+        { n: 'Orthopaedic & Robotic Joint Replacement', u: 'orthopaedic-and-robotic-joint-replacement.html', h: MULTI, k: 'bone knee hip joint fracture ortho arthroscopy' },
+        { n: 'Laparoscopic & General Surgery', u: 'laparoscopic-and-general-surgery.html', h: MULTI, k: 'surgery hernia gallbladder appendix laparoscopy' },
         { n: 'Ent', u: 'ent.html', h: MULTI, k: 'ear nose throat sinus hearing tonsil' },
-        { n: 'Radiodiagnosis & Imaging', u: 'radiology.html', h: MULTI, k: 'ct scan mri x-ray xray ultrasound mammography imaging diagnostics 1.5t mri' },
-        { n: 'Anaesthesia & Pain Management', u: 'anaesthesiology.html', h: BOTH, k: 'anaesthesia anesthesia pain palliative intensive' },
+        { n: 'Radiodiagnosis & Imaging', u: 'radiodiagnosis-and-imaging.html', h: MULTI, k: 'ct scan mri x-ray xray ultrasound mammography imaging diagnostics 1.5t mri' },
+        { n: 'Anaesthesia & Pain Management', u: 'anaesthesia-and-pain-management.html', h: BOTH, k: 'anaesthesia anesthesia pain palliative intensive' },
         { n: 'Pathology & Laboratory Medicine', u: 'pathology.html', h: BOTH, k: 'pathology lab blood test biopsy histopathology diagnostics cbc lft kft biochemistry' },
         { n: 'Physiotherapy', u: 'physiotherapy.html', h: MULTI, k: 'physio rehab neuro physiotherapy physical therapy' },
         { n: 'Dermatology', u: 'dermatology.html', h: MULTI, k: 'skin hair cosmetic dermatology cosmetology aesthetic' }

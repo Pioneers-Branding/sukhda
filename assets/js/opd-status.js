@@ -1,6 +1,4 @@
-/* OPD availability: reads assets/data/opd-status.json and updates the Status
-   column. "Edit Availability" lets staff change statuses and download an
-   updated opd-status.json, which is then uploaded to assets/data/ on the server. */
+/* OPD availability: reads assets/data/opd-status.json and updates the Status column. */
 (function () {
     var DATA_URL = 'assets/data/opd-status.json';
     var STATUS = {
@@ -27,12 +25,6 @@
             note: ''
         };
     });
-
-    function esc(t) {
-        var d = document.createElement('div');
-        d.textContent = t;
-        return d.innerHTML;
-    }
 
     function refreshIcons() {
         if (window.lucide) lucide.createIcons();
@@ -72,64 +64,6 @@
         refreshIcons();
     }
 
-    // ---------- Edit mode ----------
-    var bar = document.getElementById('opdEditBar');
-    var toggle = document.getElementById('opdEditToggle');
-
-    function openEditor() {
-        if (bar) bar.hidden = false;
-        if (toggle) toggle.hidden = true;
-        rows.forEach(function (row) {
-            var key = row.getAttribute('data-doctor');
-            var info = state.doctors[key];
-            var cell = row.querySelector('[data-status-badge]').parentNode;
-            if (cell.querySelector('.status-editor')) return;
-            var box = document.createElement('div');
-            box.className = 'status-editor';
-            box.innerHTML =
-                '<select aria-label="Status for ' + esc(info.name) + '">' +
-                Object.keys(STATUS).map(function (k) {
-                    return '<option value="' + k + '"' + (k === info.status ? ' selected' : '') + '>' + STATUS[k].label + '</option>';
-                }).join('') +
-                '</select>' +
-                '<input type="text" maxlength="80" placeholder="Note (optional), e.g. On leave till 5 Nov" value="' + esc(info.note || '') + '">';
-            box.querySelector('select').addEventListener('change', function (e) {
-                info.status = e.target.value;
-                render();
-            });
-            box.querySelector('input').addEventListener('input', function (e) {
-                info.note = e.target.value.trim();
-                render();
-            });
-            cell.appendChild(box);
-        });
-    }
-
-    function closeEditor() {
-        if (bar) bar.hidden = true;
-        if (toggle) toggle.hidden = false;
-        document.querySelectorAll('.status-editor').forEach(function (el) { el.remove(); });
-    }
-
-    function download() {
-        var now = new Date();
-        state.updated = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
-        render();
-        var blob = new Blob([JSON.stringify(state, null, 2) + '\n'], { type: 'application/json' });
-        var a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'opd-status.json';
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-    }
-
-    if (toggle) toggle.addEventListener('click', openEditor);
-    var cancel = document.getElementById('opdEditCancel');
-    if (cancel) cancel.addEventListener('click', closeEditor);
-    var dl = document.getElementById('opdEditDownload');
-    if (dl) dl.addEventListener('click', download);
-
     // ---------- Load published statuses ----------
     fetch(DATA_URL, { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
@@ -147,6 +81,5 @@
         .catch(function () { })
         .then(function () {
             render();
-            if (/[?&]edit=1\b/.test(location.search)) openEditor();
         });
 })();

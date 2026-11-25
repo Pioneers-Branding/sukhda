@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/png" href="assets/images/sukhda-favicon.png">
-    <title>Internal Medicine &amp; DNB Centre | Sukhda Healthcare Hisar</title>
+    <title>Radiodiagnosis &amp; Imaging | Sukhda Healthcare Hisar</title>
     <meta name="description"
-        content="Department of Internal Medicine at Sukhda Multispeciality Hospital &amp; MedPark, Hisar. Led by Dr. Amit Mehta. NBEMS-accredited DNB training centre, diabetes, hypertension, infectious diseases, and critical care.">
+        content="Department of Radiodiagnosis &amp; Imaging at Sukhda Multispeciality Hospital &amp; MedPark, Hisar. Led by Dr. Anil Bansal. Multi-Slice CT Scanner, 4D Colour Doppler Ultrasound, Digital X-Ray, and Mammography.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -866,7 +866,7 @@
 
         .kicker {
             color: var(--green);
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 900;
             letter-spacing: 1.1px;
             text-transform: uppercase;
@@ -899,7 +899,7 @@
         .intro-copy p {
             color: var(--muted);
             line-height: 1.7;
-            font-size: 17px;
+            font-size: 18px;
             margin: 0 0 18px
         }
 
@@ -926,6 +926,7 @@
             color: var(--green);
             flex-shrink: 0
         }
+
 
         .intro-media {
             position: relative
@@ -2175,7 +2176,7 @@
 
             .kicker,
             .eyebrow {
-                font-size: 12.5px;
+                font-size: 14px;
                 letter-spacing: 0.7px;
                 margin-bottom: 4px;
             }
@@ -2234,7 +2235,7 @@
 
             .kicker,
             .eyebrow {
-                font-size: 12px;
+                font-size: 13.5px;
                 letter-spacing: 0.5px;
             }
         }
@@ -2251,7 +2252,20 @@
         :is(.hero-banner, .doc-directory-hero, .opd-hero, .empanelled-hero, .doctor-hero) :is(.badge, .hero-kicker) {
             border-color: rgba(95, 209, 111, 0.45);
         }
-    </style>
+    
+        /* DISABLE READ MORE COLLAPSE */
+        .rm-toggle {
+            display: none !important;
+        }
+
+        .rm-text.rm-collapsed {
+            display: block !important;
+            -webkit-line-clamp: unset !important;
+            line-clamp: unset !important;
+            max-height: none !important;
+            overflow: visible !important;
+        }
+</style>
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="stylesheet" href="include/header-footer.css?v=20261125">
     <link rel="stylesheet" href="assets/css/typography.css?v=20261123c">
@@ -2259,7 +2273,7 @@
     <link rel="stylesheet" href="assets/css/colors.css?v=20261124b">
 </head>
 
-<body>
+<body class="no-read-more" data-no-read-more>
 
     <div class="top">
         <div class="wrap">
@@ -2359,20 +2373,20 @@
                                     </div>
                                 </div>
                                 <div class="mega-links-grid">
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
+                                    <a href="medicine-and-critical-care.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
                                     <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
                                     <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
                                     <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
                                     <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Cardiology</span></a>
                                     <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology</span></a>
-                                    <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp; Spine</span></a>
-                                    <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp; Robotic Joint Replacement</span></a>
-                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>Laparoscopic &amp; General Surgery</span></a>
+                                    <a href="nephrology-and-dialysis.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
+                                    <a href="neurosurgery-and-spine.html"><i data-lucide="brain"></i><span>Neurosurgery &amp; Spine</span></a>
+                                    <a href="gynaecology-and-obstetrics.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
+                                    <a href="orthopaedic-and-robotic-joint-replacement.html"><i data-lucide="bone"></i><span>Orthopaedic &amp; Robotic Joint Replacement</span></a>
+                                    <a href="laparoscopic-and-general-surgery.html"><i data-lucide="shield-check"></i><span>Laparoscopic &amp; General Surgery</span></a>
                                     <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
-                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
+                                    <a href="radiodiagnosis-and-imaging.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
+                                    <a href="anaesthesia-and-pain-management.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
                                     <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
                                     <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy</span></a>
                                     <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology</span></a>
@@ -2387,11 +2401,11 @@
                                     </div>
                                 </div>
                                 <div class="mega-links-grid single-col">
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
+                                    <a href="medicine-and-critical-care.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
                                     <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
                                     <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
                                     <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
+                                    <a href="anaesthesia-and-pain-management.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
                                     <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
                                 </div>
                             </div>
@@ -2464,18 +2478,17 @@
         <div class="nav-overlay"></div>
     </header>
 
-
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="wrap">
             <div class="hero-copy">
                 <div class="crumb">
                     <a href="index.html">Home</a> <span>›</span> <a href="index.html#specialities">Specialities</a>
-                    <span>›</span> <span>Internal Medicine (DNB Centre)</span>
+                    <span>›</span> <span>Radiodiagnosis &amp; Imaging</span>
                 </div>
-                <h1>Comprehensive Adult Medicine &amp;<br><span>DNB Centre of Excellence</span></h1>
-                <p>Delivering expert medical diagnosis and management for complex multi-system disorders, diabetes,
-                    infectious diseases, hypertension, respiratory ailments, and geriatric care at an NBEMS-accredited postgraduate DNB training institute.</p>
+                <h1>24*7 Complete Diagnostic Services<br><span>Latest CT Scan, MRI, Ultrasound, Digital Mammography &amp; Radiography</span></h1>
+                <p>Delivering 24*7 diagnostic radiology services with multi-slice high-speed CT scanning, high-resolution
+                    4D colour Doppler ultrasound, digital X-rays (CR), digital mammography, and image-guided procedures.</p>
 
                 <div class="hero-actions">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Consultation</a>
@@ -2485,27 +2498,27 @@
 
                 <div class="hero-stats">
                     <div class="hero-stat-card">
-                        <b>25+ Years</b>
-                        <small>of Trusted Clinical Excellence</small>
-                    </div>
-                    <div class="hero-stat-card">
-                        <b>NBEMS DNB</b>
-                        <small>Accredited Postgraduate Training Centre</small>
-                    </div>
-                    <div class="hero-stat-card">
                         <b>24*7</b>
-                        <small>ICU &amp; Emergency Physician Standby</small>
+                        <small>Emergency CT Scan &amp; Digital X-Ray</small>
                     </div>
                     <div class="hero-stat-card">
-                        <b>100%</b>
-                        <small>Cashless TPA &amp; Govt. Empanelment</small>
+                        <b>Multi-Slice</b>
+                        <small>High-Resolution Low-Dose CT Scanner</small>
+                    </div>
+                    <div class="hero-stat-card">
+                        <b>3D/4D Ultrasound &amp; Colour Doppler</b>
+                        <small>Advanced Obstetric &amp; Vascular Ultrasound</small>
+                    </div>
+                    <div class="hero-stat-card">
+                        <b>Instant</b>
+                        <small>Rapid Teleradiology Reporting</small>
                     </div>
                 </div>
             </div>
 
             <div class="hero-media">
                 <div class="hero-img-card">
-                    <img src="assets/images/infra/hdu.jpg" alt="Internal Medicine (DNB Centre) at Sukhda Hospital">
+                    <img src="assets/images/infra/ct-scan.jpg" alt="CT Scan &amp; Radiology at Sukhda Hospital">
                 </div>
             </div>
         </div>
@@ -2515,106 +2528,81 @@
     <section class="section">
         <div class="wrap intro-grid">
             <div class="intro-copy">
-                <div class="kicker">DEPARTMENT OF INTERNAL MEDICINE</div>
-                <h2 class="title">Compassionate, Evidence-Based Medical Care for All Adult Health Conditions</h2>
-                <p data-no-read-more>The Department of Internal Medicine at Sukhda Multispeciality Hospital is the clinical backbone of
-                    the institution. Accredited by the National Board of Examinations in Medical Sciences (NBEMS) for postgraduate DNB training in General Medicine, our department delivers the highest standards of diagnostic precision
-                    and evidence-based patient management.</p>
-                <p data-no-read-more>Under the leadership of Dr. Amit Mehta, our team of senior physicians treats acute medical
-                    emergencies, including severe sepsis and septic shock, acute respiratory failure, acute kidney injury,
-                    multi-organ dysfunction, cardiac emergencies, and life-threatening metabolic disturbances.</p>
-                <div class="rm-more">
-                    <p>Our team also specialises in the management of chronic lifestyle-related diseases, including diabetes
-                        mellitus, hypertension, and metabolic syndrome, as well as persistent fever and Pyrexia of Unknown Origin
-                        (PUO) that require detailed clinical evaluation and advanced diagnostic support.</p>
-                    <p>With 24*7 Intensive Care Unit (ICU) facilities, continuous patient monitoring, round-the-clock laboratory
-                        support, and a multidisciplinary approach to treatment, we are equipped to manage critically ill patients
-                        requiring close observation, organ support, and prompt medical intervention. Our commitment is to deliver
-                        personalised, compassionate, and high-quality care, ensuring that every patient receives timely attention
-                        and comprehensive medical management throughout their recovery journey.</p>
-                </div>
-
-                <div class="check-grid">
-                    <div class="check-item"><i data-lucide="check-circle-2"></i> NBEMS-Accredited DNB Postgraduate Training Centre</div>
-                    <div class="check-item"><i data-lucide="check-circle-2"></i> Comprehensive Diabetes Mellitus &amp;
-                        Diabetic Foot Management</div>
-                    <div class="check-item"><i data-lucide="check-circle-2"></i> Advanced Hypertension &amp;
-                        Cardiovascular Risk Management</div>
-                    <div class="check-item"><i data-lucide="check-circle-2"></i> Infectious Diseases Management (Dengue,
-                        Malaria, Typhoid, Sepsis)</div>
-                    <div class="check-item"><i data-lucide="check-circle-2"></i> Respiratory Medicine: COPD, Asthma,
-                        Pneumonia &amp; Post-COVID Care</div>
-                    <div class="check-item"><i data-lucide="check-circle-2"></i> Geriatric Medicine &amp;
-                        Multi-Morbidity Management</div>
-                </div>
+                <div class="kicker">DEPARTMENT OF RADIODIAGNOSIS &amp; IMAGING</div>
+                <h2 class="title">Accurate, Rapid Diagnostic Imaging for Timely Clinical Decision-Making</h2>
+                <p class="no-read-more" data-no-read-more>The Department of Radiodiagnosis &amp; Imaging at Sukhda Multispeciality Hospital and Sukhda MedPark
+                    provides round-the-clock comprehensive diagnostic and interventional radiology services. Our multi-slice CT scan offers faster scanning and exceptional image quality at the lowest possible radiation exposure, and our high-end 3D/4D ultrasound machine provides high-quality images. Led by experienced senior radiologist Dr. Anil Bansal, our department delivers timely, accurate, and precise diagnostic services.</p>
+                <p>Equipped with modern multi-slice CT scanners, advanced 4D Colour Doppler ultrasound systems,
+                    high-frequency digital radiography, and digital mammography, our department supports all clinical
+                    super-specialities including medicine, surgery, trauma, oncology, cardiology, and maternity with instant, reliable
+                    diagnostic reports.</p>
 
                 <a class="btn primary small" href="contact.html">Schedule Doctor Consultation &rarr;</a>
             </div>
 
             <div class="intro-media">
                 <div class="intro-img-card">
-                    <img src="assets/images/doctor-patient-hero.jpg"
-                        alt="Internal Medicine (DNB Centre) Consultation at Sukhda Hospital">
+                    <img src="assets/images/infra/ct-scan.jpg"
+                        alt="Multi-slice CT scanner at Sukhda Hospital, Hisar" loading="lazy">
                 </div>
             </div>
+
         </div>
     </section>
 
     <!-- SECTION 2: SERVICES & PROCEDURES -->
     <section class="section soft" id="services">
         <div class="wrap">
-            <div class="kicker">OUR CLINICAL CAPABILITIES</div>
-            <h2 class="title">Comprehensive Adult Medical Services</h2>
-            <p class="sub">From routine preventive health check-ups to high-dependency acute medical care.</p>
+            <div class="kicker">OUR IMAGING MODALITIES</div>
+            <h2 class="title">Comprehensive Diagnostic &amp; Interventional Radiology</h2>
+            <p class="sub">Modern imaging technologies delivering fast, detailed anatomical and vascular insights.</p>
 
             <div class="services-grid">
                 <article class="service-card">
                     <div class="service-icon">
+                        <i data-lucide="scan"></i>
+                    </div>
+                    <h3>Multi-Slice CT Scan (24*7)</h3>
+                    <p>Ultra-fast head, chest (HRCT), abdominal, pelvic, and CT angiography scans with multi-planar 3D reconstructions, exceptional image clarity, and low-dose radiation protocols.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
                         <i data-lucide="activity"></i>
                     </div>
-                    <h3>Diabetes &amp; Metabolic Disorder Clinic</h3>
-                    <p>Individualised glycaemic management, continuous glucose monitoring, insulin titration, and
-                        diabetic neuropathy/retinopathy screening.</p>
-                </article>
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="heart-pulse"></i>
-                    </div>
-                    <h3>Hypertension &amp; Vascular Wellness</h3>
-                    <p>Comprehensive screening for primary and secondary hypertension, ambulatory blood pressure
-                        monitoring, and target organ protection.</p>
-                </article>
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="shield-alert"></i>
-                    </div>
-                    <h3>Infectious Diseases &amp; Sepsis Management</h3>
-                    <p>Rapid diagnostic workup and intensive antimicrobial therapy for severe dengue shock syndrome,
-                        malaria, scrub typhus, and septic shock.</p>
-                </article>
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i data-lucide="stethoscope"></i>
-                    </div>
-                    <h3>Respiratory &amp; Chest Medicine</h3>
-                    <p>Management of acute exacerbations of COPD, bronchial asthma, interstitial lung disease (ILD),
-                        pleural effusion, and pneumonia.</p>
+                    <h3>4D Ultrasound &amp; Colour Doppler</h3>
+                    <p>Abdominal ultrasound, soft tissue USG, TVS, pregnancy anomaly scans, musculoskeletal sonography, and
+                        arterial/venous colour Doppler for blood flow evaluations.</p>
                 </article>
                 <article class="service-card">
                     <div class="service-icon">
                         <i data-lucide="shield-check"></i>
                     </div>
-                    <h3>Geriatric &amp; Multi-Organ Care</h3>
-                    <p>Holistic management of elderly patients presenting with multiple chronic co-morbidities,
-                        polypharmacy, and cognitive decline.</p>
+                    <h3>Digital Mammography</h3>
+                    <p>High-contrast digital breast imaging for early diagnosis, screening &amp; surveillance of microcalcifications, cysts, and asymptomatic breast malignancies.</p>
                 </article>
                 <article class="service-card">
                     <div class="service-icon">
-                        <i data-lucide="scan"></i>
+                        <i data-lucide="zap"></i>
                     </div>
-                    <h3>Preventive Master Health Check-ups</h3>
-                    <p>Tailored health screening packages covering cardiac, renal, liver, endocrine, and cancer markers
-                        for early detection.</p>
+                    <h3>Digital X-Ray (CR System)</h3>
+                    <p>Instant, high-definition skeletal, chest, and spinal X-rays with digital enhancement for
+                        emergency trauma, orthopaedics, and pulmonology.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="shield-alert"></i>
+                    </div>
+                    <h3>Image-Guided Interventions</h3>
+                    <p>Ultrasound- and CT-guided FNAC, Tru-Cut core biopsies of lung/liver masses, pleural/peritoneal
+                        fluid tapping, and pigtail abscess drainage.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="heart-pulse"></i>
+                    </div>
+                    <h3>24*7 Emergency Teleradiology</h3>
+                    <p>Continuous emergency reporting by senior radiologists ensuring minimal delay for acute stroke,
+                        trauma, and acute abdomen cases.</p>
                 </article>
             </div>
         </div>
@@ -2625,9 +2613,9 @@
         <div class="wrap">
             <div class="conditions-panel">
                 <div>
-                    <div class="eyebrow" style="color:#278132">CONDITIONS WE TREAT</div>
-                    <h2>Expert Diagnosis &amp; Treatment Across All Medical Conditions</h2>
-                    <p>Comprehensive management for both common medical ailments and complex multi-system diseases.</p>
+                    <div class="eyebrow" style="color:#278132">CONDITIONS WE DIAGNOSE</div>
+                    <h2>Comprehensive Imaging Across All Clinical Disciplines</h2>
+                    <p>Precise diagnostic confirmation for medical, surgical, trauma, and oncology patients.</p>
                     <a class="btn white small" href="contact.html"><i data-lucide="calendar-days"></i>Book
                         Appointment</a>
                 </div>
@@ -2635,51 +2623,51 @@
                 <div class="cond-grid">
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Type 1 &amp; Type 2 Diabetes Mellitus</span>
+                        <span>Acute Stroke (Ischaemic Infarction vs. Intracranial Haemorrhage)</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Severe Hypertension &amp; Hypertensive Emergencies</span>
+                        <span>Head Injury, Skull Fractures &amp; Brain Trauma</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Dengue Fever &amp; Thrombocytopenia</span>
+                        <span>Chest Diseases, Pneumonia &amp; Lung Nodules (HRCT)</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Typhoid, Malaria &amp; Seasonal Viral Fevers</span>
+                        <span>Acute Abdomen (Appendicitis, Pancreatitis, Bowel Obstruction)</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Sepsis &amp; Multi-Organ Dysfunction (MODS)</span>
+                        <span>Kidney &amp; Ureteric Stones (NCCT KUB)</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Pneumonia &amp; Acute Respiratory Distress</span>
+                        <span>Complex Bone Fractures &amp; Joint Dislocations</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>COPD, Emphysema &amp; Chronic Bronchitis</span>
+                        <span>Deep Vein Thrombosis (DVT) &amp; Peripheral Arterial Disease</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Thyroid Disorders (Hypo/Hyperthyroidism)</span>
+                        <span>Foetal Growth, Congenital Anomalies &amp; Placental Health</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Liver Disorders &amp; Fatty Liver Disease</span>
+                        <span>Liver Tumours, Cirrhosis &amp; Gallbladder Pathologies</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Unexplained Weight Loss &amp; Fever (PUO)</span>
+                        <span>Breast Nodules, Microcalcifications &amp; Cysts</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Severe Anaemia &amp; Nutritional Deficiencies</span>
+                        <span>Spinal Disc Herniations &amp; Vertebral Fractures</span>
                     </div>
                     <div class="cond-item">
                         <i data-lucide="check-circle"></i>
-                        <span>Autoimmune &amp; Rheumatological Disorders</span>
+                        <span>Cancer Staging &amp; Lymph Node Metastasis</span>
                     </div>
                 </div>
             </div>
@@ -2689,52 +2677,36 @@
     <!-- SECTION 5: LEAD SPECIALIST -->
     <section class="section" id="specialist" style="padding-top: 0;">
         <div class="wrap">
-            <div class="kicker">CLINICAL SPECIALISTS</div>
-            <h2 class="title">Internal Medicine Specialists &amp; Physicians</h2>
-            <p class="sub">Senior physicians and consultants delivering comprehensive, evidence-based adult medical and critical care.</p>
+            <div class="kicker">RADIODIAGNOSIS TEAM</div>
+            <h2 class="title">Radiodiagnosis &amp; Imaging Specialists</h2>
+            <p class="sub">Senior radiologists delivering round-the-clock precision diagnostic imaging, CT scan, ultrasound and MRI reporting.</p>
 
             <div class="hd-grid">
                 <article class="hd-card">
-                    <a href="dr-amit-mehta.html" class="hd-photo">
-                        <span class="hd-exp">25+ Years</span>
-                        <img src="assets/images/doctors/latest/dr-amit-mehta1.webp"
-                            alt="Dr. Amit Mehta - Director &amp; Head — Internal Medicine &amp; Critical Care" loading="lazy">
+                    <a href="dr-anil-bansal.html" class="hd-photo">
+                        <span class="hd-exp">20+ Years</span>
+                        <img src="assets/images/doctors/latest/dr-anil-bansal1.webp"
+                            alt="Dr. Anil Bansal - Head of Radiodiagnosis &amp; Imaging" loading="lazy">
                     </a>
                     <div class="hd-body">
-                        <h3><a href="dr-amit-mehta.html">Dr. Amit Mehta</a></h3>
-                        <div class="hd-desig">Director &amp; Head — Internal Medicine &amp; Critical Care</div>
-                        <div class="hd-qual">MBBS, MD (Medicine) · AIIMS, New Delhi</div>
+                        <h3><a href="dr-anil-bansal.html">Dr. Anil Bansal</a></h3>
+                        <div class="hd-desig">Head of Radiodiagnosis &amp; Imaging</div>
+                        <div class="hd-qual">MBBS, DMRD</div>
                         <div class="hd-actions">
-                            <a href="dr-amit-mehta.html" class="hd-btn-profile">View Profile</a>
-                            <a href="contact.html?doctor=dr-amit-mehta" class="hd-btn-book">Book OPD</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="hd-card">
-                    <a href="dr-hemant-dahiya.html" class="hd-photo">
-                        <span class="hd-exp">15+ Years</span>
-                        <img src="assets/images/doctors/latest/dr-hemant-dahiya1.webp"
-                            alt="Dr. Hemant Dahiya - Consultant Physician — Internal Medicine" loading="lazy">
-                    </a>
-                    <div class="hd-body">
-                        <h3><a href="dr-hemant-dahiya.html">Dr. Hemant Dahiya</a></h3>
-                        <div class="hd-desig">Consultant Physician — Internal Medicine</div>
-                        <div class="hd-qual">MBBS, M.D. (Internal Medicine)</div>
-                        <div class="hd-actions">
-                            <a href="dr-hemant-dahiya.html" class="hd-btn-profile">View Profile</a>
-                            <a href="contact.html?doctor=dr-hemant-dahiya" class="hd-btn-book">Book OPD</a>
+                            <a href="dr-anil-bansal.html" class="hd-btn-profile">View Profile</a>
+                            <a href="contact.html?doctor=dr-anil-bansal" class="hd-btn-book">Book OPD</a>
                         </div>
                     </div>
                 </article>
                 <article class="hd-card">
                     <a href="opd-schedule.html" class="hd-photo">
                         <img src="assets/images/unknown-doctor.webp"
-                            alt="Dr. Manaswi Gupta - Consultant Physician — Medicine &amp; Critical Care" loading="lazy">
+                            alt="Dr. Priyanka Chhabra - Consultant — Radiodiagnosis &amp; Imaging" loading="lazy">
                     </a>
                     <div class="hd-body">
-                        <h3><a href="opd-schedule.html">Dr. Manaswi Gupta</a></h3>
-                        <div class="hd-desig">Consultant Physician — Medicine &amp; Critical Care</div>
-                        <div class="hd-qual">MBBS, DNB (General Medicine)</div>
+                        <h3><a href="opd-schedule.html">Dr. Priyanka Chhabra</a></h3>
+                        <div class="hd-desig">Consultant — Radiodiagnosis &amp; Imaging</div>
+                        <div class="hd-qual">DMRD (Radiology)</div>
                         <div class="hd-actions">
                             <a href="opd-schedule.html" class="hd-btn-profile">View OPD</a>
                             <a href="contact.html" class="hd-btn-book">Book OPD</a>
@@ -2751,7 +2723,7 @@
         <div class="wrap faq-layout">
             <div>
                 <div class="kicker">FREQUENTLY ASKED QUESTIONS</div>
-                <h2 class="title">Common Questions About Internal Medicine (DNB Centre)</h2>
+                <h2 class="title">Common Questions About CT Scan &amp; Radiology</h2>
                 <p class="sub">Clear, evidence-based answers to help you make informed decisions about your health and
                     treatment options.</p>
                 <a class="btn primary small" href="contact.html"><i data-lucide="message-circle"></i>Ask a Doctor</a>
@@ -2759,41 +2731,41 @@
 
             <div>
                 <details class="faq-item" open>
-                    <summary>What does an Internal Medicine specialist (Physician) do?</summary>
+                    <summary>Is a CT scan available 24*7 for emergency patients at Sukhda?</summary>
                     <div class="faq-content">
-                        An Internal Medicine specialist, or physician, is trained to diagnose, manage, and prevent a
-                        wide spectrum of acute and chronic adult diseases, especially complex multi-system illnesses,
-                        diabetes, hypertension, infections, and heart-lung-kidney conditions.
+                        Yes. Our Multi-Slice CT Scanner operates 24 hours a day, 7 days a week, with on-duty technicians
+                        and emergency radiologist reporting for head injuries, acute strokes, polytrauma, and acute
+                        surgical conditions.
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>What makes Sukhda Hospital's Internal Medicine department unique?</summary>
+                    <summary>Why is a blood creatinine test required before a contrast CT scan?</summary>
                     <div class="faq-content">
-                        Sukhda Multispeciality Hospital is a recognised DNB Postgraduate Training Centre accredited by the National Board of Examinations in Medical Sciences (NBEMS). This academic environment ensures strict adherence to
-                        evidence-based protocols, continuous peer review, and 24*7 availability of qualified resident
-                        doctors.
+                        Intravenous contrast dye is cleared through the kidneys. A serum creatinine test ensures your
+                        kidney function is adequate to process the contrast safely. For non-contrast scans (like plain
+                        brain CT or NCCT KUB), no blood test is required.
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>How are severe dengue and viral fever emergencies managed at Sukhda?</summary>
+                    <summary>What is the difference between regular ultrasound and 4D Colour Doppler?</summary>
                     <div class="faq-content">
-                        We have a 24*7 dedicated critical care unit, continuous platelet count and haematocrit
-                        monitoring, automated blood component storage, and clinical protocols to manage dengue
-                        haemorrhagic fever, shock syndrome, and severe sepsis.
+                        Regular ultrasound produces 2D greyscale anatomical images. 4D Colour Doppler assesses blood
+                        flow direction, velocity, and vascular resistance in real time, making it invaluable for foetal heart assessments, placental health, vascular pathologies, and DVT detection.
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>Can I get a comprehensive preventive full-body health check-up?</summary>
+                    <summary>How does Sukhda Hospital minimise radiation dose during X-rays and CT scans?</summary>
                     <div class="faq-content">
-                        Yes. Sukhda Hospital offers structured executive and comprehensive master health check-up
-                        packages including blood profiles, ECG, 2D Echo/TMT, ultrasound, CT scan, chest X-ray, and
-                        consultations with senior physicians.
+                        We use modern digital detectors, automated tube current modulation, and strict ALARA (As Low As
+                        Reasonably Achievable) protocols to ensure maximum image quality with the lowest possible
+                        radiation dose.
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>Are medical admissions covered under cashless insurance?</summary>
+                    <summary>Are diagnostic imaging tests covered under cashless insurance?</summary>
                     <div class="faq-content">
-                        Yes. Non-surgical and critical care medical admissions are covered under cashless private insurance TPAs, Ayushman Bharat (PM-JAY), ECHS, and Haryana Government health schemes, subject to policy terms.
+                        Imaging tests conducted during an emergency or inpatient hospital admission are covered under
+                        cashless private insurance, Ayushman Bharat (PM-JAY), ECHS, and Haryana Govt. schemes.
                     </div>
                 </details>
             </div>
@@ -2807,9 +2779,9 @@
                 <img src="assets/images/doctor-consult.jpg" alt="Sukhda Specialist Doctor">
             </div>
             <div>
-                <h2>Need an Expert Physician Consultation?</h2>
-                <p>Book an appointment with our Director of Internal Medicine or visit our 24*7 Emergency Medicine
-                    department.</p>
+                <h2>Need an Emergency or Routine Diagnostic Scan?</h2>
+                <p>Walk in for 24*7 CT scan and digital X-ray, or book an appointment for ultrasound and mammography.
+                </p>
             </div>
             <div class="actions">
                 <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Consultation</a>

@@ -952,67 +952,7 @@
             font-size: 12px;
             color: var(--muted);
             font-weight: 600;
-        }
-
-        .opd-edit-toggle {
             margin-left: auto;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 12px;
-            font-size: 12.5px;
-            font-weight: 700;
-            color: var(--blue);
-            background: #fff;
-            border: 1.5px solid #c9d8e8;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .opd-edit-toggle[hidden] {
-            display: none;
-        }
-
-        .opd-edit-toggle:hover {
-            border-color: var(--blue);
-        }
-
-        .opd-edit-bar {
-            margin: 0 0 16px;
-            padding: 14px 16px;
-            background: #fff8e6;
-            border: 1.5px solid #f4d48a;
-            border-radius: 12px;
-            font-size: 13.5px;
-            color: #5b4a1a;
-            line-height: 1.5;
-        }
-
-        .opd-edit-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .opd-edit-cancel {
-            padding: 7px 14px;
-            font-weight: 700;
-            background: #fff;
-            border: 1.5px solid #c9d8e8;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .status-editor select,
-        .status-editor input {
-            width: 100%;
-            margin-top: 6px;
-            padding: 6px 8px;
-            font-size: 12.5px;
-            border: 1.5px solid #c9d8e8;
-            border-radius: 7px;
-            font-family: inherit;
         }
 
         .action-btns {
@@ -1841,7 +1781,7 @@
                                         </div>
                                     </div>
                                     <div class="mega-links-grid">
-                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
+                                        <a href="medicine-and-critical-care.html"><i data-lucide="stethoscope"></i><span>Medicine
                                                 &amp; Critical care</span></a>
                                         <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical
                                                 Oncology</span></a>
@@ -1853,21 +1793,21 @@
                                                 data-lucide="heart-pulse"></i><span>Cardiology</span></a>
                                         <a href="gastroenterology.html"><i
                                                 data-lucide="activity"></i><span>Gastroenterology</span></a>
-                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
+                                        <a href="nephrology-and-dialysis.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
                                                 Dialysis</span></a>
-                                        <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp;
+                                        <a href="neurosurgery-and-spine.html"><i data-lucide="brain"></i><span>Neurosurgery &amp;
                                                 Spine</span></a>
-                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
+                                        <a href="gynaecology-and-obstetrics.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
                                                 Obstetrics</span></a>
-                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp;
+                                        <a href="orthopaedic-and-robotic-joint-replacement.html"><i data-lucide="bone"></i><span>Orthopaedic &amp;
                                                 Robotic Joint Replacement</span></a>
-                                        <a href="general-surgery.html"><i
+                                        <a href="laparoscopic-and-general-surgery.html"><i
                                                 data-lucide="shield-check"></i><span>Laparoscopic &amp; General
                                                 Surgery</span></a>
                                         <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
-                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp;
+                                        <a href="radiodiagnosis-and-imaging.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp;
                                                 Imaging</span></a>
-                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
+                                        <a href="anaesthesia-and-pain-management.html"><i data-lucide="shield"></i><span>Anaesthesia
                                                 &amp; Pain Management</span></a>
                                         <a href="pathology.html"><i
                                                 data-lucide="microscope"></i><span>Pathology</span></a>
@@ -1886,7 +1826,7 @@
                                         </div>
                                     </div>
                                     <div class="mega-links-grid single-col">
-                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
+                                        <a href="medicine-and-critical-care.html"><i data-lucide="stethoscope"></i><span>Medicine
                                                 &amp; Critical care</span></a>
                                         <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical
                                                 Oncology</span></a>
@@ -1894,7 +1834,7 @@
                                                 Oncology</span></a>
                                         <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation
                                                 Oncology</span></a>
-                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
+                                        <a href="anaesthesia-and-pain-management.html"><i data-lucide="shield"></i><span>Anaesthesia
                                                 &amp; Pain Management</span></a>
                                         <a href="pathology.html"><i
                                                 data-lucide="microscope"></i><span>Pathology</span></a>
@@ -2076,21 +2016,6 @@
                 <span class="status-badge oncall"><i data-lucide="phone-incoming" style="width:11px;height:11px"></i> On
                     Call</span>
                 <span class="legend-updated" id="opdStatusUpdated" hidden></span>
-                <button type="button" class="opd-edit-toggle" id="opdEditToggle"><i data-lucide="pencil"
-                        style="width:13px;height:13px"></i> Edit Availability</button>
-            </div>
-            <div class="opd-edit-bar" id="opdEditBar" hidden>
-                <p><b>Edit mode:</b> change each doctor&rsquo;s status below, then click <b>Download Updated File</b>
-                    and upload
-                    <code>opd-status.json</code> to the <code>assets/data/</code> folder on the website server. The
-                    change
-                    goes live for all visitors once the file is uploaded.
-                </p>
-                <div class="opd-edit-actions">
-                    <button type="button" class="btn-book-opd" id="opdEditDownload"><i data-lucide="download"></i>
-                        Download Updated File</button>
-                    <button type="button" class="opd-edit-cancel" id="opdEditCancel">Close Edit Mode</button>
-                </div>
             </div>
             <div class="opd-table-card">
                 <table class="opd-table">
@@ -2120,7 +2045,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="internal-medicine.html" class="opd-dept-link">Medicine &amp; Critical
+                                    <a href="medicine-and-critical-care.html" class="opd-dept-link">Medicine &amp; Critical
                                         Care</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
@@ -2166,7 +2091,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="internal-medicine.html" class="opd-dept-link">Medicine &amp; Critical
+                                    <a href="medicine-and-critical-care.html" class="opd-dept-link">Medicine &amp; Critical
                                         Care</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
@@ -2208,7 +2133,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="internal-medicine.html" class="opd-dept-link">Medicine &amp; Critical
+                                    <a href="medicine-and-critical-care.html" class="opd-dept-link">Medicine &amp; Critical
                                         Care</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
@@ -2462,7 +2387,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="nephrology.html" class="opd-dept-link">Nephrology &amp; Dialysis</a>
+                                    <a href="nephrology-and-dialysis.html" class="opd-dept-link">Nephrology &amp; Dialysis</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
                                         Multispeciality Hospital</a>
@@ -2502,7 +2427,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="neurosurgery.html" class="opd-dept-link">Neurosurgery</a>
+                                    <a href="neurosurgery-and-spine.html" class="opd-dept-link">Neurosurgery</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
                                         Multispeciality Hospital</a>
@@ -2546,7 +2471,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="gynaecology.html" class="opd-dept-link">Gynaecology &amp; Obstetrics</a>
+                                    <a href="gynaecology-and-obstetrics.html" class="opd-dept-link">Gynaecology &amp; Obstetrics</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
                                         Multispeciality Hospital</a>
@@ -2589,7 +2514,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="orthopaedics.html" class="opd-dept-link">Orthopaedics &amp; Robotic Joint
+                                    <a href="orthopaedic-and-robotic-joint-replacement.html" class="opd-dept-link">Orthopaedics &amp; Robotic Joint
                                         Replacement</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
@@ -2631,7 +2556,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="orthopaedics.html" class="opd-dept-link">Orthopaedics &amp; Robotic Joint
+                                    <a href="orthopaedic-and-robotic-joint-replacement.html" class="opd-dept-link">Orthopaedics &amp; Robotic Joint
                                         Replacement</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
@@ -2672,7 +2597,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="general-surgery.html" class="opd-dept-link">Laparoscopic &amp; General
+                                    <a href="laparoscopic-and-general-surgery.html" class="opd-dept-link">Laparoscopic &amp; General
                                         Surgery</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
@@ -2754,7 +2679,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="radiology.html" class="opd-dept-link">Radiodiagnosis &amp; Imaging</a>
+                                    <a href="radiodiagnosis-and-imaging.html" class="opd-dept-link">Radiodiagnosis &amp; Imaging</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
                                         Multispeciality Hospital</a>
@@ -2794,7 +2719,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="radiology.html" class="opd-dept-link">Radiodiagnosis &amp; Imaging</a>
+                                    <a href="radiodiagnosis-and-imaging.html" class="opd-dept-link">Radiodiagnosis &amp; Imaging</a>
                                     <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
                                         MedPark</a>
@@ -2833,7 +2758,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="anaesthesiology.html" class="opd-dept-link">Anaesthesia &amp; Pain
+                                    <a href="anaesthesia-and-pain-management.html" class="opd-dept-link">Anaesthesia &amp; Pain
                                         Management</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
@@ -2872,7 +2797,7 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="anaesthesiology.html" class="opd-dept-link">Anaesthesia &amp; Pain
+                                    <a href="anaesthesia-and-pain-management.html" class="opd-dept-link">Anaesthesia &amp; Pain
                                         Management</a>
                                     <a href="sukhda-multispecialty-hospital.html" class="hospital-tag"><i
                                             data-lucide="building" style="width:11px;height:11px"></i> Sukhda
