@@ -69,7 +69,7 @@
         { n: 'Cashless / TPA & Empanelment', s: 'Insurance, Ayushman Bharat, ECHS', u: 'empanelled-corporate.html', h: BOTH, k: 'cashless tpa insurance ayushman echs cghs panel' },
         { n: 'About Sukhda', s: 'Our story, leadership & vision', u: 'about.html', h: BOTH, k: 'about history founder' },
         { n: 'Health Packages', s: 'Preventive health checkup packages', u: 'health-packages.html', h: BOTH, k: 'health package checkup full body cardiac diabetes screening' },
-        { n: 'Infrastructure & Facilities', s: 'Modular OTs, ICUs, Labs & Diagnostics', u: 'about.html#infrastructure', h: BOTH, k: 'infrastructure facilities modular ot icu equipment technology' },
+        { n: 'Infrastructure & Facilities', s: 'Modular OTs, ICUs, Labs & Diagnostics', u: 'infrastructure.html', h: BOTH, k: 'infrastructure facilities modular ot icu equipment technology cath lab ct scan beds' },
         { n: 'Careers', s: 'Jobs at Sukhda Healthcare', u: 'careers.html', h: BOTH, k: 'job jobs career vacancy' },
         { n: 'Media Coverage', s: 'News & press', u: 'media-coverage.html', h: BOTH, k: 'media news press' },
         { n: 'CSR', s: 'Community initiatives', u: 'csr.html', h: BOTH, k: 'csr camp community' }
