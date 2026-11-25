@@ -1,4 +1,3 @@
-
 /* ===== MOBILE ONLY NAV ITEMS ===== */
 /* Strictly hide on desktop & laptop (all screens > 900px) */
 .mobile-nav-links a.mobile-only-nav,
@@ -9,6 +8,7 @@ a.mobile-only-nav,
 .mobile-only-nav {
     display: none !important;
 }
+
 /* ==========================================================================
    SUKHDA HEALTHCARE - UNIFIED HEADER & FOOTER STYLESHEET
    Includes Navigation (with clean medium font weight 500), Dropdowns, Mega-Menu,
@@ -27,7 +27,7 @@ a.mobile-only-nav,
 /* ---------- TOP EMERGENCY & UTILITY BAR ---------- */
 .top {
     height: 42px;
-    background: #052159;
+    background: radial-gradient(circle at 50% 25%, #0f395d 0%, #09243c 65%, #05192c 100%);
     color: #fff;
     font-size: 13.5px;
     position: sticky !important;
@@ -53,6 +53,7 @@ a.mobile-only-nav,
 }
 
 @media (min-width: 1921px) {
+
     .top .wrap,
     .nav .wrap {
         max-width: 1760px !important;
@@ -185,6 +186,7 @@ a.mobile-only-nav,
         opacity: 0;
         transform: translateY(6px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1386,7 +1388,7 @@ header.nav,
 
 /* ---------- FOOTER STYLING ---------- */
 .footer {
-    background: linear-gradient(180deg, #052159 0%, #011338 100%);
+    background: radial-gradient(circle at 50% 25%, #0f395d 0%, #09243c 65%, #05192c 100%);
     color: #cbd5e1;
     padding: 56px 0 0;
     border-top: 4px solid var(--green, #278132);
@@ -1895,11 +1897,13 @@ header.nav,
         grid-template-columns: 1fr;
         gap: 28px;
     }
+
     .footer .bottom .wrap,
     .bottom .wrap {
         flex-direction: column;
         text-align: center;
     }
+
     .bottom-badges {
         justify-content: center;
         flex-wrap: wrap;
@@ -2213,6 +2217,7 @@ header.nav,
     text-decoration: underline;
     transform: translateX(3px);
 }
+
 /* ===== GET DIRECTIONS (header + footer) ===== */
 .top .links a.top-directions {
     color: #9fe3ad !important;
@@ -2340,6 +2345,7 @@ header.nav,
         opacity: 0;
         transform: translateY(-6px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2421,7 +2427,7 @@ header.nav,
         text-align: center;
     }
 
-    .cta .wrap > * {
+    .cta .wrap>* {
         min-width: 0;
     }
 }
@@ -2453,7 +2459,7 @@ header.nav,
     .founder-box,
     .cathlab-highlight,
     .cert-card,
-    .dialysis-split > div {
+    .dialysis-split>div {
         padding-left: 18px !important;
         padding-right: 18px !important;
     }
@@ -2479,7 +2485,7 @@ header.nav,
         line-height: 1.4;
     }
 
-    .eyebrow > span:not(.eyebrow-badge) {
+    .eyebrow>span:not(.eyebrow-badge) {
         font-weight: 800;
         opacity: 0.9;
     }

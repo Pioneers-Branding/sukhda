@@ -3734,6 +3734,16 @@
             line-height: 1.7;
             color: #475569;
             margin: 0 0 14px;
+            display: block !important;
+            -webkit-line-clamp: unset !important;
+            line-clamp: unset !important;
+            max-height: none !important;
+            overflow: visible !important;
+        }
+
+        .ab-desc .rm-toggle,
+        .ab-sec .rm-toggle {
+            display: none !important;
         }
 
         .ab-desc p:last-child {
@@ -4110,7 +4120,7 @@
                                 class="nav-chevron"></i></a>
                         <span class="nav-drop">
                             <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
-                            <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super Specialty)</a>
+                            <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super-Speciality)</a>
                         </span>
                     </span>
                     <a href="health-packages.html">Health Packages</a>
@@ -4317,7 +4327,7 @@
 
     <!-- 2. ABOUT (NO IMAGE) -->
     <!-- ABOUT SUKHDA HEALTHCARE (NMC-STYLE REDESIGN) -->
-    <section class="section ab-sec" id="about">
+    <section class="section ab-sec no-read-more" id="about" data-no-read-more>
         <div class="wrap ab-grid">
             <!-- LEFT COLUMN: IMAGE COLLAGE -->
             <div class="ab-media-col">
@@ -4336,9 +4346,6 @@
 
                     <!-- Floating Badge Card (Bottom-Right) -->
                     <div class="ab-stat-badge">
-                        <div class="ab-stat-badge-icon">
-                            <i data-lucide="shield-check"></i>
-                        </div>
                         <div class="ab-stat-badge-num">24+</div>
                         <div class="ab-stat-badge-lbl">Years of Excellence in Healthcare</div>
                     </div>
@@ -4347,15 +4354,8 @@
 
             <!-- RIGHT COLUMN: CONTENT -->
             <div class="ab-content-col">
-                <div class="ab-eyebrow">
-                    <svg class="ab-icon-flower" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"
-                        aria-hidden="true">
-                        <path
-                            d="M12 2a4 4 0 0 0-4 4c0 1.2.5 2.3 1.3 3.1A4 4 0 0 0 6 12a4 4 0 0 0 3.3 2.9A4 4 0 0 0 8 18a4 4 0 0 0 4 4 4 4 0 0 0 4-4c0-1.2-.5-2.3-1.3-3.1A4 4 0 0 0 18 12a4 4 0 0 0-3.3-2.9A4 4 0 0 0 16 6a4 4 0 0 0-4-4zm0 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
-                    </svg>
-                    <span class="ab-line"></span>
-                    <span class="ab-kicker-text">About Sukhda Healthcare</span>
-                </div>
+
+                <div class="kicker">About Sukhda Healthcare</div>
 
                 <h2 class="ab-heading">Over Two Decades of Excellence,<br>Compassion &amp; Quality Care</h2>
 
@@ -4364,7 +4364,7 @@
                         experienced professionals.</p>
                 </div>
 
-                <div class="ab-desc">
+                <div class="ab-desc no-read-more" data-no-read-more>
                     <p>Sukhda Multispeciality Hospital is the brainchild of <b>Dr. Amit Mehta, MD (Medicine), AIIMS, New
                             Delhi</b>. After gaining rich clinical experience at <b>AIIMS, New Delhi</b> and <b>PGIMER,
                             Chandigarh</b>, Dr. Mehta established Sukhda in November 2002 with the mission of <i>"Care
@@ -4377,13 +4377,6 @@
                         affordable cost across Haryana, Punjab, and Rajasthan.</p>
                 </div>
 
-                <!-- Accreditation Tags -->
-                <div class="ab-tags">
-                    <span class="ab-tag"><i data-lucide="shield-check"></i> NABH Accredited (125 Beds)</span>
-                    <span class="ab-tag"><i data-lucide="graduation-cap"></i> DNB Teaching Centre</span>
-                    <span class="ab-tag"><i data-lucide="award"></i> Estd. 2002</span>
-                    <span class="ab-tag"><i data-lucide="heart-pulse"></i> AB PM-JAY Gold</span>
-                </div>
 
                 <!-- ACTIONS ROW: Read More / Timeline Button + Google Rating Badge -->
                 <div class="ab-actions">
@@ -4468,7 +4461,7 @@
                 <article class="hospital">
                     <div class="photo">
                         <img class="photo-logo" src="assets/images/sukhda-medpark-logo.png"
-                            alt="Sukhda MedPark Cancer &amp; Super Speciality Hospital">
+                            alt="Sukhda MedPark Cancer &amp; Super-Speciality Hospital">
                     </div>
                     <div class="h-info">
                         <img class="h-logo" src="assets/images/sukhda-medpark-logo.png" alt="Sukhda MedPark">

@@ -48,7 +48,17 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6, .btn, .kicker, .eyebrow, .sec-title, .badge {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .btn,
+        .kicker,
+        .eyebrow,
+        .sec-title,
+        .badge {
             font-family: 'Inter', sans-serif;
         }
 
@@ -64,23 +74,11 @@
 
         /* HERO BANNER */
         .pk-hero {
-            background: linear-gradient(135deg, #052159 0%, #0a3a8b 60%, #104c9e 100%);
+            background: radial-gradient(circle at 50% 25%, #0f395d 0%, #09243c 65%, #05192c 100%);
             color: #fff;
             padding: 56px 0 64px;
             position: relative;
             overflow: hidden;
-        }
-
-        .pk-hero::after {
-            content: "";
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 380px;
-            height: 380px;
-            background: radial-gradient(circle, rgba(39, 129, 50, 0.25) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
         }
 
         .breadcrumbs {
@@ -689,7 +687,8 @@
             margin-bottom: 6px;
         }
 
-        .form-input, .form-select {
+        .form-input,
+        .form-select {
             width: 100%;
             padding: 12px 14px;
             border: 1px solid #cbd5e1;
@@ -700,7 +699,8 @@
             background: #f8fafc;
         }
 
-        .form-input:focus, .form-select:focus {
+        .form-input:focus,
+        .form-select:focus {
             outline: none;
             border-color: var(--green);
             background: #ffffff;
@@ -747,7 +747,8 @@
                 justify-content: center;
             }
 
-            .btn-cta-call, .btn-cta-wa {
+            .btn-cta-call,
+            .btn-cta-wa {
                 width: 100%;
                 justify-content: center;
             }
@@ -756,16 +757,25 @@
 </head>
 
 <body>
-<!-- TOP EMERGENCY & UTILITY BAR -->
-<div class="top">
-    <div class="wrap">
-        <div class="links">
-            <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: 99965-44005</a>
-            <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24/7 Emergency: 01662-249473</a>
-        </div>
-        <div class="links">
-            <div class="top-directions-dropdown">
-                    <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false" title="Get Directions to Sukhda Hospitals">
+    <!-- TOP EMERGENCY & UTILITY BAR -->
+    <div class="top">
+        <div class="wrap">
+            <div class="links">
+                <a href="https://wa.me/919996544005" target="_blank" class="top-wa"><svg class="wa-icon-svg"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                        style="vertical-align:middle;flex-shrink:0" aria-hidden="true">
+                        <path fill="#25D366"
+                            d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                        <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    </svg> WhatsApp: 99965-44005</a>
+                <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24/7 Emergency:
+                    01662-249473</a>
+            </div>
+            <div class="links">
+                <div class="top-directions-dropdown">
+                    <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false"
+                        title="Get Directions to Sukhda Hospitals">
                         <span>Get Directions</span>
                         <i data-lucide="chevron-down" class="top-dir-chevron"></i>
                     </button>
@@ -793,129 +803,175 @@
                         </a>
                     </div>
                 </div>
-            <a href="empanelled-corporate.html" style="color:#278132;font-weight:700">Cashless / TPA</a>
-            <a href="opd-schedule.html">OPD Schedule</a>
-            <div class="top-lang-switch notranslate" aria-label="Language selection">
-                <button type="button" class="lang-btn active" data-lang="en" onclick="switchLanguage('en')"><i data-lucide="globe" style="width:13px;height:13px"></i> English</button>
-                <span class="lang-sep">|</span>
-                <button type="button" class="lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+                <a href="empanelled-corporate.html" style="color:#278132;font-weight:700">Cashless / TPA</a>
+                <a href="opd-schedule.html">OPD Schedule</a>
+                <div class="top-lang-switch notranslate" aria-label="Language selection">
+                    <button type="button" class="lang-btn active" data-lang="en" onclick="switchLanguage('en')"><i
+                            data-lucide="globe" style="width:13px;height:13px"></i> English</button>
+                    <span class="lang-sep">|</span>
+                    <button type="button" class="lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- MAIN HEADER & NAVIGATION -->
-<header class="nav">
-    <div class="wrap">
-        <a href="index.html" aria-label="Sukhda Healthcare home">
-            <img class="logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
-        </a>
-        <nav class="menu">
-            <div class="mobile-menu-head">
-                <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
-                <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
-            </div>
-            <div class="mobile-lang-wrap notranslate">
-                <span class="mobile-lang-label"><i data-lucide="languages" style="width:14px;height:14px"></i> भाषा / Language</span>
-                <div class="mobile-lang-pills">
-                    <button type="button" class="mobile-lang-btn active" data-lang="en" onclick="switchLanguage('en')">English</button>
-                    <button type="button" class="mobile-lang-btn" data-lang="hi" onclick="switchLanguage('hi')">हिन्दी</button>
+    <!-- MAIN HEADER & NAVIGATION -->
+    <header class="nav">
+        <div class="wrap">
+            <a href="index.html" aria-label="Sukhda Healthcare home">
+                <img class="logo" src="assets/images/sukhda-logo.png" alt="Sukhda Multispeciality Hospital Hisar">
+            </a>
+            <nav class="menu">
+                <div class="mobile-menu-head">
+                    <img src="assets/images/sukhda-logo.png" alt="Sukhda Hospital">
+                    <button type="button" class="mobile-close-btn" aria-label="Close menu">✕</button>
                 </div>
-            </div>
-            <div class="mobile-nav-links">
-                <span class="nav-group">
-                    <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="about.html">About Sukhda</a>
-                        <a href="about.html#leadership">Leadership</a>
-                        <a href="about.html#vision">Vision &amp; Mission</a>
-                    </span>
-                </span>
-                <span class="nav-group mega-group">
-                    <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <div class="nav-drop services-mega">
-                        <div class="mega-body">
-                            <div class="mega-col">
-                                <div class="mega-col-header">
-                                    <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
-                                    <div>
-                                        <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
-                                        <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB Centre</div>
-                                    </div>
-                                </div>
-                                <div class="mega-links-grid">
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
-                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
-                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
-                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
-                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Cardiology</span></a>
-                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology</span></a>
-                                    <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp; Spine</span></a>
-                                    <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp; Robotic Joint Replacement</span></a>
-                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>Laparoscopic &amp; General Surgery</span></a>
-                                    <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
-                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
-                                    <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
-                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy</span></a>
-                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology</span></a>
-                                </div>
-                            </div>
-                            <div class="mega-col medpark-col">
-                                <div class="mega-col-header">
-                                    <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
-                                    <div>
-                                        <div class="mega-col-title">Sukhda MedPark</div>
-                                        <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
-                                    </div>
-                                </div>
-                                <div class="mega-links-grid single-col">
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
-                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
-                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
-                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
-                                    <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mega-footer">
-                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services &rarr;</a>
-                            <div class="mega-emergency-tag"><i data-lucide="phone-call" style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
-                        </div>
+                <div class="mobile-lang-wrap notranslate">
+                    <span class="mobile-lang-label"><i data-lucide="languages" style="width:14px;height:14px"></i> भाषा
+                        / Language</span>
+                    <div class="mobile-lang-pills">
+                        <button type="button" class="mobile-lang-btn active" data-lang="en"
+                            onclick="switchLanguage('en')">English</button>
+                        <button type="button" class="mobile-lang-btn" data-lang="hi"
+                            onclick="switchLanguage('hi')">हिन्दी</button>
                     </div>
-                </span>
-                <a href="doctor.html">Doctors</a>
-                <span class="nav-group">
-                    <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
-                        <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super Specialty)</a>
+                </div>
+                <div class="mobile-nav-links">
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="about.html">About Sukhda</a>
+                            <a href="about.html#leadership">Leadership</a>
+                            <a href="about.html#vision">Vision &amp; Mission</a>
+                        </span>
                     </span>
-                </span>
-                <a href="health-packages.html">Health Packages</a>
-                <a href="infrastructure.html">Infrastructure &amp; Facilities</a>
-                <span class="nav-group">
-                    <a href="javascript:void(0)">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="media-coverage.html">Media Coverage</a>
-                        <a href="csr.html">CSR</a>
-                        <a href="careers.html">Careers</a>
+                    <span class="nav-group mega-group">
+                        <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <div class="nav-drop services-mega">
+                            <div class="mega-body">
+                                <div class="mega-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                            <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB
+                                                Centre</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid">
+                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
+                                                &amp; Critical care</span></a>
+                                        <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical
+                                                Oncology</span></a>
+                                        <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical
+                                                Oncology</span></a>
+                                        <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation
+                                                Oncology</span></a>
+                                        <a href="cardiology.html"><i
+                                                data-lucide="heart-pulse"></i><span>Cardiology</span></a>
+                                        <a href="gastroenterology.html"><i
+                                                data-lucide="activity"></i><span>Gastroenterology</span></a>
+                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
+                                                Dialysis</span></a>
+                                        <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp;
+                                                Spine</span></a>
+                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
+                                                Obstetrics</span></a>
+                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp;
+                                                Robotic Joint Replacement</span></a>
+                                        <a href="general-surgery.html"><i
+                                                data-lucide="shield-check"></i><span>Laparoscopic &amp; General
+                                                Surgery</span></a>
+                                        <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
+                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp;
+                                                Imaging</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
+                                                &amp; Pain Management</span></a>
+                                        <a href="pathology.html"><i
+                                                data-lucide="microscope"></i><span>Pathology</span></a>
+                                        <a href="physiotherapy.html"><i
+                                                data-lucide="activity"></i><span>Physiotherapy</span></a>
+                                        <a href="dermatology.html"><i
+                                                data-lucide="sparkles"></i><span>Dermatology</span></a>
+                                    </div>
+                                </div>
+                                <div class="mega-col medpark-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda MedPark</div>
+                                            <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid single-col">
+                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
+                                                &amp; Critical care</span></a>
+                                        <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical
+                                                Oncology</span></a>
+                                        <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical
+                                                Oncology</span></a>
+                                        <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation
+                                                Oncology</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
+                                                &amp; Pain Management</span></a>
+                                        <a href="pathology.html"><i
+                                                data-lucide="microscope"></i><span>Pathology</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="index.html#specialities" class="mega-view-all"><i
+                                        data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services
+                                    &rarr;</a>
+                                <div class="mega-emergency-tag"><i data-lucide="phone-call"
+                                        style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg
+                                        class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        width="16" height="16" style="vertical-align:middle;flex-shrink:0"
+                                        aria-hidden="true">
+                                        <path fill="#25D366"
+                                            d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                        <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                                    </svg> WhatsApp: <b>+91 99965-44005</b></div>
+                            </div>
+                        </div>
                     </span>
-                </span>
-                <a href="empanelled-corporate.html" class="mobile-only-nav">Cashless / TPA</a>
-                <a href="opd-schedule.html" class="mobile-only-nav">OPD Schedule</a>
-            </div>
-            <div class="mobile-menu-footer">
-                <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
-                <a class="btn" href="tel:01662249473" style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i data-lucide="phone-call" style="color:#e53935 !important"></i>ER: 01662-249473</a>
-            </div>
-        </nav>
-        <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
-        <div class="top-directions-dropdown nav-directions-dropdown">
-                <button type="button" class="top-directions-trigger nav-directions" aria-haspopup="true" aria-expanded="false" aria-label="Get directions to Sukhda Hospitals" title="Get Directions to Sukhda Hospitals">
+                    <a href="doctor.html">Doctors</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
+                            <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super-Speciality)</a>
+                        </span>
+                    </span>
+                    <a href="health-packages.html">Health Packages</a>
+                    <a href="infrastructure.html">Infrastructure &amp; Facilities</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">Resources <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="media-coverage.html">Media Coverage</a>
+                            <a href="csr.html">CSR</a>
+                            <a href="careers.html">Careers</a>
+                        </span>
+                    </span>
+                    <a href="empanelled-corporate.html" class="mobile-only-nav">Cashless / TPA</a>
+                    <a href="opd-schedule.html" class="mobile-only-nav">OPD Schedule</a>
+                </div>
+                <div class="mobile-menu-footer">
+                    <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+                    <a class="btn" href="tel:01662249473"
+                        style="background:#fff;border-color:#b9cfe2;color:var(--blue);font-size:13px"><i
+                            data-lucide="phone-call" style="color:#e53935 !important"></i>ER: 01662-249473</a>
+                </div>
+            </nav>
+            <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
+            <div class="top-directions-dropdown nav-directions-dropdown">
+                <button type="button" class="top-directions-trigger nav-directions" aria-haspopup="true"
+                    aria-expanded="false" aria-label="Get directions to Sukhda Hospitals"
+                    title="Get Directions to Sukhda Hospitals">
                     <i data-lucide="map-pin"></i><span class="dir-km" hidden></span>
                 </button>
                 <div class="top-directions-menu" role="menu">
@@ -943,9 +999,9 @@
                 </div>
             </div>
             <button class="hamb" aria-label="Open menu">☰</button>
-    </div>
-    <div class="nav-overlay"></div>
-</header>
+        </div>
+        <div class="nav-overlay"></div>
+    </header>
 
 
     <!-- HERO SECTION -->
@@ -958,7 +1014,9 @@
             </div>
             <h1 class="pk-hero-title">Preventive Health Checkup Packages</h1>
             <p class="pk-hero-desc">
-                Invest in your family's health before symptoms arise. Our comprehensive diagnostic packages are clinically designed by senior physicians, cardiologists, and oncologists across Sukhda Multispeciality Hospital and Sukhda MedPark, Hisar.
+                Invest in your family's health before symptoms arise. Our comprehensive diagnostic packages are
+                clinically designed by senior physicians, cardiologists, and oncologists across Sukhda Multispeciality
+                Hospital and Sukhda MedPark, Hisar.
             </p>
             <div class="pk-hero-badges">
                 <div class="pk-hero-badge"><i data-lucide="check-circle-2"></i> Same-Day Diagnostic Reports</div>
@@ -973,13 +1031,20 @@
     <div class="pk-filter-bar">
         <div class="wrap">
             <div class="pk-filter-track" id="pkFilterTrack">
-                <button type="button" class="pk-tab active" data-category="all"><i data-lucide="layout-grid"></i> All Packages</button>
-                <button type="button" class="pk-tab" data-category="whole-body"><i data-lucide="user-check"></i> Whole Body</button>
-                <button type="button" class="pk-tab" data-category="cardiac"><i data-lucide="heart-pulse"></i> Cardiac Care</button>
-                <button type="button" class="pk-tab" data-category="diabetes"><i data-lucide="droplets"></i> Diabetes Care</button>
-                <button type="button" class="pk-tab" data-category="women"><i data-lucide="sparkles"></i> Women's Wellness</button>
-                <button type="button" class="pk-tab" data-category="senior"><i data-lucide="activity"></i> Senior Citizen</button>
-                <button type="button" class="pk-tab" data-category="cancer"><i data-lucide="ribbon"></i> Cancer Screening (MedPark)</button>
+                <button type="button" class="pk-tab active" data-category="all"><i data-lucide="layout-grid"></i> All
+                    Packages</button>
+                <button type="button" class="pk-tab" data-category="whole-body"><i data-lucide="user-check"></i> Whole
+                    Body</button>
+                <button type="button" class="pk-tab" data-category="cardiac"><i data-lucide="heart-pulse"></i> Cardiac
+                    Care</button>
+                <button type="button" class="pk-tab" data-category="diabetes"><i data-lucide="droplets"></i> Diabetes
+                    Care</button>
+                <button type="button" class="pk-tab" data-category="women"><i data-lucide="sparkles"></i> Women's
+                    Wellness</button>
+                <button type="button" class="pk-tab" data-category="senior"><i data-lucide="activity"></i> Senior
+                    Citizen</button>
+                <button type="button" class="pk-tab" data-category="cancer"><i data-lucide="ribbon"></i> Cancer
+                    Screening (MedPark)</button>
             </div>
         </div>
     </div>
@@ -990,7 +1055,8 @@
             <div class="sec-head">
                 <span class="sec-kicker">Transparent &amp; Complete Care</span>
                 <h2 class="sec-title">Choose the Right Health Package for You</h2>
-                <p class="sec-desc">Every package includes extensive automated laboratory tests, advanced radiology/imaging, and one-on-one consultation with specialized consultants.</p>
+                <p class="sec-desc">Every package includes extensive automated laboratory tests, advanced
+                    radiology/imaging, and one-on-one consultation with specialized consultants.</p>
             </div>
 
             <!-- CARDS GRID -->
@@ -1000,32 +1066,49 @@
                 <div class="pk-card" data-category="whole-body">
                     <span class="pk-card-ribbon">Essential</span>
                     <div class="pk-card-header">
-                        <div class="pk-hospital-tag"><i data-lucide="building-2"></i> Sukhda Multispeciality Hospital</div>
+                        <div class="pk-hospital-tag"><i data-lucide="building-2"></i> Sukhda Multispeciality Hospital
+                        </div>
                         <h3 class="pk-card-title">Sukhda Basic Health Check</h3>
-                        <p class="pk-card-target">Recommended for young adults, routine workplace health screening, and annual basic metabolic monitoring.</p>
+                        <p class="pk-card-target">Recommended for young adults, routine workplace health screening, and
+                            annual basic metabolic monitoring.</p>
                     </div>
                     <div class="pk-card-summary">
                         <div class="pk-param-count"><i data-lucide="test-tube-2"></i> 42+ Parameters</div>
-                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Reports in 4-6 hrs</div>
+                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Reports
+                            in 4-6 hrs</div>
                     </div>
                     <div class="pk-card-body">
-                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i> Key Tests Included:</div>
+                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i>
+                            Key Tests Included:</div>
                         <ul class="pk-list">
                             <li><i data-lucide="check"></i> Complete Blood Count (CBC with ESR - 24 parameters)</li>
                             <li><i data-lucide="check"></i> Fasting Blood Glucose (Sugar)</li>
                             <li><i data-lucide="check"></i> Kidney Function Test (Urea, Creatinine, Uric Acid)</li>
-                            <li><i data-lucide="check"></i> Lipid Profile (Total Cholesterol, Triglycerides, HDL, LDL)</li>
+                            <li><i data-lucide="check"></i> Lipid Profile (Total Cholesterol, Triglycerides, HDL, LDL)
+                            </li>
                             <li><i data-lucide="check"></i> Urine Routine &amp; Microscopic Examination</li>
                             <li><i data-lucide="check"></i> Resting 12-Lead ECG &amp; Blood Pressure Screen</li>
                         </ul>
                         <div class="pk-consults">
-                            <div class="pk-consults-label"><i data-lucide="stethoscope" style="width:13px;height:13px"></i> Consultations Included</div>
-                            <p class="pk-consults-text">Consultant Physician Clinical Evaluation &amp; Lifestyle Counselling</p>
+                            <div class="pk-consults-label"><i data-lucide="stethoscope"
+                                    style="width:13px;height:13px"></i> Consultations Included</div>
+                            <p class="pk-consults-text">Consultant Physician Clinical Evaluation &amp; Lifestyle
+                                Counselling</p>
                         </div>
                     </div>
                     <div class="pk-card-footer">
-                        <button type="button" class="btn-pk-book" onclick="openPackageBooking('Sukhda Basic Health Check')"><i data-lucide="calendar"></i> Book Package</button>
-                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Sukhda%20Basic%20Health%20Check." target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
+                        <button type="button" class="btn-pk-book"
+                            onclick="openPackageBooking('Sukhda Basic Health Check')"><i data-lucide="calendar"></i>
+                            Book Package</button>
+                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Sukhda%20Basic%20Health%20Check."
+                            target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                aria-hidden="true">
+                                <path fill="#25D366"
+                                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -1033,33 +1116,52 @@
                 <div class="pk-card featured" data-category="whole-body">
                     <span class="pk-card-ribbon">Most Popular</span>
                     <div class="pk-card-header">
-                        <div class="pk-hospital-tag"><i data-lucide="building-2"></i> Sukhda Multispeciality Hospital</div>
+                        <div class="pk-hospital-tag"><i data-lucide="building-2"></i> Sukhda Multispeciality Hospital
+                        </div>
                         <h3 class="pk-card-title">Sukhda Comprehensive Full Body Check</h3>
-                        <p class="pk-card-target">A thorough whole-body audit covering vital organs: heart, liver, kidneys, lungs, thyroid, and blood health.</p>
+                        <p class="pk-card-target">A thorough whole-body audit covering vital organs: heart, liver,
+                            kidneys, lungs, thyroid, and blood health.</p>
                     </div>
                     <div class="pk-card-summary">
                         <div class="pk-param-count"><i data-lucide="test-tube-2"></i> 68+ Parameters + Imaging</div>
-                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Same Day Reports</div>
+                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Same Day
+                            Reports</div>
                     </div>
                     <div class="pk-card-body">
-                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i> Key Tests Included:</div>
+                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i>
+                            Key Tests Included:</div>
                         <ul class="pk-list">
                             <li><i data-lucide="check"></i> CBC (24), ESR &amp; Blood Grouping</li>
-                            <li><i data-lucide="check"></i> Complete Liver Function Test (Bilirubin, SGOT, SGPT, ALP, Proteins)</li>
-                            <li><i data-lucide="check"></i> Complete Kidney Function Test &amp; Electrolytes (Na, K)</li>
-                            <li><i data-lucide="check"></i> Extended Lipid Profile &amp; HbA1c (Glycated Haemoglobin)</li>
+                            <li><i data-lucide="check"></i> Complete Liver Function Test (Bilirubin, SGOT, SGPT, ALP,
+                                Proteins)</li>
+                            <li><i data-lucide="check"></i> Complete Kidney Function Test &amp; Electrolytes (Na, K)
+                            </li>
+                            <li><i data-lucide="check"></i> Extended Lipid Profile &amp; HbA1c (Glycated Haemoglobin)
+                            </li>
                             <li><i data-lucide="check"></i> Thyroid Profile (T3, T4, TSH)</li>
                             <li><i data-lucide="check"></i> Ultrasound Whole Abdomen &amp; Pelvis (USG)</li>
                             <li><i data-lucide="check"></i> Digital Chest X-Ray &amp; 12-Lead ECG</li>
                         </ul>
                         <div class="pk-consults">
-                            <div class="pk-consults-label"><i data-lucide="stethoscope" style="width:13px;height:13px"></i> Consultations Included</div>
-                            <p class="pk-consults-text">Senior Consultant Physician + Clinical Nutrition &amp; Diet Counselling</p>
+                            <div class="pk-consults-label"><i data-lucide="stethoscope"
+                                    style="width:13px;height:13px"></i> Consultations Included</div>
+                            <p class="pk-consults-text">Senior Consultant Physician + Clinical Nutrition &amp; Diet
+                                Counselling</p>
                         </div>
                     </div>
                     <div class="pk-card-footer">
-                        <button type="button" class="btn-pk-book" onclick="openPackageBooking('Sukhda Comprehensive Full Body Check')"><i data-lucide="calendar"></i> Book Package</button>
-                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Sukhda%20Comprehensive%20Full%20Body%20Check." target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
+                        <button type="button" class="btn-pk-book"
+                            onclick="openPackageBooking('Sukhda Comprehensive Full Body Check')"><i
+                                data-lucide="calendar"></i> Book Package</button>
+                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Sukhda%20Comprehensive%20Full%20Body%20Check."
+                            target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                aria-hidden="true">
+                                <path fill="#25D366"
+                                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -1067,32 +1169,49 @@
                 <div class="pk-card" data-category="cardiac">
                     <span class="pk-card-ribbon">Specialised</span>
                     <div class="pk-card-header">
-                        <div class="pk-hospital-tag"><i data-lucide="heart-pulse"></i> Sukhda Multispeciality Hospital</div>
+                        <div class="pk-hospital-tag"><i data-lucide="heart-pulse"></i> Sukhda Multispeciality Hospital
+                        </div>
                         <h3 class="pk-card-title">Advanced Cardiac Wellness Package</h3>
-                        <p class="pk-card-target">Designed for individuals with family history of heart disease, hypertension, high cholesterol, chest discomfort, or active stress.</p>
+                        <p class="pk-card-target">Designed for individuals with family history of heart disease,
+                            hypertension, high cholesterol, chest discomfort, or active stress.</p>
                     </div>
                     <div class="pk-card-summary">
                         <div class="pk-param-count"><i data-lucide="activity"></i> Echo + TMT + 52 Tests</div>
-                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Cardiologist Supervised</div>
+                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i>
+                            Cardiologist Supervised</div>
                     </div>
                     <div class="pk-card-body">
-                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i> Key Tests Included:</div>
+                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i>
+                            Key Tests Included:</div>
                         <ul class="pk-list">
                             <li><i data-lucide="check"></i> 2D Colour Doppler Echocardiography (2D Echo)</li>
                             <li><i data-lucide="check"></i> Treadmill Stress Test (TMT / Stress ECG)</li>
-                            <li><i data-lucide="check"></i> Extended Lipid Risk Panel (Cholesterol, HDL, LDL, VLDL, Triglycerides)</li>
+                            <li><i data-lucide="check"></i> Extended Lipid Risk Panel (Cholesterol, HDL, LDL, VLDL,
+                                Triglycerides)</li>
                             <li><i data-lucide="check"></i> High-Sensitivity C-Reactive Protein (hs-CRP)</li>
                             <li><i data-lucide="check"></i> Blood Sugar (Fasting &amp; PP) + HbA1c</li>
                             <li><i data-lucide="check"></i> Serum Creatinine, Uric Acid &amp; Electrolytes</li>
                         </ul>
                         <div class="pk-consults">
-                            <div class="pk-consults-label"><i data-lucide="heart" style="width:13px;height:13px"></i> Consultations Included</div>
-                            <p class="pk-consults-text">Senior Interventional Cardiologist Comprehensive Assessment &amp; ECG Review</p>
+                            <div class="pk-consults-label"><i data-lucide="heart" style="width:13px;height:13px"></i>
+                                Consultations Included</div>
+                            <p class="pk-consults-text">Senior Interventional Cardiologist Comprehensive Assessment
+                                &amp; ECG Review</p>
                         </div>
                     </div>
                     <div class="pk-card-footer">
-                        <button type="button" class="btn-pk-book" onclick="openPackageBooking('Advanced Cardiac Wellness Package')"><i data-lucide="calendar"></i> Book Package</button>
-                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Advanced%20Cardiac%20Wellness%20Package." target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
+                        <button type="button" class="btn-pk-book"
+                            onclick="openPackageBooking('Advanced Cardiac Wellness Package')"><i
+                                data-lucide="calendar"></i> Book Package</button>
+                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Advanced%20Cardiac%20Wellness%20Package."
+                            target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                aria-hidden="true">
+                                <path fill="#25D366"
+                                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -1100,32 +1219,49 @@
                 <div class="pk-card" data-category="diabetes">
                     <span class="pk-card-ribbon">Chronic Care</span>
                     <div class="pk-card-header">
-                        <div class="pk-hospital-tag"><i data-lucide="building-2"></i> Sukhda Multispeciality Hospital</div>
+                        <div class="pk-hospital-tag"><i data-lucide="building-2"></i> Sukhda Multispeciality Hospital
+                        </div>
                         <h3 class="pk-card-title">Diabetes Comprehensive Care Profile</h3>
-                        <p class="pk-card-target">Essential for diabetic and pre-diabetic patients to evaluate glycaemic control and prevent renal, retinal, and vascular complications.</p>
+                        <p class="pk-card-target">Essential for diabetic and pre-diabetic patients to evaluate glycaemic
+                            control and prevent renal, retinal, and vascular complications.</p>
                     </div>
                     <div class="pk-card-summary">
                         <div class="pk-param-count"><i data-lucide="test-tube-2"></i> 48+ Parameters</div>
-                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Same Day Reports</div>
+                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Same Day
+                            Reports</div>
                     </div>
                     <div class="pk-card-body">
-                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i> Key Tests Included:</div>
+                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i>
+                            Key Tests Included:</div>
                         <ul class="pk-list">
                             <li><i data-lucide="check"></i> Fasting &amp; Postprandial (PP) Blood Glucose</li>
                             <li><i data-lucide="check"></i> HbA1c (Glycated Haemoglobin 3-Month Average)</li>
-                            <li><i data-lucide="check"></i> Urine Microalbumin / Creatinine Ratio (Early Kidney Marker)</li>
+                            <li><i data-lucide="check"></i> Urine Microalbumin / Creatinine Ratio (Early Kidney Marker)
+                            </li>
                             <li><i data-lucide="check"></i> Complete Kidney Function Test (eGFR, Urea, Creatinine)</li>
                             <li><i data-lucide="check"></i> Full Lipid Profile &amp; Liver Function Test</li>
                             <li><i data-lucide="check"></i> Diabetic Foot Vibration &amp; Neuropathy Screening</li>
                         </ul>
                         <div class="pk-consults">
-                            <div class="pk-consults-label"><i data-lucide="stethoscope" style="width:13px;height:13px"></i> Consultations Included</div>
-                            <p class="pk-consults-text">Consultant Diabetologist / Physician + Clinical Diabetic Diet Plan</p>
+                            <div class="pk-consults-label"><i data-lucide="stethoscope"
+                                    style="width:13px;height:13px"></i> Consultations Included</div>
+                            <p class="pk-consults-text">Consultant Diabetologist / Physician + Clinical Diabetic Diet
+                                Plan</p>
                         </div>
                     </div>
                     <div class="pk-card-footer">
-                        <button type="button" class="btn-pk-book" onclick="openPackageBooking('Diabetes Comprehensive Care Profile')"><i data-lucide="calendar"></i> Book Package</button>
-                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Diabetes%20Comprehensive%20Care%20Profile." target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
+                        <button type="button" class="btn-pk-book"
+                            onclick="openPackageBooking('Diabetes Comprehensive Care Profile')"><i
+                                data-lucide="calendar"></i> Book Package</button>
+                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Diabetes%20Comprehensive%20Care%20Profile."
+                            target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                aria-hidden="true">
+                                <path fill="#25D366"
+                                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -1133,16 +1269,20 @@
                 <div class="pk-card" data-category="women">
                     <span class="pk-card-ribbon">Women's Health</span>
                     <div class="pk-card-header">
-                        <div class="pk-hospital-tag"><i data-lucide="sparkles"></i> Sukhda Multispeciality Hospital</div>
+                        <div class="pk-hospital-tag"><i data-lucide="sparkles"></i> Sukhda Multispeciality Hospital
+                        </div>
                         <h3 class="pk-card-title">Sukhda Well-Woman Health Package</h3>
-                        <p class="pk-card-target">Designed specifically for women across reproductive and menopausal stages, screening for anaemic, hormonal, thyroid, and gynaecological health.</p>
+                        <p class="pk-card-target">Designed specifically for women across reproductive and menopausal
+                            stages, screening for anaemic, hormonal, thyroid, and gynaecological health.</p>
                     </div>
                     <div class="pk-card-summary">
                         <div class="pk-param-count"><i data-lucide="test-tube-2"></i> 56+ Parameters + USG</div>
-                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Female Doctor Consultation</div>
+                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Female
+                            Doctor Consultation</div>
                     </div>
                     <div class="pk-card-body">
-                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i> Key Tests Included:</div>
+                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i>
+                            Key Tests Included:</div>
                         <ul class="pk-list">
                             <li><i data-lucide="check"></i> CBC, Iron Studies &amp; Serum Ferritin (Anaemia Screen)</li>
                             <li><i data-lucide="check"></i> Thyroid Profile (T3, T4, TSH)</li>
@@ -1152,13 +1292,25 @@
                             <li><i data-lucide="check"></i> Fasting Sugar, LFT, KFT &amp; Urine R/M</li>
                         </ul>
                         <div class="pk-consults">
-                            <div class="pk-consults-label"><i data-lucide="heart" style="width:13px;height:13px"></i> Consultations Included</div>
-                            <p class="pk-consults-text">Senior Consultant Gynaecologist &amp; Obstetrician Clinical Examination</p>
+                            <div class="pk-consults-label"><i data-lucide="heart" style="width:13px;height:13px"></i>
+                                Consultations Included</div>
+                            <p class="pk-consults-text">Senior Consultant Gynaecologist &amp; Obstetrician Clinical
+                                Examination</p>
                         </div>
                     </div>
                     <div class="pk-card-footer">
-                        <button type="button" class="btn-pk-book" onclick="openPackageBooking('Sukhda Well-Woman Health Package')"><i data-lucide="calendar"></i> Book Package</button>
-                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Sukhda%20Well-Woman%20Health%20Package." target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
+                        <button type="button" class="btn-pk-book"
+                            onclick="openPackageBooking('Sukhda Well-Woman Health Package')"><i
+                                data-lucide="calendar"></i> Book Package</button>
+                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Sukhda%20Well-Woman%20Health%20Package."
+                            target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                aria-hidden="true">
+                                <path fill="#25D366"
+                                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -1166,16 +1318,20 @@
                 <div class="pk-card" data-category="senior">
                     <span class="pk-card-ribbon">Geriatric Care</span>
                     <div class="pk-card-header">
-                        <div class="pk-hospital-tag"><i data-lucide="activity"></i> Sukhda Multispeciality Hospital</div>
+                        <div class="pk-hospital-tag"><i data-lucide="activity"></i> Sukhda Multispeciality Hospital
+                        </div>
                         <h3 class="pk-card-title">Senior Citizen Comprehensive Care</h3>
-                        <p class="pk-card-target">Created for elders (aged 55+) with gentle handling, mobility support, and thorough cardiac, renal, bone density, and prostate/hormonal checks.</p>
+                        <p class="pk-card-target">Created for elders (aged 55+) with gentle handling, mobility support,
+                            and thorough cardiac, renal, bone density, and prostate/hormonal checks.</p>
                     </div>
                     <div class="pk-card-summary">
                         <div class="pk-param-count"><i data-lucide="test-tube-2"></i> 62+ Parameters + USG</div>
-                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Priority Fast-Track</div>
+                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Priority
+                            Fast-Track</div>
                     </div>
                     <div class="pk-card-body">
-                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i> Key Tests Included:</div>
+                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i>
+                            Key Tests Included:</div>
                         <ul class="pk-list">
                             <li><i data-lucide="check"></i> CBC, ESR, Kidney Function Test &amp; Electrolytes</li>
                             <li><i data-lucide="check"></i> Liver Function Test &amp; Extended Lipid Profile</li>
@@ -1185,13 +1341,25 @@
                             <li><i data-lucide="check"></i> 12-Lead ECG &amp; Joint / Arthritis Clinical Screen</li>
                         </ul>
                         <div class="pk-consults">
-                            <div class="pk-consults-label"><i data-lucide="stethoscope" style="width:13px;height:13px"></i> Consultations Included</div>
-                            <p class="pk-consults-text">Senior Consultant Physician + Orthopaedic / Joint Screening Review</p>
+                            <div class="pk-consults-label"><i data-lucide="stethoscope"
+                                    style="width:13px;height:13px"></i> Consultations Included</div>
+                            <p class="pk-consults-text">Senior Consultant Physician + Orthopaedic / Joint Screening
+                                Review</p>
                         </div>
                     </div>
                     <div class="pk-card-footer">
-                        <button type="button" class="btn-pk-book" onclick="openPackageBooking('Senior Citizen Comprehensive Care')"><i data-lucide="calendar"></i> Book Package</button>
-                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Senior%20Citizen%20Comprehensive%20Care%20package." target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
+                        <button type="button" class="btn-pk-book"
+                            onclick="openPackageBooking('Senior Citizen Comprehensive Care')"><i
+                                data-lucide="calendar"></i> Book Package</button>
+                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20I%20am%20interested%20in%20booking%20the%20Senior%20Citizen%20Comprehensive%20Care%20package."
+                            target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                aria-hidden="true">
+                                <path fill="#25D366"
+                                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -1201,30 +1369,46 @@
                     <div class="pk-card-header">
                         <div class="pk-hospital-tag"><i data-lucide="ribbon"></i> Sukhda MedPark (Cancer Hospital)</div>
                         <h3 class="pk-card-title">MedPark Early Cancer Screening Profile</h3>
-                        <p class="pk-card-target">Advanced diagnostic screening protocol for early detection of common cancers (Breast, Cervical, Prostate, Gastrointestinal, Oral &amp; Lung).</p>
+                        <p class="pk-card-target">Advanced diagnostic screening protocol for early detection of common
+                            cancers (Breast, Cervical, Prostate, Gastrointestinal, Oral &amp; Lung).</p>
                     </div>
                     <div class="pk-card-summary">
                         <div class="pk-param-count"><i data-lucide="shield-alert"></i> Tumour Markers + Imaging</div>
-                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i> Oncologist Evaluated</div>
+                        <div class="pk-report-time"><i data-lucide="clock" style="width:14px;height:14px"></i>
+                            Oncologist Evaluated</div>
                     </div>
                     <div class="pk-card-body">
-                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i> Key Tests Included:</div>
+                        <div class="pk-list-title"><i data-lucide="clipboard-check" style="width:15px;height:15px"></i>
+                            Key Tests Included:</div>
                         <ul class="pk-list">
                             <li><i data-lucide="check"></i> Digital Mammography / Breast Ultrasound (for Women)</li>
                             <li><i data-lucide="check"></i> High-Sensitivity Pap Smear &amp; Liquid-Based Cytology</li>
                             <li><i data-lucide="check"></i> Serum PSA (Total &amp; Free) for Prostate Screen (Men)</li>
                             <li><i data-lucide="check"></i> Tumour Markers: CEA &amp; CA-19.9 (GI Track Screen)</li>
                             <li><i data-lucide="check"></i> Low-Dose CT / Digital Chest X-Ray for Lung Evaluation</li>
-                            <li><i data-lucide="check"></i> Comprehensive Oral Cavity &amp; Head-Neck Clinical Screen</li>
+                            <li><i data-lucide="check"></i> Comprehensive Oral Cavity &amp; Head-Neck Clinical Screen
+                            </li>
                         </ul>
                         <div class="pk-consults">
-                            <div class="pk-consults-label"><i data-lucide="ribbon" style="width:13px;height:13px"></i> Consultations Included</div>
-                            <p class="pk-consults-text">Consultant Medical &amp; Surgical Oncologist Comprehensive Examination</p>
+                            <div class="pk-consults-label"><i data-lucide="ribbon" style="width:13px;height:13px"></i>
+                                Consultations Included</div>
+                            <p class="pk-consults-text">Consultant Medical &amp; Surgical Oncologist Comprehensive
+                                Examination</p>
                         </div>
                     </div>
                     <div class="pk-card-footer">
-                        <button type="button" class="btn-pk-book" onclick="openPackageBooking('MedPark Early Cancer Screening Profile')"><i data-lucide="calendar"></i> Book Package</button>
-                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20MedPark,%20I%20am%20interested%20in%20booking%20the%20MedPark%20Early%20Cancer%20Screening%20Profile." target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></a>
+                        <button type="button" class="btn-pk-book"
+                            onclick="openPackageBooking('MedPark Early Cancer Screening Profile')"><i
+                                data-lucide="calendar"></i> Book Package</button>
+                        <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20MedPark,%20I%20am%20interested%20in%20booking%20the%20MedPark%20Early%20Cancer%20Screening%20Profile."
+                            target="_blank" class="btn-pk-wa" title="Book via WhatsApp"><svg class="wa-icon-svg"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                aria-hidden="true">
+                                <path fill="#25D366"
+                                    d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            </svg></a>
                     </div>
                 </div>
 
@@ -1234,11 +1418,21 @@
             <div class="pk-cta-banner">
                 <div class="pk-cta-content">
                     <h3>Need Assistance Selecting the Right Package?</h3>
-                    <p>Our clinical coordinators are available 24/7 to help you choose the ideal package based on your age, medical history, or doctor recommendations.</p>
+                    <p>Our clinical coordinators are available 24/7 to help you choose the ideal package based on your
+                        age, medical history, or doctor recommendations.</p>
                 </div>
                 <div class="pk-cta-actions">
-                    <a href="tel:01662249473" class="btn-cta-call"><i data-lucide="phone-call"></i> Call 01662-249473</a>
-                    <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20please%20help%20me%20choose%20a%20health%20package." target="_blank" class="btn-cta-wa"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:6px" aria-hidden="true"><path fill="#ffffff" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#25D366" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp Us</a>
+                    <a href="tel:01662249473" class="btn-cta-call"><i data-lucide="phone-call"></i> Call
+                        01662-249473</a>
+                    <a href="https://wa.me/919996544005?text=Hello%20Sukhda%20Hospital,%20please%20help%20me%20choose%20a%20health%20package."
+                        target="_blank" class="btn-cta-wa"><svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:6px"
+                            aria-hidden="true">
+                            <path fill="#ffffff"
+                                d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                            <path fill="#25D366" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        </svg> WhatsApp Us</a>
                 </div>
             </div>
         </div>
@@ -1250,28 +1444,33 @@
             <div class="sec-head">
                 <span class="sec-kicker">Clinical Precision</span>
                 <h2 class="sec-title">Why Get Your Health Checkup at Sukhda?</h2>
-                <p class="sec-desc">A preventive checkup is only as good as the diagnostic precision and specialist expertise behind it.</p>
+                <p class="sec-desc">A preventive checkup is only as good as the diagnostic precision and specialist
+                    expertise behind it.</p>
             </div>
             <div class="pk-why-grid">
                 <div class="pk-why-card">
                     <div class="pk-why-icon"><i data-lucide="microscope"></i></div>
                     <h3 class="pk-why-title">Automated NABL Diagnostics</h3>
-                    <p class="pk-why-desc">In-house fully automated biochemistry, haematology, and hormone immunoassays with stringent daily two-level quality control.</p>
+                    <p class="pk-why-desc">In-house fully automated biochemistry, haematology, and hormone immunoassays
+                        with stringent daily two-level quality control.</p>
                 </div>
                 <div class="pk-why-card">
                     <div class="pk-why-icon"><i data-lucide="scan"></i></div>
                     <h3 class="pk-why-title">High-Definition Imaging</h3>
-                    <p class="pk-why-desc">Low-radiation digital radiography, high-resolution colour Doppler ultrasonography, and multi-slice CT scanning on-site.</p>
+                    <p class="pk-why-desc">Low-radiation digital radiography, high-resolution colour Doppler
+                        ultrasonography, and multi-slice CT scanning on-site.</p>
                 </div>
                 <div class="pk-why-card">
                     <div class="pk-why-icon"><i data-lucide="user-check"></i></div>
                     <h3 class="pk-why-title">Direct Specialist Consultation</h3>
-                    <p class="pk-why-desc">Unlike standalone labs, your findings are directly evaluated by MD Physicians, Cardiologists, or Oncologists for immediate care plans.</p>
+                    <p class="pk-why-desc">Unlike standalone labs, your findings are directly evaluated by MD
+                        Physicians, Cardiologists, or Oncologists for immediate care plans.</p>
                 </div>
                 <div class="pk-why-card">
                     <div class="pk-why-icon"><i data-lucide="sparkles"></i></div>
                     <h3 class="pk-why-title">Seamless Continuation of Care</h3>
-                    <p class="pk-why-desc">If any anomaly is detected, advanced super-specialty departments, daycare suites, and inpatient beds are right here in the hospital.</p>
+                    <p class="pk-why-desc">If any anomaly is detected, advanced super-speciality departments, daycare
+                        suites, and inpatient beds are right here in the hospital.</p>
                 </div>
             </div>
         </div>
@@ -1283,28 +1482,33 @@
             <div class="sec-head">
                 <span class="sec-kicker">Important Guidelines</span>
                 <h2 class="sec-title">Preparing for Your Health Checkup</h2>
-                <p class="sec-desc">Following these simple instructions ensures accurate test values and a smooth morning appointment.</p>
+                <p class="sec-desc">Following these simple instructions ensures accurate test values and a smooth
+                    morning appointment.</p>
             </div>
             <div class="pk-prep-grid">
                 <div class="pk-prep-step">
                     <div class="pk-step-num">01</div>
                     <h3 class="pk-step-title">Overnight Fasting</h3>
-                    <p class="pk-step-text">Maintain 10 to 12 hours of overnight fasting before sample collection. Plain water is permitted.</p>
+                    <p class="pk-step-text">Maintain 10 to 12 hours of overnight fasting before sample collection. Plain
+                        water is permitted.</p>
                 </div>
                 <div class="pk-prep-step">
                     <div class="pk-step-num">02</div>
                     <h3 class="pk-step-title">Morning Medication</h3>
-                    <p class="pk-step-text">Take regular blood pressure medications with a sip of water. Diabetic medicines should be taken after the fasting blood draw.</p>
+                    <p class="pk-step-text">Take regular blood pressure medications with a sip of water. Diabetic
+                        medicines should be taken after the fasting blood draw.</p>
                 </div>
                 <div class="pk-prep-step">
                     <div class="pk-step-num">03</div>
                     <h3 class="pk-step-title">Ultrasound Preparation</h3>
-                    <p class="pk-step-text">For abdominal ultrasound, reach on an empty stomach. For pelvic ultrasound, drink 3-4 glasses of water for a full bladder.</p>
+                    <p class="pk-step-text">For abdominal ultrasound, reach on an empty stomach. For pelvic ultrasound,
+                        drink 3-4 glasses of water for a full bladder.</p>
                 </div>
                 <div class="pk-prep-step">
                     <div class="pk-step-num">04</div>
                     <h3 class="pk-step-title">Previous Medical Records</h3>
-                    <p class="pk-step-text">Please bring previous discharge summaries, investigation reports, and current prescription slips for physician comparison.</p>
+                    <p class="pk-step-text">Please bring previous discharge summaries, investigation reports, and
+                        current prescription slips for physician comparison.</p>
                 </div>
             </div>
         </div>
@@ -1313,10 +1517,12 @@
     <!-- BOOKING MODAL -->
     <div class="pk-modal-backdrop" id="pkBookingModal" role="dialog" aria-modal="true" aria-labelledby="modalPkgTitle">
         <div class="pk-modal">
-            <button type="button" class="pk-modal-close" onclick="closePackageBooking()" aria-label="Close modal">&times;</button>
+            <button type="button" class="pk-modal-close" onclick="closePackageBooking()"
+                aria-label="Close modal">&times;</button>
             <h3 class="pk-modal-title" id="modalPkgTitle">Book Health Package</h3>
-            <p class="pk-modal-sub">Fill in your contact details and our team will confirm your preferred appointment slot.</p>
-            
+            <p class="pk-modal-sub">Fill in your contact details and our team will confirm your preferred appointment
+                slot.</p>
+
             <form id="pkgBookingForm" onsubmit="handlePkgFormSubmit(event)">
                 <div class="form-group">
                     <label class="form-label" for="pkgSelectedName">Selected Package</label>
@@ -1328,12 +1534,14 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="pkgMobile">Mobile Number *</label>
-                    <input type="tel" id="pkgMobile" class="form-input" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+                    <input type="tel" id="pkgMobile" class="form-input" required pattern="[0-9]{10}"
+                        placeholder="10-digit mobile number">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="pkgHospital">Preferred Hospital Location *</label>
                     <select id="pkgHospital" class="form-select" required>
-                        <option value="Sukhda Multispeciality Hospital (Delhi Road)">Sukhda Multispeciality Hospital (Delhi Road, Hisar)</option>
+                        <option value="Sukhda Multispeciality Hospital (Delhi Road)">Sukhda Multispeciality Hospital
+                            (Delhi Road, Hisar)</option>
                         <option value="Sukhda MedPark (Sector-5)">Sukhda MedPark (Sector-5, Hisar)</option>
                     </select>
                 </div>
@@ -1341,12 +1549,13 @@
                     <label class="form-label" for="pkgDate">Preferred Date</label>
                     <input type="date" id="pkgDate" class="form-input">
                 </div>
-                <button type="submit" class="btn-submit-booking"><i data-lucide="check-circle" style="width:16px;height:16px;vertical-align:middle"></i> Confirm Package Booking</button>
+                <button type="submit" class="btn-submit-booking"><i data-lucide="check-circle"
+                        style="width:16px;height:16px;vertical-align:middle"></i> Confirm Package Booking</button>
             </form>
         </div>
     </div>
 
-<footer class="footer">
+    <footer class="footer">
         <div class="wrap footer-grid">
             <div>
                 <div class="footer-brand-wrap">
@@ -1508,7 +1717,7 @@
 
     <script>
         // Category Filter
-        (function() {
+        (function () {
             const tabs = document.querySelectorAll('.pk-tab');
             const cards = document.querySelectorAll('.pk-card');
 

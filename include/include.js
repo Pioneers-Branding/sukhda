@@ -225,7 +225,7 @@
     // "Read More / Read Less" for long paragraphs in page content
     function initReadMore() {
         var MIN_CHARS = 400;
-        var SKIP = 'header, footer, nav, .nav, .top, .footer-disclaimers, .faq-item, table, .cta-banner, .rm-more, .no-read-more, [data-no-read-more]';
+        var SKIP = 'header, footer, nav, .nav, .top, .footer-disclaimers, .faq-item, table, .cta-banner, .rm-more, .no-read-more, [data-no-read-more], .ab-desc, .ab-sec';
         var paras = document.querySelectorAll('main p, section p, article p');
 
         Array.prototype.forEach.call(paras, function (p) {

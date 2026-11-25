@@ -458,19 +458,11 @@
 
         /* HERO SECTION */
         .opd-hero {
-            background: linear-gradient(135deg, #0d3f8f 0%, #0a3274 60%, #13519f 100%);
+            background: radial-gradient(circle at 50% 25%, #0f395d 0%, #09243c 65%, #05192c 100%);
             color: #fff;
             padding: 56px 0 64px;
             position: relative;
             overflow: hidden;
-        }
-
-        .opd-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 85% 20%, rgba(39, 129, 50, 0.22) 0%, transparent 60%);
-            pointer-events: none;
         }
 
         .hero-grid {
@@ -1012,7 +1004,8 @@
             cursor: pointer;
         }
 
-        .status-editor select, .status-editor input {
+        .status-editor select,
+        .status-editor input {
             width: 100%;
             margin-top: 6px;
             padding: 6px 8px;
@@ -1715,15 +1708,17 @@
     <style>
         /* mobile-left-align: dropdown & services links start from the left */
         @media (max-width: 900px) {
+
             .nav-drop a,
             .services-mega .mega-links-grid a,
             .services-mega .mega-footer a {
                 justify-content: flex-start !important;
-                gap: 10px !important; /* icon spacing */
+                gap: 10px !important;
+                /* icon spacing */
                 text-align: left !important;
             }
         }
-    
+
         /* Readable green text on dark banners (matches service pages) */
         :is(.hero-banner, .doc-directory-hero, .opd-hero, .empanelled-hero, .doctor-hero, section.hero) :is(.badge, .kicker, .hero-kicker, .eyebrow, .hero-stat-num, .hero-stat-card b, .crumb a, .breadcrumb-wrap a, h1 span, .hero-title span, .hero-badge-float i, .hero-badge-float svg) {
             color: #fff;
@@ -1755,11 +1750,13 @@
                         <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg> WhatsApp: +91 99965-44005</a>
-                <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24/7 Emergency: 01662-249473</a>
+                <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24/7 Emergency:
+                    01662-249473</a>
             </div>
             <div class="links">
                 <div class="top-directions-dropdown">
-                    <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false" title="Get Directions to Sukhda Hospitals">
+                    <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false"
+                        title="Get Directions to Sukhda Hospitals">
                         <span>Get Directions</span>
                         <i data-lucide="chevron-down" class="top-dir-chevron"></i>
                     </button>
@@ -1821,91 +1818,129 @@
                     </div>
                 </div>
                 <div class="mobile-nav-links">
-                <span class="nav-group">
-                    <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="about.html">About Sukhda</a>
-                        <a href="about.html#leadership">Leadership</a>
-                        <a href="about.html#vision">Vision &amp; Mission</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="about.html">About Sukhda</a>
+                            <a href="about.html#leadership">Leadership</a>
+                            <a href="about.html#vision">Vision &amp; Mission</a>
+                        </span>
                     </span>
-                </span>
-                <span class="nav-group mega-group">
-                    <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <div class="nav-drop services-mega">
-                        <div class="mega-body">
-                            <div class="mega-col">
-                                <div class="mega-col-header">
-                                    <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
-                                    <div>
-                                        <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
-                                        <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB Centre</div>
+                    <span class="nav-group mega-group">
+                        <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <div class="nav-drop services-mega">
+                            <div class="mega-body">
+                                <div class="mega-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                            <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB
+                                                Centre</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid">
+                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
+                                                &amp; Critical care</span></a>
+                                        <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical
+                                                Oncology</span></a>
+                                        <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical
+                                                Oncology</span></a>
+                                        <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation
+                                                Oncology</span></a>
+                                        <a href="cardiology.html"><i
+                                                data-lucide="heart-pulse"></i><span>Cardiology</span></a>
+                                        <a href="gastroenterology.html"><i
+                                                data-lucide="activity"></i><span>Gastroenterology</span></a>
+                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
+                                                Dialysis</span></a>
+                                        <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp;
+                                                Spine</span></a>
+                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
+                                                Obstetrics</span></a>
+                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp;
+                                                Robotic Joint Replacement</span></a>
+                                        <a href="general-surgery.html"><i
+                                                data-lucide="shield-check"></i><span>Laparoscopic &amp; General
+                                                Surgery</span></a>
+                                        <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
+                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp;
+                                                Imaging</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
+                                                &amp; Pain Management</span></a>
+                                        <a href="pathology.html"><i
+                                                data-lucide="microscope"></i><span>Pathology</span></a>
+                                        <a href="physiotherapy.html"><i
+                                                data-lucide="activity"></i><span>Physiotherapy</span></a>
+                                        <a href="dermatology.html"><i
+                                                data-lucide="sparkles"></i><span>Dermatology</span></a>
                                     </div>
                                 </div>
-                                <div class="mega-links-grid">
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
-                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
-                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
-                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
-                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Cardiology</span></a>
-                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology</span></a>
-                                    <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp; Spine</span></a>
-                                    <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp; Robotic Joint Replacement</span></a>
-                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>Laparoscopic &amp; General Surgery</span></a>
-                                    <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
-                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
-                                    <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
-                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy</span></a>
-                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology</span></a>
-                                </div>
-                            </div>
-                            <div class="mega-col medpark-col">
-                                <div class="mega-col-header">
-                                    <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
-                                    <div>
-                                        <div class="mega-col-title">Sukhda MedPark</div>
-                                        <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
+                                <div class="mega-col medpark-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda MedPark</div>
+                                            <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid single-col">
+                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
+                                                &amp; Critical care</span></a>
+                                        <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical
+                                                Oncology</span></a>
+                                        <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical
+                                                Oncology</span></a>
+                                        <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation
+                                                Oncology</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
+                                                &amp; Pain Management</span></a>
+                                        <a href="pathology.html"><i
+                                                data-lucide="microscope"></i><span>Pathology</span></a>
                                     </div>
                                 </div>
-                                <div class="mega-links-grid single-col">
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
-                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
-                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
-                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
-                                    <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
-                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="index.html#specialities" class="mega-view-all"><i
+                                        data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services
+                                    &rarr;</a>
+                                <div class="mega-emergency-tag"><i data-lucide="phone-call"
+                                        style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg
+                                        class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        width="16" height="16" style="vertical-align:middle;flex-shrink:0"
+                                        aria-hidden="true">
+                                        <path fill="#25D366"
+                                            d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                        <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                                    </svg> WhatsApp: <b>+91 99965-44005</b></div>
                             </div>
                         </div>
-                        <div class="mega-footer">
-                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services &rarr;</a>
-                            <div class="mega-emergency-tag"><i data-lucide="phone-call" style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
-                        </div>
-                    </div>
-                </span>
-                <a href="doctor.html">Doctors</a>
-                <span class="nav-group">
-                    <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
-                        <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super Specialty)</a>
                     </span>
-                </span>
-                <a href="health-packages.html">Health Packages</a>
-                <a href="infrastructure.html">Infrastructure &amp; Facilities</a>
-                <span class="nav-group">
-                    <a href="javascript:void(0)">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="media-coverage.html">Media Coverage</a>
-                        <a href="csr.html">CSR</a>
-                        <a href="careers.html">Careers</a>
+                    <a href="doctor.html">Doctors</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
+                            <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super-Speciality)</a>
+                        </span>
                     </span>
-                </span>
-                <a href="empanelled-corporate.html" class="mobile-only-nav">Cashless / TPA</a>
-                <a href="opd-schedule.html" class="mobile-only-nav">OPD Schedule</a>
-            </div>
+                    <a href="health-packages.html">Health Packages</a>
+                    <a href="infrastructure.html">Infrastructure &amp; Facilities</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">Resources <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="media-coverage.html">Media Coverage</a>
+                            <a href="csr.html">CSR</a>
+                            <a href="careers.html">Careers</a>
+                        </span>
+                    </span>
+                    <a href="empanelled-corporate.html" class="mobile-only-nav">Cashless / TPA</a>
+                    <a href="opd-schedule.html" class="mobile-only-nav">OPD Schedule</a>
+                </div>
                 <div class="mobile-menu-footer">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
                     <a class="btn" href="tel:01662249473"
@@ -1915,7 +1950,9 @@
             </nav>
             <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
             <div class="top-directions-dropdown nav-directions-dropdown">
-                <button type="button" class="top-directions-trigger nav-directions" aria-haspopup="true" aria-expanded="false" aria-label="Get directions to Sukhda Hospitals" title="Get Directions to Sukhda Hospitals">
+                <button type="button" class="top-directions-trigger nav-directions" aria-haspopup="true"
+                    aria-expanded="false" aria-label="Get directions to Sukhda Hospitals"
+                    title="Get Directions to Sukhda Hospitals">
                     <i data-lucide="map-pin"></i><span class="dir-km" hidden></span>
                 </button>
                 <div class="top-directions-menu" role="menu">
@@ -1947,23 +1984,15 @@
         <div class="nav-overlay"></div>
     </header>
 
-
-    <!-- BREADCRUMBS -->
-    <div class="breadcrumb-wrap">
-        <div class="wrap">
-            <a href="index.html">Home</a>
-            <span>›</span>
-            <span class="current">OPD Schedule</span>
-        </div>
-    </div>
-
     <!-- HERO SECTION -->
     <section class="opd-hero">
         <div class="wrap">
             <div class="hero-grid">
                 <div>
                     <h1 class="hero-title">Outpatient Department <span>Schedule</span></h1>
-                    <p class="hero-desc">Find the OPD timings of our expert consultants and plan your visit with ease. We encourage patients to book their consultations in advance to ensure a smooth and convenient experience.</p>
+                    <p class="hero-desc">Find the OPD timings of our expert consultants and plan your visit with ease.
+                        We encourage patients to book their consultations in advance to ensure a smooth and convenient
+                        experience.</p>
                     <p class="hero-desc">For appointments, schedule enquiries or assistance, call our 24/7 Helpline.</p>
                     <div class="hero-actions">
                         <a class="btn primary" href="contact.html"><i data-lucide="calendar-check"></i> Book OPD
@@ -2005,12 +2034,14 @@
             <div class="category-tabs" id="categoryTabs">
                 <button type="button" class="tab-btn active" data-filter="all"><i data-lucide="layout-grid"
                         style="width:14px;height:14px"></i> All Specialities</button>
-                <button type="button" class="tab-btn" data-filter="medicine">Internal Medicine &amp; Critical Care</button>
+                <button type="button" class="tab-btn" data-filter="medicine">Internal Medicine &amp; Critical
+                    Care</button>
                 <button type="button" class="tab-btn" data-filter="oncology">Oncology</button>
                 <button type="button" class="tab-btn" data-filter="cardiology">Cardiology</button>
                 <button type="button" class="tab-btn" data-filter="gastro">Gastroenterology</button>
                 <button type="button" class="tab-btn" data-filter="nephro">Nephrology &amp; Dialysis</button>
-                <button type="button" class="tab-btn" data-filter="ortho">Orthopaedics &amp; Robotic Joint Replacement</button>
+                <button type="button" class="tab-btn" data-filter="ortho">Orthopaedics &amp; Robotic Joint
+                    Replacement</button>
                 <button type="button" class="tab-btn" data-filter="neuro">Neurosurgery</button>
                 <button type="button" class="tab-btn" data-filter="surgery">Laparoscopic &amp; General Surgery</button>
                 <button type="button" class="tab-btn" data-filter="gynae">Gynaecology &amp; Obstetrics</button>
@@ -2038,18 +2069,26 @@
         <div class="wrap">
             <div class="opd-status-legend" id="opdStatusLegend">
                 <span class="legend-title">Availability:</span>
-                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i> Doctor Available</span>
-                <span class="status-badge unavailable"><i data-lucide="x-circle" style="width:11px;height:11px"></i> Doctor Not Available</span>
-                <span class="status-badge oncall"><i data-lucide="phone-incoming" style="width:11px;height:11px"></i> On Call</span>
+                <span class="status-badge available"><i data-lucide="check-circle" style="width:11px;height:11px"></i>
+                    Doctor Available</span>
+                <span class="status-badge unavailable"><i data-lucide="x-circle" style="width:11px;height:11px"></i>
+                    Doctor Not Available</span>
+                <span class="status-badge oncall"><i data-lucide="phone-incoming" style="width:11px;height:11px"></i> On
+                    Call</span>
                 <span class="legend-updated" id="opdStatusUpdated" hidden></span>
-                <button type="button" class="opd-edit-toggle" id="opdEditToggle"><i data-lucide="pencil" style="width:13px;height:13px"></i> Edit Availability</button>
+                <button type="button" class="opd-edit-toggle" id="opdEditToggle"><i data-lucide="pencil"
+                        style="width:13px;height:13px"></i> Edit Availability</button>
             </div>
             <div class="opd-edit-bar" id="opdEditBar" hidden>
-                <p><b>Edit mode:</b> change each doctor&rsquo;s status below, then click <b>Download Updated File</b> and upload
-                    <code>opd-status.json</code> to the <code>assets/data/</code> folder on the website server. The change
-                    goes live for all visitors once the file is uploaded.</p>
+                <p><b>Edit mode:</b> change each doctor&rsquo;s status below, then click <b>Download Updated File</b>
+                    and upload
+                    <code>opd-status.json</code> to the <code>assets/data/</code> folder on the website server. The
+                    change
+                    goes live for all visitors once the file is uploaded.
+                </p>
                 <div class="opd-edit-actions">
-                    <button type="button" class="btn-book-opd" id="opdEditDownload"><i data-lucide="download"></i> Download Updated File</button>
+                    <button type="button" class="btn-book-opd" id="opdEditDownload"><i data-lucide="download"></i>
+                        Download Updated File</button>
                     <button type="button" class="opd-edit-cancel" id="opdEditCancel">Close Edit Mode</button>
                 </div>
             </div>
@@ -2081,11 +2120,13 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="internal-medicine.html" class="opd-dept-link">Medicine &amp; Critical Care</a>
+                                    <a href="internal-medicine.html" class="opd-dept-link">Medicine &amp; Critical
+                                        Care</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
-                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i data-lucide="building"
-                                            style="width:11px;height:11px"></i> Sukhda MedPark</a>
+                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i
+                                            data-lucide="building" style="width:11px;height:11px"></i> Sukhda
+                                        MedPark</a>
                                 </div>
                             </td>
                             <td>
@@ -2105,7 +2146,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-amit-mehta" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-amit-mehta" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2123,7 +2165,8 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="internal-medicine.html" class="opd-dept-link">Medicine &amp; Critical Care</a>
+                                    <a href="internal-medicine.html" class="opd-dept-link">Medicine &amp; Critical
+                                        Care</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
                                 </div>
@@ -2145,7 +2188,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-hemant-dahiya" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-hemant-dahiya" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2156,12 +2200,14 @@
                             <td>
                                 <div class="doc-cell">
                                     <span class="opd-doc-name">Dr. Manaswi Gupta</span>
-                                    <span class="opd-doc-qual">MBBS, MD (General Medicine), FICE · Consultant – Physician</span>
+                                    <span class="opd-doc-qual">MBBS, MD (General Medicine), FICE · Consultant –
+                                        Physician</span>
                                 </div>
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="internal-medicine.html" class="opd-dept-link">Medicine &amp; Critical Care</a>
+                                    <a href="internal-medicine.html" class="opd-dept-link">Medicine &amp; Critical
+                                        Care</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
                                 </div>
@@ -2196,7 +2242,8 @@
                                     <a href="dr-trivikrama-rao.html" class="opd-doc-name">Dr. Trivikrama Rao <i
                                             data-lucide="external-link"
                                             style="width:13px;height:13px;opacity:0.6"></i></a>
-                                    <span class="opd-doc-qual">MBBS (Gold Medalist), DNB (General Medicine), DrNB (Medical Oncology), SCE (UK), ECMO · Sr. Consultant – Medical Oncology</span>
+                                    <span class="opd-doc-qual">MBBS (Gold Medalist), DNB (General Medicine), DrNB
+                                        (Medical Oncology), SCE (UK), ECMO · Sr. Consultant – Medical Oncology</span>
                                 </div>
                             </td>
                             <td>
@@ -2204,8 +2251,9 @@
                                     <a href="medical-oncology.html" class="opd-dept-link">Medical Oncology</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
-                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i data-lucide="building"
-                                            style="width:11px;height:11px"></i> Sukhda MedPark</a>
+                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i
+                                            data-lucide="building" style="width:11px;height:11px"></i> Sukhda
+                                        MedPark</a>
                                 </div>
                             </td>
                             <td>
@@ -2223,7 +2271,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-trivikrama-rao" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-trivikrama-rao" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2236,7 +2285,8 @@
                                     <a href="dr-amit-kumar-garg.html" class="opd-doc-name">Dr. Amit Kumar Garg <i
                                             data-lucide="external-link"
                                             style="width:13px;height:13px;opacity:0.6"></i></a>
-                                    <span class="opd-doc-qual">MBBS, DNB, MS (General Surgery), M.Ch. (Surgical Oncology) · Consultant – Surgical Oncology</span>
+                                    <span class="opd-doc-qual">MBBS, DNB, MS (General Surgery), M.Ch. (Surgical
+                                        Oncology) · Consultant – Surgical Oncology</span>
                                 </div>
                             </td>
                             <td>
@@ -2244,8 +2294,9 @@
                                     <a href="surgical-oncology.html" class="opd-dept-link">Surgical Oncology</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
-                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i data-lucide="building"
-                                            style="width:11px;height:11px"></i> Sukhda MedPark</a>
+                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i
+                                            data-lucide="building" style="width:11px;height:11px"></i> Sukhda
+                                        MedPark</a>
                                 </div>
                             </td>
                             <td>
@@ -2263,7 +2314,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-amit-kumar-garg" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-amit-kumar-garg" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2274,14 +2326,16 @@
                             <td>
                                 <div class="doc-cell">
                                     <span class="opd-doc-name">Dr. Mohan Lal</span>
-                                    <span class="opd-doc-qual">MBBS, MD (Radiation Oncology) · Senior Consultant &amp; HOD – Radiation Oncology</span>
+                                    <span class="opd-doc-qual">MBBS, MD (Radiation Oncology) · Senior Consultant &amp;
+                                        HOD – Radiation Oncology</span>
                                 </div>
                             </td>
                             <td>
                                 <div class="dept-cell">
                                     <a href="radiation-oncology.html" class="opd-dept-link">Radiation Oncology</a>
-                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i data-lucide="building"
-                                            style="width:11px;height:11px"></i> Sukhda MedPark</a>
+                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i
+                                            data-lucide="building" style="width:11px;height:11px"></i> Sukhda
+                                        MedPark</a>
                                 </div>
                             </td>
                             <td>
@@ -2323,12 +2377,14 @@
                                 </div>
                             </td>
                             <td>
-                                <span class="days-badge">Mon, Wed, Fri</span><br><span class="days-badge">Tue, Sat</span>
+                                <span class="days-badge">Mon, Wed, Fri</span><br><span class="days-badge">Tue,
+                                    Sat</span>
                             </td>
                             <td>
                                 <div class="time-slots">
                                     <span class="time-pill morning"><i data-lucide="sun"
-                                            style="width:12px;height:12px"></i> Mon, Wed, Fri: 10:00 AM – 06:00 PM</span>
+                                            style="width:12px;height:12px"></i> Mon, Wed, Fri: 10:00 AM – 06:00
+                                        PM</span>
                                 </div>
                             </td>
                             <td>
@@ -2337,7 +2393,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-ankur-kamra" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-ankur-kamra" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2350,7 +2407,8 @@
                                     <a href="dr-bharath.html" class="opd-doc-name">Dr. Bharath <i
                                             data-lucide="external-link"
                                             style="width:13px;height:13px;opacity:0.6"></i></a>
-                                    <span class="opd-doc-qual">MBBS (Gold Medalist), MD (Medicine), DM (Gastroenterology)</span>
+                                    <span class="opd-doc-qual">MBBS (Gold Medalist), MD (Medicine), DM
+                                        (Gastroenterology)</span>
                                 </div>
                             </td>
                             <td>
@@ -2377,7 +2435,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-bharath" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-bharath" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2426,7 +2485,8 @@
                                     <a href="dr-anil-khyalia.html" class="opd-doc-name">Dr. Anil Khyalia <i
                                             data-lucide="external-link"
                                             style="width:13px;height:13px;opacity:0.6"></i></a>
-                                    <span class="opd-doc-qual">MBBS, MS, M.Ch. (Neurosurgery) · Brain and Spine Surgeon</span>
+                                    <span class="opd-doc-qual">MBBS, MS, M.Ch. (Neurosurgery) · Brain and Spine
+                                        Surgeon</span>
                                 </div>
                             </td>
                             <td>
@@ -2434,8 +2494,9 @@
                                     <a href="neurosurgery.html" class="opd-dept-link">Neurosurgery</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
-                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i data-lucide="building"
-                                            style="width:11px;height:11px"></i> Sukhda MedPark</a>
+                                    <a href="sukhda-medpark-hospital.html" class="hospital-tag"><i
+                                            data-lucide="building" style="width:11px;height:11px"></i> Sukhda
+                                        MedPark</a>
                                 </div>
                             </td>
                             <td>
@@ -2453,7 +2514,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-anil-khyalia" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-anil-khyalia" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2466,7 +2528,8 @@
                                     <a href="dr-nidhi-mehta.html" class="opd-doc-name">Dr. Nidhi Mehta <i
                                             data-lucide="external-link"
                                             style="width:13px;height:13px;opacity:0.6"></i></a>
-                                    <span class="opd-doc-qual">MBBS, DGO, DNB (OBG) · Advanced Laparoscopic Surgeon &amp; Obstetrician</span>
+                                    <span class="opd-doc-qual">MBBS, DGO, DNB (OBG) · Advanced Laparoscopic Surgeon
+                                        &amp; Obstetrician</span>
                                 </div>
                             </td>
                             <td>
@@ -2493,7 +2556,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-nidhi-mehta" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-nidhi-mehta" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2506,23 +2570,27 @@
                                     <a href="dr-pankaj-sharma.html" class="opd-doc-name">Dr. Pankaj Sharma <i
                                             data-lucide="external-link"
                                             style="width:13px;height:13px;opacity:0.6"></i></a>
-                                    <span class="opd-doc-qual">MBBS, MS (Orthopaedics) · Robotic Joint Replacement &amp; Sports Injury Expert (International Olympic Committee)</span>
+                                    <span class="opd-doc-qual">MBBS, MS (Orthopaedics) · Robotic Joint Replacement &amp;
+                                        Sports Injury Expert (International Olympic Committee)</span>
                                 </div>
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="orthopaedics.html" class="opd-dept-link">Orthopaedics &amp; Robotic Joint Replacement</a>
+                                    <a href="orthopaedics.html" class="opd-dept-link">Orthopaedics &amp; Robotic Joint
+                                        Replacement</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
                                 </div>
                             </td>
                             <td>
-                                <span class="days-badge">Mon, Tue, Wed, Fri, Sat</span><br><span class="days-badge">Thu</span>
+                                <span class="days-badge">Mon, Tue, Wed, Fri, Sat</span><br><span
+                                    class="days-badge">Thu</span>
                             </td>
                             <td>
                                 <div class="time-slots">
                                     <span class="time-pill morning"><i data-lucide="sun"
-                                            style="width:12px;height:12px"></i> Mon, Tue, Wed, Fri, Sat: 10:00 AM – 03:00 PM</span>
+                                            style="width:12px;height:12px"></i> Mon, Tue, Wed, Fri, Sat: 10:00 AM –
+                                        03:00 PM</span>
                                 </div>
                             </td>
                             <td>
@@ -2531,7 +2599,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-pankaj-sharma" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-pankaj-sharma" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2542,12 +2611,14 @@
                             <td>
                                 <div class="doc-cell">
                                     <span class="opd-doc-name">Dr. Ankit Gawri</span>
-                                    <span class="opd-doc-qual">MBBS, MS (Orthopaedics), FNB (Arthroplasty) – NBE Certified</span>
+                                    <span class="opd-doc-qual">MBBS, MS (Orthopaedics), FNB (Arthroplasty) – NBE
+                                        Certified</span>
                                 </div>
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="orthopaedics.html" class="opd-dept-link">Orthopaedics &amp; Robotic Joint Replacement</a>
+                                    <a href="orthopaedics.html" class="opd-dept-link">Orthopaedics &amp; Robotic Joint
+                                        Replacement</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
                                 </div>
@@ -2580,12 +2651,14 @@
                                     <a href="dr-deepam-das.html" class="opd-doc-name">Dr. Deepam S. Das <i
                                             data-lucide="external-link"
                                             style="width:13px;height:13px;opacity:0.6"></i></a>
-                                    <span class="opd-doc-qual">MBBS, MS, FMAS (Advanced Laparoscopic, Colorectal and Bariatric Surgery)</span>
+                                    <span class="opd-doc-qual">MBBS, MS, FMAS (Advanced Laparoscopic, Colorectal and
+                                        Bariatric Surgery)</span>
                                 </div>
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="general-surgery.html" class="opd-dept-link">Laparoscopic &amp; General Surgery</a>
+                                    <a href="general-surgery.html" class="opd-dept-link">Laparoscopic &amp; General
+                                        Surgery</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
                                 </div>
@@ -2605,7 +2678,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-deepam-das" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-deepam-das" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2618,7 +2692,8 @@
                                     <a href="dr-deepti-singh.html" class="opd-doc-name">Dr. Deepti Singh <i
                                             data-lucide="external-link"
                                             style="width:13px;height:13px;opacity:0.6"></i></a>
-                                    <span class="opd-doc-qual">MBBS, MS-ENT, DNB (ENT), MNAMS, Gold Medalist · ENT Surgeon</span>
+                                    <span class="opd-doc-qual">MBBS, MS-ENT, DNB (ENT), MNAMS, Gold Medalist · ENT
+                                        Surgeon</span>
                                 </div>
                             </td>
                             <td>
@@ -2643,7 +2718,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-deepti-singh" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-deepti-singh" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2683,7 +2759,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-anil-bansal" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-anil-bansal" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2737,7 +2814,8 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="anaesthesiology.html" class="opd-dept-link">Anaesthesia &amp; Pain Management</a>
+                                    <a href="anaesthesiology.html" class="opd-dept-link">Anaesthesia &amp; Pain
+                                        Management</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
                                 </div>
@@ -2757,7 +2835,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-devilal" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-devilal" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2773,7 +2852,8 @@
                             </td>
                             <td>
                                 <div class="dept-cell">
-                                    <a href="anaesthesiology.html" class="opd-dept-link">Anaesthesia &amp; Pain Management</a>
+                                    <a href="anaesthesiology.html" class="opd-dept-link">Anaesthesia &amp; Pain
+                                        Management</a>
                                     <a href="index.html#hospitals" class="hospital-tag"><i data-lucide="building"
                                             style="width:11px;height:11px"></i> Sukhda Multispeciality Hospital</a>
                                 </div>
@@ -2878,7 +2958,8 @@
                                     <a href="dr-sanjeet-sahu.html" class="opd-doc-name">Dr. Sanjeet Sahu <i
                                             data-lucide="external-link"
                                             style="width:13px;height:13px;opacity:0.6"></i></a>
-                                    <span class="opd-doc-qual">B.P.T., M.P.T. (Neurology), CMT (Physiotherapy) · Consultant – Physiotherapy</span>
+                                    <span class="opd-doc-qual">B.P.T., M.P.T. (Neurology), CMT (Physiotherapy) ·
+                                        Consultant – Physiotherapy</span>
                                 </div>
                             </td>
                             <td>
@@ -2903,7 +2984,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-sanjeet-sahu" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-sanjeet-sahu" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2941,7 +3023,8 @@
                             </td>
                             <td style="text-align: right;">
                                 <div class="action-btns" style="justify-content: flex-end;">
-                                    <a href="contact.html?doctor=dr-megha-gupta" class="btn-book-opd"><i data-lucide="calendar"></i> Book</a>
+                                    <a href="contact.html?doctor=dr-megha-gupta" class="btn-book-opd"><i
+                                            data-lucide="calendar"></i> Book</a>
                                 </div>
                             </td>
                         </tr>
@@ -2969,7 +3052,8 @@
                         data-lucide="info"></i> Patient Information</span>
                 <h2 style="font-size: 32px; font-weight: 800; color: var(--blue); margin: 6px 0 10px;">Guidelines for
                     OPD Patients</h2>
-                <p style="font-size: 15px; color: var(--muted); margin: 0;">Everything you need to know before visiting our OPD clinics.</p>
+                <p style="font-size: 15px; color: var(--muted); margin: 0;">Everything you need to know before visiting
+                    our OPD clinics.</p>
             </div>
             <div class="guide-grid">
                 <div class="guide-card">
@@ -2985,7 +3069,8 @@
                 <div class="guide-card">
                     <div class="guide-icon-box"><i data-lucide="folder-open"></i></div>
                     <h3>What to Bring Along</h3>
-                    <p>Carrying your complete medical history allows our specialists to provide an accurate evaluation and avoid repeat tests.</p>
+                    <p>Carrying your complete medical history allows our specialists to provide an accurate evaluation
+                        and avoid repeat tests.</p>
                     <ul>
                         <li>Government Photo ID (Aadhaar / Voter ID)</li>
                         <li>Past prescriptions, discharge summaries &amp; X-rays/CT scans</li>
@@ -2993,7 +3078,8 @@
                     </ul>
                 </div>
                 <div class="guide-card">
-                    <div class="guide-icon-box"><i data-lucide="phone-forwarded" style="color:#e53935 !important"></i></div>
+                    <div class="guide-icon-box"><i data-lucide="phone-forwarded" style="color:#e53935 !important"></i>
+                    </div>
                     <h3>24/7 Emergency &amp; Admission</h3>
                     <p>We provide round-the-clock emergency medical services, trauma surgery, CCU/ICU,
                         and emergency dialysis.</p>
@@ -3025,8 +3111,10 @@
                     <i data-lucide="chevron-down"></i>
                 </button>
                 <div class="faq-body">
-                    You can book online by clicking the "Book OPD Appointment" button on this page, calling our dedicated
-                    OPD helpline at <b>01662-249473 / 01662-248473 / +91 99966-48483</b>, or sending a message on WhatsApp at
+                    You can book online by clicking the "Book OPD Appointment" button on this page, calling our
+                    dedicated
+                    OPD helpline at <b>01662-249473 / 01662-248473 / +91 99966-48483</b>, or sending a message on
+                    WhatsApp at
                     <b>+91 99965-44005</b>. Walk-in registrations are also available at the hospital reception.
                 </div>
             </div>
@@ -3049,8 +3137,12 @@
                     <i data-lucide="chevron-down"></i>
                 </button>
                 <div class="faq-body">
-                    Routine OPD consultations are covered under select comprehensive health policies (OPD cover / corporate tie-ups). For day-care procedures, chemotherapy, dialysis, and emergency admissions, 24/7
-                    cashless hospitalisation is available with our empanelled TPAs, insurance companies, and government schemes (see the <a href="empanelled-corporate.html" style="color:var(--green);font-weight:700;text-decoration:underline">full list of empanelled partners</a>).
+                    Routine OPD consultations are covered under select comprehensive health policies (OPD cover /
+                    corporate tie-ups). For day-care procedures, chemotherapy, dialysis, and emergency admissions, 24/7
+                    cashless hospitalisation is available with our empanelled TPAs, insurance companies, and government
+                    schemes (see the <a href="empanelled-corporate.html"
+                        style="color:var(--green);font-weight:700;text-decoration:underline">full list of empanelled
+                        partners</a>).
                 </div>
             </div>
 
@@ -3061,7 +3153,8 @@
                 </button>
                 <div class="faq-body">
                     Sukhda Hospital operates a full-service Emergency &amp; Trauma Centre with resident medical
-                    officers, emergency physicians, ICU intensivist coverage, emergency lab, CT scan, and on-call senior specialists, 24 hours a day, 365 days a year.
+                    officers, emergency physicians, ICU intensivist coverage, emergency lab, CT scan, and on-call senior
+                    specialists, 24 hours a day, 365 days a year.
                 </div>
             </div>
 
@@ -3071,7 +3164,8 @@
                     <i data-lucide="chevron-down"></i>
                 </button>
                 <div class="faq-body">
-                    Please call our reception desk at <b>01662-249473 / 01662-248473 / +91 99966-48483</b> or message us on
+                    Please call our reception desk at <b>01662-249473 / 01662-248473 / +91 99966-48483</b> or message us
+                    on
                     WhatsApp at <b>+91 99965-44005</b> at least 2 hours before your slot, and our team will gladly
                     reschedule your visit.
                 </div>

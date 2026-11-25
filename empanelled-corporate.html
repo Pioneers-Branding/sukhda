@@ -603,6 +603,7 @@
             .sticky-bottom-bar {
                 display: none !important;
             }
+
             body {
                 padding-bottom: 0 !important;
             }
@@ -668,14 +669,6 @@
             padding: 50px 0 75px;
             position: relative;
             overflow: hidden
-        }
-
-        .empanelled-hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 80% 20%, rgba(39, 129, 50, 0.22) 0%, transparent 60%);
-            pointer-events: none
         }
 
         .crumb {
@@ -789,7 +782,8 @@
             border-bottom: 1px solid var(--line);
             padding: 24px 0;
             position: sticky;
-            top: 122px; /* top bar 42px + header 80px stay pinned on desktop */
+            top: 122px;
+            /* top bar 42px + header 80px stay pinned on desktop */
             z-index: 95;
             backdrop-filter: blur(10px);
             background: rgba(247, 250, 252, 0.95);
@@ -1804,15 +1798,17 @@
     <style>
         /* mobile-left-align: dropdown & services links start from the left */
         @media (max-width: 900px) {
+
             .nav-drop a,
             .services-mega .mega-links-grid a,
             .services-mega .mega-footer a {
                 justify-content: flex-start !important;
-                gap: 10px !important; /* icon spacing */
+                gap: 10px !important;
+                /* icon spacing */
                 text-align: left !important;
             }
         }
-    
+
         /* Readable green text on dark banners (matches service pages) */
         :is(.hero-banner, .doc-directory-hero, .opd-hero, .empanelled-hero, .doctor-hero, section.hero) :is(.badge, .kicker, .hero-kicker, .eyebrow, .hero-stat-num, .hero-stat-card b, .crumb a, .breadcrumb-wrap a, h1 span, .hero-title span, .hero-badge-float i, .hero-badge-float svg) {
             color: #fff;
@@ -1844,11 +1840,13 @@
                         <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg> WhatsApp: +91 99965-44005</a>
-                <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24/7 Emergency: 01662-249473</a>
+                <a href="tel:01662249473" class="top-emergency"><i data-lucide="phone-call"></i> 24/7 Emergency:
+                    01662-249473</a>
             </div>
             <div class="links">
                 <div class="top-directions-dropdown">
-                    <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false" title="Get Directions to Sukhda Hospitals">
+                    <button type="button" class="top-directions-trigger" aria-haspopup="true" aria-expanded="false"
+                        title="Get Directions to Sukhda Hospitals">
                         <span>Get Directions</span>
                         <i data-lucide="chevron-down" class="top-dir-chevron"></i>
                     </button>
@@ -1910,91 +1908,129 @@
                     </div>
                 </div>
                 <div class="mobile-nav-links">
-                <span class="nav-group">
-                    <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="about.html">About Sukhda</a>
-                        <a href="about.html#leadership">Leadership</a>
-                        <a href="about.html#vision">Vision &amp; Mission</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">About Us <i data-lucide="chevron-down" class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="about.html">About Sukhda</a>
+                            <a href="about.html#leadership">Leadership</a>
+                            <a href="about.html#vision">Vision &amp; Mission</a>
+                        </span>
                     </span>
-                </span>
-                <span class="nav-group mega-group">
-                    <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <div class="nav-drop services-mega">
-                        <div class="mega-body">
-                            <div class="mega-col">
-                                <div class="mega-col-header">
-                                    <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
-                                    <div>
-                                        <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
-                                        <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB Centre</div>
+                    <span class="nav-group mega-group">
+                        <a href="javascript:void(0)">Our Services <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <div class="nav-drop services-mega">
+                            <div class="mega-body">
+                                <div class="mega-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon"><i data-lucide="building-2"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda Multispeciality Hospital</div>
+                                            <div class="mega-col-sub">NABH-Accredited Multispeciality Hospital &amp; DNB
+                                                Centre</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid">
+                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
+                                                &amp; Critical care</span></a>
+                                        <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical
+                                                Oncology</span></a>
+                                        <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical
+                                                Oncology</span></a>
+                                        <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation
+                                                Oncology</span></a>
+                                        <a href="cardiology.html"><i
+                                                data-lucide="heart-pulse"></i><span>Cardiology</span></a>
+                                        <a href="gastroenterology.html"><i
+                                                data-lucide="activity"></i><span>Gastroenterology</span></a>
+                                        <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp;
+                                                Dialysis</span></a>
+                                        <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp;
+                                                Spine</span></a>
+                                        <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp;
+                                                Obstetrics</span></a>
+                                        <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp;
+                                                Robotic Joint Replacement</span></a>
+                                        <a href="general-surgery.html"><i
+                                                data-lucide="shield-check"></i><span>Laparoscopic &amp; General
+                                                Surgery</span></a>
+                                        <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
+                                        <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp;
+                                                Imaging</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
+                                                &amp; Pain Management</span></a>
+                                        <a href="pathology.html"><i
+                                                data-lucide="microscope"></i><span>Pathology</span></a>
+                                        <a href="physiotherapy.html"><i
+                                                data-lucide="activity"></i><span>Physiotherapy</span></a>
+                                        <a href="dermatology.html"><i
+                                                data-lucide="sparkles"></i><span>Dermatology</span></a>
                                     </div>
                                 </div>
-                                <div class="mega-links-grid">
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
-                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
-                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
-                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
-                                    <a href="cardiology.html"><i data-lucide="heart-pulse"></i><span>Cardiology</span></a>
-                                    <a href="gastroenterology.html"><i data-lucide="activity"></i><span>Gastroenterology</span></a>
-                                    <a href="nephrology.html"><i data-lucide="droplets"></i><span>Nephrology &amp; Dialysis</span></a>
-                                    <a href="neurosurgery.html"><i data-lucide="brain"></i><span>Neurosurgery &amp; Spine</span></a>
-                                    <a href="gynaecology.html"><i data-lucide="baby"></i><span>Gynaecology &amp; Obstetrics</span></a>
-                                    <a href="orthopaedics.html"><i data-lucide="bone"></i><span>Orthopaedic &amp; Robotic Joint Replacement</span></a>
-                                    <a href="general-surgery.html"><i data-lucide="shield-check"></i><span>Laparoscopic &amp; General Surgery</span></a>
-                                    <a href="ent.html"><i data-lucide="headphones"></i><span>Ent</span></a>
-                                    <a href="radiology.html"><i data-lucide="scan"></i><span>Radiodiagnosis &amp; Imaging</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
-                                    <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
-                                    <a href="physiotherapy.html"><i data-lucide="activity"></i><span>Physiotherapy</span></a>
-                                    <a href="dermatology.html"><i data-lucide="sparkles"></i><span>Dermatology</span></a>
-                                </div>
-                            </div>
-                            <div class="mega-col medpark-col">
-                                <div class="mega-col-header">
-                                    <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
-                                    <div>
-                                        <div class="mega-col-title">Sukhda MedPark</div>
-                                        <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
+                                <div class="mega-col medpark-col">
+                                    <div class="mega-col-header">
+                                        <div class="mega-col-icon medpark"><i data-lucide="activity"></i></div>
+                                        <div>
+                                            <div class="mega-col-title">Sukhda MedPark</div>
+                                            <div class="mega-col-sub">Cancer &amp; Super-Speciality Hospital</div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-links-grid single-col">
+                                        <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine
+                                                &amp; Critical care</span></a>
+                                        <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical
+                                                Oncology</span></a>
+                                        <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical
+                                                Oncology</span></a>
+                                        <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation
+                                                Oncology</span></a>
+                                        <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia
+                                                &amp; Pain Management</span></a>
+                                        <a href="pathology.html"><i
+                                                data-lucide="microscope"></i><span>Pathology</span></a>
                                     </div>
                                 </div>
-                                <div class="mega-links-grid single-col">
-                                    <a href="internal-medicine.html"><i data-lucide="stethoscope"></i><span>Medicine &amp; Critical care</span></a>
-                                    <a href="medical-oncology.html"><i data-lucide="ribbon"></i><span>Medical Oncology</span></a>
-                                    <a href="surgical-oncology.html"><i data-lucide="activity"></i><span>Surgical Oncology</span></a>
-                                    <a href="radiation-oncology.html"><i data-lucide="shield"></i><span>Radiation Oncology</span></a>
-                                    <a href="anaesthesiology.html"><i data-lucide="shield"></i><span>Anaesthesia &amp; Pain Management</span></a>
-                                    <a href="pathology.html"><i data-lucide="microscope"></i><span>Pathology</span></a>
-                                </div>
+                            </div>
+                            <div class="mega-footer">
+                                <a href="index.html#specialities" class="mega-view-all"><i
+                                        data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services
+                                    &rarr;</a>
+                                <div class="mega-emergency-tag"><i data-lucide="phone-call"
+                                        style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg
+                                        class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        width="16" height="16" style="vertical-align:middle;flex-shrink:0"
+                                        aria-hidden="true">
+                                        <path fill="#25D366"
+                                            d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z" />
+                                        <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                                    </svg> WhatsApp: <b>+91 99965-44005</b></div>
                             </div>
                         </div>
-                        <div class="mega-footer">
-                            <a href="index.html#specialities" class="mega-view-all"><i data-lucide="layout-grid"></i> View All 17 Clinical Specialties &amp; Services &rarr;</a>
-                            <div class="mega-emergency-tag"><i data-lucide="phone-call" style="color:#e53935 !important"></i> 24/7 ER: <b>01662-249473</b> | <svg class="wa-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;flex-shrink:0" aria-hidden="true"><path fill="#25D366" d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.956.564 3.784 1.543 5.334L2.2 21.8l4.634-1.306A9.948 9.948 0 0012.004 22c5.518 0 10.004-4.486 10.004-9.996C22.008 6.486 17.522 2 12.004 2z"/><path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> WhatsApp: <b>+91 99965-44005</b></div>
-                        </div>
-                    </div>
-                </span>
-                <a href="doctor.html">Doctors</a>
-                <span class="nav-group">
-                    <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
-                        <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super Specialty)</a>
                     </span>
-                </span>
-                <a href="health-packages.html">Health Packages</a>
-                <a href="infrastructure.html">Infrastructure &amp; Facilities</a>
-                <span class="nav-group">
-                    <a href="javascript:void(0)">Resources <i data-lucide="chevron-down" class="nav-chevron"></i></a>
-                    <span class="nav-drop">
-                        <a href="media-coverage.html">Media Coverage</a>
-                        <a href="csr.html">CSR</a>
-                        <a href="careers.html">Careers</a>
+                    <a href="doctor.html">Doctors</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">Our Hospitals <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="sukhda-multispecialty-hospital.html">Sukhda Multispeciality Hospital</a>
+                            <a href="sukhda-medpark-hospital.html">Sukhda MedPark (Cancer &amp; Super-Speciality)</a>
+                        </span>
                     </span>
-                </span>
-                <a href="empanelled-corporate.html" class="mobile-only-nav">Cashless / TPA</a>
-                <a href="opd-schedule.html" class="mobile-only-nav">OPD Schedule</a>
-            </div>
+                    <a href="health-packages.html">Health Packages</a>
+                    <a href="infrastructure.html">Infrastructure &amp; Facilities</a>
+                    <span class="nav-group">
+                        <a href="javascript:void(0)">Resources <i data-lucide="chevron-down"
+                                class="nav-chevron"></i></a>
+                        <span class="nav-drop">
+                            <a href="media-coverage.html">Media Coverage</a>
+                            <a href="csr.html">CSR</a>
+                            <a href="careers.html">Careers</a>
+                        </span>
+                    </span>
+                    <a href="empanelled-corporate.html" class="mobile-only-nav">Cashless / TPA</a>
+                    <a href="opd-schedule.html" class="mobile-only-nav">OPD Schedule</a>
+                </div>
                 <div class="mobile-menu-footer">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
                     <a class="btn" href="tel:01662249473"
@@ -2004,7 +2040,9 @@
             </nav>
             <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Book Appointment</a>
             <div class="top-directions-dropdown nav-directions-dropdown">
-                <button type="button" class="top-directions-trigger nav-directions" aria-haspopup="true" aria-expanded="false" aria-label="Get directions to Sukhda Hospitals" title="Get Directions to Sukhda Hospitals">
+                <button type="button" class="top-directions-trigger nav-directions" aria-haspopup="true"
+                    aria-expanded="false" aria-label="Get directions to Sukhda Hospitals"
+                    title="Get Directions to Sukhda Hospitals">
                     <i data-lucide="map-pin"></i><span class="dir-km" hidden></span>
                 </button>
                 <div class="top-directions-menu" role="menu">
@@ -2048,7 +2086,8 @@
                 </div>
                 <h1 class="hero-title">Empanelled Corporates, <span>TPAs &amp; Cashless Insurance</span></h1>
                 <p class="hero-desc">Sukhda Multispeciality Hospital provides round-the-clock cashless
-                    hospitalisation, transparent claims processing, and dedicated TPA coordination with major central and state government departments, PSUs, and India's premier health insurers.</p>
+                    hospitalisation, transparent claims processing, and dedicated TPA coordination with major central
+                    and state government departments, PSUs, and India's premier health insurers.</p>
                 <div class="hero-actions">
                     <a href="#partnerDirectory" class="btn primary"><i data-lucide="layers"></i> Explore All Empanelled
                         Partners</a>
@@ -2104,45 +2143,54 @@
 
             <!-- Partners Grid -->
             <div class="partners-grid" id="partnersGrid">
-                <div class="partner-card" data-category="gov" data-name="ayushman bharat"
-                    title="Ayushman Bharat">
+                <div class="partner-card" data-category="gov" data-name="ayushman bharat" title="Ayushman Bharat">
                     <img src="assets/images/empanelled/gov1.jpg" alt="Ayushman Bharat" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="haryana government"
-                    title="Haryana Government">
+                <div class="partner-card" data-category="gov" data-name="haryana government" title="Haryana Government">
                     <img src="assets/images/empanelled/gov9.jpg" alt="Haryana Government" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="echs (ex-servicemen contributory health scheme)"
+                <div class="partner-card" data-category="gov"
+                    data-name="echs (ex-servicemen contributory health scheme)"
                     title="ECHS (Ex-Servicemen Contributory Health Scheme)">
-                    <img src="assets/images/empanelled/gov7.jpg" alt="ECHS (Ex-Servicemen Contributory Health Scheme)" loading="lazy">
+                    <img src="assets/images/empanelled/gov7.jpg" alt="ECHS (Ex-Servicemen Contributory Health Scheme)"
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="gov" data-name="dhbvnl (dakshin haryana bijli vitran nigam)"
                     title="DHBVNL (Dakshin Haryana Bijli Vitran Nigam)">
-                    <img src="assets/images/empanelled/gov2.jpg" alt="DHBVNL (Dakshin Haryana Bijli Vitran Nigam)" loading="lazy">
+                    <img src="assets/images/empanelled/gov2.jpg" alt="DHBVNL (Dakshin Haryana Bijli Vitran Nigam)"
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="gov" data-name="haryana agricultural university (hau)"
                     title="Haryana Agricultural University (HAU)">
-                    <img src="assets/images/empanelled/gov5.jpg" alt="Haryana Agricultural University (HAU)" loading="lazy">
+                    <img src="assets/images/empanelled/gov5.jpg" alt="Haryana Agricultural University (HAU)"
+                        loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="npcil (nuclear power corporation of india ltd.)"
+                <div class="partner-card" data-category="gov"
+                    data-name="npcil (nuclear power corporation of india ltd.)"
                     title="NPCIL (Nuclear Power Corporation of India Ltd.)">
-                    <img src="assets/images/empanelled/gov15.jpg" alt="NPCIL (Nuclear Power Corporation of India Ltd.)" loading="lazy">
+                    <img src="assets/images/empanelled/gov15.jpg" alt="NPCIL (Nuclear Power Corporation of India Ltd.)"
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="gov" data-name="hvpnl (haryana vidyut prasaran nigam ltd.)"
                     title="HVPNL (Haryana Vidyut Prasaran Nigam Ltd.)">
-                    <img src="assets/images/empanelled/gov10.jpg" alt="HVPNL (Haryana Vidyut Prasaran Nigam Ltd.)" loading="lazy">
+                    <img src="assets/images/empanelled/gov10.jpg" alt="HVPNL (Haryana Vidyut Prasaran Nigam Ltd.)"
+                        loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="hpgcl (haryana power generation corporation ltd.)"
+                <div class="partner-card" data-category="gov"
+                    data-name="hpgcl (haryana power generation corporation ltd.)"
                     title="HPGCL (Haryana Power Generation Corporation Ltd.)">
-                    <img src="assets/images/empanelled/gov3.jpg" alt="HPGCL (Haryana Power Generation Corporation Ltd.)" loading="lazy">
+                    <img src="assets/images/empanelled/gov3.jpg" alt="HPGCL (Haryana Power Generation Corporation Ltd.)"
+                        loading="lazy">
                 </div>
-                <div class="partner-card partner-card-text" data-category="gov" data-name="rgktpp (rajiv gandhi khedar thermal power plant)"
+                <div class="partner-card partner-card-text" data-category="gov"
+                    data-name="rgktpp (rajiv gandhi khedar thermal power plant)"
                     title="RGKTPP (Rajiv Gandhi Khedar Thermal Power Plant)">
                     <span class="partner-name">RGKTPP (Rajiv Gandhi Khedar Thermal Power Plant)</span>
                 </div>
                 <div class="partner-card" data-category="gov" data-name="pgcil (power grid corporation of india ltd.)"
                     title="PGCIL (Power Grid Corporation of India Ltd.)">
-                    <img src="assets/images/empanelled/gov4.jpg" alt="PGCIL (Power Grid Corporation of India Ltd.)" loading="lazy">
+                    <img src="assets/images/empanelled/gov4.jpg" alt="PGCIL (Power Grid Corporation of India Ltd.)"
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="gov" data-name="national seeds corporation ltd."
                     title="National Seeds Corporation Ltd.">
@@ -2150,22 +2198,26 @@
                 </div>
                 <div class="partner-card" data-category="gov" data-name="national research centre on equines (nrce)"
                     title="National Research Centre on Equines (NRCE)">
-                    <img src="assets/images/empanelled/gov14.jpg" alt="National Research Centre on Equines (NRCE)" loading="lazy">
+                    <img src="assets/images/empanelled/gov14.jpg" alt="National Research Centre on Equines (NRCE)"
+                        loading="lazy">
                 </div>
-                <div class="partner-card" data-category="gov" data-name="northern region farm machinery training &amp; testing institute (ttc)"
+                <div class="partner-card" data-category="gov"
+                    data-name="northern region farm machinery training &amp; testing institute (ttc)"
                     title="Northern Region Farm Machinery Training &amp; Testing Institute (TTC)">
-                    <img src="assets/images/empanelled/gov12.jpg" alt="Northern Region Farm Machinery Training &amp; Testing Institute (TTC)" loading="lazy">
+                    <img src="assets/images/empanelled/gov12.jpg"
+                        alt="Northern Region Farm Machinery Training &amp; Testing Institute (TTC)" loading="lazy">
                 </div>
                 <div class="partner-card" data-category="gov" data-name="sfcil (state farms corporation of india ltd.)"
                     title="SFCIL (State Farms Corporation of India Ltd.)">
-                    <img src="assets/images/empanelled/gov13.jpg" alt="SFCIL (State Farms Corporation of India Ltd.)" loading="lazy">
+                    <img src="assets/images/empanelled/gov13.jpg" alt="SFCIL (State Farms Corporation of India Ltd.)"
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="alankit insurance tpa ltd."
                     title="Alankit Insurance TPA Ltd.">
                     <img src="assets/images/empanelled/tpa17.jpg" alt="Alankit Insurance TPA Ltd." loading="lazy">
                 </div>
-                <div class="partner-card partner-card-text" data-category="tpa" data-name="akna health insurance tpa pvt. ltd."
-                    title="Akna Health Insurance TPA Pvt. Ltd.">
+                <div class="partner-card partner-card-text" data-category="tpa"
+                    data-name="akna health insurance tpa pvt. ltd." title="Akna Health Insurance TPA Pvt. Ltd.">
                     <span class="partner-name">Akna Health Insurance TPA Pvt. Ltd.</span>
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="anyuta wholly charitable trust"
@@ -2174,7 +2226,8 @@
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="east west assist (volo health) tpa pvt. ltd."
                     title="East West Assist (Volo Health) TPA Pvt. Ltd.">
-                    <img src="assets/images/empanelled/tpa7.jpg" alt="East West Assist (Volo Health) TPA Pvt. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/tpa7.jpg" alt="East West Assist (Volo Health) TPA Pvt. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="ericson insurance tpa pvt. ltd."
                     title="Ericson Insurance TPA Pvt. Ltd.">
@@ -2182,14 +2235,13 @@
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="family health plan (fhpl) tpa ltd."
                     title="Family Health Plan (FHPL) TPA Ltd.">
-                    <img src="assets/images/empanelled/tpa1.jpg" alt="Family Health Plan (FHPL) TPA Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/tpa1.jpg" alt="Family Health Plan (FHPL) TPA Ltd."
+                        loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="focus tpa"
-                    title="Focus TPA">
+                <div class="partner-card" data-category="tpa" data-name="focus tpa" title="Focus TPA">
                     <img src="assets/images/empanelled/tpa25.jpg" alt="Focus TPA" loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="genins tpa ltd."
-                    title="Genins TPA Ltd.">
+                <div class="partner-card" data-category="tpa" data-name="genins tpa ltd." title="Genins TPA Ltd.">
                     <img src="assets/images/empanelled/tpa4.jpg" alt="Genins TPA Ltd." loading="lazy">
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="good health plan tpa ltd."
@@ -2198,7 +2250,8 @@
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="grand healthcare tpa services pvt. ltd."
                     title="Grand Healthcare TPA Services Pvt. Ltd.">
-                    <img src="assets/images/empanelled/tpa20.jpg" alt="Grand Healthcare TPA Services Pvt. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/tpa20.jpg" alt="Grand Healthcare TPA Services Pvt. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="heritage health tpa pvt. ltd."
                     title="Heritage Health TPA Pvt. Ltd.">
@@ -2210,15 +2263,16 @@
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="health insurance tpa of india ltd."
                     title="Health Insurance TPA of India Ltd.">
-                    <img src="assets/images/empanelled/tpa11.jpg" alt="Health Insurance TPA of India Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/tpa11.jpg" alt="Health Insurance TPA of India Ltd."
+                        loading="lazy">
                 </div>
-                <div class="partner-card partner-card-text" data-category="tpa" data-name="link tpa"
-                    title="Link TPA">
+                <div class="partner-card partner-card-text" data-category="tpa" data-name="link tpa" title="Link TPA">
                     <span class="partner-name">Link TPA</span>
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="md india healthcare services pvt. ltd."
                     title="MD India Healthcare Services Pvt. Ltd.">
-                    <img src="assets/images/empanelled/tpa26.jpg" alt="MD India Healthcare Services Pvt. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/tpa26.jpg" alt="MD India Healthcare Services Pvt. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="medi assist india pvt. ltd."
                     title="Medi Assist India Pvt. Ltd.">
@@ -2230,11 +2284,13 @@
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="paramount healthcare tpa services"
                     title="Paramount Healthcare TPA Services">
-                    <img src="assets/images/empanelled/tpa14.jpg" alt="Paramount Healthcare TPA Services" loading="lazy">
+                    <img src="assets/images/empanelled/tpa14.jpg" alt="Paramount Healthcare TPA Services"
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="parekh / united health management pvt. ltd."
                     title="Parekh / United Health Management Pvt. Ltd.">
-                    <img src="assets/images/empanelled/tpa12.jpg" alt="Parekh / United Health Management Pvt. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/tpa12.jpg" alt="Parekh / United Health Management Pvt. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="park mediclaim tpa pvt. ltd."
                     title="Park Mediclaim TPA Pvt. Ltd.">
@@ -2250,11 +2306,13 @@
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="safeway (health assist) tpa services pvt. ltd."
                     title="Safeway (Health Assist) TPA Services Pvt. Ltd.">
-                    <img src="assets/images/empanelled/tpa29.jpg" alt="Safeway (Health Assist) TPA Services Pvt. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/tpa29.jpg" alt="Safeway (Health Assist) TPA Services Pvt. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="spurthi meditech solution tpa pvt. ltd."
                     title="Spurthi Meditech Solution TPA Pvt. Ltd.">
-                    <img src="assets/images/empanelled/tpa30.jpg" alt="Spurthi Meditech Solution TPA Pvt. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/tpa30.jpg" alt="Spurthi Meditech Solution TPA Pvt. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="vidal health tpa pvt. ltd."
                     title="Vidal Health TPA Pvt. Ltd.">
@@ -2262,11 +2320,14 @@
                 </div>
                 <div class="partner-card" data-category="tpa" data-name="vipul medcorp tpa pvt. ltd."
                     title="Vipul MedCorp TPA Pvt. Ltd.">
-                    <img src="assets/images/empanelled/corporate-logo18.jpg" alt="Vipul MedCorp TPA Pvt. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/corporate-logo18.jpg" alt="Vipul MedCorp TPA Pvt. Ltd."
+                        loading="lazy">
                 </div>
-                <div class="partner-card" data-category="tpa" data-name="vision e-medi solutions insurance tpa pvt. ltd."
+                <div class="partner-card" data-category="tpa"
+                    data-name="vision e-medi solutions insurance tpa pvt. ltd."
                     title="Vision E-Medi Solutions Insurance TPA Pvt. Ltd.">
-                    <img src="assets/images/empanelled/tpa15.jpg" alt="Vision E-Medi Solutions Insurance TPA Pvt. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/tpa15.jpg" alt="Vision E-Medi Solutions Insurance TPA Pvt. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card partner-card-text" data-category="ins" data-name="acko general insurance ltd."
                     title="Acko General Insurance Ltd.">
@@ -2274,15 +2335,18 @@
                 </div>
                 <div class="partner-card" data-category="ins" data-name="aditya birla health insurance co. ltd."
                     title="Aditya Birla Health Insurance Co. Ltd.">
-                    <img src="assets/images/empanelled/ins14.jpg" alt="Aditya Birla Health Insurance Co. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/ins14.jpg" alt="Aditya Birla Health Insurance Co. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="bajaj allianz general insurance co."
                     title="Bajaj Allianz General Insurance Co.">
-                    <img src="assets/images/empanelled/ins8.jpg" alt="Bajaj Allianz General Insurance Co." loading="lazy">
+                    <img src="assets/images/empanelled/ins8.jpg" alt="Bajaj Allianz General Insurance Co."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="cholamandalam ms general insurance co."
                     title="Cholamandalam MS General Insurance Co.">
-                    <img src="assets/images/empanelled/ins9.jpg" alt="Cholamandalam MS General Insurance Co." loading="lazy">
+                    <img src="assets/images/empanelled/ins9.jpg" alt="Cholamandalam MS General Insurance Co."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="cigna ttk health insurance co."
                     title="Cigna TTK Health Insurance Co.">
@@ -2302,11 +2366,13 @@
                 </div>
                 <div class="partner-card" data-category="ins" data-name="icici prudential insurance tpa pvt. ltd."
                     title="ICICI Prudential Insurance TPA Pvt. Ltd.">
-                    <img src="assets/images/empanelled/ins15.jpg" alt="ICICI Prudential Insurance TPA Pvt. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/ins15.jpg" alt="ICICI Prudential Insurance TPA Pvt. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="iffco tokio general insurance co."
                     title="IFFCO TOKIO General Insurance Co.">
-                    <img src="assets/images/empanelled/ins16.jpg" alt="IFFCO TOKIO General Insurance Co." loading="lazy">
+                    <img src="assets/images/empanelled/ins16.jpg" alt="IFFCO TOKIO General Insurance Co."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="l&amp;t general insurance co."
                     title="L&amp;T General Insurance Co.">
@@ -2314,19 +2380,23 @@
                 </div>
                 <div class="partner-card" data-category="ins" data-name="liberty videocon general insurance co."
                     title="Liberty Videocon General Insurance Co.">
-                    <img src="assets/images/empanelled/ins3.jpg" alt="Liberty Videocon General Insurance Co." loading="lazy">
+                    <img src="assets/images/empanelled/ins3.jpg" alt="Liberty Videocon General Insurance Co."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="magma hdi general insurance co. ltd."
                     title="Magma HDI General Insurance Co. Ltd.">
-                    <img src="assets/images/empanelled/ins11.jpg" alt="Magma HDI General Insurance Co. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/ins11.jpg" alt="Magma HDI General Insurance Co. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="niva bupa health insurance co. ltd."
                     title="Niva Bupa Health Insurance Co. Ltd.">
-                    <img src="assets/images/empanelled/niva.jpg" alt="Niva Bupa Health Insurance Co. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/niva.jpg" alt="Niva Bupa Health Insurance Co. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="reliance (indusind) general insurance co."
                     title="Reliance (IndusInd) General Insurance Co.">
-                    <img src="assets/images/empanelled/ins1.jpg" alt="Reliance (IndusInd) General Insurance Co." loading="lazy">
+                    <img src="assets/images/empanelled/ins1.jpg" alt="Reliance (IndusInd) General Insurance Co."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="care health insurance co. ltd."
                     title="Care Health Insurance Co. Ltd.">
@@ -2334,7 +2404,8 @@
                 </div>
                 <div class="partner-card" data-category="ins" data-name="royal sundaram general insurance co."
                     title="Royal Sundaram General Insurance Co.">
-                    <img src="assets/images/empanelled/ins7.jpg" alt="Royal Sundaram General Insurance Co." loading="lazy">
+                    <img src="assets/images/empanelled/ins7.jpg" alt="Royal Sundaram General Insurance Co."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="sbi general insurance co."
                     title="SBI General Insurance Co.">
@@ -2342,7 +2413,8 @@
                 </div>
                 <div class="partner-card" data-category="ins" data-name="star health and allied insurance co. ltd."
                     title="Star Health and Allied Insurance Co. Ltd.">
-                    <img src="assets/images/empanelled/ins21.jpg" alt="Star Health and Allied Insurance Co. Ltd." loading="lazy">
+                    <img src="assets/images/empanelled/ins21.jpg" alt="Star Health and Allied Insurance Co. Ltd."
+                        loading="lazy">
                 </div>
                 <div class="partner-card" data-category="ins" data-name="tata aig general insurance co."
                     title="TATA AIG General Insurance Co.">
@@ -2350,7 +2422,8 @@
                 </div>
                 <div class="partner-card" data-category="ins" data-name="universal sompo general insurance co."
                     title="Universal Sompo General Insurance Co.">
-                    <img src="assets/images/empanelled/ins22.jpg" alt="Universal Sompo General Insurance Co." loading="lazy">
+                    <img src="assets/images/empanelled/ins22.jpg" alt="Universal Sompo General Insurance Co."
+                        loading="lazy">
                 </div>
             </div>
 
@@ -2390,15 +2463,18 @@
                     <span class="process-step-badge">02</span>
                     <div class="process-icon"><i data-lucide="send"></i></div>
                     <h3>Pre-Auth Request</h3>
-                    <p>Our insurance team fills in the cashless pre-authorisation request form along with the consultant's
-                        notes, clinical diagnosis and supporting investigation reports, and sends it to the concerned TPA / insurance company.</p>
+                    <p>Our insurance team fills in the cashless pre-authorisation request form along with the
+                        consultant's
+                        notes, clinical diagnosis and supporting investigation reports, and sends it to the concerned
+                        TPA / insurance company.</p>
                 </div>
 
                 <div class="process-card">
                     <span class="process-step-badge">03</span>
                     <div class="process-icon"><i data-lucide="badge-check"></i></div>
                     <h3>Initial Sanction</h3>
-                    <p>After receiving the pre-authorisation request, the TPA / insurance company issues an initial approval
+                    <p>After receiving the pre-authorisation request, the TPA / insurance company issues an initial
+                        approval
                         letter or a further query letter, or rejects the claim.</p>
                 </div>
 
@@ -2406,19 +2482,24 @@
                     <span class="process-step-badge">04</span>
                     <div class="process-icon"><i data-lucide="receipt"></i></div>
                     <h3>Final Authorisation</h3>
-                    <p>When discharge is advised, the final hospital bill and clinical summary are uploaded for cashless settlement, enabling a hassle-free departure.</p>
+                    <p>When discharge is advised, the final hospital bill and clinical summary are uploaded for cashless
+                        settlement, enabling a hassle-free departure.</p>
                 </div>
             </div>
 
             <div class="tpa-note">
                 <p><b>Note:</b> If you have any queries about cashless services, claim approvals, or documents required
-                    for your insurance or TPA process, please contact our Billing Desk or Front Office &mdash; we are here
+                    for your insurance or TPA process, please contact our Billing Desk or Front Office &mdash; we are
+                    here
                     to help you!</p>
                 <div class="tpa-note-contacts">
-                    <a href="tel:01662249473"><i data-lucide="phone-call"></i> 01662-249473 / 01662-248473 / +91 99966-48483</a>
-                    <a href="https://wa.me/919996544005" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp: +91 99965-44005</a>
+                    <a href="tel:01662249473"><i data-lucide="phone-call"></i> 01662-249473 / 01662-248473 / +91
+                        99966-48483</a>
+                    <a href="https://wa.me/919996544005" target="_blank" rel="noopener"><i
+                            data-lucide="message-circle"></i> WhatsApp: +91 99965-44005</a>
                     <a href="mailto:sukhdahospital@gmail.com"><i data-lucide="mail"></i> sukhdahospital@gmail.com</a>
-                    <span><i data-lucide="map-pin"></i> TPA Desk, Ground Floor, Sukhda Multispeciality Hospital, Delhi Road, Hisar</span>
+                    <span><i data-lucide="map-pin"></i> TPA Desk, Ground Floor, Sukhda Multispeciality Hospital, Delhi
+                        Road, Hisar</span>
                 </div>
             </div>
         </div>
