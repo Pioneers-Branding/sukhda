@@ -40,7 +40,7 @@
             color: var(--blue);
             font: 16px/1.6 'Inter', sans-serif;
             background: #f8fafc;
-            overflow-x: hidden
+            overflow-x: clip;
         }
 
         h1,
@@ -1158,7 +1158,32 @@
             }
 
             .sec-controls {
-                top: 80px;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 70px;
+                z-index: 99;
+                background: #ffffff;
+                padding: 12px 0 10px;
+                box-shadow: 0 4px 14px rgba(5, 33, 89, 0.08);
+            }
+
+            .controls-wrap {
+                gap: 10px;
+            }
+
+            .search-box-wrap {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .search-input {
+                padding: 10px 16px 10px 42px;
+                font-size: 14px;
+            }
+
+            .category-tabs,
+            .day-filters {
+                -webkit-overflow-scrolling: touch;
             }
 
             .hero-title {
