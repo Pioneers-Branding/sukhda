@@ -1,0 +1,117 @@
+{
+  "tool": "Built-in image_gen",
+  "generated_on": "2026-11-26",
+  "purpose": "Illustrative specialty service photography; people and facilities are fictional.",
+  "assets": [
+    {
+      "service": "anaesthesia",
+      "page": "anaesthesia-and-pain-management.html",
+      "file": "assets/images/anaesthesia/anaesthesia-care.jpg",
+      "placement": "hero",
+      "alt": "Illustrative anaesthetist reassuring a patient during preparation for surgery",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: A male Indian anaesthetist in navy scrubs, surgical cap, and correctly worn surgical mask reassuring an awake middle-aged Indian woman lying comfortably on a hospital trolley before surgery. She wears a pale blue hospital gown and is covered modestly by a clean light blanket. A pulse oximeter is attached naturally to one visible finger and an anaesthesia workstation sits in the background. Medium view, clinician beside the patient's head, both faces clearly visible in the center area. No surgery taking place, no injection or airway insertion. The clinician's attentive eyes and the patient's calm expression convey personal care.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 215953
+    },
+    {
+      "service": "anaesthesia",
+      "page": "anaesthesia-and-pain-management.html",
+      "file": "assets/images/anaesthesia/pain-management-consultation.jpg",
+      "placement": "overview",
+      "alt": "Illustrative chronic pain consultation with a clinician and a patient",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: An Indian male pain-management physician in his 40s wearing a white coat over a navy shirt, seated in a bright consulting room listening attentively to a middle-aged Indian male patient in a light sage shirt. A small anatomically plausible lumbar spine model sits on the desk between them, and the physician gestures gently toward the model while explaining a care plan. Both people in three-quarter view, faces visible and friendly but not exaggerated, relaxed posture, desk and spine model in the lower middle frame.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 215399
+    },
+    {
+      "service": "dermatology",
+      "page": "dermatology.html",
+      "file": "assets/images/dermatology/dermatology-examination.jpg",
+      "placement": "hero",
+      "alt": "Illustrative dermatologist examining a patient's forearm with a dermatoscope",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: An Indian female dermatologist in a white coat over navy clothing, wearing clean examination gloves, carefully examining the forearm of an adult Indian female patient with a small professional handheld dermatoscope. The patient wears a sage green blouse with the sleeve comfortably rolled back. Show both faces in a medium view and the patient's forearm on a clean white support in the foreground. The dermatologist's gloved fingers and dermatoscope contact the intact skin naturally. Healthy normal skin texture with a subtle small mole; no graphic skin disease.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 230781
+    },
+    {
+      "service": "dermatology",
+      "page": "dermatology.html",
+      "file": "assets/images/dermatology/dermatology-consultation.jpg",
+      "placement": "overview",
+      "alt": "Illustrative skin-care consultation between a dermatologist and a patient",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: An Indian female dermatologist in a white coat over soft blue clothing discussing personalised skin care with a seated adult Indian woman in a muted sage top. The dermatologist is examining the patient's cheek gently with one clean gloved hand, in a bright clinical examination room with a simple examination lamp in the background. Medium close-up with both faces visible; natural pores and a few subtle acne marks on the patient's cheek, comfortable neutral expression. No beauty advertising aesthetic, no makeup makeover, no cosmetic injection, no medical device touching eyes.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 231779
+    },
+    {
+      "service": "physiotherapy",
+      "page": "physiotherapy.html",
+      "file": "assets/images/physiotherapy/physiotherapy-shoulder-rehab.jpg",
+      "placement": "hero",
+      "alt": "Illustrative physiotherapist guiding a patient through a supported shoulder exercise",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: An Indian male physiotherapist in navy scrubs guiding a middle-aged Indian female patient wearing a sage green short-sleeved sports top through a gentle supported shoulder range-of-motion exercise. She sits upright on the edge of a padded therapy plinth, and he stands beside her with one hand naturally supporting her elbow and the other guiding her forearm. Her arm is comfortably raised forward at shoulder level, not overhead, anatomically normal movement. Medium view includes both faces, both full arms and hands without cropping the exercise. Clean rehabilitation room, a blurred exercise ball and resistance bands in the background.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 171354
+    },
+    {
+      "service": "physiotherapy",
+      "page": "physiotherapy.html",
+      "file": "assets/images/physiotherapy/physiotherapy-mobility-training.jpg",
+      "placement": "overview",
+      "alt": "Illustrative supervised walking rehabilitation using parallel support bars",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: An older Indian man in a light blue polo shirt, charcoal trousers and sensible closed shoes practising a careful step between two waist-height parallel rehabilitation bars. An Indian female physiotherapist wearing navy scrubs stands close beside him providing light support at his upper arm, watching attentively. Both of his hands grip the respective bars naturally; natural upright posture, both legs and feet clearly visible. Bright accessible physiotherapy room with a pale neutral floor and subtle sage wall details. Medium-wide three-quarter view, full bodies in the central frame, patient facing slightly toward camera, no wheelchair or extra people.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 214629
+    },
+    {
+      "service": "pathology",
+      "page": "pathology.html",
+      "file": "assets/images/pathology/pathology-microscope.jpg",
+      "placement": "hero",
+      "alt": "Illustrative laboratory specialist examining a specimen slide through a microscope",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: An Indian female laboratory specialist wearing a clean white laboratory coat, navy clothing, tied-back hair and light blue examination gloves carefully viewing a glass specimen slide through a binocular laboratory microscope. One hand is naturally on the focusing knob, the other rests beside a neatly arranged slide tray. Medium close-up from the side with her face profile and microscope clearly visible. Bright orderly diagnostic laboratory, an automated analyser softly blurred behind her. Realistically aligned microscope eyepieces and eyes, practical workstation, no open liquids, no exposed biological tissue.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 201062
+    },
+    {
+      "service": "pathology",
+      "page": "pathology.html",
+      "file": "assets/images/pathology/pathology-laboratory-testing.jpg",
+      "placement": "overview",
+      "alt": "Illustrative laboratory technician preparing sealed sample tubes for diagnostic testing",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: An Indian male laboratory technician in a clean white coat over navy scrubs and light blue examination gloves sorting a small rack of closed, capped diagnostic sample tubes beside a modern automated benchtop analyser. Tubes remain fully closed and upright, no spills or pipetting, small labels have no readable personal details. Medium view with technician's face and careful hands in the central frame, automated analyser to one side. Bright clean hospital laboratory with off-white benches and restrained navy and sage details, no extra people or crowded equipment.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 181662
+    },
+    {
+      "service": "radiodiagnosis",
+      "page": "radiodiagnosis-and-imaging.html",
+      "file": "assets/images/radiodiagnosis/radiodiagnosis-ct-scan.jpg",
+      "placement": "hero",
+      "alt": "Illustrative radiology technologist preparing a patient for a CT scan",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: An Indian female radiology technologist in navy scrubs standing beside a modern white CT scanner and calmly preparing an adult Indian male patient lying comfortably on the scanner table. The patient wears a pale blue hospital gown and a light blanket covers his lower body; head supported on a proper headrest. Medium-wide three-quarter view shows the shallow circular CT gantry and patient table aligned through its opening, clinician and patient both clearly visible. Scan has not begun; technologist is beside the table with one hand resting lightly on its edge. Clean spacious diagnostic room, sage accents, no MRI coils, no long MRI tunnel, no logos or readable displays.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 166353
+    },
+    {
+      "service": "radiodiagnosis",
+      "page": "radiodiagnosis-and-imaging.html",
+      "file": "assets/images/radiodiagnosis/radiodiagnosis-ultrasound.jpg",
+      "placement": "overview",
+      "alt": "Illustrative abdominal ultrasound examination with a clinician and an adult patient",
+      "prompt": "Use case: photorealistic-natural\nAsset type: one standalone photograph for a specialty service page on an Indian hospital website. Landscape 4:3 aspect ratio.\nStyle: natural editorial healthcare photography, realistic Indian people, lifelike skin and fabric textures, soft daylight, clean contemporary clinical setting. Restrained navy blue, off-white and muted sage green palette matching the hospital website. Warm, calm and professional.\nComposition: keep the key people and procedure within the central 75% of the frame with comfortable headroom and margins for responsive crops. Faces and any important equipment should be readable at a 550px display width. No overlaid text is needed.\nConstraints: fictional illustrative people and facility, no real doctor likeness, no name badges, no logos, no watermarks, no readable writing or patient data, no collage, no graphic procedure, no blood, no uncanny anatomy, no extra fingers. Equipment and hands must be clinically plausible.\nScene: An Indian male radiologist in navy scrubs and clean examination gloves performing a routine abdominal ultrasound on an adult Indian female patient lying comfortably on an examination couch. Patient modestly covered in a pale blue gown and white sheet, only a small right upper abdominal area exposed for the ultrasound probe, no intimate anatomy. Clinician sits beside her and holds a standard convex ultrasound transducer naturally against that small area; cable runs to the ultrasound cart. A monitor shows a subtle plausible grayscale ultrasound texture, with no legible text or diagnostic labels. Medium view shows both faces, the probe and the machine; soft professional daylight, off-white and muted sage room.",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 205356
+    }
+  ]
+}
