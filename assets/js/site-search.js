@@ -53,9 +53,10 @@
         { n: 'Dr. Anil Bansal', s: 'HOD - Radiology', u: 'dr-anil-bansal.html', h: MULTI },
         { n: 'Dr. Deepam Das', s: 'HOD - Laparoscopic & Bariatric Surgery', u: 'dr-deepam-das.html', h: MULTI },
         { n: 'Dr. Devilal Saharan', s: 'Anaesthesiology & Pain Management', u: 'dr-devilal.html', h: MULTI },
-        { n: 'Dr. Parveen', s: 'Anaesthesiologist & Critical Care Intensivist', u: 'dr-parveen.html', h: MULTI },
+        { n: 'Dr. Parveen', s: 'Anaesthesiologist & Critical Care Intensivist', u: 'doctor.html', h: MULTI },
         { n: 'Dr. Sanjeet Sahu', s: 'Consultant Neuro-Physiotherapist', u: 'dr-sanjeet-sahu.html', h: MULTI },
         { n: 'Dr. Megha Gupta', s: 'Consultant Dermatologist & Cosmetologist', u: 'dr-megha-gupta.html', h: MULTI },
+        { n: 'Dr. Shubham Mehta', s: 'Consultant Psychiatrist & De-addiction Specialist', u: 'dr-shubham-mehta.html', h: MULTI },
         { n: 'Dr. Nitika Grover', s: 'Consultant - Pathology', u: 'pathology.html', h: MULTI },
         { n: 'Dr. Navtej', s: 'Consultant - Pathology', u: 'pathology.html', h: MULTI },
     ];
