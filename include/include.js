@@ -129,9 +129,36 @@
         topDirDropdowns.forEach(function (dd) {
             var btn = dd.querySelector('.top-directions-trigger');
             if (!btn) return;
+            var closeTimer = null;
+
+            // Hover grace handling on desktop (devices supporting hover)
+            var isTouchOnly = window.matchMedia && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+            if (!isTouchOnly) {
+                dd.addEventListener('mouseenter', function () {
+                    if (closeTimer) {
+                        clearTimeout(closeTimer);
+                        closeTimer = null;
+                    }
+                    dd.classList.add('is-open');
+                    btn.setAttribute('aria-expanded', 'true');
+                });
+
+                dd.addEventListener('mouseleave', function () {
+                    if (closeTimer) clearTimeout(closeTimer);
+                    closeTimer = setTimeout(function () {
+                        dd.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                    }, 280); // 280ms grace period so cursor can move freely to child items
+                });
+            }
+
             btn.onclick = function (e) {
                 e.preventDefault();
                 e.stopPropagation();
+                if (closeTimer) {
+                    clearTimeout(closeTimer);
+                    closeTimer = null;
+                }
                 var isOpen = dd.classList.contains('is-open');
                 topDirDropdowns.forEach(function (other) {
                     other.classList.remove('is-open');
@@ -149,6 +176,7 @@
             var items = dd.querySelectorAll('.top-dir-item');
             items.forEach(function (item) {
                 item.addEventListener('click', function () {
+                    if (closeTimer) clearTimeout(closeTimer);
                     dd.classList.remove('is-open');
                     btn.setAttribute('aria-expanded', 'false');
                 });

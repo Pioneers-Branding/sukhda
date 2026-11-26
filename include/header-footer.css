@@ -113,6 +113,7 @@ a.mobile-only-nav,
     position: relative;
     display: inline-flex;
     align-items: center;
+    height: 100%;
 }
 
 .top-directions-trigger {
@@ -126,7 +127,7 @@ a.mobile-only-nav,
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 0;
+    padding: 6px 4px;
     transition: color 0.2s ease;
     line-height: inherit;
     text-decoration: none;
@@ -159,7 +160,7 @@ a.mobile-only-nav,
 
 .top-directions-menu {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 6px);
     right: 0;
     width: 330px;
     background: #ffffff !important;
@@ -167,30 +168,44 @@ a.mobile-only-nav,
     box-shadow: 0 14px 40px rgba(2, 22, 61, 0.26);
     border: 1px solid #dce7f0;
     padding: 10px;
-    display: none;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
     z-index: 999999;
     text-align: left;
     color: #052159 !important;
+    box-sizing: border-box;
+
+    /* Seamless hover bridge & smooth transition delay to prevent vanishing */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s ease;
+    transition-delay: 0.18s; /* 180ms grace period on mouseleave before fading */
+}
+
+/* Invisible hover bridge connecting trigger to dropdown so moving mouse down never loses hover */
+.top-directions-menu::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background: transparent;
+    display: block;
+    pointer-events: auto;
 }
 
 /* Open on hover or with open class */
 .top-directions-dropdown:hover .top-directions-menu,
 .top-directions-dropdown:focus-within .top-directions-menu,
 .top-directions-dropdown.is-open .top-directions-menu {
-    display: block;
-    animation: topDirMenuSlide 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes topDirMenuSlide {
-    from {
-        opacity: 0;
-        transform: translateY(6px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s; /* Instant opening on hover */
 }
 
 .top-dir-title {
@@ -302,8 +317,14 @@ a.mobile-only-nav,
     .top-directions-menu {
         right: auto;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, 6px);
         width: min(300px, calc(100vw - 30px));
+    }
+
+    .top-directions-dropdown:hover .top-directions-menu,
+    .top-directions-dropdown:focus-within .top-directions-menu,
+    .top-directions-dropdown.is-open .top-directions-menu {
+        transform: translate(-50%, 0);
     }
 }
 
@@ -2308,7 +2329,7 @@ header.nav,
         top: calc(100% + 8px) !important;
         right: 0 !important;
         left: auto !important;
-        transform: none !important;
+        transform: translateY(-6px) !important;
         width: min(320px, calc(100vw - 20px)) !important;
         max-width: calc(100vw - 20px) !important;
         background: #ffffff !important;
@@ -2317,18 +2338,26 @@ header.nav,
         box-shadow: 0 12px 36px rgba(5, 33, 89, 0.22) !important;
         padding: 10px !important;
         z-index: 2050 !important;
-        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transition: opacity 0.18s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.18s ease !important;
+        transition-delay: 0s !important;
         text-align: left !important;
         box-sizing: border-box;
     }
 
     .nav-directions-dropdown:hover .top-directions-menu {
-        display: none;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
     }
 
     .nav-directions-dropdown.is-open .top-directions-menu {
-        display: block !important;
-        animation: mobileDirFade 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
     }
 
     .nav-directions-dropdown .top-dir-info b {

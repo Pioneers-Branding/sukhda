@@ -3030,14 +3030,17 @@
             flex-shrink: 0;
         }
 
-        .accred-svg-seal {
+        .accred-svg-seal,
+        .accred-img-seal {
             width: 92px;
             height: 92px;
+            object-fit: contain;
             filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.06));
             transition: transform 0.25s ease;
         }
 
-        .accred-card:hover .accred-svg-seal {
+        .accred-card:hover .accred-svg-seal,
+        .accred-card:hover .accred-img-seal {
             transform: scale(1.05);
         }
 
@@ -3482,19 +3485,7 @@
                     <!-- 1. NABH ACCREDITATION -->
                     <div class="accred-card">
                         <div class="accred-badge-wrap">
-                            <svg viewBox="0 0 100 100" class="accred-svg-seal" aria-hidden="true">
-                                <circle cx="50" cy="50" r="46" fill="#fff" stroke="#d97706" stroke-width="3" />
-                                <circle cx="50" cy="50" r="41" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"
-                                    stroke-dasharray="3 2" />
-                                <circle cx="50" cy="50" r="32" fill="#278132" />
-                                <path d="M44 32h12v12h12v12H56v12H44V56H32V44h12V32z" fill="#ffffff" />
-                                <path d="M50 14 A36 36 0 0 1 86 50" fill="none" stroke="#d97706" stroke-width="3"
-                                    stroke-linecap="round" />
-                                <path d="M50 86 A36 36 0 0 1 14 50" fill="none" stroke="#d97706" stroke-width="3"
-                                    stroke-linecap="round" />
-                                <text x="50" y="81" text-anchor="middle" font-family="'Inter', sans-serif"
-                                    font-size="6.5" font-weight="800" fill="#052159" letter-spacing="1.5">NABH</text>
-                            </svg>
+                            <img src="assets/images/nabh.jpg" alt="NABH Accreditation Logo" class="accred-img-seal" width="92" height="92">
                         </div>
                         <h3 class="accred-name">NABH Accreditation</h3>
                         <div class="accred-accent"></div>
