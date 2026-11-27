@@ -14,7 +14,7 @@ for f in files:
         if 'footer-motto' not in snippet:
             print(f"Non-footer-motto occurrence in {f}: {snippet}")
 
-    # check occurrences of 24*7 Emergency Helpline
+    # check occurrences of 24/7 Emergency Helpline
     matches2 = [m.start() for m in re.finditer(r'24\*7 Emergency Helpline', c, re.IGNORECASE)]
     for pos in matches2:
         snippet2 = c[max(0, pos-50):min(len(c), pos+100)].replace('\n', ' ')

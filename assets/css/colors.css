@@ -51,3 +51,69 @@ body .top .links a.top-directions svg {
     .doc-directory-hero, .policy-hero) .rm-toggle svg {
     color: #ffffff !important;
 }
+
+/* WhatsApp CTA buttons always use the WhatsApp brand colour */
+a.btn[href*="wa.me"] {
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+    color: #ffffff !important;
+}
+
+a.btn[href*="wa.me"]:hover {
+    background: #1ebe5b !important;
+    border-color: #1ebe5b !important;
+    color: #ffffff !important;
+}
+
+a.btn[href*="wa.me"] svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+/* Section subheadings (the line under each section title) — larger on every page */
+.sub,
+.sec-desc,
+.section-sub {
+    font-size: 19px !important;
+    line-height: 1.6 !important;
+}
+
+@media (max-width: 768px) {
+    .sub,
+    .sec-desc,
+    .section-sub {
+        font-size: 16.5px !important;
+    }
+}
+
+/* Hospital-page badge pills: every variant uses the same blue style as "DNB (NBEMS) General Medicine Centre" */
+.badge-pill,
+.badge-pill.gold,
+.badge-pill.green,
+.badge-pill.blue {
+    background: #e8f0fe !important;
+    color: var(--blue) !important;
+    border-color: rgba(5, 33, 89, 0.15) !important;
+}
+
+.badge-pill svg,
+.badge-pill i {
+    color: var(--blue) !important;
+}
+
+/* Top utility bar: all items at font-weight 600 */
+.top .links > a,
+.top .links > a span,
+.top .top-directions-trigger,
+.top .top-directions-trigger span,
+.top .top-lang-switch .lang-btn {
+    font-weight: 600 !important;
+}
+
+/* Location pin before "Get Directions" in the top bar */
+.top .top-directions-trigger .top-dir-pin,
+.top .top-directions-trigger svg.top-dir-pin {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}

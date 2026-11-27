@@ -130,7 +130,7 @@ timeline_html = """
                             <span class="timeline-tag">60 Beds Total</span>
                             <span class="timeline-tag">6-Bedded ICU</span>
                             <span class="timeline-tag">Critical Care Department</span>
-                            <span class="timeline-tag">24*7 Emergency Support</span>
+                            <span class="timeline-tag">24/7 Emergency Support</span>
                         </div>
                     </div>
                 </div>

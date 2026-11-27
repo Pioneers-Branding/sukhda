@@ -321,7 +321,7 @@ new_main = '''<div class="doc-main-col">
                         <div style="display:flex;gap:14px;flex-wrap:wrap;">
                             <a href="tel:01662249473" class="direct-phone-btn" style="flex:1;min-width:180px">
                                 <span><i data-lucide="phone-call" style="vertical-align:middle;margin-right:6px"></i> 01662-249473</span>
-                                <small>24*7 Hospital Desk</small>
+                                <small>24/7 Hospital Desk</small>
                             </a>
                             <a href="tel:919268421705" class="direct-phone-btn" style="flex:1;min-width:180px">
                                 <span><i data-lucide="phone" style="vertical-align:middle;margin-right:6px"></i> +91 92684-21705</span>

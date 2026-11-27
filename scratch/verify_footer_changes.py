@@ -22,7 +22,7 @@ print(f"Remaining HTML footer-motto elements: {len(remaining_mottos)}")
 if remaining_mottos:
     print("Files with remaining motto:", remaining_mottos)
 
-print(f"Remaining HTML small 24*7 Emergency Helpline elements: {len(remaining_small)}")
+print(f"Remaining HTML small 24/7 Emergency Helpline elements: {len(remaining_small)}")
 if remaining_small:
     print("Files with remaining small helpline:", remaining_small)
 

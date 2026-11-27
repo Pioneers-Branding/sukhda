@@ -210,7 +210,7 @@ new_main = '''<div class="doc-main-col">
                                 </div>
                                 <div class="opd-time">
                                     <span class="days">Mon – Sat</span>
-                                    <span class="hours">09:00 AM – 05:00 PM (24*7 Emergency Coverage)</span>
+                                    <span class="hours">09:00 AM – 05:00 PM (24/7 Emergency Coverage)</span>
                                     <span class="room">Ultrasound, Doppler &amp; Diagnostic Radiology</span>
                                 </div>
                                 <div>
@@ -342,7 +342,7 @@ new_main = '''<div class="doc-main-col">
                         <div style="display:flex;gap:14px;flex-wrap:wrap;">
                             <a href="tel:01662249473" class="direct-phone-btn" style="flex:1;min-width:180px">
                                 <span><i data-lucide="phone-call" style="vertical-align:middle;margin-right:6px"></i> 01662-249473</span>
-                                <small>24*7 Hospital Desk</small>
+                                <small>24/7 Hospital Desk</small>
                             </a>
                             <a href="tel:919466638426" class="direct-phone-btn" style="flex:1;min-width:180px">
                                 <span><i data-lucide="phone" style="vertical-align:middle;margin-right:6px"></i> +91 94666-38426</span>

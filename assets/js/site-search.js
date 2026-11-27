@@ -30,7 +30,7 @@
         { n: 'Gynaecology & Obstetrics', u: 'gynaecology-and-obstetrics.html', h: MULTI, k: 'pregnancy delivery women maternity ivf' },
         { n: 'Orthopaedic & Robotic Joint Replacement', u: 'orthopaedic-and-robotic-joint-replacement.html', h: MULTI, k: 'bone knee hip joint fracture ortho arthroscopy' },
         { n: 'Laparoscopic & General Surgery', u: 'laparoscopic-and-general-surgery.html', h: MULTI, k: 'surgery hernia gallbladder appendix laparoscopy' },
-        { n: 'Ent', u: 'ent.html', h: MULTI, k: 'ear nose throat sinus hearing tonsil' },
+        { n: 'ENT', u: 'ent.html', h: MULTI, k: 'ear nose throat sinus hearing tonsil' },
         { n: 'Radiodiagnosis & Imaging', u: 'radiodiagnosis-and-imaging.html', h: MULTI, k: 'ct scan mri x-ray xray ultrasound mammography imaging diagnostics 1.5t mri' },
         { n: 'Anaesthesia & Pain Management', u: 'anaesthesia-and-pain-management.html', h: BOTH, k: 'anaesthesia anesthesia pain palliative intensive' },
         { n: 'Pathology & Laboratory Medicine', u: 'pathology.html', h: BOTH, k: 'pathology lab blood test biopsy histopathology diagnostics cbc lft kft biochemistry' },
@@ -250,7 +250,7 @@
             '<button type="button" class="ss-tab" data-h="' + MEDPARK + '">Sukhda MedPark (Cancer)</button>' +
             '</div></div>' +
             '<div class="ss-body"></div>' +
-            '<div class="ss-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> to navigate &nbsp; <kbd>Enter</kbd> to open &nbsp; <kbd>Esc</kbd> to close</span><span>24*7 Emergency: <b>01662-249473</b></span></div>' +
+            '<div class="ss-hint"><span><kbd>↑</kbd> <kbd>↓</kbd> to navigate &nbsp; <kbd>Enter</kbd> to open &nbsp; <kbd>Esc</kbd> to close</span><span>24/7 Emergency: <b>01662-249473</b></span></div>' +
             '</div>';
         document.body.appendChild(overlay);
 
