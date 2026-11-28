@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="assets/images/sukhda-favicon.png">
     <title>Advanced Hospital Infrastructure &amp; Medical Facilities in Hisar | Sukhda Hospital</title>
     <meta name="description"
-        content="Explore the advanced hospital infrastructure and clinical facilities at Sukhda Multispeciality Hospital and Sukhda MedPark in Hisar. 174+ beds, modular operation theatres with HEPA filtration, flat-panel digital cath lab, advanced ICUs, multi-slice CT, and 24/7 emergency care.">
+        content="Explore the advanced hospital infrastructure and clinical facilities at Sukhda Multispeciality Hospital and Sukhda MedPark in Hisar. Modular operation theatres with HEPA filtration, flat-panel digital cath lab, advanced ICUs, multi-slice CT, and 24/7 emergency care.">
     <link rel="canonical" href="https://sukhdahospitals.com/infrastructure.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -711,7 +711,7 @@
             overflow: hidden;
             box-shadow: 0 20px 44px rgba(0, 0, 0, 0.4);
             border: 3px solid rgba(255, 255, 255, 0.25);
-            background: #02163d;
+            background: radial-gradient(circle at 50% 25%, #0f395d 0%, #09243c 65%, #05192c 100%);
         }
 
         .hero-img-card img {
@@ -2243,7 +2243,8 @@
         }
 
         .campus-card-img {
-            height: 240px;
+            aspect-ratio: 16 / 9;
+            background: #eef4fa;
             position: relative;
             overflow: hidden;
         }
@@ -2252,6 +2253,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center top;
+            display: block;
             transition: transform 0.3s ease;
         }
 
@@ -2588,7 +2591,7 @@
 
         /* SAFETY & STANDARDS BANNER */
         .safety-banner {
-            background: var(--blue-dark);
+            background: radial-gradient(circle at 50% 25%, #0f395d 0%, #09243c 65%, #05192c 100%);
             color: #fff;
             border-radius: 16px;
             padding: 40px 48px;
@@ -2678,6 +2681,109 @@
             }
         }
 
+
+        /* INFRASTRUCTURE HERO — same layout as the CSR "USAID SAMRIDH" section */
+        .hero.infra-hero {
+            padding: 60px 0;
+            background: radial-gradient(circle at 50% 25%, #0f395d 0%, #09243c 65%, #05192c 100%);
+            color: #fff;
+        }
+
+        .infra-hero-grid {
+            display: grid !important;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .infra-hero .crumb {
+            margin-bottom: 18px;
+        }
+
+        .infra-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(39, 129, 50, 0.35);
+            border: 1px solid #278132;
+            color: #ffffff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .infra-hero-badge svg {
+            width: 16px;
+            height: 16px;
+            color: #ffffff;
+        }
+
+        section.infra-hero h1 {
+            font-size: clamp(26px, 3.2vw, 36px) !important;
+            font-weight: 700;
+            margin: 0 0 16px;
+            color: #fff;
+            line-height: 1.25 !important;
+            letter-spacing: normal;
+        }
+
+        .infra-hero-copy p {
+            font-size: 16px;
+            color: #cbd5e1;
+            line-height: 1.65;
+            margin: 0 0 24px;
+        }
+
+        .infra-stats-box {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 28px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px 20px;
+        }
+
+        .infra-stat-num {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.2;
+        }
+
+        .infra-stat-label {
+            font-size: 13px;
+            color: #cbd5e1;
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 900px) {
+            .infra-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero.infra-hero {
+                padding: 40px 0;
+            }
+
+            .infra-stats-box {
+                grid-template-columns: 1fr 1fr;
+                padding: 20px;
+                gap: 18px 14px;
+            }
+
+            .infra-stat-num {
+                font-size: 21px;
+            }
+        }
     </style>
     <link rel="stylesheet" href="assets/css/translate.css">
     <link rel="stylesheet" href="include/header-footer.css?v=20261125">
@@ -2893,43 +2999,40 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="wrap">
-            <div class="hero-copy">
+    <section class="hero infra-hero">
+        <div class="wrap infra-hero-grid">
+            <div class="infra-hero-copy">
                 <div class="crumb">
                     <a href="index.html">Home</a> <span>›</span> <span>Infrastructure &amp; Facilities</span>
                 </div>
-                <h1>World-Class Hospital Infrastructure &amp;<br><span>Advanced Medical Facilities in Hisar</span></h1>
-                <p>Purpose-engineered for clinical precision, patient safety, and compassionate care. Featuring ultra-clean modular operation theatres with HEPA laminar airflow, flat-panel digital catheterization laboratory, 30+ multi-parameter ICU/HDU beds, multi-slice CT scanning, and patient-centric inpatient rooms across our two hospital campuses in Hisar.</p>
+                <div class="infra-hero-badge"><i data-lucide="building-2"></i> Infrastructure &amp; Facilities</div>
+                <h1>World-Class Hospital Infrastructure &amp; Advanced Medical Facilities in Hisar</h1>
+                <p>Purpose-engineered for clinical precision, patient safety, and compassionate care. Featuring ultra-clean modular operation theatres with HEPA laminar airflow, flat-panel digital catheterization laboratory, multi-parameter ICU/HDU units, multi-slice CT scanning, and patient-centric inpatient rooms across our two hospital campuses in Hisar.</p>
 
                 <div class="hero-actions">
                     <a class="btn primary" href="contact.html"><i data-lucide="calendar-days"></i>Plan a Visit / Consultation</a>
                     <a class="btn white" href="tel:01662249473"><i data-lucide="phone-call"></i>24/7 Helpline: 01662-249473</a>
                 </div>
-
-                <div class="hero-stats">
-                    <div class="hero-stat-card">
-                        <b>174+ Beds</b>
-                        <small>Across Multispeciality &amp; MedPark Campuses</small>
-                    </div>
-                    <div class="hero-stat-card">
-                        <b>Modular OTs</b>
-                        <small>Class 10,000 HEPA &amp; Laminar Airflow</small>
-                    </div>
-                    <div class="hero-stat-card">
-                        <b>30+ ICU Beds</b>
-                        <small>Advanced Ventilators, Dialysis &amp; Telemetry</small>
-                    </div>
-                    <div class="hero-stat-card">
-                        <b>24/7 Support</b>
-                        <small>Emergency, Trauma, Labs &amp; Pharmacy</small>
-                    </div>
-                </div>
             </div>
 
-            <div class="hero-media">
-                <div class="hero-img-card">
-                    <img src="assets/images/infra/operation-theatre.jpg" alt="State-of-the-Art Operation Theatre at Sukhda Hospital Hisar">
+            <div>
+                <div class="infra-stats-box">
+                    <div>
+                        <div class="infra-stat-num">2 Campuses</div>
+                        <div class="infra-stat-label">Multispeciality &amp; MedPark Hospitals in Hisar</div>
+                    </div>
+                    <div>
+                        <div class="infra-stat-num">Modular OTs</div>
+                        <div class="infra-stat-label">Class 10,000 HEPA &amp; Laminar Airflow</div>
+                    </div>
+                    <div>
+                        <div class="infra-stat-num">Advanced ICUs</div>
+                        <div class="infra-stat-label">Advanced Ventilators, Dialysis &amp; Telemetry</div>
+                    </div>
+                    <div>
+                        <div class="infra-stat-num">24/7 Support</div>
+                        <div class="infra-stat-label">Emergency, Trauma, Labs &amp; Pharmacy</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2946,18 +3049,17 @@
                 <!-- CAMPUS 1: MULTISPECIALITY HOSPITAL -->
                 <article class="campus-card">
                     <div class="campus-card-img">
-                        <img src="assets/images/sukhda-multispecialty-hospital.jpg" alt="Sukhda Multispeciality Hospital Delhi Road Hisar">
-                        <span class="campus-pill"><i data-lucide="building"></i> Flagship Campus • 125 Beds</span>
+                        <img src="assets/images/sukhda-multi-original-img.webp" alt="Sukhda Multispeciality Hospital Delhi Road Hisar">
                     </div>
                     <div class="campus-card-body">
                         <span class="campus-badge-tag">NABH Accredited • DNB Teaching Institute</span>
                         <h3 class="campus-title">Sukhda Multispeciality Hospital</h3>
                         <p class="campus-desc">Established in 2002 by Dr. Amit Mehta, MD (Medicine) AIIMS New Delhi, this flagship hospital delivers full-spectrum multispeciality medicine, interventional cardiology with flat-panel cath lab, general and robotic joint surgery, neurosurgery, nephrology, gynaecology, and round-the-clock emergency care.</p>
                         <ul class="campus-specs-list">
-                            <li><i data-lucide="check-circle-2"></i> 125 Inpatient Beds with Deluxe Suites, Private &amp; Semi-Private Rooms</li>
+                            <li><i data-lucide="check-circle-2"></i> Inpatient Care with Deluxe Suites, Private &amp; Semi-Private Rooms</li>
                             <li><i data-lucide="check-circle-2"></i> 24/7 Flat-Panel Digital Cath Lab with CLEARstent Live Technology</li>
                             <li><i data-lucide="check-circle-2"></i> Ultra-Clean Modular Operation Theatres with Laminar Airflow &amp; HEPA</li>
-                            <li><i data-lucide="check-circle-2"></i> 8-Bed Hemodialysis Centre with Heavy-Duty RO Water Plant</li>
+                            <li><i data-lucide="check-circle-2"></i> Hemodialysis Centre with Heavy-Duty RO Water Plant</li>
                             <li><i data-lucide="check-circle-2"></i> NBE-Accredited Teaching Institute for DNB General Medicine</li>
                         </ul>
                         <div class="campus-footer-info">
@@ -2970,8 +3072,7 @@
                 <!-- CAMPUS 2: MEDPARK HOSPITAL -->
                 <article class="campus-card">
                     <div class="campus-card-img">
-                        <img src="assets/images/sukhda-medpark-hospital.jpeg" alt="Sukhda MedPark Cancer & Super-Speciality Hospital Hisar">
-                        <span class="campus-pill"><i data-lucide="shield-plus"></i> Dedicated Super-Speciality • 49 Beds</span>
+                        <img src="assets/images/sukhda-medpark-original-img.webp" alt="Sukhda MedPark Cancer & Super-Speciality Hospital Hisar">
                     </div>
                     <div class="campus-card-body">
                         <span class="campus-badge-tag">Comprehensive Cancer &amp; Super-Speciality</span>
@@ -3030,7 +3131,7 @@
                     <div class="infra-card-body">
                         <div class="infra-card-header">
                             <div class="infra-card-icon"><i data-lucide="heart-pulse"></i></div>
-                            <h3>30+ Bed Intensive Care Units (ICU)</h3>
+                            <h3>Intensive Care Units (ICU)</h3>
                         </div>
                         <p class="infra-card-desc">Dedicated multidisciplinary critical care beds with high-end mechanical invasive and non-invasive ventilators (Hamilton/Dräger), central multipara telemetry monitoring, point-of-care ABG analysis, defibrillators, dedicated isolation beds, and 1:1 nurse-to-patient care.</p>
                         <div class="infra-tags-wrap">
