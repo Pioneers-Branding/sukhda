@@ -2678,6 +2678,10 @@
             }
         }
 
+        .doc-card.is-filtered-out {
+            display: none !important;
+        }
+
         @media(max-width: 768px) {
             .doc-directory-grid {
                 grid-template-columns: 1fr;
@@ -4013,10 +4017,10 @@
                     }
 
                     if (queryMatch && specMatch && hospMatch) {
-                        card.style.display = '';
+                        card.classList.remove('is-filtered-out');
                         visibleCount++;
                     } else {
-                        card.style.display = 'none';
+                        card.classList.add('is-filtered-out');
                     }
                 });
 

@@ -726,6 +726,16 @@
             object-fit: cover;
         }
 
+        /* Phones/tablets: show the whole building photo so the MedPark logo is not cropped */
+        @media (max-width: 900px) {
+            .hero-visual-card img {
+                height: auto;
+                aspect-ratio: 1672 / 941;
+                object-fit: contain;
+                display: block;
+            }
+        }
+
         .hero-float-tag {
             position: absolute;
             bottom: 16px;

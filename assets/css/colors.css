@@ -117,3 +117,58 @@ a.btn[href*="wa.me"] svg {
     height: 15px;
     flex-shrink: 0;
 }
+
+/* Mobile menu header: light background so the full-colour logo is visible on every page */
+@media (max-width: 1100px) {
+    .menu .mobile-menu-head {
+        background: #f8fafc !important;
+        border-bottom: 1px solid #e6edf5 !important;
+    }
+
+    .menu .mobile-menu-head img {
+        width: 140px !important;
+        height: 38px !important;
+        object-fit: contain;
+        object-position: left center;
+        filter: none !important;
+    }
+
+    .menu .mobile-menu-head .mobile-close-btn {
+        color: #052159 !important;
+    }
+}
+
+/* Doctor profile hero: a single stat (e.g. "23 Years") fills the box instead of leaving an empty second column */
+.doc-hero-stats .stat-item:only-child {
+    grid-column: 1 / -1;
+}
+
+.doc-hero-stats:has(.stat-item:only-child) {
+    width: fit-content;
+}
+
+@media (max-width: 768px) {
+    .doc-hero-stats:has(.stat-item:only-child) {
+        width: 100%;
+        text-align: center !important;
+    }
+}
+
+/* Mobile header map-pin dropdown: anchor to the full header bar so it never runs off-screen */
+@media (max-width: 900px) {
+    .nav .wrap .nav-directions-dropdown {
+        position: static !important;
+    }
+
+    .nav .wrap .nav-directions-dropdown .top-directions-menu {
+        top: calc(100% + 4px) !important;
+        right: 12px !important;
+        left: auto !important;
+        width: min(340px, calc(100vw - 24px)) !important;
+        max-width: calc(100vw - 24px) !important;
+    }
+
+    .nav .wrap .nav-directions-dropdown .top-directions-menu::before {
+        display: none;
+    }
+}
