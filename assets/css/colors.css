@@ -172,3 +172,84 @@ a.btn[href*="wa.me"] svg {
         display: none;
     }
 }
+
+/* Doctor profile hero: department pill — solid green so it reads clearly on the dark hero */
+.pill-dept-link {
+    background: #278132 !important;
+    color: #ffffff !important;
+    border: 1px solid #3fa14c !important;
+}
+
+.pill-dept-link svg,
+.pill-dept-link i {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+.pill-dept-link:hover {
+    background: #1f6a29 !important;
+    color: #ffffff !important;
+}
+
+/* FAQ accordions on every page — same design as the OPD Schedule FAQ
+   (white card, green border + soft shadow when open, green chevron that flips) */
+details.faq-item {
+    background: #ffffff !important;
+    border: 1px solid var(--line, #e3ebf3) !important;
+    border-radius: 10px !important;
+    margin-bottom: 14px !important;
+    overflow: hidden;
+    box-shadow: none !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+details.faq-item[open] {
+    border-color: var(--green, #278132) !important;
+    box-shadow: 0 4px 16px rgba(5, 33, 89, 0.06) !important;
+}
+
+details.faq-item > summary {
+    padding: 18px 22px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.45 !important;
+    color: var(--blue, #052159) !important;
+    cursor: pointer;
+    list-style: none;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+details.faq-item > summary:hover {
+    color: var(--blue, #052159) !important;
+}
+
+details.faq-item > summary::-webkit-details-marker {
+    display: none;
+}
+
+details.faq-item > summary::after,
+details.faq-item[open] > summary::after {
+    content: "" !important;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background-color: var(--blue, #052159);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") center / contain no-repeat;
+    font-size: 0 !important;
+    transition: transform 0.2s ease;
+}
+
+details.faq-item[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+details.faq-item > .faq-content {
+    padding: 0 22px 20px !important;
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+    color: var(--muted, #5b6b7f) !important;
+}
