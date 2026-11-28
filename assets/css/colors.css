@@ -253,3 +253,27 @@ details.faq-item > .faq-content {
     line-height: 1.65 !important;
     color: var(--muted, #5b6b7f) !important;
 }
+
+/* Doctor profiles: award / conference cards in the site theme (navy + green) instead of gold */
+.award-card {
+    background: #f7fafd !important;
+    border: 1px solid #dce8f3 !important;
+}
+
+.award-card .award-icon {
+    background: #eaf5ec !important;
+    color: #278132 !important;
+}
+
+.award-card .award-icon svg {
+    color: #278132 !important;
+    stroke: #278132 !important;
+}
+
+.award-card h4 {
+    color: #052159 !important;
+}
+
+.award-card p {
+    color: #5b6b7f !important;
+}
